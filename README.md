@@ -1,4 +1,4 @@
-# zap-releases
-ZAP Releases
+# zap-admin
+ZAP Admin
 
-This project contains the file ZAP uses for the 'check for updates' call.
+This project is for 'admin' files like the such as the one ZAP uses for the 'check for updates' call.
