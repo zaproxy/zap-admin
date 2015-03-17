@@ -1,12 +1,12 @@
 <ZAP>
 	<core>
 		<version>2.3.1</version>
-		<daily-version>D-2015-02-02</daily-version>
+		<daily-version>D-2015-03-16</daily-version>
 		<daily>
-			<url>http://sourceforge.net/projects/zaproxy/files/weekly/ZAP_WEEKLY_D-2015-02-02.zip/download</url>
-			<file>ZAP_WEEKLY_D-2015-02-02.zip</file>
-			<hash>SHA1:9f91c6d165c179a941766ddd740fed9a2c24c876</hash>
-			<size>128686625</size>
+			<url>http://sourceforge.net/projects/zaproxy/files/weekly/ZAP_WEEKLY_D-2015-03-16.zip/download</url>
+			<file>ZAP_WEEKLY_D-2015-03-16.zip</file>
+			<hash>SHA1:b17346bc75fb499b741b7b179833c0169d490d17</hash>
+			<size>88875753</size>
 		</daily>
 		<windows>
 			<url>http://sourceforge.net/projects/zaproxy/files/2.3.1/ZAP_2.3.1_Windows.exe/download</url>
@@ -51,7 +51,7 @@
 		<size>337040</size>
 		<date>2014-07-22</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_ascanrules>
 	
 	<addon>coreLang</addon>
@@ -69,7 +69,7 @@
 		<size>1986694</size>
 		<date>2014-10-28</date>
 		<not-before-version>2.3.1</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_coreLang>
 
 	<addon>directorylistv1</addon>
@@ -86,7 +86,7 @@
 		<size>847408</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_directorylistv1>
 
 	<addon>directorylistv2_3</addon>
@@ -103,7 +103,7 @@
 		<size>8608603</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_directorylistv2_3>
 
 	<addon>directorylistv2_3_lc</addon>
@@ -120,7 +120,7 @@
 		<size>7454682</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_directorylistv2_3_lc>
 
 	<addon>fuzzdb</addon>
@@ -137,7 +137,7 @@
 		<size>7212118</size>
 		<date>2014-04-10</date>
 		<not-before-version></not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_fuzzdb>
 
 	<addon>pscanrules</addon>
@@ -159,7 +159,7 @@
 		<size>219475</size>
 		<date>2014-06-14</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_pscanrules>
 
 	<addon>quickstart</addon>
@@ -182,7 +182,7 @@
 		<size>251406</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_quickstart>
 
 	<addon>reveal</addon>
@@ -199,7 +199,7 @@
 		<size>195759</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_reveal>
 
 	<addon>saverawmessage</addon>
@@ -216,7 +216,7 @@
 		<size>11615</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_saverawmessage>
 
 	<addon>websocket</addon>
@@ -241,7 +241,7 @@
 		<size>700235</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_websocket>
 	
 	<addon>alertReport</addon>
@@ -258,7 +258,7 @@
 		<size>7155279</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_alertReport>
 
 	<addon>ascanrulesBeta</addon>
@@ -288,7 +288,7 @@
 		<size>2696597</size>
 		<date>2014-10-20</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_ascanrulesBeta>
 	
 	<addon>beanshell</addon>
@@ -312,7 +312,7 @@
 		<size>538780</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_beanshell>
 
 	<addon>diff</addon>
@@ -336,7 +336,7 @@
 		<size>205094</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_diff>
 
 	<addon>gettingStarted</addon>
@@ -353,7 +353,7 @@
 		<size>78861</size>
 		<date>2014-06-09</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_gettingStarted>
 
 	<addon>invoke</addon>
@@ -370,7 +370,7 @@
 		<size>238569</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_invoke>
 
 	<addon>jruby</addon>
@@ -394,7 +394,7 @@
 		<size>22202947</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_jruby>
 
 	<addon>jython</addon>
@@ -418,7 +418,7 @@
 		<size>14539684</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_jython>
 
 	<addon>plugnhack</addon>
@@ -435,7 +435,7 @@
 		<size>467999</size>
 		<date>2014-07-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_plugnhack>
 
 	<addon>portscan</addon>
@@ -461,7 +461,7 @@
 		<size>505440</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_portscan>
 
 	<addon>pscanrulesBeta</addon>
@@ -486,7 +486,7 @@
 		<size>330400</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_pscanrulesBeta>
 
 	<addon>scripts</addon>
@@ -509,7 +509,7 @@
 		<size>456279</size>
 		<date>2014-09-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_scripts>
 
 	<addon>spiderAjax</addon>
@@ -536,7 +536,7 @@
 		<size>28774874</size>
 		<date>2014-09-22</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_spiderAjax>
 
 	<addon>sqliplugin</addon>
@@ -553,7 +553,7 @@
 		<size>59873</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_sqliplugin>
 
 	<addon>svndigger</addon>
@@ -570,7 +570,7 @@
 		<size>615504</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.2.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_svndigger>
 
 	<addon>treetools</addon>
@@ -587,7 +587,7 @@
 		<size>14825</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_treetools>
 
 	<addon>zest</addon>
@@ -614,7 +614,7 @@
 		<size>35989376</size>
 		<date>2014-09-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_zest>
 
 	<addon>bruteforce</addon>
@@ -631,7 +631,7 @@
 		<size>872597</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_bruteforce>
 
 	<addon>tokengen</addon>
@@ -654,7 +654,7 @@
 		<size>98540</size>
 		<date>2014-04-10</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_tokengen>
 
 	<addon>ascanrulesAlpha</addon>
@@ -683,7 +683,7 @@
 		<size>358688</size>
 		<date>2014-10-20</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_ascanrulesAlpha>
 	
 	<addon>browserView</addon>
@@ -705,6 +705,7 @@
 		<size>162813</size>
 		<date>2014-09-22</date>
 		<not-before-version>2.3.0</not-before-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_browserView>
 	
 	<addon>callgraph</addon>
@@ -726,7 +727,7 @@
 		<size>1154610</size>
 		<date>2014-10-01</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_callgraph>
 
 	<addon>httpsInfo</addon>
@@ -743,7 +744,7 @@
 		<size>35059</size>
 		<date>2014-04-03</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_httpsInfo>
 
 	<addon>importLogFiles</addon>
@@ -760,7 +761,7 @@
 		<size>135086</size>
 		<date>2014-10-01</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_importLogFiles>
 
 	<addon>importurls</addon>
@@ -777,7 +778,7 @@
 		<size>9259</size>
 		<date>2014-04-03</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_importurls>
 	
 	<addon>multiFuzz</addon>
@@ -823,7 +824,7 @@
 		<size>469705</size>
 		<date>2014-06-14</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_pscanrulesAlpha>
 
 	<addon>retire</addon>
@@ -840,7 +841,7 @@
 		<size>37257</size>
 		<date>2014-11-26</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_retire>
 
 	<addon>sniTerminator</addon>
@@ -857,7 +858,7 @@
 		<size>45367</size>
 		<date>2014-07-24</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_sniTerminator>
 
 	<addon>sse</addon>
@@ -881,7 +882,7 @@
 		<size>302794</size>
 		<date>2014-04-03</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_sse>
 
 	<addon>saml</addon>
@@ -903,7 +904,7 @@
 		<size>931904</size>
 		<date>2014-04-03</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_saml>
 
 	<addon>tips</addon>
@@ -920,7 +921,7 @@
 		<size>19141</size>
 		<date>2014-10-16</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_tips>
 
 	<addon>wappalyzer</addon>
@@ -944,7 +945,7 @@
 		<size>600052</size>
 		<date>2014-04-03</date>
 		<not-before-version>2.3.0</not-before-version>
-		<not-from-version></not-from-version>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_wappalyzer>
 	
 	<addon>diviner</addon>
@@ -961,6 +962,7 @@
 		<info>https://code.google.com/p/diviner/</info>
 		<size>703957</size>
 		<date>2014-10-27</date>
+		<not-from-version>2.4.0</not-from-version>
 	</addon_diviner>
 
 	<addon>scrip</addon>
@@ -977,7 +979,7 @@
 		<size>116150</size>
 		<date>2014-01-10</date>
 		<not-before-version>2.2.0</not-before-version>
-		<not-from-version />
+		<not-from-version>2.4.0</not-from-version>
 	</addon_scrip>
 
 </ZAP>
