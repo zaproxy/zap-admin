@@ -83,10 +83,10 @@
         <status>release</status>
         <changes>Updated for 2.4.0.</changes>
         <url>http://sourceforge.net/projects/zaproxy/files/add-ons/directorylistv1-release-2.zap/download</url>
-        <hash>SHA1:c06c094ede9d0336abae24d2c4a41114b3fffbd8</hash>
+        <hash>SHA1:d445fffe18fccd7a632528e53d00609775d20039</hash>
         <info>https://owasp.org/index.php/DirBuster</info>
         <date>2015-04-13</date>
-        <size>847386</size>
+        <size>847510</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_directorylistv1>
     
@@ -95,15 +95,15 @@
         <name>Directory List v2.3</name>
         <description>Lists of directory names to be used with "Forced Browse" add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>directorylistv2_3-release-1.zap</file>
+        <version>2</version>
+        <file>directorylistv2_3-release-2.zap</file>
         <status>release</status>
         <changes>Updated for 2.4.0.</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/directorylistv2_3-release-1.zap/download</url>
-        <hash>SHA1:b88dc5190acc07e4d6f6ceb214fa51c39cdea609</hash>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/directorylistv2_3-release-2.zap/download</url>
+        <hash>SHA1:69aec31f4689b8a84f534f4ee4fe107b0f0f65aa</hash>
         <info>https://owasp.org/index.php/DirBuster</info>
         <date>2015-04-13</date>
-        <size>8608581</size>
+        <size>8608737</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_directorylistv2_3>
     
@@ -112,15 +112,15 @@
         <name>Directory List v2.3 LC</name>
         <description>Lists of lower case directory names to be used with "Forced Browse" add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>directorylistv2_3_lc-release-1.zap</file>
+        <version>2</version>
+        <file>directorylistv2_3_lc-release-2.zap</file>
         <status>release</status>
         <changes>Updated for 2.4.0.</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/directorylistv2_3_lc-release-1.zap/download</url>
-        <hash>SHA1:538c32dda756693294c074584e1788568c3b8db0</hash>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/directorylistv2_3_lc-release-2.zap/download</url>
+        <hash>SHA1:4817fa8b54a8fec440407d59ab2fa7d0fd146a83</hash>
         <info>https://owasp.org/index.php/DirBuster</info>
         <date>2015-04-13</date>
-        <size>7454660</size>
+        <size>7454816</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_directorylistv2_3_lc>
     
