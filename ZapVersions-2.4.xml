@@ -560,14 +560,17 @@
         <name>Advanced SQLInjection Scanner</name>
         <description>An advanced active injection bundle for SQLi (derived by SQLMap)</description>
         <author>Andrea Pompili (Yhawke)</author>
-        <version>7</version>
-        <file>sqliplugin-beta-7.zap</file>
+        <version>8</version>
+        <file>sqliplugin-beta-8.zap</file>
         <status>beta</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/sqliplugin-beta-7.zap/download</url>
-        <hash>SHA1:99776ffe1a8adfefbc3dee729bd27dcfaa434111</hash>
-        <date>2015-04-13</date>
-        <size>48939</size>
+        <changes>Improved execution time when a WAF or Reverse Proxy is in place disabling keep-alive for all request&lt;br&gt;
+        Enforced the time based statistical model taking in account also the wait time threshold&lt;br&gt;
+        Solved some wrong "escape" that happened on some time based SQLi&lt;br&gt;
+        Users can specify the technology of interest, enabling or disabling them using the Advanced Active Scan tab</changes>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/sqliplugin-beta-8.zap/download</url>
+        <hash>SHA1:461902d911fb6326cf5c6eb9b471a9f9d9742ce1</hash>
+        <date>2015-04-20</date>
+        <size>49696</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_sqliplugin>
     
