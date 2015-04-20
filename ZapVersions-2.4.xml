@@ -312,17 +312,15 @@
         <name>Report alert generator</name>
         <description>Allows you to generate reports for alerts you specify in pdf or odt format</description>
         <author>Talsoft SRL</author>
-        <version>12</version>
-        <file>alertReport-beta-12.zap</file>
+        <version>13</version>
+        <file>alertReport-beta-13.zap</file>
         <status>beta</status>
-        <changes>Safe menu items will now be enabled in protected and safe modes (Issue 1278).&lt;br&gt;
-	Changed from iText PDF library to Apache 2.0 licenced PDFBox libary.&lt;br&gt;
-	Updated for ZAP 2.4</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/alertReport-beta-12.zap/download</url>
-        <hash>SHA1:dcf8134ea79b10fc17fe249ae394feaef02e4b96</hash>
+        <changes>Restore generation of report (Issue 1606).</changes>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/alertReport-beta-13.zap/download</url>
+        <hash>SHA1:e87c52813284d2b773708f748f48ea9305803edf</hash>
         <info>http://www.talsoft.com.ar</info>
-        <date>2015-04-13</date>
-        <size>9612250</size>
+        <date>2015-04-20</date>
+        <size>9709928</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_alertReport>
     
