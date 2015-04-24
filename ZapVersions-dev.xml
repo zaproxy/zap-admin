@@ -173,6 +173,23 @@
         <size>679281</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_help>
+
+    <addon>help_pt_BR</addon>
+    <addon_help_pt_BR>
+        <name>Help - Portuguese, Brazilian</name>
+        <description>Portuguese, Brazilian version of the ZAP help file.</description>
+        <author>ZAP Crowdin Team</author>
+        <version>1</version>
+        <file>help_pt_BR-beta-1.zap</file>
+        <status>beta</status>
+        <changes>First version.</changes>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/help_pt_BR-beta-1.zap/download</url>
+        <hash>SHA1:8ee6046715f2a27a5477e6a8a979ccb8ad7e5bb4</hash>
+        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <date>2015-04-24</date>
+        <size>729216</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_help_pt_BR>
     
     <addon>pscanrules</addon>
     <addon_pscanrules>
