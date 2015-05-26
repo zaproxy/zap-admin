@@ -419,6 +419,24 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_diff>
     
+    <addon>fuzz</addon>
+    <addon_fuzz>
+        <name>AdvFuzzer</name>
+        <description>Advanced fuzzer for manual testing</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <semver>1.0.0</semver>
+        <file>fuzz-beta-1.zap</file>
+        <status>beta</status>
+        <changes>First version.</changes>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/fuzz-beta-1.zap/download</url>
+        <hash>SHA1:b03a836875e915a277fdbbe37d2104d775b15825</hash>
+        <info>https://code.google.com/p/zap-extensions/</info>
+        <date>2015-04-13</date>
+        <size>473365</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_fuzz>
+    
     <addon>importurls</addon>
     <addon_importurls>
         <name>Import files containing URLs</name>
