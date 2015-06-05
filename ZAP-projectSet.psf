@@ -9,3 +9,4 @@
 <project reference="1.0,https://github.com/zaproxy/zaproxy.git,master,."/>
 <project reference="1.0,https://github.com/zaproxy/zaproxy.git,2.4,."/>
 </provider>
+</psf>
