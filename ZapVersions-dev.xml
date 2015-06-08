@@ -191,6 +191,22 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_help_pt_BR>
     
+    <addon>onlineMenu</addon>
+    <addon_onlineMenu>
+        <name>Online menus</name>
+        <description>ZAP Online menu items</description>
+        <author>ZAP Dev Team</author>
+        <version>3</version>
+        <file>onlineMenu-release-3.zap</file>
+        <status>release</status>
+        <changes>Updated links to point to GitHub</changes>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/onlineMenu-release-3.zap/download</url>
+        <hash>SHA1:dca2aa4271c637da79f188026e10a747dff575d3</hash>
+        <date>2015-06-08</date>
+        <size>188527</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_onlineMenu>
+    
     <addon>pscanrules</addon>
     <addon_pscanrules>
         <name>Passive scanner rules</name>
@@ -500,22 +516,6 @@
         <size>14545042</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_jython>
-    
-    <addon>onlineMenu</addon>
-    <addon_onlineMenu>
-        <name>Online menus</name>
-        <description>ZAP Online menu items</description>
-        <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>onlineMenu-beta-2.zap</file>
-        <status>beta</status>
-        <changes>Promoted to beta, updated for ZAP 2.4</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/onlineMenu-beta-2.zap/download</url>
-        <hash>SHA1:3345318508d17c4c4a3ac813f03a2ec54db18b18</hash>
-        <date>2015-04-13</date>
-        <size>187625</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_onlineMenu>
     
     <addon>plugnhack</addon>
     <addon_plugnhack>
