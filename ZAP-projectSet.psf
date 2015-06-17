@@ -7,6 +7,5 @@
 <project reference="1.0,https://github.com/zaproxy/zap-extensions,alpha,."/>
 <project reference="1.0,https://github.com/zaproxy/zap-extensions,beta,."/>
 <project reference="1.0,https://github.com/zaproxy/zaproxy.git,develop,."/>
-<project reference="1.0,https://github.com/zaproxy/zaproxy.git,2.4,."/>
 </provider>
 </psf>
