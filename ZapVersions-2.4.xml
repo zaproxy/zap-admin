@@ -146,14 +146,14 @@
         <name>Getting Started with ZAP Guide</name>
         <description>A short Getting Started with ZAP Guide</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>gettingStarted-release-3.zap</file>
+        <version>4</version>
+        <file>gettingStarted-release-4.zap</file>
         <status>release</status>
-        <changes>Updated for 2.4 and promoted to release</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/gettingStarted-release-3.zap/download</url>
-        <hash>SHA1:75be72dc28b5ee510d07094844c34b5fd5f10bd2</hash>
-        <date>2015-04-13</date>
-        <size>261454</size>
+        <changes>Updated to point to GitHub</changes>
+        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/gettingStarted-release-4.zap/download</url>
+        <hash>SHA1:1bf395e852e66ecbc29e200d23a5fc95cee85e2b</hash>
+        <date>2015-06-18</date>
+        <size>270135</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_gettingStarted>
     
