@@ -3,7 +3,7 @@
 		<version>2.4.0</version>
 		<daily-version>D-2015-06-15</daily-version>
 		<daily>
-			<url>http://sourceforge.net/projects/zaproxy/files/weekly/ZAP_WEEKLY_D-2015-06-15.zip/download</url>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2015-06-15/ZAP_WEEKLY_D-2015-06-15.zip</url>
 			<file>ZAP_WEEKLY_D-2015-06-15.zip</file>
 			<hash>SHA1:7d4d0202e7e25970767fab62a608af21143a8668</hash>
 			<size>93406639</size>
@@ -29,7 +29,7 @@
 		<relnotes>
 			This is a bugfix release
 		</relnotes>
-		<relnotes-url>http://code.google.com/p/zaproxy/wiki/HelpReleases2_4_0</relnotes-url>
+		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_0</relnotes-url>
 	</core>
 	
     <addon>ascanrules</addon>

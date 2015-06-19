@@ -1,0 +1,34 @@
+<ZAP>
+	<core>
+		<version>2.4.0</version>
+		<daily-version>D-2015-06-15</daily-version>
+		<daily>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2015-06-15/ZAP_WEEKLY_D-2015-06-15.zip</url>
+			<file>ZAP_WEEKLY_D-2015-06-15.zip</file>
+			<hash>SHA1:7d4d0202e7e25970767fab62a608af21143a8668</hash>
+			<size>93406639</size>
+		</daily>
+		<windows>
+			<url>http://sourceforge.net/projects/zaproxy/files/2.4.0/ZAP_2.4.0_Windows.exe/download</url>
+			<file>ZAP_2.4.0_Windows.exe</file>
+			<hash>SHA1:f8c66700ececee501bd0316393f0136c34d1447b</hash>
+			<size>73305525</size>
+		</windows>
+		<linux>
+			<url>http://sourceforge.net/projects/zaproxy/files/2.4.0/ZAP_2.4.0_Linux.tar.gz/download</url>
+			<file>ZAP_2.4.0_Linux.tar.gz</file>
+			<hash>SHA1:6cbf56f9ed6e2f162d966c74ed534df84dda2885</hash>
+			<size>79547287</size>
+		</linux>
+		<mac>
+			<url>http://sourceforge.net/projects/zaproxy/files/2.4.0/ZAP_2.4.0_Mac_OS_X.dmg/download</url>
+			<file>ZAP_2.4.0_Mac_OS_X.dmg</file>
+			<hash>SHA1:4ae62cbe6f708f2b0c0b07add03b659fe5f45d11</hash>
+			<size>117750905</size>
+		</mac>
+		<relnotes>
+			This is a bugfix release
+		</relnotes>
+		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_0</relnotes-url>
+	</core>
+</ZAP>
