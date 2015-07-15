@@ -789,6 +789,22 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_callgraph>
 
+    <addon>codedx</addon>
+    <addon_codedx>
+        <name>Code Dx Extension</name>
+        <description>includes request and response data in xml reports</description>
+        <author>Code Dx, Inc.</author>
+        <version>1</version>
+        <file>codedx-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/codedx-alpha-1.zap</url>
+        <hash>SHA1:0fae106f37a4603eeddc394a2d09837c3c869680</hash>
+        <date>2015-07-14</date>
+        <size>6798</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_codedx>
+
     <addon>help_bs_BA</addon>
     <addon_help_bs_BA>
         <name>Help - Bosnian</name>
