@@ -649,7 +649,7 @@
         <file>tokengen-beta-9.zap</file>
         <status>beta</status>
         <changes>Allow the user to specify the number of requests (Issue 1711)</changes>
-        <url>http://sourceforge.net/projects/zaproxy/files/add-ons/tokengen-beta-9.zap/download</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/tokengen-beta-9.zap</url>
         <hash>SHA1:30eab96d80ecf4f9f30ab757cbc4c9cb9356cd42</hash>
         <date>2015-07-24</date>
         <size>238983</size>
