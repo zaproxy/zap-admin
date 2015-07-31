@@ -37,23 +37,16 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>ascanrules-release-17.zap</file>
+        <version>18</version>
+        <file>ascanrules-release-18.zap</file>
         <status>release</status>
-        <changes>Changes to TestInjectionCRLF: address FindBugs issue, remove forced HTML elements in
-        references, add proper WASC ID.&lt;br&gt;
-        Added blind command injection checks for CommandInjectionPlugin.&lt;br&gt;
-        Upgraded to ZAP 2.4.&lt;br&gt;
-        Issue 823: i18n active/passive scan rules.&lt;br&gt;
-        Issue 1529: TestExternalRedirect minor performance improvement, injection generation changed to reduce collisions or false positives.&lt;br&gt;
-        Issue 1569: TestExternalRedirect plugin ID changed from 30000 to 20019.&lt;br&gt;
-        Issue 1499: Replace active 'Client Browser Cache' with passive 'Cache Control' rule. TestClientBrowserCache removed.&lt;br&gt;
-        Issue 1592: CommandInjectionPlugin timing false positives</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-17.zap</url>
-        <hash>SHA1:e057e77dc7af1124733e8c903267ef5b188251c3</hash>
-        <date>2015-04-13</date>
-        <size>478344</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Improved "Path Traversal" scanner.&lt;br&gt;
+        Change scanners to honour the technologies enabled.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-18.zap</url>
+        <hash>SHA1:8ca89fbc02bde3ae19132809aac7c8b889091eb3</hash>
+        <date>2015-07-30</date>
+        <size>504154</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     
     <addon>coreLang</addon>
@@ -61,16 +54,16 @@
         <name>Core Language Files</name>
         <description>Translations of the core language files</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>coreLang-release-7.zap</file>
+        <version>8</version>
+        <file>coreLang-release-8.zap</file>
         <status>release</status>
-        <changes>Latest translations from Crowdin, including new Danish translation</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/coreLang-release-7.zap</url>
-        <hash>SHA1:330c202eb43a8f528bac1b9a86fab34f6efa4389</hash>
+        <changes>Updated for 2.4.1</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/coreLang-release-8.zap</url>
+        <hash>SHA1:2f49e96c747b7afa139df30cde745c57fc37a6f7</hash>
         <info>https://crowdin.com/project/owasp-zap</info>
-        <date>2015-05-25</date>
-        <size>2467398</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2015-07-30</date>
+        <size>2485126</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_coreLang>
     
     <addon>directorylistv1</addon>
@@ -162,16 +155,16 @@
         <name>Help - English</name>
         <description>English (master) version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>1</version>
-        <file>help-release-1.zap</file>
+        <version>3</version>
+        <file>help-release-3.zap</file>
         <status>release</status>
-        <changes>First version.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help-release-1.zap</url>
-        <hash>SHA1:c24b82661f6051f5dc7aab54837d37e62d35643d</hash>
-        <info>https://code.google.com/p/zaproxy/wiki/HelpIntro</info>
-        <date>2015-04-13</date>
-        <size>679281</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Updated for 2.4.1</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help-release-3.zap</url>
+        <hash>SHA1:9dfc3762f5c1ac9d01a6e3bcc94a761d45a6826f</hash>
+        <info>https://github.com/zaproxy/zap-core-help/wiki/HelpIntro</info>
+        <date>2015-07-30</date>
+        <size>691759</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_help>
 
     <addon>help_pt_BR</addon>
@@ -179,16 +172,16 @@
         <name>Help - Portuguese, Brazilian</name>
         <description>Portuguese, Brazilian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>2</version>
-        <file>help_pt_BR-beta-2.zap</file>
-        <status>beta</status>
-        <changes>Latest version from Crowdin.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_pt_BR-beta-2.zap</url>
-        <hash>SHA1:bfae71f14138b9189ce7bc34e726d0b3a8685487</hash>
+        <version>3</version>
+        <file>help_pt_BR-release-3.zap</file>
+        <status>release</status>
+        <changes>Latest version from Crowdin and promoted to release</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_pt_BR-release-3.zap</url>
+        <hash>SHA1:35f58d2b571d20bb319ec019b4389848e8c94a0f</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2015-05-25</date>
-        <size>732961</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2015-07-30</date>
+        <size>746121</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_help_pt_BR>
     
     <addon>onlineMenu</addon>
@@ -475,15 +468,16 @@
         <name>Invoke Applications</name>
         <description>Invoke external applications passing context related information such as URLs and parameters</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>invoke-beta-2.zap</file>
+        <version>3</version>
+        <file>invoke-beta-3.zap</file>
         <status>beta</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/invoke-beta-2.zap</url>
-        <hash>SHA1:5a84401832b692e3ac712ea61cb38cf66a40184d</hash>
-        <date>2015-04-13</date>
-        <size>272526</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Minor code changes.&lt;br&gt;
+	Show applications immediately after ZAP re/start (Issue 1709).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/invoke-beta-3.zap</url>
+        <hash>SHA1:676abda11bf5b297f2cd0edd273637422db2aec2</hash>
+        <date>2015-07-30</date>
+        <size>282179</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_invoke>
     
     <addon>jruby</addon>
@@ -594,18 +588,17 @@
         <name>Advanced SQLInjection Scanner</name>
         <description>An advanced active injection bundle for SQLi (derived by SQLMap)</description>
         <author>Andrea Pompili (Yhawke)</author>
-        <version>8</version>
-        <file>sqliplugin-beta-8.zap</file>
+        <version>9</version>
+        <file>sqliplugin-beta-9.zap</file>
         <status>beta</status>
-        <changes>Improved execution time when a WAF or Reverse Proxy is in place disabling keep-alive for all request&lt;br&gt;
-        Enforced the time based statistical model taking in account also the wait time threshold&lt;br&gt;
-        Solved some wrong "escape" that happened on some time based SQLi&lt;br&gt;
-        Users can specify the technology of interest, enabling or disabling them using the Advanced Active Scan tab</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/sqliplugin-beta-8.zap</url>
-        <hash>SHA1:461902d911fb6326cf5c6eb9b471a9f9d9742ce1</hash>
-        <date>2015-04-20</date>
-        <size>49696</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Split boundary and plugin definition in two different files&lt;br&gt;
+            Updated all plugin and boundary files to the newest SQLMap database&lt;br&gt;
+            Changed to target DB tecnhonolgy (Issue 1618).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/sqliplugin-beta-9.zap</url>
+        <hash>SHA1:863642f027810b8ded1f91e1a7e6b7e980e8b0b2</hash>
+        <date>2015-07-30</date>
+        <size>65334</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_sqliplugin>
     
     <addon>svndigger</addon>
