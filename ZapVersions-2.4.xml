@@ -227,15 +227,14 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>quickstart-release-15.zap</file>
+        <version>16</version>
+        <file>quickstart-release-16.zap</file>
         <status>release</status>
-        <changes>Generate the report (arg -quickout) even if view is initialised (Issue 1281).&lt;br&gt;
-	Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/quickstart-release-15.zap</url>
-        <hash>SHA1:6334afacc7d5445fc360173b793da2134597bb5d</hash>
-        <date>2015-04-13</date>
-        <size>316407</size>
+        <changes>Include API key in PNH URL (Issue 1714).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/quickstart-release-16.zap</url>
+        <hash>SHA1:2ec6047d37cf7f1a12fcc0b42d026eda20e42584</hash>
+        <date>2015-07-30</date>
+        <size>325034</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_quickstart>
     
@@ -293,18 +292,16 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>spiderAjax-release-12.zap</file>
+        <version>13</version>
+        <file>spiderAjax-release-13.zap</file>
         <status>release</status>
-        <changes>Promoted to 'release' status (Issue 1326).&lt;br&gt;
-	Set to depend on 'Selenium' add-on (Issue 1534).&lt;br&gt;
-	Updated Crawljax to version 3.6 (Issue 1535).&lt;br&gt;
-	Advanced scan dialog (Issue 1177).</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/spiderAjax-release-12.zap</url>
-        <hash>SHA1:8a590d051c101370dbfc5946cfc0277798903667</hash>
-        <info>https://code.google.com/p/zaproxy/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2015-04-13</date>
-        <size>2435760</size>
+        <changes>Updated add-on's info URL.&lt;br&gt;
+	Changed to use the (full) URI of selected node (to be used as spider's seed).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/spiderAjax-release-13.zap</url>
+        <hash>SHA1:c554396eec54f48e38f396588102f14d0450eb2e</hash>
+        <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
+        <date>2015-07-30</date>
+        <size>2482450</size>
         <not-before-version>2.4.0</not-before-version>
         <dependencies>
             <addons>
