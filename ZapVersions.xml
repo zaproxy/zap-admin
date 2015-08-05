@@ -1,6 +1,6 @@
 <ZAP>
 	<core>
-		<version>2.4.0</version>
+		<version>2.4.1</version>
 		<daily-version>D-2015-07-27</daily-version>
 		<daily>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/w2015-07-27/ZAP_WEEKLY_D-2015-07-27.zip</url>
@@ -9,26 +9,26 @@
 			<size>96181694</size>
 		</daily>
 		<windows>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.0/ZAP_2.4.0_Windows.exe</url>
-			<file>ZAP_2.4.0_Windows.exe</file>
-			<hash>SHA1:f8c66700ececee501bd0316393f0136c34d1447b</hash>
-			<size>73305525</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.1/ZAP_2.4.1_Windows.exe</url>
+			<file>ZAP_2.4.1_Windows.exe</file>
+			<hash>SHA1:a292af49b20c5aadf1e871fc15910e9e4f5ee58e</hash>
+			<size>76236736</size>
 		</windows>
 		<linux>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.0/ZAP_2.4.0_Linux.tar.gz</url>
-			<file>ZAP_2.4.0_Linux.tar.gz</file>
-			<hash>SHA1:6cbf56f9ed6e2f162d966c74ed534df84dda2885</hash>
-			<size>79547287</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.1/ZAP_2.4.1_Linux.tar.gz</url>
+			<file>ZAP_2.4.1_Linux.tar.gz</file>
+			<hash>SHA1:cd319e73069914a139e327e6b9e576661cf29938</hash>
+			<size>83615016</size>
 		</linux>
 		<mac>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.0/ZAP_2.4.0_Mac_OS_X.dmg</url>
-			<file>ZAP_2.4.0_Mac_OS_X.dmg</file>
-			<hash>SHA1:4ae62cbe6f708f2b0c0b07add03b659fe5f45d11</hash>
-			<size>117750905</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.1/ZAP_2.4.1_MAC_OS_X.dmg</url>
+			<file>ZAP_2.4.1_MAC_OS_X.dmg</file>
+			<hash>SHA1:4f157647e0327461a367098f7787e33b49ee6975</hash>
+			<size>121880097</size>
 		</mac>
 		<relnotes>
-			This is a bugfix release
+			ZAP 2.4.1 includes important security fixes - users are urged to upgrade asap.
 		</relnotes>
-		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_0</relnotes-url>
+		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_1</relnotes-url>
 	</core>
 </ZAP>
