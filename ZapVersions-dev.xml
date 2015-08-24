@@ -805,6 +805,29 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_codedx>
 
+    <addon>domxss</addon>
+    <addon_domxss>
+        <name>DOM XSS Active scanner rule</name>
+        <description>DOM XSS Active scanner rule</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>domxss-alpha-1.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/domxss-alpha-1.zap</url>
+        <hash>SHA1:bd08c19a0e661bd2222f093982924356eb081d70</hash>
+        <date>2015-08-24</date>
+        <size>20212</size>
+        <not-before-version>2.4.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>selenium</id>
+                    <semver>1.*</semver>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_domxss>
+
     <addon>help_bs_BA</addon>
     <addon_help_bs_BA>
         <name>Help - Bosnian</name>
