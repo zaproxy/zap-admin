@@ -718,18 +718,19 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>ascanrulesAlpha-alpha-12.zap</file>
+        <version>13</version>
+        <file>ascanrulesAlpha-alpha-13.zap</file>
         <status>alpha</status>
-        <changes>Added "Relative Path Confusion" scanner&lt;br&gt;
-    Added "Proxy Disclosure" scanner&lt;br&gt;
-    Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesAlpha-alpha-12.zap</url>
-        <hash>SHA1:d097acd401b98e7c616f6c59f235f5cb36fa5b17</hash>
-        <info>https://code.google.com/p/zap-extensions/wiki/AddOn_ascanrulesAlpha</info>
-        <date>2015-04-13</date>
-        <size>764411</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Updated add-on's info URL.&lt;br&gt;
+    Minor code changes.&lt;br&gt;
+    Added a new scanner to search for format string errors in compiled code.&lt;br&gt;
+    Change scanners to honour the technologies enabled (1618).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesAlpha-alpha-13.zap</url>
+        <hash>SHA1:df7656fea8f9127ab0e0e4fe5b7c305b64215dac</hash>
+        <info>https://github.com/zaproxy/zap-extensions/wiki/AddOn_ascanrulesAlpha</info>
+        <date>2015-08-24</date>
+        <size>796719</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesAlpha>
 
     <addon>birtreports</addon>
