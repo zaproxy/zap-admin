@@ -363,25 +363,16 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>ascanrulesBeta-beta-15.zap</file>
+        <version>16</version>
+        <file>ascanrulesBeta-beta-16.zap</file>
         <status>beta</status>
-        <changes>Solved Comparison operator in XpathInjectionPlugin (Issue 1189).&lt;br&gt;
-    Promoted Backup File Disclosure to beta&lt;br&gt;
-    Promoted Cross Domain Scanner to beta&lt;br&gt;
-    Promoted HeartBleed to beta&lt;br&gt;
-    Promoted Insecure HTTP Method to beta&lt;br&gt;
-    Promoted Remote Code Execution - CVE2012-1823 to beta&lt;br&gt;
-    Promoted Shell shock to beta&lt;br&gt;
-    Promoted Source Code Disclosure - CVE2012-1823 to beta&lt;br&gt;
-    Promoted Source Code Disclosure - SVN to beta&lt;br&gt;
-    Promoted Source Code Disclosure - WEB-INF to beta&lt;br&gt;
-    Fixed minor regex escaping issue with Source Code Disclosure - SVN (Issue 1377)&lt;br&gt;
-	Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesBeta-beta-15.zap</url>
-        <hash>SHA1:a85cdd2fbbf5fdb702465d566c98b8607d7d675a</hash>
-        <date>2015-04-13</date>
-        <size>2930843</size>
+        <changes>Minor code changes.&lt;br&gt;
+    Change scanners to honour the technologies enabled (Issue 1618).&lt;br&gt;
+    Added Buffer Overflow scanner to beta (Issue 1605).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesBeta-beta-16.zap</url>
+        <hash>SHA1:49b6c3f6de835fefcaa27ed99ee829b984c40886</hash>
+        <date>2015-08-24</date>
+        <size>3044429</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_ascanrulesBeta>
     
