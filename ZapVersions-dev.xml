@@ -1,12 +1,12 @@
 <ZAP>
 	<core>
 		<version>2.4.1</version>
-		<daily-version>D-2015-08-12</daily-version>
+		<daily-version>D-2015-08-24</daily-version>
 		<daily>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/w2015-08-12/ZAP_WEEKLY_D-2015-08-12.zip</url>
-			<file>ZAP_WEEKLY_D-2015-08-12.zip</file>
-			<hash>SHA1:2b981746aa40d5fa5692bedf6be251d51e0c7674</hash>
-			<size>93949042</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/w2015-08-24/ZAP_WEEKLY_D-2015-08-24.zip</url>
+			<file>ZAP_WEEKLY_D-2015-08-24.zip</file>
+			<hash>SHA1:6d43e604f8d1e65c9d6721dc0954cb9ec4db8ce5</hash>
+			<size>90517126</size>
 		</daily>
 		<windows>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.1/ZAP_2.4.1_Windows.exe</url>
@@ -53,15 +53,15 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>ascanrules-release-18.zap</file>
+        <version>19</version>
+        <file>ascanrules-release-19.zap</file>
         <status>release</status>
-        <changes>Improved "Path Traversal" scanner.&lt;br&gt;
-        Change scanners to honour the technologies enabled.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-18.zap</url>
-        <hash>SHA1:8ca89fbc02bde3ae19132809aac7c8b889091eb3</hash>
-        <date>2015-07-30</date>
-        <size>504154</size>
+        <changes>Issue 1146: variable 'param' is used instead of 'value'? in TestCrossSiteScriptV2.&lt;br&gt;
+        Handle cases where the response is the full XSS payload.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-19.zap</url>
+        <hash>SHA1:010318a6142202ae34ec4f283a0e2789ce276c51</hash>
+        <date>2015-08-24</date>
+        <size>508168</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     
