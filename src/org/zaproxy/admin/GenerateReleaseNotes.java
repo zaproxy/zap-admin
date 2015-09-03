@@ -37,7 +37,6 @@ public class GenerateReleaseNotes {
 
 	static enum IssueType {dev, bug, ignore, unk};
 
-	// Note 100 is the maximum page size allowed - will need to use paging to get any more
 	private static final String ISSUE_BASE_URL = 
 			"https://api.github.com/repos/zaproxy/zaproxy/issues?state=closed&per_page=100&since=";
 
@@ -61,65 +60,70 @@ public class GenerateReleaseNotes {
 	
 	public static void main(String[] args) {
 		// For now hardcoding variables - should make these parameters at some point ;)
-		String dateSince = "2015-06-05T00:00:00Z";
+		String dateSince = "2015-07-30T00:00:00Z";
 		try {
-			String issueStr = readUrl(ISSUE_BASE_URL + dateSince);
 			Map<Integer, String> devIssuesMap = new HashMap<Integer, String>();
 			Map<Integer, String> bugIssuesMap = new HashMap<Integer, String>();
 			Map<Integer, String> unkIssuesMap = new HashMap<Integer, String>();
 			Map<Integer, String> issueTagsMap = new HashMap<Integer, String>();
-			
-			JSONArray json = JSONArray.fromObject(issueStr);
-			
-			if (json.size() >= 100) {
-				System.out.println("WARNING: 100 issues returned - will need to implement paging to get the rest!");
-			}
-			
-			for (int i=0; i < json.size(); i++) {
-				IssueType issueType = IssueType.unk;
-				JSONObject issue = json.getJSONObject(i);
-				JSONArray labels = issue.getJSONArray("labels");
-				StringBuilder sb = new StringBuilder();
-				for (int j=0; j < labels.size(); j++) {
-					String tag = labels.getJSONObject(j).getString("name");
-					sb.append(tag);
-					sb.append(" ");
+
+			int page = 0;
+			while (true) {
+				page ++;
+				String issueStr = readUrl(ISSUE_BASE_URL + dateSince + "&page=" + page);
+	
+				JSONArray json = JSONArray.fromObject(issueStr);
+				
+				for (int i=0; i < json.size(); i++) {
+					IssueType issueType = IssueType.unk;
+					JSONObject issue = json.getJSONObject(i);
+					JSONArray labels = issue.getJSONArray("labels");
+					StringBuilder sb = new StringBuilder();
+					for (int j=0; j < labels.size(); j++) {
+						String tag = labels.getJSONObject(j).getString("name");
+						sb.append(tag);
+						sb.append(" ");
+						
+						if (tag.equalsIgnoreCase("development") || tag.equalsIgnoreCase("enhancement")
+								|| tag.equalsIgnoreCase("Type-enhancement")) {
+							issueType = IssueType.dev;
+							break;
+						}
+						if (tag.equalsIgnoreCase("bug") || tag.equalsIgnoreCase("Type-defect")) {
+							issueType = IssueType.bug;
+							break;
+						}
+						if (tag.equalsIgnoreCase("invalid") 
+								|| tag.equalsIgnoreCase("duplicate")
+								|| tag.equalsIgnoreCase("wontfix")
+								|| tag.equalsIgnoreCase("minor")
+								|| tag.equalsIgnoreCase("add-on")
+								|| tag.equalsIgnoreCase("Type-review") 
+								|| tag.equalsIgnoreCase("Type-task")) {
+							issueType = IssueType.ignore;
+							break;
+						}
+					}
+					issueTagsMap.put(issue.getInt("number"), sb.toString());
 					
-					if (tag.equalsIgnoreCase("development") || tag.equalsIgnoreCase("enhancement")
-							|| tag.equalsIgnoreCase("Type-enhancement")) {
-						issueType = IssueType.dev;
+					switch (issueType) {
+					case dev:
+						devIssuesMap.put(issue.getInt("number"), issue.getString("title"));
+						break;
+					case bug:
+						bugIssuesMap.put(issue.getInt("number"), issue.getString("title"));
+						break;
+					case unk:
+						unkIssuesMap.put(issue.getInt("number"), issue.getString("title"));
+						break;
+					case ignore:
 						break;
 					}
-					if (tag.equalsIgnoreCase("bug") || tag.equalsIgnoreCase("Type-defect")) {
-						issueType = IssueType.bug;
-						break;
-					}
-					if (tag.equalsIgnoreCase("invalid") 
-							|| tag.equalsIgnoreCase("duplicate")
-							|| tag.equalsIgnoreCase("wontfix")
-							|| tag.equalsIgnoreCase("minor")
-							|| tag.equalsIgnoreCase("Type-review") 
-							|| tag.equalsIgnoreCase("Type-task")) {
-						issueType = IssueType.ignore;
-						break;
-					}
+					
 				}
-				issueTagsMap.put(issue.getInt("number"), sb.toString());
-				
-				switch (issueType) {
-				case dev:
-					devIssuesMap.put(issue.getInt("number"), issue.getString("title"));
-					break;
-				case bug:
-					bugIssuesMap.put(issue.getInt("number"), issue.getString("title"));
-					break;
-				case unk:
-					unkIssuesMap.put(issue.getInt("number"), issue.getString("title"));
-					break;
-				case ignore:
+				if (json.size() < 100) {
 					break;
 				}
-				
 			}
 			
 			System.out.println("<H2>Enhancements:</H2>");
