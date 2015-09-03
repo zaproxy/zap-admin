@@ -87,11 +87,11 @@ public class GenerateReleaseNotes {
 						if (tag.equalsIgnoreCase("development") || tag.equalsIgnoreCase("enhancement")
 								|| tag.equalsIgnoreCase("Type-enhancement")) {
 							issueType = IssueType.dev;
-							break;
+							// Carry on in case its got another 'overiding' tag
 						}
 						if (tag.equalsIgnoreCase("bug") || tag.equalsIgnoreCase("Type-defect")) {
 							issueType = IssueType.bug;
-							break;
+							// Carry on in case its got another 'overiding' tag
 						}
 						if (tag.equalsIgnoreCase("invalid") 
 								|| tag.equalsIgnoreCase("duplicate")
