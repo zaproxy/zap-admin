@@ -1,12 +1,12 @@
 <ZAP>
 	<core>
 		<version>2.4.2</version>
-		<daily-version>D-2015-10-05</daily-version>
+		<daily-version>D-2015-10-12</daily-version>
 		<daily>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/w2015-10-05/ZAP_WEEKLY_D-2015-10-05.zip</url>
-			<file>ZAP_WEEKLY_D-2015-10-05.zip</file>
-			<hash>SHA1:754931a5ea514072ffb166de48422aa5fe589495</hash>
-			<size>92038195</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/w2015-10-12/ZAP_WEEKLY_D-2015-10-12.zip</url>
+			<file>ZAP_WEEKLY_D-2015-10-12.zip</file>
+			<hash>SHA1:304dec5163ae162156ee236423ea87abc18beb7f</hash>
+			<size>92045469</size>
 		</daily>
 		<windows>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.2/ZAP_2.4.2_Windows.exe</url>
