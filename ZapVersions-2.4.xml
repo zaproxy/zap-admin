@@ -969,9 +969,9 @@
         <status>alpha</status>
         <changes>First version</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/revisit-alpha-1.zap</url>
-        <hash>SHA1:90580c97b8261d815dcf654b113cf3d663cf1109</hash>
-        <date>2015-09-24</date>
-        <size>29273</size>
+        <hash>SHA1:dd656f51d67659486634d14d743cdfabbdcc4b88</hash>
+        <date>2015-10-26</date>
+        <size>82810</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_revisit>
 
