@@ -98,8 +98,13 @@ public class GenerateReleaseNotes {
 								|| tag.equalsIgnoreCase("wontfix")
 								|| tag.equalsIgnoreCase("minor")
 								|| tag.equalsIgnoreCase("add-on")
+								|| tag.equalsIgnoreCase("Type-Other")
 								|| tag.equalsIgnoreCase("Type-review") 
-								|| tag.equalsIgnoreCase("Type-task")) {
+								|| tag.equalsIgnoreCase("Type-task")
+								|| tag.equalsIgnoreCase("competition")
+								|| tag.equalsIgnoreCase("InsufficientEvidence")
+								|| tag.equalsIgnoreCase("question")
+								|| tag.equalsIgnoreCase("weekly")) {
 							issueType = IssueType.ignore;
 							break;
 						}
