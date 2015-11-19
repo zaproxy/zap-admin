@@ -37,15 +37,20 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>ascanrules-release-20.zap</file>
+        <version>21</version>
+        <file>ascanrules-release-21.zap</file>
         <status>release</status>
-        <changes>Added Buffer Overflow scanner.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-20.zap</url>
-        <hash>SHA1:4a7dab9d674f72e7c27eb1d2ba1bba22982aff79</hash>
-        <date>2015-09-07</date>
-        <size>511761</size>
-        <not-before-version>2.4.2</not-before-version>
+        <changes>Change Path Traversal scanner to also check HTML responses in decoded form.&lt;br&gt; 
+       Move Format String from Beta to Release.&lt;br&gt;
+       Improve memory usage when scanning for persistent XSS vulnerabilities (Issue 1974).&lt;br&gt;
+       Fix False Positives in Buffer Overflow.&lt;br&gt;  
+       Fixed False Positives in Format String.&lt;br&gt;
+       Fixed incorrect i18n string being used which caused the External Redirects code to fail.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-21.zap</url>
+        <hash>SHA1:e3245ead0a8de7c95cd8ba18b3676b3f8fe8a575</hash>
+        <date>2015-11-19</date>
+        <size>540393</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     
     <addon>coreLang</addon>
