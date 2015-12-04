@@ -732,15 +732,19 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>ascanrulesAlpha-alpha-14.zap</file>
+        <version>15</version>
+        <file>ascanrulesAlpha-alpha-15.zap</file>
         <status>alpha</status>
-        <changes>Deleted Format String.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesAlpha-alpha-14.zap</url>
-        <hash>SHA1:4cee9f68e52345a5d8c272fdfd4767923c45bbc6</hash>
-        <info>https://github.com/zaproxy/zap-extensions/wiki/AddOn_ascanrulesAlpha</info>
-        <date>2015-09-07</date>
-        <size>781122</size>
+        <changes>Update add-on's info URL.&lt;br&gt;
+    Added Integer Overflow scanner.&lt;br&gt;
+    Added new scanner User Agent Fuzzer. The scanner checks for differences in response based on fuzzed User Agent.&lt;br&gt;
+    Slightly improve performance of "Source Code Disclosure - File Inclusion".&lt;br&gt;
+    Demoted LDAP rule due to performance issues</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesAlpha-alpha-15.zap</url>
+        <hash>SHA1:52f9b52561ba82e83ab6808e2a428135ecc7a8ef</hash>
+        <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
+        <date>2015-12-04</date>
+        <size>1312312</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_ascanrulesAlpha>
 
@@ -797,29 +801,45 @@
         <name>Code Dx Extension</name>
         <description>includes request and response data in xml reports</description>
         <author>Code Dx, Inc.</author>
-        <version>1</version>
-        <file>codedx-alpha-1.zap</file>
+        <version>2</version>
+        <file>codedx-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/codedx-alpha-1.zap</url>
-        <hash>SHA1:0fae106f37a4603eeddc394a2d09837c3c869680</hash>
-        <date>2015-07-14</date>
-        <size>6798</size>
+        <changes>Rework HTML tags in reports</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/codedx-alpha-2.zap</url>
+        <hash>SHA1:f3236e638d96e14380e1f89c7c3ca2b6f9b7990e</hash>
+        <date>2015-12-04</date>
+        <size>22196</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_codedx>
+
+    <addon>customreport</addon>
+    <addon_customreport>
+        <name>CustomReport</name>
+        <description>New HTML report module allows users to customize report content.</description>
+        <author>Chienli Ma</author>
+        <version>1</version>
+        <file>customreport-alpha-1.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/customreport-alpha-1.zap</url>
+        <hash>SHA1:235bc5518455394c0d5081e314fbffeb8638156f</hash>
+        <date>2015-12-04</date>
+        <size>555935</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_customreport>
 
     <addon>domxss</addon>
     <addon_domxss>
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>domxss-alpha-1.zap</file>
+        <version>2</version>
+        <file>domxss-alpha-2.zap</file>
         <status>alpha</status>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/domxss-alpha-1.zap</url>
-        <hash>SHA1:bd08c19a0e661bd2222f093982924356eb081d70</hash>
-        <date>2015-08-24</date>
-        <size>20212</size>
+        <changes>Change (duplicated) scanner ID, now it's 40026.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/domxss-alpha-2.zap</url>
+        <hash>SHA1:083b18d47649463cb894a4b7f78224ad7eee3499</hash>
+        <date>2015-12-04</date>
+        <size>191683</size>
         <not-before-version>2.4.1</not-before-version>
         <dependencies>
             <addons>
@@ -920,14 +940,14 @@
         <name>HttpsInfo</name>
         <description>Adds Https status information</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>httpsInfo-alpha-5.zap</file>
+        <version>6</version>
+        <file>httpsInfo-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/httpsInfo-alpha-5.zap</url>
-        <hash>SHA1:9eaec67ebc6ed2752d66cadc4321ab189659d702</hash>
-        <date>2015-04-13</date>
-        <size>50022</size>
+        <changes>Issue 1978 Uncaught NPE - Fixed.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/httpsInfo-alpha-6.zap</url>
+        <hash>SHA1:08b55236c4a67d68e99db7ed37b291f65edd70c7</hash>
+        <date>2015-12-04</date>
+        <size>51818</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_httpsInfo>
 
@@ -953,14 +973,15 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>pscanrulesAlpha-alpha-6.zap</file>
+        <version>7</version>
+        <file>pscanrulesAlpha-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>Minor code changes.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/pscanrulesAlpha-alpha-6.zap</url>
-        <hash>SHA1:1c0e6ccf19e3742fad8c167760d6480ff63486f6</hash>
-        <date>2015-09-07</date>
-        <size>1917855</size>
+        <changes>ImageLocationScanner detects more GPS tag varieties, scans png &amp; tiff files, adds i18n.&lt;br&gt;
+        Fix exception when scanning with "Base64 Disclosure" (Issue 2037).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/pscanrulesAlpha-alpha-7.zap</url>
+        <hash>SHA1:a546caed580b6f8a079cc8d41a4d7f35637f667b</hash>
+        <date>2015-12-04</date>
+        <size>1820124</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_pscanrulesAlpha>
 
