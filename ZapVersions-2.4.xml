@@ -1,6 +1,6 @@
 <ZAP>
 	<core>
-		<version>2.4.2</version>
+		<version>2.4.3</version>
 		<daily-version>D-2015-11-30</daily-version>
 		<daily>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/w2015-11-30/ZAP_WEEKLY_D-2015-11-30.zip</url>
@@ -9,27 +9,27 @@
 			<size>92194645</size>
 		</daily>
 		<windows>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.2/ZAP_2.4.2_Windows.exe</url>
-			<file>ZAP_2.4.2_Windows.exe</file>
-			<hash>SHA1:a96ba6ab7b5339921295edf9f060ce3709b0be2e</hash>
-			<size>75074491</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.3/ZAP_2.4.3_Windows.exe</url>
+			<file>ZAP_2.4.3_Windows.exe</file>
+			<hash>SHA1:f75b26918768ff1e8b79639642c46fbdf8c2da3e</hash>
+			<size>75764259</size>
 		</windows>
 		<linux>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.2/ZAP_2.4.2_Linux.tar.gz</url>
-			<file>ZAP_2.4.2_Linux.tar.gz</file>
-			<hash>SHA1:a0e0ec11e25d1cb8dd0ef399c682f0d1663efbf9</hash>
-			<size>82516519</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.3/ZAP_2.4.3_Linux.tar.gz</url>
+			<file>ZAP_2.4.3_Linux.tar.gz</file>
+			<hash>SHA1:ccfc5ada5ac5c6cf207fed79ed256c1df7402159</hash>
+			<size>81907365</size>
 		</linux>
 		<mac>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.2/ZAP_2.4.2_Mac_OS_X.dmg</url>
-			<file>ZAP_2.4.2_Mac_OS_X.dmg</file>
-			<hash>SHA1:6b633ed59698385b31853fac9fef2900858d9eca</hash>
-			<size>120614849</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.3/ZAP_2.4.3_Mac_OS_X.dmg</url>
+			<file>ZAP_2.4.3_Mac_OS_X.dmg</file>
+			<hash>SHA1:80c077f6dce6fc03c395a1d43f8b31177410fc46</hash>
+			<size>119926360</size>
 		</mac>
 		<relnotes>
 			Bug fix and minor enhancement release.
 		</relnotes>
-		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_2</relnotes-url>
+		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_3</relnotes-url>
 	</core>
 	
     <addon>ascanrules</addon>
