@@ -75,15 +75,16 @@
         <name>Directory List v1.0</name>
         <description>List of directory names to be used with "Forced Browse" add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>directorylistv1-release-2.zap</file>
+        <version>3</version>
+        <file>directorylistv1-release-3.zap</file>
         <status>release</status>
-        <changes>Updated for 2.4.0.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/directorylistv1-release-2.zap</url>
-        <hash>SHA1:d445fffe18fccd7a632528e53d00609775d20039</hash>
+        <changes>Removed repeated files.&lt;br&gt;
+    Added strings for version control directories of Git, Mercurial, SVN, CVS, Bazaar.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/directorylistv1-release-3.zap</url>
+        <hash>SHA1:77ba79eb68b9768d5c223dacf7c5433b0cff0b54</hash>
         <info>https://owasp.org/index.php/DirBuster</info>
-        <date>2015-04-13</date>
-        <size>847510</size>
+        <date>2015-12-04</date>
+        <size>847601</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_directorylistv1>
     
@@ -92,15 +93,16 @@
         <name>Directory List v2.3</name>
         <description>Lists of directory names to be used with "Forced Browse" add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>directorylistv2_3-release-2.zap</file>
+        <version>3</version>
+        <file>directorylistv2_3-release-3.zap</file>
         <status>release</status>
-        <changes>Updated for 2.4.0.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/directorylistv2_3-release-2.zap</url>
-        <hash>SHA1:69aec31f4689b8a84f534f4ee4fe107b0f0f65aa</hash>
+        <changes>Removed repeated files.&lt;br&gt;
+    Added strings for version control directories of Git, Mercurial, SVN, Bazaar.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/directorylistv2_3-release-3.zap</url>
+        <hash>SHA1:440e50d8fcd59b6e44f85c510a080dfa1823987e</hash>
         <info>https://owasp.org/index.php/DirBuster</info>
-        <date>2015-04-13</date>
-        <size>8608737</size>
+        <date>2015-12-04</date>
+        <size>8608719</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_directorylistv2_3>
     
@@ -109,15 +111,15 @@
         <name>Directory List v2.3 LC</name>
         <description>Lists of lower case directory names to be used with "Forced Browse" add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>directorylistv2_3_lc-release-2.zap</file>
+        <version>3</version>
+        <file>directorylistv2_3_lc-release-3.zap</file>
         <status>release</status>
-        <changes>Updated for 2.4.0.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/directorylistv2_3_lc-release-2.zap</url>
-        <hash>SHA1:4817fa8b54a8fec440407d59ab2fa7d0fd146a83</hash>
+        <changes>Added strings for version control directories of Git, Mercurial, SVN, Bazaar.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/directorylistv2_3_lc-release-3.zap</url>
+        <hash>SHA1:8d187d3a75aea6405a9806076775751b1b78b701</hash>
         <info>https://owasp.org/index.php/DirBuster</info>
-        <date>2015-04-13</date>
-        <size>7454816</size>
+        <date>2015-12-04</date>
+        <size>7454751</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_directorylistv2_3_lc>
     
@@ -193,14 +195,16 @@
         <name>Online menus</name>
         <description>ZAP Online menu items</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>onlineMenu-release-3.zap</file>
+        <version>4</version>
+        <file>onlineMenu-release-4.zap</file>
         <status>release</status>
-        <changes>Updated links to point to GitHub</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/onlineMenu-release-3.zap</url>
-        <hash>SHA1:dca2aa4271c637da79f188026e10a747dff575d3</hash>
-        <date>2015-06-08</date>
-        <size>188527</size>
+        <changes>Issue 1999 - Fix Title Caps&lt;br&gt;
+       Issue 2009 - Add Online links to the FAQ and Newsletter pages&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/onlineMenu-release-4.zap</url>
+        <hash>SHA1:7fff76fd428c63df904a750578b9b9efec72da0d</hash>
+        <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsOnlineMenuOnlineMenu</info>
+        <date>2015-12-04</date>
+        <size>199593</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_onlineMenu>
     
@@ -209,15 +213,14 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>pscanrules-release-14.zap</file>
+        <version>15</version>
+        <file>pscanrules-release-15.zap</file>
         <status>release</status>
-        <changes>Issue 1600 - XFrameOptionScanner, add handling to prevent alerts on error responses at High threshold.&lt;br&gt;
-	Issue 760 - XContentTypeOptionsScanner, add handling to prevent alerts on error responses at High threshold.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/pscanrules-release-14.zap</url>
-        <hash>SHA1:edf29669aea2fc407084139f28d116d5ef7fabc8</hash>
-        <date>2015-09-07</date>
-        <size>354915</size>
+        <changes>Issue 1594 - TestInfoSessionIdURL overhaul matching mechanism.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/pscanrules-release-15.zap</url>
+        <hash>SHA1:e029457f4c53220b0e07f99e41a66e266aed1940</hash>
+        <date>2015-12-04</date>
+        <size>368187</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_pscanrules>
     
@@ -226,15 +229,16 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>quickstart-release-16.zap</file>
+        <version>17</version>
+        <file>quickstart-release-17.zap</file>
         <status>release</status>
-        <changes>Include API key in PNH URL (Issue 1714).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/quickstart-release-16.zap</url>
-        <hash>SHA1:2ec6047d37cf7f1a12fcc0b42d026eda20e42584</hash>
-        <date>2015-07-30</date>
-        <size>325034</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Add progress indications for quick scan launched from the command line (Issue 1891) &lt;br&gt;
+     Improve Quick Attack error messages (Issue 2032) &lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/quickstart-release-17.zap</url>
+        <hash>SHA1:7f1c24ef8ea1bd4cb0c0c5490914317cecc8c4d1</hash>
+        <date>2015-12-04</date>
+        <size>340761</size>
+        <not-before-version>2.4.2</not-before-version>
     </addon_quickstart>
     
     <addon>reveal</addon>
@@ -291,17 +295,16 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>spiderAjax-release-13.zap</file>
+        <version>14</version>
+        <file>spiderAjax-release-14.zap</file>
         <status>release</status>
-        <changes>Updated add-on's info URL.&lt;br&gt;
-	Changed to use the (full) URI of selected node (to be used as spider's seed).</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/spiderAjax-release-13.zap</url>
-        <hash>SHA1:c554396eec54f48e38f396588102f14d0450eb2e</hash>
+        <changes>Issue 2102: Allow ajax spider options to be set via the API.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/spiderAjax-release-14.zap</url>
+        <hash>SHA1:563697a35cb1e26116be7b731431a00f743dcfb2</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2015-07-30</date>
-        <size>2482450</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2015-12-04</date>
+        <size>2498848</size>
+        <not-before-version>2.4.2</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -317,16 +320,16 @@
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>websocket-release-9.zap</file>
+        <version>10</version>
+        <file>websocket-release-10.zap</file>
         <status>release</status>
-        <changes>Minor code changes and fix of exception.&lt;br&gt;
-	Removed fuzzing code - will need to be re-implemented for new adv fuzzing</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/websocket-release-9.zap</url>
-        <hash>SHA1:914a57842b4af05c71d2b0c4e2515dd825ac4d56</hash>
-        <date>2015-04-13</date>
-        <size>692014</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Fix issue with length of handshake's url (Issue 2097).&lt;br&gt;
+    Restore fuzzing capabilities (Issue 1905).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/websocket-release-10.zap</url>
+        <hash>SHA1:e323ca749b9aa77040f3366a5924c2a6173e5be1</hash>
+        <date>2015-12-04</date>
+        <size>823387</size>
+        <not-before-version>2.4.3</not-before-version>
     </addon_websocket>
 
     <addon>alertReport</addon>
