@@ -278,15 +278,15 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
+        <version>4</version>
         <semver>1.0.0</semver>
-        <file>selenium-release-3.zap</file>
+        <file>selenium-release-4.zap</file>
         <status>release</status>
-        <changes>Updated to use Selenium 2.47.1</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/selenium-release-3.zap</url>
-        <hash>SHA1:7d2d4f038ffa60d4478fe7b73cd2fe7a3f77bdd8</hash>
-        <date>2015-08-31</date>
-        <size>32519808</size>
+        <changes>Updated to use Selenium 2.48.2 (Issue 2149).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/selenium-release-4.zap</url>
+        <hash>SHA1:0c664c584db346ef9471d4c9707ef0aecb554fb0</hash>
+        <date>2015-12-22</date>
+        <size>31628745</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_selenium>
     
