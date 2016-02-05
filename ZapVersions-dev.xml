@@ -355,18 +355,21 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>ascanrulesBeta-beta-18.zap</file>
+        <version>19</version>
+        <file>ascanrulesBeta-beta-19.zap</file>
         <status>beta</status>
-        <changes>Removing Format String.&lt;br&gt;
-    Fix unloading issue (Issue 1972).&lt;br&gt;
-    Slightly improve performance of "LDAP Injection" and "Username Enumeration".&lt;br&gt;
-    Demoted LDAP rule due to performance issues</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesBeta-beta-18.zap</url>
-        <hash>SHA1:434316186ceaecb6f9d29b775b4350413dbf9119</hash>
-        <date>2015-12-04</date>
-        <size>2578220</size>
-        <not-before-version>2.4.2</not-before-version>
+        <changes>Adding Integer Overflow Scanner.&lt;br&gt;
+	Issue 823: i18n (internationalise) beta active scan rules.&lt;br&gt;
+	Issue 1713: Source Code Disclosure SVN Throws False Positive - Fixed.&lt;br&gt;
+	Add CWE and WASC IDs to active scanners which may have been lacking those details.&lt;br&gt;
+	Create help for scanners which were missing entries.&lt;br&gt;
+	Issue 2180: Adjust logging, and implement plugin skip if runtime requirements not met.&lt;/br&gt;
+	Security fixes, to be detailed later.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrulesBeta-beta-19.zap</url>
+        <hash>SHA1:ae9902333c56f6e1ac1d4aeaa5967e92758c2852</hash>
+        <date>2016-02-05</date>
+        <size>2585546</size>
+        <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesBeta>
     
     <addon>beanshell</addon>
@@ -1027,16 +1030,17 @@
         <name>SAML Extension</name>
         <description>Detect, Show, Edit, Fuzz SAML requests</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>saml-alpha-4.zap</file>
+        <version>5</version>
+        <file>saml-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Updated add-on's info URL.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/saml-alpha-4.zap</url>
-        <hash>SHA1:f9240cb7e099813f4608cc712a457153fbafb262</hash>
+        <changes>Internationalise and show 'SAML Actions' menu.&lt;br&gt;
+	Security fixes, to be detailed later.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/saml-alpha-5.zap</url>
+        <hash>SHA1:9d1e9eb975ae2428b99f7e0a88f9cab1c07f0aaa</hash>
         <info>https://github.com/zaproxy/zaproxy</info>
-        <date>2015-09-07</date>
-        <size>994257</size>
-        <not-before-version>2.4.2</not-before-version>
+        <date>2016-02-05</date>
+        <size>994451</size>
+        <not-before-version>2.4.0</not-before-version>
     </addon_saml>
 
     <addon>sequence</addon>
