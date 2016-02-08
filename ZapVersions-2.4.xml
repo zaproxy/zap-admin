@@ -1116,15 +1116,15 @@
         <name>Technology detection using Wappalyzer</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>wappalyzer-alpha-5.zap</file>
+        <version>6</version>
+        <file>wappalyzer-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Do not access view components when view is not initialised (Issue 1617).</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/wappalyzer-alpha-5.zap</url>
-        <hash>SHA1:657571f10027795bb5b6e581433abc1b9042dc14</hash>
-        <date>2015-09-07</date>
-        <size>1045445</size>
-        <not-before-version>2.4.2</not-before-version>
+        <changes>Updated for latest wappalyzer data.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/wappalyzer-alpha-6.zap</url>
+        <hash>SHA1:7276442f986ce436bc51f665901281359226b0db</hash>
+        <date>2016-02-08</date>
+        <size>1276840</size>
+        <not-before-version>2.4.3</not-before-version>
     </addon_wappalyzer>
 	
 </ZAP>
