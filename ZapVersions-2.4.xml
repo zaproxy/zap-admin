@@ -837,6 +837,23 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_codedx>
 
+    <addon>communityScripts</addon>
+    <addon_communityScripts>
+        <name>Community Scripts</name>
+        <description>Useful ZAP scripts written by the ZAP community.</description>
+        <author>ZAP Community</author>
+        <version>2</version>
+        <file>communityScripts-alpha-2.zap</file>
+        <status>alpha</status>
+        <changes>Fixed bug which prevents ZAP configs from being saved correctly&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/communityScripts-alpha-2.zap</url>
+        <hash>SHA1:74ac7f864454b32dd6a985d6b169c3f26c77ac88</hash>
+        <info>https://github.com/zaproxy/community-scripts</info>
+        <date>2016-02-17</date>
+        <size>129034</size>
+        <not-before-version>2.4.3</not-before-version>
+    </addon_communityScripts>
+
     <addon>customreport</addon>
     <addon_customreport>
         <name>CustomReport</name>
