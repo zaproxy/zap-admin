@@ -682,17 +682,27 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>zest-beta-19.zap</file>
+        <version>20</version>
+        <file>zest-beta-20.zap</file>
         <status>beta</status>
-        <changes>Updated add-on's info URL.&lt;br&gt;
-    Correct the message shown in failed asserts (Issue 1647).&lt;br&gt;
-    Other code changes.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/zest-beta-19.zap</url>
-        <hash>SHA1:2d86d669c3be58ebfefbffad0e7e97d576df837a</hash>
+        <changes>Add missing error messages for 'Assign variable via string delimiters'.&lt;br&gt;
+	Add missing field (operand B) in 'Assign variable to a calculation' dialogue.&lt;br&gt;
+	Send authentication requests with ZAP's configurations (Issue 2114).&lt;br&gt;
+	Fix "Active scan sequence" (Issue 2120).&lt;br&gt;
+	Fix exception while opening a dialogue.&lt;br&gt;
+	Cannot use auth script in daemon mode (Issue 2294).&lt;br&gt;
+	Support httpsender scripts (Issue 2293).&lt;br&gt;
+	Cant paste variable into new request dialog (Issue 2007).&lt;br&gt;
+	Script context menu has duplicated items (Issue 2106).&lt;br&gt;
+	Exception while adding Zest Condition (Issue 2296).&lt;br&gt;
+	Should not be able to delete THEN statement (Issue 2295).&lt;br&gt;
+	Statement lost after drag and drop (Issue 2299).&lt;br&gt;
+	It's possible to drag the script node (Issue 2302).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/zest-beta-20.zap</url>
+        <hash>SHA1:1a7aadec4582fd586eb7d5a2107e04d35bbce3c1</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2015-08-23</date>
-        <size>2051849</size>
+        <date>2016-03-07</date>
+        <size>2003771</size>
         <not-before-version>2.4.0</not-before-version>
         <dependencies>
             <addons>
