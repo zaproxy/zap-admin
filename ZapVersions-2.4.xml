@@ -278,16 +278,16 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
+        <version>5</version>
         <semver>1.0.0</semver>
-        <file>selenium-release-4.zap</file>
+        <file>selenium-release-5.zap</file>
         <status>release</status>
-        <changes>Updated to use Selenium 2.48.2 (Issue 2149).</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/selenium-release-4.zap</url>
-        <hash>SHA1:0c664c584db346ef9471d4c9707ef0aecb554fb0</hash>
-        <date>2015-12-22</date>
-        <size>31628745</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Updated to use Selenium 2.52.0 (Issue 2321)</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/selenium-release-5.zap</url>
+        <hash>SHA1:47aa4554aceffb7118d74d870e3dbb91b46a0bed</hash>
+        <date>2016-03-15</date>
+        <size>31703273</size>
+        <not-before-version>2.4.3</not-before-version>
     </addon_selenium>
     
     <addon>spiderAjax</addon>
