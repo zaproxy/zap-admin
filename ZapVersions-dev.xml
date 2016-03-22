@@ -332,6 +332,26 @@
         <not-before-version>2.4.3</not-before-version>
     </addon_websocket>
 
+    <addon>alertFilters</addon>
+    <addon_alertFilters>
+        <name>Context Alert Filters</name>
+        <description>Allows you to automate the changing of alert risk levels.</description>
+        <author>ZAP Dev Team</author>
+        <version>2</version>
+        <file>alertFilters-beta-2.zap</file>
+        <status>beta</status>
+        <changes>Updated to use alertIds from 2.4.3+&lt;br&gt;
+	Misc minor bug fixes&lt;br&gt;
+	HTML report reports the filtered false positives as true results (Issue 2311)&lt;br&gt;
+	Promoted to beta and added icon&lt;br&gt;
+	Various minor UI improvements&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/alertFilters-beta-2.zap</url>
+        <hash>SHA1:bc97e3b0a8b4955662377c6a652193acd8833bfa</hash>
+        <date>2016-03-22</date>
+        <size>263798</size>
+        <not-before-version>2.4.2</not-before-version>
+    </addon_alertFilters>
+
     <addon>alertReport</addon>
     <addon_alertReport>
         <name>Report alert generator</name>
@@ -730,22 +750,6 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_accessControl>
     
-    <addon>alertFilters</addon>
-    <addon_alertFilters>
-        <name>context Alert Filters</name>
-        <description>Allows you to automate the changing of alert risk levels</description>
-        <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>alertFilters-alpha-1.zap</file>
-        <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/alertFilters-alpha-1.zap</url>
-        <hash>SHA1:fe66f543f5c94afbc9ffc989b0fd28a840f5eafd</hash>
-        <date>2015-09-07</date>
-        <size>193307</size>
-        <not-before-version>2.4.2</not-before-version>
-    </addon_alertFilters>
-	
     <addon>amf</addon>
     <addon_amf>
         <name>AMF</name>
