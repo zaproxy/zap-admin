@@ -240,6 +240,21 @@
         <size>340761</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_quickstart>
+
+    <addon>requester</addon>
+    <addon_requester>
+        <name>Requester</name>
+        <description>Request numbered panel.</description>
+        <author>Surikato</author>
+        <version>1</version>
+        <file>requester-alpha-1.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/requester-alpha-1.zap</url>
+        <hash>SHA1:47366c74610c4a086c5143c7c1b840af28ae5472</hash>
+        <date>2016-05-13</date>
+        <size>40411</size>
+        <not-before-version>2.4.2</not-before-version>
+    </addon_requester>
     
     <addon>reveal</addon>
     <addon_reveal>
