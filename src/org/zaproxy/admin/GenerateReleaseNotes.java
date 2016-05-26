@@ -60,7 +60,7 @@ public class GenerateReleaseNotes {
 	
 	public static void main(String[] args) {
 		// For now hardcoding variables - should make these parameters at some point ;)
-		String dateSince = "2015-09-08T00:00:00Z";
+	    String dateSince = "2015-12-05T00:00:00Z";
 		try {
 			Map<Integer, String> devIssuesMap = new HashMap<Integer, String>();
 			Map<Integer, String> bugIssuesMap = new HashMap<Integer, String>();
@@ -95,6 +95,7 @@ public class GenerateReleaseNotes {
 						}
 						if (tag.equalsIgnoreCase("invalid") 
 								|| tag.equalsIgnoreCase("duplicate")
+								|| tag.equalsIgnoreCase("historic")
 								|| tag.equalsIgnoreCase("wontfix")
 								|| tag.equalsIgnoreCase("minor")
 								|| tag.equalsIgnoreCase("add-on")
