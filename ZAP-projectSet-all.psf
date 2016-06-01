@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.egit.core.GitProvider">
+<project reference="1.0,https://github.com/zaproxy/zap-admin,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-api-dotnet,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-api-go,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-api-java,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-api-python,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-api-php,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-api-nodejs,master,."/>
+<project reference="1.0,https://github.com/zaproxy/community-scripts,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-core-help,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-extensions,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-extensions,alpha,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-extensions,beta,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-swag,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zap-test,master,."/>
+<project reference="1.0,https://github.com/zaproxy/zaproxy.git,develop,."/>
+<project reference="1.0,https://github.com/zaproxy/zaproxy.github.io,master,."/>
+</provider>
+</psf>
