@@ -840,15 +840,15 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>2</version>
-        <file>communityScripts-alpha-2.zap</file>
+        <version>3</version>
+        <file>communityScripts-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Fixed bug which prevents ZAP configs from being saved correctly&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/communityScripts-alpha-2.zap</url>
-        <hash>SHA1:ec62742eab8b09fdf45adb8445e5823f97fef596</hash>
+        <changes>Updated with the latest scripts for 2.5.0&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/communityScripts-alpha-3.zap</url>
+        <hash>SHA1:f1c2e0af4cf4500b9d0656723316a6f0e806f668</hash>
         <info>https://github.com/zaproxy/community-scripts</info>
         <date>2016-06-02</date>
-        <size>129034</size>
+        <size>134107</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_communityScripts>
     
