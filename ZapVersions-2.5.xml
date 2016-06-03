@@ -1,6 +1,6 @@
 <ZAP>
 	<core>
-		<version>2.4.3</version>
+		<version>2.5.0</version>
 		<daily-version>D-2016-05-23</daily-version>
 		<daily>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/w2016-05-23/ZAP_WEEKLY_D-2016-05-23.zip</url>
@@ -9,27 +9,27 @@
 			<size>91238046</size>
 		</daily>
 		<windows>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.3/ZAP_2.4.3_Windows.exe</url>
-			<file>ZAP_2.4.3_Windows.exe</file>
-			<hash>SHA1:f75b26918768ff1e8b79639642c46fbdf8c2da3e</hash>
-			<size>75764259</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.5.0/ZAP_2.5.0_Windows.exe</url>
+			<file>ZAP_2.5.0_Windows.exe</file>
+			<hash>SHA1:91ca53dadeffd93aae4e8ed2489e62848e63abc4</hash>
+			<size>75267412</size>
 		</windows>
 		<linux>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.3/ZAP_2.4.3_Linux.tar.gz</url>
-			<file>ZAP_2.4.3_Linux.tar.gz</file>
-			<hash>SHA1:ccfc5ada5ac5c6cf207fed79ed256c1df7402159</hash>
-			<size>81907365</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.5.0/ZAP_2.5.0_Linux.tar.gz</url>
+			<file>ZAP_2.5.0_Linux.tar.gz</file>
+			<hash>SHA1:6e39b788d342a3fe9cedd233a9705d642337ce3a</hash>
+			<size>79520691</size>
 		</linux>
 		<mac>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.4.3/ZAP_2.4.3_Mac_OS_X.dmg</url>
-			<file>ZAP_2.4.3_Mac_OS_X.dmg</file>
-			<hash>SHA1:80c077f6dce6fc03c395a1d43f8b31177410fc46</hash>
-			<size>119926360</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.5.0/ZAP_2.5.0_Mac_OS_X.dmg</url>
+			<file>ZAP_2.5.0_Mac_OS_X.dmg</file>
+			<hash>SHA1:6a9bccfeefc4adc83bbd31d2a34a1e401d1b997c</hash>
+			<size>129517681</size>
 		</mac>
 		<relnotes>
-			Bug fix and minor enhancement release.
+			Bug fix and enhancement release.
 		</relnotes>
-		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_4_3</relnotes-url>
+		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_5_0</relnotes-url>
 	</core>
 	
     <addon>ascanrules</addon>
@@ -174,13 +174,13 @@
         <status>release</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help-release-6.zap</url>
-        <hash>SHA1:65af5556c6c624d9afeebc56a49880b088c14b2b</hash>
+        <hash>SHA1:726708f51ae4b821f0470b7422ba4b361af5a3fe</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpIntro</info>
-        <date>2016-06-02</date>
-        <size>738553</size>
+        <date>2016-06-03</date>
+        <size>739293</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_help>
-    
+
     <addon>help_pt_BR</addon>
     <addon_help_pt_BR>
         <name>Help - Portuguese, Brazilian</name>
@@ -191,10 +191,10 @@
         <status>release</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help_pt_BR-release-6.zap</url>
-        <hash>SHA1:bde906bc506aba009897a94eccedef2f9991b9d3</hash>
+        <hash>SHA1:210d4bb4c4dbe5da5dbcf156bd4cf2d181172c16</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2016-06-02</date>
-        <size>766710</size>
+        <date>2016-06-03</date>
+        <size>797933</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_help_pt_BR>
     
@@ -243,11 +243,12 @@
         <version>18</version>
         <file>quickstart-release-18.zap</file>
         <status>release</status>
-        <changes>Issue 1271: Quickstart PnH panel components should mirror the enabled state of the API (i.e.: If API disabled, disable PnH components).&lt;br&gt;</changes>
+        <changes>Issue 1271: Quickstart PnH panel components should mirror the enabled state of the API (i.e.: If API disabled, disable PnH components).&lt;br&gt;
+	 PnH message shown even if add-on not installed.&lt;br&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/quickstart-release-18.zap</url>
-        <hash>SHA1:ad97cd7dbf607791ebe937c804efb25eea61ea94</hash>
-        <date>2016-06-02</date>
-        <size>337698</size>
+        <hash>SHA1:f33f1bada7e7d6169225fb0f970704615350a5d7</hash>
+        <date>2016-06-03</date>
+        <size>339039</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_quickstart>
     
