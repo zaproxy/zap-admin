@@ -71,10 +71,10 @@
         <status>release</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/coreLang-release-10.zap</url>
-        <hash>SHA1:6066fd77ad223f5fcb1e1479de2a38f2df9e189c</hash>
+        <hash>SHA1:025428b44507a98dc40ffaa5071621ffb3cc2e1d</hash>
         <info>https://crowdin.com/project/owasp-zap</info>
-        <date>2016-06-02</date>
-        <size>2715031</size>
+        <date>2016-06-14</date>
+        <size>2715140</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_coreLang>
     
@@ -246,9 +246,9 @@
         <changes>Issue 1271: Quickstart PnH panel components should mirror the enabled state of the API (i.e.: If API disabled, disable PnH components).&lt;br&gt;
 	 PnH message shown even if add-on not installed.&lt;br&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/quickstart-release-18.zap</url>
-        <hash>SHA1:f33f1bada7e7d6169225fb0f970704615350a5d7</hash>
+        <hash>SHA1:ad97cd7dbf607791ebe937c804efb25eea61ea94</hash>
         <date>2016-06-03</date>
-        <size>339039</size>
+        <size>337698</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_quickstart>
     
@@ -903,10 +903,10 @@
         <status>alpha</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help_bs_BA-alpha-5.zap</url>
-        <hash>SHA1:573f18d215282292d5f0f226ef208b99394cd5c6</hash>
+        <hash>SHA1:aa7ed9aa95bff1b2d1aeb547ff6cab7d5a37bef6</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
         <date>2016-06-02</date>
-        <size>728749</size>
+        <size>756583</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_help_bs_BA>
     
@@ -920,10 +920,10 @@
         <status>alpha</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help_es_ES-alpha-5.zap</url>
-        <hash>SHA1:93edae4202bec9a50674e413e39074084aacf72a</hash>
+        <hash>SHA1:b25a9f3e4db5eb41c19647ec623750043d26325c</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
         <date>2016-06-02</date>
-        <size>731978</size>
+        <size>760182</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_help_es_ES>
     
@@ -937,10 +937,10 @@
         <status>alpha</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help_fr_FR-alpha-5.zap</url>
-        <hash>SHA1:ede859c9cf8d5589bd75867098f55a804a9e8bf0</hash>
+        <hash>SHA1:423675291345b964ca0aeda95550ffd978071f6f</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
         <date>2016-06-02</date>
-        <size>728031</size>
+        <size>757459</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_help_fr_FR>
     
@@ -954,10 +954,10 @@
         <status>alpha</status>
         <changes>Updated for 2.5.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help_ja_JP-alpha-5.zap</url>
-        <hash>SHA1:6ecff610342cdeb4690cd7ab48e1d3c5750b3d98</hash>
+        <hash>SHA1:33bca35847c84da63a2522fb26c6679cf870211f</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
         <date>2016-06-02</date>
-        <size>755416</size>
+        <size>783581</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_help_ja_JP>
     
