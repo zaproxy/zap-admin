@@ -1016,17 +1016,16 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>pscanrulesAlpha-alpha-9.zap</file>
+        <version>10</version>
+        <file>pscanrulesAlpha-alpha-10.zap</file>
         <status>alpha</status>
-        <changes>Add CWE and WASC IDs to passive scanners which may have been lacking those details.&lt;br&gt;
-		Fix exception when scanning with "User Controllable Charset" scanner.&lt;br&gt;
-		Fix exception when scanning with "Image Location Scanner" scanner.&lt;br&gt;
-		Strict-Transport-Security Header Scanner added support for max-age=0 per rfc6797.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-9.zap</url>
-        <hash>SHA1:289df858a856094c61989bb74f914f0243d3172b</hash>
-        <date>2016-06-02</date>
-        <size>1827746</size>
+        <changes>XPoweredByHeaderInfoLeakScanner modify evidence (Issue 2575)&lt;br&gt;
+		ContentSecurityPolicyMissingScanner to only check for older CSP headers at Low threshold&lt;br&gt;
+		CacheableScanner: Add other information in attack and remove evidence (Issue 2573)&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-10.zap</url>
+        <hash>SHA1:1fc881177fd0e629c8c0b97480e96cdcd51cb052</hash>
+        <date>2016-06-22</date>
+        <size>1850422</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesAlpha>
     
