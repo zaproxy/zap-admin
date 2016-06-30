@@ -289,15 +289,15 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
+        <version>6</version>
         <semver>1.0.0</semver>
-        <file>selenium-release-5.zap</file>
+        <file>selenium-release-6.zap</file>
         <status>release</status>
-        <changes>Updated to use Selenium 2.52.0 (Issue 2321)</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-5.zap</url>
-        <hash>SHA1:81f700b45013f734bad250bb240d3959e278f977</hash>
-        <date>2016-06-02</date>
-        <size>31703367</size>
+        <changes>Fix issue that prevented PhantomJS from starting (Issue 2636)</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-6.zap</url>
+        <hash>SHA1:73903430831c9778e0fc34e2dfa7e638c0c15272</hash>
+        <date>2016-06-30</date>
+        <size>31702670</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_selenium>
     
