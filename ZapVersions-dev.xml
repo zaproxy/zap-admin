@@ -613,19 +613,14 @@
         <name>Advanced SQLInjection Scanner</name>
         <description>An advanced active injection bundle for SQLi (derived by SQLMap)</description>
         <author>Andrea Pompili (Yhawke)</author>
-        <version>10</version>
-        <file>sqliplugin-beta-10.zap</file>
+        <version>11</version>
+        <file>sqliplugin-beta-11.zap</file>
         <status>beta</status>
-        <changes>Prevent XXE vulnerability.&lt;br&gt;
-	Log level adjustments.&lt;br&gt;
-	Internationalisation of scanner and alert's data.&lt;br&gt;
-	Check for skip/stop more often.&lt;br&gt;
-            Added EXP error based payloads&lt;br&gt;
-            Preserved the space in commented suffixes&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/sqliplugin-beta-10.zap</url>
-        <hash>SHA1:3fafa575f738b55e98c3f7deda2e1aa7c5133fb8</hash>
-        <date>2016-06-02</date>
-        <size>104470</size>
+        <changes>Check all DB techs when evaluating if the scanner should be run.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/sqliplugin-beta-11.zap</url>
+        <hash>SHA1:33b91ef51c3fb322efe14a8da56a77252760d392</hash>
+        <date>2016-07-07</date>
+        <size>104490</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_sqliplugin>
     

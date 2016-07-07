@@ -633,16 +633,14 @@
         <name>Advanced SQLInjection Scanner</name>
         <description>An advanced active injection bundle for SQLi (derived by SQLMap)</description>
         <author>Andrea Pompili (Yhawke)</author>
-        <version>9</version>
-        <file>sqliplugin-beta-9.zap</file>
+        <version>11</version>
+        <file>sqliplugin-beta-11.zap</file>
         <status>beta</status>
-        <changes>Split boundary and plugin definition in two different files&lt;br&gt;
-            Updated all plugin and boundary files to the newest SQLMap database&lt;br&gt;
-            Changed to target DB tecnhonolgy (Issue 1618).</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/sqliplugin-beta-9.zap</url>
-        <hash>SHA1:863642f027810b8ded1f91e1a7e6b7e980e8b0b2</hash>
-        <date>2015-07-30</date>
-        <size>65334</size>
+        <changes>Check all DB techs when evaluating if the scanner should be run.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/sqliplugin-beta-11.zap</url>
+        <hash>SHA1:33b91ef51c3fb322efe14a8da56a77252760d392</hash>
+        <date>2016-07-07</date>
+        <size>104490</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_sqliplugin>
     
