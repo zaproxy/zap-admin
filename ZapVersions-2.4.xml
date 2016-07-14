@@ -461,36 +461,21 @@
         <name>AdvFuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <semver>2.0.0</semver>
-        <file>fuzz-beta-4.zap</file>
+        <version>6</version>
+        <semver>2.0.1</semver>
+        <file>fuzz-beta-6.zap</file>
         <status>beta</status>
-        <changes>Add HTTP processor for tagging fuzz results.&lt;br&gt;
-    Fix an error that prevented the use of empty strings as payloads (Issue 1948).&lt;br&gt;
-    Fix exception while closing ZAP with running fuzz processes.&lt;br&gt;
-    Show the correct Payload Generator script when showing modify dialogue.&lt;br&gt;
-    Correctly use the number of payloads from script for calculation of progress (Issue 1881).&lt;br&gt;
-    Show the number of payloads from the script in Fuzzer dialogue (Issue 1887).&lt;br&gt;
-    Improve memory usage (Issue 2051).&lt;br&gt;
-    Correct the delay used when sending messages.&lt;br&gt;
-    Improve stop time.&lt;br&gt;
-    Fix (potential) thread leak after stopping a paused fuzzer.&lt;br&gt;
-    Allow to preview payloads generated or from external sources (Issue 1896)&lt;br&gt;
-    Fix the location where the characters are added in expand payload processor.&lt;br&gt;
-    Allow to modify the selected Payload Processor script.&lt;br&gt;
-    Show current payloads when adding/modifying processors (Issue 1898).&lt;br&gt;
-    Allow to preview processing of payloads (Issue 1931).&lt;br&gt;
-    Allow to save (to file) String, Regex, File and Script payloads (Issue 1932).&lt;br&gt;
-    Fix issues in generation of payloads from regular expressions (Issue 1884).&lt;br&gt;
-    Add support for regex repetitions (Issue 1885).&lt;br&gt;
-    Allow to modify the payloads of File and File Fuzzers (Issue 1897).&lt;br&gt;
-    Show the correct Fuzzer HTTP Processor script when showing modify dialogue.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/fuzz-beta-4.zap</url>
-        <hash>SHA1:3d79d1471d1f428f0b81586287cbf512154b15d9</hash>
+        <changes>Added Export button to export results as CSV file.&lt;br&gt;
+    Enable "Limit maximum errors" by default and increase the default number.&lt;br&gt;
+    Improve error handling when reading/writing files from/to fuzzers directory.&lt;br&gt;
+    Add SHA-512 Hash payload processor (Issue 2643).&lt;br&gt;
+    Allow to search the fuzzer file names when selecting them.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/fuzz-beta-6.zap</url>
+        <hash>SHA1:b49dea08655edaab20d0c72f706177b288cf3091</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsFuzzConcepts</info>
-        <date>2015-12-04</date>
-        <size>2264993</size>
-        <not-before-version>2.4.2</not-before-version>
+        <date>2016-07-14</date>
+        <size>2193035</size>
+        <not-before-version>2.4.0</not-before-version>
     </addon_fuzz>
     
     <addon>importurls</addon>
