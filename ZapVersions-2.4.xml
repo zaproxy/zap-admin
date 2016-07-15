@@ -37,19 +37,17 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>21</version>
-        <file>ascanrules-release-21.zap</file>
+        <version>24</version>
+        <file>ascanrules-release-24.zap</file>
         <status>release</status>
-        <changes>Change Path Traversal scanner to also check HTML responses in decoded form.&lt;br&gt; 
-       Move Format String from Beta to Release.&lt;br&gt;
-       Improve memory usage when scanning for persistent XSS vulnerabilities (Issue 1974).&lt;br&gt;
-       Fix False Positives in Buffer Overflow.&lt;br&gt;  
-       Fixed False Positives in Format String.&lt;br&gt;
-       Fixed incorrect i18n string being used which caused the External Redirects code to fail.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/ascanrules-release-21.zap</url>
-        <hash>SHA1:e3245ead0a8de7c95cd8ba18b3676b3f8fe8a575</hash>
-        <date>2015-11-19</date>
-        <size>540393</size>
+        <changes>TestPathTraversal - catch InvalidRedirectLocationException and URIException.&lt;br&gt;
+    TestRemoteFileInclude - adjust logging (debug not error).&lt;br&gt;
+    Run SQL Injection if any DB tech is enabled but skip specific non-applicable error checks.&lt;br&gt;
+    Issue 2624: Improve Error Logging in PathTraversal Plugin.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-24.zap</url>
+        <hash>SHA1:33f8549d0c1726733770b4cedbeb500be8f76ce9</hash>
+        <date>2016-07-15</date>
+        <size>547930</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     

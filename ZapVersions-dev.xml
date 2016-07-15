@@ -37,27 +37,17 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>23</version>
-        <file>ascanrules-release-23.zap</file>
+        <version>24</version>
+        <file>ascanrules-release-24.zap</file>
         <status>release</status>
-        <changes>Issue 823 - i18n (internationalise) release active scan rules.&lt;br&gt;
-	Issue 2001 - Add PowerShell variants to CommandInjection Plugin.&lt;br&gt;
-	Add CWE and WASC IDs to active scanners which may have been lacking those details.&lt;br&gt;
-	Add missing skip/stop checks to some scanners (Issue 1734).&lt;br&gt;
-	Remote File Include FP if original title includes 'Google' (Issue 2240).&lt;br&gt; 
-	Issue 2264: TestPathTraversal - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2265: TestRemoteFileInclude - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2266: TestCrossSiteScriptV2 - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2267 &amp; 1860: TestSQLInjection - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2268: CodeInjectionPlugin - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2269: BufferOverflow - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2270: FormatString - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2271: TestParameterTamper - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 1550: CommandInjectionPlugin - adjust logging, catch specific exceptions.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-23.zap</url>
-        <hash>SHA1:7b93bb11b0c94031f683a02ae9a5d764c2e943a9</hash>
-        <date>2016-06-02</date>
-        <size>544628</size>
+        <changes>TestPathTraversal - catch InvalidRedirectLocationException and URIException.&lt;br&gt;
+    TestRemoteFileInclude - adjust logging (debug not error).&lt;br&gt;
+    Run SQL Injection if any DB tech is enabled but skip specific non-applicable error checks.&lt;br&gt;
+    Issue 2624: Improve Error Logging in PathTraversal Plugin.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-24.zap</url>
+        <hash>SHA1:33f8549d0c1726733770b4cedbeb500be8f76ce9</hash>
+        <date>2016-07-15</date>
+        <size>547930</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     
