@@ -221,17 +221,18 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>pscanrules-release-16.zap</file>
+        <version>17</version>
+        <file>pscanrules-release-17.zap</file>
         <status>release</status>
-        <changes>Issue 823 - i18n (internationalise) release passive scan rules.&lt;br&gt;
-	Add CWE and WASC IDs to passive scanners which may have been lacking those details.&lt;br&gt;
-	Issue 2405 - Accommodate responses with multiple Cache-Control headers.&lt;br&gt;
-	Issue 395 - Add handling for allowed cross domain hosts (via context definition at HIGH threshold).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-16.zap</url>
-        <hash>SHA1:b5532da0250a049601c96f0600e8d27c60b9bee6</hash>
-        <date>2016-06-02</date>
-        <size>364735</size>
+        <changes>Correctly check that the cookie being set has the Secure and HttpOnly attributes.&lt;br&gt;
+    Do not set the attack field for Private IP Disclosure and Secure Pages Include Mixed Content.&lt;br&gt;
+    Remove "N/A" parameter from the alert of Application Error Disclosure.&lt;br&gt;
+    Issue 2539 - X-Frame-Options passive scanner, add compliance variants.&lt;br&gt;
+    Corrected Password Autocomplete parameter in alert</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-17.zap</url>
+        <hash>SHA1:5e872e888dd91a0c9010e2eba48a85409f5eca8a</hash>
+        <date>2016-07-15</date>
+        <size>441313</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrules>
     
