@@ -746,18 +746,15 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>ascanrulesAlpha-alpha-16.zap</file>
+        <version>17</version>
+        <file>ascanrulesAlpha-alpha-17.zap</file>
         <status>alpha</status>
-        <changes>Deleted Integer Overflow scanner.&lt;br&gt;
-	Issue 823: i18n (internationalise) alpha rules.&lt;br&gt;
-	Add CWE and WASC IDs to active scanners which may have been lacking those details.&lt;br&gt;
-	Issue 2207: Added Http Only Site Active scan rule.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesAlpha-alpha-16.zap</url>
-        <hash>SHA1:a5cd47f45995c3d33dd8936b0cf6a4f64c075903</hash>
+        <changes>Added Httpoxy scanner.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesAlpha-alpha-17.zap</url>
+        <hash>SHA1:94f75d09f2f60be2f47afa6d76f306b2c9747173</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2016-06-02</date>
-        <size>1313486</size>
+        <date>2016-07-21</date>
+        <size>1312724</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesAlpha>
     
