@@ -1002,16 +1002,15 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>pscanrulesAlpha-alpha-10.zap</file>
+        <version>11</version>
+        <file>pscanrulesAlpha-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>XPoweredByHeaderInfoLeakScanner modify evidence (Issue 2575)&lt;br&gt;
-		ContentSecurityPolicyMissingScanner to only check for older CSP headers at Low threshold&lt;br&gt;
-		CacheableScanner: Add other information in attack and remove evidence (Issue 2573)&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-10.zap</url>
-        <hash>SHA1:1fc881177fd0e629c8c0b97480e96cdcd51cb052</hash>
-        <date>2016-06-22</date>
-        <size>1850422</size>
+        <changes>Issue 2538: Strict-Transport-Security Header Scanner additional variants.&lt;br&gt;
+		Issue 2716: Implement a passive check for cookies without SameSite set.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-11.zap</url>
+        <hash>SHA1:83c33a068805de6e98427f8a69378c9a6ff57a63</hash>
+        <date>2016-07-28</date>
+        <size>1865204</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesAlpha>
     
