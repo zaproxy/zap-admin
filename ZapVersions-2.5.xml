@@ -280,15 +280,17 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
+        <version>7</version>
         <semver>1.0.0</semver>
-        <file>selenium-release-6.zap</file>
+        <file>selenium-release-7.zap</file>
         <status>release</status>
-        <changes>Fix issue that prevented PhantomJS from starting (Issue 2636)</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-6.zap</url>
-        <hash>SHA1:73903430831c9778e0fc34e2dfa7e638c0c15272</hash>
-        <date>2016-06-30</date>
-        <size>31702670</size>
+        <changes>Allow to use Firefox 47.0.1 (Issue 2739).&lt;br&gt;
+	Allow to manually specify the paths to binaries and WebDrivers in the options.&lt;br&gt;
+	Allow to choose which Firefox binary is used.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-7.zap</url>
+        <hash>SHA1:8e5b204eec678374c0d379d285b847b850748acb</hash>
+        <date>2016-08-04</date>
+        <size>31285518</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_selenium>
     
