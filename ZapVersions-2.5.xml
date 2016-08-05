@@ -690,15 +690,17 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>21</version>
-        <file>zest-beta-21.zap</file>
+        <version>22</version>
+        <file>zest-beta-22.zap</file>
         <status>beta</status>
-        <changes>Fix (UI) exceptions related to Zest Results tab.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/zest-beta-21.zap</url>
-        <hash>SHA1:b66a0821b3b07dd912731a17ae7d48c48fcb375e</hash>
+        <changes>Change Sequence scripts to not use Sites tree nodes directly.&lt;br&gt;
+    Correct assertion of response body length when using charset (Issue 2669).&lt;br&gt;
+    Require just the parameters defined in the Authentication script (Issue 2734).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/zest-beta-22.zap</url>
+        <hash>SHA1:58c053508002ff08b653cc8fd549db382e971c03</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2016-06-02</date>
-        <size>2007075</size>
+        <date>2016-08-05</date>
+        <size>2008006</size>
         <not-before-version>2.4.0</not-before-version>
         <dependencies>
             <addons>
