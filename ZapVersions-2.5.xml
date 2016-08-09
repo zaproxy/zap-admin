@@ -211,18 +211,16 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>pscanrules-release-17.zap</file>
+        <version>18</version>
+        <file>pscanrules-release-18.zap</file>
         <status>release</status>
-        <changes>Correctly check that the cookie being set has the Secure and HttpOnly attributes.&lt;br&gt;
-    Do not set the attack field for Private IP Disclosure and Secure Pages Include Mixed Content.&lt;br&gt;
-    Remove "N/A" parameter from the alert of Application Error Disclosure.&lt;br&gt;
-    Issue 2539 - X-Frame-Options passive scanner, add compliance variants.&lt;br&gt;
-    Corrected Password Autocomplete parameter in alert</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-17.zap</url>
-        <hash>SHA1:5e872e888dd91a0c9010e2eba48a85409f5eca8a</hash>
-        <date>2016-07-15</date>
-        <size>441313</size>
+        <changes>Only report issues on errors and redirects at LOW threshold.&lt;br&gt;
+	Only report X-Frame-Options issues at LOW threshold if CSP 'frame-ancestors' element present.&lt;br&gt; 
+	Issue 2732: False positives for security headers missing due to redirections.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-18.zap</url>
+        <hash>SHA1:1acef143378c43fdc7a3f82878c2497bf0e3b99d</hash>
+        <date>2016-08-09</date>
+        <size>458352</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrules>
     
