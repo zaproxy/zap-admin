@@ -760,6 +760,23 @@
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesAlpha>
     
+    <addon>authstats</addon>
+    <addon_authstats>
+        <name>Authentication Statistics</name>
+        <description>Records logged in/out statistics for all contexts in scope.</description>
+        <author>ZAP Core Team</author>
+        <version>1</version>
+        <file>authstats-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/authstats-alpha-1.zap</url>
+        <hash>SHA1:c00d7e572faba04ff1262bcc04406599a8b20ffd</hash>
+        <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAuthstatsAuthStats</info>
+        <date>2016-08-16</date>
+        <size>11605</size>
+        <not-before-version>2.5.0</not-before-version>
+    </addon_authstats>
+
     <addon>browserView</addon>
     <addon_browserView>
         <name>Browser View</name>
