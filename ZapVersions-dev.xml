@@ -792,6 +792,22 @@
         <size>180584</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_browserView>
+
+    <addon>bugtracker</addon>
+    <addon_bugtracker>
+        <name>Bug Tracker</name>
+        <description>Bug Tracker extension.</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>bugtracker-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/bugtracker-alpha-1.zap</url>
+        <hash>SHA1:3c2ae880b9d942fe817483ac515371f5ff2e47c2</hash>
+        <date>2016-08-25</date>
+        <size>1736016</size>
+        <not-before-version>2.5.0</not-before-version>
+    </addon_bugtracker>
     
     <addon>callgraph</addon>
     <addon_callgraph>
