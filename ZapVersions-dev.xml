@@ -466,20 +466,17 @@
         <name>AdvFuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
+        <version>7</version>
         <semver>2.0.1</semver>
-        <file>fuzz-beta-6.zap</file>
+        <file>fuzz-beta-7.zap</file>
         <status>beta</status>
-        <changes>Added Export button to export results as CSV file.&lt;br&gt;
-    Enable "Limit maximum errors" by default and increase the default number.&lt;br&gt;
-    Improve error handling when reading/writing files from/to fuzzers directory.&lt;br&gt;
-    Add SHA-512 Hash payload processor (Issue 2643).&lt;br&gt;
-    Allow to search the fuzzer file names when selecting them.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/fuzz-beta-6.zap</url>
-        <hash>SHA1:b49dea08655edaab20d0c72f706177b288cf3091</hash>
+        <changes>Fix exception during the unload of the add-on, when in daemon mode.&lt;br&gt;
+    Update Content-Length for all request methods, not just POST (Issue 2766).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/fuzz-beta-7.zap</url>
+        <hash>SHA1:b1fa365be40addf37c6d9851996f7772678ddabe</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsFuzzConcepts</info>
-        <date>2016-07-14</date>
-        <size>2193035</size>
+        <date>2016-09-05</date>
+        <size>2223603</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_fuzz>
     
