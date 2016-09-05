@@ -313,17 +313,21 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>spiderAjax-release-15.zap</file>
+        <version>16</version>
+        <file>spiderAjax-release-16.zap</file>
         <status>release</status>
-        <changes>Fix issue that prevented the spider from clicking all elements set in the options (Issue 2151).&lt;br&gt;
-	Minor update in help pages.&lt;br&gt;
-	Suppress log of innocuous warning.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/spiderAjax-release-15.zap</url>
-        <hash>SHA1:85d24d2ab86231dee00d6c2578a545ad197aa10c</hash>
+        <changes>Allow to show the AJAX Spider dialogue through Tools menu (and keyboard shortcut).&lt;br&gt;
+    Fixed the issue that prevented the ajaxSpider from resetting the crawled url count to zero while starting a new scan (Issue 2610).&lt;br&gt;
+    Warn always if attempting to AJAX spider "localhost" with PhantomJS.&lt;br&gt;
+    Allow to spider a context (Issue 1955).&lt;br&gt;
+    Allow to spider as a user (Issue 1956).&lt;br&gt;
+    Allow to manually specify the start URL in AJAX Spider dialogue (Issue 1957).&lt;br&gt;
+    Allow to spider just a site's subtree (Issue 2847).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/spiderAjax-release-16.zap</url>
+        <hash>SHA1:8e0fe2cbe3171790444906f460512a5eb6c79def</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2016-06-02</date>
-        <size>2489094</size>
+        <date>2016-09-05</date>
+        <size>2494019</size>
         <not-before-version>2.4.2</not-before-version>
         <dependencies>
             <addons>
