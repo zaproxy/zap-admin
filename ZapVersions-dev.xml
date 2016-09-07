@@ -607,15 +607,15 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>scripts-beta-16.zap</file>
+        <version>17</version>
+        <file>scripts-beta-17.zap</file>
         <status>beta</status>
-        <changes>Fix exceptions when installing/uninstalling script engines, with no script selected.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/scripts-beta-16.zap</url>
-        <hash>SHA1:810a9346a6476fe0a42f4c60dba599cb590612b7</hash>
+        <changes>Discard undoable edits after setting a script (Issue 2675).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/scripts-beta-17.zap</url>
+        <hash>SHA1:2807956b3942d153d0de04c4c7b9585094e52b17</hash>
         <info>https://github.com/zaproxy/zaproxy/wiki/ScriptConsole</info>
-        <date>2016-06-02</date>
-        <size>496762</size>
+        <date>2016-09-07</date>
+        <size>499749</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_scripts>
     
