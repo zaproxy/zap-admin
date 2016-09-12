@@ -1,7 +1,6 @@
 <ZAP>
 	<core>
 		<version>2.5.0</version>
-		<daily-version>D-2016-09-05</daily-version>
 		<daily-version>D-2016-09-12</daily-version>
 		<daily>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/w2016-09-12/ZAP_WEEKLY_D-2016-09-12.zip</url>
