@@ -1182,6 +1182,21 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_sse>
     
+    <addon>viewstate</addon>
+    <addon_viewstate>
+        <name>ViewState</name>
+        <description>ASP/JSF ViewState Decoder and Editor</description>
+        <author>Calum Hutton</author>
+        <version>1</version>
+        <file>viewstate-alpha-1.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/viewstate-alpha-1.zap</url>
+        <hash>SHA1:55decd0f02e3a75bcc8e6f3ce757d569e398a099</hash>
+        <date>2016-09-14</date>
+        <size>25184</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_viewstate>
+    
     <addon>wappalyzer</addon>
     <addon_wappalyzer>
         <name>Technology detection using Wappalyzer</name>
