@@ -37,17 +37,17 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>ascanrules-release-24.zap</file>
+        <version>25</version>
+        <file>ascanrules-release-25.zap</file>
         <status>release</status>
-        <changes>TestPathTraversal - catch InvalidRedirectLocationException and URIException.&lt;br&gt;
-    TestRemoteFileInclude - adjust logging (debug not error).&lt;br&gt;
-    Run SQL Injection if any DB tech is enabled but skip specific non-applicable error checks.&lt;br&gt;
-    Issue 2624: Improve Error Logging in PathTraversal Plugin.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-24.zap</url>
-        <hash>SHA1:33f8549d0c1726733770b4cedbeb500be8f76ce9</hash>
-        <date>2016-07-15</date>
-        <size>547930</size>
+        <changes>Issue 1211 - SQLi Scanner may raise seemingly duplicate alerts (fixed).&lt;br&gt;
+	Use correct HTTP message and attack for alerts of "Format String Error".&lt;br&gt;
+	Fixed test for wrong tag in Reflected XSS rule.&lt;br&gt;
+	Issue 1632 - False Negative XSS on injection outside of HTML tags.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-25.zap</url>
+        <hash>SHA1:548c24c8842c5338fc5849cc88a74bbd9bd2f377</hash>
+        <date>2016-09-28</date>
+        <size>551792</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     
