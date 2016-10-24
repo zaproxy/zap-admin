@@ -396,19 +396,20 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>ascanrulesBeta-beta-20.zap</file>
+        <version>21</version>
+        <file>ascanrulesBeta-beta-21.zap</file>
         <status>beta</status>
-        <changes>Prevent XXE vulnerability.&lt;br&gt;
-	Issue 2174: Adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2178: SQLInjectionMySQL - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2179: SQLInjectionPostgresql - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2272: SQLInjectionHypersonic - adjust logging, catch specific exceptions.&lt;br&gt;
-	Issue 2177: SourceCodeDisclosureSVN - adjust logging.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesBeta-beta-20.zap</url>
-        <hash>SHA1:84e059debdd986a1fc9ba4bae83e91de95be455b</hash>
-        <date>2016-06-02</date>
-        <size>2675824</size>
+        <changes>Support changing the length of time used in timing attacks via config options.&lt;br&gt;
+	Support ignoring specified forms when checking for CSRF vulnerabilities.&lt;br&gt;
+	Do not attempt to parse empty cross domain policy files.&lt;br&gt;
+	Correct creation of attack URL in Source Code Disclosure - CVE-2012-1823.&lt;br&gt;
+	Correct creation of attack URL in Remote Code Execution - CVE-2012-1823.&lt;br&gt;
+	Respect OS techs included when scanning with Remote Code Execution - CVE-2012-1823.&lt;br&gt;
+	Adjust log levels of some scanners, from INFO to DEBUG.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesBeta-beta-21.zap</url>
+        <hash>SHA1:0c59e05f3c153958fa23b3a5f05a7033c61b6a78</hash>
+        <date>2016-10-24</date>
+        <size>2714237</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesBeta>
     
@@ -586,19 +587,18 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>pscanrulesBeta-beta-13.zap</file>
+        <version>14</version>
+        <file>pscanrulesBeta-beta-14.zap</file>
         <status>beta</status>
-        <changes>Issue 1966: Charset Mismatch passive scanner now handles HTML5 meta charset, and multiple conditions.&lt;br&gt;
-	Issue 316: 'Information Disclosure - Debug Error' added mysql and ASP.Net messages.&lt;br&gt;
-	Issue 823: i18n (internationalise) beta passive scan rules.&lt;br&gt;
-	Issue 2230: Weak Auth Passive Scanner - Evidence vs Attack.&lt;br&gt;
-	Add CWE and WASC IDs to passive scanners which may have been lacking those details.&lt;br&gt;
-	Create help for scanners which were missing entries.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesBeta-beta-13.zap</url>
-        <hash>SHA1:8a9b43cfa2abcf06a6c25d52a218e053b9adf1a6</hash>
-        <date>2016-06-02</date>
-        <size>510435</size>
+        <changes>Issue 2576: CSRFCountermeasures, remove unneeded Attack and Evidence messages.&lt;br&gt;
+	Issue 2574: CookieLooselyScopedScanner, remove attack field and update description.&lt;br&gt;
+	Support ignoring specified forms when checking for CSRF vulnerabilities.&lt;br&gt;
+	Correct the plugin ID of Absence of Anti-CSRF Tokens from 40014 to 10202.&lt;br&gt;
+	Issue 2860: Add further reference links.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesBeta-beta-14.zap</url>
+        <hash>SHA1:5616ab3ab651c26244e6eca8ebe87a916ec86d63</hash>
+        <date>2016-10-24</date>
+        <size>525584</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesBeta>
     
@@ -765,15 +765,17 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>ascanrulesAlpha-alpha-17.zap</file>
+        <version>18</version>
+        <file>ascanrulesAlpha-alpha-18.zap</file>
         <status>alpha</status>
-        <changes>Added Httpoxy scanner.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesAlpha-alpha-17.zap</url>
-        <hash>SHA1:94f75d09f2f60be2f47afa6d76f306b2c9747173</hash>
+        <changes>Added Apache Range Header DoS (CVE-2011-3192) scanner.&lt;br&gt;
+	Fix exception when raising a "Source Code Disclosure - File Inclusion" alert.&lt;br&gt;
+	Adjust log levels of some scanners, from INFO to DEBUG.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesAlpha-alpha-18.zap</url>
+        <hash>SHA1:7e14d4fe67389fa2d230b607b5e5aa7dd8b8c31f</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2016-07-21</date>
-        <size>1312724</size>
+        <date>2016-10-24</date>
+        <size>1333963</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesAlpha>
     
@@ -912,14 +914,14 @@
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>domxss-alpha-2.zap</file>
+        <version>3</version>
+        <file>domxss-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Change (duplicated) scanner ID, now it's 40026.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/domxss-alpha-2.zap</url>
-        <hash>SHA1:d5561c2eb2ccd3da37501669ad9124f58a32f888</hash>
-        <date>2016-06-02</date>
-        <size>192099</size>
+        <changes>Skip the scanner if not able to start Firefox.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/domxss-alpha-3.zap</url>
+        <hash>SHA1:b86bdc8d25461bf0922a699d84d635e1bc8dc9a0</hash>
+        <date>2016-10-24</date>
+        <size>192724</size>
         <not-before-version>2.4.1</not-before-version>
         <dependencies>
             <addons>
@@ -1054,15 +1056,15 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>pscanrulesAlpha-alpha-11.zap</file>
+        <version>12</version>
+        <file>pscanrulesAlpha-alpha-12.zap</file>
         <status>alpha</status>
-        <changes>Issue 2538: Strict-Transport-Security Header Scanner additional variants.&lt;br&gt;
-		Issue 2716: Implement a passive check for cookies without SameSite set.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-11.zap</url>
-        <hash>SHA1:83c33a068805de6e98427f8a69378c9a6ff57a63</hash>
-        <date>2016-07-28</date>
-        <size>1865204</size>
+        <changes>Refactoring the x-powered-by scanner to raise one alert if it finds repetitive headers.&lt;br&gt;
+		Update the CSP scanner to handle the Content-Security-Policy-Report-Only header.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-12.zap</url>
+        <hash>SHA1:2f6d8f31e4cf57f675273b903674ad92fb1e88fd</hash>
+        <date>2016-10-24</date>
+        <size>1875924</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesAlpha>
     
