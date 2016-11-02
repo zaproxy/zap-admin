@@ -1183,6 +1183,21 @@
         <size>331696</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_sse>
+
+    <addon>tlsdebug</addon>
+    <addon_tlsdebug>
+        <name>TLS Debug</name>
+        <description>Provides a tab which allows to quickly debug a TLS/SSL connection</description>
+        <author>P.M.J. Roth</author>
+        <version>1</version>
+        <file>tlsdebug-alpha-1.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/tlsdebug-alpha-1.zap</url>
+        <hash>SHA1:0b987f507e0219817ba012c38df890c862ce0ea5</hash>
+        <date>2016-11-02</date>
+        <size>22114</size>
+        <not-before-version>2.5.0</not-before-version>
+    </addon_tlsdebug>
     
     <addon>viewstate</addon>
     <addon_viewstate>
