@@ -126,14 +126,14 @@
         <name>Export Report</name>
         <description>Report Export module that allows users to customize content and export in a desired format.</description>
         <author>Goran Sarenkapa - JordanGS</author>
-        <version>1</version>
-        <file>exportreport-alpha-1.zap</file>
+        <version>2</version>
+        <file>exportreport-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/exportreport-alpha-1.zap</url>
-        <hash>SHA1:3976a2d177ea5077cedb6890a5bc0666ad838bac</hash>
-        <date>2016-09-02</date>
-        <size>6094240</size>
+        <changes>Added API call support and minor enhancements and bug fixes.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/exportreport-alpha-2.zap</url>
+        <hash>SHA1:e53164be60feecf7f14ffc9bfa853f7fd0dec389</hash>
+        <date>2016-11-17</date>
+        <size>5841276</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_exportreport>
     
