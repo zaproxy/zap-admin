@@ -126,14 +126,14 @@
         <name>Export Report</name>
         <description>Report Export module that allows users to customize content and export in a desired format.</description>
         <author>Goran Sarenkapa - JordanGS</author>
-        <version>2</version>
-        <file>exportreport-alpha-2.zap</file>
+        <version>3</version>
+        <file>exportreport-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Added API call support and minor enhancements and bug fixes.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/exportreport-alpha-2.zap</url>
-        <hash>SHA1:e53164be60feecf7f14ffc9bfa853f7fd0dec389</hash>
-        <date>2016-11-17</date>
-        <size>5841276</size>
+        <changes>Correct link to official ZAP Jenkins plugin in help page.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/exportreport-alpha-3.zap</url>
+        <hash>SHA1:93f94da8e434d343f0693d8f5ed1b0c7be8cc73e</hash>
+        <date>2016-11-18</date>
+        <size>5841253</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_exportreport>
     
