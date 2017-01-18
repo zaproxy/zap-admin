@@ -588,18 +588,14 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>pscanrulesBeta-beta-14.zap</file>
+        <version>15</version>
+        <file>pscanrulesBeta-beta-15.zap</file>
         <status>beta</status>
-        <changes>Issue 2576: CSRFCountermeasures, remove unneeded Attack and Evidence messages.&lt;br&gt;
-	Issue 2574: CookieLooselyScopedScanner, remove attack field and update description.&lt;br&gt;
-	Support ignoring specified forms when checking for CSRF vulnerabilities.&lt;br&gt;
-	Correct the plugin ID of Absence of Anti-CSRF Tokens from 40014 to 10202.&lt;br&gt;
-	Issue 2860: Add further reference links.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesBeta-beta-14.zap</url>
-        <hash>SHA1:5616ab3ab651c26244e6eca8ebe87a916ec86d63</hash>
-        <date>2016-10-24</date>
-        <size>525584</size>
+        <changes>Support security annotations for forms that dont need anti-CSRF tokens.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesBeta-beta-15.zap</url>
+        <hash>SHA1:95bf040c81bf107125e2bdaae7a1596c6715d2b6</hash>
+        <date>2017-01-18</date>
+        <size>528262</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesBeta>
     
@@ -1057,15 +1053,14 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>pscanrulesAlpha-alpha-12.zap</file>
+        <version>13</version>
+        <file>pscanrulesAlpha-alpha-13.zap</file>
         <status>alpha</status>
-        <changes>Refactoring the x-powered-by scanner to raise one alert if it finds repetitive headers.&lt;br&gt;
-		Update the CSP scanner to handle the Content-Security-Policy-Report-Only header.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-12.zap</url>
-        <hash>SHA1:2f6d8f31e4cf57f675273b903674ad92fb1e88fd</hash>
-        <date>2016-10-24</date>
-        <size>1875924</size>
+        <changes>Issue 3148: Only report HSTS on plain HTTP issue at Low threshold.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-13.zap</url>
+        <hash>SHA1:e62fb2955140ca56ca6b11ad1454b088578e5fe4</hash>
+        <date>2017-01-18</date>
+        <size>1944233</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesAlpha>
     
