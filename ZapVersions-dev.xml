@@ -294,17 +294,17 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
+        <version>8</version>
         <semver>1.0.0</semver>
-        <file>selenium-release-7.zap</file>
+        <file>selenium-release-8.zap</file>
         <status>release</status>
-        <changes>Allow to use Firefox 47.0.1 (Issue 2739).&lt;br&gt;
-	Allow to manually specify the paths to binaries and WebDrivers in the options.&lt;br&gt;
-	Allow to choose which Firefox binary is used.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-7.zap</url>
-        <hash>SHA1:8e5b204eec678374c0d379d285b847b850748acb</hash>
-        <date>2016-08-04</date>
-        <size>31285518</size>
+        <changes>Allow to use Firefox 48+ (Issue 2743).&lt;br&gt;
+	Allow to specify the path to geckodriver.&lt;br&gt;
+	Use bundled WebDrivers by default.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-8.zap</url>
+        <hash>SHA1:607dd8c99e9349ba50592820a0a2e4830e830d78</hash>
+        <date>2017-01-27</date>
+        <size>31300592</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_selenium>
     
@@ -1225,5 +1225,53 @@
         <size>1274047</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_wappalyzer>
+
+    <addon>webdriverlinux</addon>
+    <addon_webdriverlinux>
+        <name>Linux WebDrivers</name>
+        <description>Linux WebDrivers for Firefox and Chrome.</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>webdriverlinux-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First release: Firefox v0.13.0 Chrome v2.27&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverlinux-alpha-1.zap</url>
+        <hash>SHA1:b19ec96fb3def3498e795bdbd14e8a8c28a7c384</hash>
+        <date>2017-01-27</date>
+        <size>10372639</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_webdriverlinux>
+
+    <addon>webdrivermacos</addon>
+    <addon_webdrivermacos>
+        <name>MacOS WebDrivers</name>
+        <description>MacOS WebDrivers for Firefox and Chrome.</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>webdrivermacos-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First release: Firefox v0.13.0 Chrome v2.27&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdrivermacos-alpha-1.zap</url>
+        <hash>SHA1:0aea1ccb8fa24748464b332673707d6fc3e63c50</hash>
+        <date>2017-01-27</date>
+        <size>5871772</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_webdrivermacos>
+
+    <addon>webdriverwindows</addon>
+    <addon_webdriverwindows>
+        <name>Windows WebDrivers</name>
+        <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>webdriverwindows-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First release: Firefox v0.13.0 Chrome v2.27 IE 3.0.0&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverwindows-alpha-1.zap</url>
+        <hash>SHA1:1a3533d3104800a890d1c1019cee667e1592bb91</hash>
+        <date>2017-01-27</date>
+        <size>10203774</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_webdriverwindows>
 	
 </ZAP>
