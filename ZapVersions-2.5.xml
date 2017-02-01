@@ -1064,6 +1064,22 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesAlpha>
     
+    <addon>replacer</addon>
+    <addon_replacer>
+        <name>Replacer</name>
+        <description>Easy way to replace strings in requests and responses.</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>replacer-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/replacer-alpha-1.zap</url>
+        <hash>SHA1:f33439b3c89edb394e42728eb4edeed1d5bea9b6</hash>
+        <date>2017-02-01</date>
+        <size>36527</size>
+        <not-before-version>2.5.0</not-before-version>
+    </addon_replacer>
+
     <addon>requester</addon>
     <addon_requester>
         <name>Requester</name>
