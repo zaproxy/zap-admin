@@ -294,46 +294,46 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <semver>1.0.0</semver>
-        <file>selenium-release-8.zap</file>
+        <version>9</version>
+        <semver>1.1.0</semver>
+        <file>selenium-release-9.zap</file>
         <status>release</status>
-        <changes>Allow to use Firefox 48+ (Issue 2743).&lt;br&gt;
-	Allow to specify the path to geckodriver.&lt;br&gt;
-	Use bundled WebDrivers by default.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-8.zap</url>
-        <hash>SHA1:607dd8c99e9349ba50592820a0a2e4830e830d78</hash>
-        <date>2017-01-27</date>
-        <size>31300592</size>
+        <changes>Allow add-ons to add new browsers.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-9.zap</url>
+        <hash>SHA1:29380f8f14903809de74c22e52ee1d7c80c6501a</hash>
+        <date>2017-03-06</date>
+        <size>31341269</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_selenium>
-    
+
     <addon>spiderAjax</addon>
     <addon_spiderAjax>
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>spiderAjax-release-16.zap</file>
+        <version>17</version>
+        <file>spiderAjax-release-17.zap</file>
         <status>release</status>
-        <changes>Allow to show the AJAX Spider dialogue through Tools menu (and keyboard shortcut).&lt;br&gt;
-    Fixed the issue that prevented the ajaxSpider from resetting the crawled url count to zero while starting a new scan (Issue 2610).&lt;br&gt;
-    Warn always if attempting to AJAX spider "localhost" with PhantomJS.&lt;br&gt;
-    Allow to spider a context (Issue 1955).&lt;br&gt;
-    Allow to spider as a user (Issue 1956).&lt;br&gt;
-    Allow to manually specify the start URL in AJAX Spider dialogue (Issue 1957).&lt;br&gt;
-    Allow to spider just a site's subtree (Issue 2847).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/spiderAjax-release-16.zap</url>
-        <hash>SHA1:8e0fe2cbe3171790444906f460512a5eb6c79def</hash>
+        <changes>Show alerts/tags in the AJAX Spider tab.&lt;br&gt;
+	Use a custom initiator ID (10) for AJAX Spider requests.&lt;br&gt;
+	Show always the latest configured browsers in AJAX Spider dialogue (Issue 3057).&lt;br&gt;
+	Honour global excluded URLs (Issue 3172).&lt;br&gt;
+	Reset URL counter on session change.&lt;br&gt;
+	Show excluded URLs in the AJAX Spider tab and through the ZAP API.&lt;br&gt;
+	Use provided browsers from Selenium add-on.&lt;br&gt;
+	Show messages that were not successful because of I/O errors.&lt;br&gt;
+	Ensure New Scan button is enabled, when the mode allows it.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/spiderAjax-release-17.zap</url>
+        <hash>SHA1:0f4ea1344da926688d2dd4cf229c32c5e45aabda</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2016-09-05</date>
-        <size>2494019</size>
-        <not-before-version>2.4.2</not-before-version>
+        <date>2017-03-06</date>
+        <size>2566619</size>
+        <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>selenium</id>
-                    <semver>1.*</semver>
+                    <semver>&gt;=1.1.0 &amp; &lt;2.0.0</semver>
                 </addon>
             </addons>
         </dependencies>
