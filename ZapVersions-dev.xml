@@ -697,6 +697,60 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_treetools>
     
+    <addon>webdriverlinux</addon>
+    <addon_webdriverlinux>
+        <name>Linux WebDrivers</name>
+        <description>Linux WebDrivers for Firefox and Chrome.</description>
+        <author>ZAP Dev Team</author>
+        <version>2</version>
+        <file>webdriverlinux-beta-2.zap</file>
+        <status>beta</status>
+        <changes>Update geckodriver to v0.14.0&lt;br&gt;
+	Download files from zap-libs repo&lt;br&gt;
+	Promote to beta&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverlinux-beta-2.zap</url>
+        <hash>SHA1:6185710a07776f21d288f17a0da2692bacc17926</hash>
+        <date>2017-03-06</date>
+        <size>10371607</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_webdriverlinux>
+    
+    <addon>webdrivermacos</addon>
+    <addon_webdrivermacos>
+        <name>MacOS WebDrivers</name>
+        <description>MacOS WebDrivers for Firefox and Chrome.</description>
+        <author>ZAP Dev Team</author>
+        <version>2</version>
+        <file>webdrivermacos-beta-2.zap</file>
+        <status>beta</status>
+        <changes>Update geckodriver to v0.14.0&lt;br&gt;
+	Download files from zap-libs repo&lt;br&gt;
+	Promote to beta&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdrivermacos-beta-2.zap</url>
+        <hash>SHA1:04ed621054505b5ca81a4a987c52294f42492385</hash>
+        <date>2017-03-06</date>
+        <size>5870746</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_webdrivermacos>
+    
+    <addon>webdriverwindows</addon>
+    <addon_webdriverwindows>
+        <name>Windows WebDrivers</name>
+        <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
+        <author>ZAP Dev Team</author>
+        <version>2</version>
+        <file>webdriverwindows-beta-2.zap</file>
+        <status>beta</status>
+        <changes>Update geckodriver to v0.14.0&lt;br&gt;
+	Download files from zap-libs repo&lt;br&gt;
+	Promote to beta&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverwindows-beta-2.zap</url>
+        <hash>SHA1:e4f3a17a3c6b6262ead198b712d55d0c0e858e32</hash>
+        <date>2017-03-06</date>
+        <size>10202418</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_webdriverwindows>
+
     <addon>zest</addon>
     <addon_zest>
         <name>Zest - Graphical Security Scripting Language</name>
@@ -1031,6 +1085,126 @@
         <size>152027</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_importLogFiles>
+
+    <addon>jxbrowser</addon>
+    <addon_jxbrowser>
+        <name>JxBrowser (core)</name>
+        <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>jxbrowser-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jxbrowser-alpha-1.zap</url>
+        <hash>SHA1:509d4fc02838ff537eb609c0984ab08365489bb3</hash>
+        <date>2017-03-06</date>
+        <size>1349252</size>
+        <not-before-version>2.5.0</not-before-version>
+    </addon_jxbrowser>
+
+    <addon>jxbrowserlinux32</addon>
+    <addon_jxbrowserlinux32>
+        <name>JxBrowser (Linux 32)</name>
+        <description>An embedded browser based on Chromium, Linux 32 specific</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>jxbrowserlinux32-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jxbrowserlinux32-alpha-1.zap</url>
+        <hash>SHA1:832ab259b9726fa212b08c23acdc84a75cebefe9</hash>
+        <date>2017-03-06</date>
+        <size>46220936</size>
+        <not-before-version>2.5.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>jxbrowser</id>
+                </addon>
+                <addon>
+                    <id>webdriverlinux</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_jxbrowserlinux32>
+
+    <addon>jxbrowserlinux64</addon>
+    <addon_jxbrowserlinux64>
+        <name>JxBrowser (Linux 64)</name>
+        <description>An embedded browser based on Chromium, Linux 64 specific</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>jxbrowserlinux64-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jxbrowserlinux64-alpha-1.zap</url>
+        <hash>SHA1:51156b59e3f0a4a33fe928dd7a03cfc15498a7ee</hash>
+        <date>2017-03-06</date>
+        <size>45888150</size>
+        <not-before-version>2.5.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>jxbrowser</id>
+                </addon>
+                <addon>
+                    <id>webdriverlinux</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_jxbrowserlinux64>
+
+    <addon>jxbrowsermacos</addon>
+    <addon_jxbrowsermacos>
+        <name>JxBrowser (Mac OS)</name>
+        <description>An embedded browser based on Chromium, Mac OS specific</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>jxbrowsermacos-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jxbrowsermacos-alpha-1.zap</url>
+        <hash>SHA1:1c5afe6fcc02292d99b43bb8191b7e5471627e63</hash>
+        <date>2017-03-06</date>
+        <size>51382239</size>
+        <not-before-version>2.5.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>jxbrowser</id>
+                </addon>
+                <addon>
+                    <id>webdrivermacos</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_jxbrowsermacos>
+
+    <addon>jxbrowserwindows</addon>
+    <addon_jxbrowserwindows>
+        <name>JxBrowser (Windows)</name>
+        <description>An embedded browser based on Chromium, Windows specific</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>jxbrowserwindows-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jxbrowserwindows-alpha-1.zap</url>
+        <hash>SHA1:eef7310e5f6cc39937d113b5c5b03280863e5083</hash>
+        <date>2017-03-06</date>
+        <size>35839367</size>
+        <not-before-version>2.5.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>jxbrowser</id>
+                </addon>
+                <addon>
+                    <id>webdriverwindows</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_jxbrowserwindows>
     
     <addon>pscanrulesAlpha</addon>
     <addon_pscanrulesAlpha>
@@ -1225,53 +1399,5 @@
         <size>1274047</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_wappalyzer>
-
-    <addon>webdriverlinux</addon>
-    <addon_webdriverlinux>
-        <name>Linux WebDrivers</name>
-        <description>Linux WebDrivers for Firefox and Chrome.</description>
-        <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>webdriverlinux-alpha-1.zap</file>
-        <status>alpha</status>
-        <changes>First release: Firefox v0.13.0 Chrome v2.27&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverlinux-alpha-1.zap</url>
-        <hash>SHA1:b19ec96fb3def3498e795bdbd14e8a8c28a7c384</hash>
-        <date>2017-01-27</date>
-        <size>10372639</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_webdriverlinux>
-
-    <addon>webdrivermacos</addon>
-    <addon_webdrivermacos>
-        <name>MacOS WebDrivers</name>
-        <description>MacOS WebDrivers for Firefox and Chrome.</description>
-        <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>webdrivermacos-alpha-1.zap</file>
-        <status>alpha</status>
-        <changes>First release: Firefox v0.13.0 Chrome v2.27&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdrivermacos-alpha-1.zap</url>
-        <hash>SHA1:0aea1ccb8fa24748464b332673707d6fc3e63c50</hash>
-        <date>2017-01-27</date>
-        <size>5871772</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_webdrivermacos>
-
-    <addon>webdriverwindows</addon>
-    <addon_webdriverwindows>
-        <name>Windows WebDrivers</name>
-        <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
-        <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>webdriverwindows-alpha-1.zap</file>
-        <status>alpha</status>
-        <changes>First release: Firefox v0.13.0 Chrome v2.27 IE 3.0.0&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverwindows-alpha-1.zap</url>
-        <hash>SHA1:1a3533d3104800a890d1c1019cee667e1592bb91</hash>
-        <date>2017-01-27</date>
-        <size>10203774</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_webdriverwindows>
 	
 </ZAP>
