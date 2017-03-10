@@ -1,0 +1,63 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+buildDir = 'buildGradle'
+
+dependencies {
+    compile ('net.sf.json-lib:json-lib:2.4:jdk15',
+             'org.zaproxy:zap:2.5.0')
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+task generateReleaseNotes(type: JavaExec, dependsOn: 'classes') {
+    group 'ZAP'
+    description 'Generates release notes.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.admin.GenerateReleaseNotes'
+}
+
+task listDownloadCounts(type: JavaExec, dependsOn: 'classes') {
+    group 'ZAP'
+    description 'Lists download counts.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.admin.CountDownloads'
+}
+
+task pendingAddOnReleases(type: JavaExec, dependsOn: "classes") {
+    group 'ZAP'
+    description 'Reports the add-ons that are pending a release of new version.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.admin.PendingAddOnReleases'
+}
+
+task generateHelpAddOn(type: JavaExec, dependsOn: "classes") {
+    group 'ZAP'
+    description 'Generates the basic help files for an add-on.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.admin.HelpGenerator'
+    standardInput = System.in
+}
+
+task reportAddOnsMissingHelp(type: JavaExec, dependsOn: "classes") {
+    group 'ZAP'
+    description 'Reports the add-ons that do not have help pages.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.admin.HelpReportMissing'
+}
+
+task checkLatestReleaseNotes(type: JavaExec, dependsOn: "classes") {
+    group 'ZAP'
+    description 'Checks the latest release notes do not contain issues from previous ones.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.admin.CheckLatestReleaseNotes'
+}
