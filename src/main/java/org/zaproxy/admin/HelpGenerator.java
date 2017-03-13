@@ -25,11 +25,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.vafer.jdeb.shaded.compress.io.FileUtils;
+import org.apache.commons.io.FileUtils;
 
 public class HelpGenerator {
 	
-	private static final File TEMPLATE_DIR = new File("src/org/zaproxy/admin/resources/help"); 
+	private static final File TEMPLATE_DIR = new File(
+			HelpGenerator.class.getResource("resources/help").toString().replace("file:", "")); 
 	
 	private static void recursiveCopy(File srcFile, File destFile, Map<String, String> tokens) throws IOException {
 		if (srcFile.isDirectory()) {
