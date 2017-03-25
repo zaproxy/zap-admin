@@ -1405,15 +1405,17 @@
         <name>Technology detection using Wappalyzer</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>wappalyzer-alpha-7.zap</file>
+        <version>8</version>
+        <file>wappalyzer-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Allow to update/uninstall the add-on without restarting ZAP.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/wappalyzer-alpha-7.zap</url>
-        <hash>SHA1:5f500160eb6db2935a4308b77d0951f96bfb1fe8</hash>
-        <date>2016-06-02</date>
-        <size>1274047</size>
-        <not-before-version>2.4.3</not-before-version>
+        <changes>Remove the use of passive scan rule.&lt;br&gt;
+    Minor code cleanup.&lt;br&gt;
+    Add support for wappalyzer META tag checks.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/wappalyzer-alpha-8.zap</url>
+        <hash>SHA1:b25bc4338e348fdc31016f440c55f8cffb2c27e3</hash>
+        <date>2017-03-25</date>
+        <size>1275611</size>
+        <not-before-version>2.5.0</not-before-version>
     </addon_wappalyzer>
 	
 </ZAP>
