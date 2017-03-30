@@ -1206,6 +1206,22 @@
         </dependencies>
     </addon_jxbrowserwindows>
     
+    <addon>openapi</addon>
+    <addon_openapi>
+        <name>OpenAPI Support</name>
+        <description>Imports and spiders Open API definitions.</description>
+        <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
+        <version>1</version>
+        <file>openapi-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First Version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/openapi-alpha-1.zap</url>
+        <hash>SHA1:f9e31047be04c80efb9caeae4e54d74e9ba83714</hash>
+        <date>2017-03-30</date>
+        <size>2857154</size>
+        <not-before-version>2.5.0</not-before-version>
+    </addon_openapi>
+
     <addon>pscanrulesAlpha</addon>
     <addon_pscanrulesAlpha>
         <name>Passive scanner rules (alpha)</name>
