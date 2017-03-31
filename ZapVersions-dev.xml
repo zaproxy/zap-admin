@@ -310,15 +310,15 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
+        <version>10</version>
         <semver>1.1.0</semver>
-        <file>selenium-release-9.zap</file>
+        <file>selenium-release-10.zap</file>
         <status>release</status>
-        <changes>Allow add-ons to add new browsers.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/selenium-release-9.zap</url>
-        <hash>SHA1:29380f8f14903809de74c22e52ee1d7c80c6501a</hash>
-        <date>2017-03-06</date>
-        <size>31341269</size>
+        <changes>Update help page to mention the IDs of the browsers.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/selenium-release-10.zap</url>
+        <hash>SHA1:c475dd96948c89a89cb536eaa0798eda0dc9c9c0</hash>
+        <date>2017-03-31</date>
+        <size>31357408</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_selenium>
 
