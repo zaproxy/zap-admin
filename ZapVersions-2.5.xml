@@ -502,16 +502,14 @@
         <name>Invoke Applications</name>
         <description>Invoke external applications passing context related information such as URLs and parameters</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>invoke-beta-5.zap</file>
+        <version>6</version>
+        <file>invoke-beta-6.zap</file>
         <status>beta</status>
-        <changes>Consume all output of the applications in all cases (Issue 3074).&lt;br&gt;
-    Show error/std output in the order it is received (Issue 3078).&lt;br&gt;
-    Fix typos in the help pages.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/invoke-beta-5.zap</url>
-        <hash>SHA1:ce808cb9a04f12081a6a47f999b369de5b6b9b62</hash>
-        <date>2017-01-10</date>
-        <size>284544</size>
+        <changes>Properly split application arguments.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/invoke-beta-6.zap</url>
+        <hash>SHA1:ef5cd83668332fc18b7df07eb2b104960310f2cf</hash>
+        <date>2017-04-03</date>
+        <size>289967</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_invoke>
     

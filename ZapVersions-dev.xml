@@ -378,14 +378,14 @@
         <name>Context Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>alertFilters-beta-3.zap</file>
+        <version>4</version>
+        <file>alertFilters-beta-4.zap</file>
         <status>beta</status>
-        <changes>Various minor UI improvements&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/alertFilters-beta-3.zap</url>
-        <hash>SHA1:1d574afee5421395684cc3c733c5892ef9d1d64d</hash>
-        <date>2016-06-02</date>
-        <size>270471</size>
+        <changes>Minor functional improvement.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/alertFilters-beta-4.zap</url>
+        <hash>SHA1:a4feff43e36caef50fd28b0d4e82aaad85ef33b1</hash>
+        <date>2017-04-03</date>
+        <size>276934</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_alertFilters>
     
@@ -450,14 +450,15 @@
         <name>Forced Browse</name>
         <description>Forced browsing of files and directories using code from the OWASP DirBuster tool</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>bruteforce-beta-5.zap</file>
+        <version>6</version>
+        <file>bruteforce-beta-6.zap</file>
         <status>beta</status>
-        <changes>Adding request count on Forced browser tab as specified on issue #1873</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/bruteforce-beta-5.zap</url>
-        <hash>SHA1:c41f63171add4112602a800f13296ca6b7e296ae</hash>
-        <date>2016-06-02</date>
-        <size>974247</size>
+        <changes>Allow to set higher number of threads (Issue 2912).&lt;br&gt;
+    Fix issue with multiple concurrent scans.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/bruteforce-beta-6.zap</url>
+        <hash>SHA1:5acad406b5d9abe8cf88b8c67eb9b7b9a4c8a5b0</hash>
+        <date>2017-04-03</date>
+        <size>1000348 </size>
         <not-before-version>2.4.0</not-before-version>
     </addon_bruteforce>
     
@@ -466,15 +467,14 @@
         <name>Diff</name>
         <description>Displays a dialog showing the differences between 2 requests or responses. It uses diffutils and diff_match_patch</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>diff-beta-6.zap</file>
+        <version>7</version>
+        <file>diff-beta-7.zap</file>
         <status>beta</status>
-        <changes>Do not add line break tags to resultant diff (Issue 1571)&lt;br&gt;
-	Automatically close the diff dialogue when uninstalling.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/diff-beta-6.zap</url>
-        <hash>SHA1:500ea3fe0fe3ad751a11dc9d5b24391d12171281</hash>
-        <date>2016-06-02</date>
-        <size>221791</size>
+        <changes>Minor code changes.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/diff-beta-7.zap</url>
+        <hash>SHA1:1a7cb9e64e0740d752280729dda4c3f606c29a6c</hash>
+        <date>2017-04-03</date>
+        <size>235040</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_diff>
     
@@ -483,17 +483,21 @@
         <name>AdvFuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
+        <version>8</version>
         <semver>2.0.1</semver>
-        <file>fuzz-beta-7.zap</file>
+        <file>fuzz-beta-8.zap</file>
         <status>beta</status>
-        <changes>Fix exception during the unload of the add-on, when in daemon mode.&lt;br&gt;
-    Update Content-Length for all request methods, not just POST (Issue 2766).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/fuzz-beta-7.zap</url>
-        <hash>SHA1:b1fa365be40addf37c6d9851996f7772678ddabe</hash>
+        <changes>Show help button in fuzzer dialogues.&lt;br&gt;
+    Correct method name in HTTP processor JavaScript template.&lt;br&gt;
+    Fix exception when adding file fuzzers with selected empty "Custom Fuzzers".&lt;br&gt;
+    Fix typos in the help pages.&lt;br&gt;
+    Automatically add Anti-CSRF Token Refresher, if available.&lt;br&gt;
+    Render custom states, always (Issue 3166).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/fuzz-beta-8.zap</url>
+        <hash>SHA1:87d85e0420533274311d7a258aa6ae14b3108dea</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsFuzzConcepts</info>
-        <date>2016-09-05</date>
-        <size>2223603</size>
+        <date>2017-04-03</date>
+        <size>2359338</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_fuzz>
     
@@ -518,16 +522,14 @@
         <name>Invoke Applications</name>
         <description>Invoke external applications passing context related information such as URLs and parameters</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>invoke-beta-5.zap</file>
+        <version>6</version>
+        <file>invoke-beta-6.zap</file>
         <status>beta</status>
-        <changes>Consume all output of the applications in all cases (Issue 3074).&lt;br&gt;
-    Show error/std output in the order it is received (Issue 3078).&lt;br&gt;
-    Fix typos in the help pages.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/invoke-beta-5.zap</url>
-        <hash>SHA1:ce808cb9a04f12081a6a47f999b369de5b6b9b62</hash>
-        <date>2017-01-10</date>
-        <size>284544</size>
+        <changes>Properly split application arguments.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/invoke-beta-6.zap</url>
+        <hash>SHA1:ef5cd83668332fc18b7df07eb2b104960310f2cf</hash>
+        <date>2017-04-03</date>
+        <size>289967</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_invoke>
     
@@ -620,16 +622,20 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>scripts-beta-17.zap</file>
+        <version>18</version>
+        <file>scripts-beta-18.zap</file>
         <status>beta</status>
-        <changes>Discard undoable edits after setting a script (Issue 2675).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/scripts-beta-17.zap</url>
-        <hash>SHA1:2807956b3942d153d0de04c4c7b9585094e52b17</hash>
+        <changes>Remove unused resource messages (Issue 2386).&lt;br&gt;
+    Update help page to mention HTTP Sender scripts.&lt;br&gt;
+    Allow to save scripts through the context menu.&lt;br&gt;
+    Reset Console Output panel on session changes.&lt;br&gt;
+    If there is only one script engine available, make it the default when creating a new script.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/scripts-beta-18.zap</url>
+        <hash>SHA1:73768eb48b2a49e2acf87963765dcf1a5df75931</hash>
         <info>https://github.com/zaproxy/zaproxy/wiki/ScriptConsole</info>
-        <date>2016-09-07</date>
-        <size>499749</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2017-04-03</date>
+        <size>525568</size>
+        <not-before-version>2.5.0</not-before-version>
     </addon_scripts>
     
     <addon>sqliplugin</addon>
@@ -670,14 +676,14 @@
         <name>Tips and Tricks</name>
         <description>Display ZAP Tips and Tricks</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>tips-beta-5.zap</file>
+        <version>6</version>
+        <file>tips-beta-6.zap</file>
         <status>beta</status>
-        <changes>Updated help page to show latest tips, fix typos and use proper charset.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/tips-beta-5.zap</url>
-        <hash>SHA1:a6a1766f35d3a396ba7880d55c3782c0b20db60e</hash>
-        <date>2016-06-02</date>
-        <size>497063</size>
+        <changes>Minor code changes.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/tips-beta-6.zap</url>
+        <hash>SHA1:ae835ec3e884148f1ff49daf6fc80d613e28e297</hash>
+        <date>2017-04-03</date>
+        <size>501880</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_tips>
     
@@ -772,17 +778,18 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>zest-beta-22.zap</file>
+        <version>23</version>
+        <file>zest-beta-23.zap</file>
         <status>beta</status>
-        <changes>Change Sequence scripts to not use Sites tree nodes directly.&lt;br&gt;
-    Correct assertion of response body length when using charset (Issue 2669).&lt;br&gt;
-    Require just the parameters defined in the Authentication script (Issue 2734).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/zest-beta-22.zap</url>
-        <hash>SHA1:58c053508002ff08b653cc8fd549db382e971c03</hash>
+        <changes>Always show the expected URL in request statements (Issue 2854).&lt;br&gt;
+    Add HTTP requests to Sequence scripts when recording (Issue 3044).&lt;br&gt;
+    Execute nodes' mouse click action just once (Issue 3099).&lt;br&gt;
+    Clear Zest Results panel on session changes.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/zest-beta-23.zap</url>
+        <hash>SHA1:c0057642b432f610fe8db77b9b220ce8376100fd</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2016-08-05</date>
-        <size>2008006</size>
+        <date>2017-04-03</date>
+        <size>2078595</size>
         <not-before-version>2.4.0</not-before-version>
         <dependencies>
             <addons>
@@ -1259,15 +1266,15 @@
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>replacer-alpha-1.zap</file>
-        <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/replacer-alpha-1.zap</url>
-        <hash>SHA1:f33439b3c89edb394e42728eb4edeed1d5bea9b6</hash>
-        <date>2017-02-01</date>
-        <size>36527</size>
-        <not-before-version>2.5.0</not-before-version>
+        <version>2</version>
+        <file>replacer-beta-2.zap</file>
+        <status>beta</status>
+        <changes>Promoted to beta</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/replacer-beta-2.zap</url>
+        <hash>SHA1:d9ff3d4467a304f1f44b871fc9ffa4984fd819f7</hash>
+        <date>2017-04-03</date>
+        <size>283500</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_replacer>
 
     <addon>requester</addon>
