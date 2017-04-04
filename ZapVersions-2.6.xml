@@ -1133,14 +1133,14 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>jxbrowser-alpha-1.zap</file>
+        <version>2</version>
+        <file>jxbrowser-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jxbrowser-alpha-1.zap</url>
-        <hash>SHA1:509d4fc02838ff537eb609c0984ab08365489bb3</hash>
-        <date>2017-03-06</date>
-        <size>1349252</size>
+        <changes>Update help page to mention the ID of the browser.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-2.zap</url>
+        <hash>SHA1:a4e02e49b1a5cc05ff4748f2c41fe0629db9471d</hash>
+        <date>2017-04-04</date>
+        <size>1357395</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_jxbrowser>
 
