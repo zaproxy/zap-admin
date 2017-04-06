@@ -37,17 +37,17 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>25</version>
-        <file>ascanrules-release-25.zap</file>
+        <version>26</version>
+        <file>ascanrules-release-26.zap</file>
         <status>release</status>
-        <changes>Issue 1211 - SQLi Scanner may raise seemingly duplicate alerts (fixed).&lt;br&gt;
-	Use correct HTTP message and attack for alerts of "Format String Error".&lt;br&gt;
-	Fixed test for wrong tag in Reflected XSS rule.&lt;br&gt;
-	Issue 1632 - False Negative XSS on injection outside of HTML tags.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-25.zap</url>
-        <hash>SHA1:548c24c8842c5338fc5849cc88a74bbd9bd2f377</hash>
-        <date>2016-09-28</date>
-        <size>551792</size>
+        <changes>Issue 2973: Drop suffix on *Nix Blind Command Injection time based variants to maximize compatibility.&lt;br&gt;
+    Improve error handling in some scanners.&lt;br&gt;
+    Support changing the length of time used in timing attacks via config options.&lt;br&gt;
+    Issue 3065: Ensure active scanners perform initial status checks against the proper original message(s) to prevent False Negative and False Positive conditions.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-26.zap</url>
+        <hash>SHA1:2c63618021f80b5abc8864955b1f72c07c77b474</hash>
+        <date>2017-04-06</date>
+        <size>574831</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrules>
     
@@ -56,15 +56,15 @@
         <name>Core Language Files</name>
         <description>Translations of the core language files</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>coreLang-release-10.zap</file>
+        <version>11</version>
+        <file>coreLang-release-11.zap</file>
         <status>release</status>
-        <changes>Updated for 2.5.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/coreLang-release-10.zap</url>
-        <hash>SHA1:025428b44507a98dc40ffaa5071621ffb3cc2e1d</hash>
+        <changes>Fix installation issue.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/coreLang-release-11.zap</url>
+        <hash>SHA1:11e24142cd5e30d389161a1fc2e1dd08b445309c</hash>
         <info>https://crowdin.com/project/owasp-zap</info>
-        <date>2016-06-14</date>
-        <size>2715140</size>
+        <date>2017-04-06</date>
+        <size>2715653</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_coreLang>
     
@@ -175,15 +175,15 @@
         <name>Getting Started with ZAP Guide</name>
         <description>A short Getting Started with ZAP Guide</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>gettingStarted-release-5.zap</file>
+        <version>6</version>
+        <file>gettingStarted-release-6.zap</file>
         <status>release</status>
-        <changes>Updated for the new 2.5 guide</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/gettingStarted-release-5.zap</url>
-        <hash>SHA1:3f23c47c5db33e0f9a72f80112206f37e3b2fd03</hash>
-        <date>2016-06-02</date>
-        <size>473681</size>
-        <not-before-version>2.5.0</not-before-version>
+        <changes>Updated for 2.6.0.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/gettingStarted-release-6.zap</url>
+        <hash>SHA1:99c6a96422db8789454e927c3806bd1596ee6e57</hash>
+        <date>2017-04-06</date>
+        <size>474850</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_gettingStarted>
     
     <addon>help</addon>
@@ -191,16 +191,16 @@
         <name>Help - English</name>
         <description>English (master) version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>6</version>
-        <file>help-release-6.zap</file>
+        <version>7</version>
+        <file>help-release-7.zap</file>
         <status>release</status>
-        <changes>Updated for 2.5.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help-release-6.zap</url>
-        <hash>SHA1:726708f51ae4b821f0470b7422ba4b361af5a3fe</hash>
+        <changes>Updated for 2.6.0</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help-release-7.zap</url>
+        <hash>SHA1:1fb17288f60d46d70375049cda86bda5d978456e</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpIntro</info>
-        <date>2016-06-03</date>
-        <size>739293</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2017-04-06</date>
+        <size>763371</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_help>
 
     <addon>help_pt_BR</addon>
@@ -225,16 +225,15 @@
         <name>Online menus</name>
         <description>ZAP Online menu items</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>onlineMenu-release-4.zap</file>
+        <version>5</version>
+        <file>onlineMenu-release-5.zap</file>
         <status>release</status>
-        <changes>Issue 1999 - Fix Title Caps&lt;br&gt;
-       Issue 2009 - Add Online links to the FAQ and Newsletter pages&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/onlineMenu-release-4.zap</url>
-        <hash>SHA1:e87dea4e6501e1c70dc067898d4ef917a87c1523</hash>
+        <changes>Minor code changes.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/onlineMenu-release-5.zap</url>
+        <hash>SHA1:1d403adc3667f732ed3a029e363389fd3457dc02</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsOnlineMenuOnlineMenu</info>
-        <date>2016-06-02</date>
-        <size>198475</size>
+        <date>2017-04-06</date>
+        <size>200046</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_onlineMenu>
     
@@ -243,16 +242,16 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>pscanrules-release-18.zap</file>
+        <version>19</version>
+        <file>pscanrules-release-19.zap</file>
         <status>release</status>
-        <changes>Only report issues on errors and redirects at LOW threshold.&lt;br&gt;
-	Only report X-Frame-Options issues at LOW threshold if CSP 'frame-ancestors' element present.&lt;br&gt; 
-	Issue 2732: False positives for security headers missing due to redirections.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-18.zap</url>
-        <hash>SHA1:1acef143378c43fdc7a3f82878c2497bf0e3b99d</hash>
-        <date>2016-08-09</date>
-        <size>458352</size>
+        <changes>Correct evidence of alerts raised by scanner "Application Error Disclosure".&lt;br&gt;
+    Fixed some false positives caused by scanner "Private Address Disclosure".&lt;br&gt;
+    Add support for cookie ignore rule.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-19.zap</url>
+        <hash>SHA1:f09a048e9895a20328ce0510d0a1092a990c83c8</hash>
+        <date>2017-04-06</date>
+        <size>506870</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrules>
     
@@ -261,15 +260,14 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>quickstart-release-18.zap</file>
+        <version>19</version>
+        <file>quickstart-release-19.zap</file>
         <status>release</status>
-        <changes>Issue 1271: Quickstart PnH panel components should mirror the enabled state of the API (i.e.: If API disabled, disable PnH components).&lt;br&gt;
-	 PnH message shown even if add-on not installed.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/quickstart-release-18.zap</url>
-        <hash>SHA1:ad97cd7dbf607791ebe937c804efb25eea61ea94</hash>
-        <date>2016-06-03</date>
-        <size>337698</size>
+        <changes>Validate the provided URL as a request-uri.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/quickstart-release-19.zap</url>
+        <hash>SHA1:9f956d89ff8a08c13988fda83c2ddf4679baee0e</hash>
+        <date>2017-04-06</date>
+        <size>345718</size>
         <not-before-version>2.4.2</not-before-version>
     </addon_quickstart>
     
@@ -360,16 +358,16 @@
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>websocket-release-11.zap</file>
+        <version>12</version>
+        <file>websocket-release-12.zap</file>
         <status>release</status>
-        <changes>Unload WebSockets components during uninstallation.&lt;br&gt;
-	Use hostname/port of the handshake message to build the name of the channel.&lt;br&gt;
-	Adjust log levels, from INFO to DEBUG.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/websocket-release-11.zap</url>
-        <hash>SHA1:87e11bdda6b5d313ade2c90f920a6604b17efb95</hash>
-        <date>2016-06-02</date>
-        <size>779268</size>
+        <changes>Make breakpoint dialogues modal.&lt;br&gt;
+    Fix exception during the unload of the add-on, when in daemon mode.&lt;br&gt;
+    Correct fuzz location overlap detection with same start index.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/websocket-release-12.zap</url>
+        <hash>SHA1:38eca62c3f3c88a53a66877e70c10eb6c69ae674</hash>
+        <date>2017-04-06</date>
+        <size>826721</size>
         <not-before-version>2.4.3</not-before-version>
     </addon_websocket>
 
