@@ -44,7 +44,7 @@
     Improve error handling in some scanners.&lt;br&gt;
     Support changing the length of time used in timing attacks via config options.&lt;br&gt;
     Issue 3065: Ensure active scanners perform initial status checks against the proper original message(s) to prevent False Negative and False Positive conditions.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrules-release-26.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/ascanrules-release-26.zap</url>
         <hash>SHA1:2c63618021f80b5abc8864955b1f72c07c77b474</hash>
         <date>2017-04-06</date>
         <size>574831</size>
@@ -60,7 +60,7 @@
         <file>coreLang-release-11.zap</file>
         <status>release</status>
         <changes>Fix installation issue.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/coreLang-release-11.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/coreLang-release-11.zap</url>
         <hash>SHA1:11e24142cd5e30d389161a1fc2e1dd08b445309c</hash>
         <info>https://crowdin.com/project/owasp-zap</info>
         <date>2017-04-06</date>
@@ -179,7 +179,7 @@
         <file>gettingStarted-release-6.zap</file>
         <status>release</status>
         <changes>Updated for 2.6.0.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/gettingStarted-release-6.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/gettingStarted-release-6.zap</url>
         <hash>SHA1:99c6a96422db8789454e927c3806bd1596ee6e57</hash>
         <date>2017-04-06</date>
         <size>474850</size>
@@ -195,7 +195,7 @@
         <file>help-release-7.zap</file>
         <status>release</status>
         <changes>Updated for 2.6.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/help-release-7.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/help-release-7.zap</url>
         <hash>SHA1:1fb17288f60d46d70375049cda86bda5d978456e</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpIntro</info>
         <date>2017-04-06</date>
@@ -229,7 +229,7 @@
         <file>onlineMenu-release-5.zap</file>
         <status>release</status>
         <changes>Minor code changes.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/onlineMenu-release-5.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/onlineMenu-release-5.zap</url>
         <hash>SHA1:1d403adc3667f732ed3a029e363389fd3457dc02</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsOnlineMenuOnlineMenu</info>
         <date>2017-04-06</date>
@@ -248,7 +248,7 @@
         <changes>Correct evidence of alerts raised by scanner "Application Error Disclosure".&lt;br&gt;
     Fixed some false positives caused by scanner "Private Address Disclosure".&lt;br&gt;
     Add support for cookie ignore rule.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrules-release-19.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrules-release-19.zap</url>
         <hash>SHA1:f09a048e9895a20328ce0510d0a1092a990c83c8</hash>
         <date>2017-04-06</date>
         <size>506870</size>
@@ -264,7 +264,7 @@
         <file>quickstart-release-19.zap</file>
         <status>release</status>
         <changes>Validate the provided URL as a request-uri.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/quickstart-release-19.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/quickstart-release-19.zap</url>
         <hash>SHA1:9f956d89ff8a08c13988fda83c2ddf4679baee0e</hash>
         <date>2017-04-06</date>
         <size>345718</size>
@@ -364,7 +364,7 @@
         <changes>Make breakpoint dialogues modal.&lt;br&gt;
     Fix exception during the unload of the add-on, when in daemon mode.&lt;br&gt;
     Correct fuzz location overlap detection with same start index.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/websocket-release-12.zap</url>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/websocket-release-12.zap</url>
         <hash>SHA1:38eca62c3f3c88a53a66877e70c10eb6c69ae674</hash>
         <date>2017-04-06</date>
         <size>826721</size>
