@@ -954,14 +954,15 @@
         <name>Content Security Policy Scanner</name>
         <description>Content Security Policy (CSP) Scanner</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>cspscanner-alpha-2.zap</file>
+        <version>3</version>
+        <file>cspscanner-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Updated description.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/cspscanner-alpha-2.zap</url>
-        <hash>SHA1:539063d3b0e29126a42cfc79370fcbea30e25ad0</hash>
-        <date>2017-04-07</date>
-        <size>108149</size>
+        <changes>Upgraded to Salvation library version 2.3.0.&lt;/br&gt;
+        Add support for checking if worker-src allows wildcard sources.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/cspscanner-alpha-3.zap</url>
+        <hash>SHA1:912c650bc1cb2d193a3de998547029a64d18c846</hash>
+        <date>2017-04-18</date>
+        <size>112803</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <javaversion>1.8</javaversion>
@@ -1251,14 +1252,14 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>1</version>
-        <file>openapi-alpha-1.zap</file>
+        <version>2</version>
+        <file>openapi-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First Version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-1.zap</url>
-        <hash>SHA1:f9e31047be04c80efb9caeae4e54d74e9ba83714</hash>
-        <date>2017-03-30</date>
-        <size>2857154</size>
+        <changes>Configure Swagger library logging.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-2.zap</url>
+        <hash>SHA1:cbc3359496265b9e95ef00b184f06624677d4bf0</hash>
+        <date>2017-04-18</date>
+        <size>2915451</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_openapi>
     
