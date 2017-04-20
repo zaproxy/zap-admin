@@ -23,8 +23,8 @@
 		<mac>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.6.0/ZAP_2_6_0_macos.dmg</url>
 			<file>ZAP_2_6_0_macos.dmg</file>
-			<hash>SHA1:31eec16199238abe66c0e598fe54a098a16bb400</hash>
-			<size>190660743</size>
+			<hash>SHA1:922f8fe576bffa0653af238ad3e87ba3ca7fd49c</hash>
+			<size>190722788</size>
 		</mac>
 		<relnotes>
 			Bug fix and enhancement release.
