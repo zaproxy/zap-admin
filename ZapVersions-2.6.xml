@@ -1252,14 +1252,14 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>2</version>
-        <file>openapi-alpha-2.zap</file>
+        <version>3</version>
+        <file>openapi-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Configure Swagger library logging.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-2.zap</url>
-        <hash>SHA1:cbc3359496265b9e95ef00b184f06624677d4bf0</hash>
-        <date>2017-04-18</date>
-        <size>2915451</size>
+        <changes>Added cmdline support.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-3.zap</url>
+        <hash>SHA1:0df45af3dfe039676e689f061552b539a41e0a3c</hash>
+        <date>2017-04-20</date>
+        <size>2916537</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_openapi>
     
