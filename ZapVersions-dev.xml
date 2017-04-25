@@ -624,14 +624,14 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>pscanrulesBeta-beta-15.zap</file>
+        <version>16</version>
+        <file>pscanrulesBeta-beta-16.zap</file>
         <status>beta</status>
-        <changes>Support security annotations for forms that dont need anti-CSRF tokens.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesBeta-beta-15.zap</url>
-        <hash>SHA1:95bf040c81bf107125e2bdaae7a1596c6715d2b6</hash>
-        <date>2017-01-18</date>
-        <size>528262</size>
+        <changes>Added some keywords to the list of suspicious comments. &lt;br/&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesBeta-beta-16.zap</url>
+        <hash>SHA1:f8504a1bdcd9cea2bc12f1b235a0b65047191c41</hash>
+        <date>2017-04-25</date>
+        <size>531660</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesBeta>
     
