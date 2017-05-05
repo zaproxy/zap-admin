@@ -1229,14 +1229,14 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>4</version>
-        <file>openapi-alpha-4.zap</file>
+        <version>5</version>
+        <file>openapi-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Fallback to scheme of request URI (Issue 3433).</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-4.zap</url>
-        <hash>SHA1:68e3f1d8c2c8c9277f02f846ef29fbc4a5ad475f</hash>
-        <date>2017-04-21</date>
-        <size>2917114</size>
+        <changes>Run synchronously and return any warnings when importing via API or cmdline.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-5.zap</url>
+        <hash>SHA1:10e9d322efce95128647d1760957a94811c0e3a3</hash>
+        <date>2017-05-05</date>
+        <size>2918104</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_openapi>
 
