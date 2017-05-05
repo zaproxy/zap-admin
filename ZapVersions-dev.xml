@@ -1132,14 +1132,14 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>jxbrowser-alpha-3.zap</file>
+        <version>4</version>
+        <file>jxbrowser-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14 which now accepts 'invalid' certificates.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-3.zap</url>
-        <hash>SHA1:b2039ff93c87db8bf32b7478a44c95e8a6daba03</hash>
-        <date>2017-04-25</date>
-        <size>1410019</size>
+        <changes>Added button for selecting URL from Sites tree.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-4.zap</url>
+        <hash>SHA1:b8f0253f88c2e15ef7d2552ac8aac7a0f62d728a</hash>
+        <date>2017-05-05</date>
+        <size>1411594</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_jxbrowser>
 
