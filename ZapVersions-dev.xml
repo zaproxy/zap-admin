@@ -524,14 +524,14 @@
         <name>Import files containing URLs</name>
         <description>Adds an option to import a file of URLs. The file must be plain text with one URL per line.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>importurls-beta-2.zap</file>
+        <version>3</version>
+        <file>importurls-beta-3.zap</file>
         <status>beta</status>
-        <changes>Promoted to beta, updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/importurls-beta-2.zap</url>
-        <hash>SHA1:61d473b93b1d3a86928ed55566310289bf30537e</hash>
-        <date>2016-06-02</date>
-        <size>208388</size>
+        <changes>Issue 1643: Add an API end point for importing URLs from file.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/importurls-beta-3.zap</url>
+        <hash>SHA1:5cc6bf40f8a371b217c12890ebc6bea3d93e667e</hash>
+        <date>2017-05-12</date>
+        <size>215827</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_importurls>
     
