@@ -28,6 +28,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -35,6 +38,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.varia.NullAppender;
@@ -46,6 +50,7 @@ import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 public class PendingAddOnReleases {
 
+    private static final String ZAP_VERSIONS_FILE_NAME = "ZapVersions-2.6.xml";
     private static final String ZAP_ADD_ON_FILE_NAME = "ZapAddOn.xml";
 
     static {
@@ -55,10 +60,13 @@ public class PendingAddOnReleases {
     }
 
     public static void main(String[] args) throws Exception {
+        LocalDate now = LocalDate.now(ZoneOffset.UTC);
         boolean showChanges = true;
 
-        ZapXmlConfiguration zapVersions = new ZapXmlConfiguration(Paths.get("ZapVersions-2.5.xml").toFile());
+        ZapXmlConfiguration zapVersions = new ZapXmlConfiguration(Paths.get(ZAP_VERSIONS_FILE_NAME).toFile());
         AddOnCollection addOnCollection = new AddOnCollection(zapVersions, AddOnCollection.Platform.daily);
+
+        zapVersions.setExpressionEngine(new XPathExpressionEngine());
 
         Set<AddOnData> addOns = new TreeSet<>();
         addAddOns(addOns, Paths.get("../zap-extensions/src"), AddOn.Status.release);
@@ -99,7 +107,9 @@ public class PendingAddOnReleases {
                     currentStatus = addOn.status;
                     System.out.println(currentStatus);
                 }
-                System.out.println("  * " + addOn.name + " v" + addOn.version);
+                LocalDate releaseDate = LocalDate.parse(zapVersions.getString("/addon_" + addOn.id + "/date"));
+                System.out.println("  * " + addOn.name + " v" + addOn.version + " (" + Period.between(releaseDate, now) + ")");
+
                 if (showChanges) {
                     for (String change : addOn.changes) {
                         System.out.println("       - " + change);
