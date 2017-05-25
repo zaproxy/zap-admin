@@ -857,17 +857,19 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>ascanrulesAlpha-alpha-18.zap</file>
+        <version>19</version>
+        <file>ascanrulesAlpha-alpha-19.zap</file>
         <status>alpha</status>
-        <changes>Added Apache Range Header DoS (CVE-2011-3192) scanner.&lt;br&gt;
-	Fix exception when raising a "Source Code Disclosure - File Inclusion" alert.&lt;br&gt;
-	Adjust log levels of some scanners, from INFO to DEBUG.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/ascanrulesAlpha-alpha-18.zap</url>
-        <hash>SHA1:7e14d4fe67389fa2d230b607b5e5aa7dd8b8c31f</hash>
+        <changes>Improve error handling in some scanners.&lt;br&gt;
+    Add MsSQL specific Injection scanner.&lt;br&gt;
+    Issue 3441: Add proper reference links to Proxy Discovery scanner.&lt;br&gt;
+    Issue 3279: Add ELMAH scanner.&lt;br&gt;
+    Issue 3280: Add trace.axd scanner.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/ascanrulesAlpha-alpha-19.zap</url>
+        <hash>SHA1:dd3dc27dca0a3240d4d61a1e6bd59e6826b2475e</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2016-10-24</date>
-        <size>1333963</size>
+        <date>2017-05-25</date>
+        <size>1420431</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesAlpha>
     
