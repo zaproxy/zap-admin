@@ -1351,16 +1351,24 @@
         <name>Sequence</name>
         <description>Gives the possibility of defining a sequence of requests to be scanned.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>sequence-alpha-3.zap</file>
+        <version>4</version>
+        <file>sequence-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Allow to dynamically unload the add-on.&lt;br&gt;
-	Other code changes.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/sequence-alpha-3.zap</url>
-        <hash>SHA1:73f8e7a72f29b5c9ae26e076ddfb8cfeec64a6c9</hash>
-        <date>2016-06-02</date>
-        <size>37514</size>
+        <changes>Correct error message to include the script name.&lt;br&gt;
+    Add help content (Issue 2191).&lt;br&gt;
+    Depend on Zest extension, since it is currently the only script option for Sequence scripts.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/sequence-alpha-4.zap</url>
+        <hash>SHA1:734c30eddc68fa938e9f7eedb8d3284c255b5038</hash>
+        <date>2017-05-25</date>
+        <size>1319013</size>
         <not-before-version>2.4.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>zest</id>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_sequence>
     
     <addon>sniTerminator</addon>
