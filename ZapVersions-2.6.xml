@@ -1268,14 +1268,15 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>pscanrulesAlpha-alpha-13.zap</file>
+        <version>14</version>
+        <file>pscanrulesAlpha-alpha-14.zap</file>
         <status>alpha</status>
-        <changes>Issue 3148: Only report HSTS on plain HTTP issue at Low threshold.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/pscanrulesAlpha-alpha-13.zap</url>
-        <hash>SHA1:e62fb2955140ca56ca6b11ad1454b088578e5fe4</hash>
-        <date>2017-01-18</date>
-        <size>1944233</size>
+        <changes>Report missing CSP header as LOW even if CSP Report header present.&lt;br&gt;
+        Added X-Debug-Token Scanner (Issue 2452).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-14.zap</url>
+        <hash>SHA1:2d8746f679168a9d2a8e915e99eab7775703cb81</hash>
+        <date>2017-05-25</date>
+        <size>1955039</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_pscanrulesAlpha>
     
