@@ -911,14 +911,14 @@
         <name>Bug Tracker</name>
         <description>Bug Tracker extension.</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>bugtracker-alpha-1.zap</file>
+        <version>2</version>
+        <file>bugtracker-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/bugtracker-alpha-1.zap</url>
-        <hash>SHA1:3c2ae880b9d942fe817483ac515371f5ff2e47c2</hash>
-        <date>2016-08-25</date>
-        <size>1736016</size>
+        <changes>Added help for the add-on</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/bugtracker-alpha-2.zap</url>
+        <hash>SHA1:156b7ad6616db6a17d96ecea42c44542e5bbf163</hash>
+        <date>2017-05-26</date>
+        <size>1995812</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_bugtracker>
     
