@@ -1100,15 +1100,14 @@
         <name>HttpsInfo</name>
         <description>Displays HTTPS status information.</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>httpsInfo-alpha-7.zap</file>
+        <version>8</version>
+        <file>httpsInfo-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Allow to update/uninstall the add-on without restarting ZAP.&lt;br&gt;
-	Issue 758 - General re-working of the extension.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/httpsInfo-alpha-7.zap</url>
-        <hash>SHA1:5fa83cf1adfe80695fbf8209b5cad4b19f2f6787</hash>
-        <date>2016-06-02</date>
-        <size>48860</size>
+        <changes>Warn the user if results may be inaccurate due to ZAP being configured to use an outbound proxy.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/httpsInfo-alpha-8.zap</url>
+        <hash>SHA1:373da4c2f78f8c854e7ce7f91eddab3b7c3f98b9</hash>
+        <date>2017-05-26</date>
+        <size>330210</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_httpsInfo>
     
