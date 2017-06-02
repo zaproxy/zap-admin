@@ -1273,15 +1273,19 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>5</version>
-        <file>openapi-alpha-5.zap</file>
+        <version>6</version>
+        <file>openapi-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Run synchronously and return any warnings when importing via API or cmdline.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-5.zap</url>
-        <hash>SHA1:10e9d322efce95128647d1760957a94811c0e3a3</hash>
-        <date>2017-05-05</date>
-        <size>2918104</size>
-        <not-before-version>2.5.0</not-before-version>
+        <changes>Support optional host override.&lt;br&gt;
+		Detect and warn on potential loops.&lt;br&gt;
+		Allow add-on to be unloaded dynamically.&lt;br&gt;
+		Support user specified values when importing (Issue 3344).&lt;br&gt;
+		Support older swagger formats (Issue 3598).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/openapi-alpha-6.zap</url>
+        <hash>SHA1:610041f0d2363a5a6aa988e96a607e9a43cc8a1c</hash>
+        <date>2017-06-02</date>
+        <size>3170033</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_openapi>
 
     <addon>replacer</addon>
