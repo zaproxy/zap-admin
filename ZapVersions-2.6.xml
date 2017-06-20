@@ -563,25 +563,6 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_jython>
     
-    <addon>plugnhack</addon>
-    <addon_plugnhack>
-        <name>Plug-n-Hack Configuration</name>
-        <description>Supports the Mozilla Plug-n-Hack standard: https://developer.mozilla.org/en-US/docs/Plug-n-Hack.</description>
-        <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>plugnhack-beta-9.zap</file>
-        <status>beta</status>
-        <changes>Require API key before returning it (Issue 1714)&lt;br&gt;
-	Restrict use of CORS header in pnh (Issue 1716)&lt;br&gt;
-	Auto-scroll when new client events are available (Issue 1664)</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/plugnhack-beta-9.zap</url>
-        <hash>SHA1:a731c6b82605e4e94a4878fcbd5f8b2cb8c19c9e</hash>
-        <info>https://developer.mozilla.org/en-US/docs/Plug-n-Hack</info>
-        <date>2016-06-02</date>
-        <size>495129</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_plugnhack>
-    
     <addon>portscan</addon>
     <addon_portscan>
         <name>Port Scanner</name>
