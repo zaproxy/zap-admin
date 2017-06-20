@@ -563,6 +563,24 @@
         <not-before-version>2.4.0</not-before-version>
     </addon_jython>
     
+    <addon>plugnhack</addon>
+    <addon_plugnhack>
+        <name>Plug-n-Hack Configuration</name>
+        <description>Supports the Mozilla Plug-n-Hack standard: https://developer.mozilla.org/en-US/docs/Plug-n-Hack.</description>
+        <author>ZAP Dev Team</author>
+        <version>10</version>
+        <file>plugnhack-beta-10.zap</file>
+        <status>beta</status>
+        <changes>Make breakpoint dialogues modal.&lt;br&gt;
+    Changed to use api nonces and include new fx_pnh.xpi (still unsigned).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/plugnhack-beta-10.zap</url>
+        <hash>SHA1:a71447529ca963139d454e940eff2a8ef4625dde</hash>
+        <info>https://developer.mozilla.org/en-US/docs/Plug-n-Hack</info>
+        <date>2017-06-20</date>
+        <size>692662</size>
+        <not-before-version>2.4.0</not-before-version>
+    </addon_plugnhack>
+    
     <addon>portscan</addon>
     <addon_portscan>
         <name>Port Scanner</name>
