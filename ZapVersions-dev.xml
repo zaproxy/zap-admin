@@ -1292,14 +1292,14 @@
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>replacer-beta-2.zap</file>
+        <version>3</version>
+        <file>replacer-beta-3.zap</file>
         <status>beta</status>
-        <changes>Promoted to beta</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/replacer-beta-2.zap</url>
-        <hash>SHA1:d9ff3d4467a304f1f44b871fc9ffa4984fd819f7</hash>
-        <date>2017-04-03</date>
-        <size>283500</size>
+        <changes>Added API support</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/replacer-beta-3.zap</url>
+        <hash>SHA1:9bfa4d030c8ab519f05250dc57af1e194a8563a0</hash>
+        <date>2017-06-23</date>
+        <size>283688</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_replacer>
 
