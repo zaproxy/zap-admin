@@ -1255,16 +1255,15 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>pscanrulesAlpha-alpha-14.zap</file>
+        <version>15</version>
+        <file>pscanrulesAlpha-alpha-15.zap</file>
         <status>alpha</status>
-        <changes>Report missing CSP header as LOW even if CSP Report header present.&lt;br&gt;
-        Added X-Debug-Token Scanner (Issue 2452).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-14.zap</url>
-        <hash>SHA1:2d8746f679168a9d2a8e915e99eab7775703cb81</hash>
-        <date>2017-05-25</date>
-        <size>1955039</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Added scanner that looks for simple hashes of usernames based on context user configuration details.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-15.zap</url>
+        <hash>SHA1:062299102271a3eff15f22485e86dac9138c2ad2</hash>
+        <date>2017-07-07</date>
+        <size>1963262</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_pscanrulesAlpha>
     
     <addon>openapi</addon>
