@@ -874,14 +874,14 @@
         <name>Browser View</name>
         <description>Adds an option to render HTML responses like a browser</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>browserView-alpha-4.zap</file>
+        <version>5</version>
+        <file>browserView-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/browserView-alpha-4.zap</url>
-        <hash>SHA1:d48e7768ecac5bb5e12d6e7c36907bfbf95ea46d</hash>
-        <date>2016-06-02</date>
-        <size>180584</size>
+        <changes>Allow to properly scroll the rendered page.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/browserView-alpha-5.zap</url>
+        <hash>SHA1:6acfc72f0491d3b391d6633b3dc89ad6d4d4c801</hash>
+        <date>2017-07-21</date>
+        <size>188142</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_browserView>
     
