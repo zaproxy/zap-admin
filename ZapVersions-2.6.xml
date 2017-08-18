@@ -260,15 +260,15 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>quickstart-release-19.zap</file>
+        <version>20</version>
+        <file>quickstart-release-20.zap</file>
         <status>release</status>
-        <changes>Validate the provided URL as a request-uri.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/quickstart-release-19.zap</url>
-        <hash>SHA1:9f956d89ff8a08c13988fda83c2ddf4679baee0e</hash>
-        <date>2017-04-06</date>
-        <size>345718</size>
-        <not-before-version>2.4.2</not-before-version>
+        <changes>Add option to launch a browser via selenium.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/quickstart-release-20.zap</url>
+        <hash>SHA1:9c791b65b9089cf46ab5c32e8cdee642d682a34a</hash>
+        <date>2017-08-18</date>
+        <size>369783</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_quickstart>
     
     <addon>reveal</addon>
@@ -308,16 +308,21 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <semver>1.1.0</semver>
-        <file>selenium-release-10.zap</file>
+        <version>11</version>
+        <semver>2.0.0</semver>
+        <file>selenium-release-11.zap</file>
         <status>release</status>
-        <changes>Update help page to mention the IDs of the browsers.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/selenium-release-10.zap</url>
-        <hash>SHA1:c475dd96948c89a89cb536eaa0798eda0dc9c9c0</hash>
-        <date>2017-03-31</date>
-        <size>31357408</size>
-        <not-before-version>2.4.3</not-before-version>
+        <changes>Update Selenium to version 3.4.0.&lt;br&gt;
+	Move Bundled WebDrivers section to main help page and recommend using newer browser versions.&lt;br&gt;
+	Add menus and methods for launching browsers proxying through ZAP.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/selenium-release-11.zap</url>
+        <hash>SHA1:939b734145e35a145a7a3a80c2091cc3e1ab3cfd</hash>
+        <date>2017-08-18</date>
+        <size>21530878</size>
+        <not-before-version>2.6.0</not-before-version>
+        <dependencies>
+            <javaversion>1.8</javaversion>
+        </dependencies>
     </addon_selenium>
 
     <addon>spiderAjax</addon>
@@ -325,29 +330,23 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>spiderAjax-release-17.zap</file>
+        <version>18</version>
+        <file>spiderAjax-release-18.zap</file>
         <status>release</status>
-        <changes>Show alerts/tags in the AJAX Spider tab.&lt;br&gt;
-	Use a custom initiator ID (10) for AJAX Spider requests.&lt;br&gt;
-	Show always the latest configured browsers in AJAX Spider dialogue (Issue 3057).&lt;br&gt;
-	Honour global excluded URLs (Issue 3172).&lt;br&gt;
-	Reset URL counter on session change.&lt;br&gt;
-	Show excluded URLs in the AJAX Spider tab and through the ZAP API.&lt;br&gt;
-	Use provided browsers from Selenium add-on.&lt;br&gt;
-	Show messages that were not successful because of I/O errors.&lt;br&gt;
-	Ensure New Scan button is enabled, when the mode allows it.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/spiderAjax-release-17.zap</url>
-        <hash>SHA1:0f4ea1344da926688d2dd4cf229c32c5e45aabda</hash>
+        <changes>Update to support Selenium version 3.4.0 (Issue 3509).&lt;br&gt;
+	Fix WebDriver process leak (Issue 3155).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/spiderAjax-release-18.zap</url>
+        <hash>SHA1:6b587722de04081ad8b34db2049b83ea8f01937b</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2017-03-06</date>
-        <size>2566619</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2017-08-18</date>
+        <size>2577902</size>
+        <not-before-version>2.6.0</not-before-version>
         <dependencies>
+            <javaversion>1.8</javaversion>
             <addons>
                 <addon>
                     <id>selenium</id>
-                    <semver>&gt;=1.1.0 &amp; &lt;2.0.0</semver>
+                    <semver>2.*</semver>
                 </addon>
             </addons>
         </dependencies>
@@ -721,52 +720,50 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>webdriverlinux-beta-2.zap</file>
+        <version>3</version>
+        <file>webdriverlinux-beta-3.zap</file>
         <status>beta</status>
-        <changes>Update geckodriver to v0.14.0&lt;br&gt;
-	Download files from zap-libs repo&lt;br&gt;
-	Promote to beta&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverlinux-beta-2.zap</url>
-        <hash>SHA1:6185710a07776f21d288f17a0da2692bacc17926</hash>
-        <date>2017-03-06</date>
-        <size>10371607</size>
+        <changes>Update geckodriver to v0.18.0&lt;br&gt;
+	Update chromedriver to 2.31&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdriverlinux-beta-3.zap</url>
+        <hash>SHA1:aa356369f5fe29515e546204fa52f8cf67f710f6</hash>
+        <date>2017-08-18</date>
+        <size>12531798</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_webdriverlinux>
-    
+
     <addon>webdrivermacos</addon>
     <addon_webdrivermacos>
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>webdrivermacos-beta-2.zap</file>
+        <version>3</version>
+        <file>webdrivermacos-beta-3.zap</file>
         <status>beta</status>
-        <changes>Update geckodriver to v0.14.0&lt;br&gt;
-	Download files from zap-libs repo&lt;br&gt;
-	Promote to beta&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdrivermacos-beta-2.zap</url>
-        <hash>SHA1:04ed621054505b5ca81a4a987c52294f42492385</hash>
-        <date>2017-03-06</date>
-        <size>5870746</size>
+        <changes>Update geckodriver to v0.18.0&lt;br&gt;
+	Update chromedriver to 2.31&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdrivermacos-beta-3.zap</url>
+        <hash>SHA1:b8e1ab34a2d0855318f50f15c4073fa4c81f6e9a</hash>
+        <date>2017-08-18</date>
+        <size>6552561</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_webdrivermacos>
-    
+
     <addon>webdriverwindows</addon>
     <addon_webdriverwindows>
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>webdriverwindows-beta-2.zap</file>
+        <version>3</version>
+        <file>webdriverwindows-beta-3.zap</file>
         <status>beta</status>
-        <changes>Update geckodriver to v0.14.0&lt;br&gt;
-	Download files from zap-libs repo&lt;br&gt;
-	Promote to beta&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/webdriverwindows-beta-2.zap</url>
-        <hash>SHA1:e4f3a17a3c6b6262ead198b712d55d0c0e858e32</hash>
-        <date>2017-03-06</date>
-        <size>10202418</size>
+        <changes>Update geckodriver to v0.18.0&lt;br&gt;
+	Update chromedriver to 2.31&lt;br&gt;
+	Update IEDriverServer to 3.4.0&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdriverwindows-beta-3.zap</url>
+        <hash>SHA1:440b66361b6ac88f7560bf80011d9f6573b6d2fa</hash>
+        <date>2017-08-18</date>
+        <size>10589252</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_webdriverwindows>
 
@@ -775,24 +772,34 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>23</version>
-        <file>zest-beta-23.zap</file>
+        <version>24</version>
+        <file>zest-beta-24.zap</file>
         <status>beta</status>
-        <changes>Always show the expected URL in request statements (Issue 2854).&lt;br&gt;
-    Add HTTP requests to Sequence scripts when recording (Issue 3044).&lt;br&gt;
-    Execute nodes' mouse click action just once (Issue 3099).&lt;br&gt;
-    Clear Zest Results panel on session changes.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/zest-beta-23.zap</url>
-        <hash>SHA1:c0057642b432f610fe8db77b9b220ce8376100fd</hash>
+        <changes>Update Zest library to version 0.13.&lt;br&gt;
+	Update to support Selenium version 3.4.0 (Issue 3509).&lt;br&gt;
+	Replace variables when running Action Invoke (Issue 3511).&lt;br&gt;
+	Execute scripts before programs when running Action Invoke (Issue 3488).&lt;br&gt;
+	Fix exceptions when running scripts (Issue 2859 and 2871).&lt;br&gt;
+	Bugfix in ZestScript Ui: When more than one 'Assign variable to a form field' node is below a RequestNode then the RequestNode is now correctly determined.&lt;br&gt;
+	Correct operation set in calc assigns.&lt;br&gt;
+	Allow to loop files even if fuzzers.jbrf does not exist (Issue 3400).&lt;br&gt;
+	Properly remove Zest scripts (Issue 3401).&lt;br&gt;
+	Allow to select the case on assign replacements.&lt;br&gt;
+	Show/select the correct script in the Edit Zest Action dialogue (Issue 3489).&lt;br&gt;
+	Ensure recorded Sequence scripts can be scanned through context menu (Issue 3536).&lt;br&gt;
+	Updated to support latest selenium addon.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/zest-beta-24.zap</url>
+        <hash>SHA1:6e10bd770b300a6a7622b4d189b2eb0187b9aa72</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2017-04-03</date>
-        <size>2078595</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2017-08-18</date>
+        <size>2089352</size>
+        <not-before-version>2.6.0</not-before-version>
         <dependencies>
+            <javaversion>1.8</javaversion>
             <addons>
                 <addon>
                     <id>selenium</id>
-                    <semver>1.*</semver>
+                    <semver>&gt;=2.0.0 &amp; &lt;3.0.0</semver>
                 </addon>
             </addons>
         </dependencies>
@@ -991,20 +998,22 @@
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>domxss-alpha-3.zap</file>
+        <version>4</version>
+        <file>domxss-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Skip the scanner if not able to start Firefox.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/domxss-alpha-3.zap</url>
-        <hash>SHA1:b86bdc8d25461bf0922a699d84d635e1bc8dc9a0</hash>
-        <date>2016-10-24</date>
-        <size>192724</size>
-        <not-before-version>2.4.1</not-before-version>
+        <changes>Allow to use newer versions of Firefox (Issue 3396).&lt;br&gt;
+	Provide the reason why the scanner was skipped.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/domxss-alpha-4.zap</url>
+        <hash>SHA1:031676c8d795251f94c8c57c645f2de236b69551</hash>
+        <date>2017-08-18</date>
+        <size>193882</size>
+        <not-before-version>2.6.0</not-before-version>
         <dependencies>
+            <javaversion>1.8</javaversion>
             <addons>
                 <addon>
                     <id>selenium</id>
-                    <semver>1.*</semver>
+                    <semver>2.*</semver>
                 </addon>
             </addons>
         </dependencies>
@@ -1135,14 +1144,15 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>jxbrowser-alpha-4.zap</file>
+        <version>5</version>
+        <file>jxbrowser-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Added button for selecting URL from Sites tree.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-4.zap</url>
-        <hash>SHA1:b8f0253f88c2e15ef7d2552ac8aac7a0f62d728a</hash>
-        <date>2017-05-05</date>
-        <size>1411594</size>
+        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
+		Added method to allow caller to tell if the BrowserFrame has been closed.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-5.zap</url>
+        <hash>SHA1:1b4e3292b526d228271fcb685c83553b5daccca6</hash>
+        <date>2017-08-18</date>
+        <size>1379193</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_jxbrowser>
 
@@ -1151,14 +1161,15 @@
         <name>JxBrowser (Linux 32)</name>
         <description>An embedded browser based on Chromium, Linux 32 specific</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>jxbrowserlinux32-alpha-2.zap</file>
+        <version>3</version>
+        <file>jxbrowserlinux32-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14 which now accepts 'invalid' certificates.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserlinux32-alpha-2.zap</url>
-        <hash>SHA1:dbed700fb82554e25e26a73fdac1ad337fb2b5ce</hash>
-        <date>2017-04-25</date>
-        <size>46399267</size>
+        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
+		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserlinux32-alpha-3.zap</url>
+        <hash>SHA1:ac8303a826fafe4df75ef348b5d2f7ce1f134cb6</hash>
+        <date>2017-08-18</date>
+        <size>47149067</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
@@ -1177,14 +1188,15 @@
         <name>JxBrowser (Linux 64)</name>
         <description>An embedded browser based on Chromium, Linux 64 specific</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>jxbrowserlinux64-alpha-2.zap</file>
+        <version>3</version>
+        <file>jxbrowserlinux64-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14 which now accepts 'invalid' certificates.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserlinux64-alpha-2.zap</url>
-        <hash>SHA1:49d07afb501d171ce7a04e03876d60951c504349</hash>
-        <date>2017-04-25</date>
-        <size>46037789</size>
+        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
+		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserlinux64-alpha-3.zap</url>
+        <hash>SHA1:83ceaa376185bfd0c6864245a6053c762a429700</hash>
+        <date>2017-08-18</date>
+        <size>46719989</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
@@ -1203,14 +1215,15 @@
         <name>JxBrowser (Mac OS)</name>
         <description>An embedded browser based on Chromium, Mac OS specific</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>jxbrowsermacos-alpha-2.zap</file>
+        <version>3</version>
+        <file>jxbrowsermacos-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14 which now accepts 'invalid' certificates.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowsermacos-alpha-2.zap</url>
-        <hash>SHA1:9c949adbc339c269dc4880d4b3bf018693914878</hash>
-        <date>2017-04-25</date>
-        <size>51499781</size>
+        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
+		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowsermacos-alpha-3.zap</url>
+        <hash>SHA1:6b8b36df4183847f945995f0f4e1256ecca3d975</hash>
+        <date>2017-08-18</date>
+        <size>52732698</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
@@ -1229,14 +1242,15 @@
         <name>JxBrowser (Windows)</name>
         <description>An embedded browser based on Chromium, Windows specific</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>jxbrowserwindows-alpha-2.zap</file>
+        <version>3</version>
+        <file>jxbrowserwindows-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14 which now accepts 'invalid' certificates.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserwindows-alpha-2.zap</url>
-        <hash>SHA1:efb07bab671efb6ed955107a799bf6ade3a4d15f</hash>
-        <date>2017-04-25</date>
-        <size>35906181</size>
+        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
+		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserwindows-alpha-3.zap</url>
+        <hash>SHA1:caac01b3a27a6810ea9778780d96e901eca1b759</hash>
+        <date>2017-08-18</date>
+        <size>33977534</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
