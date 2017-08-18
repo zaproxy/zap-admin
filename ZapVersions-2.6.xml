@@ -260,14 +260,15 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>quickstart-release-20.zap</file>
+        <version>21</version>
+        <file>quickstart-release-21.zap</file>
         <status>release</status>
-        <changes>Add option to launch a browser via selenium.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/quickstart-release-20.zap</url>
-        <hash>SHA1:9c791b65b9089cf46ab5c32e8cdee642d682a34a</hash>
+        <changes>Add option to launch a browser via selenium (v20).&lt;br&gt;
+	Fix to the default launch page url for 2.6.0.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/quickstart-release-21.zap</url>
+        <hash>SHA1:1a853c19abf8b524678d44d34894dc880590cdd9</hash>
         <date>2017-08-18</date>
-        <size>369783</size>
+        <size>370682</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_quickstart>
     
