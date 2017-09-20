@@ -552,14 +552,14 @@
         <name>Python scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>jython-beta-5.zap</file>
+        <version>6</version>
+        <file>jython-beta-6.zap</file>
         <status>beta</status>
-        <changes>add the python module path interface</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jython-beta-5.zap</url>
-        <hash>SHA1:439e476d56c03e06511305863fda8cb462d97c3f</hash>
-        <date>2017-01-10</date>
-        <size>14692630</size>
+        <changes>Update Jython from 2.5.3 to 2.7.1</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jython-beta-6.zap</url>
+        <hash>SHA1:328693c9de8227279b6b37b9c4d610bafc71db99</hash>
+        <date>2017-09-20</date>
+        <size>41725497</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_jython>
     
