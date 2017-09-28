@@ -536,14 +536,15 @@
         <name>Ruby scripting</name>
         <description>Allows Ruby to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>jruby-beta-4.zap</file>
+        <version>5</version>
+        <file>jruby-beta-5.zap</file>
         <status>beta</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/jruby-beta-4.zap</url>
-        <hash>SHA1:d3c2f567a627ccf0f51eaff17afb8450871ad102</hash>
-        <date>2016-06-02</date>
-        <size>22467350</size>
+        <changes>Add template for HTTP Sender script.&lt;br&gt;
+    Dynamically unload the add-on.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jruby-beta-5.zap</url>
+        <hash>SHA1:30920fbda214b6dea5dbf77a0f8c397cb38f2782</hash>
+        <date>2017-09-28</date>
+        <size>22471619</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_jruby>
     
