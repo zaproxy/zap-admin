@@ -1286,14 +1286,15 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>pscanrulesAlpha-alpha-15.zap</file>
+        <version>16</version>
+        <file>pscanrulesAlpha-alpha-16.zap</file>
         <status>alpha</status>
-        <changes>Added scanner that looks for simple hashes of usernames based on context user configuration details.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-15.zap</url>
-        <hash>SHA1:062299102271a3eff15f22485e86dac9138c2ad2</hash>
-        <date>2017-07-07</date>
-        <size>1963262</size>
+        <changes>HTTP "Server" response header, report any "Server" header if Threshold is LOW.&lt;br&gt; 
+    Update Image Location Scanner (passive rule) to leverage 0.4 of the code and 2.10.1 of the library it depends on.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-16.zap</url>
+        <hash>SHA1:c37f0226020139d0a78d4062b79b6428c94f1757</hash>
+        <date>2017-10-05</date>
+        <size>2198943</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_pscanrulesAlpha>
     
