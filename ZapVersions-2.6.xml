@@ -620,20 +620,23 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>scripts-beta-18.zap</file>
+        <version>19</version>
+        <file>scripts-beta-19.zap</file>
         <status>beta</status>
-        <changes>Remove unused resource messages (Issue 2386).&lt;br&gt;
-    Update help page to mention HTTP Sender scripts.&lt;br&gt;
-    Allow to save scripts through the context menu.&lt;br&gt;
-    Reset Console Output panel on session changes.&lt;br&gt;
-    If there is only one script engine available, make it the default when creating a new script.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/scripts-beta-18.zap</url>
-        <hash>SHA1:73768eb48b2a49e2acf87963765dcf1a5df75931</hash>
+        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
+	Inform when the script contains invalid char sequences (related to Issue 3377).&lt;br&gt;
+	Invoke Scripts tree context menu once.&lt;br&gt;
+	Title caps adjustments (related to Issue 2000).&lt;br&gt;
+	Allow to configure the enabled state of new/loaded scripts (Issue 2996).&lt;br&gt;
+	Use selected font in script text area.&lt;br&gt;
+	Fix UI hang when installing/uninstalling script engines (Issue 3945).&lt;br&gt;
+	Support basic auto-completion&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/scripts-beta-19.zap</url>
+        <hash>SHA1:e82cad2155af9c95426cbfe7d972b276a457f67c</hash>
         <info>https://github.com/zaproxy/zaproxy/wiki/ScriptConsole</info>
-        <date>2017-04-03</date>
-        <size>525568</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2017-10-13</date>
+        <size>547363</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_scripts>
     
     <addon>sqliplugin</addon>
