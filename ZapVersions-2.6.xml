@@ -777,27 +777,21 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>zest-beta-24.zap</file>
+        <version>25</version>
+        <file>zest-beta-25.zap</file>
         <status>beta</status>
-        <changes>Update Zest library to version 0.13.&lt;br&gt;
-	Update to support Selenium version 3.4.0 (Issue 3509).&lt;br&gt;
-	Replace variables when running Action Invoke (Issue 3511).&lt;br&gt;
-	Execute scripts before programs when running Action Invoke (Issue 3488).&lt;br&gt;
-	Fix exceptions when running scripts (Issue 2859 and 2871).&lt;br&gt;
-	Bugfix in ZestScript Ui: When more than one 'Assign variable to a form field' node is below a RequestNode then the RequestNode is now correctly determined.&lt;br&gt;
-	Correct operation set in calc assigns.&lt;br&gt;
-	Allow to loop files even if fuzzers.jbrf does not exist (Issue 3400).&lt;br&gt;
-	Properly remove Zest scripts (Issue 3401).&lt;br&gt;
-	Allow to select the case on assign replacements.&lt;br&gt;
-	Show/select the correct script in the Edit Zest Action dialogue (Issue 3489).&lt;br&gt;
-	Ensure recorded Sequence scripts can be scanned through context menu (Issue 3536).&lt;br&gt;
-	Updated to support latest selenium addon.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/zest-beta-24.zap</url>
-        <hash>SHA1:6e10bd770b300a6a7622b4d189b2eb0187b9aa72</hash>
+        <changes>Address exception when adding calc assign statement.&lt;br&gt;
+	Validate cookie name not empty.&lt;br&gt;
+	Code changes for Java 9 (Issue 2602).&lt;br&gt;
+	Default 'load on start' to true in all cases.&lt;br&gt;
+	Re-enabled parameterize option.&lt;br&gt;
+	Cope with parameterizing strings in the URL.&lt;br&gt;
+	Correct drag-and-drop in loop statements.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/zest-beta-25.zap</url>
+        <hash>SHA1:1b41d2860e2db295317558c6ce8d8c3df5b540ac</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2017-08-18</date>
-        <size>2089352</size>
+        <date>2017-10-17</date>
+        <size>2088483</size>
         <not-before-version>2.6.0</not-before-version>
         <dependencies>
             <javaversion>1.8</javaversion>
@@ -950,16 +944,17 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>3</version>
-        <file>communityScripts-alpha-3.zap</file>
+        <version>4</version>
+        <file>communityScripts-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Updated with the latest scripts for 2.5.0&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/communityScripts-alpha-3.zap</url>
-        <hash>SHA1:f1c2e0af4cf4500b9d0656723316a6f0e806f668</hash>
+        <changes>Updated with the latest scripts for 2.6.0&lt;br&gt;
+	Stop the scripts from being registered twice&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/communityScripts-alpha-4.zap</url>
+        <hash>SHA1:822bb272b10cf3f185e92f297dec1ffe3ca142bb</hash>
         <info>https://github.com/zaproxy/community-scripts</info>
-        <date>2016-06-02</date>
-        <size>134107</size>
-        <not-before-version>2.4.3</not-before-version>
+        <date>2017-10-17</date>
+        <size>335736</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_communityScripts>
     
     <addon>cspscanner</addon>
