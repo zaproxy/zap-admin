@@ -520,14 +520,14 @@
         <name>Invoke Applications</name>
         <description>Invoke external applications passing context related information such as URLs and parameters</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>invoke-beta-6.zap</file>
+        <version>7</version>
+        <file>invoke-beta-7.zap</file>
         <status>beta</status>
-        <changes>Properly split application arguments.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/invoke-beta-6.zap</url>
-        <hash>SHA1:ef5cd83668332fc18b7df07eb2b104960310f2cf</hash>
-        <date>2017-04-03</date>
-        <size>289967</size>
+        <changes>Report/log when the application fails to start (related to Issue 3960).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/invoke-beta-7.zap</url>
+        <hash>SHA1:311a21e7ae14d996422bf48813c3b10602a98e00</hash>
+        <date>2017-10-19</date>
+        <size>291274</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_invoke>
     
