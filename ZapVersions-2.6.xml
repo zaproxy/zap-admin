@@ -553,14 +553,16 @@
         <name>Python scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>jython-beta-6.zap</file>
+        <version>7</version>
+        <file>jython-beta-7.zap</file>
         <status>beta</status>
-        <changes>Update Jython from 2.5.3 to 2.7.1</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jython-beta-6.zap</url>
-        <hash>SHA1:328693c9de8227279b6b37b9c4d610bafc71db99</hash>
-        <date>2017-09-20</date>
-        <size>41725497</size>
+        <changes>Do not initialise java.awt.Toolkit when in daemon.&lt;br&gt;
+	Update HTTP Sender template with initiator ID of AJAX Spider.&lt;br&gt;
+	Added extender template and example.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jython-beta-7.zap</url>
+        <hash>SHA1:00e03758368f562d26ba135155a39f1976b003cc</hash>
+        <date>2017-10-27</date>
+        <size>41727201</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_jython>
     
@@ -620,22 +622,15 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>scripts-beta-19.zap</file>
+        <version>20</version>
+        <file>scripts-beta-20.zap</file>
         <status>beta</status>
-        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
-	Inform when the script contains invalid char sequences (related to Issue 3377).&lt;br&gt;
-	Invoke Scripts tree context menu once.&lt;br&gt;
-	Title caps adjustments (related to Issue 2000).&lt;br&gt;
-	Allow to configure the enabled state of new/loaded scripts (Issue 2996).&lt;br&gt;
-	Use selected font in script text area.&lt;br&gt;
-	Fix UI hang when installing/uninstalling script engines (Issue 3945).&lt;br&gt;
-	Support basic auto-completion&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/scripts-beta-19.zap</url>
-        <hash>SHA1:e82cad2155af9c95426cbfe7d972b276a457f67c</hash>
+        <changes>Added extender script type and examples.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/scripts-beta-20.zap</url>
+        <hash>SHA1:48224e59c35718dd915edeeceed529d0c3b04c8b</hash>
         <info>https://github.com/zaproxy/zaproxy/wiki/ScriptConsole</info>
-        <date>2017-10-13</date>
-        <size>547363</size>
+        <date>2017-10-27</date>
+        <size>559642</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_scripts>
     
