@@ -1279,15 +1279,16 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>pscanrulesAlpha-alpha-16.zap</file>
+        <version>17</version>
+        <file>pscanrulesAlpha-alpha-17.zap</file>
         <status>alpha</status>
-        <changes>HTTP "Server" response header, report any "Server" header if Threshold is LOW.&lt;br&gt; 
-    Update Image Location Scanner (passive rule) to leverage 0.4 of the code and 2.10.1 of the library it depends on.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-16.zap</url>
-        <hash>SHA1:c37f0226020139d0a78d4062b79b6428c94f1757</hash>
-        <date>2017-10-05</date>
-        <size>2198943</size>
+        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
+    Bug fix - Added Strict-Transport-Security to the ignored header on Timestamp Disclosure scanner. &lt;br&gt;
+    Add X-AspNet-Version Header scanner - detecting information disclosure via HTTP headers. &lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/pscanrulesAlpha-alpha-17.zap</url>
+        <hash>SHA1:14feb3f66ce0991076fbd1cb4fe7d91804196370</hash>
+        <date>2017-11-06</date>
+        <size>2201022</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_pscanrulesAlpha>
     
