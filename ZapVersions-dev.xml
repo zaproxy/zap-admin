@@ -309,17 +309,15 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
+        <version>12</version>
         <semver>2.0.0</semver>
-        <file>selenium-release-11.zap</file>
+        <file>selenium-release-12.zap</file>
         <status>release</status>
-        <changes>Update Selenium to version 3.4.0.&lt;br&gt;
-	Move Bundled WebDrivers section to main help page and recommend using newer browser versions.&lt;br&gt;
-	Add menus and methods for launching browsers proxying through ZAP.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/selenium-release-11.zap</url>
-        <hash>SHA1:939b734145e35a145a7a3a80c2091cc3e1ab3cfd</hash>
-        <date>2017-08-18</date>
-        <size>21530878</size>
+        <changes>Update Selenium to version 3.7.1.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/selenium-release-12.zap</url>
+        <hash>SHA1:e911953dc08b49147468aea6762483efcc0b890b</hash>
+        <date>2017-11-20</date>
+        <size>22780374</size>
         <not-before-version>2.6.0</not-before-version>
         <dependencies>
             <javaversion>1.8</javaversion>
@@ -720,15 +718,15 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>webdriverlinux-beta-3.zap</file>
+        <version>4</version>
+        <file>webdriverlinux-beta-4.zap</file>
         <status>beta</status>
-        <changes>Update geckodriver to v0.18.0&lt;br&gt;
-	Update chromedriver to 2.31&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdriverlinux-beta-3.zap</url>
-        <hash>SHA1:aa356369f5fe29515e546204fa52f8cf67f710f6</hash>
-        <date>2017-08-18</date>
-        <size>12531798</size>
+        <changes>Update geckodriver to v0.19.1&lt;br&gt;
+	Update chromedriver to 2.33&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdriverlinux-beta-4.zap</url>
+        <hash>SHA1:85bd6f4960786ac28ca225e0325f7f4d6f30c64c</hash>
+        <date>2017-11-20</date>
+        <size>12848091</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_webdriverlinux>
 
@@ -737,15 +735,15 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>webdrivermacos-beta-3.zap</file>
+        <version>4</version>
+        <file>webdrivermacos-beta-4.zap</file>
         <status>beta</status>
-        <changes>Update geckodriver to v0.18.0&lt;br&gt;
-	Update chromedriver to 2.31&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdrivermacos-beta-3.zap</url>
-        <hash>SHA1:b8e1ab34a2d0855318f50f15c4073fa4c81f6e9a</hash>
-        <date>2017-08-18</date>
-        <size>6552561</size>
+        <changes>Update geckodriver to v0.19.1&lt;br&gt;
+	Update chromedriver to 2.33&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdrivermacos-beta-4.zap</url>
+        <hash>SHA1:2fb8f05781e5f3245f504ab45c7c2303e0b22d31</hash>
+        <date>2017-11-20</date>
+        <size>6751167</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_webdrivermacos>
 
@@ -754,16 +752,16 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>webdriverwindows-beta-3.zap</file>
+        <version>4</version>
+        <file>webdriverwindows-beta-4.zap</file>
         <status>beta</status>
-        <changes>Update geckodriver to v0.18.0&lt;br&gt;
-	Update chromedriver to 2.31&lt;br&gt;
-	Update IEDriverServer to 3.4.0&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdriverwindows-beta-3.zap</url>
-        <hash>SHA1:440b66361b6ac88f7560bf80011d9f6573b6d2fa</hash>
-        <date>2017-08-18</date>
-        <size>10589252</size>
+        <changes>Update geckodriver to v0.19.1&lt;br&gt;
+	Update chromedriver to 2.33&lt;br&gt;
+	Update IEDriverServer to 3.7.0&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/webdriverwindows-beta-4.zap</url>
+        <hash>SHA1:5ea6424eadf1b2128d55b4c8976fb42a9e314de0</hash>
+        <date>2017-11-20</date>
+        <size>10340638</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_webdriverwindows>
 
@@ -1139,14 +1137,14 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>jxbrowser-alpha-6.zap</file>
+        <version>7</version>
+        <file>jxbrowser-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>Added console debug logger.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-6.zap</url>
-        <hash>SHA1:164699bacc3f33af829c6e2b3dff74f4326163ac</hash>
-        <date>2017-09-20</date>
-        <size>1380181</size>
+        <changes>Updated to JxBrowser 6.17.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowser-alpha-7.zap</url>
+        <hash>SHA1:661745f3809e80bc72251a5eebc21c98441f0eec</hash>
+        <date>2017-11-20</date>
+        <size>1412665</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_jxbrowser>
 
@@ -1182,15 +1180,14 @@
         <name>JxBrowser (Linux 64)</name>
         <description>An embedded browser based on Chromium, Linux 64 specific</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>jxbrowserlinux64-alpha-3.zap</file>
+        <version>4</version>
+        <file>jxbrowserlinux64-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
-		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserlinux64-alpha-3.zap</url>
-        <hash>SHA1:83ceaa376185bfd0c6864245a6053c762a429700</hash>
-        <date>2017-08-18</date>
-        <size>46719989</size>
+        <changes>Updated for JxBrowser 6.17&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserlinux64-alpha-4.zap</url>
+        <hash>SHA1:db770aa5b37d386c142ba1943a6b2928dbf6cd23</hash>
+        <date>2017-11-20</date>
+        <size>52750394</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
@@ -1209,15 +1206,14 @@
         <name>JxBrowser (Mac OS)</name>
         <description>An embedded browser based on Chromium, Mac OS specific</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>jxbrowsermacos-alpha-3.zap</file>
+        <version>4</version>
+        <file>jxbrowsermacos-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
-		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowsermacos-alpha-3.zap</url>
-        <hash>SHA1:6b8b36df4183847f945995f0f4e1256ecca3d975</hash>
-        <date>2017-08-18</date>
-        <size>52732698</size>
+        <changes>Updated for JxBrowser 6.17&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowsermacos-alpha-4.zap</url>
+        <hash>SHA1:a57a6d297feda6e842b5756685f19bbf3b31ca95</hash>
+        <date>2017-11-20</date>
+        <size>56486892</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
@@ -1236,15 +1232,14 @@
         <name>JxBrowser (Windows)</name>
         <description>An embedded browser based on Chromium, Windows specific</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>jxbrowserwindows-alpha-3.zap</file>
+        <version>4</version>
+        <file>jxbrowserwindows-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Updated for JxBrowser 6.14.2.&lt;br&gt;
-		Updated to support latest selenium interfaces.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserwindows-alpha-3.zap</url>
-        <hash>SHA1:caac01b3a27a6810ea9778780d96e901eca1b759</hash>
-        <date>2017-08-18</date>
-        <size>33977534</size>
+        <changes>Updated for JxBrowser 6.17&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/jxbrowserwindows-alpha-4.zap</url>
+        <hash>SHA1:3cdbaa964a2fea7b6c9d7fc696253d6a90eb46b1</hash>
+        <date>2017-11-20</date>
+        <size>36680513</size>
         <not-before-version>2.5.0</not-before-version>
         <dependencies>
             <addons>
