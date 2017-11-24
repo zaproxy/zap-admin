@@ -1308,15 +1308,15 @@
         <name>SAML Extension</name>
         <description>Detect, Show, Edit, Fuzz SAML requests</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>saml-alpha-6.zap</file>
+        <version>7</version>
+        <file>saml-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>Use ZAP's home directory for SAML configuration file.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.5/saml-alpha-6.zap</url>
-        <hash>SHA1:89080cd9d83c2bf0fb3f010799b02bff3807a85b</hash>
+        <changes>Minor code change to work with ZAP 2.5.0.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/saml-alpha-7.zap</url>
+        <hash>SHA1:47e830cfffbe0742440f9923356ed73f3e817074</hash>
         <info>https://github.com/zaproxy/zaproxy</info>
-        <date>2016-06-02</date>
-        <size>994870</size>
+        <date>2017-11-24</date>
+        <size>997657</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_saml>
     
