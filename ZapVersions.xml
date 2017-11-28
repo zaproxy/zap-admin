@@ -1,6 +1,6 @@
 <ZAP>
 	<core>
-		<version>2.6.0</version>
+		<version>2.7.0</version>
 		<daily-version>D-2017-11-20</daily-version>
 		<daily>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/w2017-11-20/ZAP_WEEKLY_D-2017-11-20.zip</url>
@@ -9,26 +9,26 @@
 			<size>256654290</size>
 		</daily>
 		<windows>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.6.0/ZAP_2_6_0_windows.exe</url>
-			<file>ZAP_2_6_0_windows.exe</file>
-			<hash>SHA1:c4485be9359a6a9e3d0c1bf75ecf4a2fed61d929</hash>
-			<size>123027968</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows.exe</url>
+			<file>ZAP_2_7_0_windows.exe</file>
+			<hash>SHA1:ed0b6021be4ba4099297d7cd7b316921a365e8e9</hash>
+			<size>116391936</size>
 		</windows>
 		<linux>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.6.0/ZAP_2.6.0_Linux.tar.gz</url>
-			<file>ZAP_2.6.0_Linux.tar.gz</file>
-			<hash>SHA1:848d1d5fef1a41ba6c7f735e3a3a192723a120d7</hash>
-			<size>174350914</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2.7.0_Linux.tar.gz</url>
+			<file>ZAP_2.7.0_Linux.tar.gz</file>
+			<hash>SHA1:35f15d04213f34cdd531125cc4d19c733e7cec5a</hash>
+			<size>130903023</size>
 		</linux>
 		<mac>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/2.6.0/ZAP_2_6_0_macos.dmg</url>
-			<file>ZAP_2_6_0_macos.dmg</file>
-			<hash>SHA1:922f8fe576bffa0653af238ad3e87ba3ca7fd49c</hash>
-			<size>190722788</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2.7.0.dmg</url>
+			<file>ZAP_2.7.0.dmg</file>
+			<hash>SHA1:ff027ae952e7a17a9dd1fcec93c5ff3799d56971</hash>
+			<size>188102126</size>
 		</mac>
 		<relnotes>
 			Bug fix and enhancement release.
 		</relnotes>
-		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_6_0</relnotes-url>
+		<relnotes-url>https://github.com/zaproxy/zap-core-help/wiki/HelpReleases2_7_0</relnotes-url>
 	</core>
 </ZAP>
