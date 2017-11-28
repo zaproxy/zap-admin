@@ -50,7 +50,7 @@ import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 public class PendingAddOnReleases {
 
-    private static final String ZAP_VERSIONS_FILE_NAME = "ZapVersions-2.6.xml";
+    private static final String ZAP_VERSIONS_FILE_NAME = "ZapVersions-2.7.xml";
     private static final String ZAP_ADD_ON_FILE_NAME = "ZapAddOn.xml";
 
     static {
