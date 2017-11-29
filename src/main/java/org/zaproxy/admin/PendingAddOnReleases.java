@@ -69,9 +69,9 @@ public class PendingAddOnReleases {
         zapVersions.setExpressionEngine(new XPathExpressionEngine());
 
         Set<AddOnData> addOns = new TreeSet<>();
-        addAddOns(addOns, Paths.get("../zap-extensions/src"), AddOn.Status.release);
-        addAddOns(addOns, Paths.get("../zap-extensions_beta/src"), AddOn.Status.beta);
-        addAddOns(addOns, Paths.get("../zap-extensions_alpha/src"), AddOn.Status.alpha);
+        addAddOns(addOns, Paths.get("../zap-extensions/src"));
+        addAddOns(addOns, Paths.get("../zap-extensions_beta/src"));
+        addAddOns(addOns, Paths.get("../zap-extensions_alpha/src"));
         int totalAddOns = addOns.size();
 
         Set<AddOnData> unreleasedAddOns = new TreeSet<>();
@@ -120,7 +120,7 @@ public class PendingAddOnReleases {
         }
     }
 
-    private static void addAddOns(final Set<AddOnData> addOns, Path path, final AddOn.Status status) throws IOException {
+    private static void addAddOns(final Set<AddOnData> addOns, Path path) throws IOException {
         Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
 
             @Override
@@ -134,7 +134,7 @@ public class PendingAddOnReleases {
                                         addOnId,
                                         zapAddOnXmlFile.getName(),
                                         zapAddOnXmlFile.getPackageVersion(),
-                                        status,
+                                        AddOn.Status.valueOf(zapAddOnXmlFile.getStatus()),
                                         zapAddOnXmlFile.getChanges()));
                     }
                 }
