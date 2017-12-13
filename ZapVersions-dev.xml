@@ -1257,15 +1257,15 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>8</version>
-        <file>openapi-alpha-8.zap</file>
+        <version>9</version>
+        <file>openapi-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>Fix NPE in BodyGenerator.&lt;br&gt;
-		Fix NPEs when a parameter is null.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-8.zap</url>
-        <hash>SHA1:6551f2af293fa0bead18e44a3a7f04cf79d3a819</hash>
-        <date>2017-11-28</date>
-        <size>3359640</size>
+        <changes>Update Swagger/OpenAPI parser (Issue 3479).&lt;br&gt;
+        Fix exception with ref parameters.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-9.zap</url>
+        <hash>SHA1:a0954df3409d6aa47677e0213e5f298520e4096f</hash>
+        <date>2017-12-13</date>
+        <size>3309294</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_openapi>
 
