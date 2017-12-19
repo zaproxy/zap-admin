@@ -1163,15 +1163,16 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>jxbrowser-alpha-7.zap</file>
+        <version>8</version>
+        <file>jxbrowser-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Updated to JxBrowser 6.17.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowser-alpha-7.zap</url>
-        <hash>SHA1:029fd46a82c38a77e6a2ccaf7eeebcc946941ea1</hash>
-        <date>2017-11-28</date>
-        <size>1419665</size>
-        <not-before-version>2.5.0</not-before-version>
+        <changes>Minor code change to address deprecations.&lt;br&gt;
+		Updated to JxBrowser 6.18.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowser-alpha-8.zap</url>
+        <hash>SHA1:0e31058d68dbf278018788f06749c7b00d16e2ab</hash>
+        <date>2017-12-19</date>
+        <size>1444115</size>
+        <not-before-version>2.7.0</not-before-version>
     </addon_jxbrowser>
 
     <addon>jxbrowserlinux64</addon>
@@ -1179,14 +1180,14 @@
         <name>JxBrowser (Linux 64)</name>
         <description>An embedded browser based on Chromium, Linux 64 specific</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>jxbrowserlinux64-alpha-5.zap</file>
+        <version>6</version>
+        <file>jxbrowserlinux64-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserlinux64-alpha-5.zap</url>
-        <hash>SHA1:0e542d9d3b0e46fe5776c2688251ff493eb7ce41</hash>
-        <date>2017-11-28</date>
-        <size>52750393</size>
+        <changes>Updated to JxBrowser 6.18.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserlinux64-alpha-6.zap</url>
+        <hash>SHA1:c93321f70fdd2c2da9871e29f38113802545187c</hash>
+        <date>2017-12-19</date>
+        <size>53197032</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
@@ -1205,14 +1206,14 @@
         <name>JxBrowser (Mac OS)</name>
         <description>An embedded browser based on Chromium, Mac OS specific</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>jxbrowsermacos-alpha-5.zap</file>
+        <version>6</version>
+        <file>jxbrowsermacos-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowsermacos-alpha-5.zap</url>
-        <hash>SHA1:006c21d22df0fc4721d6d5b288deddd2d1b885cc</hash>
-        <date>2017-11-28</date>
-        <size>56486895</size>
+        <changes>Updated to JxBrowser 6.18.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowsermacos-alpha-6.zap</url>
+        <hash>SHA1:196b854fa6d7e39f72a6d1fc4067bbaa71ca2d40</hash>
+        <date>2017-12-19</date>
+        <size>56507773</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
@@ -1231,14 +1232,14 @@
         <name>JxBrowser (Windows)</name>
         <description>An embedded browser based on Chromium, Windows specific</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>jxbrowserwindows-alpha-5.zap</file>
+        <version>6</version>
+        <file>jxbrowserwindows-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows-alpha-5.zap</url>
-        <hash>SHA1:e4a06f190e9acbc59648dae20f99cf93c4ae6fb7</hash>
-        <date>2017-11-28</date>
-        <size>36680508</size>
+        <changes>Updated to JxBrowser 6.18.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows-alpha-6.zap</url>
+        <hash>SHA1:63670ce6238355214b0dc810633fe4de0c915882</hash>
+        <date>2017-12-19</date>
+        <size>36723341</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
