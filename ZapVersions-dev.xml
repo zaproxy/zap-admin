@@ -1361,26 +1361,6 @@
         </dependencies>
     </addon_sequence>
 
-    <addon>sniTerminator</addon>
-    <addon_sniTerminator>
-        <name>SNI Terminator</name>
-        <description>Transparent HTTP proxying</description>
-        <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>sniTerminator-alpha-5.zap</file>
-        <status>alpha</status>
-        <changes>Minor code changes.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/sniTerminator-alpha-5.zap</url>
-        <hash>SHA1:0afea474679c57e4f794dff69976074144b16f78</hash>
-        <info>http://www.computerist.org/blog/2014/07/23/Transparent-HTTPS-proxying-with-ZAP/</info>
-        <date>2017-11-28</date>
-        <size>254816</size>
-        <not-before-version>2.4.1</not-before-version>
-        <dependencies>
-            <javaversion>1.8</javaversion>
-        </dependencies>
-    </addon_sniTerminator>
-
     <addon>soap</addon>
     <addon_soap>
         <name>SOAP Scanner</name>
