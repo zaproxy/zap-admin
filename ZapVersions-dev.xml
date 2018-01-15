@@ -1,12 +1,12 @@
 <ZAP>
 	<core>
 		<version>2.7.0</version>
-		<daily-version>D-2018-01-08</daily-version>
+		<daily-version>D-2018-01-15</daily-version>
 		<daily>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/w2018-01-08/ZAP_WEEKLY_D-2018-01-08.zip</url>
-			<file>ZAP_WEEKLY_D-2018-01-08.zip</file>
-			<hash>SHA1:b64054053661ced32f2fe494c1433196555de442</hash>
-			<size>257851065</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/w2018-01-15/ZAP_WEEKLY_D-2018-01-15.zip</url>
+			<file>ZAP_WEEKLY_D-2018-01-15.zip</file>
+			<hash>SHA1:402492065560141cd125e77b084be6dbd470a1a8</hash>
+			<size>258154984</size>
 		</daily>
 		<windows>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows.exe</url>
@@ -53,15 +53,16 @@
         <name>Core Language Files</name>
         <description>Translations of the core language files</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>coreLang-release-12.zap</file>
+        <version>13</version>
+        <file>coreLang-release-13.zap</file>
         <status>release</status>
-        <changes>Updated for 2.7.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/coreLang-release-12.zap</url>
-        <hash>SHA1:ea5b99c30b0a0eba87bd42d4cc29a9f1ec3b0167</hash>
+        <changes>Added help file with credits.&lt;br&gt;
+	Updated the languages files from Crowdin</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/coreLang-release-13.zap</url>
+        <hash>SHA1:8074521b78c3fc9d63e0543ca3887afa2424167e</hash>
         <info>https://crowdin.com/project/owasp-zap</info>
-        <date>2017-11-27</date>
-        <size>3131785</size>
+        <date>2018-01-15</date>
+        <size>3221988</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_coreLang>
     
