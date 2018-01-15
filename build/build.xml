@@ -295,19 +295,27 @@
 				<include name="zaphelp" />
 				<include name="zaphelp_bs_BA" />
 				<include name="zaphelp_es_ES" />
+				<include name="zaphelp_fil_PH" />
 				<include name="zaphelp_fr_FR" />
+				<include name="zaphelp_id_ID" />
 				<include name="zaphelp_ja_JP" />
 				<include name="zaphelp_pt_BR" />
+				<include name="zaphelp_zh_CN" />
 			</dirset>
 		</generatejavahelpjars>
 		<!-- copy the jars to the right add-ons -->
+		<!-- note that new add-ons are being added to the trunk, regardless of their status -->
+		<!-- which is now just recorded in the manifest file -->
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang=""/>
 		<!-- default en_GB -->
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.alpha.dir}" lang="_bs_BA"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.alpha.dir}" lang="_es_ES"/>
+		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_fil_PH"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.alpha.dir}" lang="_fr_FR"/>
+		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_id_ID"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.alpha.dir}" lang="_ja_JP"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_pt_BR"/>
+		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_zh_CN"/>
 
 		<delete dir="${wkdir}" includeEmptyDirs="true" />
 	</target>
