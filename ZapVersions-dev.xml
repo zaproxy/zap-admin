@@ -174,15 +174,15 @@
         <name>Help - Portuguese, Brazilian</name>
         <description>Portuguese, Brazilian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>8</version>
-        <file>help_pt_BR-release-8.zap</file>
+        <version>9</version>
+        <file>help_pt_BR-release-9.zap</file>
         <status>release</status>
-        <changes>Updated for 2.7.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_pt_BR-release-8.zap</url>
-        <hash>SHA1:8e8dd66940822e3da1e8cc488a0a5ab16b32425b</hash>
+        <changes>Updated with the latest files from crowdin</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_pt_BR-release-9.zap</url>
+        <hash>SHA1:601281d0eca5d8879e68d0d508cae3a38b4c179d</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2017-11-27</date>
-        <size>791098</size>
+        <date>2018-01-15</date>
+        <size>797621</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_help_pt_BR>
     
@@ -450,6 +450,74 @@
         <size>2418608</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_fuzz>
+
+    <addon>help_es_ES</addon>
+    <addon_help_es_ES>
+        <name>Help - Spanish</name>
+        <description>Spanish version of the ZAP help file.</description>
+        <author>ZAP Crowdin Team</author>
+        <version>8</version>
+        <file>help_es_ES-beta-8.zap</file>
+        <status>beta</status>
+        <changes>Updated with the latest files from crowdin, promoted to beta</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_es_ES-beta-8.zap</url>
+        <hash>SHA1:c76c93a79f8aec2cad3bd59a2c75f7d6c9c1c830</hash>
+        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <date>2018-01-15</date>
+        <size>760152</size>
+        <not-before-version>2.7.0</not-before-version>
+    </addon_help_es_ES>
+
+    <addon>help_id_ID</addon>
+    <addon_help_id_ID>
+        <name>Help Indonesian</name>
+        <description>Indonesian version of the ZAP help file.</description>
+        <author>ZAP Crowdin Team</author>
+        <version>1</version>
+        <file>help_id_ID-beta-1.zap</file>
+        <status>beta</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_id_ID-beta-1.zap</url>
+        <hash>SHA1:bef53e3d9cbc9c13a2bc2d9dd43f670e84ca0677</hash>
+        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <date>2018-01-15</date>
+        <size>744449</size>
+        <not-before-version>2.7.0</not-before-version>
+    </addon_help_id_ID>
+
+    <addon>help_ja_JP</addon>
+    <addon_help_ja_JP>
+        <name>Help - Japanese</name>
+        <description>Japanese version of the ZAP help file.</description>
+        <author>ZAP Crowdin Team</author>
+        <version>8</version>
+        <file>help_ja_JP-beta-8.zap</file>
+        <status>beta</status>
+        <changes>Updated with the latest files from crowdin, promoted to beta</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_ja_JP-beta-8.zap</url>
+        <hash>SHA1:b387c04b621d2aeca0fe1d22ecd3af37027766fe</hash>
+        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <date>2018-01-15</date>
+        <size>783468</size>
+        <not-before-version>2.7.0</not-before-version>
+    </addon_help_ja_JP>
+
+    <addon>help_zh_CN</addon>
+    <addon_help_zh_CN>
+        <name>Help Chinese Simplified</name>
+        <description>Chinese Simplified version of the ZAP help file.</description>
+        <author>ZAP Crowdin Team</author>
+        <version>1</version>
+        <file>help_zh_CN-beta-1.zap</file>
+        <status>beta</status>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_zh_CN-beta-1.zap</url>
+        <hash>SHA1:754e9d46e0b640094b0bb6709da03375294dd809</hash>
+        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <date>2018-01-15</date>
+        <size>745595</size>
+        <not-before-version>2.7.0</not-before-version>
+    </addon_help_zh_CN>
 
     <addon>importurls</addon>
     <addon_importurls>
@@ -1048,68 +1116,51 @@
         <name>Help - Bosnian</name>
         <description>Bosnian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>7</version>
-        <file>help_bs_BA-alpha-7.zap</file>
+        <version>8</version>
+        <file>help_bs_BA-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_bs_BA-alpha-7.zap</url>
-        <hash>SHA1:9ac4ee758340e080e103abbbd8c19f517d7152d3</hash>
+        <changes>Updated with the latest files from crowdin</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_bs_BA-alpha-8.zap</url>
+        <hash>SHA1:dde95d42f50baa007b51bd6cf2b90ca1851789ca</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2017-11-28</date>
-        <size>745930</size>
+        <date>2018-01-15</date>
+        <size>756656</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_help_bs_BA>
 
-    <addon>help_es_ES</addon>
-    <addon_help_es_ES>
-        <name>Help - Spanish</name>
-        <description>Spanish version of the ZAP help file.</description>
+    <addon>help_fil_PH</addon>
+    <addon_help_fil_PH>
+        <name>Help Filipino</name>
+        <description>Filipino version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>7</version>
-        <file>help_es_ES-alpha-7.zap</file>
+        <version>1</version>
+        <file>help_fil_PH-alpha-1.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_es_ES-alpha-7.zap</url>
-        <hash>SHA1:0b185affe911dac4e7aa45bbdc35122a3335c493</hash>
+        <changes>First version</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_fil_PH-alpha-1.zap</url>
+        <hash>SHA1:583e47a8c65a53b2142ccfaad7bddad72e080279</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2017-11-28</date>
-        <size>748654</size>
+        <date>2018-01-15</date>
+        <size>743167</size>
         <not-before-version>2.7.0</not-before-version>
-    </addon_help_es_ES>
+    </addon_help_fil_PH>
 
     <addon>help_fr_FR</addon>
     <addon_help_fr_FR>
         <name>Help - French</name>
         <description>French version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>7</version>
-        <file>help_fr_FR-alpha-7.zap</file>
+        <version>8</version>
+        <file>help_fr_FR-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_fr_FR-alpha-7.zap</url>
-        <hash>SHA1:2486981380e96dbe71f4f80ce1343a212bedaf0c</hash>
+        <changes>Updated with the latest files from crowdin</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_fr_FR-alpha-8.zap</url>
+        <hash>SHA1:00cb14a93dbb0061bd6c5f4492d2570bc8470edc</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2017-11-28</date>
-        <size>746454</size>
+        <date>2018-01-15</date>
+        <size>757526</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_help_fr_FR>
-
-    <addon>help_ja_JP</addon>
-    <addon_help_ja_JP>
-        <name>Help - Japanese</name>
-        <description>Japanese version of the ZAP help file.</description>
-        <author>ZAP Crowdin Team</author>
-        <version>7</version>
-        <file>help_ja_JP-alpha-7.zap</file>
-        <status>alpha</status>
-        <changes>Updated for 2.7.0</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_ja_JP-alpha-7.zap</url>
-        <hash>SHA1:0190f85b5c7572212dcdf0ac6c5dc984c44c0d10</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
-        <date>2017-11-28</date>
-        <size>772547</size>
-        <not-before-version>2.7.0</not-before-version>
-    </addon_help_ja_JP>
 
     <addon>highlighter</addon>
     <addon_highlighter>
