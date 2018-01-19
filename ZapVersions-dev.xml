@@ -37,14 +37,16 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>28</version>
-        <file>ascanrules-release-28.zap</file>
+        <version>29</version>
+        <file>ascanrules-release-29.zap</file>
         <status>release</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrules-release-28.zap</url>
-        <hash>SHA1:5e7cd99519c183e1b29a287c2490c8fac8b47a39</hash>
-        <date>2017-11-27</date>
-        <size>594762</size>
+        <changes>Issue 3979: Fix reflected XSS in PUT response.&lt;br&gt;
+    Issue 3978: Handle relfected XSS in JSON response.&lt;br&gt;
+    Issue 4211: Fix false positive in FormatString scanner.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrules-release-29.zap</url>
+        <hash>SHA1:4d2facd265b04339911fc5802bac5046ce8831fe</hash>
+        <date>2018-01-19</date>
+        <size>598756</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_ascanrules>
     
@@ -208,14 +210,14 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>21</version>
-        <file>pscanrules-release-21.zap</file>
+        <version>22</version>
+        <file>pscanrules-release-22.zap</file>
         <status>release</status>
-        <changes>Update for 2.7.0, Minor code changes to address deprecation.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrules-release-21.zap</url>
-        <hash>SHA1:8423d2add97b2742a360317ddfbda7ee8bfa352e</hash>
-        <date>2017-11-27</date>
-        <size>519186</size>
+        <changes>Retired the password auto-complete passive scan rule (Issue 4215).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrules-release-22.zap</url>
+        <hash>SHA1:3a3203bcbca8b9091baf12bb5ddf4ec192a15295</hash>
+        <date>2018-01-19</date>
+        <size>518316</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrules>
     
@@ -224,16 +226,16 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>quickstart-release-22.zap</file>
+        <version>23</version>
+        <file>quickstart-release-23.zap</file>
         <status>release</status>
-        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
-	Updated to use new icon.&lt;br&gt;
-	Updated for the new default browser launch URL.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/quickstart-release-22.zap</url>
-        <hash>SHA1:0c38bd44d9f1edd327496def85b160f928bbd276</hash>
-        <date>2017-11-27</date>
-        <size>429152</size>
+        <changes>Update for 2.7.0.&lt;br&gt;
+    Stop the quick scan if the session is changed.&lt;br&gt;
+    Added toolbar button to launch the latest browser chosen.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/quickstart-release-23.zap</url>
+        <hash>SHA1:34aed4c9a93220978799aff7002236a669c02b25</hash>
+        <date>2018-01-19</date>
+        <size>436181</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_quickstart>
     
@@ -291,15 +293,15 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>spiderAjax-release-20.zap</file>
+        <version>21</version>
+        <file>spiderAjax-release-21.zap</file>
         <status>release</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/spiderAjax-release-20.zap</url>
-        <hash>SHA1:f0efe75e9a1b32133b43492c76d5089ae3fdf920</hash>
+        <changes>Reset API scan also when in daemon mode (Issue 4163).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/spiderAjax-release-21.zap</url>
+        <hash>SHA1:92f5a3ecded1d5e0f3b889b07656f5ec8414ada0</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2017-11-27</date>
-        <size>2594648</size>
+        <date>2018-01-19</date>
+        <size>2597145</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
@@ -366,21 +368,14 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>ascanrulesBeta-beta-22.zap</file>
+        <version>23</version>
+        <file>ascanrulesBeta-beta-23.zap</file>
         <status>beta</status>
-        <changes>Fix FP in "Source Code Disclosure - /WEB-INF folder" on successful responses (Issue 3048).&lt;br&gt;
-	Fix FP in "Integer Overflow Error" on 500 error responses (Issue 3064).&lt;br&gt;
-	Support security annotations for forms that dont need anti-CSRF tokens.&lt;br&gt;
-	Changed XXE rule to use new callback extension.&lt;br&gt;
-	Notify of messages sent during Heartbleed scanning (Issue 2425).&lt;br&gt;
-	Fix false positive in Code Disclosure - CVE-2012-1823 on image content (Issue 3846).&lt;br&gt;
-	Fix false positive in Backup File Disclosure scanner on 403 responses (Issue 3911).&lt;br&gt;
-	CsrfTokenScan : Keep session cookies instead of deleting all of them&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrulesBeta-beta-22.zap</url>
-        <hash>SHA1:45252b5894d65e7fc1143319ae0caa583b619a4e</hash>
-        <date>2017-11-27</date>
-        <size>2766119</size>
+        <changes>At HIGH threshold only perform CSRF checks for inScope messages (Issue 1354).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrulesBeta-beta-23.zap</url>
+        <hash>SHA1:b3749aae5675fb48b01abc64687f52848d00bc0e</hash>
+        <date>2018-01-19</date>
+        <size>2774403</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_ascanrulesBeta>
 
@@ -572,14 +567,14 @@
         <name>Python scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>jython-beta-8.zap</file>
+        <version>9</version>
+        <file>jython-beta-9.zap</file>
         <status>beta</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jython-beta-8.zap</url>
-        <hash>SHA1:ab3cf5fb160add4e545c5b3314bc9f29893adec7</hash>
-        <date>2017-11-27</date>
-        <size>41732923</size>
+        <changes>Update Passive Rule template to include new function.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jython-beta-9.zap</url>
+        <hash>SHA1:a08b6b37161a499f7e4e7f196ad9c72c534fa389</hash>
+        <date>2018-01-19</date>
+        <size>41733258</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_jython>
 
@@ -622,18 +617,17 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>pscanrulesBeta-beta-17.zap</file>
+        <version>18</version>
+        <file>pscanrulesBeta-beta-18.zap</file>
         <status>beta</status>
-        <changes>Minor changes to InsecureJFSViewStatePassiveScanner (check response contains JSF viewstate or if it's server stored).&lt;br/&gt;
-	Improve the domain matching in CookieLooselyScopedScanner.&lt;br/&gt;
-	Issue 3449: CSRFcountermeasures passive scanner now raises alerts on a per-form basis on pages with multiple forms.&lt;br/&gt; 
-	Issue 3937: Update ServletParameterPollutionScanner reference.&lt;br/&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrulesBeta-beta-17.zap</url>
-        <hash>SHA1:3e18078360ca1c2f42833f67d01048cdc0d0f3ff</hash>
-        <date>2017-11-27</date>
-        <size>557468</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Minor code changes to address deprecation.&lt;br/&gt;
+    At HIGH threshold only perform CSRF checks for in scope messages (Issue 1354).&lt;br/&gt;
+        Exclude JavaScript response types from the InformationDisclosureDebugErrors scanner unless threshold is Low (Issue 4210).&lt;br/&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrulesBeta-beta-18.zap</url>
+        <hash>SHA1:caf60a429ff6c7c6f53fab09f94462a9c6e30150</hash>
+        <date>2018-01-19</date>
+        <size>559591</size>
+        <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesBeta>
 
     <addon>replacer</addon>
@@ -641,14 +635,14 @@
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>replacer-beta-4.zap</file>
+        <version>5</version>
+        <file>replacer-beta-5.zap</file>
         <status>beta</status>
-        <changes>Updated for 2.7.0.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/replacer-beta-4.zap</url>
-        <hash>SHA1:5dad27579bf98e7f48e37893f512d5ff29ef508a</hash>
-        <date>2017-11-27</date>
-        <size>311807</size>
+        <changes>Fix exception during ZAP start up.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/replacer-beta-5.zap</url>
+        <hash>SHA1:a81cc8283324fc79778107d901a49993d0bf1bcd</hash>
+        <date>2018-01-19</date>
+        <size>312391</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_replacer>
 
@@ -657,15 +651,20 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>scripts-beta-22.zap</file>
+        <version>23</version>
+        <file>scripts-beta-23.zap</file>
         <status>beta</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/scripts-beta-22.zap</url>
-        <hash>SHA1:2c9b245889ea2a650a2560d1b69aaaa8cd37b847</hash>
+        <changes>Correct extender script, Add history record menu.js, to show the info dialogue.&lt;br&gt;
+    Invoke script on selected message(s) (Issue 4085).&lt;br&gt;
+    Update extender scripts to use just Nashorn (Java 8).&lt;br&gt;
+    Do not show empty choice when the script engine requires a template.&lt;br&gt;
+    Confirm overwrite of existing script file.&lt;br&gt;
+    Support 'external' scripts.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/scripts-beta-23.zap</url>
+        <hash>SHA1:ce0cc4b204e4effb3a3135a26da1022b57490843</hash>
         <info>https://github.com/zaproxy/zaproxy/wiki/ScriptConsole</info>
-        <date>2017-11-27</date>
-        <size>615637</size>
+        <date>2018-01-19</date>
+        <size>620854</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_scripts>
 
@@ -815,16 +814,16 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>zest-beta-26.zap</file>
+        <version>27</version>
+        <file>zest-beta-27.zap</file>
         <status>beta</status>
-        <changes>Use custom plugin ID for fail actions.&lt;br&gt;
-	Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/zest-beta-26.zap</url>
-        <hash>SHA1:06a62049acb320033d1e373597d54df54b13a7fd</hash>
+        <changes>Fix exception when editing Action - Script with unsaved scripts.&lt;br&gt;
+    Allow to select more HTTP methods in Zest Request dialogue.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/zest-beta-27.zap</url>
+        <hash>SHA1:aa66b3e03f924265f011044747b54de967cecde4</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2017-11-27</date>
-        <size>2102156</size>
+        <date>2018-01-19</date>
+        <size>2106780</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
