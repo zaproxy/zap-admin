@@ -35,6 +35,9 @@ public class CountDownloads {
 	private static final String RELEASES_URL = 
 			"https://api.github.com/repos/zaproxy/zaproxy/releases";
 
+	private static final String TAG_URL = 
+			"https://api.github.com/repos/zaproxy/zaproxy/releases/tags/";
+
 	private static String readUrl(String urlString) throws Exception {
 	    BufferedReader reader = null;
 	    try {
@@ -54,6 +57,26 @@ public class CountDownloads {
 	    }
 	}
 	
+	private static void parseRelease(JSONObject tag) throws Exception {
+		String tagName = tag.getString("tag_name");
+		System.out.println("Tag " + tagName);
+
+		JSONArray assets = tag.getJSONArray("assets");
+		int total = 0;
+		for (int j=0; j < assets.size(); j++) {
+			JSONObject asset = assets.getJSONObject(j);
+			int count = asset.getInt("download_count");
+			total += count;
+			//System.out.println("\t" + asset.getString("name") + " : " + count);
+		}
+		System.out.println("\tTotal Downloads: " + total);
+	}
+
+	private static JSONObject getRelease(String tag) throws Exception {
+		return JSONObject.fromObject(readUrl(TAG_URL + tag));
+		
+	}
+
 	public static void main(String[] args) {
 		// Loop through tags, print names
 		try {
@@ -66,20 +89,15 @@ public class CountDownloads {
 			}
 			
 			for (int i=0; i < json.size(); i++) {
-				JSONObject tag = json.getJSONObject(i);
-				String tagName = tag.getString("tag_name");
-				System.out.println("Tag " + tagName);
-
-				JSONArray assets = tag.getJSONArray("assets");
-				int total = 0;
-				for (int j=0; j < assets.size(); j++) {
-					JSONObject asset = assets.getJSONObject(j);
-					int count = asset.getInt("download_count");
-					total += count;
-					System.out.println("\t" + asset.getString("name") + " : " + count);
-				}
-				System.out.println("\tTotal Downloads: " + total);
+				parseRelease(json.getJSONObject(i));
 			}
+			
+			// Explicitly request the most recent main releases
+			parseRelease(getRelease("2.7.0"));
+			parseRelease(getRelease("2.6.0"));
+			parseRelease(getRelease("2.5.0"));
+			parseRelease(getRelease("2.4.3"));
+			parseRelease(getRelease("2.4.2"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
