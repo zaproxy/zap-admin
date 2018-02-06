@@ -37,16 +37,15 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>ascanrules-release-29.zap</file>
+        <version>30</version>
+        <file>ascanrules-release-30.zap</file>
         <status>release</status>
-        <changes>Issue 3979: Fix reflected XSS in PUT response.&lt;br&gt;
-    Issue 3978: Handle relfected XSS in JSON response.&lt;br&gt;
-    Issue 4211: Fix false positive in FormatString scanner.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrules-release-29.zap</url>
-        <hash>SHA1:4d2facd265b04339911fc5802bac5046ce8831fe</hash>
-        <date>2018-01-19</date>
-        <size>598756</size>
+        <changes>Issue 1366: Allow SSI detection patterns to include new lines, and pre-check the original response for detection patterns to reduce false positives.&lt;br/&gt;
+    Issue 4168 and 4230: Pre-check the original response for detection patterns.&lt;br/&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrules-release-30.zap</url>
+        <hash>SHA1:728b9c76ac4a135db90181d701b0e7fd0f25a304</hash>
+        <date>2018-02-06</date>
+        <size>630842</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_ascanrules>
     
