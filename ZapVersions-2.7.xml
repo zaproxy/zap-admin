@@ -578,6 +578,22 @@
         <not-before-version>2.7.0</not-before-version>
     </addon_jruby>
 
+    <addon>jsonview</addon>
+    <addon_jsonview>
+        <name>Json view</name>
+        <description>Adds a view that shows JSON messages nicely formatted</description>
+        <author>Juha Kivekäs</author>
+        <version>1</version>
+        <file>jsonview-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>Initial release</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jsonview-alpha-1.zap</url>
+        <hash>SHA1:be9a95e39722ff42af1160a195a56c9af9e285c1</hash>
+        <date>2018-02-08</date>
+        <size>10796</size>
+        <not-before-version>2.6.0</not-before-version>
+    </addon_jsonview>
+
     <addon>jython</addon>
     <addon_jython>
         <name>Python scripting</name>
