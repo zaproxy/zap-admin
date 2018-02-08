@@ -1182,7 +1182,7 @@
         <status>alpha</status>
         <changes>Updated with the latest files from crowdin</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_fil_PH-alpha-2.zap</url>
-        <hash>SHA1:a913f4a64694f2cd7c34db56a07369e7646d9452</hash>
+        <hash>SHA1:76ae4fe9931d187aac7e5c4a4dd7bfbc13d262e4</hash>
         <info>https://crowdin.com/project/owasp-zap-help</info>
         <date>2018-02-08</date>
         <size>818996</size>
