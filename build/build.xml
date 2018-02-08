@@ -300,6 +300,7 @@
 				<include name="zaphelp_id_ID" />
 				<include name="zaphelp_ja_JP" />
 				<include name="zaphelp_pt_BR" />
+				<include name="zaphelp_tr_TR" />
 				<include name="zaphelp_zh_CN" />
 			</dirset>
 		</generatejavahelpjars>
@@ -315,6 +316,7 @@
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_id_ID"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.alpha.dir}" lang="_ja_JP"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_pt_BR"/>
+		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_tr_TR"/>
 		<copy-help-to-addon src="${wkdir}/jars" ext="${zap.extensions.trunk.dir}" lang="_zh_CN"/>
 
 		<delete dir="${wkdir}" includeEmptyDirs="true" />
