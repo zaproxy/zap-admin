@@ -256,17 +256,41 @@
 
 			<!-- Default language is at root of dest dir -->
 			<helpdir src="zaphelp" dest="" />
-			<!-- Do not generate until the pages are synced with Crowdin to fix the HTML errors and broken links.
+			
+			<!-- Languages worth publishing online.
+			The publishing process is currently manual (be nice to automate sometime):
+			1. Choose which languages to publish, eg those on https://crowdin.com/project/owasp-zap-help over 50% translated
+			2. Make sure they are listed in the section below
+			3. Run this task
+			4. Delete all of the files from the existing repo and copy the new ones in
+			5. Commit, push, PR and merge
+			
+			For newly added languages:
+			1. Create a new project: https://github.com/zaproxy/zap-core-help-<local>
+			2. Add a default README and Apache v2 license
+			3. Add a default wiki page
+			4. Clone the wiki repo locally
+			5. Copy in all of the relevant files from zap-core-help.wiki as well as the images directory
+			6. Manually change the HelpIntro.md page to point to the new repo and copy it to Home.md
+			7. Commit, push, PR and merge
+			8. Manually edit the main readme page adding the 'intro' from HelpIntro.md and the common bit from one of the other repos
+			9. Update https://github.com/zaproxy/zap-core-help to include it
+			 -->
+            <helpdir src="zaphelp_es_ES" dest="es" />
+            <helpdir src="zaphelp_fil_PH" dest="fil" />
+            <helpdir src="zaphelp_id_ID" dest="id" />
+            <helpdir src="zaphelp_pt_BR" dest="pt-BR" />
+            <helpdir src="zaphelp_tr_TR" dest="tr" />
+
+			<!-- Languages that havnt been translated enough to publish online yet
             <helpdir src="zaphelp_bs_BA" dest="bs" />
             <helpdir src="zaphelp_de_DE" dest="de" />
             <helpdir src="zaphelp_el_GR" dest="el" />
-            <helpdir src="zaphelp_es_ES" dest="es" />
             <helpdir src="zaphelp_fa_IR" dest="fa" />
             <helpdir src="zaphelp_fr_FR" dest="fr" />
             <helpdir src="zaphelp_it_IT" dest="it" />
             <helpdir src="zaphelp_ja_JP" dest="ja" />
             <helpdir src="zaphelp_pl_PL" dest="pl" />
-            <helpdir src="zaphelp_pt_BR" dest="pt-BR" />
             <helpdir src="zaphelp_ru_RU" dest="ru" /> -->
 		</generatewiki>
 	</target>
