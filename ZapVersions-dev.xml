@@ -551,14 +551,14 @@
         <name>Invoke Applications</name>
         <description>Invoke external applications passing context related information such as URLs and parameters</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>invoke-beta-8.zap</file>
+        <version>9</version>
+        <file>invoke-beta-9.zap</file>
         <status>beta</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/invoke-beta-8.zap</url>
-        <hash>SHA1:c9a920bc8a89a807c4783b68e0a4943a1917333e</hash>
-        <date>2017-11-27</date>
-        <size>299523</size>
+        <changes>Added additional parameter replacements of %msgid% and %header-*%&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/invoke-beta-9.zap</url>
+        <hash>SHA1:81df2e9d7794b273410c87336ef66cb4cc4dc6b6</hash>
+        <date>2018-02-19</date>
+        <size>314763</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_invoke>
 
@@ -1354,17 +1354,18 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>pscanrulesAlpha-alpha-19.zap</file>
+        <version>20</version>
+        <file>pscanrulesAlpha-alpha-20.zap</file>
         <status>alpha</status>
-        <changes>Minor code changes to comply with deprecations.&lt;br&gt;
-	Added passive PII Scanner (which currently looks for Credit Card # patterns).&lt;br&gt;
-	Change Image Location and Privacy Scanner to scan hidden images.&lt;br&gt;
-	Added blank link target scanner.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrulesAlpha-alpha-19.zap</url>
-        <hash>SHA1:f71aa26b5d8f2cbf120eed00f6116a1b0baf8566</hash>
-        <date>2018-02-13</date>
-        <size>2360663</size>
+        <changes>Change Image Location and Privacy Scanner to escape HTML inside of embedded image comments.&lt;br&gt;
+    Bump jar version of Image Location and Privacy Scanner dependancy xmpcore.&lt;br&gt;
+    Update Image Location and Privacy Scanner to version 1.0.&lt;br&gt;
+    Fix exception in blank link target scanner.&lt;br&gt;
+    Fix exception in Username Hash Found scanner.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrulesAlpha-alpha-20.zap</url>
+        <hash>SHA1:457b6bbd1b4a2c808fd09d87ba18be7095731f2e</hash>
+        <date>2018-02-19</date>
+        <size>2333633</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesAlpha>
 
