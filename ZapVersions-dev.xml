@@ -1105,15 +1105,14 @@
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>domxss-alpha-6.zap</file>
+        <version>7</version>
+        <file>domxss-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>Minor code changes.&lt;br&gt;
-	Add XSS Polyglot (Issue 2322).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/domxss-alpha-6.zap</url>
-        <hash>SHA1:b8b6d79c73f0ac3d8313c520602f83bbdc62588c</hash>
-        <date>2018-01-04</date>
-        <size>200742</size>
+        <changes>Issue 2918: Added an option to attack URL parameters.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/domxss-alpha-7.zap</url>
+        <hash>SHA1:e6d28e52892e41469aefdad3959057900aed6d35</hash>
+        <date>2018-03-07</date>
+        <size>211983</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
