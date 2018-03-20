@@ -937,17 +937,18 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>ascanrulesAlpha-alpha-20.zap</file>
+        <version>21</version>
+        <file>ascanrulesAlpha-alpha-21.zap</file>
         <status>alpha</status>
-        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
-	Correct handling of messages with emtpy path.&lt;br&gt;
-	Add Get for Post Scanner.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrulesAlpha-alpha-20.zap</url>
-        <hash>SHA1:b0625e235d1706d099e72371012d96e6c9175a35</hash>
+        <changes>Add .htaccess scanner (Issue 3972).&lt;br&gt;
+    Modified trace.axd scanner to leverage new AbstractAppFilePlugin component.&lt;br&gt;
+    Remove unnecessary help entry.&lt;br&gt;
+    Sorted help content alphabetically, adjusted names to match scan rules, and added missing entries.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrulesAlpha-alpha-21.zap</url>
+        <hash>SHA1:5624a72a2a722d97592117c010a486174b28d991</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2017-11-28</date>
-        <size>1479800</size>
+        <date>2018-03-20</date>
+        <size>1594615</size>
         <not-before-version>2.4.1</not-before-version>
     </addon_ascanrulesAlpha>
 
