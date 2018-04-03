@@ -75,6 +75,7 @@ public class PendingAddOnReleases {
         int totalAddOns = addOns.size();
 
         Set<AddOnData> unreleasedAddOns = new TreeSet<>();
+        Set<AddOnData> unchangedAddOns = new TreeSet<>();
 
         for (Iterator<AddOnData> it = addOns.iterator(); it.hasNext();) {
             AddOnData addOnData = it.next();
@@ -83,6 +84,9 @@ public class PendingAddOnReleases {
                 unreleasedAddOns.add(addOnData);
                 it.remove();
             } else if (addOn.getFileVersion() >= addOnData.version) {
+                it.remove();
+            } else if (addOnData.changes.isEmpty()) {
+                unchangedAddOns.add(addOnData);
                 it.remove();
             }
         }
@@ -117,6 +121,16 @@ public class PendingAddOnReleases {
                 }
             }
             System.out.println("=======================================\n");
+        }
+
+        if (!unchangedAddOns.isEmpty()) {
+            System.out.println("=============================");
+            System.out.println("Unchanged add-ons (" + unchangedAddOns.size() + " of " + totalAddOns + ")");
+            System.out.println("=============================");
+            for (AddOnData addOn : unchangedAddOns) {
+                System.out.println(addOn.status + "\t" + addOn.name + " v" + addOn.version);
+            }
+            System.out.println("=============================\n");
         }
     }
 
