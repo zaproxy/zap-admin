@@ -1055,14 +1055,14 @@
         <name>Code Dx Extension</name>
         <description>Includes request and response data in XML reports and provides the ability to upload reports directly to a Code Dx server</description>
         <author>Code Dx, Inc.</author>
-        <version>5</version>
-        <file>codedx-alpha-5.zap</file>
+        <version>6</version>
+        <file>codedx-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Add an upload to Code Dx option.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/codedx-alpha-5.zap</url>
-        <hash>SHA1:453484d74f3fb13e894a0c7a69f653352f69ee54</hash>
-        <date>2017-11-28</date>
-        <size>1393978</size>
+        <changes>Increased default timeout value to 120 seconds for uploading a report.&lt;br&gt; Added a null check when processing alert http messages. &lt;br&gt; Made the timeout value configurable.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/codedx-alpha-6.zap</url>
+        <hash>SHA1:91e48399673ba5ba9ee397f3a555eb5f4d632f5a</hash>
+        <date>2018-04-06</date>
+        <size>1409662</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_codedx>
 
