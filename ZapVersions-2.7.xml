@@ -969,22 +969,6 @@
         <not-before-version>2.5.0</not-before-version>
     </addon_authstats>
 
-    <addon>birtreports</addon>
-    <addon_birtreports>
-        <name>birtreports</name>
-        <description>Alert reports using BIRT report API</description>
-        <author>Johanna Curiel And Rauf Butt</author>
-        <version>2</version>
-        <file>birtreports-alpha-2.zap</file>
-        <status>alpha</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/birtreports-alpha-2.zap</url>
-        <hash>SHA1:66c045f23ab1c0e06acd4e44889e6fa2004d2f82</hash>
-        <date>2017-11-28</date>
-        <size>45575793</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_birtreports>
-
     <addon>browserView</addon>
     <addon_browserView>
         <name>Browser View</name>
