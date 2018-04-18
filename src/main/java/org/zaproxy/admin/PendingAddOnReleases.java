@@ -37,7 +37,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-
 import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -63,8 +62,10 @@ public class PendingAddOnReleases {
         LocalDate now = LocalDate.now(ZoneOffset.UTC);
         boolean showChanges = true;
 
-        ZapXmlConfiguration zapVersions = new ZapXmlConfiguration(Paths.get(ZAP_VERSIONS_FILE_NAME).toFile());
-        AddOnCollection addOnCollection = new AddOnCollection(zapVersions, AddOnCollection.Platform.daily);
+        ZapXmlConfiguration zapVersions =
+                new ZapXmlConfiguration(Paths.get(ZAP_VERSIONS_FILE_NAME).toFile());
+        AddOnCollection addOnCollection =
+                new AddOnCollection(zapVersions, AddOnCollection.Platform.daily);
 
         zapVersions.setExpressionEngine(new XPathExpressionEngine());
 
@@ -77,7 +78,7 @@ public class PendingAddOnReleases {
         Set<AddOnData> unreleasedAddOns = new TreeSet<>();
         Set<AddOnData> unchangedAddOns = new TreeSet<>();
 
-        for (Iterator<AddOnData> it = addOns.iterator(); it.hasNext();) {
+        for (Iterator<AddOnData> it = addOns.iterator(); it.hasNext(); ) {
             AddOnData addOnData = it.next();
             AddOn addOn = addOnCollection.getAddOn(addOnData.id);
             if (addOn == null) {
@@ -93,7 +94,8 @@ public class PendingAddOnReleases {
 
         if (!unreleasedAddOns.isEmpty()) {
             System.out.println("=============================");
-            System.out.println("Unreleased add-ons (" + unreleasedAddOns.size() + " of " + totalAddOns + ")");
+            System.out.println(
+                    "Unreleased add-ons (" + unreleasedAddOns.size() + " of " + totalAddOns + ")");
             System.out.println("=============================");
             for (AddOnData addOn : unreleasedAddOns) {
                 System.out.println(addOn.status + "\t" + addOn.name + " v" + addOn.version);
@@ -103,7 +105,8 @@ public class PendingAddOnReleases {
 
         if (!addOns.isEmpty()) {
             System.out.println("=======================================");
-            System.out.println("New versions pending release (" + addOns.size() + " of " + totalAddOns + ")");
+            System.out.println(
+                    "New versions pending release (" + addOns.size() + " of " + totalAddOns + ")");
             System.out.println("=======================================");
             Status currentStatus = null;
             for (AddOnData addOn : addOns) {
@@ -111,8 +114,16 @@ public class PendingAddOnReleases {
                     currentStatus = addOn.status;
                     System.out.println(currentStatus);
                 }
-                LocalDate releaseDate = LocalDate.parse(zapVersions.getString("/addon_" + addOn.id + "/date"));
-                System.out.println("  * " + addOn.name + " v" + addOn.version + " (" + Period.between(releaseDate, now) + ")");
+                LocalDate releaseDate =
+                        LocalDate.parse(zapVersions.getString("/addon_" + addOn.id + "/date"));
+                System.out.println(
+                        "  * "
+                                + addOn.name
+                                + " v"
+                                + addOn.version
+                                + " ("
+                                + Period.between(releaseDate, now)
+                                + ")");
 
                 if (showChanges) {
                     for (String change : addOn.changes) {
@@ -125,7 +136,8 @@ public class PendingAddOnReleases {
 
         if (!unchangedAddOns.isEmpty()) {
             System.out.println("=============================");
-            System.out.println("Unchanged add-ons (" + unchangedAddOns.size() + " of " + totalAddOns + ")");
+            System.out.println(
+                    "Unchanged add-ons (" + unchangedAddOns.size() + " of " + totalAddOns + ")");
             System.out.println("=============================");
             for (AddOnData addOn : unchangedAddOns) {
                 System.out.println(addOn.status + "\t" + addOn.name + " v" + addOn.version);
@@ -135,26 +147,30 @@ public class PendingAddOnReleases {
     }
 
     private static void addAddOns(final Set<AddOnData> addOns, Path path) throws IOException {
-        Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
+        Files.walkFileTree(
+                path,
+                new SimpleFileVisitor<Path>() {
 
-            @Override
-            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                if (isValidZapAddOnXmlFile(file)) {
-                    try (InputStream is = new BufferedInputStream(Files.newInputStream(file))) {
-                        String addOnId = file.getParent().getFileName().toString();
-                        ZapAddOnXmlFile zapAddOnXmlFile = new ZapAddOnXmlFile(is);
-                        addOns.add(
-                                new AddOnData(
-                                        addOnId,
-                                        zapAddOnXmlFile.getName(),
-                                        zapAddOnXmlFile.getPackageVersion(),
-                                        AddOn.Status.valueOf(zapAddOnXmlFile.getStatus()),
-                                        zapAddOnXmlFile.getChanges()));
+                    @Override
+                    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
+                            throws IOException {
+                        if (isValidZapAddOnXmlFile(file)) {
+                            try (InputStream is =
+                                    new BufferedInputStream(Files.newInputStream(file))) {
+                                String addOnId = file.getParent().getFileName().toString();
+                                ZapAddOnXmlFile zapAddOnXmlFile = new ZapAddOnXmlFile(is);
+                                addOns.add(
+                                        new AddOnData(
+                                                addOnId,
+                                                zapAddOnXmlFile.getName(),
+                                                zapAddOnXmlFile.getPackageVersion(),
+                                                AddOn.Status.valueOf(zapAddOnXmlFile.getStatus()),
+                                                zapAddOnXmlFile.getChanges()));
+                            }
+                        }
+                        return FileVisitResult.CONTINUE;
                     }
-                }
-                return FileVisitResult.CONTINUE;
-            }
-        });
+                });
     }
 
     private static boolean isValidZapAddOnXmlFile(Path file) {
@@ -214,6 +230,5 @@ public class PendingAddOnReleases {
             }
             return preparedChanges;
         }
-
     }
 }
