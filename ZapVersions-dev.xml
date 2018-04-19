@@ -156,17 +156,18 @@
 
     <addon>groovy</addon>
     <addon_groovy>
-        <name>Groovy scripting</name>
+        <name>Groovy Scripting</name>
         <description>Allows Groovy to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>groovy-alpha-1.zap</file>
+        <version>2</version>
+        <file>groovy-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>Initial Release</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/groovy-alpha-1.zap</url>
-        <hash>SHA1:755599f73daeb48bb81a93b61c1aa3ba133fcd11</hash>
-        <date>2018-03-15</date>
-        <size>7260996</size>
+        <changes>Add help.&lt;br&gt;
+    Added script templates.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/groovy-alpha-2.zap</url>
+        <hash>SHA1:7f0d54eaf987a435e941a422378c124f3fd29259</hash>
+        <date>2018-04-19</date>
+        <size>7334399</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_groovy>
     
