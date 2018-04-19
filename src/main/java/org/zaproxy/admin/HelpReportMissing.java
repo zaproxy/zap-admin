@@ -23,37 +23,35 @@ import java.io.File;
 
 public class HelpReportMissing {
 
-	private static void reportMissingHelp(File repo) {
-		File extDir = new File(repo, "src/org/zaproxy/zap/extension");
-		if (! extDir.isDirectory()) {
-			System.out.println(extDir.getAbsolutePath() + " is not a directory");
-			return;
-		}
-		for (File addon : extDir.listFiles()) {
-			if (addon.isDirectory()) {
-				File helpdir = new File (addon, "resources/help");
-				if (! helpdir.isDirectory()) {
-					System.out.println(addon.getName());
-				}
-			}
-		}
-		
-	}
-	
-	public static void main(String[] args) {
-		System.out.println("Release add-ons");
-		System.out.println("===============");
-		reportMissingHelp(new File("../zap-extensions"));
+    private static void reportMissingHelp(File repo) {
+        File extDir = new File(repo, "src/org/zaproxy/zap/extension");
+        if (!extDir.isDirectory()) {
+            System.out.println(extDir.getAbsolutePath() + " is not a directory");
+            return;
+        }
+        for (File addon : extDir.listFiles()) {
+            if (addon.isDirectory()) {
+                File helpdir = new File(addon, "resources/help");
+                if (!helpdir.isDirectory()) {
+                    System.out.println(addon.getName());
+                }
+            }
+        }
+    }
 
-		System.out.println();
-		System.out.println("Beta add-ons");
-		System.out.println("============");
-		reportMissingHelp(new File("../zap-extensions_beta"));
+    public static void main(String[] args) {
+        System.out.println("Release add-ons");
+        System.out.println("===============");
+        reportMissingHelp(new File("../zap-extensions"));
 
-		System.out.println();
-		System.out.println("Alpha add-ons");
-		System.out.println("============");
-		reportMissingHelp(new File("../zap-extensions_alpha"));
-	}
+        System.out.println();
+        System.out.println("Beta add-ons");
+        System.out.println("============");
+        reportMissingHelp(new File("../zap-extensions_beta"));
 
+        System.out.println();
+        System.out.println("Alpha add-ons");
+        System.out.println("============");
+        reportMissingHelp(new File("../zap-extensions_alpha"));
+    }
 }

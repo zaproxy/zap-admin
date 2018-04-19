@@ -1,3 +1,8 @@
+plugins {
+    id 'java'
+    id 'com.diffplug.gradle.spotless' version '3.10.0'
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '4.6'
 }
@@ -6,8 +11,6 @@ repositories {
     mavenLocal()
     mavenCentral()
 }
-
-apply plugin: 'java'
 
 buildDir = 'buildGradle'
 
@@ -18,6 +21,14 @@ dependencies {
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
+
+spotless {
+    java {
+        licenseHeaderFile "$rootDir/docs/headers/license.java"
+
+        googleJavaFormat().style('AOSP')
+    }
+}
 
 task generateReleaseNotes(type: JavaExec, dependsOn: 'classes') {
     group 'ZAP'

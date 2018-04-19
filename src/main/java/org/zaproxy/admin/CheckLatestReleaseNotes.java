@@ -30,13 +30,13 @@ import java.util.TreeMap;
 
 /**
  * Command line tool for checking the latest release notes dont contain issues in previous ones.
- * 
- * @author simon
  *
+ * @author simon
  */
 public class CheckLatestReleaseNotes {
 
-    private static final String RELEASE_NOTES_PATH = "../zap-core-help/src/help/zaphelp/contents/releases";
+    private static final String RELEASE_NOTES_PATH =
+            "../zap-core-help/src/help/zaphelp/contents/releases";
 
     private static Set<Integer> getIssues(File f) throws IOException {
         Set<Integer> set = new HashSet<Integer>();
@@ -62,13 +62,15 @@ public class CheckLatestReleaseNotes {
             System.out.println("No such directory : " + relNotesDir.getAbsolutePath());
             return;
         }
-        File[] relNotes = relNotesDir.listFiles(new FilenameFilter() {
+        File[] relNotes =
+                relNotesDir.listFiles(
+                        new FilenameFilter() {
 
-            @Override
-            public boolean accept(File dir, String name) {
-                return name.endsWith(".html") && !name.startsWith("releases");
-            }
-        });
+                            @Override
+                            public boolean accept(File dir, String name) {
+                                return name.endsWith(".html") && !name.startsWith("releases");
+                            }
+                        });
 
         for (File relNote : relNotes) {
             map.put(relNote.getName(), getIssues(relNote));
