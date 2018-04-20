@@ -19,39 +19,38 @@
  */
 package org.zaproxy.admin;
 
-import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Set;
+import org.zaproxy.zap.control.AddOn;
 
-public class HelpReportMissing {
+public class HelpReportMissing extends AddOnsTask {
 
-    private static void reportMissingHelp(File repo) {
-        File extDir = new File(repo, "src/org/zaproxy/zap/extension");
-        if (!extDir.isDirectory()) {
-            System.out.println(extDir.getAbsolutePath() + " is not a directory");
-            return;
-        }
-        for (File addon : extDir.listFiles()) {
-            if (addon.isDirectory()) {
-                File helpdir = new File(addon, "resources/help");
-                if (!helpdir.isDirectory()) {
-                    System.out.println(addon.getName());
+    private static void reportMissingHelp(Set<AddOnData> addOns, AddOn.Status status) {
+        for (AddOnData addOnData : addOns) {
+            if (status.equals(addOnData.getStatus())) {
+                Path helpdir = addOnData.getDir().resolve("resources/help");
+                if (!Files.isDirectory(helpdir)) {
+                    System.out.println(addOnData.getId());
                 }
             }
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        Set<AddOnData> addOns = getAllAddOns();
         System.out.println("Release add-ons");
         System.out.println("===============");
-        reportMissingHelp(new File("../zap-extensions"));
+        reportMissingHelp(addOns, AddOn.Status.release);
 
         System.out.println();
         System.out.println("Beta add-ons");
         System.out.println("============");
-        reportMissingHelp(new File("../zap-extensions_beta"));
+        reportMissingHelp(addOns, AddOn.Status.beta);
 
         System.out.println();
         System.out.println("Alpha add-ons");
         System.out.println("============");
-        reportMissingHelp(new File("../zap-extensions_alpha"));
+        reportMissingHelp(addOns, AddOn.Status.alpha);
     }
 }
