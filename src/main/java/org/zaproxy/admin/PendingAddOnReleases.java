@@ -19,44 +19,22 @@
  */
 package org.zaproxy.admin;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneOffset;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.varia.NullAppender;
 import org.zaproxy.zap.control.AddOn;
 import org.zaproxy.zap.control.AddOn.Status;
 import org.zaproxy.zap.control.AddOnCollection;
-import org.zaproxy.zap.control.ZapAddOnXmlFile;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
-public class PendingAddOnReleases {
+public class PendingAddOnReleases extends AddOnsTask {
 
     private static final String ZAP_VERSIONS_FILE_NAME = "ZapVersions-2.7.xml";
-    private static final String ZAP_ADD_ON_FILE_NAME = "ZapAddOn.xml";
-
-    static {
-        NullAppender na = new NullAppender();
-        Logger.getRootLogger().addAppender(na);
-        Logger.getRootLogger().setLevel(Level.OFF);
-    }
 
     public static void main(String[] args) throws Exception {
         LocalDate now = LocalDate.now(ZoneOffset.UTC);
@@ -69,10 +47,7 @@ public class PendingAddOnReleases {
 
         zapVersions.setExpressionEngine(new XPathExpressionEngine());
 
-        Set<AddOnData> addOns = new TreeSet<>();
-        addAddOns(addOns, Paths.get("../zap-extensions/src"));
-        addAddOns(addOns, Paths.get("../zap-extensions_beta/src"));
-        addAddOns(addOns, Paths.get("../zap-extensions_alpha/src"));
+        Set<AddOnData> addOns = getAllAddOns();
         int totalAddOns = addOns.size();
 
         Set<AddOnData> unreleasedAddOns = new TreeSet<>();
@@ -80,13 +55,13 @@ public class PendingAddOnReleases {
 
         for (Iterator<AddOnData> it = addOns.iterator(); it.hasNext(); ) {
             AddOnData addOnData = it.next();
-            AddOn addOn = addOnCollection.getAddOn(addOnData.id);
+            AddOn addOn = addOnCollection.getAddOn(addOnData.getId());
             if (addOn == null) {
                 unreleasedAddOns.add(addOnData);
                 it.remove();
-            } else if (addOn.getFileVersion() >= addOnData.version) {
+            } else if (addOn.getFileVersion() >= addOnData.getVersion()) {
                 it.remove();
-            } else if (addOnData.changes.isEmpty()) {
+            } else if (addOnData.getChanges().isEmpty()) {
                 unchangedAddOns.add(addOnData);
                 it.remove();
             }
@@ -98,7 +73,8 @@ public class PendingAddOnReleases {
                     "Unreleased add-ons (" + unreleasedAddOns.size() + " of " + totalAddOns + ")");
             System.out.println("=============================");
             for (AddOnData addOn : unreleasedAddOns) {
-                System.out.println(addOn.status + "\t" + addOn.name + " v" + addOn.version);
+                System.out.println(
+                        addOn.getStatus() + "\t" + addOn.getName() + " v" + addOn.getVersion());
             }
             System.out.println("=============================\n");
         }
@@ -110,23 +86,23 @@ public class PendingAddOnReleases {
             System.out.println("=======================================");
             Status currentStatus = null;
             for (AddOnData addOn : addOns) {
-                if (currentStatus != addOn.status) {
-                    currentStatus = addOn.status;
+                if (currentStatus != addOn.getStatus()) {
+                    currentStatus = addOn.getStatus();
                     System.out.println(currentStatus);
                 }
                 LocalDate releaseDate =
-                        LocalDate.parse(zapVersions.getString("/addon_" + addOn.id + "/date"));
+                        LocalDate.parse(zapVersions.getString("/addon_" + addOn.getId() + "/date"));
                 System.out.println(
                         "  * "
-                                + addOn.name
+                                + addOn.getName()
                                 + " v"
-                                + addOn.version
+                                + addOn.getVersion()
                                 + " ("
                                 + Period.between(releaseDate, now)
                                 + ")");
 
                 if (showChanges) {
-                    for (String change : addOn.changes) {
+                    for (String change : addOn.getChanges()) {
                         System.out.println("       - " + change);
                     }
                 }
@@ -140,95 +116,10 @@ public class PendingAddOnReleases {
                     "Unchanged add-ons (" + unchangedAddOns.size() + " of " + totalAddOns + ")");
             System.out.println("=============================");
             for (AddOnData addOn : unchangedAddOns) {
-                System.out.println(addOn.status + "\t" + addOn.name + " v" + addOn.version);
+                System.out.println(
+                        addOn.getStatus() + "\t" + addOn.getName() + " v" + addOn.getVersion());
             }
             System.out.println("=============================\n");
-        }
-    }
-
-    private static void addAddOns(final Set<AddOnData> addOns, Path path) throws IOException {
-        Files.walkFileTree(
-                path,
-                new SimpleFileVisitor<Path>() {
-
-                    @Override
-                    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
-                            throws IOException {
-                        if (isValidZapAddOnXmlFile(file)) {
-                            try (InputStream is =
-                                    new BufferedInputStream(Files.newInputStream(file))) {
-                                String addOnId = file.getParent().getFileName().toString();
-                                ZapAddOnXmlFile zapAddOnXmlFile = new ZapAddOnXmlFile(is);
-                                addOns.add(
-                                        new AddOnData(
-                                                addOnId,
-                                                zapAddOnXmlFile.getName(),
-                                                zapAddOnXmlFile.getPackageVersion(),
-                                                AddOn.Status.valueOf(zapAddOnXmlFile.getStatus()),
-                                                zapAddOnXmlFile.getChanges()));
-                            }
-                        }
-                        return FileVisitResult.CONTINUE;
-                    }
-                });
-    }
-
-    private static boolean isValidZapAddOnXmlFile(Path file) {
-        if (ZAP_ADD_ON_FILE_NAME.equals(file.getFileName().toString())) {
-            // Ignore example ZapAddOn.xml file
-            return !file.toString().contains("src/org/zaproxy/zap/extension/ZapAddOn.xml");
-        }
-        return false;
-    }
-
-    private static class AddOnData implements Comparable<AddOnData> {
-
-        private final String id;
-        private final String name;
-        private final int version;
-        private final AddOn.Status status;
-        private final List<String> changes;
-
-        public AddOnData(String id, String name, int version, Status status, String changes) {
-            super();
-            this.id = id;
-            this.name = name;
-            this.version = version;
-            this.status = status;
-            this.changes = prepareChanges(changes);
-        }
-
-        @Override
-        public int compareTo(AddOnData other) {
-            if (other == null) {
-                return 1;
-            }
-
-            int result = status.compareTo(other.status);
-            if (result != 0) {
-                return -result;
-            }
-
-            return name.compareTo(other.name);
-        }
-
-        private static List<String> prepareChanges(String changes) {
-            List<String> preparedChanges = new ArrayList<>(Arrays.asList(changes.split("<br>")));
-            for (int i = 0; i < preparedChanges.size(); i++) {
-                String string = preparedChanges.get(i).trim();
-                if (string.isEmpty()) {
-                    preparedChanges.remove(i);
-                    i--;
-                } else {
-                    preparedChanges.set(
-                            i,
-                            string.replaceAll("^\\t*", "")
-                                    .replaceAll("^ *", "")
-                                    .replaceAll("^(\\r?\\n)*", "")
-                                    .replaceAll("(\\r?\\n)*$", ""));
-                }
-            }
-            return preparedChanges;
         }
     }
 }
