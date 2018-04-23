@@ -59,7 +59,7 @@ public class PendingAddOnReleases extends AddOnsTask {
             if (addOn == null) {
                 unreleasedAddOns.add(addOnData);
                 it.remove();
-            } else if (addOn.getFileVersion() >= addOnData.getVersion()) {
+            } else if (addOn.getVersion().compareTo(addOnData.getVersion()) >= 0) {
                 it.remove();
             } else if (addOnData.getChanges().isEmpty()) {
                 unchangedAddOns.add(addOnData);

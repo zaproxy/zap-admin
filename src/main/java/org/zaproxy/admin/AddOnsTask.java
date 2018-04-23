@@ -38,6 +38,7 @@ import java.util.TreeSet;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.varia.NullAppender;
+import org.zaproxy.zap.Version;
 import org.zaproxy.zap.control.AddOn;
 import org.zaproxy.zap.control.AddOn.Status;
 import org.zaproxy.zap.control.ZapAddOnXmlFile;
@@ -80,7 +81,7 @@ public abstract class AddOnsTask {
                                                 addOnDir,
                                                 addOnId,
                                                 zapAddOnXmlFile.getName(),
-                                                zapAddOnXmlFile.getPackageVersion(),
+                                                zapAddOnXmlFile.getVersion(),
                                                 AddOn.Status.valueOf(zapAddOnXmlFile.getStatus()),
                                                 zapAddOnXmlFile.getChanges()));
                             }
@@ -103,12 +104,12 @@ public abstract class AddOnsTask {
         private final Path dir;
         private final String id;
         private final String name;
-        private final int version;
+        private final Version version;
         private final AddOn.Status status;
         private final List<String> changes;
 
         public AddOnData(
-                Path dir, String id, String name, int version, Status status, String changes) {
+                Path dir, String id, String name, Version version, Status status, String changes) {
             super();
             this.dir = dir;
             this.id = id;
@@ -130,7 +131,7 @@ public abstract class AddOnsTask {
             return name;
         }
 
-        public int getVersion() {
+        public Version getVersion() {
             return version;
         }
 

@@ -16,7 +16,7 @@ buildDir = 'buildGradle'
 
 dependencies {
     compile ('net.sf.json-lib:json-lib:2.4:jdk15',
-             'org.zaproxy:zap:2.6.0')
+             'org.zaproxy:zap:2.7.0')
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-library:1.3'
