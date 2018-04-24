@@ -17,10 +17,25 @@ buildDir = 'buildGradle'
 dependencies {
     compile ('net.sf.json-lib:json-lib:2.4:jdk15',
              'org.zaproxy:zap:2.6.0')
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-library:1.3'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
+
+sourceSets {
+    test {
+        resources {
+            srcDir 'src/test/resources'
+        }
+        resources {
+            srcDir "$rootDir"
+            include 'ZapVersions*.xml'
+        }
+    }
+}
 
 spotless {
     java {
