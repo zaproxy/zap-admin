@@ -1056,15 +1056,15 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>6</version>
-        <file>communityScripts-alpha-6.zap</file>
+        <version>7</version>
+        <file>communityScripts-alpha-7.zap</file>
         <status>alpha</status>
         <changes>Update from community-scripts repo.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/communityScripts-alpha-6.zap</url>
-        <hash>SHA1:74640310a4cc2d56655cfd2008d8ce3e91fa5d48</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/communityScripts-alpha-7.zap</url>
+        <hash>SHA1:a163d065aad5f6b1c4e52ae711c721dcc75aa774</hash>
         <info>https://github.com/zaproxy/community-scripts</info>
-        <date>2018-02-06</date>
-        <size>368131</size>
+        <date>2018-05-07</date>
+        <size>382959</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_communityScripts>
 
