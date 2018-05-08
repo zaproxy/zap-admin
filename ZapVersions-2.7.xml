@@ -1,12 +1,12 @@
 <ZAP>
 	<core>
 		<version>2.7.0</version>
-		<daily-version>D-2018-04-23</daily-version>
+		<daily-version>D-2018-05-08</daily-version>
 		<daily>
-			<url>https://github.com/zaproxy/zaproxy/releases/download/w2018-04-23/ZAP_WEEKLY_D-2018-04-23.zip</url>
-			<file>ZAP_WEEKLY_D-2018-04-23.zip</file>
-			<hash>SHA1:033e1db63eda60f6d3b5bbfc3c98150a1af904b7</hash>
-			<size>257918483</size>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/w2018-05-08/ZAP_WEEKLY_D-2018-05-08.zip</url>
+			<file>ZAP_WEEKLY_D-2018-05-08.zip</file>
+			<hash>SHA1:52c5781b469c9c9edd9a4a11fa07b18930f50181</hash>
+			<size>258109017</size>
 		</daily>
 		<windows>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows.exe</url>
@@ -14,18 +14,36 @@
 			<hash>SHA1:ed0b6021be4ba4099297d7cd7b316921a365e8e9</hash>
 			<size>116391936</size>
 		</windows>
+		<windows-32>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows-x32.exe</url>
+			<file>ZAP_2_7_0_windows-x32.exe</file>
+			<hash>SHA1:d0a60a746d4f13d4d04a6b06e231c691dfba4cbc</hash>
+			<size>78655488</size>
+		</windows-32>
 		<linux>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2.7.0_Linux.tar.gz</url>
 			<file>ZAP_2.7.0_Linux.tar.gz</file>
 			<hash>SHA1:35f15d04213f34cdd531125cc4d19c733e7cec5a</hash>
 			<size>130903023</size>
 		</linux>
+		<linux-install>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_unix.sh</url>
+			<file>ZAP_2_7_0_unix.sh</file>
+			<hash>SHA1:02681384ceb8a3c2af54833f59aafa7051ac977a</hash>
+			<size>132769763</size>
+		</linux-install>
 		<mac>
 			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2.7.0.dmg</url>
 			<file>ZAP_2.7.0.dmg</file>
 			<hash>SHA1:ff027ae952e7a17a9dd1fcec93c5ff3799d56971</hash>
 			<size>188102126</size>
 		</mac>
+		<cross-platform>
+			<url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2.7.0_Crossplatform.zip</url>
+			<file>ZAP_2.7.0_Crossplatform.zip</file>
+			<hash>SHA1:604d4e1f16a26553041c14913c4f69c58477353e</hash>
+			<size>241187832</size>
+		</cross-platform>
 		<relnotes>
 			Bug fix and enhancement release.
 		</relnotes>
