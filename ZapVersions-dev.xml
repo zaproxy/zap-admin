@@ -634,17 +634,20 @@
 
     <addon>jython</addon>
     <addon_jython>
-        <name>Python scripting</name>
+        <name>Python Scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>jython-beta-9.zap</file>
+        <version>10</version>
+        <file>jython-beta-10.zap</file>
         <status>beta</status>
-        <changes>Update Passive Rule template to include new function.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jython-beta-9.zap</url>
-        <hash>SHA1:a08b6b37161a499f7e4e7f196ad9c72c534fa389</hash>
-        <date>2018-01-19</date>
-        <size>41733258</size>
+        <changes>Correctly set path module defined in the options and address UI hang (Issue 4651).&lt;br&gt;
+    Minor tweak in extender template.&lt;br&gt;
+    Add default template for Script Input Vector.&lt;br&gt;
+    Add help page for the options.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jython-beta-10.zap</url>
+        <hash>SHA1:fedf4e6c30dfb52543d851bb668ab1c8101dd58f</hash>
+        <date>2018-05-08</date>
+        <size>41738465</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_jython>
 
