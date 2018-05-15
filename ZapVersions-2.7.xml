@@ -1363,14 +1363,15 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>10</version>
-        <file>openapi-alpha-10.zap</file>
+        <version>11</version>
+        <file>openapi-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>Fallback to host of request URI (Issue 4271).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-10.zap</url>
-        <hash>SHA1:973afc03f4fc4ad67db8651a30f978a6386470a4</hash>
-        <date>2018-01-17</date>
-        <size>3309970</size>
+        <changes>Include exception message in warning dialog when a parse error occurs (Issue 4667).&lt;br&gt;
+        Open previously chosen directory when importing local file.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-11.zap</url>
+        <hash>SHA1:1c9073401add4a7816c35dda797721b8ad9e32ae</hash>
+        <date>2018-05-15</date>
+        <size>3324026</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_openapi>
 
