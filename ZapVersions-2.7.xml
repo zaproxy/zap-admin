@@ -791,23 +791,21 @@
         <name>Token generation and analysis</name>
         <description>Allows you to generate and analyze pseudo random tokens, such as those used for session handling or CSRF protection</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>tokengen-beta-11.zap</file>
+        <version>12</version>
+        <file>tokengen-beta-12.zap</file>
         <status>beta</status>
-        <changes>Use custom HTTP Sender initiator ID.&lt;br&gt;
-	Show same cookies once in Generate Tokens dialogue (Issue 2116).&lt;br&gt;
-	Fix exception when no tokens are found (Issue 2116).&lt;br&gt;
-	Added help file.&lt;br&gt;
-	Issue 2338: Allow dynamic timeout adjustment to combat read timeout issues.&lt;br&gt;
-	Ensure initial dialog is properly sized.&lt;br&gt;
-	Issue 2000: Title caps adjustments.&lt;br&gt;
-	Code changes for Java 9 (Issue 2602).&lt;br&gt;
-	Ensure Analyse Token dialogue is shown in front of main window.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/tokengen-beta-11.zap</url>
-        <hash>SHA1:d4a20442bf18c97fbb300c2874823a6d3b8a9055</hash>
-        <date>2017-11-27</date>
-        <size>478984</size>
-        <not-before-version>2.5.0</not-before-version>
+        <changes>Stop the test and clear the panel on session changes.&lt;br&gt;
+    Respect the current mode and react to changes.&lt;br&gt;
+    Inform of running test (e.g. on session change, add-on uninstall).&lt;br&gt;
+    Allow to configure the number of threads.&lt;br&gt;
+    Allow to delay the requests.&lt;br&gt;
+    Update minimum ZAP version to 2.6.0.&lt;br&gt;
+    Deletes the cookie in question before sending the request.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/tokengen-beta-12.zap</url>
+        <hash>SHA1:71bb8a5bc15fe725b5ba38939559696589782583</hash>
+        <date>2018-05-17</date>
+        <size>323564</size>
+        <not-before-version>2.6.0</not-before-version>
     </addon_tokengen>
 
     <addon>treetools</addon>
