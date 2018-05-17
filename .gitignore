@@ -18,8 +18,8 @@
 
 # Eclipse
 # -------
-#*.classpath
-#*.project
+*.classpath
+*.project
 *.settings
 /bin
 
