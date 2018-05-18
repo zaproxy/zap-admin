@@ -1361,15 +1361,14 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
         <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>11</version>
-        <file>openapi-alpha-11.zap</file>
+        <version>12</version>
+        <file>openapi-alpha-12.zap</file>
         <status>alpha</status>
-        <changes>Include exception message in warning dialog when a parse error occurs (Issue 4667).&lt;br&gt;
-        Open previously chosen directory when importing local file.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-11.zap</url>
-        <hash>SHA1:1c9073401add4a7816c35dda797721b8ad9e32ae</hash>
-        <date>2018-05-15</date>
-        <size>3324026</size>
+        <changes>Ignore BOM when parsing and don't rely on default character encoding (Issue 4676).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-12.zap</url>
+        <hash>SHA1:19cc79b5d18274fd6cb7d2ab5877f8f607b8f4fc</hash>
+        <date>2018-05-18</date>
+        <size>3324050</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_openapi>
 
