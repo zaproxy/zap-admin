@@ -59,13 +59,20 @@ public class ValidateZapVersionsXmlTest {
             AddOnCollection aoc =
                     new AddOnCollection(new ZapXmlConfiguration(ZAP_VERSIONS_CURR), platform);
             // Then
-            assertReleaseAndAddOnsPresent(aoc, platform);
+            assertReleaseAndAddOnsPresent(ZAP_VERSIONS_CURR, aoc, platform);
         }
     }
 
-    private static void assertReleaseAndAddOnsPresent(AddOnCollection aoc, Platform platform) {
-        assertThat("Release not found for: " + platform, aoc.getZapRelease(), is(notNullValue()));
-        assertThat("No add-ons for: " + platform, aoc.getAddOns(), is(not(empty())));
+    private static void assertReleaseAndAddOnsPresent(
+            File zapVersionsFile, AddOnCollection aoc, Platform platform) {
+        assertThat(
+                "Release not found for: " + zapVersionsFile.getName() + " [" + platform + "]",
+                aoc.getZapRelease(),
+                is(notNullValue()));
+        assertThat(
+                "No add-ons for: " + zapVersionsFile.getName() + " [" + platform + "]",
+                aoc.getAddOns(),
+                is(not(empty())));
     }
 
     @Test
@@ -76,7 +83,7 @@ public class ValidateZapVersionsXmlTest {
             AddOnCollection aoc =
                     new AddOnCollection(new ZapXmlConfiguration(ZAP_VERSIONS_DEV), platform);
             // Then
-            assertReleaseAndAddOnsPresent(aoc, platform);
+            assertReleaseAndAddOnsPresent(ZAP_VERSIONS_DEV, aoc, platform);
         }
     }
 
