@@ -385,18 +385,21 @@
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>websocket-release-15.zap</file>
+        <version>16</version>
+        <file>websocket-release-16.zap</file>
         <status>release</status>
-        <changes>Remove usage of core filter functionality.&lt;br&gt;
-    Do not set messages when switching views if text view shows an error message (Issue 4108)&lt;br&gt;
-    Add rewind to fix issue #4149 &lt;br&gt;
-    Added Websocket Sender script interface &lt;br&gt;
-    Added API support &lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/websocket-release-15.zap</url>
-        <hash>SHA1:d0f2503392db23211cacc65f5b4ed64edde178ae</hash>
-        <date>2018-02-21</date>
-        <size>921106</size>
+        <changes>Tweak About help page.&lt;br&gt;
+    Remove event consumers when the channel is closed.&lt;br&gt;
+    Don't enable the sender scripts by default.&lt;br&gt;
+    Fix send of CLOSE messages with message editor (Issue 4657).&lt;br&gt;
+    Add missing error message.&lt;br&gt;
+    Fix removal of pop up menu items.&lt;br&gt;
+    Allow to filter by payload in WebSocket tab (Issue 1382).&lt;br&gt;
+    Show string representation of binary payloads in WebSocket tab and message panels.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/websocket-release-16.zap</url>
+        <hash>SHA1:6cf3f4d5d7d12813f34e09339d90bf4353d16ed3</hash>
+        <date>2018-06-05</date>
+        <size>928242</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_websocket>
 	
