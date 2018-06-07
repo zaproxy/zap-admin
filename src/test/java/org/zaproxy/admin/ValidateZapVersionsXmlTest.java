@@ -26,6 +26,9 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.log4j.Logger;
@@ -39,10 +42,6 @@ import org.zaproxy.zap.utils.ZapXmlConfiguration;
 /** Validates that ZAP is able to load the {@code ZapVersions.xml} files. */
 public class ValidateZapVersionsXmlTest {
 
-    private static final File ZAP_VERSIONS_CURR = resource("/ZapVersions-2.7.xml");
-    private static final File ZAP_VERSIONS_DEV = resource("/ZapVersions-dev.xml");
-    private static final File ZAP_VERSIONS = resource("/ZapVersions.xml");
-
     private static final List<Platform> PLATFORMS =
             Arrays.asList(Platform.linux, Platform.windows, Platform.mac, Platform.daily);
 
@@ -54,12 +53,13 @@ public class ValidateZapVersionsXmlTest {
     @Test
     public void shouldLoadCurrentVersion() throws Exception {
         // Given
+        File zapVersionsCurr = resource("/ZapVersions-2.7.xml");
         for (Platform platform : PLATFORMS) {
             // When
             AddOnCollection aoc =
-                    new AddOnCollection(new ZapXmlConfiguration(ZAP_VERSIONS_CURR), platform);
+                    new AddOnCollection(new ZapXmlConfiguration(zapVersionsCurr), platform);
             // Then
-            assertReleaseAndAddOnsPresent(ZAP_VERSIONS_CURR, aoc, platform);
+            assertReleaseAndAddOnsPresent(zapVersionsCurr, aoc, platform);
         }
     }
 
@@ -78,28 +78,37 @@ public class ValidateZapVersionsXmlTest {
     @Test
     public void shouldLoadDevVersion() throws Exception {
         // Given
+        File zapVersionsDev = resource("/ZapVersions-dev.xml");
         for (Platform platform : PLATFORMS) {
             // When
             AddOnCollection aoc =
-                    new AddOnCollection(new ZapXmlConfiguration(ZAP_VERSIONS_DEV), platform);
+                    new AddOnCollection(new ZapXmlConfiguration(zapVersionsDev), platform);
             // Then
-            assertReleaseAndAddOnsPresent(ZAP_VERSIONS_DEV, aoc, platform);
+            assertReleaseAndAddOnsPresent(zapVersionsDev, aoc, platform);
         }
     }
 
     @Test
     public void shouldLoadNonAddOnsVariant() throws Exception {
         // Given
+        File zapVersions = resource("/ZapVersions.xml");
         for (Platform platform : PLATFORMS) {
             // When
             AddOnCollection aoc =
-                    new AddOnCollection(new ZapXmlConfiguration(ZAP_VERSIONS), platform);
+                    new AddOnCollection(new ZapXmlConfiguration(zapVersions), platform);
             // Then
             assertThat(aoc.getZapRelease(), is(notNullValue()));
         }
     }
 
     private static File resource(String path) {
-        return new File(ValidateZapVersionsXmlTest.class.getResource(path).getPath());
+        URL resourceURL = ValidateZapVersionsXmlTest.class.getResource(path);
+        assertThat("File " + path + " not found.", resourceURL, is(notNullValue()));
+
+        try {
+            return Paths.get(resourceURL.toURI()).toFile();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
