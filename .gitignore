@@ -2,6 +2,7 @@
 #-------
 .gradle
 /buildGradle
+/buildSrc/build
 
 # IDEA
 # ----
