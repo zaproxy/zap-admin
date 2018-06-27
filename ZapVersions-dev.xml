@@ -1109,15 +1109,16 @@
         <name>CustomReport</name>
         <description>New HTML report module allows users to customize report content.</description>
         <author>Chienli Ma</author>
-        <version>3</version>
-        <file>customreport-alpha-3.zap</file>
+        <version>4</version>
+        <file>customreport-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Minor code changes.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/customreport-alpha-3.zap</url>
-        <hash>SHA1:30605c4d3e2f79caa1ce56a510b687673a3553ce</hash>
-        <date>2017-11-28</date>
-        <size>564923</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>Update minimum ZAP version to 2.5.0.&lt;br&gt;
+        Fix "Content only in scope" handling (Issue 2492).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/customreport-alpha-4.zap</url>
+        <hash>SHA1:afedbd850e1ab5cb181936ace11011da7736fb50</hash>
+        <date>2018-06-27</date>
+        <size>575782</size>
+        <not-before-version>2.5.0</not-before-version>
     </addon_customreport>
 
     <addon>domxss</addon>
