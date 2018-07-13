@@ -77,13 +77,6 @@
                     exportpattern="%file_name%_%locale_with_underscore%.%file_extension%">
 				</ccinclude>
 			</ccfiles>
-			<!-- zaproxy project core add-ons -->
-			<ccfiles basedir="${src}/org/zaproxy/zap/extension/" exportpatternprefix="/zaproxy/add-ons/">
-				<!-- core-addons/ -->
-				<ccinclude source="*/resources/Messages.properties" 
-                    crowdinpath="/core/*/%original_file_name%"
-                    exportpattern="*/resources/%file_name%_%locale_with_underscore%.%file_extension%" />
-			</ccfiles>
 			<!-- zap-extensions project -->
 			<!-- alpha extensions -->
 			<ccfiles basedir="${zap.extensions.alpha.dir}/src/org/zaproxy/zap/extension/" 
