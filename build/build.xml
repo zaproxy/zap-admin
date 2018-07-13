@@ -69,11 +69,11 @@
 			<ccfiles basedir="${lang.dir}" exportpatternprefix="/zaproxy/lang/">
 				<!-- UI strings -->
 				<ccinclude source="Messages.properties" 
-                    crowdinpath="/%original_file_name%"
+                    crowdinpath="/core/%original_file_name%"
                     exportpattern="%file_name%_%locale_with_underscore%.%file_extension%" />
 				<!-- Alerts -->
 				<ccinclude source="vulnerabilities.xml" 
-                    crowdinpath="/%original_file_name%"
+                    crowdinpath="/core/%original_file_name%"
                     exportpattern="%file_name%_%locale_with_underscore%.%file_extension%">
 				</ccinclude>
 			</ccfiles>
@@ -103,11 +103,11 @@
 			<ccfiles basedir="${help.dir}" exportpatternprefix="/zaproxy/">
 				<!-- contents -->
 				<ccinclude source="zaphelp/contents/**/*.html"
-                    crowdinpath="/contents/**/%original_file_name%"
+                    crowdinpath="/core/contents/**/%original_file_name%"
                     exportpattern="zaphelp_%locale_with_underscore%/contents/**/%original_file_name%" />
 				<!-- helpset -->
 				<ccinclude source="zaphelp/helpset.hs" 
-                    crowdinpath="/%file_name%.xml" 
+                    crowdinpath="/core/%file_name%.xml" 
                     exportpattern="zaphelp_%locale_with_underscore%/%file_name%_%locale_with_underscore%.%file_extension%">
 					<cctranslatableelement xpath="/helpset/title" />
 					<cctranslatableelement xpath="/helpset/presentation/title" />
@@ -115,7 +115,7 @@
 				</ccinclude>
 				<!-- toc -->
 				<ccinclude source="zaphelp/toc.xml" 
-                    crowdinpath="/%original_file_name%"
+                    crowdinpath="/core/%original_file_name%"
                     exportpattern="zaphelp_%locale_with_underscore%/%original_file_name%">
 					<!-- Crowdin doesn't seem to support descendant axis -->
 					<!-- <cctranslatableelement xpath="/toc/descendant::tocitem[@text]" /> -->
@@ -127,7 +127,7 @@
 				</ccinclude>
 				<!-- index -->
 				<ccinclude source="zaphelp/index.xml" 
-                    crowdinpath="/%original_file_name%" 
+                    crowdinpath="/core/%original_file_name%" 
                     exportpattern="zaphelp_%locale_with_underscore%/%original_file_name%">
 					<!-- Crowdin doesn't seem to support descendant axis -->
 					<!-- <cctranslatableelement xpath="/index/descendant::indexitem[@text]" /> -->
