@@ -1460,21 +1460,17 @@
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>websocket-release-16.zap</file>
+        <version>17</version>
+        <file>websocket-release-17.zap</file>
         <status>release</status>
-        <changes>Tweak About help page.&lt;br&gt;
-    Remove event consumers when the channel is closed.&lt;br&gt;
-    Don't enable the sender scripts by default.&lt;br&gt;
-    Fix send of CLOSE messages with message editor (Issue 4657).&lt;br&gt;
-    Add missing error message.&lt;br&gt;
-    Fix removal of pop up menu items.&lt;br&gt;
-    Allow to filter by payload in WebSocket tab (Issue 1382).&lt;br&gt;
-    Show string representation of binary payloads in WebSocket tab and message panels.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/websocket-release-16.zap</url>
-        <hash>SHA1:6cf3f4d5d7d12813f34e09339d90bf4353d16ed3</hash>
-        <date>2018-06-05</date>
-        <size>928242</size>
+        <changes>Register WebSocket Sender script type also in daemon mode.&lt;br&gt;
+    Fix an exception when dispatching events.&lt;br&gt;
+    Fix an exception while uninstalling the add-on with no GUI (Issue 4815).&lt;br&gt;
+    Remove event consumers when channel is no longer in expected state.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/websocket-release-17.zap</url>
+        <hash>SHA1:8f882d19b2735bfadb70ca1d9344fdb1b7d47f06</hash>
+        <date>2018-07-13</date>
+        <size>929639</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_websocket>
     <addon>zest</addon>
