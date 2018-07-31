@@ -133,15 +133,20 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>23</version>
-        <file>ascanrulesBeta-beta-23.zap</file>
+        <version>24</version>
+        <file>ascanrulesBeta-beta-24.zap</file>
         <status>beta</status>
-        <changes>At HIGH threshold only perform CSRF checks for inScope messages (Issue 1354).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrulesBeta-beta-23.zap</url>
-        <hash>SHA1:b3749aae5675fb48b01abc64687f52848d00bc0e</hash>
-        <date>2018-01-19</date>
-        <size>2774403</size>
-        <not-before-version>2.6.0</not-before-version>
+        <changes>Maintenance changes.&lt;br&gt;
+    Issue 1142: Logic and alert risk ratings modified.&lt;br&gt;
+    Correct timeout per attack strength in Heartbleed OpenSSL Vulnerability scanner.&lt;br&gt;
+    Issue 174: Added further method checks to the Insecure HTTP Methods Scanner.&lt;br&gt;
+    Skip "Source Code Disclosure - /WEB-INF folder" on Java 9+ (Issue 4038).&lt;br&gt;
+    BackupFileDisclosure - Handle empty "backup" responses.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrulesBeta-beta-24.zap</url>
+        <hash>SHA1:a2d8a46b9d571945c085b6367fa9985921e4e9e8</hash>
+        <date>2018-07-31</date>
+        <size>2841893</size>
+        <not-before-version>2.7.0</not-before-version>
     </addon_ascanrulesBeta>
     <addon>attacksurfacedetector</addon>
     <addon_attacksurfacedetector>
