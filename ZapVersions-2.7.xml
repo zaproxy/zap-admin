@@ -1044,16 +1044,15 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>23</version>
-        <file>quickstart-release-23.zap</file>
+        <version>24</version>
+        <file>quickstart-release-24.zap</file>
         <status>release</status>
-        <changes>Update for 2.7.0.&lt;br&gt;
-    Stop the quick scan if the session is changed.&lt;br&gt;
-    Added toolbar button to launch the latest browser chosen.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/quickstart-release-23.zap</url>
-        <hash>SHA1:34aed4c9a93220978799aff7002236a669c02b25</hash>
-        <date>2018-01-19</date>
-        <size>436181</size>
+        <changes>Enable the extensions for all DB types.&lt;br&gt;
+    Use default user agent when creating seeds for the spider.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/quickstart-release-24.zap</url>
+        <hash>SHA1:8d4ce6f9d7704c76f48eceda04102f3acbd50d0a</hash>
+        <date>2018-08-03</date>
+        <size>463340</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_quickstart>
     <addon>replacer</addon>
