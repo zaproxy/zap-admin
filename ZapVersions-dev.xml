@@ -1239,15 +1239,16 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>21</version>
-        <file>spiderAjax-release-21.zap</file>
+        <version>22</version>
+        <file>spiderAjax-release-22.zap</file>
         <status>release</status>
-        <changes>Reset API scan also when in daemon mode (Issue 4163).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/spiderAjax-release-21.zap</url>
-        <hash>SHA1:92f5a3ecded1d5e0f3b889b07656f5ec8414ada0</hash>
+        <changes>Maintenance changes.&lt;br&gt;
+    Add Export button to results table (Issue 4875).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/spiderAjax-release-22.zap</url>
+        <hash>SHA1:208e3695c4855f3adf850adc03d7aba7a9e15404</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsSpiderAjaxConcepts</info>
-        <date>2018-01-19</date>
-        <size>2597145</size>
+        <date>2018-08-08</date>
+        <size>2758623</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
