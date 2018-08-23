@@ -21,9 +21,10 @@ package org.zaproxy.admin;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeMap;
@@ -40,14 +41,14 @@ public class CheckLatestReleaseNotes {
 
     private static Set<Integer> getIssues(File f) throws IOException {
         Set<Integer> set = new HashSet<Integer>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
+        try (BufferedReader reader = Files.newBufferedReader(f.toPath(), StandardCharsets.UTF_8)) {
             while (true) {
                 String line = reader.readLine();
                 if (line == null) {
                     break;
                 }
                 if (line.startsWith("<li>Issue ")) {
-                    String[] split = line.split(" ");
+                    String[] split = line.split(" ", 0);
                     set.add(Integer.parseInt(split[1]));
                 }
             }
