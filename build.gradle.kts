@@ -1,7 +1,18 @@
+buildscript {
+    repositories {
+        maven { url = uri("https://plugins.gradle.org/m2/") }
+    }
+    dependencies {
+        classpath(if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.gradle:gradle-errorprone-plugin:0.0.16" else "net.ltgt.gradle:gradle-errorprone-javacplugin-plugin:0.3")
+    }
+}
+
 plugins {
     java
     id("com.diffplug.gradle.spotless") version "3.13.0"
 }
+
+apply(plugin = if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.errorprone" else "net.ltgt.errorprone-javacplugin")
 
 tasks {
     "wrapper"(Wrapper::class) {

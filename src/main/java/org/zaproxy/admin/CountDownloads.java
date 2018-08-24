@@ -19,9 +19,6 @@
  */
 package org.zaproxy.admin;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -39,25 +36,6 @@ public class CountDownloads {
     private static final String TAG_URL =
             "https://api.github.com/repos/zaproxy/zaproxy/releases/tags/";
 
-    private static String readUrl(String urlString) throws Exception {
-        BufferedReader reader = null;
-        try {
-            URL url = new URL(urlString);
-            reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            StringBuffer buffer = new StringBuffer();
-            int read;
-            char[] chars = new char[1024];
-            while ((read = reader.read(chars)) != -1) {
-                buffer.append(chars, 0, read);
-            }
-            return buffer.toString();
-        } finally {
-            if (reader != null) {
-                reader.close();
-            }
-        }
-    }
-
     private static void parseRelease(JSONObject tag) throws Exception {
         String tagName = tag.getString("tag_name");
         System.out.println("Tag " + tagName);
@@ -74,34 +52,29 @@ public class CountDownloads {
     }
 
     private static JSONObject getRelease(String tag) throws Exception {
-        return JSONObject.fromObject(readUrl(TAG_URL + tag));
+        return JSONObject.fromObject(Utils.readUrl(TAG_URL + tag));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // Loop through tags, print names
-        try {
-            String jsonStr = readUrl(RELEASES_URL);
+        String jsonStr = Utils.readUrl(RELEASES_URL);
 
-            JSONArray json = JSONArray.fromObject(jsonStr);
+        JSONArray json = JSONArray.fromObject(jsonStr);
 
-            if (json.size() >= 100) {
-                System.out.println(
-                        "WARNING: 100 tags returned - will need to implement paging to get the rest!");
-            }
-
-            for (int i = 0; i < json.size(); i++) {
-                parseRelease(json.getJSONObject(i));
-            }
-
-            // Explicitly request the most recent main releases
-            parseRelease(getRelease("2.7.0"));
-            parseRelease(getRelease("2.6.0"));
-            parseRelease(getRelease("2.5.0"));
-            parseRelease(getRelease("2.4.3"));
-            parseRelease(getRelease("2.4.2"));
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (json.size() >= 100) {
+            System.out.println(
+                    "WARNING: 100 tags returned - will need to implement paging to get the rest!");
         }
+
+        for (int i = 0; i < json.size(); i++) {
+            parseRelease(json.getJSONObject(i));
+        }
+
+        // Explicitly request the most recent main releases
+        parseRelease(getRelease("2.7.0"));
+        parseRelease(getRelease("2.6.0"));
+        parseRelease(getRelease("2.5.0"));
+        parseRelease(getRelease("2.4.3"));
+        parseRelease(getRelease("2.4.2"));
     }
 }
