@@ -34,6 +34,8 @@ repositories {
 buildDir = file("buildGradle")
 
 dependencies {
+    "errorprone"("com.google.errorprone:error_prone_core:2.3.1")
+
     compile("net.sf.json-lib:json-lib:2.4:jdk15")
     compile("org.zaproxy:zap:2.7.0")
 
