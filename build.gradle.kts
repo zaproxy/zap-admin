@@ -41,6 +41,7 @@ dependencies {
 
     testCompile("junit:junit:4.12")
     testCompile("org.hamcrest:hamcrest-library:1.3")
+    testImplementation("org.assertj:assertj-core:3.11.1")
 }
 
 val zapVersionsDir = file("$buildDir/ZapVersionsTests")
