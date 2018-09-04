@@ -1,22 +1,22 @@
 buildscript {
     repositories {
-        maven { url = uri("https://plugins.gradle.org/m2/") }
+        gradlePluginPortal()
     }
     dependencies {
-        classpath(if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.gradle:gradle-errorprone-plugin:0.0.16" else "net.ltgt.gradle:gradle-errorprone-javacplugin-plugin:0.3")
+        classpath(if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.gradle:gradle-errorprone-plugin:0.0.16" else "net.ltgt.gradle:gradle-errorprone-javacplugin-plugin:0.5")
     }
 }
 
 plugins {
     java
-    id("com.diffplug.gradle.spotless") version "3.13.0"
+    id("com.diffplug.gradle.spotless") version "3.14.0"
 }
 
 apply(plugin = if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.errorprone" else "net.ltgt.errorprone-javacplugin")
 
 tasks {
-    "wrapper"(Wrapper::class) {
-        gradleVersion = "4.8"
+    getByName<Wrapper>("wrapper") {
+        gradleVersion = "4.10"
         distributionType = Wrapper.DistributionType.ALL
     }
 }
@@ -53,13 +53,9 @@ val copyZapVersions = tasks.create<Copy>("copyZapVersions") {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
-
-    sourceSets {
-        "test" {
-            output.dir(mapOf("builtBy" to copyZapVersions), zapVersionsDir)
-        }
-    }
 }
+
+sourceSets["test"].output.dir(mapOf("builtBy" to copyZapVersions), zapVersionsDir)
 
 spotless {
     java {
@@ -70,33 +66,33 @@ spotless {
 }
 
 tasks {
-    "generateReleaseNotes"(ZapTask::class) {
+    register<ZapTask>("generateReleaseNotes") {
         description = "Generates release notes."
         main = "org.zaproxy.admin.GenerateReleaseNotes"
     }
 
-    "listDownloadCounts"(ZapTask::class) {
+    register<ZapTask>("listDownloadCounts") {
         description = "Lists download counts."
         main = "org.zaproxy.admin.CountDownloads"
     }
 
-    "pendingAddOnReleases"(ZapTask::class) {
+    register<ZapTask>("pendingAddOnReleases") {
         description = "Reports the add-ons that are pending a release of new version."
         main = "org.zaproxy.admin.PendingAddOnReleases"
     }
 
-    "generateHelpAddOn"(ZapTask::class) {
+    register<ZapTask>("generateHelpAddOn") {
         description = "Generates the basic help files for an add-on."
         main = "org.zaproxy.admin.HelpGenerator"
         standardInput = System.`in`
     }
 
-    "reportAddOnsMissingHelp"(ZapTask::class) {
+    register<ZapTask>("reportAddOnsMissingHelp") {
         description = "Reports the add-ons that do not have help pages."
         main = "org.zaproxy.admin.HelpReportMissing"
     }
 
-    "checkLatestReleaseNotes"(ZapTask::class) {
+    register<ZapTask>("checkLatestReleaseNotes") {
         description = "Checks the latest release notes do not contain issues from previous ones."
         main = "org.zaproxy.admin.CheckLatestReleaseNotes"
     }
