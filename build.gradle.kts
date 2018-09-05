@@ -1,3 +1,5 @@
+import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
+
 buildscript {
     repositories {
         gradlePluginPortal()
@@ -95,5 +97,11 @@ tasks {
     register<ZapTask>("checkLatestReleaseNotes") {
         description = "Checks the latest release notes do not contain issues from previous ones."
         main = "org.zaproxy.admin.CheckLatestReleaseNotes"
+    }
+
+    register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
+        into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
+        baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
+        checksumAlgorithm.set("SHA1")
     }
 }
