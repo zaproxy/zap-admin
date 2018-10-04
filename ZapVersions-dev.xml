@@ -97,16 +97,17 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>ascanrules-release-31.zap</file>
+        <version>32</version>
+        <file>ascanrules-release-32.zap</file>
         <status>release</status>
-        <changes>Issue 1852: Fix reflected XSS false negative with poor quality HTML filtering.&lt;br/&gt;
-    Issue 1640: Fix reflected XSS false negative with double decoded output.&lt;br/&gt;
-    Issue 2290: Fix SQLi false negative with ODBC error message.&lt;br/&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrules-release-31.zap</url>
-        <hash>SHA1:f89690aaf60e13c384c86b1899e56bc2ac4820e8</hash>
-        <date>2018-03-05</date>
-        <size>635944</size>
+        <changes>Maintenance changes.&lt;br&gt;
+    Persistent XSS scanner updated to address various false negatives (Issue 4692).&lt;br&gt;
+    Command Injection plugin updated to include payloads for Uninitialized environment variable WAF bypass (Issue 4968).&lt;br&gt;
+    Correct Remote OS Command Injection to use the expected time in all time based payloads.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/ascanrules-release-32.zap</url>
+        <hash>SHA1:abe97e5159ea2b8e699b2e35d64b7bbec6b33ae5</hash>
+        <date>2018-10-04</date>
+        <size>638569</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_ascanrules>
     <addon>ascanrulesAlpha</addon>
