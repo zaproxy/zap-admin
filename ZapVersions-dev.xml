@@ -153,14 +153,14 @@
         <name>Attack Surface Detector</name>
         <description>The Attack Surface Detector analyzes web application source code to generate endpoints that can be used for penetration testing.</description>
         <author>Secure Decisions (Matthew DeLetto)</author>
-        <version>1.1.1</version>
-        <file>attacksurfacedetector-alpha-1.1.1.zap</file>
+        <version>1.1.2</version>
+        <file>attacksurfacedetector-alpha-1.1.2.zap</file>
         <status>alpha</status>
         <changes>First Version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/attacksurfacedetector-alpha-1.1.1.zap</url>
-        <hash>SHA1:15348902ae1d3eb5eadfaeeab6c4218e22f923e3</hash>
-        <date>2018-06-28</date>
-        <size>14387774</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/attacksurfacedetector-alpha-1.1.2.zap</url>
+        <hash>SHA1:ed4b79d9dcbb6f06c1b069a803934ec70912f097</hash>
+        <date>2018-10-23</date>
+        <size>14518779</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_attacksurfacedetector>
     <addon>authstats</addon>
