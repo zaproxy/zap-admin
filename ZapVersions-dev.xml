@@ -462,14 +462,14 @@
         <name>Form Handler</name>
         <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>formhandler-alpha-1.zap</file>
+        <version>2</version>
+        <file>formhandler-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First version</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/formhandler-alpha-1.zap</url>
-        <hash>SHA1:b063633bfd2a1af48624af5b6ab2980f462e0a3a</hash>
-        <date>2017-11-28</date>
-        <size>2121043</size>
+        <changes>Add context menu to params panel.</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/formhandler-alpha-2.zap</url>
+        <hash>SHA1:d7057d5b93bdd8f356a9814f30269b336c38c612</hash>
+        <date>2018-10-26</date>
+        <size>2200662</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
@@ -1066,16 +1066,15 @@
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>replacer-beta-6.zap</file>
+        <version>7</version>
+        <file>replacer-beta-7.zap</file>
         <status>beta</status>
-        <changes>Tweak help page.&lt;br&gt;
-    Ignore CFU HTTP messages.&lt;br&gt;
-    Allow to (explicitly) select Token Generator messages.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/replacer-beta-6.zap</url>
-        <hash>SHA1:94d43eee92dbbcf7854f64dd60c713c1a580e5ba</hash>
-        <date>2018-06-12</date>
-        <size>330710</size>
+        <changes>Maintenance changes.&lt;br&gt;
+    API, Replacement String should not be mandatory (Issue 5080).</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/replacer-beta-7.zap</url>
+        <hash>SHA1:dee532142002197f392e8a40205bdcc3572c5c20</hash>
+        <date>2018-10-26</date>
+        <size>330734</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_replacer>
     <addon>requester</addon>
