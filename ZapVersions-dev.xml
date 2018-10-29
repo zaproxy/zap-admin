@@ -1429,14 +1429,16 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>webdriverlinux-beta-6.zap</file>
+        <version>7</version>
+        <file>webdriverlinux-beta-7.zap</file>
         <status>beta</status>
-        <changes>Update ChromeDriver to 2.40&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdriverlinux-beta-6.zap</url>
-        <hash>SHA1:ff062a3bc9869880d41f3e20587a388a403a8af9</hash>
-        <date>2018-06-11</date>
-        <size>9249857</size>
+        <changes>Add help.&lt;br&gt;
+    Update geckodriver to v0.23.0.&lt;br&gt;
+    Update ChromeDriver to v2.43.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdriverlinux-beta-7.zap</url>
+        <hash>SHA1:ef49ec04dc9b9e5019e0a7524e219e00c103fb21</hash>
+        <date>2018-10-29</date>
+        <size>11887203</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -1444,14 +1446,16 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>webdrivermacos-beta-6.zap</file>
+        <version>7</version>
+        <file>webdrivermacos-beta-7.zap</file>
         <status>beta</status>
-        <changes>Update ChromeDriver to 2.40&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdrivermacos-beta-6.zap</url>
-        <hash>SHA1:ce59ca4b71b776c3a9d8825a65fe613edf45f897</hash>
-        <date>2018-06-11</date>
-        <size>7228885</size>
+        <changes>Add help.&lt;br&gt;
+    Update geckodriver to v0.23.0.&lt;br&gt;
+    Update ChromeDriver to v2.43.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdrivermacos-beta-7.zap</url>
+        <hash>SHA1:56a816418632ec3b656a314db61ce48b2fe4e5b6</hash>
+        <date>2018-10-29</date>
+        <size>8430586</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -1459,14 +1463,16 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>webdriverwindows-beta-6.zap</file>
+        <version>7</version>
+        <file>webdriverwindows-beta-7.zap</file>
         <status>beta</status>
-        <changes>Update ChromeDriver to 2.40&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdriverwindows-beta-6.zap</url>
-        <hash>SHA1:7fa7c1dbb6812031c52c85e8de4767671921e2e0</hash>
-        <date>2018-06-11</date>
-        <size>10943223</size>
+        <changes>Add help.&lt;br&gt;
+    Update geckodriver to v0.23.0.&lt;br&gt;
+    Update ChromeDriver to v2.43.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdriverwindows-beta-7.zap</url>
+        <hash>SHA1:4dd9a935ad07bc4b6a458d1fde72e9da87290933</hash>
+        <date>2018-10-29</date>
+        <size>15421978</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
