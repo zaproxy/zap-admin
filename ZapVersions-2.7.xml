@@ -35,14 +35,18 @@
         <name>Access Control Testing</name>
         <description>Adds a set of tools for testing access control in web applications.</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>accessControl-alpha-4.zap</file>
+        <version>5</version>
+        <file>accessControl-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/accessControl-alpha-4.zap</url>
-        <hash>SHA1:c5e590e41dfeec29026956a1e08c0f8b024c0dc4</hash>
-        <date>2017-11-28</date>
-        <size>513559</size>
+        <changes>Respect the current mode and react to changes.&lt;br&gt;
+	Dynamically unload the add-on.&lt;br&gt;
+	Inform of running tests (e.g. on session change, add-on uninstall).&lt;br&gt;
+	Improve error handling during test.&lt;br&gt;
+	Tweak alerts to use Other Info field instead of Attack/Evidence.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/accessControl-alpha-5.zap</url>
+        <hash>SHA1:8160d7a28f9952a3760299d0bc30c32982b75274</hash>
+        <date>2018-11-02</date>
+        <size>539232</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_accessControl>
     <addon>alertFilters</addon>
