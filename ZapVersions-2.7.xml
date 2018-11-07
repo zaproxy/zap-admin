@@ -1499,16 +1499,26 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>27</version>
-        <file>zest-beta-27.zap</file>
+        <version>28</version>
+        <file>zest-beta-28.zap</file>
         <status>beta</status>
-        <changes>Fix exception when editing Action - Script with unsaved scripts.&lt;br&gt;
-    Allow to select more HTTP methods in Zest Request dialogue.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/zest-beta-27.zap</url>
-        <hash>SHA1:aa66b3e03f924265f011044747b54de967cecde4</hash>
+        <changes>Display HTTP message also when request statement is selected with keyboard.&lt;br&gt;
+    Update Content-Length of proxied responses (Issue 4613).&lt;br&gt;
+    Added input for Variable Name in Client Element Assign dialog.&lt;br&gt;
+    Allow to clear the Zest panel.&lt;br&gt;
+    Allow to access the options through Zest panel.&lt;br&gt;
+    Title caps adjustments (Issue 2000).&lt;br&gt;
+    Use selected text when adding assignments from the request/response.&lt;br&gt;
+    Show expression's inverse state in more tree nodes.&lt;br&gt;
+    Correct dialogue titles of client statements.&lt;br&gt;
+    Allow to invoke the context menu in text fields also with keyboard.&lt;br&gt;
+    Correct fields' state in Switch To Frame dialogue.&lt;br&gt;
+    Correct request conversion that dropped the topmost header (Issue 5100).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/zest-beta-28.zap</url>
+        <hash>SHA1:277257f55eafb3203110ae9466580d5fab6cb41c</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2018-01-19</date>
-        <size>2106780</size>
+        <date>2018-11-07</date>
+        <size>2154460</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
