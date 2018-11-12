@@ -828,15 +828,14 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>jxbrowser-alpha-9.zap</file>
+        <version>10</version>
+        <file>jxbrowser-alpha-10.zap</file>
         <status>alpha</status>
-        <changes>Update the help to mention the bundled JxBrowser version.&lt;br&gt;
-		Updated to JxBrowser 6.20.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowser-alpha-9.zap</url>
-        <hash>SHA1:8902c471c8efd383a8b5bc3c6378ecdad921450b</hash>
-        <date>2018-06-11</date>
-        <size>1481399</size>
+        <changes>Update JxBrowser to 6.22.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowser-alpha-10.zap</url>
+        <hash>SHA1:c3fdaec3d16b938370d29e71f74599a609379fd4</hash>
+        <date>2018-11-12</date>
+        <size>1493195</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_jxbrowser>
     <addon>jxbrowserlinux64</addon>
@@ -844,22 +843,19 @@
         <name>JxBrowser (Linux 64)</name>
         <description>An embedded browser based on Chromium, Linux 64 specific</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>jxbrowserlinux64-alpha-7.zap</file>
+        <version>8</version>
+        <file>jxbrowserlinux64-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Updated to JxBrowser 6.20.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserlinux64-alpha-7.zap</url>
-        <hash>SHA1:654adde79941fb1a3f936410b04f43813a7886c8</hash>
-        <date>2018-06-11</date>
-        <size>55430034</size>
+        <changes>Update JxBrowser to 6.22.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserlinux64-alpha-8.zap</url>
+        <hash>SHA1:0a206eaf246a5bcf1f992f449e06849a0c29cd03</hash>
+        <date>2018-11-12</date>
+        <size>59150325</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>jxbrowser</id>
-                </addon>
-                <addon>
-                    <id>webdriverlinux</id>
                 </addon>
             </addons>
         </dependencies>
@@ -869,22 +865,19 @@
         <name>JxBrowser (Mac OS)</name>
         <description>An embedded browser based on Chromium, Mac OS specific</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>jxbrowsermacos-alpha-7.zap</file>
+        <version>8</version>
+        <file>jxbrowsermacos-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Updated to JxBrowser 6.20.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowsermacos-alpha-7.zap</url>
-        <hash>SHA1:7350a11fd3f68001b122a0a724e8da49df55c804</hash>
-        <date>2018-06-11</date>
-        <size>58924146</size>
+        <changes>Update JxBrowser to 6.22.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowsermacos-alpha-8.zap</url>
+        <hash>SHA1:7cf269da343febcb383138ba84c812d8bab34087</hash>
+        <date>2018-11-12</date>
+        <size>64425282</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>jxbrowser</id>
-                </addon>
-                <addon>
-                    <id>webdrivermacos</id>
                 </addon>
             </addons>
         </dependencies>
@@ -894,26 +887,45 @@
         <name>JxBrowser (Windows)</name>
         <description>An embedded browser based on Chromium, Windows specific</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>jxbrowserwindows-alpha-7.zap</file>
+        <version>8</version>
+        <file>jxbrowserwindows-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Updated to JxBrowser 6.20.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows-alpha-7.zap</url>
-        <hash>SHA1:2e1b325254eb232cc7462ca2fc06b0e840c6117b</hash>
-        <date>2018-06-11</date>
-        <size>43097461</size>
+        <changes>Update JxBrowser to 6.22.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows-alpha-8.zap</url>
+        <hash>SHA1:c5c00f4d7d00d9c1f511943c60bbd1242ba9b55c</hash>
+        <date>2018-11-12</date>
+        <size>47077078</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>jxbrowser</id>
                 </addon>
-                <addon>
-                    <id>webdriverwindows</id>
-                </addon>
             </addons>
         </dependencies>
     </addon_jxbrowserwindows>
+    <addon>jxbrowserwindows64</addon>
+    <addon_jxbrowserwindows64>
+        <name>JxBrowser (Windows 64)</name>
+        <description>An embedded browser based on Chromium, Windows 64bits specific</description>
+        <author>ZAP Dev Team</author>
+        <version>1</version>
+        <file>jxbrowserwindows64-alpha-1.zap</file>
+        <status>alpha</status>
+        <changes>First version.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows64-alpha-1.zap</url>
+        <hash>SHA1:b134aeea60c38f66bd01f4e26dab2ebc3d5934c7</hash>
+        <date>2018-11-12</date>
+        <size>48945710</size>
+        <not-before-version>2.7.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>jxbrowser</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_jxbrowserwindows64>
     <addon>jython</addon>
     <addon_jython>
         <name>Python Scripting</name>
