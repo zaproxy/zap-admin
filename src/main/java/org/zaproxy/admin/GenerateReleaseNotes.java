@@ -78,7 +78,8 @@ public class GenerateReleaseNotes {
                         issueType = IssueType.bug;
                         // Carry on in case its got another 'overiding' tag
                     }
-                    if (tag.equalsIgnoreCase("invalid")
+                    if (tag.equalsIgnoreCase("API Client")
+                            || tag.equalsIgnoreCase("invalid")
                             || tag.equalsIgnoreCase("duplicate")
                             || tag.equalsIgnoreCase("historic")
                             || tag.equalsIgnoreCase("wontfix")
