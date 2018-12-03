@@ -717,6 +717,28 @@
         <size>9210</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_highlighter>
+    <addon>hud</addon>
+    <addon_hud>
+        <name>HUD - Heads Up Display</name>
+        <description>Display information from ZAP in browser.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>hud-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>First alpha release.</changes>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.1.0/hud-alpha-0.1.0.zap</url>
+        <hash>SHA1:f2e2cc2341eb238384d31f57a207fe8ca1cde045</hash>
+        <date>2018-12-03</date>
+        <size>823840</size>
+        <not-before-version>2.8.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>websocket</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_hud>
     <addon>httpsInfo</addon>
     <addon_httpsInfo>
         <name>HttpsInfo</name>
