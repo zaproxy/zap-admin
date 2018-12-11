@@ -1087,15 +1087,17 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>quickstart-release-24.zap</file>
+        <version>25</version>
+        <file>quickstart-release-25.zap</file>
         <status>release</status>
-        <changes>Enable the extensions for all DB types.&lt;br&gt;
-    Use default user agent when creating seeds for the spider.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/quickstart-release-24.zap</url>
-        <hash>SHA1:8d4ce6f9d7704c76f48eceda04102f3acbd50d0a</hash>
-        <date>2018-08-03</date>
-        <size>463340</size>
+        <changes>Inform when quick attack is disabled by the current mode (Issue 5069).&lt;br&gt;
+	Notify when quick attack starts.&lt;br&gt;
+	Include expected status code in the error message.&lt;br&gt;
+	Removed PnH code (Issue 5136).&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/quickstart-release-25.zap</url>
+        <hash>SHA1:28cd040c0af5f9a729592cb1054c19b30131378f</hash>
+        <date>2018-12-11</date>
+        <size>458684</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_quickstart>
     <addon>replacer</addon>
