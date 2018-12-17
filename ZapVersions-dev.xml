@@ -2,12 +2,12 @@
 <ZAP>
     <core>
         <version>2.7.0</version>
-        <daily-version>D-2018-12-10</daily-version>
+        <daily-version>D-2018-12-17</daily-version>
         <daily>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/w2018-12-10/ZAP_WEEKLY_D-2018-12-10.zip</url>
-            <file>ZAP_WEEKLY_D-2018-12-10.zip</file>
-            <hash>SHA1:3e52e99409ead43787af9eb475ca596389a0c1a6</hash>
-            <size>335871592</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/w2018-12-17/ZAP_WEEKLY_D-2018-12-17.zip</url>
+            <file>ZAP_WEEKLY_D-2018-12-17.zip</file>
+            <hash>SHA1:b4565e4761e0a0fea83692950e9e227951f4caa1</hash>
+            <size>335873025</size>
         </daily>
         <windows>
             <url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows.exe</url>
@@ -722,13 +722,14 @@
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.1</version>
-        <file>hud-alpha-0.1.1.zap</file>
+        <version>0.1.2</version>
+        <file>hud-alpha-0.1.2.zap</file>
         <status>alpha</status>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.1.0/hud-alpha-0.1.1.zap</url>
-        <hash>SHA1:3f05daaceaab78d7c1ce627ca1553bf8e184d8f9</hash>
-        <date>2018-12-06</date>
-        <size>823826</size>
+        <changes>Fix bug where field alert flags don't show alert dialog.</changes>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.1.2/hud-alpha-0.1.2.zap</url>
+        <hash>SHA1:3603a90e9148f15fa39f5a8122361c8ecbb43e32</hash>
+        <date>2018-12-17</date>
+        <size>824772</size>
         <not-before-version>2.8.0</not-before-version>
         <dependencies>
             <addons>
