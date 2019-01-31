@@ -1212,15 +1212,20 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
+        <version>14</version>
         <semver>2.0.0</semver>
-        <file>selenium-release-13.zap</file>
+        <file>selenium-release-14.zap</file>
         <status>release</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/selenium-release-13.zap</url>
-        <hash>SHA1:27805e3b31a189d0377d359d0c9551dc820adde0</hash>
-        <date>2017-11-27</date>
-        <size>22796677</size>
+        <changes>Enable the extension for all DB types.&lt;br&gt;
+    Mention the configuration keys in the options help page.&lt;br&gt;
+    Tweak error message shown when failed to start/connect to the browser.&lt;br&gt;
+    Disable Firefox JSON viewer when used by AJAX Spider to prevent crawl.&lt;br&gt;
+    Prevent WebDriver process leak when closing ZAP.&lt;br&gt;
+    Ensure "localhost" is proxied through ZAP on Chrome &gt;= 72.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/selenium-release-14.zap</url>
+        <hash>SHA1:79df7cbe14d8368743c30f762d9209cc333913cb</hash>
+        <date>2019-01-31</date>
+        <size>22697462</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
