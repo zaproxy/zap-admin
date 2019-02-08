@@ -1028,19 +1028,20 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>pscanrulesAlpha-alpha-22.zap</file>
+        <version>23</version>
+        <file>pscanrulesAlpha-alpha-23.zap</file>
         <status>alpha</status>
-        <changes>Help documentation improvements and cleanup.&lt;br&gt;
-    Prevent User Controlled HTML Attribute scanner from sometimes raising duplicate alerts.&lt;br&gt;
-    User Controlled HTML Attribute scanner now properly reports the parameter name in alerts.&lt;br&gt;
-    Add In Page Banner Info Leak scanner (Issue 178).&lt;br&gt;
-    CacheableScanner: Handle max-age with comma but no space in directive (Issue 4924).&lt;br&gt;
-    Make the title for the "Reverse Tabnabbing" alert titlecaps.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrulesAlpha-alpha-22.zap</url>
-        <hash>SHA1:198062b7891e5f960b64d3ba0071ccdc1b8decc3</hash>
-        <date>2018-08-15</date>
-        <size>1752257</size>
+        <changes>Fix a stack overflow with PII Scanner.&lt;br&gt;
+	Fix a DateParseException in Cacheable Scanner (Issue 4969).&lt;br&gt;
+	Fix Open Redirect (10028) "Attack" should be Desc.&lt;br&gt;
+	Fix false positive due to RxJS Observable method being mistaken for ASP source disclosure.&lt;br&gt;
+	Tweak User Controllable Charset and Cookie Poisoning to use Description/Other Info field instead of Attack (Issue 5149).&lt;br&gt;
+	Only report missing STS header on redirects to HTTPS URLs on the same domain at Low threshold.&lt;br&gt;
+	Hash Disclosure (10097): Add threshold filtering and fix hash confidence levels.&lt;br&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/pscanrulesAlpha-alpha-23.zap</url>
+        <hash>SHA1:be9d13cec00184d5ca9626ca09668ee8a707f252</hash>
+        <date>2019-02-08</date>
+        <size>1883655</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
