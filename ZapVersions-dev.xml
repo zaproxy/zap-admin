@@ -2,12 +2,12 @@
 <ZAP>
     <core>
         <version>2.7.0</version>
-        <daily-version>D-2019-02-04</daily-version>
+        <daily-version>D-2019-02-11</daily-version>
         <daily>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/w2019-02-04/ZAP_WEEKLY_D-2019-02-04.zip</url>
-            <file>ZAP_WEEKLY_D-2019-02-04.zip</file>
-            <hash>SHA1:e2231e6ba59a44d0c401865ae062fe2c126e1681</hash>
-            <size>336139315</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/w2019-02-11/ZAP_WEEKLY_D-2019-02-11.zip</url>
+            <file>ZAP_WEEKLY_D-2019-02-11.zip</file>
+            <hash>SHA1:44cedcfdbd1e1188784b9c4fbb402475dfdf7f7b</hash>
+            <size>336160198</size>
         </daily>
         <windows>
             <url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows.exe</url>
@@ -721,27 +721,37 @@
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>hud-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>hud-alpha-0.3.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add option to control on-domain messages. &lt;a href="https://github.com/zaproxy/zap-hud/issues/294"&gt;#294&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Add HTML report tool. &lt;a href="https://github.com/zaproxy/zap-hud/issues/312"&gt;#312&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Require cookie on all API calls&lt;/li&gt;
+        <changes>&lt;ul&gt;
+&lt;li&gt;Many thanks to Matt Austin (@mattaustin) for reporting security vulnerabilities with the HUD and working with us to fix them.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Changed Attack Mode icon to crosshairs. &lt;a href="https://github.com/zaproxy/zap-hud/issues/221"&gt;#221&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add API endpoints for getting and setting UI options. &lt;a href="https://github.com/zaproxy/zap-hud/issues/319"&gt;#319&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add tasks for Enable, Show and Break tutorial pages&lt;/li&gt;
+&lt;li&gt;Add plain text/regex filtering capability to History section &lt;a href="https://github.com/zaproxy/zap-hud/issues/233"&gt;#233&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add tutorial index page &lt;a href="https://github.com/zaproxy/zap-hud/issues/333"&gt;#333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add tutorial pages for tool configuration and the HTML report tool.&lt;/li&gt;
+&lt;li&gt;Add -hud ZAP command line option which launches Firefox configured to proxy through ZAP with the HUD enabled, for use in daemon mode&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Upgraded vue.js to 2.5.21 and vue-i18n to 8.5.0&lt;/li&gt;
+&lt;li&gt;Correct handling of upgraded domains on startup. &lt;a href="https://github.com/zaproxy/zap-hud/issues/162"&gt;#162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stop the tutorial server when the add-on is uninstalled.&lt;/li&gt;
+&lt;li&gt;Perform stricter validation and filtering on messages from the target domain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use websockets instead of HTTP for all ZAP API calls&lt;/li&gt;
+&lt;li&gt;Replaced link to ZAP User Group with one to the new ZAP HUD group and added a desktop menu item for it.&lt;/li&gt;
+&lt;li&gt;Refresh HUD iframes individually instead of refreshing whole page&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.2.0/hud-alpha-0.2.0.zap</url>
-        <hash>SHA1:44929d1922ea936431c18632dc83ba06323c5bfc</hash>
-        <date>2018-12-31</date>
-        <size>833904</size>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.3.0/hud-alpha-0.3.0.zap</url>
+        <hash>SHA1:f040fe3459d97681f7b7e24c29e329788a3b3651</hash>
+        <date>2019-02-11</date>
+        <size>852625</size>
         <not-before-version>2.8.0</not-before-version>
         <dependencies>
             <addons>
