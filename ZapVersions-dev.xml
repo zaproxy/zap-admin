@@ -2,12 +2,12 @@
 <ZAP>
     <core>
         <version>2.7.0</version>
-        <daily-version>D-2019-03-11</daily-version>
+        <daily-version>D-2019-03-18</daily-version>
         <daily>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/w2019-03-11/ZAP_WEEKLY_D-2019-03-11.zip</url>
-            <file>ZAP_WEEKLY_D-2019-03-11.zip</file>
-            <hash>SHA1:8bdebe1801335d3d0d9af6359637db5a18185217</hash>
-            <size>348268363</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/w2019-03-18/ZAP_WEEKLY_D-2019-03-18.zip</url>
+            <file>ZAP_WEEKLY_D-2019-03-18.zip</file>
+            <hash>SHA1:ac1e3e8b82b964effacb7d8e2cbe34855e74a92c</hash>
+            <size>348267246</size>
         </daily>
         <windows>
             <url>https://github.com/zaproxy/zaproxy/releases/download/2.7.0/ZAP_2_7_0_windows.exe</url>
@@ -159,10 +159,8 @@
         <version>1.1.4</version>
         <file>attacksurfacedetector-alpha-1.1.4.zap</file>
         <status>alpha</status>
-        <changes>
-        Various incremental changes (see https://github.com/secdec/attack-surface-detector-zap/releases)&lt;br&gt;
-        Fix un-handled exception when target unavailable &amp; address various "house keeping" tasks.&lt;br&gt;
-    </changes>
+        <changes>Various incremental changes (see https://github.com/secdec/attack-surface-detector-zap/releases)&lt;br&gt;
+        Fix un-handled exception when target unavailable &amp; address various "house keeping" tasks.&lt;br&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/attacksurfacedetector-alpha-1.1.4.zap</url>
         <hash>SHA1:e21758c2cdcbc7806f44cc986a88360457eff82e</hash>
         <info>https://github.com/secdec/attack-surface-detector-zap/wiki</info>
@@ -879,11 +877,9 @@
         <version>12</version>
         <file>jxbrowser-alpha-12.zap</file>
         <status>alpha</status>
-        <changes>
-    Update JxBrowser to 6.23.&lt;br>
-    Fix typo and tweak error message.&lt;br>
-    Log JxBrowser version on start up.&lt;br>
-    </changes>
+        <changes>Update JxBrowser to 6.23.&lt;br&gt;
+    Fix typo and tweak error message.&lt;br&gt;
+    Log JxBrowser version on start up.&lt;br&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowser-alpha-12.zap</url>
         <hash>SHA1:d5788b4c7d46b962bbeff197a044477a8146f2a1</hash>
         <date>2019-03-04</date>
