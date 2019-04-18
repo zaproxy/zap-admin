@@ -874,16 +874,18 @@
         <name>JxBrowser (core)</name>
         <description>An embedded browser based on Chromium, you must also install the relevant platform specific add-on</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>jxbrowser-alpha-12.zap</file>
+        <version>13</version>
+        <file>jxbrowser-alpha-13.zap</file>
         <status>alpha</status>
-        <changes>Update JxBrowser to 6.23.&lt;br&gt;
-    Fix typo and tweak error message.&lt;br&gt;
-    Log JxBrowser version on start up.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowser-alpha-12.zap</url>
-        <hash>SHA1:d5788b4c7d46b962bbeff197a044477a8146f2a1</hash>
-        <date>2019-03-04</date>
-        <size>1505314</size>
+        <changes>&lt;h3>Changed&lt;/h3>
+&lt;ul>
+&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowser-v13/jxbrowser-alpha-13.zap</url>
+        <hash>SHA1:9cc402c82c444f7301c731a138f56b1c7c20c65a</hash>
+        <date>2019-04-18</date>
+        <size>1479082</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_jxbrowser>
     <addon>jxbrowserlinux64</addon>
@@ -891,14 +893,18 @@
         <name>JxBrowser (Linux 64)</name>
         <description>An embedded browser based on Chromium, Linux 64 specific</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>jxbrowserlinux64-alpha-10.zap</file>
+        <version>11</version>
+        <file>jxbrowserlinux64-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>Update JxBrowser to 6.23.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserlinux64-alpha-10.zap</url>
-        <hash>SHA1:2d088b7b08c3ee3643e809c037ff0e32626f1c73</hash>
-        <date>2019-03-04</date>
-        <size>62868652</size>
+        <changes>&lt;h3>Changed&lt;/h3>
+&lt;ul>
+&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowserlinux64-v11/jxbrowserlinux64-alpha-11.zap</url>
+        <hash>SHA1:3c646a6ee0f48f53d327835314b4a38fa77ded26</hash>
+        <date>2019-04-18</date>
+        <size>64486373</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
@@ -913,14 +919,18 @@
         <name>JxBrowser (Mac OS)</name>
         <description>An embedded browser based on Chromium, Mac OS specific</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>jxbrowsermacos-alpha-10.zap</file>
+        <version>11</version>
+        <file>jxbrowsermacos-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>Update JxBrowser to 6.23.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowsermacos-alpha-10.zap</url>
-        <hash>SHA1:a0e396bfef4f55c1d6e28b9bea43a9690638f340</hash>
-        <date>2019-03-04</date>
-        <size>69021727</size>
+        <changes>&lt;h3>Changed&lt;/h3>
+&lt;ul>
+&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowsermacos-v11/jxbrowsermacos-alpha-11.zap</url>
+        <hash>SHA1:9f332653d0d7b5b62dd55e82b85262f9f05d24dc</hash>
+        <date>2019-04-18</date>
+        <size>70400501</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
@@ -935,14 +945,18 @@
         <name>JxBrowser (Windows)</name>
         <description>An embedded browser based on Chromium, Windows specific</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>jxbrowserwindows-alpha-10.zap</file>
+        <version>11</version>
+        <file>jxbrowserwindows-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>Update JxBrowser to 6.23.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows-alpha-10.zap</url>
-        <hash>SHA1:6536db2f3d6ba3e85980defaedb3967f5f214c85</hash>
-        <date>2019-03-04</date>
-        <size>50055150</size>
+        <changes>&lt;h3>Changed&lt;/h3>
+&lt;ul>
+&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowserwindows-v11/jxbrowserwindows-alpha-11.zap</url>
+        <hash>SHA1:73b499d5e93f609e275921fc1411183f41390d5b</hash>
+        <date>2019-04-18</date>
+        <size>51288333</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
@@ -954,17 +968,21 @@
     </addon_jxbrowserwindows>
     <addon>jxbrowserwindows64</addon>
     <addon_jxbrowserwindows64>
-        <name>JxBrowser (Windows 64)</name>
+        <name>JxBrowser (Windows 64bits)</name>
         <description>An embedded browser based on Chromium, Windows 64bits specific</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>jxbrowserwindows64-alpha-3.zap</file>
+        <version>4</version>
+        <file>jxbrowserwindows64-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Update JxBrowser to 6.23.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jxbrowserwindows64-alpha-3.zap</url>
-        <hash>SHA1:2fc849b4c4691b28c0ca33341f305d367de3aacf</hash>
-        <date>2019-03-04</date>
-        <size>51683249</size>
+        <changes>&lt;h3>Changed&lt;/h3>
+&lt;ul>
+&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowserwindows64-v4/jxbrowserwindows64-alpha-4.zap</url>
+        <hash>SHA1:2531ffef84b9c314ce6789976b528b2935df78ea</hash>
+        <date>2019-04-18</date>
+        <size>53008941</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
