@@ -1459,16 +1459,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>webdriverlinux-beta-7.zap</file>
+        <version>8</version>
+        <file>webdriverlinux-beta-8.zap</file>
         <status>beta</status>
-        <changes>Add help.&lt;br&gt;
-    Update geckodriver to v0.23.0.&lt;br&gt;
-    Update ChromeDriver to v2.43.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdriverlinux-beta-7.zap</url>
-        <hash>SHA1:ef49ec04dc9b9e5019e0a7524e219e00c103fb21</hash>
-        <date>2018-10-29</date>
-        <size>11887203</size>
+        <changes>&lt;ul>
+&lt;li>Fix link in help page.&lt;/li>
+&lt;li>Update geckodriver to v0.24.0.&lt;/li>
+&lt;li>Update ChromeDriver to v73.0.3683.68.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v8/webdriverlinux-beta-8.zap</url>
+        <hash>SHA1:f2ac1fe740e120d99a6b64416f2a3c9e57d26bf0</hash>
+        <date>2019-04-23</date>
+        <size>10827133</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -1476,33 +1479,40 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>webdrivermacos-beta-7.zap</file>
+        <version>8</version>
+        <file>webdrivermacos-beta-8.zap</file>
         <status>beta</status>
-        <changes>Add help.&lt;br&gt;
-    Update geckodriver to v0.23.0.&lt;br&gt;
-    Update ChromeDriver to v2.43.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdrivermacos-beta-7.zap</url>
-        <hash>SHA1:56a816418632ec3b656a314db61ce48b2fe4e5b6</hash>
-        <date>2018-10-29</date>
-        <size>8430586</size>
+        <changes>&lt;ul>
+&lt;li>Fix link in help page.&lt;/li>
+&lt;li>Update geckodriver to v0.24.0.&lt;/li>
+&lt;li>Update ChromeDriver to v73.0.3683.68.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v8/webdrivermacos-beta-8.zap</url>
+        <hash>SHA1:981f66b8540651c66b557b83077115934ee78bb0</hash>
+        <date>2019-04-23</date>
+        <size>9117581</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
     <addon_webdriverwindows>
         <name>Windows WebDrivers</name>
-        <description>Windows WebDrivers for Firefox, Chrome and IE.</description>
+        <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>webdriverwindows-beta-7.zap</file>
+        <version>8</version>
+        <file>webdriverwindows-beta-8.zap</file>
         <status>beta</status>
-        <changes>Add help.&lt;br&gt;
-    Update geckodriver to v0.23.0.&lt;br&gt;
-    Update ChromeDriver to v2.43.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/webdriverwindows-beta-7.zap</url>
-        <hash>SHA1:4dd9a935ad07bc4b6a458d1fde72e9da87290933</hash>
-        <date>2018-10-29</date>
-        <size>15421978</size>
+        <changes>&lt;ul>
+&lt;li>Fix link in help page.&lt;/li>
+&lt;li>Remove IEDriverServer, IE is no longer provided by Selenium add-on.&lt;/li>
+&lt;li>Update geckodriver to v0.24.0.&lt;/li>
+&lt;li>Update ChromeDriver to v73.0.3683.68.&lt;/li>
+&lt;/ul>
+</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v8/webdriverwindows-beta-8.zap</url>
+        <hash>SHA1:3c1c179634330437e322dc543d3f177bb4ac9c9b</hash>
+        <date>2019-04-23</date>
+        <size>13191865</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
