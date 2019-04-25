@@ -832,11 +832,10 @@
         <version>13</version>
         <file>jxbrowser-alpha-13.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3>Changed&lt;/h3>
-&lt;ul>
-&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update JxBrowser to 6.23.1.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowser-v13/jxbrowser-alpha-13.zap</url>
         <hash>SHA1:9cc402c82c444f7301c731a138f56b1c7c20c65a</hash>
         <date>2019-04-18</date>
@@ -851,11 +850,10 @@
         <version>11</version>
         <file>jxbrowserlinux64-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3>Changed&lt;/h3>
-&lt;ul>
-&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update JxBrowser to 6.23.1.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowserlinux64-v11/jxbrowserlinux64-alpha-11.zap</url>
         <hash>SHA1:3c646a6ee0f48f53d327835314b4a38fa77ded26</hash>
         <date>2019-04-18</date>
@@ -877,11 +875,10 @@
         <version>11</version>
         <file>jxbrowsermacos-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3>Changed&lt;/h3>
-&lt;ul>
-&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update JxBrowser to 6.23.1.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowsermacos-v11/jxbrowsermacos-alpha-11.zap</url>
         <hash>SHA1:9f332653d0d7b5b62dd55e82b85262f9f05d24dc</hash>
         <date>2019-04-18</date>
@@ -903,11 +900,10 @@
         <version>11</version>
         <file>jxbrowserwindows-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3>Changed&lt;/h3>
-&lt;ul>
-&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update JxBrowser to 6.23.1.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowserwindows-v11/jxbrowserwindows-alpha-11.zap</url>
         <hash>SHA1:73b499d5e93f609e275921fc1411183f41390d5b</hash>
         <date>2019-04-18</date>
@@ -929,11 +925,10 @@
         <version>4</version>
         <file>jxbrowserwindows64-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3>Changed&lt;/h3>
-&lt;ul>
-&lt;li>Update JxBrowser to 6.23.1.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update JxBrowser to 6.23.1.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/jxbrowserwindows64-v4/jxbrowserwindows64-alpha-4.zap</url>
         <hash>SHA1:2531ffef84b9c314ce6789976b528b2935df78ea</hash>
         <date>2019-04-18</date>
@@ -1446,12 +1441,11 @@
         <version>12</version>
         <file>wappalyzer-alpha-12.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul>
-&lt;li>Switch to using re2j where possible - results in significant performance improvements.&lt;/li>
-&lt;li>Added version information column to Wappalyzer Results.&lt;/li>
-&lt;li>Updated to align with AliasIO/Wappalyzer release v5.7.4.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Switch to using re2j where possible - results in significant performance improvements.&lt;/li&gt;
+&lt;li&gt;Added version information column to Wappalyzer Results.&lt;/li&gt;
+&lt;li&gt;Updated to align with AliasIO/Wappalyzer release v5.7.4.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v12/wappalyzer-alpha-12.zap</url>
         <hash>SHA1:29e1f5066783e420cf00f693a178b564e1200d8f</hash>
         <date>2019-04-24</date>
@@ -1466,12 +1460,11 @@
         <version>8</version>
         <file>webdriverlinux-beta-8.zap</file>
         <status>beta</status>
-        <changes>&lt;ul>
-&lt;li>Fix link in help page.&lt;/li>
-&lt;li>Update geckodriver to v0.24.0.&lt;/li>
-&lt;li>Update ChromeDriver to v73.0.3683.68.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Fix link in help page.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to v0.24.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v73.0.3683.68.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v8/webdriverlinux-beta-8.zap</url>
         <hash>SHA1:f2ac1fe740e120d99a6b64416f2a3c9e57d26bf0</hash>
         <date>2019-04-23</date>
@@ -1486,12 +1479,11 @@
         <version>8</version>
         <file>webdrivermacos-beta-8.zap</file>
         <status>beta</status>
-        <changes>&lt;ul>
-&lt;li>Fix link in help page.&lt;/li>
-&lt;li>Update geckodriver to v0.24.0.&lt;/li>
-&lt;li>Update ChromeDriver to v73.0.3683.68.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Fix link in help page.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to v0.24.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v73.0.3683.68.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v8/webdrivermacos-beta-8.zap</url>
         <hash>SHA1:981f66b8540651c66b557b83077115934ee78bb0</hash>
         <date>2019-04-23</date>
@@ -1506,13 +1498,12 @@
         <version>8</version>
         <file>webdriverwindows-beta-8.zap</file>
         <status>beta</status>
-        <changes>&lt;ul>
-&lt;li>Fix link in help page.&lt;/li>
-&lt;li>Remove IEDriverServer, IE is no longer provided by Selenium add-on.&lt;/li>
-&lt;li>Update geckodriver to v0.24.0.&lt;/li>
-&lt;li>Update ChromeDriver to v73.0.3683.68.&lt;/li>
-&lt;/ul>
-</changes>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Fix link in help page.&lt;/li&gt;
+&lt;li&gt;Remove IEDriverServer, IE is no longer provided by Selenium add-on.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to v0.24.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v73.0.3683.68.&lt;/li&gt;
+&lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v8/webdriverwindows-beta-8.zap</url>
         <hash>SHA1:3c1c179634330437e322dc543d3f177bb4ac9c9b</hash>
         <date>2019-04-23</date>
