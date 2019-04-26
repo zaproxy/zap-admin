@@ -21,13 +21,8 @@ package org.zaproxy.gradle;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
 import java.nio.file.Files;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.ConfigurableFileCollection;
@@ -154,45 +149,5 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
 
     private static String createChecksum(String algorithm, File addOnFile) throws IOException {
         return algorithm + ":" + new DigestUtils(algorithm).digestAsHex(addOnFile);
-    }
-
-    private static class CustomXmlConfiguration extends XMLConfiguration {
-
-        private static final long serialVersionUID = 7018390148134058207L;
-
-        public CustomXmlConfiguration() {
-            setEncoding("UTF-8");
-            setDelimiterParsingDisabled(true);
-            setRootElementName("ZAP");
-        }
-
-        @Override
-        protected Transformer createTransformer() throws TransformerException {
-            Transformer transformer = super.createTransformer();
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-            return transformer;
-        }
-
-        @Override
-        public void load(InputStream in) throws ConfigurationException {
-            super.load(in);
-            postLoad();
-        }
-
-        @Override
-        public void load(Reader in) throws ConfigurationException {
-            super.load(in);
-            postLoad();
-        }
-
-        private void postLoad() {
-            // Ensure it's used a "clean" document for proper indentation of the configurations.
-            // In newer Java versions (9+) the text nodes are indented as well, which would lead
-            // to additional text nodes each time the configuration is loaded/saved.
-            clearReferences(getRootNode());
-            String rootName = getRootElementName();
-            getDocument().removeChild(getDocument().getDocumentElement());
-            getDocument().appendChild(getDocument().createElement(rootName));
-        }
     }
 }
