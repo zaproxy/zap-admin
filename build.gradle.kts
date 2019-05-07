@@ -12,7 +12,7 @@ buildscript {
 
 plugins {
     java
-    id("com.diffplug.gradle.spotless") version "3.14.0"
+    id("com.diffplug.gradle.spotless") version "3.23.0"
 }
 
 apply(plugin = if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.errorprone" else "net.ltgt.errorprone-javacplugin")

@@ -29,6 +29,7 @@ import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
+import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.options.Option;
 
@@ -59,7 +60,7 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
     private final Property<String> checksumAlgorithm;
 
     public UpdateDailyZapVersionsEntries() {
-        this.from = newInputFile();
+        this.from = getProject().getObjects().fileProperty();
         this.into = getProject().getLayout().configurableFiles();
         this.baseDownloadUrl = getProject().getObjects().property(String.class);
         this.checksumAlgorithm = getProject().getObjects().property(String.class);
@@ -78,7 +79,7 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
         return from;
     }
 
-    @Input
+    @InputFiles
     public ConfigurableFileCollection getInto() {
         return into;
     }
