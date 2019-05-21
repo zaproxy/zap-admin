@@ -37,7 +37,7 @@ import java.util.TreeMap;
 public class CheckLatestReleaseNotes {
 
     private static final String RELEASE_NOTES_PATH =
-            "../zap-core-help/src/help/zaphelp/contents/releases";
+            "../zap-core-help/addOns/help/src/main/javahelp/contents/releases/";
 
     private static Set<Integer> getIssues(File f) throws IOException {
         Set<Integer> set = new HashSet<Integer>();

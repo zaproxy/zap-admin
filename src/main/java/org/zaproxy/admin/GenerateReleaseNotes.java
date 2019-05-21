@@ -45,7 +45,7 @@ public class GenerateReleaseNotes {
 
     public static void main(String[] args) throws Exception {
         // For now hardcoding variables - should make these parameters at some point ;)
-        String dateSince = "2015-12-05T00:00:00Z";
+        String dateSince = "2017-11-29T00:00:00Z";
         Map<Integer, String> devIssuesMap = new HashMap<Integer, String>();
         Map<Integer, String> bugIssuesMap = new HashMap<Integer, String>();
         Map<Integer, String> unkIssuesMap = new HashMap<Integer, String>();
@@ -79,6 +79,10 @@ public class GenerateReleaseNotes {
                         // Carry on in case its got another 'overiding' tag
                     }
                     if (tag.equalsIgnoreCase("API Client")
+                            || tag.equalsIgnoreCase("Docker")
+                            || tag.equalsIgnoreCase("third-party")
+                            || tag.equalsIgnoreCase("jenkins")
+                            || tag.equalsIgnoreCase("Component-Docs")
                             || tag.equalsIgnoreCase("invalid")
                             || tag.equalsIgnoreCase("duplicate")
                             || tag.equalsIgnoreCase("historic")
@@ -117,7 +121,7 @@ public class GenerateReleaseNotes {
             }
         }
 
-        System.out.println("<H2>Enhancements:</H2>");
+        System.out.println("<H2>Enhancements</H2>");
         System.out.println("<ul>");
         Object[] devIssues = devIssuesMap.keySet().toArray();
         Arrays.sort(devIssues);
@@ -127,7 +131,7 @@ public class GenerateReleaseNotes {
         System.out.println("</ul>");
         System.out.println("");
 
-        System.out.println("<H2>Bug fixes:</H2>");
+        System.out.println("<H2>Bug fixes</H2>");
         System.out.println("<ul>");
         Object[] bugIssues = bugIssuesMap.keySet().toArray();
         Arrays.sort(bugIssues);
