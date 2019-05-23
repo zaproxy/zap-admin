@@ -104,11 +104,11 @@ tasks {
     register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
         into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
-        checksumAlgorithm.set("SHA1")
+        checksumAlgorithm.set("SHA-256")
     }
 
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
         into.setFrom(files("ZapVersions-dev.xml", "ZapVersions-2.7.xml"))
-        checksumAlgorithm.set("SHA1")
+        checksumAlgorithm.set("SHA-256")
     }
 }
