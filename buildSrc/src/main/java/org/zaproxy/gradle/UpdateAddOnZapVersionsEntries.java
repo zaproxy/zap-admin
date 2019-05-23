@@ -81,7 +81,7 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
         ObjectFactory objects = getProject().getObjects();
         this.fromFile = objects.fileProperty();
         this.fromUrl = objects.property(String.class);
-        this.into = getProject().getLayout().configurableFiles();
+        this.into = objects.fileCollection();
         this.downloadUrl = objects.property(String.class);
         this.downloadUrl.set(fromUrl);
         this.checksumAlgorithm = objects.property(String.class);

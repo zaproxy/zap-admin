@@ -61,7 +61,7 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
 
     public UpdateDailyZapVersionsEntries() {
         this.from = getProject().getObjects().fileProperty();
-        this.into = getProject().getLayout().configurableFiles();
+        this.into = getProject().getObjects().fileCollection();
         this.baseDownloadUrl = getProject().getObjects().property(String.class);
         this.checksumAlgorithm = getProject().getObjects().property(String.class);
 
