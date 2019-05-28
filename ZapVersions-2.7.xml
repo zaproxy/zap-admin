@@ -1460,18 +1460,18 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>webdriverlinux-beta-8.zap</file>
-        <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Fix link in help page.&lt;/li&gt;
-&lt;li&gt;Update geckodriver to v0.24.0.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to v73.0.3683.68.&lt;/li&gt;
+        <version>9</version>
+        <file>webdriverlinux-release-9.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Promote to release status.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v74.0.3729.6.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v8/webdriverlinux-beta-8.zap</url>
-        <hash>SHA1:f2ac1fe740e120d99a6b64416f2a3c9e57d26bf0</hash>
-        <date>2019-04-23</date>
-        <size>10827133</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v9/webdriverlinux-release-9.zap</url>
+        <hash>SHA-256:51a61289078751e0257b7ed0e1959161c36948f2ee90d31f92c16aa46c99ef28</hash>
+        <date>2019-05-28</date>
+        <size>10921867</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -1479,18 +1479,18 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>webdrivermacos-beta-8.zap</file>
-        <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Fix link in help page.&lt;/li&gt;
-&lt;li&gt;Update geckodriver to v0.24.0.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to v73.0.3683.68.&lt;/li&gt;
+        <version>9</version>
+        <file>webdrivermacos-release-9.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Promote to release status.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v74.0.3729.6.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v8/webdrivermacos-beta-8.zap</url>
-        <hash>SHA1:981f66b8540651c66b557b83077115934ee78bb0</hash>
-        <date>2019-04-23</date>
-        <size>9117581</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v9/webdrivermacos-release-9.zap</url>
+        <hash>SHA-256:92010df34098bd5d8b69c63ac4703e842ec0437df9eeb702262133e26749e4ae</hash>
+        <date>2019-05-28</date>
+        <size>9139843</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -1498,19 +1498,18 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>webdriverwindows-beta-8.zap</file>
-        <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Fix link in help page.&lt;/li&gt;
-&lt;li&gt;Remove IEDriverServer, IE is no longer provided by Selenium add-on.&lt;/li&gt;
-&lt;li&gt;Update geckodriver to v0.24.0.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to v73.0.3683.68.&lt;/li&gt;
+        <version>9</version>
+        <file>webdriverwindows-release-9.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Promote to release status.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v74.0.3729.6.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v8/webdriverwindows-beta-8.zap</url>
-        <hash>SHA1:3c1c179634330437e322dc543d3f177bb4ac9c9b</hash>
-        <date>2019-04-23</date>
-        <size>13191865</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v9/webdriverwindows-release-9.zap</url>
+        <hash>SHA-256:c1d9d3ece4070c4ef1fc3d985abc1f36190eae5988775da7ef2cd076768ad36c</hash>
+        <date>2019-05-28</date>
+        <size>12460457</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
