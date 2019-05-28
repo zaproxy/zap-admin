@@ -108,7 +108,7 @@ tasks {
     }
 
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
-        into.setFrom(files("ZapVersions-dev.xml", "ZapVersions-2.7.xml"))
+        into.setFrom(files("ZapVersions-dev.xml", "ZapVersions-2.7.xml", "ZapVersions-2.8.xml"))
         checksumAlgorithm.set("SHA-256")
     }
 }
