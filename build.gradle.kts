@@ -15,6 +15,7 @@ plugins {
     id("com.diffplug.gradle.spotless") version "3.23.0"
 }
 
+apply(from = "$rootDir/gradle/travis-ci.gradle.kts")
 apply(plugin = if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.errorprone" else "net.ltgt.errorprone-javacplugin")
 
 tasks {
