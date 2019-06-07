@@ -324,6 +324,7 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
         private static final String DEPENDENCIES_ADDONS_ALL_ELEMENTS = "addons/addon";
         private static final String DEPENDENCIES_ADDONS_ALL_ELEMENTS_NO_XPATH = "addons.addon";
         private static final String ZAPADDON_ID_ELEMENT = "id";
+        private static final String ZAPADDON_VERSION_ELEMENT = "version";
         private static final String ZAPADDON_NOT_BEFORE_VERSION_ELEMENT = "not-before-version";
         private static final String ZAPADDON_NOT_FROM_VERSION_ELEMENT = "not-from-version";
         private static final String ZAPADDON_SEMVER_ELEMENT = "semver";
@@ -449,6 +450,10 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
                         sub.getString(ZAPADDON_ID_ELEMENT, ""),
                         to,
                         elementBaseKey + ZAPADDON_ID_ELEMENT);
+                appendIfNotEmpty(
+                        sub.getString(ZAPADDON_VERSION_ELEMENT, ""),
+                        to,
+                        elementBaseKey + ZAPADDON_VERSION_ELEMENT);
                 appendIfNotEmpty(
                         sub.getString(ZAPADDON_SEMVER_ELEMENT, ""),
                         to,
