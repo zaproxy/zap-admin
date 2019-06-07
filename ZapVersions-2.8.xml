@@ -326,23 +326,6 @@ URIs ending with specified file extensions are ignored from making requests to t
         <size>387552</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_communityScripts>
-    <addon>coreLang</addon>
-    <addon_coreLang>
-        <name>Core Language Files</name>
-        <description>Translations of the core language files</description>
-        <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>coreLang-release-13.zap</file>
-        <status>release</status>
-        <changes>Added help file with credits.&lt;br&gt;
-	Updated the languages files from Crowdin</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/coreLang-release-13.zap</url>
-        <hash>SHA1:8074521b78c3fc9d63e0543ca3887afa2424167e</hash>
-        <info>https://crowdin.com/project/owasp-zap</info>
-        <date>2018-01-15</date>
-        <size>3221988</size>
-        <not-before-version>2.7.0</not-before-version>
-    </addon_coreLang>
     <addon>cspscanner</addon>
     <addon_cspscanner>
         <name>Content Security Policy Scanner</name>
