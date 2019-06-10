@@ -71,6 +71,7 @@ public class CountDownloads {
         }
 
         // Explicitly request the most recent main releases
+        parseRelease(getRelease("v2.8.0"));
         parseRelease(getRelease("2.7.0"));
         parseRelease(getRelease("2.6.0"));
         parseRelease(getRelease("2.5.0"));
