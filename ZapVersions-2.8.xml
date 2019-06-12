@@ -432,18 +432,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>domxss-alpha-8.zap</file>
+        <version>9</version>
+        <file>domxss-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Run with Firefox headless by default (Issue 3866).&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
+&lt;li&gt;Use default browser when no browser is specified in the configuration rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v8/domxss-alpha-8.zap</url>
-        <hash>SHA-256:9319100fbff037de500648c74147b4cb58b2d6dffd4f8558b0dcefd269f98679</hash>
-        <date>2019-06-07</date>
-        <size>213687</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v9/domxss-alpha-9.zap</url>
+        <hash>SHA-256:069505357e4b18ffa1bc47ae2ea10fd3ddd5845b5e94b3edaefee9eb2dede254</hash>
+        <date>2019-06-12</date>
+        <size>213767</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
