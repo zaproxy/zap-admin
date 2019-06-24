@@ -475,15 +475,18 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Export Report</name>
         <description>Report Export module that allows users to customize content and export in a desired format.</description>
         <author>Goran Sarenkapa - JordanGS</author>
-        <version>5</version>
-        <file>exportreport-alpha-5.zap</file>
+        <version>6</version>
+        <file>exportreport-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Change where XSL files are deployed to avoid clashes (Issue 4206).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/exportreport-alpha-5.zap</url>
-        <hash>SHA1:9bf35bf2b2299e4a191b1d8ac78e5630cc7cf69d</hash>
-        <date>2018-01-04</date>
-        <size>6402380</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Remove API when uninstalling.&lt;/li&gt;
+&lt;li&gt;Fix exception with Java 9+ (Issue 4214).&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exportreport-v6/exportreport-alpha-6.zap</url>
+        <hash>SHA-256:18bcc0f55e0584489abce42bfc93db44ab370153b137c8322099879a046f2b14</hash>
+        <date>2019-06-24</date>
+        <size>8224348</size>
+        <not-before-version>2.7.0</not-before-version>
     </addon_exportreport>
     <addon>formhandler</addon>
     <addon_formhandler>
