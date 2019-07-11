@@ -140,18 +140,19 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>ascanrulesAlpha-alpha-24.zap</file>
+        <version>25</version>
+        <file>ascanrulesAlpha-alpha-25.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix typo in request header used by Apache Range Header DoS.&lt;/li&gt;
+&lt;li&gt;Fix FP in Cloud Metadata rule where no content returned.&lt;/li&gt;
+&lt;li&gt;Fix FP in Ht Access Scanner where HTML, XML, JSON or empty response is returned (Issue 5433).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v24/ascanrulesAlpha-alpha-24.zap</url>
-        <hash>SHA-256:c55f2e8b3e81645e65f1b843ee91492db968198629d6e03f33f0c09b29a4c27c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v25/ascanrulesAlpha-alpha-25.zap</url>
+        <hash>SHA-256:5fd947eb27a2df5be2aa4165bf99ab21c4f7a17fe48dc5086ae080dbef278639</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2019-06-07</date>
-        <size>1592809</size>
+        <date>2019-07-11</date>
+        <size>1593423</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_ascanrulesAlpha>
     <addon>ascanrulesBeta</addon>
@@ -159,20 +160,18 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>25</version>
-        <file>ascanrulesBeta-beta-25.zap</file>
+        <version>26</version>
+        <file>ascanrulesBeta-beta-26.zap</file>
         <status>beta</status>
         <changes>&lt;ul&gt;
-&lt;li&gt;Correct HTTP message usage in Insecure HTTP Method scanner.&lt;/li&gt;
-&lt;li&gt;Fix missing resource messages with Cross-Domain Misconfiguration scanner.&lt;/li&gt;
-&lt;li&gt;Remove Source Code Disclosure WEB-INF Scanner (promoted to release Issue 4448).&lt;/li&gt;
-&lt;li&gt;Report source code disclosure alerts at Medium instead of High&lt;/li&gt;
-&lt;li&gt;Bundle Diff Utils library instead of relying on core.&lt;/li&gt;
+&lt;li&gt;Fix FP in &amp;quot;Source Code Disclosure SVN&amp;quot; where the contents exactly matches, and only report issues with less evidence at a LOW threshold.&lt;/li&gt;
+&lt;li&gt;Fix NPE in &amp;quot;Session Fixation&amp;quot; scan rule when the path of the request URI is null.&lt;/li&gt;
+&lt;li&gt;Changed &amp;quot;Source Code Disclosure CVE20121823&amp;quot; to only analyze JS responses when a LOW alert threshold is used.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v25/ascanrulesBeta-beta-25.zap</url>
-        <hash>SHA-256:1d3fed1a0c5c276f8bd2afeb7b8f9479bc8ae3561f97ad333650966c3b5c300b</hash>
-        <date>2019-06-07</date>
-        <size>1040636</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v26/ascanrulesBeta-beta-26.zap</url>
+        <hash>SHA-256:a412553e1d8176778eb1673f49e2780bbdf520da7a3e6d4339d8cca1394a5943</hash>
+        <date>2019-07-11</date>
+        <size>1041180</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_ascanrulesBeta>
     <addon>attacksurfacedetector</addon>
@@ -1168,26 +1167,16 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>pscanrulesAlpha-alpha-24.zap</file>
+        <version>25</version>
+        <file>pscanrulesAlpha-alpha-25.zap</file>
         <status>alpha</status>
         <changes>&lt;ul&gt;
-&lt;li&gt;PiiScanner add word boundary checks to reduce false positives.&lt;/li&gt;
-&lt;li&gt;HashDisclosureScanner prevent false positives on obvious jsessionid values (Issue 5215).&lt;/li&gt;
-&lt;li&gt;Remove Cookie Same Site Scanner (promoted to beta Issue 4464).&lt;/li&gt;
-&lt;li&gt;Remove Cross Domain Misconfiguration Scanner (promoted to beta Issue 4465).&lt;/li&gt;
-&lt;li&gt;Remove Timestamp Scanner (promoted to beta Issue 4466).&lt;/li&gt;
-&lt;li&gt;Remove Username IDOR Scanner (promoted to beta Issue 4467).&lt;/li&gt;
-&lt;li&gt;Remove X AspNet Version Scanner (promoted to beta Issue 4468).&lt;/li&gt;
-&lt;li&gt;Remove X Debug Token Scanner (promoted to beta Issue 4469).&lt;/li&gt;
-&lt;li&gt;Remove X PoweredBy Scanner (promoted to beta Issue 4470).&lt;/li&gt;
-&lt;li&gt;Add scanner for missing Feature Policy header.&lt;/li&gt;
-&lt;li&gt;Report source code disclosure alerts at Medium instead of High&lt;/li&gt;
+&lt;li&gt;Added Modern App Detection Scanner&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v24/pscanrulesAlpha-alpha-24.zap</url>
-        <hash>SHA-256:c1b4be74c1184e8e69b8067a05c8bcf4630ce4c910822c00d707b5f98aaa9fbe</hash>
-        <date>2019-06-07</date>
-        <size>1860004</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v25/pscanrulesAlpha-alpha-25.zap</url>
+        <hash>SHA-256:0d9e09b99f4d59c316ade76e5c7fab7c3d5d5582b269bd4dbab87dabc83de031</hash>
+        <date>2019-07-11</date>
+        <size>1862489</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
