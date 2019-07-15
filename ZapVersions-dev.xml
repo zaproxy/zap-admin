@@ -1542,23 +1542,20 @@ URIs ending with specified file extensions are ignored from making requests to t
     </addon_tlsdebug>
     <addon>tokengen</addon>
     <addon_tokengen>
-        <name>Token generation and analysis</name>
+        <name>Token Generation and Analysis</name>
         <description>Allows you to generate and analyze pseudo random tokens, such as those used for session handling or CSRF protection</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>tokengen-beta-12.zap</file>
+        <version>13</version>
+        <file>tokengen-beta-13.zap</file>
         <status>beta</status>
-        <changes>Stop the test and clear the panel on session changes.&lt;br&gt;
-    Respect the current mode and react to changes.&lt;br&gt;
-    Inform of running test (e.g. on session change, add-on uninstall).&lt;br&gt;
-    Allow to configure the number of threads.&lt;br&gt;
-    Allow to delay the requests.&lt;br&gt;
-    Update minimum ZAP version to 2.6.0.&lt;br&gt;
-    Deletes the cookie in question before sending the request.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/tokengen-beta-12.zap</url>
-        <hash>SHA1:71bb8a5bc15fe725b5ba38939559696589782583</hash>
-        <date>2018-05-17</date>
-        <size>323564</size>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Address problem from v12 where analysis dialog wasn't being shown after collection (this was due to a build issue).&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tokengen-v13/tokengen-beta-13.zap</url>
+        <hash>SHA-256:d5bcf7649ccf5c88fcf5a7104990986d08b94eedfcd2d4d3b178d5945d5827df</hash>
+        <date>2019-07-15</date>
+        <size>479372</size>
         <not-before-version>2.6.0</not-before-version>
     </addon_tokengen>
     <addon>treetools</addon>
