@@ -1092,16 +1092,23 @@ URIs ending with specified file extensions are ignored from making requests to t
     <addon_openapi>
         <name>OpenAPI Support</name>
         <description>Imports and spiders Open API definitions.</description>
-        <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Michal Materniak and Marcin Spiewak</author>
-        <version>12</version>
-        <file>openapi-alpha-12.zap</file>
+        <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Markus Kiss, Michal Materniak and Marcin Spiewak</author>
+        <version>13</version>
+        <file>openapi-alpha-13.zap</file>
         <status>alpha</status>
-        <changes>Ignore BOM when parsing and don't rely on default character encoding (Issue 4676).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/openapi-alpha-12.zap</url>
-        <hash>SHA1:19cc79b5d18274fd6cb7d2ab5877f8f607b8f4fc</hash>
-        <date>2018-05-18</date>
-        <size>3324050</size>
-        <not-before-version>2.6.0</not-before-version>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Added Accept header for importing an OpenAPI definition from an URL, in the proper format.&lt;/li&gt;
+&lt;li&gt;Correct import of v1.2 definitions (Issue 5262).&lt;/li&gt;
+&lt;li&gt;Fix exception when reporting errors.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
+&lt;li&gt;Add import menu to (new) top level Import menu instead of Tools menu.&lt;/li&gt;
+&lt;li&gt;Add support for primitive values (standalone and within arrays) in a request body (Issue 5250).&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v13/openapi-alpha-13.zap</url>
+        <hash>SHA-256:fe95f86fe944268d3c7ca301ea1a3312adc076616fc175688e2fa20bc2ee916a</hash>
+        <date>2019-07-18</date>
+        <size>6292696</size>
+        <not-before-version>2.8.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
     <addon_plugnhack>
