@@ -1569,26 +1569,44 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>websocket-release-19.zap</file>
+        <version>20</version>
+        <file>websocket-release-20.zap</file>
         <status>release</status>
         <changes>&lt;ul&gt;
-&lt;li&gt;Fix exceptions when handling/dispatching events.&lt;/li&gt;
-&lt;li&gt;Add wrapper to websocket API responses.&lt;/li&gt;
-&lt;li&gt;Fix exception when handling API request with no API implementor.&lt;/li&gt;
-&lt;li&gt;Correct output stream used in server mode.&lt;/li&gt;
-&lt;li&gt;Add support for 'other' API operations.&lt;/li&gt;
-&lt;li&gt;Handle API options.&lt;/li&gt;
-&lt;li&gt;Validate the Origin for API connections.&lt;/li&gt;
-&lt;li&gt;Generate websocket events.&lt;/li&gt;
-&lt;li&gt;Add break API endpoints.&lt;/li&gt;
-&lt;li&gt;Scale fonts and icons correctly&lt;/li&gt;
+&lt;li&gt;Add WebSocket passive scan infrastructure.
+&lt;ul&gt;
+&lt;li&gt;Add WebSocket Passive scan script plugin.
+&lt;ul&gt;
+&lt;li&gt;Template scripts for:
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Javascript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Default scripts for (loaded and enabled by default):
+&lt;ul&gt;
+&lt;li&gt;Base64 disclosure&lt;/li&gt;
+&lt;li&gt;Email disclosure&lt;/li&gt;
+&lt;li&gt;Error Application disclosure&lt;/li&gt;
+&lt;li&gt;Private IP disclosure&lt;/li&gt;
+&lt;li&gt;Credit Card disclosure&lt;/li&gt;
+&lt;li&gt;Username disclosure&lt;/li&gt;
+&lt;li&gt;Debug Error disclosure&lt;/li&gt;
+&lt;li&gt;Suspicious XML Comments disclosure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Help content for the default scripts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add stats for websocket frames sent and time taken for passive scanning.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v19/websocket-release-19.zap</url>
-        <hash>SHA-256:23bdc33125f9e57549131fdaefdc6f8df2483e6b12eba77f47f2c94f3a015bd2</hash>
-        <date>2019-06-07</date>
-        <size>962017</size>
-        <not-before-version>2.7.0</not-before-version>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v20/websocket-release-20.zap</url>
+        <hash>SHA-256:52ada19fe710d5bb4bfdf288448117db38f1315b71aa0df19e1975bd69daaa46</hash>
+        <date>2019-07-23</date>
+        <size>1010734</size>
+        <not-before-version>2.8.0</not-before-version>
     </addon_websocket>
     <addon>zest</addon>
     <addon_zest>
