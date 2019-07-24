@@ -800,39 +800,25 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>hud-beta-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>hud-beta-0.5.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add css transitions to tool buttons so that they slide out when hovered over.&lt;/li&gt;
-&lt;li&gt;Support for WebSockets
-&lt;ul&gt;
-&lt;li&gt;Add a lower tab that shows all of the WebSocket messages proxied through ZAP&lt;/li&gt;
-&lt;li&gt;Add dialog which shows the full WebSocket message when selected in the table with the option to replay it&lt;/li&gt;
-&lt;li&gt;Support breaking on WebSocket messages with the option to change or drop them&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Added 'Info / Low / Medium / High' qualifications to the buttons of the Page and Site tools.&lt;/li&gt;
-&lt;li&gt;Add the option to launch the tutorial again from the HUD configuration page&lt;/li&gt;
-&lt;li&gt;Add a tutorial page for the HUD Configuration options&lt;/li&gt;
-&lt;li&gt;Command line options '-hudurl &lt;url&gt;' and '-hudbrowser &lt;browser&gt;'&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
+&lt;li&gt;Support for the Ajax Spider, including new tutorial page&lt;/li&gt;
+&lt;li&gt;Tutorial page explaining the HTTPS upgrade &lt;a href="https://github.com/zaproxy/zap-hud/issues/439"&gt;#439&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A config page option for showing the changelog &lt;a href="https://github.com/zaproxy/zap-hud/issues/535"&gt;#535&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Icons to indicate changes to the tutorial or changelog &lt;a href="https://github.com/zaproxy/zap-hud/issues/553"&gt;#553&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Offset the growl alerts so that they don't block access to the buttons on the lower tab&lt;/li&gt;
-&lt;li&gt;The UI configs are now persisted to ZAP &lt;a href="https://github.com/zaproxy/zap-hud/issues/321"&gt;#321&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Add a beforeDestroy to all Vue components that register listeners on the custom eventBus. &lt;a href="https://github.com/zaproxy/zap-hud/issues/468"&gt;#468&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Replay in Console was broken &lt;a href="https://github.com/zaproxy/zap-hud/issues/487"&gt;#487&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Direct AJAX calls not getting upgraded to https &lt;a href="https://github.com/zaproxy/zap-hud/issues/530"&gt;#530&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fail to handle ws calls from an upgraded http domain &lt;a href="https://github.com/zaproxy/zap-hud/issues/525"&gt;#525&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.4.0/hud-beta-0.4.0.zap</url>
-        <hash>SHA-256:778e42cf41211491c99207a1a00d62f735f2e2bca3d97ad080600e8fc45cd657</hash>
-        <date>2019-06-07</date>
-        <size>862475</size>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.5.0/hud-beta-0.5.0.zap</url>
+        <hash>SHA-256:d0eed28668eae83629595dba62ba1c2ad30039e353cbe8a9dee01adaf1822d5c</hash>
+        <date>2019-07-24</date>
+        <size>878821</size>
         <not-before-version>2.8.0</not-before-version>
         <dependencies>
             <addons>
