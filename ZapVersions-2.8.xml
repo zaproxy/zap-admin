@@ -1619,17 +1619,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>webdriverlinux-release-10.zap</file>
+        <version>11</version>
+        <file>webdriverlinux-release-11.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v75.0.3770.8.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v76.0.3809.68.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v10/webdriverlinux-release-10.zap</url>
-        <hash>SHA-256:db4e6e09572329482c2bec391be003bfdc1b36b6a1f991b864058cce0a5bc4fa</hash>
-        <date>2019-06-07</date>
-        <size>10991093</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v11/webdriverlinux-release-11.zap</url>
+        <hash>SHA-256:86e2752ad41e73b4575db0be7b16a40bc9aa6173ccd5b44a59d5557adc0682dc</hash>
+        <date>2019-08-01</date>
+        <size>11086187</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -1637,17 +1637,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>webdrivermacos-release-10.zap</file>
+        <version>11</version>
+        <file>webdrivermacos-release-11.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v75.0.3770.8.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v76.0.3809.68.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v10/webdrivermacos-release-10.zap</url>
-        <hash>SHA-256:0fa34abb7b5078a03aba0f597e8aabe5a9f63b5ec812da6ad0c1d02e1c6cae6d</hash>
-        <date>2019-06-07</date>
-        <size>9221507</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v11/webdrivermacos-release-11.zap</url>
+        <hash>SHA-256:9866297912c88518bead4aaa06eb19fc22f630bfeb1839c71700770dfdcbf46e</hash>
+        <date>2019-08-01</date>
+        <size>9337917</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -1655,17 +1655,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>webdriverwindows-release-10.zap</file>
+        <version>11</version>
+        <file>webdriverwindows-release-11.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v75.0.3770.8.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v76.0.3809.68.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v10/webdriverwindows-release-10.zap</url>
-        <hash>SHA-256:05c828441532a145b0ef6435bdb36c8423c72e1ce6c760465bcd122681b14e8c</hash>
-        <date>2019-06-07</date>
-        <size>12499281</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v11/webdriverwindows-release-11.zap</url>
+        <hash>SHA-256:c751972880496f4b36dad2ed835383141497e93b3246fc3752b5414d9c995b68</hash>
+        <date>2019-08-01</date>
+        <size>12488968</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
