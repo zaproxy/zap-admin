@@ -800,25 +800,21 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>hud-beta-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>hud-beta-0.6.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for the Ajax Spider, including new tutorial page&lt;/li&gt;
-&lt;li&gt;Tutorial page explaining the HTTPS upgrade &lt;a href="https://github.com/zaproxy/zap-hud/issues/439"&gt;#439&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A config page option for showing the changelog &lt;a href="https://github.com/zaproxy/zap-hud/issues/535"&gt;#535&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Icons to indicate changes to the tutorial or changelog &lt;a href="https://github.com/zaproxy/zap-hud/issues/553"&gt;#553&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hide drawer at the same time as the side panels &lt;a href="https://github.com/zaproxy/zap-hud/issues/552"&gt;#552&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Direct AJAX calls not getting upgraded to https &lt;a href="https://github.com/zaproxy/zap-hud/issues/530"&gt;#530&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fail to handle ws calls from an upgraded http domain &lt;a href="https://github.com/zaproxy/zap-hud/issues/525"&gt;#525&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Correct Content-Length of upgraded responses.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.5.0/hud-beta-0.5.0.zap</url>
-        <hash>SHA-256:3b49db88a38585502b4c3204abb1b779f1f8bcf3399fe91c49c88e61fb1fd4d1</hash>
-        <date>2019-07-24</date>
-        <size>878830</size>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.6.0/hud-beta-0.6.0.zap</url>
+        <hash>SHA-256:b35768f5ecb89cf31d3cdfba3d17cc0f3beb925c8dfae0a4db4e2539fbbbb9da</hash>
+        <date>2019-08-12</date>
+        <size>880361</size>
         <not-before-version>2.8.0</not-before-version>
         <dependencies>
             <addons>
