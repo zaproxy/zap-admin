@@ -1596,18 +1596,16 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>wappalyzer-alpha-12.zap</file>
+        <version>13</version>
+        <file>wappalyzer-alpha-13.zap</file>
         <status>alpha</status>
         <changes>&lt;ul&gt;
-&lt;li&gt;Switch to using re2j where possible - results in significant performance improvements.&lt;/li&gt;
-&lt;li&gt;Added version information column to Wappalyzer Results.&lt;/li&gt;
-&lt;li&gt;Updated to align with AliasIO/Wappalyzer release v5.7.4.&lt;/li&gt;
+&lt;li&gt;Performance improvements.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v12/wappalyzer-alpha-12.zap</url>
-        <hash>SHA1:29e1f5066783e420cf00f693a178b564e1200d8f</hash>
-        <date>2019-04-24</date>
-        <size>2280866</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v13/wappalyzer-alpha-13.zap</url>
+        <hash>SHA-256:f8029683a1717c76989e9dae7092605200b783017bcf14b2d2f416dca15a7af9</hash>
+        <date>2019-08-19</date>
+        <size>2280650</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
