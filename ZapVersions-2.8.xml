@@ -314,16 +314,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Code Dx Extension</name>
         <description>Includes request and response data in XML reports and provides the ability to upload reports directly to a Code Dx server</description>
         <author>Code Dx, Inc.</author>
-        <version>7</version>
-        <file>codedx-alpha-7.zap</file>
+        <version>8</version>
+        <file>codedx-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Update minimum ZAP version to 2.5.0.&lt;br&gt;
-    Add a ZAP API endpoints for generating and uploading Code Dx reports.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/codedx-alpha-7.zap</url>
-        <hash>SHA1:e0283162628bb741c2bea93e57616a0302d231bf</hash>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Make fixes to the report generation process to handle encoding the same as other ZAP reports&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/codedx-v8/codedx-alpha-8.zap</url>
+        <hash>SHA-256:a0f90a41eb1e9fc50c87a00d78e19957e083c933ec35a84f4f9be062b1d510ae</hash>
         <info>https://www.codedx.com/</info>
-        <date>2018-07-02</date>
-        <size>1415674</size>
+        <date>2019-08-23</date>
+        <size>1740991</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_codedx>
     <addon>communityScripts</addon>
