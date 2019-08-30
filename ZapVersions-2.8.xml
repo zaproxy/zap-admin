@@ -365,15 +365,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>CustomReport</name>
         <description>New HTML report module allows users to customize report content.</description>
         <author>Chienli Ma</author>
-        <version>4</version>
-        <file>customreport-alpha-4.zap</file>
+        <version>5</version>
+        <file>customreport-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Update minimum ZAP version to 2.5.0.&lt;br&gt;
-        Fix "Content only in scope" handling (Issue 2492).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/customreport-alpha-4.zap</url>
-        <hash>SHA1:afedbd850e1ab5cb181936ace11011da7736fb50</hash>
-        <date>2018-06-27</date>
-        <size>575782</size>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Improve layout/sizing of Generate Report dialogue (Issue 5521).&lt;/li&gt;
+&lt;li&gt;Remove unused library.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/customreport-v5/customreport-alpha-5.zap</url>
+        <hash>SHA-256:437af7cf0e9517ec4efd2117ce6e601228471fb4e9493b2331820344e17e8e40</hash>
+        <date>2019-08-30</date>
+        <size>262137</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_customreport>
     <addon>diff</addon>
@@ -1310,16 +1312,23 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>SAML Extension</name>
         <description>Detect, Show, Edit, Fuzz SAML requests</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>saml-alpha-7.zap</file>
+        <version>8</version>
+        <file>saml-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Minor code change to work with ZAP 2.5.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/saml-alpha-7.zap</url>
-        <hash>SHA1:5e1b8b175b9711ca25d83488905ef1dc3a3792d5</hash>
-        <info>https://github.com/zaproxy/zaproxy</info>
-        <date>2017-11-28</date>
-        <size>997659</size>
-        <not-before-version>2.4.0</not-before-version>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.5.0.&lt;/li&gt;
+&lt;li&gt;Compressed SAMLMessage is not required&lt;/li&gt;
+&lt;li&gt;Possibility to disable compression when sending&lt;/li&gt;
+&lt;li&gt;Added SAML Passive Scanner&lt;/li&gt;
+&lt;li&gt;Dynamically unload the add-on.&lt;/li&gt;
+&lt;li&gt;Fix exception with Java 9+ (Issue 5032).&lt;/li&gt;
+&lt;li&gt;Replaced joda.time.datetime with java.time.localtime (Java8).&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/saml-v8/saml-alpha-8.zap</url>
+        <hash>SHA-256:5ac0f8d19ab7b4b7399496a3f7250177e2183c1fc3f622655ea9191c3f697dc7</hash>
+        <date>2019-08-30</date>
+        <size>1720102</size>
+        <not-before-version>2.5.0</not-before-version>
     </addon_saml>
     <addon>saverawmessage</addon>
     <addon_saverawmessage>
