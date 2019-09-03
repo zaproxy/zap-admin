@@ -343,23 +343,6 @@ URIs ending with specified file extensions are ignored from making requests to t
         <size>387552</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_communityScripts>
-    <addon>cspscanner</addon>
-    <addon_cspscanner>
-        <name>Content Security Policy Scanner</name>
-        <description>Content Security Policy (CSP) Scanner</description>
-        <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>cspscanner-beta-6.zap</file>
-        <status>beta</status>
-        <changes>Maintenance changes.&lt;br&gt;
-    Salvation library upgraded to 2.5.0.&lt;br&gt;
-    Promote addon to Beta.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/cspscanner-beta-6.zap</url>
-        <hash>SHA1:c8f9a673ce7538ed64acc0f94d32efd9f271e7f5</hash>
-        <date>2018-04-24</date>
-        <size>176663</size>
-        <not-before-version>2.7.0</not-before-version>
-    </addon_cspscanner>
     <addon>customreport</addon>
     <addon_customreport>
         <name>CustomReport</name>
