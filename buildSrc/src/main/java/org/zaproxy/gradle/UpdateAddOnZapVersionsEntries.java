@@ -333,6 +333,7 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
         private static final String STATUS_ELEMENT = "status";
         private static final String HASH_ELEMENT = "hash";
         private static final String INFO_ELEMENT = "info";
+        private static final String REPO_ELEMENT = "repo";
         private static final String SIZE_ELEMENT = "size";
         private static final String DATE_ELEMENT = "date";
 
@@ -382,6 +383,7 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
             appendIfNotEmpty(downloadUrl, configuration, URL_ELEMENT);
             appendIfNotEmpty(createChecksum(checksumAlgorithm, addOn), configuration, HASH_ELEMENT);
             append(URL_ELEMENT, manifest, INFO_ELEMENT, configuration);
+            append(REPO_ELEMENT, manifest, configuration);
             appendIfNotEmpty(releaseDate.toString(), configuration, DATE_ELEMENT);
             appendIfNotEmpty(String.valueOf(Files.size(addOn)), configuration, SIZE_ELEMENT);
             append(NOT_BEFORE_VERSION_ELEMENT, manifest, configuration);
