@@ -144,20 +144,24 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>25</version>
-        <file>ascanrulesAlpha-alpha-25.zap</file>
+        <version>26</version>
+        <file>ascanrulesAlpha-alpha-26.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix FP in Cloud Metadata rule where no content returned.&lt;/li&gt;
-&lt;li&gt;Fix FP in Ht Access Scanner where HTML, XML, JSON or empty response is returned (Issue 5433).&lt;/li&gt;
+&lt;li&gt;Add dependency on Custom Payloads add-on. The payloads of the Test User Agent scanner are now customizable.&lt;/li&gt;
+&lt;li&gt;Added XSLT Injection Scanner (issue 3572).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v25/ascanrulesAlpha-alpha-25.zap</url>
-        <hash>SHA-256:5fd947eb27a2df5be2aa4165bf99ab21c4f7a17fe48dc5086ae080dbef278639</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v26/ascanrulesAlpha-alpha-26.zap</url>
+        <hash>SHA-256:6a82400f19c88303f75e5097f673e4aaaf070555be44c8c46995f26208bc1985</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2019-07-11</date>
-        <size>1593423</size>
-        <not-before-version>2.6.0</not-before-version>
+        <date>2019-10-31</date>
+        <size>1602323</size>
+        <not-before-version>2.8.0</not-before-version>
     </addon_ascanrulesAlpha>
     <addon>ascanrulesBeta</addon>
     <addon_ascanrulesBeta>
