@@ -347,6 +347,23 @@ URIs ending with specified file extensions are ignored from making requests to t
         <size>387552</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_communityScripts>
+    <addon>custompayloads</addon>
+    <addon_custompayloads>
+        <name>Custom Payloads</name>
+        <description>Ability to add, edit or remove payloads that are used i.e. by active scanners</description>
+        <author>ZAP Core Team</author>
+        <version>0.9.0</version>
+        <file>custompayloads-alpha-0.9.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.9.0/custompayloads-alpha-0.9.0.zap</url>
+        <hash>SHA-256:ddfade1c631b4151f66825e5f3b3bd64d11e4e612e9a85042eb00a5a5bc51f9d</hash>
+        <date>2019-10-31</date>
+        <size>45786</size>
+        <not-before-version>2.8.0</not-before-version>
+    </addon_custompayloads>
     <addon>customreport</addon>
     <addon_customreport>
         <name>CustomReport</name>
