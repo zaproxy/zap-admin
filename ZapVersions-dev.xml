@@ -1062,32 +1062,19 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>pscanrulesBeta-beta-19.zap</file>
+        <version>20</version>
+        <file>pscanrulesBeta-beta-20.zap</file>
         <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Fix typo and correct term in help page.&lt;/li&gt;
-&lt;li&gt;Fix typo in scanner name.&lt;/li&gt;
-&lt;li&gt;Tweak alert Authentication Credentials Captured to use Description field instead of Attack.&lt;/li&gt;
-&lt;li&gt;Remove Charset Mismatch Scanner (promoted to release Issue 4460).&lt;/li&gt;
-&lt;li&gt;Remove ViewState Scanner (promoted to release Issue 4453).&lt;/li&gt;
-&lt;li&gt;Remove Insecure JSF ViewState Scanner (promoted to release Issue 4455).&lt;/li&gt;
-&lt;li&gt;Remove Insecure Authentication Scanner (promoted to release Issue 4456).&lt;/li&gt;
-&lt;li&gt;Remove Information Disclosure Debug Errors Scanner (promoted to release Issue 4457).&lt;/li&gt;
-&lt;li&gt;Remove CSRF Countermeasures Scanner (promoted to release Issue 4458).&lt;/li&gt;
-&lt;li&gt;Remove Cookie Loosely Scoped Scanner (promoted to release Issue 4459).&lt;/li&gt;
-&lt;li&gt;Promote Cookie Same Site Scanner to Beta (Issue 4464).&lt;/li&gt;
-&lt;li&gt;Promote Cross Domain Misconfiguration Scanner to Beta (Issue 4465).&lt;/li&gt;
-&lt;li&gt;Promote Timestamp Scanner to Beta (Issue 4466).&lt;/li&gt;
-&lt;li&gt;Promote Username IDOR Scanner to Beta (Issue 4467).&lt;/li&gt;
-&lt;li&gt;Promote X AspNet Version Scanner to Beta (Issue 4468).&lt;/li&gt;
-&lt;li&gt;Promote X Debug Token Scanner to Beta (Issue 4469).&lt;/li&gt;
-&lt;li&gt;Promote X PoweredBy Scanner to Beta (Issue 4470).&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Tweak Information Disclosure - Suspicious Comments scanner to ignore whitespace before/after suspicious comments terms in the suspicious-comments.txt config file.&lt;/li&gt;
+&lt;li&gt;Only scan for Servlet Parameter Pollution at LOW threshold (part of Issue 4454).&lt;/li&gt;
+&lt;li&gt;Username IDOR scan rule now supports use of the Custom Payload addon.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v19/pscanrulesBeta-beta-19.zap</url>
-        <hash>SHA-256:d4d8f1beb30ee83e2eff5e66ed3d72b57327b3a9a4d0810fcacd1867be6e3a6d</hash>
-        <date>2019-06-07</date>
-        <size>580615</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v20/pscanrulesBeta-beta-20.zap</url>
+        <hash>SHA-256:a29ec8743e021d455590373a1e1ca2bd688a189f5eaec07944fd7548642e4e67</hash>
+        <date>2019-11-19</date>
+        <size>584235</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesBeta>
     <addon>quickstart</addon>
