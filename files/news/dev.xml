@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>1</id>
+        <id>2</id>
         <default>
-            <item>ZAP 2.8.0 includes an innovative 'Heads Up Display' (HUD)</item>
-            <link>https://github.com/zaproxy/zap-hud</link>
+            <item>We have just started a new series of videos called 'ZAP in Ten'</item>
+            <link>https://www.alldaydevops.com/zap-in-ten</link>
         </default>
         <fr_FR>
-            <item>ZAP 2.8.0 comprend un affichage 'Heads Up Display' (HUD)</item>
-            <link>https://github.com/zaproxy/zap-hud</link>
+            <item>Nous venons de commencer une nouvelle série de vidéos intitulée 'ZAP in Ten'</item>
+            <link>https://www.alldaydevops.com/zap-in-ten</link>
         </fr_FR>
     </news>
 </ZAP>
