@@ -969,23 +969,26 @@ URIs ending with specified file extensions are ignored from making requests to t
     <addon>openapi</addon>
     <addon_openapi>
         <name>OpenAPI Support</name>
-        <description>Imports and spiders Open API definitions.</description>
-        <author>ZAP Core Team plus Joanna Bona, Artur Grzesica, Markus Kiss, Michal Materniak and Marcin Spiewak</author>
-        <version>13</version>
-        <file>openapi-alpha-13.zap</file>
+        <description>Imports and spiders OpenAPI definitions.</description>
+        <author>ZAP Core Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak and Marcin Spiewak</author>
+        <version>14</version>
+        <file>openapi-alpha-14.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Added Accept header for importing an OpenAPI definition from an URL, in the proper format.&lt;/li&gt;
-&lt;li&gt;Correct import of v1.2 definitions (Issue 5262).&lt;/li&gt;
-&lt;li&gt;Fix exception when reporting errors.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
-&lt;li&gt;Add import menu to (new) top level Import menu instead of Tools menu.&lt;/li&gt;
-&lt;li&gt;Add support for primitive values (standalone and within arrays) in a request body (Issue 5250).&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support OpenAPI v3.0 (Issue 4549).&lt;/li&gt;
+&lt;li&gt;Allow to specify the target URL (scheme, authority, and path) when importing through the command line.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not consume spider resource if not parsed as OpenAPI definition.&lt;/li&gt;
+&lt;li&gt;Allow to specify the target URL when importing from file through the API and GUI.&lt;/li&gt;
+&lt;li&gt;Allow to override also the scheme and path when importing from URL through the API.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v13/openapi-alpha-13.zap</url>
-        <hash>SHA-256:fe95f86fe944268d3c7ca301ea1a3312adc076616fc175688e2fa20bc2ee916a</hash>
-        <date>2019-07-18</date>
-        <size>6292696</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v14/openapi-alpha-14.zap</url>
+        <hash>SHA-256:6b6d5effb2b4cc5bc1cc09fe428ab05972c660d7fb6e46a4202dd5322d574fb3</hash>
+        <date>2019-12-02</date>
+        <size>11475733</size>
         <not-before-version>2.8.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
