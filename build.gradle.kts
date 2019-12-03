@@ -31,8 +31,7 @@ tasks.withType<JavaCompile> {
 }
 
 repositories {
-    mavenLocal()
-    mavenCentral()
+    jcenter()
 }
 
 buildDir = file("buildGradle")
@@ -40,6 +39,9 @@ buildDir = file("buildGradle")
 dependencies {
     "errorprone"("com.google.errorprone:error_prone_core:2.3.1")
 
+    compile("org.kohsuke:github-api:1.101")
+    compileOnly("com.infradna.tool:bridge-method-annotation:1.18")
+    compileOnly("com.github.spotbugs:spotbugs-annotations:3.1.12")
     compile("net.sf.json-lib:json-lib:2.4:jdk15")
     compile("org.zaproxy:zap:2.7.0")
 
