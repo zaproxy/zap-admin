@@ -1607,20 +1607,40 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>zest-beta-29.zap</file>
+        <version>30</version>
+        <file>zest-beta-30.zap</file>
         <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Rely on script context writer for script output.&lt;/li&gt;
-&lt;li&gt;Correct message handling in HTTP Sender scripts.&lt;/li&gt;
-&lt;li&gt;Remove Scripts tree selection listener when add-on is uninstalled.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow to set, remove, and get global variables (Issue 3512), using the context menus:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Add Zest Action&lt;/code&gt; &amp;gt; &lt;code&gt;Action - Global Variable - Set&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Add Zest Action&lt;/code&gt; &amp;gt; &lt;code&gt;Action - Global Variable - Remove&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Add Zest Assignment&lt;/code&gt; &amp;gt; &lt;code&gt;Assign variable to Global Variable&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Allow to start browsers (e.g. Chrome, Firefox) headless, enabled by default (Related to Issue 3866).&lt;/li&gt;
+&lt;li&gt;Add new assignment which can filter the parsed DOM by element or attributes and select the content
+of an element or the value of an attribute.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update Zest library to 0.14.0 (Issue 4797). Refer to its &lt;a href="https://github.com/mozilla/zest/blob/0.14.0/CHANGELOG.md#changelog"&gt;CHANGELOG&lt;/a&gt; for full set of changes.&lt;/li&gt;
+&lt;li&gt;Send sequence messages with ZAP so that they make use of ZAP features e.g. authentication, HTTP
+Sender scripts. (Issue 5590)&lt;/li&gt;
+&lt;li&gt;Set timestamp from/to Zest requests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Send PUT request with its body (Issue 4337).&lt;/li&gt;
+&lt;li&gt;Launch browsers with capability &lt;code&gt;acceptInsecureCerts&lt;/code&gt; set to true (Issue 4870).&lt;/li&gt;
+&lt;li&gt;Proxy localhost with Chrome 72+ and Firefox 67+.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v29/zest-beta-29.zap</url>
-        <hash>SHA-256:2af329dfe6c9e6e9169d1de940f1d4de1c09982e605561369effa941843b64bf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v30/zest-beta-30.zap</url>
+        <hash>SHA-256:6c90611f14afe1a126425b14e5a209cd4686c213b6e34b069fa9a02573ac86e2</hash>
         <info>https://github.com/zaproxy/zap-core-help/wiki/HelpAddonsZestZest</info>
-        <date>2019-06-07</date>
-        <size>1368022</size>
+        <date>2019-12-06</date>
+        <size>13598640</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
