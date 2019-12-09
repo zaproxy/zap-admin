@@ -24,6 +24,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -66,13 +67,13 @@ public class HelpGenerator {
             }
         } else {
             try {
-                String fileContents = FileUtils.readFileToString(srcFile);
+                String fileContents = FileUtils.readFileToString(srcFile, StandardCharsets.UTF_8);
 
                 for (Entry<String, String> entry : tokens.entrySet()) {
                     fileContents = fileContents.replaceAll(entry.getKey(), entry.getValue());
                 }
 
-                FileUtils.write(destFile, fileContents);
+                FileUtils.write(destFile, fileContents, StandardCharsets.UTF_8);
                 System.out.println("Created file " + destFile.getAbsolutePath());
 
             } catch (IOException e) {

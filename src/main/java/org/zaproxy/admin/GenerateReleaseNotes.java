@@ -20,10 +20,15 @@
 package org.zaproxy.admin;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kohsuke.github.GHIssue;
+import org.kohsuke.github.GHIssueState;
+import org.kohsuke.github.GHLabel;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
 
 /**
  * Command line tool for generating release notes from GitHub issues and tags. For now the variables
@@ -40,84 +45,76 @@ public class GenerateReleaseNotes {
         unk
     };
 
-    private static final String ISSUE_BASE_URL =
-            "https://api.github.com/repos/zaproxy/zaproxy/issues?state=closed&per_page=100&since=";
+    private static final String REPO = "zaproxy/zaproxy";
+    private static final int MILESTONE_NUMBER = 5;
 
     public static void main(String[] args) throws Exception {
-        // For now hardcoding variables - should make these parameters at some point ;)
-        String dateSince = "2017-11-29T00:00:00Z";
+
+        GHRepository ghRepo = GitHub.connectAnonymously().getRepository(REPO);
+        List<GHIssue> issues =
+                ghRepo.getIssues(GHIssueState.ALL, ghRepo.getMilestone(MILESTONE_NUMBER));
+
         Map<Integer, String> devIssuesMap = new HashMap<Integer, String>();
         Map<Integer, String> bugIssuesMap = new HashMap<Integer, String>();
         Map<Integer, String> unkIssuesMap = new HashMap<Integer, String>();
         Map<Integer, String> issueTagsMap = new HashMap<Integer, String>();
 
-        int page = 0;
-        while (true) {
-            page++;
-            String issueStr = Utils.readUrl(ISSUE_BASE_URL + dateSince + "&page=" + page);
+        for (GHIssue issue : issues) {
+            IssueType issueType = IssueType.unk;
+            Collection<GHLabel> labels = issue.getLabels();
+            StringBuilder sb = new StringBuilder();
+            for (GHLabel label : labels) {
+                String tag = label.getName();
+                sb.append(tag);
+                sb.append(" ");
 
-            JSONArray json = JSONArray.fromObject(issueStr);
-
-            for (int i = 0; i < json.size(); i++) {
-                IssueType issueType = IssueType.unk;
-                JSONObject issue = json.getJSONObject(i);
-                JSONArray labels = issue.getJSONArray("labels");
-                StringBuilder sb = new StringBuilder();
-                for (int j = 0; j < labels.size(); j++) {
-                    String tag = labels.getJSONObject(j).getString("name");
-                    sb.append(tag);
-                    sb.append(" ");
-
-                    if (tag.equalsIgnoreCase("development")
-                            || tag.equalsIgnoreCase("enhancement")
-                            || tag.equalsIgnoreCase("Type-enhancement")) {
-                        issueType = IssueType.dev;
-                        // Carry on in case its got another 'overiding' tag
-                    }
-                    if (tag.equalsIgnoreCase("bug") || tag.equalsIgnoreCase("Type-defect")) {
-                        issueType = IssueType.bug;
-                        // Carry on in case its got another 'overiding' tag
-                    }
-                    if (tag.equalsIgnoreCase("API Client")
-                            || tag.equalsIgnoreCase("Docker")
-                            || tag.equalsIgnoreCase("third-party")
-                            || tag.equalsIgnoreCase("jenkins")
-                            || tag.equalsIgnoreCase("Component-Docs")
-                            || tag.equalsIgnoreCase("invalid")
-                            || tag.equalsIgnoreCase("duplicate")
-                            || tag.equalsIgnoreCase("historic")
-                            || tag.equalsIgnoreCase("wontfix")
-                            || tag.equalsIgnoreCase("minor")
-                            || tag.equalsIgnoreCase("add-on")
-                            || tag.equalsIgnoreCase("Type-Other")
-                            || tag.equalsIgnoreCase("Type-review")
-                            || tag.equalsIgnoreCase("Type-task")
-                            || tag.equalsIgnoreCase("competition")
-                            || tag.equalsIgnoreCase("InsufficientEvidence")
-                            || tag.equalsIgnoreCase("question")
-                            || tag.equalsIgnoreCase("weekly")) {
-                        issueType = IssueType.ignore;
-                        break;
-                    }
+                if (tag.equalsIgnoreCase("development")
+                        || tag.equalsIgnoreCase("enhancement")
+                        || tag.equalsIgnoreCase("Type-enhancement")) {
+                    issueType = IssueType.dev;
+                    // Carry on in case its got another 'overiding' tag
                 }
-                issueTagsMap.put(issue.getInt("number"), sb.toString());
-
-                switch (issueType) {
-                    case dev:
-                        devIssuesMap.put(issue.getInt("number"), issue.getString("title"));
-                        break;
-                    case bug:
-                        bugIssuesMap.put(issue.getInt("number"), issue.getString("title"));
-                        break;
-                    case unk:
-                        unkIssuesMap.put(issue.getInt("number"), issue.getString("title"));
-                        break;
-                    case ignore:
-                        break;
+                if (tag.equalsIgnoreCase("bug") || tag.equalsIgnoreCase("Type-defect")) {
+                    issueType = IssueType.bug;
+                    // Carry on in case its got another 'overiding' tag
+                }
+                if (tag.equalsIgnoreCase("API Client")
+                        || tag.equalsIgnoreCase("Docker")
+                        || tag.equalsIgnoreCase("third-party")
+                        || tag.equalsIgnoreCase("jenkins")
+                        || tag.equalsIgnoreCase("Component-Docs")
+                        || tag.equalsIgnoreCase("invalid")
+                        || tag.equalsIgnoreCase("duplicate")
+                        || tag.equalsIgnoreCase("historic")
+                        || tag.equalsIgnoreCase("wontfix")
+                        || tag.equalsIgnoreCase("minor")
+                        || tag.equalsIgnoreCase("add-on")
+                        || tag.equalsIgnoreCase("Type-Other")
+                        || tag.equalsIgnoreCase("Type-review")
+                        || tag.equalsIgnoreCase("Type-task")
+                        || tag.equalsIgnoreCase("competition")
+                        || tag.equalsIgnoreCase("InsufficientEvidence")
+                        || tag.equalsIgnoreCase("question")
+                        || tag.equalsIgnoreCase("weekly")) {
+                    issueType = IssueType.ignore;
+                    break;
                 }
             }
-            if (json.size() < 100) {
-                break;
+            int number = issue.getNumber();
+            issueTagsMap.put(number, sb.toString());
+
+            switch (issueType) {
+                case dev:
+                    devIssuesMap.put(number, issue.getTitle());
+                    break;
+                case bug:
+                    bugIssuesMap.put(number, issue.getTitle());
+                    break;
+                case unk:
+                    unkIssuesMap.put(number, issue.getTitle());
+                    break;
+                case ignore:
+                    break;
             }
         }
 
