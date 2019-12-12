@@ -1506,18 +1506,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>webdriverlinux-release-13.zap</file>
+        <version>14</version>
+        <file>webdriverlinux-release-14.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v78.0.3904.70.&lt;/li&gt;
-&lt;li&gt;Update geckodriver to v0.26.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v79.0.3945.36.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v13/webdriverlinux-release-13.zap</url>
-        <hash>SHA-256:b24c207d0c574a54abe39f45522fdb05baeb0e186494cda9d02fa9848a16d514</hash>
-        <date>2019-10-23</date>
-        <size>10217928</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v14/webdriverlinux-release-14.zap</url>
+        <hash>SHA-256:12ffe5d2ef5189c2eb2fe34b323942396d5aa26f31fdb8bce929a133e243a806</hash>
+        <date>2019-12-12</date>
+        <size>9564321</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -1525,18 +1524,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>webdrivermacos-release-13.zap</file>
+        <version>14</version>
+        <file>webdrivermacos-release-14.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v78.0.3904.70.&lt;/li&gt;
-&lt;li&gt;Update geckodriver to v0.26.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v79.0.3945.36.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v13/webdrivermacos-release-13.zap</url>
-        <hash>SHA-256:996b2c22132c52e10b07bf153db9d782b573afdeffb95a898765ce4a104eeb6a</hash>
-        <date>2019-10-23</date>
-        <size>9520968</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v14/webdrivermacos-release-14.zap</url>
+        <hash>SHA-256:30563f7d6d8cd7c5af4d211ebc6c9cc56c409d6f0c0051a0b63fdcf46bba8511</hash>
+        <date>2019-12-12</date>
+        <size>8940634</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -1544,18 +1542,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>webdriverwindows-release-13.zap</file>
+        <version>14</version>
+        <file>webdriverwindows-release-14.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v78.0.3904.70.&lt;/li&gt;
-&lt;li&gt;Update geckodriver to v0.26.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to v79.0.3945.36.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v13/webdriverwindows-release-13.zap</url>
-        <hash>SHA-256:cad80dab1e3cc93aa6f8ef720b4a31078e81cf40370d90b25e7f7dfc35864cd4</hash>
-        <date>2019-10-23</date>
-        <size>7742157</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v14/webdriverwindows-release-14.zap</url>
+        <hash>SHA-256:aa114ac7b59b18c9a9ba1e6c9971af4fa15abce8fb920ed28b2ca26a788f71fa</hash>
+        <date>2019-12-12</date>
+        <size>7163213</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
