@@ -1624,17 +1624,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>webdriverlinux-release-14.zap</file>
+        <version>15</version>
+        <file>webdriverlinux-release-15.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v79.0.3945.36.&lt;/li&gt;
+&lt;li&gt;Bundle correct geckodriver binary for respective architecture (Issue 5763).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v14/webdriverlinux-release-14.zap</url>
-        <hash>SHA-256:12ffe5d2ef5189c2eb2fe34b323942396d5aa26f31fdb8bce929a133e243a806</hash>
-        <date>2019-12-12</date>
-        <size>9564321</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v15/webdriverlinux-release-15.zap</url>
+        <hash>SHA-256:480829bd344e769955b454a03d33b4317d2ae170fe8cd4e80551d5fcd377bd50</hash>
+        <date>2019-12-16</date>
+        <size>9624234</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -1660,17 +1660,17 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>webdriverwindows-release-14.zap</file>
+        <version>15</version>
+        <file>webdriverwindows-release-15.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to v79.0.3945.36.&lt;/li&gt;
+&lt;li&gt;Bundle correct geckodriver binary for respective architecture (Issue 5763).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v14/webdriverwindows-release-14.zap</url>
-        <hash>SHA-256:aa114ac7b59b18c9a9ba1e6c9971af4fa15abce8fb920ed28b2ca26a788f71fa</hash>
-        <date>2019-12-12</date>
-        <size>7163213</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v15/webdriverwindows-release-15.zap</url>
+        <hash>SHA-256:136424e29d46f6ab5bb4e2a46e0b880990abefd4e2886a75aa96b45959d357d5</hash>
+        <date>2019-12-16</date>
+        <size>7260195</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
