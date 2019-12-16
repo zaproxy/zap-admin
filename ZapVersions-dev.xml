@@ -144,23 +144,41 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>ascanrulesAlpha-alpha-26.zap</file>
+        <version>27</version>
+        <file>ascanrulesAlpha-alpha-27.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add dependency on Custom Payloads add-on. The payloads of the Test User Agent scanner are now customizable.&lt;/li&gt;
-&lt;li&gt;Added XSLT Injection Scanner (issue 3572).&lt;/li&gt;
+&lt;li&gt;Added Hidden Files Finder (issue 4585) largely based on Snallygaster by Hanno Böck, also supports use of the Custom Payloads addon.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
+&lt;li&gt;The following scan rules were removed in being promoted from Alpha to Beta:
+&lt;ul&gt;
+&lt;li&gt;Apache Range Header DoS&lt;/li&gt;
+&lt;li&gt;Cookie Slack Detector&lt;/li&gt;
+&lt;li&gt;ELMAH Information Leak&lt;/li&gt;
+&lt;li&gt;GET for POST&lt;/li&gt;
+&lt;li&gt;.htaccess Information Leak&lt;/li&gt;
+&lt;li&gt;HTTP Only Site&lt;/li&gt;
+&lt;li&gt;Httpoxy - Proxy Header Misuse&lt;/li&gt;
+&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
+&lt;li&gt;Proxy Disclosure&lt;/li&gt;
+&lt;li&gt;Relative Path Confusion&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - File Inclusion&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - Git&lt;/li&gt;
+&lt;li&gt;SQL Injection - MsSQL&lt;/li&gt;
+&lt;li&gt;SQL Injection - SQLite&lt;/li&gt;
+&lt;li&gt;Trace.axd Information Leak&lt;/li&gt;
+&lt;li&gt;User Agent Fuzzer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v26/ascanrulesAlpha-alpha-26.zap</url>
-        <hash>SHA-256:6a82400f19c88303f75e5097f673e4aaaf070555be44c8c46995f26208bc1985</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v27/ascanrulesAlpha-alpha-27.zap</url>
+        <hash>SHA-256:c097abc59dfc49cc8c20bd4b22a7ae93e9129a805a35a2f8e7341c9c21db9821</hash>
         <info>https://github.com/zaproxy/zap-extensions/wiki/HelpAddonsAscanrulesAlphaAscanalpha</info>
-        <date>2019-10-31</date>
-        <size>1602323</size>
+        <date>2019-12-16</date>
+        <size>1225414</size>
         <not-before-version>2.8.0</not-before-version>
     </addon_ascanrulesAlpha>
     <addon>ascanrulesBeta</addon>
@@ -168,19 +186,49 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>ascanrulesBeta-beta-26.zap</file>
+        <version>27</version>
+        <file>ascanrulesBeta-beta-27.zap</file>
         <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Fix FP in &amp;quot;Source Code Disclosure SVN&amp;quot; where the contents exactly matches, and only report issues with less evidence at a LOW threshold.&lt;/li&gt;
-&lt;li&gt;Fix NPE in &amp;quot;Session Fixation&amp;quot; scan rule when the path of the request URI is null.&lt;/li&gt;
-&lt;li&gt;Changed &amp;quot;Source Code Disclosure CVE20121823&amp;quot; to only analyze JS responses when a LOW alert threshold is used.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were promoted from Alpha to Beta:
+&lt;ul&gt;
+&lt;li&gt;Apache Range Header DoS&lt;/li&gt;
+&lt;li&gt;Cookie Slack Detector&lt;/li&gt;
+&lt;li&gt;ELMAH Information Leak&lt;/li&gt;
+&lt;li&gt;GET for POST&lt;/li&gt;
+&lt;li&gt;.htaccess Information Leak&lt;/li&gt;
+&lt;li&gt;HTTP Only Site&lt;/li&gt;
+&lt;li&gt;Httpoxy - Proxy Header Misuse&lt;/li&gt;
+&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
+&lt;li&gt;Proxy Disclosure&lt;/li&gt;
+&lt;li&gt;Relative Path Confusion&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - File Inclusion&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - Git&lt;/li&gt;
+&lt;li&gt;SQL Injection - MsSQL&lt;/li&gt;
+&lt;li&gt;SQL Injection - SQLite&lt;/li&gt;
+&lt;li&gt;Trace.axd Information Leak&lt;/li&gt;
+&lt;li&gt;User Agent Fuzzer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add dependency on Custom Payloads add-on.&lt;/li&gt;
+&lt;li&gt;Fixed ArrayIndexOutOfBoundsException issue in XML External Entity Attack scan rule.
+&lt;ul&gt;
+&lt;li&gt;Now removes original XML header in &amp;quot;Local File Reflection Attack&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
+&lt;li&gt;Elmah scan rule updated to include a response content check, and vary alert confidence values accordingly.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v26/ascanrulesBeta-beta-26.zap</url>
-        <hash>SHA-256:a412553e1d8176778eb1673f49e2780bbdf520da7a3e6d4339d8cca1394a5943</hash>
-        <date>2019-07-11</date>
-        <size>1041180</size>
-        <not-before-version>2.7.0</not-before-version>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v27/ascanrulesBeta-beta-27.zap</url>
+        <hash>SHA-256:19f176a2ecada196708b1ab521a766871411f2edfd8dd24a37ccfd1d9df5c46d</hash>
+        <date>2019-12-16</date>
+        <size>1434027</size>
+        <not-before-version>2.8.0</not-before-version>
     </addon_ascanrulesBeta>
     <addon>attacksurfacedetector</addon>
     <addon_attacksurfacedetector>
@@ -1028,43 +1076,85 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>pscanrules-release-24.zap</file>
+        <version>25</version>
+        <file>pscanrules-release-25.zap</file>
         <status>release</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Migrate CSP Scanner into the main passive scan release package (promoting it to Release). Upgrade Salvation (dependency) to 2.6.0.&lt;/li&gt;
-&lt;li&gt;Application Error scanner change for HTTP 500. Alert changed to low risk for HTTP 500, and not raised at all when Threshold is High.&lt;/li&gt;
-&lt;li&gt;Updated the reference link for the alert: Web Browser XSS Protection Not Enabled.&lt;/li&gt;
-&lt;li&gt;Promote Charset Mismatch Scanner to release (Issue 4460).&lt;/li&gt;
-&lt;li&gt;Promote ViewState Scanner to release (Issue 4453).&lt;/li&gt;
-&lt;li&gt;Promote Insecure JSF ViewState Scanner to release (Issue 4455).&lt;/li&gt;
-&lt;li&gt;Promote Insecure Authentication Scanner to release (Issue 4456).&lt;/li&gt;
-&lt;li&gt;Promote Information Disclosure Debug Errors Scanner to release (Issue 4457).&lt;/li&gt;
-&lt;li&gt;Promote CSRF Countermeasures Scanner to release (Issue 4458).&lt;/li&gt;
-&lt;li&gt;Promote Cookie Loosely Scoped Scanner to release (Issue 4459).&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Content Security Policy scan rule: Update to Salvation 2.7.0, add handling for script-src-elem, script-src-attr, style-src-elem, and style-src-attr (Issue 5459).&lt;/li&gt;
+&lt;li&gt;Minimum ZAP version is now 2.8.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were added, promoted from Beta to Release:
+&lt;ul&gt;
+&lt;li&gt;Cookie Without SameSite Attribute&lt;/li&gt;
+&lt;li&gt;Cross Domain Misconfiguration&lt;/li&gt;
+&lt;li&gt;Information Disclosure: In URL&lt;/li&gt;
+&lt;li&gt;Information Disclosure: Referrer&lt;/li&gt;
+&lt;li&gt;Information Disclosure: Suspicious Comments&lt;/li&gt;
+&lt;li&gt;Server Leaks Information via &amp;quot;X-Powered-By&amp;quot; HTTP Response Header Field(s)&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure&lt;/li&gt;
+&lt;li&gt;Username Hash Found&lt;/li&gt;
+&lt;li&gt;X-AspNet-Version Response Header Scanner&lt;/li&gt;
+&lt;li&gt;X-Debug-Token Information Leak&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v24/pscanrules-release-24.zap</url>
-        <hash>SHA-256:23975c6ff6c33b5030a08f8567c5d58428fd8bea6824f4d6ddc2a8091d843726</hash>
-        <date>2019-06-07</date>
-        <size>711389</size>
-        <not-before-version>2.7.0</not-before-version>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v25/pscanrules-release-25.zap</url>
+        <hash>SHA-256:d9995e8c2408f545b0dd0a4fab7ceb64b1c384e63ca24816bdcdee6afc8333f4</hash>
+        <date>2019-12-16</date>
+        <size>758156</size>
+        <not-before-version>2.8.0</not-before-version>
     </addon_pscanrules>
     <addon>pscanrulesAlpha</addon>
     <addon_pscanrulesAlpha>
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>25</version>
-        <file>pscanrulesAlpha-alpha-25.zap</file>
+        <version>26</version>
+        <file>pscanrulesAlpha-alpha-26.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Added Modern App Detection Scanner&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Java Serialized Object (JSO) Scanner.&lt;/li&gt;
+&lt;li&gt;Add Sub Resource Integrity Attribute Missing Scanner.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed false positive when redirect destination is the same domain (Issue 5289).&lt;/li&gt;
+&lt;li&gt;CSP Missing and Feature Policy scan rule: Ignore missing headers on redirects unless Low threshold used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were removed in being promoted to Beta:
+&lt;ul&gt;
+&lt;li&gt;Big Redirect Detected (Potential Sensitive Information Leak)&lt;/li&gt;
+&lt;li&gt;Content Security Policy (CSP) Header Not Set&lt;/li&gt;
+&lt;li&gt;Cookie Poisoning&lt;/li&gt;
+&lt;li&gt;Directory Browsing&lt;/li&gt;
+&lt;li&gt;Hash Disclosure&lt;/li&gt;
+&lt;li&gt;Heartbleed OpenSSL Vulnerability (Indicative)&lt;/li&gt;
+&lt;li&gt;HTTP Server Response Header Scanner&lt;/li&gt;
+&lt;li&gt;HTTP to HTTPS Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;HTTPS to HTTP Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;Open Redirect&lt;/li&gt;
+&lt;li&gt;PII Scanner&lt;/li&gt;
+&lt;li&gt;Retrieved from Cache&lt;/li&gt;
+&lt;li&gt;Reverse Tabnabbing&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security Header Scanner&lt;/li&gt;
+&lt;li&gt;User Controllable Charset&lt;/li&gt;
+&lt;li&gt;User Controllable HTML Element Attribute (Potential XSS)&lt;/li&gt;
+&lt;li&gt;User Controllable JavaScript Event (XSS)&lt;/li&gt;
+&lt;li&gt;X-Backend-Server Header Information Leak&lt;/li&gt;
+&lt;li&gt;X-ChromeLogger-Data (XCOLD) Header Information Leak&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v25/pscanrulesAlpha-alpha-25.zap</url>
-        <hash>SHA-256:0d9e09b99f4d59c316ade76e5c7fab7c3d5d5582b269bd4dbab87dabc83de031</hash>
-        <date>2019-07-11</date>
-        <size>1862489</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v26/pscanrulesAlpha-alpha-26.zap</url>
+        <hash>SHA-256:605e9ad22a295f22419784b4ca09345257fe237bf4c0c8c41df35c531e875472</hash>
+        <date>2019-12-16</date>
+        <size>1670892</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
@@ -1072,19 +1162,56 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>pscanrulesBeta-beta-20.zap</file>
+        <version>21</version>
+        <file>pscanrulesBeta-beta-21.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Tweak Information Disclosure - Suspicious Comments scanner to ignore whitespace before/after suspicious comments terms in the suspicious-comments.txt config file.&lt;/li&gt;
-&lt;li&gt;Only scan for Servlet Parameter Pollution at LOW threshold (part of Issue 4454).&lt;/li&gt;
-&lt;li&gt;Username IDOR scan rule now supports use of the Custom Payload addon.&lt;/li&gt;
+&lt;li&gt;The following scan rules were added being promoted from Alpha to Beta:
+&lt;ul&gt;
+&lt;li&gt;Big Redirect Detected (Potential Sensitive Information Leak)&lt;/li&gt;
+&lt;li&gt;Content Security Policy (CSP) Header Not Set&lt;/li&gt;
+&lt;li&gt;Cookie Poisoning&lt;/li&gt;
+&lt;li&gt;Directory Browsing&lt;/li&gt;
+&lt;li&gt;Hash Disclosure&lt;/li&gt;
+&lt;li&gt;Heartbleed OpenSSL Vulnerability (Indicative)&lt;/li&gt;
+&lt;li&gt;HTTP Server Response Header Scanner&lt;/li&gt;
+&lt;li&gt;HTTP to HTTPS Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;HTTPS to HTTP Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;Open Redirect&lt;/li&gt;
+&lt;li&gt;PII Scanner&lt;/li&gt;
+&lt;li&gt;Retrieved from Cache&lt;/li&gt;
+&lt;li&gt;Reverse Tabnabbing&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security Header Scanner&lt;/li&gt;
+&lt;li&gt;User Controllable Charset&lt;/li&gt;
+&lt;li&gt;User Controllable HTML Element Attribute (Potential XSS)&lt;/li&gt;
+&lt;li&gt;User Controllable JavaScript Event (XSS)&lt;/li&gt;
+&lt;li&gt;X-Backend-Server Header Information Leak&lt;/li&gt;
+&lt;li&gt;X-ChromeLogger-Data (XCOLD) Header Information Leak&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were removed in being promoted Beta to Release:
+&lt;ul&gt;
+&lt;li&gt;Cookie Without SameSite Attribute&lt;/li&gt;
+&lt;li&gt;Cross Domain Misconfiguration&lt;/li&gt;
+&lt;li&gt;Information Disclosure: In URL&lt;/li&gt;
+&lt;li&gt;Information Disclosure: Referrer&lt;/li&gt;
+&lt;li&gt;Information Disclosure: Suspicious Comments&lt;/li&gt;
+&lt;li&gt;Server Leaks Information via &amp;quot;X-Powered-By&amp;quot; HTTP Response Header Field(s)&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure&lt;/li&gt;
+&lt;li&gt;Username Hash Found&lt;/li&gt;
+&lt;li&gt;X-AspNet-Version Response Header Scanner&lt;/li&gt;
+&lt;li&gt;X-Debug-Token Information Leak&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v20/pscanrulesBeta-beta-20.zap</url>
-        <hash>SHA-256:a29ec8743e021d455590373a1e1ca2bd688a189f5eaec07944fd7548642e4e67</hash>
-        <date>2019-11-19</date>
-        <size>584235</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v21/pscanrulesBeta-beta-21.zap</url>
+        <hash>SHA-256:a0cabf74e3c4242cab8332b7b95b357ee522a501fcc76b8cbb0683db9d4f74ca</hash>
+        <date>2019-12-16</date>
+        <size>745147</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_pscanrulesBeta>
     <addon>quickstart</addon>
