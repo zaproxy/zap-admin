@@ -94,11 +94,6 @@ tasks {
         standardInput = System.`in`
     }
 
-    register<ZapTask>("reportAddOnsMissingHelp") {
-        description = "Reports the add-ons that do not have help pages."
-        main = "org.zaproxy.admin.HelpReportMissing"
-    }
-
     register<ZapTask>("checkLatestReleaseNotes") {
         description = "Checks the latest release notes do not contain issues from previous ones."
         main = "org.zaproxy.admin.CheckLatestReleaseNotes"
