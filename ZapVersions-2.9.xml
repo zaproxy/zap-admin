@@ -1616,16 +1616,30 @@ URIs ending with specified file extensions are ignored from making requests to t
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>wappalyzer-alpha-14.zap</file>
+        <version>15</version>
+        <file>wappalyzer-alpha-15.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Update apps.json and icons to align with AliasIO/Wappalyzer release 5.8.4 (plus any subsequent PRs).&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update patterns and icons as of AliasIO/wappalyzer@98814a0 (release 5.8.5+).&lt;/li&gt;
+&lt;li&gt;Support for CPE information (as a table column in the GUI, and element in the new API output [as applicable]).&lt;/li&gt;
+&lt;li&gt;Allow multi-select of rows to facilitate copy/paste, only show context menu if a single row is selected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Export button.&lt;/li&gt;
+&lt;li&gt;API with three views:
+&lt;ul&gt;
+&lt;li&gt;listSites: Lists the sites that there are application (technology) details for [similar to the host:port drop down menu in the GUI].&lt;/li&gt;
+&lt;li&gt;listAll: Lists all sites and their associated applications (technologies).&lt;/li&gt;
+&lt;li&gt;listSite: Lists all the applications (technologies) for a given site [host:port] identifier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v14/wappalyzer-alpha-14.zap</url>
-        <hash>SHA-256:81898ed519b1246cf9d10af7d3203912c604e3fd0c2dfd2583ef2319eb68f677</hash>
-        <date>2019-10-02</date>
-        <size>2396959</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v15/wappalyzer-alpha-15.zap</url>
+        <hash>SHA-256:4fbe894763cd8f8f8806e860029ec51dc8bef5fafc91a19740f622cf289bf630</hash>
+        <date>2019-12-20</date>
+        <size>2478296</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
