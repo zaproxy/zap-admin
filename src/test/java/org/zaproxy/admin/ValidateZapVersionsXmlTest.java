@@ -25,12 +25,11 @@ import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.log4j.varia.NullAppender;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.zaproxy.zap.control.AddOnCollection;
 import org.zaproxy.zap.control.AddOnCollection.Platform;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
@@ -38,25 +37,21 @@ import org.zaproxy.zap.utils.ZapXmlConfiguration;
 /** Validates that ZAP is able to load the {@code ZapVersions.xml} files. */
 public class ValidateZapVersionsXmlTest {
 
-    private static final List<Platform> PLATFORMS =
-            Arrays.asList(Platform.linux, Platform.windows, Platform.mac, Platform.daily);
-
-    @BeforeClass
+    @BeforeAll
     public static void suppressLogging() {
         Logger.getRootLogger().addAppender(new NullAppender());
     }
 
-    @Test
-    public void shouldLoadCurrentVersion() throws Exception {
+    @ParameterizedTest
+    @EnumSource(value = Platform.class)
+    public void shouldLoadCurrentVersion(Platform platform) throws Exception {
         // Given
         File zapVersionsCurr = resource("/ZapVersions-2.7.xml");
-        for (Platform platform : PLATFORMS) {
-            // When
-            AddOnCollection aoc =
-                    new AddOnCollection(new ZapXmlConfiguration(zapVersionsCurr), platform);
-            // Then
-            assertReleaseAndAddOnsPresent(zapVersionsCurr, aoc, platform);
-        }
+        // When
+        AddOnCollection aoc =
+                new AddOnCollection(new ZapXmlConfiguration(zapVersionsCurr), platform);
+        // Then
+        assertReleaseAndAddOnsPresent(zapVersionsCurr, aoc, platform);
     }
 
     private static void assertReleaseAndAddOnsPresent(
@@ -71,30 +66,27 @@ public class ValidateZapVersionsXmlTest {
                 .isNotEmpty();
     }
 
-    @Test
-    public void shouldLoadDevVersion() throws Exception {
+    @ParameterizedTest
+    @EnumSource(value = Platform.class)
+    public void shouldLoadDevVersion(Platform platform) throws Exception {
         // Given
         File zapVersionsDev = resource("/ZapVersions-dev.xml");
-        for (Platform platform : PLATFORMS) {
-            // When
-            AddOnCollection aoc =
-                    new AddOnCollection(new ZapXmlConfiguration(zapVersionsDev), platform);
-            // Then
-            assertReleaseAndAddOnsPresent(zapVersionsDev, aoc, platform);
-        }
+        // When
+        AddOnCollection aoc =
+                new AddOnCollection(new ZapXmlConfiguration(zapVersionsDev), platform);
+        // Then
+        assertReleaseAndAddOnsPresent(zapVersionsDev, aoc, platform);
     }
 
-    @Test
-    public void shouldLoadNonAddOnsVariant() throws Exception {
+    @ParameterizedTest
+    @EnumSource(value = Platform.class)
+    public void shouldLoadNonAddOnsVariant(Platform platform) throws Exception {
         // Given
         File zapVersions = resource("/ZapVersions.xml");
-        for (Platform platform : PLATFORMS) {
-            // When
-            AddOnCollection aoc =
-                    new AddOnCollection(new ZapXmlConfiguration(zapVersions), platform);
-            // Then
-            assertThat(aoc.getZapRelease()).isNotNull();
-        }
+        // When
+        AddOnCollection aoc = new AddOnCollection(new ZapXmlConfiguration(zapVersions), platform);
+        // Then
+        assertThat(aoc.getZapRelease()).isNotNull();
     }
 
     private static File resource(String path) {

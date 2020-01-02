@@ -34,12 +34,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Stream;
 import org.apache.commons.configuration.tree.ConfigurationNode;
 import org.apache.commons.configuration.tree.ConfigurationNodeVisitor;
 import org.apache.log4j.Logger;
 import org.apache.log4j.varia.NullAppender;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 /**
@@ -78,32 +80,31 @@ public class VerifyCoreZapVersionsEntries {
 
     private static List<Path> zapVersionsfiles;
 
-    @BeforeClass
+    private Optional<List<Element>> previousElements = Optional.empty();
+
+    @BeforeAll
     public static void suppressLogging() throws Exception {
         Logger.getRootLogger().addAppender(new NullAppender());
 
         readZapVersionsFiles();
     }
 
-    @Test
-    public void shouldBeTheSameCoreDataInAllZapVersions() throws Exception {
-        Optional<List<Element>> previousElements = Optional.empty();
-        // Given
-        for (Path zapVersionsFile : zapVersionsfiles) {
-            // When
-            List<Element> elements = elements(zapVersionsFile);
-            // Then
-            assertThat(elements)
-                    .extracting(Element::getName)
-                    .as("Elements of %s", zapVersionsFile.getFileName())
-                    .containsExactly(EXPECTED_ELEMENTS);
-            if (previousElements.isPresent()) {
-                assertThat(previousElements.get())
-                        .as("Values of %s", zapVersionsFile.getFileName())
-                        .isEqualTo(elements);
-            } else {
-                previousElements = Optional.of(elements);
-            }
+    @ParameterizedTest
+    @MethodSource("readZapVersionsFiles")
+    public void shouldBeTheSameCoreDataInAllZapVersions(Path zapVersionsFile) throws Exception {
+        // Given / When
+        List<Element> elements = elements(zapVersionsFile);
+        // Then
+        assertThat(elements)
+                .extracting(Element::getName)
+                .as("Elements of %s", zapVersionsFile.getFileName())
+                .containsExactly(EXPECTED_ELEMENTS);
+        if (previousElements.isPresent()) {
+            assertThat(previousElements.get())
+                    .as("Values of %s", zapVersionsFile.getFileName())
+                    .isEqualTo(elements);
+        } else {
+            previousElements = Optional.of(elements);
         }
     }
 
@@ -144,7 +145,7 @@ public class VerifyCoreZapVersionsEntries {
         return getHierarchicalName(node.getParentNode()) + "." + node.getName();
     }
 
-    private static void readZapVersionsFiles() throws Exception {
+    static Stream<Path> readZapVersionsFiles() throws Exception {
         Optional<String> path =
                 Arrays.stream(System.getProperty("java.class.path").split(File.pathSeparator))
                         .filter(e -> e.endsWith("/ZapVersionsTests"))
@@ -169,6 +170,7 @@ public class VerifyCoreZapVersionsEntries {
                 });
 
         Collections.sort(zapVersionsfiles);
+        return zapVersionsfiles.stream();
     }
 
     private static class Element {

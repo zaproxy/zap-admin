@@ -46,7 +46,10 @@ dependencies {
     compile("net.sf.json-lib:json-lib:2.4:jdk15")
     compile("org.zaproxy:zap:2.7.0")
 
-    testCompile("junit:junit:4.12")
+    val jupiterVersion = "5.5.2"
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$jupiterVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$jupiterVersion")
     testImplementation("org.assertj:assertj-core:3.14.0")
 }
 
@@ -60,6 +63,10 @@ val copyZapVersions = tasks.create<Copy>("copyZapVersions") {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
 }
 
 sourceSets["test"].output.dir(mapOf("builtBy" to copyZapVersions), zapVersionsDir)
