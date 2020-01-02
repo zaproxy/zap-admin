@@ -47,8 +47,7 @@ dependencies {
     compile("org.zaproxy:zap:2.7.0")
 
     testCompile("junit:junit:4.12")
-    testCompile("org.hamcrest:hamcrest-library:1.3")
-    testImplementation("org.assertj:assertj-core:3.11.1")
+    testImplementation("org.assertj:assertj-core:3.14.0")
 }
 
 val zapVersionsDir = file("$buildDir/ZapVersionsTests")

@@ -19,11 +19,7 @@
  */
 package org.zaproxy.admin;
 
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -65,14 +61,14 @@ public class ValidateZapVersionsXmlTest {
 
     private static void assertReleaseAndAddOnsPresent(
             File zapVersionsFile, AddOnCollection aoc, Platform platform) {
-        assertThat(
-                "Release not found for: " + zapVersionsFile.getName() + " [" + platform + "]",
-                aoc.getZapRelease(),
-                is(notNullValue()));
-        assertThat(
-                "No add-ons for: " + zapVersionsFile.getName() + " [" + platform + "]",
-                aoc.getAddOns(),
-                is(not(empty())));
+        assertThat(aoc.getZapRelease())
+                .as(
+                        "Release not found in %s using %s platform.",
+                        zapVersionsFile.getName(), platform)
+                .isNotNull();
+        assertThat(aoc.getAddOns())
+                .as("No add-ons in %s using %s platform.", zapVersionsFile.getName(), platform)
+                .isNotEmpty();
     }
 
     @Test
@@ -97,13 +93,13 @@ public class ValidateZapVersionsXmlTest {
             AddOnCollection aoc =
                     new AddOnCollection(new ZapXmlConfiguration(zapVersions), platform);
             // Then
-            assertThat(aoc.getZapRelease(), is(notNullValue()));
+            assertThat(aoc.getZapRelease()).isNotNull();
         }
     }
 
     private static File resource(String path) {
         URL resourceURL = ValidateZapVersionsXmlTest.class.getResource(path);
-        assertThat("File " + path + " not found.", resourceURL, is(notNullValue()));
+        assertThat(resourceURL).as("File %s not found.", path).isNotNull();
 
         try {
             return Paths.get(resourceURL.toURI()).toFile();
