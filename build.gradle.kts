@@ -1,5 +1,6 @@
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
+import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 
 buildscript {
     repositories {
@@ -97,6 +98,17 @@ tasks {
     register<ZapTask>("checkLatestReleaseNotes") {
         description = "Checks the latest release notes do not contain issues from previous ones."
         main = "org.zaproxy.admin.CheckLatestReleaseNotes"
+    }
+
+    register<UpdateMainZapVersionsEntries>("updateMainRelease") {
+        into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
+        baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/v@@VERSION@@/")
+        windowsFileName.set("ZAP_@@VERSION_UNDERSCORES@@_windows.exe")
+        linuxFileName.set("ZAP_@@VERSION@@_Linux.tar.gz")
+        macFileName.set("ZAP_@@VERSION@@.dmg")
+        releaseNotes.set("Bug fix and enhancement release.")
+        releaseNotesUrl.set("https://github.com/zaproxy/zap-core-help/wiki/HelpReleases@@VERSION_UNDERSCORES@@")
+        checksumAlgorithm.set("SHA-256")
     }
 
     register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
