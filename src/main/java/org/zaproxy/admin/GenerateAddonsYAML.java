@@ -43,7 +43,7 @@ public class GenerateAddonsYAML {
 
     public static void main(String[] args) throws Exception {
 
-        StringBuffer sb = new StringBuffer("---" + NEXT_LINE);
+        StringBuilder sb = new StringBuilder("---" + NEXT_LINE);
         File xmlFile = new File(ZAP_VERSIONS_FILE_NAME);
         if(xmlFile.exists()){
 
