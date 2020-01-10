@@ -127,4 +127,9 @@ tasks {
         into.setFrom(files("ZapVersions-dev.xml", "ZapVersions-2.8.xml", "ZapVersions-2.9.xml"))
         checksumAlgorithm.set("SHA-256")
     }
+
+    register<ZapTask>("generateAddonsYAML") {
+        description = "Generate addons yaml using the xml file"
+        main = "org.zaproxy.admin.GenerateAddonsYAML"
+    }
 }
