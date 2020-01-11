@@ -26,7 +26,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.nio.file.Files;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 /**
  * Command line tool for generating the addons markdown file for website.
@@ -87,7 +89,7 @@ public class GenerateAddonsYAML {
             }
 
             File file = new File(OUTPUT_DIR);
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            try (BufferedWriter writer = Files.newBufferedWriter(file.toPath(), UTF_8)) {
                 writer.write(sb.toString());
             }
         }
