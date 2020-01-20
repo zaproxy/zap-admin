@@ -113,7 +113,7 @@ tasks {
         linuxFileName.set("ZAP_@@VERSION@@_Linux.tar.gz")
         macFileName.set("ZAP_@@VERSION@@.dmg")
         releaseNotes.set("Bug fix and enhancement release.")
-        releaseNotesUrl.set("https://github.com/zaproxy/zap-core-help/wiki/HelpReleases@@VERSION_UNDERSCORES@@")
+        releaseNotesUrl.set("https://www.zaproxy.org/docs/desktop/releases/@@VERSION@@/")
         checksumAlgorithm.set("SHA-256")
     }
 
