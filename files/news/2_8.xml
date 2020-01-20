@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>2</id>
+        <id>3</id>
         <default>
-            <item>We have just started a new series of videos called 'ZAP in Ten'</item>
-            <link>https://www.alldaydevops.com/zap-in-ten</link>
+            <item>ZAP 2.9.0 is available now</item>
+            <link>https://www.zaproxy.org/download/</link>
         </default>
         <fr_FR>
-            <item>Nous venons de commencer une nouvelle série de vidéos intitulée 'ZAP in Ten'</item>
-            <link>https://www.alldaydevops.com/zap-in-ten</link>
+            <item>ZAP 2.9.0 est maintenant disponible</item>
+            <link>https://www.zaproxy.org/download/</link>
         </fr_FR>
     </news>
 </ZAP>
