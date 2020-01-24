@@ -1865,23 +1865,19 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>zest-beta-31.zap</file>
+        <version>32</version>
+        <file>zest-beta-32.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update Zest library to 0.14.1 to restore proxying capability, in the previous version the proxy settings were ignored.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.14.2, to correctly ignore cert checks.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v31/zest-beta-31.zap</url>
-        <hash>SHA-256:34d3d85dea5a16d29b5c9cdc9c174934f0f593d39b794f7aa4f8980a48df0962</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v32/zest-beta-32.zap</url>
+        <hash>SHA-256:17367b3add0aee8316d1b4b53f45cca579fefbb67b9b6fc991263efe0a83a0d8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>13598193</size>
+        <date>2020-01-24</date>
+        <size>13598999</size>
         <not-before-version>2.7.0</not-before-version>
         <dependencies>
             <addons>
