@@ -1749,30 +1749,26 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>wappalyzer-alpha-15.zap</file>
+        <version>16</version>
+        <file>wappalyzer-alpha-16.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update patterns and icons as of AliasIO/wappalyzer@98814a0 (release 5.8.5+).&lt;/li&gt;
-&lt;li&gt;Support for CPE information (as a table column in the GUI, and element in the new API output [as applicable]).&lt;/li&gt;
-&lt;li&gt;Allow multi-select of rows to facilitate copy/paste, only show context menu if a single row is selected.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;SVG icon support.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Export button.&lt;/li&gt;
-&lt;li&gt;API with three views:
-&lt;ul&gt;
-&lt;li&gt;listSites: Lists the sites that there are application (technology) details for [similar to the host:port drop down menu in the GUI].&lt;/li&gt;
-&lt;li&gt;listAll: Lists all sites and their associated applications (technologies).&lt;/li&gt;
-&lt;li&gt;listSite: Lists all the applications (technologies) for a given site [host:port] identifier.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The panel is now shown when the add-on is installed.&lt;/li&gt;
+&lt;li&gt;The site &amp;quot;names&amp;quot; are now normalized based on scheme and authority (including port if non-standard or specifically included). This represents a breaking change for any API code that is using listSite with host:port &amp;quot;names&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Fixed an issue where large PNG icons weren't being resized.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v15/wappalyzer-alpha-15.zap</url>
-        <hash>SHA-256:4fbe894763cd8f8f8806e860029ec51dc8bef5fafc91a19740f622cf289bf630</hash>
-        <date>2019-12-20</date>
-        <size>2478296</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v16/wappalyzer-alpha-16.zap</url>
+        <hash>SHA-256:3b03f4a68439adf1e465b9138de5ad3a2a2d255d586aa361e4e67fbbcefd504f</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-01-27</date>
+        <size>9791186</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
