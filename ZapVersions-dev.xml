@@ -398,16 +398,62 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>8</version>
-        <file>communityScripts-alpha-8.zap</file>
+        <version>9</version>
+        <file>communityScripts-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>Update from community-scripts repo.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/communityScripts-alpha-8.zap</url>
-        <hash>SHA1:cdcdb4acc3ee95187067a86b6cd89a37beea5431</hash>
-        <info>https://github.com/zaproxy/community-scripts</info>
-        <date>2018-06-19</date>
-        <size>387552</size>
-        <not-before-version>2.7.0</not-before-version>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add repo URL, shown in the marketplace and Manage Add-ons dialogue.&lt;/li&gt;
+&lt;li&gt;active/cve-2019-5418.js &amp;gt; An active scanner for Ruby on Rails Accept header content disclosure issue.&lt;/li&gt;
+&lt;li&gt;active/JWT None Exploit.js &amp;gt; Checks if the application's JWT implementation allows the usage of the 'none' algorithm.&lt;/li&gt;
+&lt;li&gt;authentication/DjangoAuthentication.js &amp;gt; Django authentication script.&lt;/li&gt;
+&lt;li&gt;authentication/GetsWithRedirectThenPost.js &amp;gt; An authentication script that follows GET redirects and then submits a POST with the authentication credentials.&lt;/li&gt;
+&lt;li&gt;extender/Simple Reverse Proxy.js &amp;gt; Adds a simple reverse proxy.&lt;/li&gt;
+&lt;li&gt;extender/ZAP onEvent Handler.js &amp;gt; An example for how to listen for internal ZAP events.&lt;/li&gt;
+&lt;li&gt;httpsender/add-extra-headers.js &amp;gt; Adds encountered 'extra' headers to all requests.&lt;/li&gt;
+&lt;li&gt;httpsender/aws-signing-for-owasp-zap.py &amp;gt; Signs requests to AWS.&lt;/li&gt;
+&lt;li&gt;httpsender/fingerprinter.js &amp;gt; Logs MD5s of responses.&lt;/li&gt;
+&lt;li&gt;httpsender/greenbone-maintain-auth.js &amp;gt; An auth helper script for OpenVAS Greenbone web interface.&lt;/li&gt;
+&lt;li&gt;httpsender/inject-xss.js &amp;gt; Injects XSS payloads into JSON responses.&lt;/li&gt;
+&lt;li&gt;httpsender/juice-shop-maintain-auth.js &amp;gt; An auth helper script for OWASP JuiceShop.&lt;/li&gt;
+&lt;li&gt;httpsender/keep-cookies-going.js &amp;gt; An auth helper script.&lt;/li&gt;
+&lt;li&gt;httpsender/maintain-jwt.js &amp;gt; Tracks JWTs and updates Authorization bearer headers.&lt;/li&gt;
+&lt;li&gt;passive/Find IBANs.js &amp;gt; Finds IBANs in HTTP response bodies.&lt;/li&gt;
+&lt;li&gt;passive/HUNT.py &amp;gt; Merge of existing HUNT scripts.&lt;/li&gt;
+&lt;li&gt;proxy/Drop requests by response code.js &amp;gt; Drops requests that have a given response code.&lt;/li&gt;
+&lt;li&gt;standalone/scan_rule_list.js &amp;gt; Lists details from both active and passive scan rules.&lt;/li&gt;
+&lt;li&gt;standalone/Split download extract.rb &amp;gt; Concatenates split file downloads.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Change info URL to link to the online help page.&lt;/li&gt;
+&lt;li&gt;Updated to target ZAP 2.9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scripts were merged into a new script &lt;code&gt;HUNT.py&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;passive/HUNT - Debug &amp;amp; Logic Parameters.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT - File Inclusion.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT - IDOR.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT - RCE.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT - SQLi.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT - SSRF.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT - SSTI.py&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix links to source files in zaproxy repo.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v9/communityScripts-alpha-9.zap</url>
+        <hash>SHA-256:1ac9a02333962b6989872366912adfbb60720be4f98733ecfe27087b64a0c522</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
+        <repo>https://github.com/zaproxy/community-scripts/</repo>
+        <date>2020-01-30</date>
+        <size>402074</size>
+        <not-before-version>2.9.0</not-before-version>
     </addon_communityScripts>
     <addon>custompayloads</addon>
     <addon_custompayloads>
@@ -635,16 +681,25 @@
         <name>FuzzDB Web Backdoors</name>
         <description>FuzzDB web backdoors which can be used with the ZAP fuzzer</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>fuzzdbwebbackdoors-release-1.zap</file>
+        <version>2</version>
+        <file>fuzzdbwebbackdoors-release-2.zap</file>
         <status>release</status>
-        <changes>&lt;p&gt;First version.&lt;/p&gt;</changes>
-        <url>https://github.com/zaproxy/fuzzdb-web-backdoors/releases/download/v1/fuzzdbwebbackdoors-release-1.zap</url>
-        <hash>SHA-256:18c8f8f01c49f3134843daa569653a798bdc06cfd1b6e0d26a3c18e44213de81</hash>
-        <info>https://github.com/fuzzdb-project/fuzzdb/</info>
-        <date>2019-06-27</date>
-        <size>161031</size>
-        <not-before-version>2.8.0</not-before-version>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add repo URL, shown in the marketplace and Manage Add-ons dialogue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Change info URL to link to the online help page.&lt;/li&gt;
+&lt;li&gt;Change minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/fuzzdb-web-backdoors/releases/download/v2/fuzzdbwebbackdoors-release-2.zap</url>
+        <hash>SHA-256:ee3e6b018e030d27d5a25710bf4f9d396efa7e5f08d03d5949d82b2260437f63</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/fuzzdb-web-backdoors/</info>
+        <repo>https://github.com/zaproxy/fuzzdb-web-backdoors/</repo>
+        <date>2020-01-30</date>
+        <size>161214</size>
+        <not-before-version>2.9.0</not-before-version>
     </addon_fuzzdbwebbackdoors>
     <addon>gettingStarted</addon>
     <addon_gettingStarted>
