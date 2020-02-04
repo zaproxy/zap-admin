@@ -945,23 +945,21 @@
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>hud-beta-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>hud-beta-0.10.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs to the add-on manifest.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Alerts open with correct active tab in other supported languages besides English (ie French). &lt;a href="https://github.com/zaproxy/zap-hud/issues/235"&gt;#235&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Changed HUD toolbar icon to add a target overlay when 'only in scope' option enabled.&lt;/li&gt;
+&lt;li&gt;Change cursor to pointer on clickable elements&lt;/li&gt;
+&lt;li&gt;Tweak break task tutorial wording&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.9.0/hud-beta-0.9.0.zap</url>
-        <hash>SHA-256:fc7842ad06de8e157fba9363a5943dffe5ff0d332d83b3700aef1ebd4054a8e2</hash>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.10.0/hud-beta-0.10.0.zap</url>
+        <hash>SHA-256:3b5cf51fb50f9508f3edc81f631b42a27dc4eac5894585e14a5bbf468035fd38</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/hud/</info>
         <repo>https://github.com/zaproxy/zap-hud/</repo>
-        <date>2020-01-16</date>
-        <size>898916</size>
+        <date>2020-02-04</date>
+        <size>902329</size>
         <not-before-version>2.8.0</not-before-version>
         <dependencies>
             <addons>
@@ -1345,27 +1343,19 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>27</version>
-        <file>quickstart-release-27.zap</file>
+        <version>28</version>
+        <file>quickstart-release-28.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Added online link to ZAP in Ten videos&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Link to newer Getting Started Guide.&lt;/li&gt;
-&lt;li&gt;Improve permissions and space handling when saving.&lt;/li&gt;
-&lt;li&gt;Updated for the new site&lt;/li&gt;
+&lt;li&gt;Warning when HUD is enabled only in scope&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v27/quickstart-release-27.zap</url>
-        <hash>SHA-256:0ed027a3f2e4da5f00316b374be7a9d5e7a5f5c49d2a6565ce3cd7fca090d129</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v28/quickstart-release-28.zap</url>
+        <hash>SHA-256:5be97d69fbb9fe7b68565dec6111778fb0c34b08329dc7cba48635bbfbf734db</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>535628</size>
+        <date>2020-02-04</date>
+        <size>536541</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_quickstart>
     <addon>regextester</addon>
