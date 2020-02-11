@@ -1211,25 +1211,36 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>pscanrules-release-26.zap</file>
+        <version>27</version>
+        <file>pscanrules-release-27.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;quot;Cookie HttpOnly&amp;quot;, &amp;quot;Cookie Secure Flag&amp;quot;, and &amp;quot;Cookie Without SameSite Attribute&amp;quot; scan rules no longer alert on expired (deleted) cookies (Issue 5295).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;li&gt;Minimum ZAP version is now 2.9.0. (Various scan rules adjusted to address core deprecations.)&lt;/li&gt;
+&lt;li&gt;'Username Hash Found' scan rule now uses updated core functionality to retrieve configured users.&lt;/li&gt;
+&lt;li&gt;Tweak help for 'Cookie HttpOnly' scan rule.&lt;/li&gt;
+&lt;li&gt;'Information Disclosure: Suspicious Comments' if matched within script block or JS response raise Alert with Low confidence.&lt;/li&gt;
+&lt;li&gt;Migrate an input file from Beta to Release that were missed during previous promotions.
 &lt;ul&gt;
-&lt;li&gt;Added links to the code in the help.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;This addresses errors such as &lt;code&gt;[ZAP-PassiveScanner] ERROR org.zaproxy.zap.extension.pscanrules.InformationDisclosureInURL - No such file: .... /xml/URL-information-disclosure-messages.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;'Application Error' scan rule now supports custom payloads when used in conjunction with the Custom Payloads addon.&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure scan rule now only considers potential timestamps within plus or minus one year when used at High threshold (Issue 5837).&lt;/li&gt;
+&lt;li&gt;'Application Error' scan rule's patterns file &lt;code&gt;application_errors.xml&lt;/code&gt; is now copied to ZAP's home directory, which means it is editable by the user. As well as being more consistent with other similar input files.&lt;/li&gt;
+&lt;li&gt;'Information Disclosure - Sensitive Information in URL' correct evidence field for some alerts, and enhance other info details (Issue 5832).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;'Header XSS Protection' was deprecated and removed (Issue 5849).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v26/pscanrules-release-26.zap</url>
-        <hash>SHA-256:cd6613a7cc0140e551dc72c0316ded5a07a8803aee599f01e6aa5e44046ccf7c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v27/pscanrules-release-27.zap</url>
+        <hash>SHA-256:e0f2bfbb96c77b1833d0bf2a801c4c6a1ac1a2971037a76bc1e3a715d811cf6f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>763243</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2020-02-11</date>
+        <size>763415</size>
+        <not-before-version>2.9.0</not-before-version>
     </addon_pscanrules>
     <addon>pscanrulesAlpha</addon>
     <addon_pscanrulesAlpha>
