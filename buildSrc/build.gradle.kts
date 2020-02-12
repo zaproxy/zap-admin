@@ -11,6 +11,11 @@ dependencies {
     implementation("commons-configuration:commons-configuration:1.9")
     implementation("commons-jxpath:commons-jxpath:1.3")
     implementation("commons-codec:commons-codec:1.11")
+    val jgitVersion = "5.6.0.201912101111-r"
+    implementation("org.eclipse.jgit:org.eclipse.jgit:$jgitVersion")
+    implementation("org.eclipse.jgit:org.eclipse.jgit.archive:$jgitVersion")
+    implementation("org.kohsuke:github-api:1.106")
+    implementation("org.snakeyaml:snakeyaml-engine:2.0")
 }
 
 spotless {

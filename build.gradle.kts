@@ -1,6 +1,9 @@
+import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
+import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
+import org.zaproxy.gradle.UpdateWebsite
 
 buildscript {
     repositories {
@@ -79,6 +82,8 @@ spotless {
     }
 }
 
+val latestZapVersions = file("ZapVersions-2.9.xml")
+
 tasks {
     register<ZapTask>("generateReleaseNotes") {
         description = "Generates release notes."
@@ -124,7 +129,59 @@ tasks {
     }
 
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
-        into.setFrom(files("ZapVersions-dev.xml", "ZapVersions-2.9.xml"))
+        into.setFrom(files("ZapVersions-dev.xml", latestZapVersions))
         checksumAlgorithm.set("SHA-256")
     }
 }
+
+val baseUserName = "zaproxy"
+val zaproxyRepo = "zaproxy"
+val adminRepo = "zap-admin"
+val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
+val websiteGeneratedDataComment = "# This file is automatically updated by $baseUserName/$adminRepo repo."
+
+val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainReleaseData::class) {
+    zapVersions.set(latestZapVersions)
+    generatedDataComment.set(websiteGeneratedDataComment)
+    into.set(file("$buildDir/c_main_files.yml"))
+
+    ghUserName.set(ghUser.name)
+    ghUserAuthToken.set(ghUser.authToken)
+
+    ghBaseUserName.set(baseUserName)
+    ghBaseRepo.set(zaproxyRepo)
+}
+
+val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyReleaseData::class) {
+    zapVersions.set(latestZapVersions)
+    generatedDataComment.set(websiteGeneratedDataComment)
+    into.set(file("$buildDir/e_weekly_files.yml"))
+}
+
+val websiteRepoName = "zaproxy-website"
+val websiteRepoDir = file("$rootDir/../$websiteRepoName")
+val dataDir = "$websiteRepoDir/site/data"
+
+val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
+    group = "ZAP"
+    description = "Copies the generated website data to the website repo."
+
+    into("$dataDir/download")
+    from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+}
+
+tasks.register<UpdateWebsite>("updateWebsite") {
+    dependsOn(copyWebsiteGeneratedData)
+
+    ghUserName.set(ghUser.name)
+    ghUserEmail.set(ghUser.email)
+    ghUserAuthToken.set(ghUser.authToken)
+
+    ghBaseUserName.set(baseUserName)
+    ghBaseRepo.set(websiteRepoName)
+    ghSourceRepo.set(adminRepo)
+
+    websiteRepo.set(websiteRepoDir)
+}
+
+data class GitHubUser(val name: String, val email: String, val authToken: String?)
