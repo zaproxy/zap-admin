@@ -21,6 +21,7 @@ package org.zaproxy.gradle;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.lib.PersonIdent;
 import org.eclipse.jgit.lib.Repository;
@@ -33,6 +34,8 @@ import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Internal;
 import org.gradle.api.tasks.TaskAction;
+import org.kohsuke.github.GHIssueState;
+import org.kohsuke.github.GHPullRequest;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 
@@ -174,7 +177,22 @@ public class UpdateWebsite extends DefaultTask {
                     .add(gitBranchName.get())
                     .call();
 
-            createPullRequest(commitSummary, commitDescription);
+            GHRepository ghRepo =
+                    GitHub.connect(ghUserName.get(), ghUserAuthToken.get())
+                            .getRepository(ghBaseUserName.get() + "/" + ghBaseRepo.get());
+
+            List<GHPullRequest> pulls =
+                    ghRepo.queryPullRequests()
+                            .base(gitBaseBranchName.get())
+                            .head(ghUserName.get() + ":" + gitBranchName.get())
+                            .state(GHIssueState.OPEN)
+                            .list()
+                            .asList();
+            if (pulls.isEmpty()) {
+                createPullRequest(ghRepo, commitSummary, commitDescription);
+            } else {
+                pulls.get(0).setBody(commitDescription);
+            }
         }
     }
 
@@ -182,10 +200,8 @@ public class UpdateWebsite extends DefaultTask {
         return "\n\nSigned-off-by: " + ghUserName.get() + " <" + ghUserEmail.get() + ">";
     }
 
-    private void createPullRequest(String title, String description) throws IOException {
-        GHRepository ghRepo =
-                GitHub.connect(ghUserName.get(), ghUserAuthToken.get())
-                        .getRepository(ghBaseUserName.get() + "/" + ghBaseRepo.get());
+    private void createPullRequest(GHRepository ghRepo, String title, String description)
+            throws IOException {
         ghRepo.createPullRequest(
                 title,
                 ghUserName.get() + ":" + gitBranchName.get(),
