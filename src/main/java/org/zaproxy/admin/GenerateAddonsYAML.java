@@ -19,16 +19,14 @@
  */
 package org.zaproxy.admin;
 
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
-
-import static java.nio.charset.StandardCharsets.UTF_8;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  * Command line tool for generating the addons markdown file for website.
@@ -42,12 +40,11 @@ public class GenerateAddonsYAML {
     private static final String EMPTY_STRING = "";
     private static final String OUTPUT_DIR = "addons.yml";
 
-
     public static void main(String[] args) throws Exception {
 
         StringBuilder sb = new StringBuilder("---" + NEXT_LINE);
         File xmlFile = new File(ZAP_VERSIONS_FILE_NAME);
-        if(xmlFile.exists()){
+        if (xmlFile.exists()) {
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
@@ -55,13 +52,14 @@ public class GenerateAddonsYAML {
 
             NodeList list = doc.getElementsByTagName("addon");
 
-            for (int i=0; i<list.getLength(); i++) {
+            for (int i = 0; i < list.getLength(); i++) {
 
-                Element addonParentElement = (Element)list.item(i);
-                NodeList addonIndividualNode = doc.getElementsByTagName("addon_" + addonParentElement.getTextContent());
+                Element addonParentElement = (Element) list.item(i);
+                NodeList addonIndividualNode =
+                        doc.getElementsByTagName("addon_" + addonParentElement.getTextContent());
 
-                if(addonIndividualNode.getLength() != 0){
-                    Element addonInfo = (Element)addonIndividualNode.item(0);
+                if (addonIndividualNode.getLength() != 0) {
+                    Element addonInfo = (Element) addonIndividualNode.item(0);
 
                     String addonName = getAddonDetails("name", addonInfo);
                     String description = getAddonDetails("description", addonInfo);
@@ -89,14 +87,13 @@ public class GenerateAddonsYAML {
             }
 
             File file = new File(OUTPUT_DIR);
-            try (BufferedWriter writer = Files.newBufferedWriter(file.toPath(), UTF_8)) {
+            try (BufferedWriter writer =
+                         Files.newBufferedWriter(file.toPath(), Charset.defaultCharset())) {
                 writer.write(sb.toString());
             }
-        }
-        else{
+        } else {
             System.out.print("File not found!");
         }
-
     }
 
     private static String getAddonDetails(String attributeName, Element addonInfo) {

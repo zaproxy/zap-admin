@@ -128,7 +128,7 @@ tasks {
         checksumAlgorithm.set("SHA-256")
     }
 
-    register<ZapTask>("generateAddonsYAML") {
+    register<ZapTask>("generateWebsiteAddonsData") {
         description = "Generate addons yaml using the xml file"
         main = "org.zaproxy.admin.GenerateAddonsYAML"
     }
