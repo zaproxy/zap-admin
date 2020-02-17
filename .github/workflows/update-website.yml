@@ -21,6 +21,7 @@ jobs:
         repository: zaproxy/zaproxy-website
         persist-credentials: false
         path: zaproxy-website
+        fetch-depth: 0
     - name: Setup Java 8
       uses: actions/setup-java@v1
       java-version: 8
