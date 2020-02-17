@@ -24,7 +24,8 @@ jobs:
         fetch-depth: 0
     - name: Setup Java 8
       uses: actions/setup-java@v1
-      java-version: 8
+      with:
+        java-version: 8
     - name: Update Website
       run: cd zap-admin && ./gradlew updateWebsite
       env:
