@@ -23,10 +23,14 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import org.yaml.snakeyaml.Yaml;
+import org.zaproxy.zap.control.AddOn;
+import org.zaproxy.zap.control.AddOnCollection;
+import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 /**
  * Command line tool for generating the addons markdown file for website.
@@ -36,70 +40,45 @@ import org.w3c.dom.NodeList;
 public class GenerateAddonsYAML {
 
     private static final String ZAP_VERSIONS_FILE_NAME = "ZapVersions-2.9.xml";
-    private static final String NEXT_LINE = "\n";
-    private static final String EMPTY_STRING = "";
-    private static final String OUTPUT_DIR = "addons.yml";
+    private static final String OUTPUT_DIR = "addons.yaml";
 
     public static void main(String[] args) throws Exception {
 
-        StringBuilder sb = new StringBuilder("---" + NEXT_LINE);
         File xmlFile = new File(ZAP_VERSIONS_FILE_NAME);
         if (xmlFile.exists()) {
-
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            org.w3c.dom.Document doc = builder.parse(ZAP_VERSIONS_FILE_NAME);
-
-            NodeList list = doc.getElementsByTagName("addon");
-
-            for (int i = 0; i < list.getLength(); i++) {
-
-                Element addonParentElement = (Element) list.item(i);
-                NodeList addonIndividualNode =
-                        doc.getElementsByTagName("addon_" + addonParentElement.getTextContent());
-
-                if (addonIndividualNode.getLength() != 0) {
-                    Element addonInfo = (Element) addonIndividualNode.item(0);
-
-                    String addonName = getAddonDetails("name", addonInfo);
-                    String description = getAddonDetails("description", addonInfo);
-                    String author = getAddonDetails("author", addonInfo);
-                    String version = getAddonDetails("version", addonInfo);
-                    String file = getAddonDetails("file", addonInfo);
-                    String status = getAddonDetails("status", addonInfo);
-                    String url = getAddonDetails("url", addonInfo);
-                    String date = getAddonDetails("date", addonInfo);
-                    String size = getAddonDetails("size", addonInfo);
-
-                    sb.append("- name: " + addonName + NEXT_LINE)
-                            .append("  description: " + description + NEXT_LINE)
-                            .append("  author: " + author + NEXT_LINE)
-                            .append("  version: " + version + NEXT_LINE)
-                            .append("  file: " + file + NEXT_LINE)
-                            .append("  status: " + status + NEXT_LINE)
-                            .append("  url: " + url + NEXT_LINE)
-                            .append("  date: " + date + NEXT_LINE)
-                            .append("  link: " + EMPTY_STRING + NEXT_LINE)
-                            .append("  size: " + size + NEXT_LINE);
-
-                    sb.append(NEXT_LINE);
-                }
+            Map<String, String> addOnData;
+            Yaml yaml = new Yaml();
+            List<Map<String, String>> addOnList = new ArrayList<>();
+            AddOnCollection aoc =
+                    new AddOnCollection(
+                            new ZapXmlConfiguration(ZAP_VERSIONS_FILE_NAME),
+                            AddOnCollection.Platform.linux);
+            for (AddOn addOn : aoc.getAddOns()) {
+                addOnData = new HashMap<>();
+                addOnData.put("id", addOn.getId());
+                addOnData.put("name", addOn.getName());
+                addOnData.put("description", addOn.getDescription());
+                addOnData.put("author", addOn.getAuthor());
+                addOnData.put("version", addOn.getVersion().toString());
+                addOnData.put("file", addOn.getFile().getName());
+                addOnData.put("status", addOn.getStatus().name());
+                addOnData.put("url", addOn.getUrl().toString());
+                addOnData.put("date", "");
+                addOnData.put("infoUrl", "");
+                addOnData.put("downloadUrl", addOn.getUrl().toString());
+                addOnData.put("repoUrl", "");
+                addOnData.put("size", String.valueOf(addOn.getSize()));
+                addOnList.add(addOnData);
             }
 
+            String output = yaml.dump(addOnList);
             File file = new File(OUTPUT_DIR);
             try (BufferedWriter writer =
-                         Files.newBufferedWriter(file.toPath(), Charset.defaultCharset())) {
-                writer.write(sb.toString());
+                    Files.newBufferedWriter(file.toPath(), Charset.defaultCharset())) {
+                writer.write(output);
             }
         } else {
             System.out.print("File not found!");
         }
-    }
-
-    private static String getAddonDetails(String attributeName, Element addonInfo) {
-        if (addonInfo.getElementsByTagName(attributeName).item(0) != null) {
-            return addonInfo.getElementsByTagName(attributeName).item(0).getTextContent();
-        }
-        return EMPTY_STRING;
     }
 }
