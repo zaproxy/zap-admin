@@ -133,8 +133,6 @@ tasks {
         into.setFrom(files("ZapVersions-dev.xml", latestZapVersions))
         checksumAlgorithm.set("SHA-256")
     }
-
-
 }
 
 val baseUserName = "zaproxy"
