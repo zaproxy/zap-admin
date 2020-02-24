@@ -1,6 +1,7 @@
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
+import org.zaproxy.gradle.GenerateWebsiteAddonsData
 
 buildscript {
     repositories {
@@ -129,8 +130,8 @@ tasks {
         checksumAlgorithm.set("SHA-256")
     }
 
-    register<ZapTask>("generateWebsiteAddonsData") {
-        description = "Generate addons yaml using the xml file"
-        main = "org.zaproxy.admin.GenerateAddonsYAML"
+    register<GenerateWebsiteAddonsData>("generateWebsiteAddonsData") {
+        zapVersionFile.set("ZapVersions-2.9.xml")
+        outputFile.set("addons.yaml")
     }
 }

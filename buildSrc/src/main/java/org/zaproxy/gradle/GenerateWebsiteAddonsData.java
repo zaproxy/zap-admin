@@ -3,7 +3,7 @@
  *
  * ZAP is an HTTP/HTTPS proxy for assessing web application security.
  *
- * Copyright 2015 The ZAP Development Team
+ * Copyright 2020 The ZAP Development Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.zaproxy.admin;
+package org.zaproxy.gradle;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,31 +27,50 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.gradle.api.DefaultTask;
+import org.gradle.api.model.ObjectFactory;
+import org.gradle.api.provider.Property;
+import org.gradle.api.tasks.Input;
+import org.gradle.api.tasks.TaskAction;
 import org.yaml.snakeyaml.Yaml;
 import org.zaproxy.zap.control.AddOn;
 import org.zaproxy.zap.control.AddOnCollection;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
-/**
- * Command line tool for generating the addons markdown file for website.
- *
- * @author nirojan
- */
-public class GenerateAddonsYAML {
+public class GenerateWebsiteAddonsData extends DefaultTask {
 
-    private static final String ZAP_VERSIONS_FILE_NAME = "ZapVersions-2.9.xml";
-    private static final String OUTPUT_DIR = "addons.yaml";
+    private final Property<String> zapVersionFile;
+    private final Property<String> outputFile;
 
-    public static void main(String[] args) throws Exception {
+    public GenerateWebsiteAddonsData() {
+        ObjectFactory objects = getProject().getObjects();
+        this.zapVersionFile = objects.property(String.class);
+        this.outputFile = objects.property(String.class);
 
-        File xmlFile = new File(ZAP_VERSIONS_FILE_NAME);
+        setGroup("ZAP");
+        setDescription("Created the zap addons markdown file for website");
+    }
+
+    @Input
+    public Property<String> getZapVersionFile() {
+        return zapVersionFile;
+    }
+
+    @Input
+    public Property<String> getOutputFile() {
+        return outputFile;
+    }
+
+    @TaskAction
+    public void update() throws Exception {
+        File xmlFile = new File(zapVersionFile.get());
         if (xmlFile.exists()) {
             Map<String, String> addOnData;
             Yaml yaml = new Yaml();
             List<Map<String, String>> addOnList = new ArrayList<>();
             AddOnCollection aoc =
                     new AddOnCollection(
-                            new ZapXmlConfiguration(ZAP_VERSIONS_FILE_NAME),
+                            new ZapXmlConfiguration(String.valueOf(zapVersionFile)),
                             AddOnCollection.Platform.linux);
             for (AddOn addOn : aoc.getAddOns()) {
                 addOnData = new HashMap<>();
@@ -72,7 +91,7 @@ public class GenerateAddonsYAML {
             }
 
             String output = yaml.dump(addOnList);
-            File file = new File(OUTPUT_DIR);
+            File file = new File(outputFile.get());
             try (BufferedWriter writer =
                     Files.newBufferedWriter(file.toPath(), Charset.defaultCharset())) {
                 writer.write(output);
