@@ -89,8 +89,8 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
                 addOnData.put("url", addOn.getUrl().toString());
                 addOnData.put("date", "");
                 addOnData.put("infoUrl", getURL(addOn.getInfo()));
-                addOnData.put("downloadUrl", addOn.getUrl().toString());
-                addOnData.put("repoUrl", "");
+                addOnData.put("downloadUrl", getURL(addOn.getUrl()));
+                addOnData.put("repoUrl", getURL(null));
                 addOnData.put("size", String.valueOf(addOn.getSize()));
                 addOnList.add(addOnData);
             }
