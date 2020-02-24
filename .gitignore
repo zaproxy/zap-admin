@@ -23,6 +23,7 @@
 *.project
 *.settings
 /bin
+/buildSrc/bin
 
 # NetBeans
 # --------

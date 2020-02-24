@@ -21,6 +21,7 @@ package org.zaproxy.gradle;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -28,49 +29,53 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.gradle.api.DefaultTask;
+import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.model.ObjectFactory;
-import org.gradle.api.provider.Property;
-import org.gradle.api.tasks.Input;
+import org.gradle.api.tasks.InputFile;
+import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
-import org.yaml.snakeyaml.Yaml;
+import org.snakeyaml.engine.v2.api.Dump;
+import org.snakeyaml.engine.v2.api.DumpSettings;
 import org.zaproxy.zap.control.AddOn;
 import org.zaproxy.zap.control.AddOnCollection;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 public class GenerateWebsiteAddonsData extends DefaultTask {
 
-    private final Property<String> zapVersionFile;
-    private final Property<String> outputFile;
+    DumpSettings settings = DumpSettings.builder().build();
+    Dump dump = new Dump(settings);
+
+    private final RegularFileProperty zapVersions;
+    private final RegularFileProperty into;
 
     public GenerateWebsiteAddonsData() {
         ObjectFactory objects = getProject().getObjects();
-        this.zapVersionFile = objects.property(String.class);
-        this.outputFile = objects.property(String.class);
+        this.zapVersions = objects.fileProperty();
+        this.into = objects.fileProperty();
 
         setGroup("ZAP");
-        setDescription("Created the zap addons markdown file for website");
+        setDescription("Created the zap addons yaml file for website");
     }
 
-    @Input
-    public Property<String> getZapVersionFile() {
-        return zapVersionFile;
+    @OutputFile
+    public RegularFileProperty getInto() {
+        return into;
     }
 
-    @Input
-    public Property<String> getOutputFile() {
-        return outputFile;
+    @InputFile
+    public RegularFileProperty getZapVersions() {
+        return zapVersions;
     }
 
     @TaskAction
     public void update() throws Exception {
-        File xmlFile = new File(zapVersionFile.get());
+        File xmlFile = zapVersions.get().getAsFile();
         if (xmlFile.exists()) {
             Map<String, String> addOnData;
-            Yaml yaml = new Yaml();
             List<Map<String, String>> addOnList = new ArrayList<>();
             AddOnCollection aoc =
                     new AddOnCollection(
-                            new ZapXmlConfiguration(String.valueOf(zapVersionFile)),
+                            new ZapXmlConfiguration(zapVersions.get().getAsFile()),
                             AddOnCollection.Platform.linux);
             for (AddOn addOn : aoc.getAddOns()) {
                 addOnData = new HashMap<>();
@@ -83,21 +88,29 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
                 addOnData.put("status", addOn.getStatus().name());
                 addOnData.put("url", addOn.getUrl().toString());
                 addOnData.put("date", "");
-                addOnData.put("infoUrl", "");
+                addOnData.put("infoUrl", getURL(addOn.getInfo()));
                 addOnData.put("downloadUrl", addOn.getUrl().toString());
                 addOnData.put("repoUrl", "");
                 addOnData.put("size", String.valueOf(addOn.getSize()));
                 addOnList.add(addOnData);
             }
 
-            String output = yaml.dump(addOnList);
-            File file = new File(outputFile.get());
+            String output = dump.dumpToString(addOnList);
+
             try (BufferedWriter writer =
-                    Files.newBufferedWriter(file.toPath(), Charset.defaultCharset())) {
+                    Files.newBufferedWriter(
+                            into.get().getAsFile().toPath(), Charset.defaultCharset())) {
                 writer.write(output);
             }
         } else {
             System.out.print("File not found!");
         }
+    }
+
+    public String getURL(URL url) {
+        if (null != url) {
+            return url.toString();
+        }
+        return "";
     }
 }

@@ -1,0 +1,32 @@
+name: Update Website
+
+on:
+  push:
+    branch:
+    - master
+    paths:
+    - ZapVersions*.xml
+
+jobs:
+  update-website:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: zap-admin
+    - name: Checkout zaproxy-website
+      uses: actions/checkout@v2
+      with:
+        repository: zaproxy/zaproxy-website
+        persist-credentials: false
+        path: zaproxy-website
+        fetch-depth: 0
+    - name: Setup Java 8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 8
+    - name: Update Website
+      run: cd zap-admin && ./gradlew updateWebsite
+      env:
+        ZAPBOT_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}

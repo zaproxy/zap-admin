@@ -1,6 +1,9 @@
+import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
+import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
+import org.zaproxy.gradle.UpdateWebsite
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 
 buildscript {
@@ -81,6 +84,8 @@ spotless {
     }
 }
 
+val latestZapVersions = file("ZapVersions-2.9.xml")
+
 tasks {
     register<ZapTask>("generateReleaseNotes") {
         description = "Generates release notes."
@@ -115,7 +120,7 @@ tasks {
         linuxFileName.set("ZAP_@@VERSION@@_Linux.tar.gz")
         macFileName.set("ZAP_@@VERSION@@.dmg")
         releaseNotes.set("Bug fix and enhancement release.")
-        releaseNotesUrl.set("https://github.com/zaproxy/zap-core-help/wiki/HelpReleases@@VERSION_UNDERSCORES@@")
+        releaseNotesUrl.set("https://www.zaproxy.org/docs/desktop/releases/@@VERSION@@/")
         checksumAlgorithm.set("SHA-256")
     }
 
@@ -126,12 +131,69 @@ tasks {
     }
 
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
-        into.setFrom(files("ZapVersions-dev.xml", "ZapVersions-2.8.xml", "ZapVersions-2.9.xml"))
+        into.setFrom(files("ZapVersions-dev.xml", latestZapVersions))
         checksumAlgorithm.set("SHA-256")
     }
 
-    register<GenerateWebsiteAddonsData>("generateWebsiteAddonsData") {
-        zapVersionFile.set("ZapVersions-2.9.xml")
-        outputFile.set("addons.yaml")
-    }
+
 }
+
+val baseUserName = "zaproxy"
+val zaproxyRepo = "zaproxy"
+val adminRepo = "zap-admin"
+val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
+val websiteGeneratedDataComment = "# This file is automatically updated by $baseUserName/$adminRepo repo."
+
+val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainReleaseData::class) {
+    zapVersions.set(latestZapVersions)
+    generatedDataComment.set(websiteGeneratedDataComment)
+    into.set(file("$buildDir/c_main_files.yml"))
+
+    ghUserName.set(ghUser.name)
+    ghUserAuthToken.set(ghUser.authToken)
+
+    ghBaseUserName.set(baseUserName)
+    ghBaseRepo.set(zaproxyRepo)
+}
+
+val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyReleaseData::class) {
+    zapVersions.set(latestZapVersions)
+    generatedDataComment.set(websiteGeneratedDataComment)
+    into.set(file("$buildDir/e_weekly_files.yml"))
+}
+
+val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::class) {
+    zapVersions.set(latestZapVersions)
+    into.set(file("$buildDir/addons.yaml"))
+}
+
+val websiteRepoName = "zaproxy-website"
+val websiteRepoDir = file("$rootDir/../$websiteRepoName")
+val dataDir = "$websiteRepoDir/site/data"
+
+val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
+    group = "ZAP"
+    description = "Copies the generated website data to the website repo."
+
+    into("$dataDir/download")
+    from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+
+    into(dataDir)
+    from(generateWebsiteAddonsData)
+}
+
+tasks.register<UpdateWebsite>("updateWebsite") {
+    dependsOn(copyWebsiteGeneratedData)
+
+    ghUserName.set(ghUser.name)
+    ghUserEmail.set(ghUser.email)
+    ghUserAuthToken.set(ghUser.authToken)
+
+    ghBaseUserName.set(baseUserName)
+    ghBaseRepo.set(websiteRepoName)
+    ghSourceRepo.set(adminRepo)
+
+    websiteRepo.set(websiteRepoDir)
+}
+
+data class GitHubUser(val name: String, val email: String, val authToken: String?)
