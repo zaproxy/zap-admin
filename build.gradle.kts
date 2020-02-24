@@ -49,7 +49,6 @@ dependencies {
     compileOnly("com.github.spotbugs:spotbugs-annotations:3.1.12")
     compile("net.sf.json-lib:json-lib:2.4:jdk15")
     compile("org.zaproxy:zap:2.7.0")
-    compile("org.yaml:snakeyaml:1.25")
 
     val jupiterVersion = "5.5.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
@@ -197,3 +196,4 @@ tasks.register<UpdateWebsite>("updateWebsite") {
 }
 
 data class GitHubUser(val name: String, val email: String, val authToken: String?)
+
