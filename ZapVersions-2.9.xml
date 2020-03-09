@@ -1805,26 +1805,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>16</version>
-        <file>wappalyzer-alpha-16.zap</file>
+        <version>17</version>
+        <file>wappalyzer-alpha-17.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;SVG icon support.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The panel is now shown when the add-on is installed.&lt;/li&gt;
-&lt;li&gt;The site &amp;quot;names&amp;quot; are now normalized based on scheme and authority (including port if non-standard or specifically included). This represents a breaking change for any API code that is using listSite with host:port &amp;quot;names&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Fixed an issue where large PNG icons weren't being resized.&lt;/li&gt;
+&lt;li&gt;Update with Wappalyzer icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v16/wappalyzer-alpha-16.zap</url>
-        <hash>SHA-256:3b03f4a68439adf1e465b9138de5ad3a2a2d255d586aa361e4e67fbbcefd504f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v17/wappalyzer-alpha-17.zap</url>
+        <hash>SHA-256:0b15f807d4e988f0bf33ca8c5acdabc267ce2b55d804a8cbdbdf0336df20282d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-27</date>
-        <size>9791186</size>
+        <date>2020-03-09</date>
+        <size>9819997</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
