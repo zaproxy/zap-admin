@@ -1102,27 +1102,20 @@
         <name>Neonmarker</name>
         <description>Colors history table items based on tags</description>
         <author>Juha Kivekäs, Kingthorin</author>
-        <version>1.1.0</version>
-        <file>neonmarker-alpha-1.1.0.zap</file>
+        <version>1.2.0</version>
+        <file>neonmarker-alpha-1.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Migrated from https://github.com/juhakivekas/zap-extensions/tree/neonmarker/ to https://github.com/kingthorin/neonmarker.&lt;/li&gt;
-&lt;li&gt;Adapted to Gradle build.&lt;/li&gt;
-&lt;li&gt;Mapping 'rules' now display all available Tags not just those currently mapped to a history item.&lt;/li&gt;
-&lt;li&gt;Allow selection of custom colors with a Color Chooser.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Basic help entry.&lt;/li&gt;
-&lt;li&gt;Color Mappings can be added in scripts.&lt;/li&gt;
-&lt;li&gt;Add enable/disable toggle in toolbar.&lt;/li&gt;
+&lt;li&gt;The panel is now shown when the addon is installed.&lt;/li&gt;
+&lt;li&gt;Improvements to integrate more nicely with ZAP's dark mode.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/neonmarker-alpha-1.1.0.zap</url>
-        <hash>SHA-256:42ec116cd6e329b9707d47c1a6958684eb47680c538a13c2ca0ab0e1559eb4b2</hash>
-        <info>https://github.com/kingthorin/neonmarker</info>
-        <date>2020-01-02</date>
-        <size>24394</size>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/neonmarker-alpha-1.2.0.zap</url>
+        <hash>SHA-256:ddef4300e575810444411c03eaa4c9d4929356f12554ff4ec342c61957c129ab</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/neonmarker/</info>
+        <repo>https://github.com/kingthorin/neonmarker</repo>
+        <date>2020-04-14</date>
+        <size>26677</size>
         <not-before-version>2.8.0</not-before-version>
     </addon_neonmarker>
     <addon>onlineMenu</addon>
