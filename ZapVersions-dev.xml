@@ -655,26 +655,30 @@
     </addon_fuzz>
     <addon>fuzzdb</addon>
     <addon_fuzzdb>
-        <name>FuzzDB files</name>
+        <name>FuzzDB Files</name>
         <description>FuzzDB files which can be used with the ZAP fuzzer</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>fuzzdb-release-5.zap</file>
+        <version>6</version>
+        <file>fuzzdb-release-6.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Move web-backdoors to a new add-on, FuzzDB Web Backdoors, to avoid causing issues with AVs. &lt;a href="https://github.com/zaproxy/zaproxy/issues/5294"&gt;#5294&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;li&gt;Updated from upstream.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzdb-v5/fuzzdb-release-5.zap</url>
-        <hash>SHA-256:569a17547297f682da8d0abf51b5c9db24421c37c16023db7586588d0cbfbada</hash>
-        <info>https://github.com/fuzzdb-project/fuzzdb/</info>
-        <date>2019-06-27</date>
-        <size>5467143</size>
-        <not-before-version>2.8.0</not-before-version>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzdb-v6/fuzzdb-release-6.zap</url>
+        <hash>SHA-256:c8f913123ca86feedd9c2db76e3e1914d2954b93ca7e1b4c25341d895c9ff47d</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/fuzzdb-files/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-04-14</date>
+        <size>6174811</size>
+        <not-before-version>2.9.0</not-before-version>
     </addon_fuzzdb>
     <addon>fuzzdbwebbackdoors</addon>
     <addon_fuzzdbwebbackdoors>
