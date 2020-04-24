@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>4</id>
+        <id>5</id>
         <default>
-            <item>ZAP has a new home on the web: zaproxy.org</item>
-            <link>https://www.zaproxy.org/</link>
+            <item>You can now run the ZAP Baseline Scan as a GitHub Action</item>
+            <link>https://www.zaproxy.org/blog/2020-04-09-automate-security-testing-with-zap-and-github-actions/</link>
         </default>
-        <fr_FR>
-            <item>ZAP a une nouvelle maison sur le web: zaproxy.org</item>
-            <link>https://www.zaproxy.org/</link>
-        </fr_FR>
     </news>
 </ZAP>
