@@ -393,6 +393,22 @@
         <size>1740991</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_codedx>
+    <addon>commonlib</addon>
+    <addon_commonlib>
+        <name>Common Library</name>
+        <description>A common library, for use by other add-ons.</description>
+        <author>ZAP Dev Team</author>
+        <version>1.0.0</version>
+        <file>commonlib-release-1.0.0.zap</file>
+        <status>release</status>
+        <changes>&lt;p&gt;First version.&lt;/p&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.0.0/commonlib-release-1.0.0.zap</url>
+        <hash>SHA-256:742e06557bf2a510fb9ca493cc822519ce7939ffb37536d4eb8b472ca3c6327b</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-05-21</date>
+        <size>3826856</size>
+        <not-before-version>2.9.0</not-before-version>
+    </addon_commonlib>
     <addon>communityScripts</addon>
     <addon_communityScripts>
         <name>Community Scripts</name>
