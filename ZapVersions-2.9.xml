@@ -595,6 +595,24 @@
             </addons>
         </dependencies>
     </addon_domxss>
+    <addon>encoder</addon>
+    <addon_encoder>
+        <name>Encoder</name>
+        <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>encoder-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.1.0/encoder-alpha-0.1.0.zap</url>
+        <hash>SHA-256:71df0d111068229541bb6cd90315dc2a21518ccf4f57007c294b699af5f4fe53</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-05-20</date>
+        <size>61242</size>
+        <not-before-version>2.9.0</not-before-version>
+    </addon_encoder>
     <addon>exportreport</addon>
     <addon_exportreport>
         <name>Export Report</name>
@@ -1412,6 +1430,25 @@
         <size>58164</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_requester>
+    <addon>retire</addon>
+    <addon_retire>
+        <name>Retire.js</name>
+        <description>Retire.js</description>
+        <author>Nikita Mundhada and the ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>retire-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;First release.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.1.0/retire-alpha-0.1.0.zap</url>
+        <hash>SHA-256:2ac1e4c04b738f9725a09ddd30c42c4446628fbadaef5d4f9292b6f0adcf6a55</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-05-20</date>
+        <size>296169</size>
+        <not-before-version>2.9.0</not-before-version>
+    </addon_retire>
     <addon>reveal</addon>
     <addon_reveal>
         <name>Reveal</name>
