@@ -1819,25 +1819,24 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>wappalyzer-alpha-18.zap</file>
+        <version>19</version>
+        <file>wappalyzer-alpha-19.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Update with Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Wappalyzer's enabled state is now persisted between ZAP sessions.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Wappalyzer toolbar now has a toggle button to allow users to enable/disable the passive scanner simply from the GUI (Issue 5846).&lt;/li&gt;
+&lt;li&gt;Fixed the Evidence context menu now functions properly again.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v18/wappalyzer-alpha-18.zap</url>
-        <hash>SHA-256:50f6aa26cb1ccfef5640e41b5da3c628e5b16329126d16c08a7bb63b35d134e7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v19/wappalyzer-alpha-19.zap</url>
+        <hash>SHA-256:295c531e2d443d8350fe4b6cd64e11683833f494af1029d6f4b1cfd44d2aa24e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-04-07</date>
-        <size>9860712</size>
+        <date>2020-06-09</date>
+        <size>9963166</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
