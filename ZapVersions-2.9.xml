@@ -1177,25 +1177,32 @@
     <addon_openapi>
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
-        <author>ZAP Core Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak and Marcin Spiewak</author>
-        <version>15</version>
-        <file>openapi-beta-15.zap</file>
+        <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
+        <version>16</version>
+        <file>openapi-beta-16.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Map Structure support for OpenAPI v3.0 (Issue 5863).&lt;/li&gt;
+&lt;li&gt;Using OpenAPI Example values for value generation in request bodies and urls (Issue 5168).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Promote addon to Beta.&lt;/li&gt;
+&lt;li&gt;Improve content checks when spidering for specifications (Issue 5725).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Notify all redirects followed for proper passive scanning.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v15/openapi-beta-15.zap</url>
-        <hash>SHA-256:e8e39842e9d7d2a4ece3027b37f150ce0cddb9144072355139866ba3af430ed1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v16/openapi-beta-16.zap</url>
+        <hash>SHA-256:3dc1b93b5be3e642be62862dc9dadc069751454c10adc34ff1d19e13b4f1df20</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>11475616</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2020-06-09</date>
+        <size>11514652</size>
+        <not-before-version>2.9.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
     <addon_plugnhack>
