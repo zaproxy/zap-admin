@@ -50,12 +50,14 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
     private static final Dump DUMP = new Dump(SETTINGS);
 
     private final RegularFileProperty zapVersions;
+    private final Property<String> generatedDataComment;
     private final Property<String> websiteUrl;
     private final RegularFileProperty into;
 
     public GenerateWebsiteAddonsData() {
         ObjectFactory objects = getProject().getObjects();
         this.zapVersions = objects.fileProperty();
+        this.generatedDataComment = objects.property(String.class);
         this.websiteUrl = objects.property(String.class);
         this.into = objects.fileProperty();
 
@@ -71,6 +73,11 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
     @InputFile
     public RegularFileProperty getZapVersions() {
         return zapVersions;
+    }
+
+    @Input
+    public Property<String> getGeneratedDataComment() {
+        return generatedDataComment;
     }
 
     @Input
@@ -107,6 +114,8 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
             try (BufferedWriter writer =
                     Files.newBufferedWriter(
                             into.get().getAsFile().toPath(), Charset.defaultCharset())) {
+                writer.write(generatedDataComment.get());
+                writer.write("\n---\n");
                 writer.write(output);
             }
         } else {
