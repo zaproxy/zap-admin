@@ -25,7 +25,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import org.gradle.api.DefaultTask;
@@ -80,27 +80,23 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
     public void update() throws Exception {
         File xmlFile = zapVersions.get().getAsFile();
         if (xmlFile.exists()) {
-            Map<String, String> addOnData;
-            List<Map<String, String>> addOnList = new ArrayList<>();
-            AddOnCollection aoc =
-                    new AddOnCollection(
-                            new ZapXmlConfiguration(zapVersions.get().getAsFile()),
-                            AddOnCollection.Platform.linux);
+            List<Map<String, Object>> addOnList = new ArrayList<>();
+            ZapXmlConfiguration conf = new ZapXmlConfiguration(xmlFile);
+            AddOnCollection aoc = new AddOnCollection(conf, AddOnCollection.Platform.linux);
             for (AddOn addOn : aoc.getAddOns()) {
-                addOnData = new HashMap<>();
+                Map<String, Object> addOnData = new LinkedHashMap<>();
                 addOnData.put("id", addOn.getId());
                 addOnData.put("name", addOn.getName());
                 addOnData.put("description", addOn.getDescription());
                 addOnData.put("author", addOn.getAuthor());
-                addOnData.put("version", addOn.getVersion().toString());
-                addOnData.put("file", addOn.getFile().getName());
                 addOnData.put("status", addOn.getStatus().name());
-                addOnData.put("url", addOn.getUrl().toString());
-                addOnData.put("date", "");
                 addOnData.put("infoUrl", getUrl(addOn.getInfo(), websiteUrl.get()));
-                addOnData.put("downloadUrl", getUrl(addOn.getUrl(), websiteUrl.get()));
-                addOnData.put("repoUrl", getUrl(null, websiteUrl.get()));
-                addOnData.put("size", String.valueOf(addOn.getSize()));
+                addOnData.put("repoUrl", getUrl(addOn.getRepo(), websiteUrl.get()));
+                addOnData.put("downloadUrl", addOn.getUrl().toString());
+                addOnData.put("date", conf.getString("addon_" + addOn.getId() + "/date"));
+                addOnData.put(
+                        "version",
+                        convertVersion(conf.getString("addon_" + addOn.getId() + "/version")));
                 addOnList.add(addOnData);
             }
 
@@ -114,6 +110,10 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
         } else {
             System.out.print("File not found!");
         }
+    }
+
+    private static Object convertVersion(String version) {
+        return version.contains(".") ? version : Integer.valueOf(version);
     }
 
     private static String getUrl(URL url, String websiteUrl) {
