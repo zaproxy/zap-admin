@@ -168,17 +168,17 @@ val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::cl
 
 val websiteRepoName = "zaproxy-website"
 val websiteRepoDir = file("$rootDir/../$websiteRepoName")
-val dataDir = "$websiteRepoDir/site/data"
+val dataDir = file("$websiteRepoDir/site/data")
 
 val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     group = "ZAP"
     description = "Copies the generated website data to the website repo."
 
-    into("$dataDir/download")
-    from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
-
-    into(dataDir)
+    destinationDir = dataDir
     from(generateWebsiteAddonsData)
+    into("download") {
+        from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+    }
 }
 
 tasks.register<UpdateWebsite>("updateWebsite") {
