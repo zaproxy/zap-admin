@@ -38,14 +38,16 @@ import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
 import org.snakeyaml.engine.v2.api.Dump;
 import org.snakeyaml.engine.v2.api.DumpSettings;
+import org.snakeyaml.engine.v2.common.FlowStyle;
 import org.zaproxy.zap.control.AddOn;
 import org.zaproxy.zap.control.AddOnCollection;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
 public class GenerateWebsiteAddonsData extends DefaultTask {
 
-    DumpSettings settings = DumpSettings.builder().build();
-    Dump dump = new Dump(settings);
+    private static final DumpSettings SETTINGS =
+            DumpSettings.builder().setDefaultFlowStyle(FlowStyle.BLOCK).build();
+    private static final Dump DUMP = new Dump(SETTINGS);
 
     private final RegularFileProperty zapVersions;
     private final Property<String> websiteUrl;
@@ -100,7 +102,7 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
                 addOnList.add(addOnData);
             }
 
-            String output = dump.dumpToString(addOnList);
+            String output = DUMP.dumpToString(addOnList);
 
             try (BufferedWriter writer =
                     Files.newBufferedWriter(
