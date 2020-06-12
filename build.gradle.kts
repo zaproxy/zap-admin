@@ -1,10 +1,10 @@
+import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateWebsite
-import org.zaproxy.gradle.GenerateWebsiteAddonsData
 
 buildscript {
     repositories {
