@@ -162,6 +162,7 @@ val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyR
 val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::class) {
     zapVersions.set(latestZapVersions)
     into.set(file("$buildDir/addons.yaml"))
+    websiteUrl.set("https://www.zaproxy.org/")
 }
 
 val websiteRepoName = "zaproxy-website"

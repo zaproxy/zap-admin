@@ -31,6 +31,8 @@ import java.util.Map;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.model.ObjectFactory;
+import org.gradle.api.provider.Property;
+import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.OutputFile;
 import org.gradle.api.tasks.TaskAction;
@@ -46,11 +48,13 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
     Dump dump = new Dump(settings);
 
     private final RegularFileProperty zapVersions;
+    private final Property<String> websiteUrl;
     private final RegularFileProperty into;
 
     public GenerateWebsiteAddonsData() {
         ObjectFactory objects = getProject().getObjects();
         this.zapVersions = objects.fileProperty();
+        this.websiteUrl = objects.property(String.class);
         this.into = objects.fileProperty();
 
         setGroup("ZAP");
@@ -65,6 +69,11 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
     @InputFile
     public RegularFileProperty getZapVersions() {
         return zapVersions;
+    }
+
+    @Input
+    public Property<String> getWebsiteUrl() {
+        return websiteUrl;
     }
 
     @TaskAction
@@ -88,9 +97,9 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
                 addOnData.put("status", addOn.getStatus().name());
                 addOnData.put("url", addOn.getUrl().toString());
                 addOnData.put("date", "");
-                addOnData.put("infoUrl", getURL(addOn.getInfo()));
-                addOnData.put("downloadUrl", getURL(addOn.getUrl()));
-                addOnData.put("repoUrl", getURL(null));
+                addOnData.put("infoUrl", getUrl(addOn.getInfo(), websiteUrl.get()));
+                addOnData.put("downloadUrl", getUrl(addOn.getUrl(), websiteUrl.get()));
+                addOnData.put("repoUrl", getUrl(null, websiteUrl.get()));
                 addOnData.put("size", String.valueOf(addOn.getSize()));
                 addOnList.add(addOnData);
             }
@@ -107,10 +116,15 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
         }
     }
 
-    public String getURL(URL url) {
-        if (null != url) {
-            return url.toString();
+    private static String getUrl(URL url, String websiteUrl) {
+        if (url == null) {
+            return "";
         }
-        return "";
+
+        String strUrl = url.toString();
+        if (strUrl.startsWith(websiteUrl)) {
+            return strUrl.substring(websiteUrl.length() - 1);
+        }
+        return strUrl;
     }
 }
