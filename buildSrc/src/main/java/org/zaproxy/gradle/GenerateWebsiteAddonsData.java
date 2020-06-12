@@ -54,7 +54,7 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
         this.into = objects.fileProperty();
 
         setGroup("ZAP");
-        setDescription("Created the zap addons yaml file for website");
+        setDescription("Generates the add-ons data for the website.");
     }
 
     @OutputFile
