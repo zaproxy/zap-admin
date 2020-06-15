@@ -1,3 +1,4 @@
+import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
@@ -158,16 +159,26 @@ val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyR
     into.set(file("$buildDir/e_weekly_files.yml"))
 }
 
+val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::class) {
+    zapVersions.set(latestZapVersions)
+    generatedDataComment.set(websiteGeneratedDataComment)
+    into.set(file("$buildDir/addons.yaml"))
+    websiteUrl.set("https://www.zaproxy.org/")
+}
+
 val websiteRepoName = "zaproxy-website"
 val websiteRepoDir = file("$rootDir/../$websiteRepoName")
-val dataDir = "$websiteRepoDir/site/data"
+val dataDir = file("$websiteRepoDir/site/data")
 
 val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     group = "ZAP"
     description = "Copies the generated website data to the website repo."
 
-    into("$dataDir/download")
-    from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+    destinationDir = dataDir
+    from(generateWebsiteAddonsData)
+    into("download") {
+        from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+    }
 }
 
 tasks.register<UpdateWebsite>("updateWebsite") {
