@@ -1487,19 +1487,18 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>retire-alpha-0.2.0.zap</file>
-        <status>alpha</status>
+        <version>0.3.0</version>
+        <file>retire-beta-0.3.0.zap</file>
+        <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;URLs which were previously included as 'other info' are now properly included as alert 'references'.&lt;/li&gt;
-&lt;li&gt;CVE numbers are now included as part of 'other info'.&lt;/li&gt;
+&lt;li&gt;Add-on promoted to Beta.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.2.0/retire-alpha-0.2.0.zap</url>
-        <hash>SHA-256:4339944bc1ad3f8e82de7e8d992a0897da171ee20cff15224ef8f624e9a23051</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.3.0/retire-beta-0.3.0.zap</url>
+        <hash>SHA-256:f12bd84da60d0f93a9202086206bf03ebf11b459b09544bd5c197da17bfb77de</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-02</date>
-        <size>296690</size>
+        <date>2020-06-16</date>
+        <size>296619</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_retire>
     <addon>reveal</addon>
@@ -1898,24 +1897,24 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>wappalyzer-alpha-19.zap</file>
-        <status>alpha</status>
+        <version>20.0.0</version>
+        <file>wappalyzer-beta-20.0.0.zap</file>
+        <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Wappalyzer's enabled state is now persisted between ZAP sessions.&lt;/li&gt;
+&lt;li&gt;Update RE2/J library to latest version (1.4).&lt;/li&gt;
+&lt;li&gt;Add-on promoted to Beta.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed the Evidence context menu now functions properly again.&lt;/li&gt;
+&lt;li&gt;Fixed an exception which was occurring when the tab was shown during install.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v19/wappalyzer-alpha-19.zap</url>
-        <hash>SHA-256:295c531e2d443d8350fe4b6cd64e11683833f494af1029d6f4b1cfd44d2aa24e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v20.0.0/wappalyzer-beta-20.0.0.zap</url>
+        <hash>SHA-256:295a7569724b2bef4659514164c7a706ccad1fe0eefafab92eae0ccdb936370f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-09</date>
-        <size>9963166</size>
+        <date>2020-06-16</date>
+        <size>9951787</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
