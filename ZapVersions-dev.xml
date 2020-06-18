@@ -1487,18 +1487,19 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>retire-beta-0.3.0.zap</file>
+        <version>0.3.1</version>
+        <file>retire-beta-0.3.1.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add-on promoted to Beta.&lt;/li&gt;
+&lt;li&gt;Updated from upstream with new identifications, including: CVE-2020-7676 for angular &amp;lt; 1.8.0&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.3.0/retire-beta-0.3.0.zap</url>
-        <hash>SHA-256:f12bd84da60d0f93a9202086206bf03ebf11b459b09544bd5c197da17bfb77de</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.3.1/retire-beta-0.3.1.zap</url>
+        <hash>SHA-256:dcb93bb6eeb38e8b51816fda7f4984b94b5cd2ec40b8534ae6e5e124918162bb</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-16</date>
-        <size>296619</size>
+        <date>2020-06-18</date>
+        <size>296794</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_retire>
     <addon>reveal</addon>
