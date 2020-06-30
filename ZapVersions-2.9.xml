@@ -1888,24 +1888,23 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>20.0.0</version>
-        <file>wappalyzer-beta-20.0.0.zap</file>
+        <version>20.1.0</version>
+        <file>wappalyzer-beta-20.1.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update RE2/J library to latest version (1.4).&lt;/li&gt;
-&lt;li&gt;Add-on promoted to Beta.&lt;/li&gt;
+&lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed an exception which was occurring when the tab was shown during install.&lt;/li&gt;
+&lt;li&gt;Correct script matching, check only script elements (Issue 6054).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v20.0.0/wappalyzer-beta-20.0.0.zap</url>
-        <hash>SHA-256:295a7569724b2bef4659514164c7a706ccad1fe0eefafab92eae0ccdb936370f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v20.1.0/wappalyzer-beta-20.1.0.zap</url>
+        <hash>SHA-256:a4d1621e488fcab84d2f9ce927c4c396e16df3bb94434062ac0095fce98a12ee</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-16</date>
-        <size>9951787</size>
+        <date>2020-06-30</date>
+        <size>9271873</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
