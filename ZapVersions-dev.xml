@@ -1467,20 +1467,31 @@
         <name>Requester</name>
         <description>Request numbered panel.</description>
         <author>Surikato</author>
-        <version>3</version>
-        <file>requester-alpha-3.zap</file>
+        <version>4</version>
+        <file>requester-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Maintenance changes.&lt;br&gt;
-    Change default accelerator for Requester tab.&lt;br&gt;
-    Dynamically unload the add-on.&lt;br&gt;
-    Ensure use of title caps (Issue 2000).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/requester-alpha-3.zap</url>
-        <hash>SHA1:bd78559ccd89a94c2f0bc32dc09877a2b83b857e</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Allow to disable cookies (Issue 4934).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add the requests to the Sites tree to be able to active scan them (Issue 5778).&lt;/li&gt;
+&lt;li&gt;Enforce the mode when sending the request and following redirections.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v4/requester-alpha-4.zap</url>
+        <hash>SHA-256:5d6ef302b4b80cb9142e124d42bb1c890c3fc7801e89f7a3a24841311950d930</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/requester/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-10-15</date>
-        <size>58164</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-07-15</date>
+        <size>65198</size>
+        <not-before-version>2.9.0</not-before-version>
     </addon_requester>
     <addon>retire</addon>
     <addon_retire>
