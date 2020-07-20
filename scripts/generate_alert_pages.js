@@ -11,6 +11,7 @@ var PluginPassiveScanner = Java.type('org.zaproxy.zap.extension.pscan.PluginPass
 var FileWriter = Java.type('java.io.FileWriter');
 var PrintWriter = Java.type('java.io.PrintWriter');
 var date = (new Date()).toISOString().replace('T', ' ');
+var ignoreList = [50000, 50001, 50003];
 
 extAscan = org.parosproxy.paros.control.Control.getSingleton().
 	getExtensionLoader().getExtension(
@@ -43,6 +44,9 @@ for (var i = 0; i < plugins.length; i++) {
 print("Date: " + date);
 
 function printAscanRule(plugin) {
+	if (ignoreList.indexOf(plugin.getId()) !== -1) {
+		return;
+	}
 	print('Plugin ID: ' + plugin.getId());
 	var fw = new FileWriter(DIR + plugin.getId() + ".md");
 	var pw = new PrintWriter(fw);
@@ -77,10 +81,16 @@ function printAscanRule(plugin) {
 		}
 		pw.println('');
 	}
-	pw.println('### CWE: [' + plugin.getCweId() + '](https://cwe.mitre.org/data/definitions/' + plugin.getCweId() + '.html)');
-	pw.println('');
-	pw.println('### WASC:  ' + plugin.getWascId());
-	pw.println('');
+	var cweId = plugin.getCweId();
+	if (cweId > 0) {
+		pw.println('### CWE: [' + plugin.getCweId() + '](https://cwe.mitre.org/data/definitions/' + plugin.getCweId() + '.html)');
+		pw.println('');
+	}
+	var wascId = plugin.getWascId();
+	if (wascId > 0) {
+		pw.println('### WASC:  ' + wascId);
+		pw.println('');
+	}
 
 	pw.println('### Code');
 	pw.println('');
@@ -120,6 +130,9 @@ function getPrivateMethod(obj, methods, key, defaultVal) {
 }
 
 function printPscanRule(plugin) {
+	if (ignoreList.indexOf(plugin.getPluginId()) !== -1) {
+		return;
+	}
 	print('Plugin ID: ' + plugin.getPluginId());
 	var fw = new FileWriter(DIR + plugin.getPluginId() + ".md");
 	var pw = new PrintWriter(fw);
