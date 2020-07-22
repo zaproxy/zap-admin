@@ -199,31 +199,22 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>28</version>
-        <file>ascanrulesBeta-beta-28.zap</file>
+        <version>29</version>
+        <file>ascanrulesBeta-beta-29.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Change&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Add links to the code in the help.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Backup File Disclosure scan rule - updated CWE to 530, added reference links to alerts, made sure WASC and CWE identifiers are included in alerts.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use correct risk (&lt;code&gt;INFO&lt;/code&gt;) in User Agent Fuzzer, to run later in the scan.&lt;/li&gt;
+&lt;li&gt;Maintenance Changes.&lt;/li&gt;
+&lt;li&gt;Backup File Disclosure: don't raise issues for non-success codes unless at LOW threshold (Issue 6059).&lt;/li&gt;
+&lt;li&gt;ELMAH Information Leak: don't raise issues unless content looks good unless at LOW threshold (Issue 6076).&lt;/li&gt;
+&lt;li&gt;Session Fixation scan rule fix potential false positive on session cookie HttpOnly, and Secure flags (Issue 6082).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v28/ascanrulesBeta-beta-28.zap</url>
-        <hash>SHA-256:b06a53686a5ab039e6b2dc3005cf3fac5a0f5ace55e316f06cc63f041f68ead3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v29/ascanrulesBeta-beta-29.zap</url>
+        <hash>SHA-256:8aea773d31fc69a5204e483c9cb95b872fd8d4ea578a82280081ddc19d6462ca</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-02</date>
-        <size>1536285</size>
+        <date>2020-07-22</date>
+        <size>1537383</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
