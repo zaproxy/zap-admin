@@ -1,4 +1,4 @@
-name: Update Website
+name: Handle Release
 
 on:
   push:
@@ -8,13 +8,14 @@ on:
     - ZapVersions*.xml
 
 jobs:
-  update-website:
+  handle-release:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
       with:
         path: zap-admin
+        depth: 10
     - name: Checkout zaproxy-website
       uses: actions/checkout@v2
       with:
@@ -27,6 +28,6 @@ jobs:
       with:
         java-version: 8
     - name: Update Website
-      run: cd zap-admin && ./gradlew updateWebsite
+      run: cd zap-admin && ./gradlew handleRelease
       env:
         ZAPBOT_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}

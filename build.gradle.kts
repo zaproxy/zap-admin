@@ -1,6 +1,8 @@
+import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
+import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
@@ -83,6 +85,7 @@ spotless {
     }
 }
 
+val noAddOnsZapVersions = "ZapVersions.xml"
 val latestZapVersions = file("ZapVersions-2.9.xml")
 
 tasks {
@@ -181,7 +184,7 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     }
 }
 
-tasks.register<UpdateWebsite>("updateWebsite") {
+val updateWebsite by tasks.registering(UpdateWebsite::class) {
     dependsOn(copyWebsiteGeneratedData)
 
     ghUserName.set(ghUser.name)
@@ -193,6 +196,28 @@ tasks.register<UpdateWebsite>("updateWebsite") {
     ghSourceRepo.set(adminRepo)
 
     websiteRepo.set(websiteRepoDir)
+}
+
+val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
+    zapVersionsPath.set(noAddOnsZapVersions)
+    releaseState.set(file("$buildDir/release_state_last_commit.json"))
+}
+
+val handleWeeklyRelease by tasks.registering(HandleWeeklyRelease::class) {
+    releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
+
+    ghUserName.set(ghUser.name)
+    ghUserAuthToken.set(ghUser.authToken)
+
+    ghBaseUserName.set(baseUserName)
+    ghBaseRepo.set(zaproxyRepo)
+
+    eventType.set("release-weekly-docker")
+}
+
+tasks.register("handleRelease") {
+    dependsOn(updateWebsite)
+    dependsOn(handleWeeklyRelease)
 }
 
 data class GitHubUser(val name: String, val email: String, val authToken: String?)
