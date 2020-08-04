@@ -130,27 +130,19 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>35</version>
-        <file>ascanrules-release-35.zap</file>
+        <version>36</version>
+        <file>ascanrules-release-36.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Command Injection, Test Path Traversal, Test Cross Site ScriptV2 and Remote File Include rules are updated to include payloads for Null Byte Injection (Issue 3877).&lt;/li&gt;
-&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix typo in the help page.&lt;/li&gt;
-&lt;li&gt;Use correct risk (&lt;code&gt;HIGH&lt;/code&gt;) in External Redirect, to run earlier in the scan.&lt;/li&gt;
-&lt;li&gt;Correct tech check in SQL Injection scan rule, which could cause it to be skipped with imported contexts (Issue 5918).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v35/ascanrules-release-35.zap</url>
-        <hash>SHA-256:dae717858c58e14d836f373a066aefeaf7bf0a20132249816c5449557c60f8dc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v36/ascanrules-release-36.zap</url>
+        <hash>SHA-256:7b362e4a7c79b35b9762c804f5b1c04f3c8ac81ca5fd0282e57e2d133df7dce5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-02</date>
-        <size>2400708</size>
+        <date>2020-08-04</date>
+        <size>2400583</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_ascanrules>
     <addon>ascanrulesAlpha</addon>
@@ -396,15 +388,22 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.0.0</version>
-        <file>commonlib-release-1.0.0.zap</file>
+        <version>1.1.0</version>
+        <file>commonlib-release-1.1.0.zap</file>
         <status>release</status>
-        <changes>&lt;p&gt;First version.&lt;/p&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.0.0/commonlib-release-1.0.0.zap</url>
-        <hash>SHA-256:742e06557bf2a510fb9ca493cc822519ce7939ffb37536d4eb8b472ca3c6327b</hash>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;AbstractAppFilePlugin &amp;gt; don't raise issues for responses other than 200 - Ok unless at LOW threshold (Issue 6077). This will make the following Alpha and Beta active scan rules slightly less False Positive prone:
+&lt;ul&gt;
+&lt;li&gt;Trace.axd, .env File, .htaccess file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.1.0/commonlib-release-1.1.0.zap</url>
+        <hash>SHA-256:6ae8ce3c51b425f48822a146fe0e5933f559f2343aefe7b078b0c8c7eb254542</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-05-21</date>
-        <size>3826856</size>
+        <date>2020-08-04</date>
+        <size>3827153</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1486,19 +1485,19 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.3.1</version>
-        <file>retire-beta-0.3.1.zap</file>
+        <version>0.4.0</version>
+        <file>retire-beta-0.4.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated from upstream with new identifications, including: CVE-2020-7676 for angular &amp;lt; 1.8.0&lt;/li&gt;
+&lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.3.1/retire-beta-0.3.1.zap</url>
-        <hash>SHA-256:dcb93bb6eeb38e8b51816fda7f4984b94b5cd2ec40b8534ae6e5e124918162bb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.4.0/retire-beta-0.4.0.zap</url>
+        <hash>SHA-256:da65b6940a90cca83217dbb1260f8b736bdd22d7668e1374838b67f59e54beaa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-18</date>
-        <size>296794</size>
+        <date>2020-08-04</date>
+        <size>296789</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_retire>
     <addon>reveal</addon>
@@ -1910,23 +1909,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>20.1.0</version>
-        <file>wappalyzer-beta-20.1.0.zap</file>
+        <version>20.2.0</version>
+        <file>wappalyzer-beta-20.2.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct script matching, check only script elements (Issue 6054).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v20.1.0/wappalyzer-beta-20.1.0.zap</url>
-        <hash>SHA-256:a4d1621e488fcab84d2f9ce927c4c396e16df3bb94434062ac0095fce98a12ee</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v20.2.0/wappalyzer-beta-20.2.0.zap</url>
+        <hash>SHA-256:8e24a613c4d7f1ecfe3a92d40af6bfe6edc7b0ae90586906e784dd26317aff28</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-30</date>
-        <size>9271873</size>
+        <date>2020-08-04</date>
+        <size>9422142</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
