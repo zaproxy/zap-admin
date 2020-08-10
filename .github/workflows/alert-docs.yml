@@ -20,6 +20,7 @@ jobs:
     - name: Update alert docs
       env:
         ZAPBOT_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}
       run: |
         # Setup git details
         export GITHUB_USER=zapbot
@@ -34,5 +35,5 @@ jobs:
         git remote set-url origin https://$GITHUB_USER:$ZAPBOT_TOKEN@github.com/$GITHUB_USER/zaproxy-website.git
         git add site/content/docs/alerts
         git commit -m "Update alert pages" --signoff
-        git push --set-upstream origin master:update-alerts
+        git push --set-upstream origin master:update-alerts --force
         hub pull-request --no-edit
