@@ -4,7 +4,7 @@
 // The pages were created after starting a ZAP weekly release with the '-addoninstallall' option.
 
 // Change the DIR below to match the local directory containing the alert files
-var DIR = "/home/user/zaproxy-website/site/content/docs/alerts/";
+var DIR = "/zap/wrk/zaproxy-website/site/content/docs/alerts/";
 var Alert = Java.type('org.parosproxy.paros.core.scanner.Alert');
 var Constant = Java.type('org.parosproxy.paros.Constant');
 var PluginPassiveScanner = Java.type('org.zaproxy.zap.extension.pscan.PluginPassiveScanner');
