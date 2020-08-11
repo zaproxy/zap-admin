@@ -36,4 +36,4 @@ jobs:
         git add site/content/docs/alerts
         git commit -m "Update alert pages" --signoff
         git push --set-upstream origin update-alerts --force
-        hub pull-request --no-edit
+        hub pull-request -b zaproxy:master --no-edit
