@@ -11,7 +11,7 @@ var PluginPassiveScanner = Java.type('org.zaproxy.zap.extension.pscan.PluginPass
 var FileWriter = Java.type('java.io.FileWriter');
 var PrintWriter = Java.type('java.io.PrintWriter');
 var date = (new Date()).toISOString().replace('T', ' ');
-var ignoreList = [50000, 50001, 50003];
+var ignoreList = [50000, 50001, 50003, 60000, 60001, 60100, 60101];
 
 extAscan = org.parosproxy.paros.control.Control.getSingleton().
 	getExtensionLoader().getExtension(
