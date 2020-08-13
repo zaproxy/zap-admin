@@ -1,0 +1,39 @@
+name: Run npm audit fix on zaproxy-website
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0" # Every Sunday
+
+jobs:
+  npm-audit-fix:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout zaproxy-website
+      uses: actions/checkout@v2
+      with:
+        repository: zaproxy/zaproxy-website
+        persist-credentials: false
+        path: zaproxy-website
+        fetch-depth: 0
+    - name: Run npm audit fix
+      env:
+        GITHUB_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}
+      run: |
+        # Setup git details
+        export GITHUB_USER=zapbot
+        git config --global user.email "12745184+zapbot@users.noreply.github.com"
+        git config --global user.name $GITHUB_USER
+        cd zaproxy-website
+        # Run the npm commands
+        npm update
+        npm audit fix
+        git checkout -b npm-audit-fix
+        # Update the index to be sure git is aware of changes
+        git update-index -q --refresh
+        # Generate a PR
+        git remote set-url origin https://$GITHUB_USER:$GITHUB_TOKEN@github.com/$GITHUB_USER/zaproxy-website.git
+        git add package*
+        git commit -m "npm audit fix" --signoff
+        git push --set-upstream origin npm-audit-fix --force
+        # Will just fail if there are no changes
+        hub pull-request -b zaproxy:master --no-edit
