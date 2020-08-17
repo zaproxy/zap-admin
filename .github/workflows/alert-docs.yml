@@ -1,0 +1,39 @@
+name: Generate alert docs for website
+on: 
+  workflow_dispatch:
+
+jobs:
+  update-alerts:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: zap-admin
+    - name: Checkout zaproxy-website
+      uses: actions/checkout@v2
+      with:
+        repository: zaproxy/zaproxy-website
+        persist-credentials: false
+        path: zaproxy-website
+        fetch-depth: 0
+    - name: Update alert docs
+      env:
+        GITHUB_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}
+      run: |
+        # Setup git details
+        export GITHUB_USER=zapbot
+        git config --global user.email "12745184+zapbot@users.noreply.github.com"
+        git config --global user.name $GITHUB_USER
+        # Run the ZAP script
+        docker run -v $(pwd):/zap/wrk/:rw --user root -t owasp/zap2docker-live ./zap.sh -addoninstallall -silent -script /zap/wrk/zap-admin/scripts/generate_alert_pages.js -cmd
+        cd zaproxy-website
+        git checkout -b update-alerts
+        # Update the index to be sure git is aware of changes
+        git update-index -q --refresh
+        # Generate a PR
+        git remote set-url origin https://$GITHUB_USER:$GITHUB_TOKEN@github.com/$GITHUB_USER/zaproxy-website.git
+        git add site/content/docs/alerts
+        git commit -m "Update alert pages" --signoff
+        git push --set-upstream origin update-alerts --force
+        hub pull-request -b zaproxy:master --no-edit
