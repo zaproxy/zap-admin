@@ -2,6 +2,7 @@ import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
+import org.zaproxy.gradle.HandleMainRelease
 import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
@@ -215,9 +216,22 @@ val handleWeeklyRelease by tasks.registering(HandleWeeklyRelease::class) {
     eventType.set("release-weekly-docker")
 }
 
+val handleMainRelease by tasks.registering(HandleMainRelease::class) {
+    releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
+
+    ghUserName.set(ghUser.name)
+    ghUserAuthToken.set(ghUser.authToken)
+
+    ghBaseUserName.set(baseUserName)
+    ghBaseRepo.set(zaproxyRepo)
+
+    eventType.set("release-main-docker")
+}
+
 tasks.register("handleRelease") {
     dependsOn(updateWebsite)
     dependsOn(handleWeeklyRelease)
+    dependsOn(handleMainRelease)
 }
 
 data class GitHubUser(val name: String, val email: String, val authToken: String?)
