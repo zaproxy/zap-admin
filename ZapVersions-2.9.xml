@@ -765,6 +765,30 @@
         <size>703559</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_gettingStarted>
+    <addon>graphql</addon>
+    <addon_graphql>
+        <name>GraphQL Support</name>
+        <description>Inspect and attack GraphQL endpoints.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>graphql-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First Version&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;Import a GraphQL Schema&lt;/li&gt;
+&lt;li&gt;Generate Queries from an imported Schema&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.1.0/graphql-alpha-0.1.0.zap</url>
+        <hash>SHA-256:910bd8dbd6b089f3c26a43d8b8fbc0b562f5ae07b0677227d504b3cb2126d305</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-08-28</date>
+        <size>2166745</size>
+        <not-before-version>2.9.0</not-before-version>
+    </addon_graphql>
     <addon>groovy</addon>
     <addon_groovy>
         <name>Groovy Scripting</name>
