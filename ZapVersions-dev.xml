@@ -186,19 +186,21 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>30</version>
-        <file>ascanrulesBeta-beta-30.zap</file>
+        <version>31</version>
+        <file>ascanrulesBeta-beta-31.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Anti-CSRF Tokens Check address potential false positives by only analyzing HTML responses (Issue 6089).&lt;/li&gt;
+&lt;li&gt;ELMAH Information Leak ensure that test requests are appropriately rebuilt for this scan rule (Issue 6129).&lt;/li&gt;
+&lt;li&gt;SQL rules changed to double check timing attacks&lt;/li&gt;
+&lt;li&gt;Significantly reduced the number of attacks made by the SQLite rule&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v30/ascanrulesBeta-beta-30.zap</url>
-        <hash>SHA-256:2515f5b6ae22067f2e2df604367bd5565d0f92a911d45e126dbba45af4b24e7d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v31/ascanrulesBeta-beta-31.zap</url>
+        <hash>SHA-256:4ff7cf8ee559cf720cd7d35c8ba07856885407f8edde40b0e2351d21dd165b99</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-07-23</date>
-        <size>1537356</size>
+        <date>2020-09-02</date>
+        <size>1537976</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
