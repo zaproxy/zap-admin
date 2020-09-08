@@ -675,30 +675,19 @@
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.0.0</version>
-        <file>fuzz-beta-13.0.0.zap</file>
+        <version>13.0.1</version>
+        <file>fuzz-beta-13.0.1.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to add fuzz specific message components and views to fuzzer dialogue.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correctly handle other HTTP message locations.&lt;/li&gt;
-&lt;li&gt;Fixed error when missing getRequiredParamsNames and getOptionalParamsNames&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Use semantic versioning.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Fix exception when saving the options with no default category selected (Issue 6136).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.0.0/fuzz-beta-13.0.0.zap</url>
-        <hash>SHA-256:e6abcabe2a124a28de3d75a1c4fa89b26fe860603bcce5bf71a503219e1a69d4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.0.1/fuzz-beta-13.0.1.zap</url>
+        <hash>SHA-256:a58e79c08ccbf5bc9be9ebf465ec82935da7324b18cca6c26eded966c838610d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-17</date>
-        <size>1950693</size>
+        <date>2020-09-08</date>
+        <size>1951108</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_fuzz>
     <addon>fuzzdb</addon>
