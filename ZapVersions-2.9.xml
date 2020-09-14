@@ -618,19 +618,20 @@
         <name>Encoder</name>
         <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>encoder-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>encoder-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Help information.&lt;/li&gt;
-&lt;li&gt;Base64 character set and line break options, including migration of settings from core component.&lt;/li&gt;
+&lt;li&gt;rot13.js example script.&lt;/li&gt;
+&lt;li&gt;SHA256 predefined processor.&lt;/li&gt;
+&lt;li&gt;Full URL Encode predefined processor (Issue 6171).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.2.0/encoder-alpha-0.2.0.zap</url>
-        <hash>SHA-256:0805a4302152c80c24d6c83584dd119ad6766948c848bb6086e42eab29933398</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.3.0/encoder-alpha-0.3.0.zap</url>
+        <hash>SHA-256:cdfa776b7e62ce0f2e1cb3e9c37d74e6b0cb4e85beb9abae85da5d7342365260</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-02</date>
-        <size>76203</size>
+        <date>2020-09-14</date>
+        <size>79669</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_encoder>
     <addon>exportreport</addon>
