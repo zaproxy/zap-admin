@@ -1204,6 +1204,25 @@
         <size>41738465</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_jython>
+    <addon>kotlin</addon>
+    <addon_kotlin>
+        <name>Kotlin Support</name>
+        <description>Allows Kotlin to be used for ZAP scripting</description>
+        <author>StackHawk Engineering</author>
+        <version>1.0.0</version>
+        <file>kotlin-alpha-1.0.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;Kotlin scripting for the JVM&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/kotlin-v1.0.0/kotlin-alpha-1.0.0.zap</url>
+        <hash>SHA-256:0e86e69a41110b2f6bd901fce73cd1e0b8be81b2848f51f2e1123b73fc931f65</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/kotlin-support/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-09-14</date>
+        <size>48700873</size>
+        <not-before-version>2.9.0</not-before-version>
+    </addon_kotlin>
     <addon>neonmarker</addon>
     <addon_neonmarker>
         <name>Neonmarker</name>
