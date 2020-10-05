@@ -46,7 +46,7 @@ public class GenerateReleaseNotes {
     };
 
     private static final String REPO = "zaproxy/zaproxy";
-    private static final int MILESTONE_NUMBER = 5;
+    private static final int MILESTONE_NUMBER = 6;
 
     public static void main(String[] args) throws Exception {
 
@@ -123,7 +123,14 @@ public class GenerateReleaseNotes {
         Object[] devIssues = devIssuesMap.keySet().toArray();
         Arrays.sort(devIssues);
         for (Object key : devIssues) {
-            System.out.println("<li>Issue " + key + " : " + devIssuesMap.get(key) + "</li>");
+            System.out.println(
+                    "<li><a href=\"https://github.com/zaproxy/zaproxy/issues/"
+                            + key
+                            + "\">Issue "
+                            + key
+                            + "</a> : "
+                            + devIssuesMap.get(key)
+                            + "</li>");
         }
         System.out.println("</ul>");
         System.out.println("");
@@ -133,7 +140,14 @@ public class GenerateReleaseNotes {
         Object[] bugIssues = bugIssuesMap.keySet().toArray();
         Arrays.sort(bugIssues);
         for (Object key : bugIssues) {
-            System.out.println("<li>Issue " + key + " : " + bugIssuesMap.get(key) + "</li>");
+            System.out.println(
+                    "<li><a href=\"https://github.com/zaproxy/zaproxy/issues/"
+                            + key
+                            + "\">Issue "
+                            + key
+                            + "</a> : "
+                            + bugIssuesMap.get(key)
+                            + "</li>");
         }
         System.out.println("</ul>");
         System.out.println("");

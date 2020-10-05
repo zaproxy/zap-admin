@@ -19,6 +19,7 @@
  */
 package org.zaproxy.admin;
 
+import java.io.IOException;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -37,6 +38,9 @@ public class CountDownloads {
             "https://api.github.com/repos/zaproxy/zaproxy/releases/tags/";
 
     private static void parseRelease(JSONObject tag) throws Exception {
+        if (tag == null) {
+            return;
+        }
         String tagName = tag.getString("tag_name");
         System.out.println("Tag " + tagName);
 
@@ -52,7 +56,12 @@ public class CountDownloads {
     }
 
     private static JSONObject getRelease(String tag) throws Exception {
-        return JSONObject.fromObject(Utils.readUrl(TAG_URL + tag));
+        try {
+            return JSONObject.fromObject(Utils.readUrl(TAG_URL + tag));
+        } catch (IOException e) {
+            System.out.println("Tag " + tag + "\n\tNo stats");
+            return null;
+        }
     }
 
     public static void main(String[] args) throws Exception {
@@ -71,6 +80,8 @@ public class CountDownloads {
         }
 
         // Explicitly request the most recent main releases
+        parseRelease(getRelease("v2.10.0"));
+        parseRelease(getRelease("v2.9.0"));
         parseRelease(getRelease("v2.8.0"));
         parseRelease(getRelease("2.7.0"));
         parseRelease(getRelease("2.6.0"));
