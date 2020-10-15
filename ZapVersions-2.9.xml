@@ -1002,23 +1002,19 @@
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>hud-beta-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>hud-beta-0.12.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Minimal telemetry implementation and config option&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;To use ZAP 2.9.0 jar for access to the latest features&lt;/li&gt;
+&lt;li&gt;Problems with Firefox 81 due to referer header not being set cross domain. &lt;a href="https://github.com/zaproxy/zap-hud/issues/815"&gt;#815&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.11.0/hud-beta-0.11.0.zap</url>
-        <hash>SHA-256:1499b1d5853b7ac229ae90b627a778052c2f8a8572d3ceb175afdd231580da58</hash>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.12.0/hud-beta-0.12.0.zap</url>
+        <hash>SHA-256:a72ba697769a4cf3232cb7e312950f16635fa9489abb7cd4faf1b39d53ff7d96</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/hud/</info>
         <repo>https://github.com/zaproxy/zap-hud/</repo>
-        <date>2020-08-06</date>
-        <size>907219</size>
+        <date>2020-10-15</date>
+        <size>907643</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
