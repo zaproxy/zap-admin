@@ -1542,19 +1542,21 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>retire-beta-0.4.0.zap</file>
-        <status>beta</status>
+        <version>0.5.0</version>
+        <file>retire-release-0.5.0.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;Add-on promoted to Release.&lt;/li&gt;
+&lt;li&gt;Added example alert.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.4.0/retire-beta-0.4.0.zap</url>
-        <hash>SHA-256:da65b6940a90cca83217dbb1260f8b736bdd22d7668e1374838b67f59e54beaa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.5.0/retire-release-0.5.0.zap</url>
+        <hash>SHA-256:8bebbf5497de011ddf9c33dcbc35553343ad50d9e38a6555df8b0f741b112a3f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-04</date>
-        <size>296789</size>
+        <date>2020-10-29</date>
+        <size>297817</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_retire>
     <addon>reveal</addon>
