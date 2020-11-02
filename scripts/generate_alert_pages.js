@@ -13,6 +13,7 @@ var FileWriter = Java.type('java.io.FileWriter');
 var PrintWriter = Java.type('java.io.PrintWriter');
 var date = (new Date()).toISOString().replace('T', ' ');
 var ignoreList = [50000, 50001, 50003, 60000, 60001, 60100, 60101];
+var codeMap = {40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java'}
 
 extAscan = org.parosproxy.paros.control.Control.getSingleton().
 	getExtensionLoader().getExtension(
@@ -50,72 +51,85 @@ function printAlerts(alerts, name, type, status, clazz) {
 		print('Plugin ID: ' + pluginId + ' - ignored');
 		return;
 	}
-	print('Plugin ID: ' + pluginId);
-	var fw = new FileWriter(DIR + pluginId + ".md");
-	var pw = new PrintWriter(fw);
-	pw.println('---');
-	pw.println('title: "' + name.replaceAll("\"", "'") + '"');
-	pw.println('alertid: ' + pluginId);
-	pw.println('alerttype: "' + type + '"');
-	pw.println('alertcount: ' + alerts.length);
-	pw.println('status: ' + status);
-	pw.println('type: alert');
-	pw.println('date: ' + date);
-	pw.println('lastmod: ' + date);
-	pw.println('---');
-    for (var a=0; a < alerts.length; a++) {
+	var pkgs = clazz.split('.');
+	var pkg = pkgs[pkgs.length - 2];
+	var codeurl = 'https://github.com/zaproxy/zap-extensions/blob/master/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
+	if (pluginId in codeMap) {
+		codeurl = codeMap[pluginId]
+	}
+
+	if (alerts.length > 1) {
+		print('Plugin ID: ' + pluginId);
+		var fw = new FileWriter(DIR + pluginId + ".md");
+		var pw = new PrintWriter(fw);
+		pw.println('---');
+		pw.println('title: "' + name.replaceAll("\"", "'") + '"');
+		pw.println('alertid: ' + pluginId);
+		pw.println('alertindex: ' + pluginId * 100);
+		pw.println('alerttype: "' + type + '"');
+		pw.println('status: ' + status);
+		pw.println('type: alertset');
+		pw.println('alerts:');
+	     for (var a=0; a < alerts.length; a++) {
+			pw.println('   ' + alerts[a].getPluginId() + "-" + (a+1) + ':');
+			pw.println('      alertid: ' + alerts[a].getPluginId() + "-" + (a+1));
+			pw.println('      name: ' + alerts[a].getName());
+		}
+		pw.println('code: ' + codeurl);
+		pw.println('date: ' + date);
+		pw.println('lastmod: ' + date);
+		pw.println('---');
+		pw.close();
+	}
+
+     for (var a=0; a < alerts.length; a++) {
+		alertindex = alerts[a].getPluginId() * 100;
+		if (alerts.length > 1) {
+			pluginId = alerts[a].getPluginId() + "-" + (a+1);
+			alertindex += a + 1;
+		}
+		print('Plugin ID: ' + pluginId);
+		var fw = new FileWriter(DIR + pluginId + ".md");
+		var pw = new PrintWriter(fw);
 		var alert = alerts[a];
-		pw.println('## Name: ' + alert.getName());
-		pw.println('');
-		if (a == 0) {
-			pw.println('### Type: ' + type);
-			pw.println('');
-		}
+		pw.println('---');
+		pw.println('title: "' + alert.getName().replaceAll("\"", "'") + '"');
+		pw.println('alertid: ' + pluginId);
+		pw.println('alertindex: ' + alertindex);
+		pw.println('alerttype: "' + type + '"');
+		pw.println('alertcount: ' + alerts.length);
+		pw.println('status: ' + status);
+		pw.println('type: alert');
 		if (alert.getRisk() >= 0) {
-			pw.println('### Risk: ' + Alert.MSG_RISK[alert.getRisk()]);
+			pw.println('risk: ' + Alert.MSG_RISK[alert.getRisk()]);
 		}
-		pw.println('');
-		pw.println('### Description');
-		pw.println('');
-		pw.println(alert.getDescription());
-		pw.println('');
-		pw.println('### Solution');
-		pw.println('');
-		pw.println(alert.getSolution());
-		pw.println('');
+		pw.println('solution: "' + alert.getSolution().replaceAll("\"", "'") + '"');
 		var refs = alert.getReference();
 		if (refs && refs.length() > 0) {
-			pw.println('### References');
-			pw.println('');
+			pw.println('references:');
 			var refsArray = refs.split('\n');
 			for (var i = 0; i < refsArray.length; i++) {
-				pw.println('* ' + refsArray[i]);
+				if (refsArray[i].length > 0) {
+					pw.println('   - ' + refsArray[i]);
+				}
 			}
-			pw.println('');
 		}
 		var cweId = alert.getCweId();
 		if (cweId > 0) {
-			pw.println('### CWE: [' + alert.getCweId() + '](https://cwe.mitre.org/data/definitions/' + alert.getCweId() + '.html)');
-			pw.println('');
+			pw.println('cwe: ' + cweId);
 		}
 		var wascId = alert.getWascId();
 		if (wascId > 0) {
-			pw.println('### WASC:  ' + wascId);
-			pw.println('');
+			pw.println('wasc: ' + wascId);
 		}
+		pw.println('code: ' + codeurl);
+		pw.println('date: ' + date);
+		pw.println('lastmod: ' + date);
+		pw.println('---');
+		pw.println(alert.getDescription());
+		pw.close();
 	}
-	
-	pw.println('### Code');
-	pw.println('');
-	var pkgs = clazz.split('.');
-	var pkg = pkgs[pkgs.length - 2];
-	var url = 'https://github.com/zaproxy/zap-extensions/blob/master/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
-	pw.println(' * [' + pkgs.join('/') + '.java' + '](' + url + ')');
-	pw.println('');
 
-	pw.println('###### Last updated: ' + date);
-	pw.close();
-	
 }
 
 function printAscanRule(plugin) {
@@ -158,7 +172,6 @@ function getPrivateMethod(obj, methods, key, defaultVal) {
 		} catch (e) {
 		}
 	}
-	// Helps to show whats left to do :)
 	print ('  Failed on ' + obj.getName() + ' ' + methods);
 	return defaultVal;
 }
