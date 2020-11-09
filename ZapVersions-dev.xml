@@ -1754,25 +1754,32 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.1.0</version>
-        <file>spiderAjax-release-23.1.0.zap</file>
+        <version>23.2.0</version>
+        <file>spiderAjax-release-23.2.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;li&gt;Allow to specify allowed resources (Issue 3236). The allowed resources are always fetched
+even if out of scope, allowing to include necessary resources (e.g. scripts) from 3rd-parties.
+By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;code&gt;.css&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Enable websockets (&lt;a href="https://github.com/zaproxy/zaproxy/issues/4521"&gt;Issue 4521&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Unregister the event publisher when the add-on is uninstalled.&lt;/li&gt;
+&lt;li&gt;Persist the state of &amp;quot;Remove Without Confirmation&amp;quot; of non-default elements to click.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.1.0/spiderAjax-release-23.1.0.zap</url>
-        <hash>SHA-256:20265ffe64ffa2a4e8d20d98cecdae55775a63a56ec34c40d3c09f27bc73c188</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.2.0/spiderAjax-release-23.2.0.zap</url>
+        <hash>SHA-256:e400d71bb80a6bf0854e6cc9ac5ea1a1c4ecaae341cdadc3886ca57c1d178430</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>2492604</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2020-11-09</date>
+        <size>2510914</size>
+        <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
