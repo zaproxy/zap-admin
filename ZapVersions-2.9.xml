@@ -1369,23 +1369,23 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>28</version>
-        <file>pscanrulesAlpha-alpha-28.zap</file>
+        <version>29</version>
+        <file>pscanrulesAlpha-alpha-29.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add rule for Site Isolation (CORP/COEP/COOP).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed bug where Sub Resource Integrity Attribute Missing scan rule alerts even when HTML asset is inline (Issue 6047).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v28/pscanrulesAlpha-alpha-28.zap</url>
-        <hash>SHA-256:d8031fcd372c27348b7cd379085157db865664d9c50cf2ee540a479edc895ac3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v29/pscanrulesAlpha-alpha-29.zap</url>
+        <hash>SHA-256:4eae60e511a4a3c4994893d1a1c074bc8f382e82d9bf84ab01ab164cf4b4cf56</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-13</date>
-        <size>1026586</size>
+        <date>2020-11-16</date>
+        <size>1039420</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
