@@ -761,6 +761,22 @@
         <size>703559</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_gettingStarted>
+    <addon>graaljs</addon>
+    <addon_graaljs>
+        <name>GraalVM JavaScript</name>
+        <description>Provides the GraalVM JavaScript engine for ZAP scripting.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>graaljs-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;p&gt;First version.&lt;/p&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.1.0/graaljs-alpha-0.1.0.zap</url>
+        <hash>SHA-256:0c4f7dd20388e4008e978ec25307dda57b3685dffae8e7288d8364d26a93ab7f</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2020-11-17</date>
+        <size>19632933</size>
+        <not-before-version>2.9.0</not-before-version>
+    </addon_graaljs>
     <addon>graphql</addon>
     <addon_graphql>
         <name>GraphQL Support</name>
