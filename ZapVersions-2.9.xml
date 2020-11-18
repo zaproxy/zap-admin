@@ -1409,32 +1409,21 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>pscanrulesBeta-beta-22.zap</file>
+        <version>23</version>
+        <file>pscanrulesBeta-beta-23.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added links to the code in the help.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;'Modern Web Application' scan rule was added, being promoted to Beta.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;'PII Disclosure scanner' alerts and help entry renamed 'PII Disclosure' for clarity and proper title caps.&lt;/li&gt;
-&lt;li&gt;'PII Disclosure' added further false positive handling with regard to exponential numbers such as 2.4670000000000001E-2 or 2.4670000000000001E2.&lt;/li&gt;
+&lt;li&gt;Update RE2/J library to latest version (1.5).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;'Servlet Parameter Pollution' scan rule will now only scan responses for in Context URLs for which the Technology JSP/Serlet is applicable.&lt;/li&gt;
-&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
-&lt;li&gt;'PII Disclosure' added support for looking up evidence against an Open Source Bank Identification Number List. Confidence is now modified based on whether the lookup is successful or not. Additional details are added to 'Other Info' if available (Issue 5842).&lt;/li&gt;
-&lt;li&gt;Changed to set Risk Info and Confidence Low for the following passive scan rules: User Controlled Cookie, User Controlled JavaScript Event, and User Controlled Charset.&lt;/li&gt;
+&lt;li&gt;Content Security Policy header missing scan rule changed to Medium risk in order to align with other CSP findings, and confidence to High (Issue 6301).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v22/pscanrulesBeta-beta-22.zap</url>
-        <hash>SHA-256:995175942f3fafd8e5fa5df6c9de58be7baf67a1638e22cec515a189e5ec7e48</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v23/pscanrulesBeta-beta-23.zap</url>
+        <hash>SHA-256:56468802b24c98d5540f1a387b55c976fe21739cdc8905503c60b01d27372409</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-02</date>
-        <size>742136</size>
+        <date>2020-11-18</date>
+        <size>730125</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
