@@ -1361,20 +1361,25 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>pscanrules-release-29.zap</file>
+        <version>30</version>
+        <file>pscanrules-release-30.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
-&lt;li&gt;Correct spelling of &amp;quot;frame-ancestors&amp;quot; in the alert details of the CSP scan rule wildcard directive check (Issue 6014).&lt;/li&gt;
+&lt;li&gt;The CSP scan rule now checks if the form-action directive allows wildcards.&lt;/li&gt;
+&lt;li&gt;The CSP scan rule now includes further information in the description of allowed wildcard directives alerts when the impacted directive is one (or more) which doesn't fallback to default-src.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Changed ViewState and XFrameOption rules to return example alerts for the docs.&lt;/li&gt;
+&lt;li&gt;Handle an IllegalArgumentException that could occur in the CSP scan rule if multiple CSP headers were present and one (or more) had a report-uri directive when trying to merge them.&lt;/li&gt;
+&lt;li&gt;Allow to ignore cookies in same site and loosely scoped scan rules.&lt;/li&gt;
+&lt;li&gt;The Application Error scan rule will not alert on web assembly responses.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v29/pscanrules-release-29.zap</url>
-        <hash>SHA-256:75fa277ab95edc996a07647d612a28e9bd41ffb51de50c05dcfff851cfeb43d8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v30/pscanrules-release-30.zap</url>
+        <hash>SHA-256:628939b0f08d1d1641ede143cbecdf252a8dfbe4137f0004850ddaa4ff3231f6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-02</date>
-        <size>756291</size>
+        <date>2020-11-26</date>
+        <size>761620</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
