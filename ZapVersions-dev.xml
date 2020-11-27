@@ -134,48 +134,64 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>ascanrules-release-36.zap</file>
+        <version>37</version>
+        <file>ascanrules-release-37.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were promoted to Beta: ELMAH Information Leak, .htaccess Information Leak (Issue 6211).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v36/ascanrules-release-36.zap</url>
-        <hash>SHA-256:7b362e4a7c79b35b9762c804f5b1c04f3c8ac81ca5fd0282e57e2d133df7dce5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v37/ascanrules-release-37.zap</url>
+        <hash>SHA-256:0d96697e21a4d8a6e0a9b323b7dce94f1160645746ee408ee065ecc028fa92ee</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-04</date>
-        <size>2400583</size>
+        <date>2020-11-27</date>
+        <size>2406450</size>
         <not-before-version>2.9.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_ascanrules>
     <addon>ascanrulesAlpha</addon>
     <addon_ascanrulesAlpha>
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>ascanrulesAlpha-alpha-29.zap</file>
+        <version>30</version>
+        <file>ascanrulesAlpha-alpha-30.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;'Hidden File Finder' ensure that test requests are appropriately rebuilt for this scan rule (Issue 6129).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;'Hidden File Finder' will raise fewer alerts at Thresholds other than High (Issue 6116).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed Mongo DB Injection false positive (Issue 6025).&lt;/li&gt;
+&lt;li&gt;Terminology.&lt;/li&gt;
+&lt;li&gt;SocketTimeoutException in the LDAP Injection scan rule.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;'Hidden File Finder' added more patterns.&lt;/li&gt;
+&lt;li&gt;The following scan rules were removed and promoted to Beta: Cloud Meta Data, .env File, Hidden Files, XSLT Injection (Issue 6211).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v29/ascanrulesAlpha-alpha-29.zap</url>
-        <hash>SHA-256:e110724c044707e248726c445353ec95d132c408e8e121fff5a612c53cf0df2e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v30/ascanrulesAlpha-alpha-30.zap</url>
+        <hash>SHA-256:2333752918a991c91dfc9ecd925fa1dcdc0d3207c873f32b3877707dbcb01125</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-13</date>
-        <size>1233601</size>
+        <date>2020-11-27</date>
+        <size>1207766</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
@@ -190,21 +206,36 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>ascanrulesBeta-beta-31.zap</file>
+        <version>32</version>
+        <file>ascanrulesBeta-beta-32.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;ELMAH Information Leak ensure that test requests are appropriately rebuilt for this scan rule (Issue 6129).&lt;/li&gt;
-&lt;li&gt;SQL rules changed to double check timing attacks&lt;/li&gt;
-&lt;li&gt;Significantly reduced the number of attacks made by the SQLite rule&lt;/li&gt;
+&lt;li&gt;XML External Entity Attack scan rule changed to parse response body irrespective of the HTTP response status code. (Issue 6203)&lt;/li&gt;
+&lt;li&gt;XML External Entity Attack scan rule changed to skip only Remote File Inclusion Attack when Callback extension is not available.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The Relative Path Confusion scan rule no longer treats 'href=&amp;quot;#&amp;quot;' as a problematic use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminology.&lt;/li&gt;
+&lt;li&gt;Correct reason shown when the XML External Entity Attack scan rule is skipped.&lt;/li&gt;
+&lt;li&gt;SocketTimeoutException in the Proxy Disclosure scan rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were promoted to Beta: Cloud Meta Data, .env File, Hidden Files, XSLT Injection (Issue 6211).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rules were removed and promoted to Release: ELMAH Information Leak, .htaccess Information Leak (Issue 6211).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v31/ascanrulesBeta-beta-31.zap</url>
-        <hash>SHA-256:4ff7cf8ee559cf720cd7d35c8ba07856885407f8edde40b0e2351d21dd165b99</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v32/ascanrulesBeta-beta-32.zap</url>
+        <hash>SHA-256:d4514e91c9e61481fce029b5a01f00606dbb451062bb50380382df5d81dab6e7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-09-02</date>
-        <size>1537976</size>
+        <date>2020-11-27</date>
+        <size>1556720</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
