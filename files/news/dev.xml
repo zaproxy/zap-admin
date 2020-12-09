@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>6</id>
+        <id>7</id>
         <default>
-            <item>Want to learn more about ZAP? There are now 3 sets of videos on the ZAP website.</item>
-            <link>https://www.zaproxy.org/videos/</link>
+            <item>The latest ZAP weekly release is the ZAP 2.10.0 candidate release. Feedback much appreciated!</item>
+            <link>https://www.zaproxy.org/download/#weekly</link>
         </default>
     </news>
 </ZAP>
