@@ -87,7 +87,7 @@ spotless {
 }
 
 val noAddOnsZapVersions = "ZapVersions.xml"
-val latestZapVersions = file("ZapVersions-2.9.xml")
+val latestZapVersions = file("ZapVersions-2.10.xml")
 
 tasks {
     register<ZapTask>("generateReleaseNotes") {
