@@ -680,57 +680,75 @@
         <name>Export Report</name>
         <description>Report Export module that allows users to customize content and export in a desired format.</description>
         <author>Goran Sarenkapa - JordanGS</author>
-        <version>6</version>
-        <file>exportreport-alpha-6.zap</file>
+        <version>7</version>
+        <file>exportreport-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Remove API when uninstalling.&lt;/li&gt;
-&lt;li&gt;Fix exception with Java 9+ (Issue 4214).&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Completed PDF Output support (Issue 5535)&lt;/li&gt;
+&lt;li&gt;Added option to specify active scan id in API.&lt;/li&gt;
+&lt;li&gt;Added option to specify inclusion of passive alerts in API and command line.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exportreport-v6/exportreport-alpha-6.zap</url>
-        <hash>SHA-256:18bcc0f55e0584489abce42bfc93db44ab370153b137c8322099879a046f2b14</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exportreport-v7/exportreport-alpha-7.zap</url>
+        <hash>SHA-256:2872f45ec25c0d7a30659a8a23ca9155c931a0aabb52bf386f20aa7819631d40</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/export-report/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-06-24</date>
-        <size>8224348</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>12510634</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_exportreport>
     <addon>formhandler</addon>
     <addon_formhandler>
         <name>Form Handler</name>
         <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>formhandler-alpha-2.zap</file>
-        <status>alpha</status>
-        <changes>Add context menu to params panel.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/formhandler-alpha-2.zap</url>
-        <hash>SHA1:d7057d5b93bdd8f356a9814f30269b336c38c612</hash>
+        <version>3</version>
+        <file>formhandler-beta-3.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Promote to beta&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v3/formhandler-beta-3.zap</url>
+        <hash>SHA-256:4d6dcd6ae856e277f5b342dcdad178c1ce8643a7efce41cc3b963e806abf267d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/form-handler/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-10-26</date>
-        <size>2200662</size>
-        <not-before-version>2.6.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>2200844</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
     <addon_fuzz>
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.0.1</version>
-        <file>fuzz-beta-13.0.1.zap</file>
+        <version>13.1.0</version>
+        <file>fuzz-beta-13.1.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix exception when saving the options with no default category selected (Issue 6136).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Prevent adding null fuzz handlers, which would cause exceptions when selecting the fuzz message.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.0.1/fuzz-beta-13.0.1.zap</url>
-        <hash>SHA-256:a58e79c08ccbf5bc9be9ebf465ec82935da7324b18cca6c26eded966c838610d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.1.0/fuzz-beta-13.1.0.zap</url>
+        <hash>SHA-256:e756e74ddd4e422e321f8fff37cfe7ef54e643894f0c80f4eaa9abc2fecc5063</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-09-08</date>
-        <size>1951108</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>1951853</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_fuzz>
     <addon>fuzzdb</addon>
     <addon_fuzzdb>
@@ -844,21 +862,36 @@
     </addon_graphql>
     <addon>groovy</addon>
     <addon_groovy>
-        <name>Groovy Scripting</name>
-        <description>Allows Groovy to be used for ZAP scripting - templates included</description>
+        <name>Groovy Support</name>
+        <description>Adds Groovy support to ZAP</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>groovy-alpha-2.zap</file>
-        <status>alpha</status>
-        <changes>Add help.&lt;br&gt;
-    Added script templates.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/groovy-alpha-2.zap</url>
-        <hash>SHA1:7f0d54eaf987a435e941a422378c124f3fd29259</hash>
+        <version>3.0.0</version>
+        <file>groovy-beta-3.0.0.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Promote to beta status.&lt;/li&gt;
+&lt;li&gt;Change add-on name/description and update help.&lt;/li&gt;
+&lt;li&gt;Start using Semantic Versioning.&lt;/li&gt;
+&lt;li&gt;Update Groovy from 2.4.14 to 3.0.2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix links in script templates.&lt;/li&gt;
+&lt;li&gt;Fix missing parameter functions in template&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/groovy-v3.0.0/groovy-beta-3.0.0.zap</url>
+        <hash>SHA-256:0499c6e5d43b674b9c29a770ee8dcccadf72c188827593fbe2d9137ae2f4b8e9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/groovy-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-04-19</date>
-        <size>7334399</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>18987590</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_groovy>
     <addon>help</addon>
     <addon_help>
@@ -1176,20 +1209,34 @@
     </addon_invoke>
     <addon>jruby</addon>
     <addon_jruby>
-        <name>Ruby scripting</name>
+        <name>Ruby Scripting</name>
         <description>Allows Ruby to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>jruby-beta-6.zap</file>
+        <version>7</version>
+        <file>jruby-beta-7.zap</file>
         <status>beta</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jruby-beta-6.zap</url>
-        <hash>SHA1:99166f0e9f4337329ae8452da032986214f1eb73</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the help to mention the bundled JRuby version.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix link in a script template.&lt;/li&gt;
+&lt;li&gt;Fix exception while uninstalling the add-on with newer Java versions.&lt;/li&gt;
+&lt;li&gt;Fix passive template.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jruby-v7/jruby-beta-7.zap</url>
+        <hash>SHA-256:13d7259fbe2eea83af1c03eca17b95031ace925189a554bd1d36fee927267d93</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ruby-scripting/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>22477473</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>21955502</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_jruby>
     <addon>jsonview</addon>
     <addon_jsonview>
@@ -1247,20 +1294,31 @@
         <name>Python Scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>jython-beta-10.zap</file>
+        <version>11</version>
+        <file>jython-beta-11.zap</file>
         <status>beta</status>
-        <changes>Correctly set path module defined in the options and address UI hang (Issue 4651).&lt;br&gt;
-    Minor tweak in extender template.&lt;br&gt;
-    Add default template for Script Input Vector.&lt;br&gt;
-    Add help page for the options.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jython-beta-10.zap</url>
-        <hash>SHA1:fedf4e6c30dfb52543d851bb668ab1c8101dd58f</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Update Jython from 2.7.1 to 2.7.2.&lt;/li&gt;
+&lt;li&gt;Update the help to mention the bundled Jython version.&lt;/li&gt;
+&lt;li&gt;Jython templates now includes an extender script (getInputsFromuser.py) for setting global script variables based on user input.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix link in a script template.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v11/jython-beta-11.zap</url>
+        <hash>SHA-256:5e6103473dbcc63ef937a8dd07313daa2210862c482d6ed31c7d0e285d792344</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/python-scripting/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-05-08</date>
-        <size>41738465</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>43263624</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_jython>
     <addon>kotlin</addon>
     <addon_kotlin>
