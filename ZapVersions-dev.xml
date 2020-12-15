@@ -629,21 +629,31 @@
     <addon_domxss>
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
-        <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>domxss-alpha-9.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <author>Aabha Biyani, ZAP Dev Team</author>
+        <version>10</version>
+        <file>domxss-beta-10.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use default browser when no browser is specified in the configuration rule.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Add link to the code in the help.&lt;/li&gt;
+&lt;li&gt;Performance improvements&lt;/li&gt;
+&lt;li&gt;Support for Chrome&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Promote to beta&lt;/li&gt;
+&lt;li&gt;Now clicking on different buttons throughout the page to see if it triggers XSS.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v9/domxss-alpha-9.zap</url>
-        <hash>SHA-256:069505357e4b18ffa1bc47ae2ea10fd3ddd5845b5e94b3edaefee9eb2dede254</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v10/domxss-beta-10.zap</url>
+        <hash>SHA-256:12002f1582abf8d8be521d2ceec7c44846dde2916e16a29a11d92c86588f663e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-06-12</date>
-        <size>213767</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>214982</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1807,57 +1817,52 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>scripts-beta-26.zap</file>
+        <version>27</version>
+        <file>scripts-beta-27.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add repo URL.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.8.0.&lt;/li&gt;
-&lt;li&gt;Update help to mention custom script/global variables (Issue 3402).&lt;/li&gt;
-&lt;li&gt;Move empty template entry to the top, for consistency with other fields in New Script dialogue.&lt;/li&gt;
-&lt;li&gt;Save cursor position when switching between scripts.&lt;/li&gt;
-&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Tweak help content.&lt;/li&gt;
+&lt;li&gt;Show script engine when editing the script.&lt;/li&gt;
+&lt;li&gt;Fixed case where script print statements could deadlock ZAP.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Support dark mode and dynamic Look and Feel switching&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix links in script templates.&lt;/li&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
+&lt;li&gt;Do not show the Enable/Disable Script menu item if the script can't be enabled/disabled, in some
+look and feels it could show an empty menu item (Issue 6256).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v26/scripts-beta-26.zap</url>
-        <hash>SHA-256:339f9e622f2d17d429435d41b1a6933b73cdee0cedba42b76d2c46170f3004b7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v27/scripts-beta-27.zap</url>
+        <hash>SHA-256:d84c87d1658733d103e0bf51b83405079fed9cab5ae532b65af91a0b19f2ec6c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>661061</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>658848</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
     <addon_selenium>
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.2.0</version>
-        <file>selenium-release-15.2.0.zap</file>
+        <version>15.3.0</version>
+        <file>selenium-release-15.3.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for selenium scripts which are invoked when browsers are launched.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Set Firefox browser.tabs.documentchannel pref to false to fix HUD issue&lt;/li&gt;
+&lt;li&gt;Invoke Selenium scripts synchronously for AJAX Spider's browsers, to prevent interferences with the crawler.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.2.0/selenium-release-15.2.0.zap</url>
-        <hash>SHA-256:9d3ee836b05eb0ab47c3b6c793a3840ccb3d0297f310d3598cb74a8e924f4b43</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.3.0/selenium-release-15.3.0.zap</url>
+        <hash>SHA-256:4b988d147f01f74ad7143b2edf23c6e61af94327001bb015f80a6deefb18953a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-03-31</date>
-        <size>24408666</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>24408467</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
     <addon_sequence>
@@ -2009,38 +2014,50 @@ By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;c
         <name>TLS Debug</name>
         <description>Provides a tab which allows to quickly debug a TLS/SSL connection</description>
         <author>P.M.J. Roth</author>
-        <version>3</version>
-        <file>tlsdebug-alpha-3.zap</file>
+        <version>4</version>
+        <file>tlsdebug-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Update minimum ZAP version to 2.5.0.&lt;br&gt;
-    Change default accelerator for TLS Debug tab.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/tlsdebug-alpha-3.zap</url>
-        <hash>SHA1:1cbbbeca9e1681c968cddf612c7938c0dd6e1181</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Use appropriate colour in dark mode (Issue 5542).&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tlsdebug-v4/tlsdebug-alpha-4.zap</url>
+        <hash>SHA-256:3e470b0db652f121212fc78e0406d07e3227eece599198c420fa75d90ec31e79</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/tls-debug/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-10-15</date>
-        <size>244231</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>244464</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_tlsdebug>
     <addon>tokengen</addon>
     <addon_tokengen>
         <name>Token Generation and Analysis</name>
         <description>Allows you to generate and analyze pseudo random tokens, such as those used for session handling or CSRF protection</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>tokengen-beta-13.zap</file>
+        <version>14</version>
+        <file>tokengen-beta-14.zap</file>
         <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Address problem from v12 where analysis dialog wasn't being shown after collection (this was due to a build issue).&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Improve permissions and space handling when saving.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/tokengen-v13/tokengen-beta-13.zap</url>
-        <hash>SHA-256:d5bcf7649ccf5c88fcf5a7104990986d08b94eedfcd2d4d3b178d5945d5827df</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tokengen-v14/tokengen-beta-14.zap</url>
+        <hash>SHA-256:0eef2ed8a1fc410e43ba5b74f8d854166e5bc4d6be0b86c5ba4539d5a6618451</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/token-generator/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-07-15</date>
-        <size>479372</size>
-        <not-before-version>2.6.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>479116</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_tokengen>
     <addon>treetools</addon>
     <addon_treetools>
@@ -2109,22 +2126,27 @@ By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;c
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>20.3.0</version>
-        <file>wappalyzer-beta-20.3.0.zap</file>
-        <status>beta</status>
+        <version>21.0.0</version>
+        <file>wappalyzer-release-21.0.0.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;When available the description of a given app/technology will show in the tooltip for a row in the table, and be included in detailed API responses.&lt;/li&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;Add-on promoted to Release.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for CSS patterns, aligning with upstream project.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v20.3.0/wappalyzer-beta-20.3.0.zap</url>
-        <hash>SHA-256:b82fceb04e7f24e26c33d57cda1b910b49e4753fa59a18da0fcedd2fdfb0405f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.0.0/wappalyzer-release-21.0.0.zap</url>
+        <hash>SHA-256:78c8fe4b669a6f084bfc9845fc9bf53ae62171404ecda64a333beea9b98895a5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-09-30</date>
-        <size>9586413</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>11351712</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
     <addon_webdriverlinux>
