@@ -779,24 +779,26 @@
         <name>Getting Started with ZAP Guide</name>
         <description>A short Getting Started with ZAP Guide</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>gettingStarted-release-11.zap</file>
+        <version>12</version>
+        <file>gettingStarted-release-12.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Update link to OWASP ZAP homepage.&lt;/li&gt;
+&lt;li&gt;Updated for 2.10.0&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated for 2.9.0&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/gettingStarted-v11/gettingStarted-release-11.zap</url>
-        <hash>SHA-256:83aad2a4df5f525db8acb620b3b39671cc97be6c8f3149d8b3807d4940f523cf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/gettingStarted-v12/gettingStarted-release-12.zap</url>
+        <hash>SHA-256:b4cd18320db2484acaa0b619eb9583ab02a0f9e0a02a2a8f875dc5c5b677631d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/getting-started-guide/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>703559</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>711269</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_gettingStarted>
     <addon>graaljs</addon>
     <addon_graaljs>
@@ -1307,56 +1309,65 @@
         <name>Online menus</name>
         <description>ZAP Online menu items</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>onlineMenu-release-7.zap</file>
+        <version>8</version>
+        <file>onlineMenu-release-8.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;li&gt;Video page link.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Updated to point to the new ZAP website&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;ZAP Homepage to ZAP Website.&lt;/li&gt;
+&lt;li&gt;ZAP Extensions to ZAP Marketplace&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Newsletter link.&lt;/li&gt;
+&lt;li&gt;Wiki link.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/onlineMenu-v7/onlineMenu-release-7.zap</url>
-        <hash>SHA-256:59973f69b5173bf8c3ca37ff2692bc093cf5a23d0b9869d436b4140d4467e729</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/onlineMenu-v8/onlineMenu-release-8.zap</url>
+        <hash>SHA-256:8e340ed2dd8a610be9a30b03ed7841a8508d333b17cce41f1d16bf14f9710319</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/online-menu/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>215277</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>214208</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_onlineMenu>
     <addon>openapi</addon>
     <addon_openapi>
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>16</version>
-        <file>openapi-beta-16.zap</file>
+        <version>17</version>
+        <file>openapi-beta-17.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Map Structure support for OpenAPI v3.0 (Issue 5863).&lt;/li&gt;
-&lt;li&gt;Using OpenAPI Example values for value generation in request bodies and urls (Issue 5168).&lt;/li&gt;
+&lt;li&gt;Handle cookie parameters (Issue 6045).&lt;/li&gt;
+&lt;li&gt;Use default values in &lt;code&gt;x-www-form-urlencoded&lt;/code&gt; and &lt;code&gt;json&lt;/code&gt; bodies (Issue 6095).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Improve content checks when spidering for specifications (Issue 5725).&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;li&gt;Show import exceptions in the Output tab (Issue 6042).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Notify all redirects followed for proper passive scanning.&lt;/li&gt;
+&lt;li&gt;Add imported messages synchronously to the Sites tree (Issue 5936).&lt;/li&gt;
+&lt;li&gt;Correct parent dialogue when choosing the file to import (Issue 6041).&lt;/li&gt;
+&lt;li&gt;Properly handle no schema when generating the request body (Issue 6042).&lt;/li&gt;
+&lt;li&gt;Return API error &lt;code&gt;illegal_parameter&lt;/code&gt; (instead of &lt;code&gt;internal_error&lt;/code&gt;) when unable to get the OpenAPI definition from the provided URL.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v16/openapi-beta-16.zap</url>
-        <hash>SHA-256:3dc1b93b5be3e642be62862dc9dadc069751454c10adc34ff1d19e13b4f1df20</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v17/openapi-beta-17.zap</url>
+        <hash>SHA-256:3967fb286f4e309925ea39785e1bc00e146c6c1f06af1dce6aa79b8e7a73a014</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-09</date>
-        <size>11514652</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>11831927</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
     <addon_plugnhack>
@@ -1398,26 +1409,28 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>30</version>
-        <file>pscanrules-release-30.zap</file>
+        <version>31</version>
+        <file>pscanrules-release-31.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The CSP scan rule now checks if the form-action directive allows wildcards.&lt;/li&gt;
-&lt;li&gt;The CSP scan rule now includes further information in the description of allowed wildcard directives alerts when the impacted directive is one (or more) which doesn't fallback to default-src.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Changed ViewState and XFrameOption rules to return example alerts for the docs.&lt;/li&gt;
-&lt;li&gt;Handle an IllegalArgumentException that could occur in the CSP scan rule if multiple CSP headers were present and one (or more) had a report-uri directive when trying to merge them.&lt;/li&gt;
-&lt;li&gt;Allow to ignore cookies in same site and loosely scoped scan rules.&lt;/li&gt;
-&lt;li&gt;The Application Error scan rule will not alert on web assembly responses.&lt;/li&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;The following scan rules now support Custom Page definitions:
+&lt;ul&gt;
+&lt;li&gt;Application Error&lt;/li&gt;
+&lt;li&gt;Cache Control&lt;/li&gt;
+&lt;li&gt;X-Content-Type-Options&lt;/li&gt;
+&lt;li&gt;X-Frame-Options&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v30/pscanrules-release-30.zap</url>
-        <hash>SHA-256:628939b0f08d1d1641ede143cbecdf252a8dfbe4137f0004850ddaa4ff3231f6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v31/pscanrules-release-31.zap</url>
+        <hash>SHA-256:40c865f578861acd21889308acd36c76e92a34b57844cc92259bcb7cc7ee4d1f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-26</date>
-        <size>761620</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>761506</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1455,22 +1468,29 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>23</version>
-        <file>pscanrulesBeta-beta-23.zap</file>
+        <version>24</version>
+        <file>pscanrulesBeta-beta-24.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update RE2/J library to latest version (1.5).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Content Security Policy header missing scan rule changed to Medium risk in order to align with other CSP findings, and confidence to High (Issue 6301).&lt;/li&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;The following scan rules now support Custom Page definitions:
+&lt;ul&gt;
+&lt;li&gt;Insecure Form Load&lt;/li&gt;
+&lt;li&gt;Insecure Form Post&lt;/li&gt;
+&lt;li&gt;User Controlled Charset&lt;/li&gt;
+&lt;li&gt;User Controlled HTML Attribute&lt;/li&gt;
+&lt;li&gt;User Controlled JavaScript Event&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v23/pscanrulesBeta-beta-23.zap</url>
-        <hash>SHA-256:56468802b24c98d5540f1a387b55c976fe21739cdc8905503c60b01d27372409</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v24/pscanrulesBeta-beta-24.zap</url>
+        <hash>SHA-256:d6498a9c18a2e3350c962a68eb7875a519b0282373b37319a23e7009a89be580</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-18</date>
-        <size>730125</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>730221</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1484,20 +1504,26 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>28</version>
-        <file>quickstart-release-28.zap</file>
+        <version>29</version>
+        <file>quickstart-release-29.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Warning when HUD is enabled only in scope&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use appropriate colour in dark mode (Issue 5542).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use AJAX Spider options in Automated Scan (Issue 5981).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v28/quickstart-release-28.zap</url>
-        <hash>SHA-256:5be97d69fbb9fe7b68565dec6111778fb0c34b08329dc7cba48635bbfbf734db</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v29/quickstart-release-29.zap</url>
+        <hash>SHA-256:20b97134d7ac2272e2ccbb3ce644c8b4d2c62d3760101afffdc67299eab1f420</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-02-04</date>
-        <size>536541</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>536792</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_quickstart>
     <addon>reflect</addon>
     <addon_reflect>
@@ -1593,22 +1619,21 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>retire-release-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>retire-release-0.6.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Add-on promoted to Release.&lt;/li&gt;
-&lt;li&gt;Added example alert.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.5.0/retire-release-0.5.0.zap</url>
-        <hash>SHA-256:8bebbf5497de011ddf9c33dcbc35553343ad50d9e38a6555df8b0f741b112a3f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.6.0/retire-release-0.6.0.zap</url>
+        <hash>SHA-256:c345cbc540add109aaa172136a5cf41c69331474fade63bf110bd9afc5d5de65</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-10-29</date>
-        <size>297817</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>297881</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_retire>
     <addon>reveal</addon>
     <addon_reveal>
