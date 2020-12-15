@@ -134,28 +134,31 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>37</version>
-        <file>ascanrules-release-37.zap</file>
+        <version>38</version>
+        <file>ascanrules-release-38.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;The following scan rules now support Custom Page definitions:
 &lt;ul&gt;
-&lt;li&gt;Terminology&lt;/li&gt;
+&lt;li&gt;Buffer Overflow&lt;/li&gt;
+&lt;li&gt;Directory Browsing&lt;/li&gt;
+&lt;li&gt;Format String&lt;/li&gt;
+&lt;li&gt;Parameter Tamper&lt;/li&gt;
+&lt;li&gt;Path Traversal&lt;/li&gt;
+&lt;li&gt;Remote File Include&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure WEB-INF&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were promoted to Beta: ELMAH Information Leak, .htaccess Information Leak (Issue 6211).&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v37/ascanrules-release-37.zap</url>
-        <hash>SHA-256:0d96697e21a4d8a6e0a9b323b7dce94f1160645746ee408ee065ecc028fa92ee</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v38/ascanrules-release-38.zap</url>
+        <hash>SHA-256:9f57189d59301874cafd40bdc58cabce3b091a420b7a46eefb23055553e743ed</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-27</date>
-        <size>2406450</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>2406227</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -206,37 +209,34 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>32</version>
-        <file>ascanrulesBeta-beta-32.zap</file>
+        <version>33</version>
+        <file>ascanrulesBeta-beta-33.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;XML External Entity Attack scan rule changed to parse response body irrespective of the HTTP response status code. (Issue 6203)&lt;/li&gt;
-&lt;li&gt;XML External Entity Attack scan rule changed to skip only Remote File Inclusion Attack when Callback extension is not available.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The Relative Path Confusion scan rule no longer treats 'href=&amp;quot;#&amp;quot;' as a problematic use.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;The following scan rules now support Custom Page definitions:
 &lt;ul&gt;
-&lt;li&gt;Terminology.&lt;/li&gt;
-&lt;li&gt;Correct reason shown when the XML External Entity Attack scan rule is skipped.&lt;/li&gt;
-&lt;li&gt;SocketTimeoutException in the Proxy Disclosure scan rule.&lt;/li&gt;
+&lt;li&gt;Hidden Files&lt;/li&gt;
+&lt;li&gt;HTTPS as HTTP&lt;/li&gt;
+&lt;li&gt;Insecure HTTP Methods&lt;/li&gt;
+&lt;li&gt;Integer Overflow&lt;/li&gt;
+&lt;li&gt;Padding Oracle&lt;/li&gt;
+&lt;li&gt;Remove Code Execution CVE-2012-1823&lt;/li&gt;
+&lt;li&gt;Session Fixation&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure CVE-2012-1823&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure Git&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure SVN&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were promoted to Beta: Cloud Meta Data, .env File, Hidden Files, XSLT Injection (Issue 6211).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were removed and promoted to Release: ELMAH Information Leak, .htaccess Information Leak (Issue 6211).&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v32/ascanrulesBeta-beta-32.zap</url>
-        <hash>SHA-256:d4514e91c9e61481fce029b5a01f00606dbb451062bb50380382df5d81dab6e7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v33/ascanrulesBeta-beta-33.zap</url>
+        <hash>SHA-256:33f8bd7950b2f6212aa210af0baf954ef7f47ff84fdb0ea4ba7028fde9f47900</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-27</date>
-        <size>1556720</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>1556432</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -319,30 +319,26 @@
         <name>Forced Browse</name>
         <description>Forced browsing of files and directories using code from the OWASP DirBuster tool</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>bruteforce-beta-9.zap</file>
+        <version>10</version>
+        <file>bruteforce-beta-10.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targets ZAP 2.8.0.&lt;/li&gt;
-&lt;li&gt;Fix un-handled exception when base request doesn't end in a slash (Issue 5435).&lt;/li&gt;
-&lt;li&gt;Split up the functionality from the desktop UI and provide external access (Issue 2848)&lt;/li&gt;
-&lt;li&gt;Updated addon to use log4j instead of stdout (Issue 5530)&lt;/li&gt;
-&lt;li&gt;Log exceptions instead of printing to stderr (Issue 5564).&lt;/li&gt;
-&lt;li&gt;Address UI hang.&lt;/li&gt;
+&lt;li&gt;Added option and functionality to find files without extension. (Issue 5883)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Table export button.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Ensure requests are counted and progress updated (Issue 5437).&lt;/li&gt;
+&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v9/bruteforce-beta-9.zap</url>
-        <hash>SHA-256:67a3035c99059df14610dcaee19f6ddd7822e133e030f501d4d3dba5c3faaa3f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v10/bruteforce-beta-10.zap</url>
+        <hash>SHA-256:eb466993d97db676a422a459bdef85793da0910b1a0f830fd2e711c64fa162cc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/forced-browse/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>519253</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>519374</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_bruteforce>
     <addon>bugtracker</addon>
     <addon_bugtracker>
@@ -420,23 +416,24 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.1.0</version>
-        <file>commonlib-release-1.1.0.zap</file>
+        <version>1.2.0</version>
+        <file>commonlib-release-1.2.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;AbstractAppFilePlugin &amp;gt; don't raise issues for responses other than 200 - Ok unless at LOW threshold (Issue 6077). This will make the following Alpha and Beta active scan rules slightly less False Positive prone:
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;AbstractAppFilePlugin &amp;gt; ensure that test requests are appropriately rebuilt for this type of scan rule (Issue 6129). This will make the following Alpha and Beta active scan rules slightly more accurate:
 &lt;ul&gt;
 &lt;li&gt;Trace.axd, .env File, .htaccess file&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.1.0/commonlib-release-1.1.0.zap</url>
-        <hash>SHA-256:6ae8ce3c51b425f48822a146fe0e5933f559f2343aefe7b078b0c8c7eb254542</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.2.0/commonlib-release-1.2.0.zap</url>
+        <hash>SHA-256:2199e76d008ad827c546b36c8204af663636239679f03932881802891c420a14</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-04</date>
-        <size>3827153</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>3827259</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
     <addon_communityScripts>
@@ -524,20 +521,28 @@
         <name>CustomReport</name>
         <description>New HTML report module allows users to customize report content.</description>
         <author>Chienli Ma</author>
-        <version>5</version>
-        <file>customreport-alpha-5.zap</file>
+        <version>6</version>
+        <file>customreport-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Improve layout/sizing of Generate Report dialogue (Issue 5521).&lt;/li&gt;
-&lt;li&gt;Remove unused library.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Add Evidence to report (Issue 6151).&lt;/li&gt;
+&lt;li&gt;Make Parameter and Attack fields optional.&lt;/li&gt;
+&lt;li&gt;Fix bug to allow writing reports with file path containing '#' (Issue 6267).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/customreport-v5/customreport-alpha-5.zap</url>
-        <hash>SHA-256:437af7cf0e9517ec4efd2117ce6e601228471fb4e9493b2331820344e17e8e40</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/customreport-v6/customreport-alpha-6.zap</url>
+        <hash>SHA-256:bcda4c64076e554be555b2154e5b446249c213d40bdc81d6d90593889c464e69</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/custom-report/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-08-30</date>
-        <size>262137</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>262637</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_customreport>
     <addon>diff</addon>
     <addon_diff>
@@ -653,21 +658,22 @@
         <name>Encoder</name>
         <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>encoder-alpha-0.3.0.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <version>0.4.0</version>
+        <file>encoder-beta-0.4.0.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;rot13.js example script.&lt;/li&gt;
-&lt;li&gt;SHA256 predefined processor.&lt;/li&gt;
-&lt;li&gt;Full URL Encode predefined processor (Issue 6171).&lt;/li&gt;
+&lt;li&gt;Promoted to Beta.&lt;/li&gt;
+&lt;li&gt;Added Info URL to manifest.&lt;/li&gt;
+&lt;li&gt;Target ZAP 2.10. Remove &amp;quot;Advanced&amp;quot; from labels, titles, and name.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.3.0/encoder-alpha-0.3.0.zap</url>
-        <hash>SHA-256:cdfa776b7e62ce0f2e1cb3e9c37d74e6b0cb4e85beb9abae85da5d7342365260</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.4.0/encoder-beta-0.4.0.zap</url>
+        <hash>SHA-256:61dc769f47c18fc1c928a807bf1415bc1736fdb8c34d069ad54b381d8134d760</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-09-14</date>
-        <size>79669</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-15</date>
+        <size>79735</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_encoder>
     <addon>exportreport</addon>
     <addon_exportreport>
