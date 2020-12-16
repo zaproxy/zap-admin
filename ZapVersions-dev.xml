@@ -910,20 +910,19 @@
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>10</version>
-        <file>help-release-10.zap</file>
+        <version>11</version>
+        <file>help-release-11.zap</file>
         <status>release</status>
         <changes>&lt;ul&gt;
-&lt;li&gt;Update for 2.9.0 release.&lt;/li&gt;
-&lt;li&gt;Update for new website&lt;/li&gt;
+&lt;li&gt;Update for 2.10.0 release.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v10/help-release-10.zap</url>
-        <hash>SHA-256:aaa34b8844680c07fedcd606eec9b1edd52b496004fdaefbdff2b0285601a657</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v11/help-release-11.zap</url>
+        <hash>SHA-256:bfcfb2a6970f1337feaaa71412bc1dff096d217056f213d86684d1854428bca2</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2020-01-17</date>
-        <size>756939</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-16</date>
+        <size>788440</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_help>
     <addon>help_bs_BA</addon>
     <addon_help_bs_BA>
