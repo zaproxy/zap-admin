@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ZAP>
+    <news>
+        <id>8</id>
+        <default>
+            <item>Welcome to ZAP 2.10.0 - the release notes are in the help file and online.</item>
+            <link>https://www.zaproxy.org/docs/desktop/releases/2.10.0/</link>
+        </default>
+    </news>
+</ZAP>
