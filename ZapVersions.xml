@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <core>
-        <version>2.9.0</version>
+        <version>2.10.0</version>
         <daily-version>D-2020-12-09</daily-version>
         <daily>
             <url>https://github.com/zaproxy/zaproxy/releases/download/w2020-12-09/ZAP_WEEKLY_D-2020-12-09.zip</url>
@@ -10,24 +10,24 @@
             <size>155666474</size>
         </daily>
         <windows>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.9.0/ZAP_2_9_0_windows.exe</url>
-            <file>ZAP_2_9_0_windows.exe</file>
-            <hash>SHA-256:b763e6d6b90e296dbd6fe9181bc303bd6f84814749189da22a2a534e43236bf7</hash>
-            <size>98460160</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.10.0/ZAP_2_10_0_windows.exe</url>
+            <file>ZAP_2_10_0_windows.exe</file>
+            <hash>SHA-256:cff6885a98abfec9c33224cba65ddead6b6dd4e61eff8140c59d1a4f396250eb</hash>
+            <size>139219968</size>
         </windows>
         <linux>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.9.0/ZAP_2.9.0_Linux.tar.gz</url>
-            <file>ZAP_2.9.0_Linux.tar.gz</file>
-            <hash>SHA-256:4c72ba9d9ba60f58dc7eb26c5818cf98a38ba58b9bf2313aadd69832d85e9cb1</hash>
-            <size>96873657</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.10.0/ZAP_2.10.0_Linux.tar.gz</url>
+            <file>ZAP_2.10.0_Linux.tar.gz</file>
+            <hash>SHA-256:10ff2f6263b97b6367d97273de74a431b92b8d47b486662f79c2e8754dd1e9d7</hash>
+            <size>137786743</size>
         </linux>
         <mac>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.9.0/ZAP_2.9.0.dmg</url>
-            <file>ZAP_2.9.0.dmg</file>
-            <hash>SHA-256:b00949bf632b16c29085ebb3eb7b0962afe9ded166f6bade8a8ce8d3dbf1b9bd</hash>
-            <size>131233148</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.10.0/ZAP_2.10.0.dmg</url>
+            <file>ZAP_2.10.0.dmg</file>
+            <hash>SHA-256:bc25ff4fbd21fc36449c15ef66e109b72802ad9eedfc1ae122569cbf91ab9829</hash>
+            <size>208837055</size>
         </mac>
         <relnotes>Bug fix and enhancement release.</relnotes>
-        <relnotes-url>https://www.zaproxy.org/docs/desktop/releases/2.9.0/</relnotes-url>
+        <relnotes-url>https://www.zaproxy.org/docs/desktop/releases/2.10.0/</relnotes-url>
     </core>
 </ZAP>
