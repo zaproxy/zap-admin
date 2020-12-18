@@ -2120,22 +2120,6 @@ By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;c
         <size>49072</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_viewstate>
-    <addon>vulncheck</addon>
-    <addon_vulncheck>
-        <name>VulnCheck Extension</name>
-        <description>list vulnerabilities from known databases</description>
-        <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>vulncheck-alpha-1.zap</file>
-        <status>alpha</status>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/vulncheck-alpha-1.zap</url>
-        <hash>SHA1:ff3b78f1d004c4fb7a75bad3358f8f32433e4cc2</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/vulncheck/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>35553</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_vulncheck>
     <addon>wappalyzer</addon>
     <addon_wappalyzer>
         <name>Wappalyzer - Technology Detection</name>
