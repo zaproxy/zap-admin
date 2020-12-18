@@ -1799,30 +1799,19 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>27</version>
-        <file>scripts-beta-27.zap</file>
+        <version>28</version>
+        <file>scripts-beta-28.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Tweak help content.&lt;/li&gt;
-&lt;li&gt;Show script engine when editing the script.&lt;/li&gt;
-&lt;li&gt;Fixed case where script print statements could deadlock ZAP.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Support dark mode and dynamic Look and Feel switching&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Terminology&lt;/li&gt;
-&lt;li&gt;Do not show the Enable/Disable Script menu item if the script can't be enabled/disabled, in some
-look and feels it could show an empty menu item (Issue 6256).&lt;/li&gt;
+&lt;li&gt;GUI could hang when lots of print statements are used.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v27/scripts-beta-27.zap</url>
-        <hash>SHA-256:d84c87d1658733d103e0bf51b83405079fed9cab5ae532b65af91a0b19f2ec6c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v28/scripts-beta-28.zap</url>
+        <hash>SHA-256:8848fc3a9a68f27de350d92adcc89eb5b592a50921ba323f97739d8ae6c8b7c9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>658848</size>
+        <date>2020-12-18</date>
+        <size>659061</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
@@ -2212,27 +2201,25 @@ By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;c
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>22</version>
-        <file>websocket-release-22.zap</file>
+        <version>23</version>
+        <file>websocket-release-23.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Allow to use newer versions of Fuzzer add-on.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correctly handle API request without parameters.&lt;/li&gt;
-&lt;li&gt;Fixed an exception which was occurring when the tab was shown when a handshake response was first encountered during a ZAP session.&lt;/li&gt;
+&lt;li&gt;Fix exception when handling breakpoints with ZAP 2.10.0.&lt;/li&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v22/websocket-release-22.zap</url>
-        <hash>SHA-256:d3240ecdd3a8d09a3d64dee4b7b2b0e49449ba21cec558d7b8491e7d354ac18f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v23/websocket-release-23.zap</url>
+        <hash>SHA-256:062ba3c5e358ee304a20a545d02005357768112a1a8f8b20c3a6c8df2faa64cb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/websockets/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-08-17</date>
-        <size>1030733</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2020-12-18</date>
+        <size>1031481</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_websocket>
     <addon>zest</addon>
     <addon_zest>
