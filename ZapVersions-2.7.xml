@@ -260,22 +260,6 @@
         <size>1160586</size>
         <not-before-version>2.4.0</not-before-version>
     </addon_callgraph>
-    <addon>cmss</addon>
-    <addon_cmss>
-        <name>WAFP Extension</name>
-        <description>Fingerprint web applications</description>
-        <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>cmss-alpha-2.zap</file>
-        <status>alpha</status>
-        <changes>Minor code changes.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/cmss-alpha-2.zap</url>
-        <hash>SHA1:f22c25f500845f36b54a43215e6cb9e480570146</hash>
-        <info>https://github.com/zaproxy/zaproxy</info>
-        <date>2017-11-28</date>
-        <size>545349</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_cmss>
     <addon>codedx</addon>
     <addon_codedx>
         <name>Code Dx Extension</name>
