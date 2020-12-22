@@ -1254,22 +1254,20 @@
         <name>JWT Support</name>
         <description>Detect JWT requests and scan them to find related vulnerabilities</description>
         <author>KSASAN preetkaran20@gmail.com</author>
-        <version>1.0.0</version>
-        <file>jwt-alpha-1.0.0.zap</file>
+        <version>1.0.1</version>
+        <file>jwt-alpha-1.0.1.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version of JWT Support.
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Contains scanning rules for basic JWT related vulnerabilities.&lt;/li&gt;
-&lt;li&gt;Contains JWT Fuzzer for fuzzing the JWT's present in the request.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Increased the number of requests for High threshold to 18 from 12.&lt;/li&gt;
+&lt;li&gt;Client side configuration alerts will not stop the scanner from scanning server side configurations.&lt;/li&gt;
+&lt;li&gt;Support for validating usage of publicly well known HMac secrets for signing JWT.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jwt-alpha-1.0.0.zap</url>
-        <hash>SHA-256:7431723b5735fa0eb82f848cb981b7c4c135f22996943d1d5f57ea100dff4ff7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jwt-alpha-1.0.1.zap</url>
+        <hash>SHA-256:1ff8936817f26049192f41ef152a798ff43bf4402925e6462888b47a38b5e3ad</hash>
         <repo>https://github.com/SasanLabs/owasp-zap-jwt-addon/</repo>
-        <date>2020-09-03</date>
-        <size>672579</size>
+        <date>2020-12-22</date>
+        <size>748996</size>
         <not-before-version>2.9.0</not-before-version>
         <dependencies>
             <addons>
