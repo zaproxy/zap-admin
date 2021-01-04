@@ -1862,32 +1862,18 @@
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>4</version>
-        <file>soap-alpha-4.zap</file>
+        <version>5</version>
+        <file>soap-alpha-5.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Internationalise file filter description.&lt;/li&gt;
-&lt;li&gt;Dynamically unload the add-on.&lt;/li&gt;
-&lt;li&gt;Change default accelerator for &amp;quot;Import a WSDL file from local file system&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Add import menus to (new) top level Import menu instead of Tools menu.&lt;/li&gt;
-&lt;li&gt;Add support for SOAP version 1.2 to the Action Spoofing Scan Rule.&lt;/li&gt;
-&lt;li&gt;Distinguish alerts by adding the SOAP version to the &amp;quot;Other Info&amp;quot; section.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Various fixes (related to Issue 4832 and other testing).&lt;/li&gt;
-&lt;li&gt;Fix exception with Java 9+ (Issue 4037).&lt;/li&gt;
-&lt;li&gt;SOAP operations are no longer overwritten in sites tree (Issue 1867).&lt;/li&gt;
-&lt;li&gt;Persist the add-on configuration required by the scan rules in the ZAP database (Issue 4866).&lt;/li&gt;
+&lt;li&gt;Add support for ValueGenerator (Issue 3345).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v4/soap-alpha-4.zap</url>
-        <hash>SHA-256:00e8e91491aa26520408776bbe7888954457913e9c0f5b65eb6ff33ee3564639</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v5/soap-alpha-5.zap</url>
+        <hash>SHA-256:624def1d9c0c31c9d863ff4288fa6c6938581c19149ad50cbb37c5eed0c6d8e5</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-16</date>
-        <size>9091602</size>
+        <date>2021-01-04</date>
+        <size>9136558</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_soap>
     <addon>spiderAjax</addon>
