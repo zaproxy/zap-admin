@@ -1457,27 +1457,20 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>pscanrules-release-31.zap</file>
+        <version>32</version>
+        <file>pscanrules-release-32.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;The following scan rules now support Custom Page definitions:
-&lt;ul&gt;
-&lt;li&gt;Application Error&lt;/li&gt;
-&lt;li&gt;Cache Control&lt;/li&gt;
-&lt;li&gt;X-Content-Type-Options&lt;/li&gt;
-&lt;li&gt;X-Frame-Options&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The Suspicious Comments scan rule will include the offending line as evidence.&lt;/li&gt;
+&lt;li&gt;The Suspicious Comments scan rule will raise one alert per finding, instead of one aggeregated alert per HTTP message.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v31/pscanrules-release-31.zap</url>
-        <hash>SHA-256:40c865f578861acd21889308acd36c76e92a34b57844cc92259bcb7cc7ee4d1f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v32/pscanrules-release-32.zap</url>
+        <hash>SHA-256:de045bc39d877bedc82dccd93c0c6f594190e4424075ebca78eab4265b02bfb9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>761506</size>
+        <date>2021-01-20</date>
+        <size>761504</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
