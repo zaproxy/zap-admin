@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>10</id>
+        <id>11</id>
         <default>
-            <item>We want to hear from you! Please fill in this 1 page questionnaire</item>
-            <link>https://docs.google.com/forms/d/e/1FAIpQLSfkLr91IKNnuaErBqD4X0dohEsJ6V9hFZOiPoTTbw6Ld4SJKQ/viewform</link>
+            <item>Announcing the First Ever ZAPCon - Call for Papers</item>
+            <link>https://www.zaproxy.org/blog/2021-01-28-announcing-the-first-ever-zapcon/</link>
         </default>
     </news>
 </ZAP>
