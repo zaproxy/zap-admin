@@ -1457,20 +1457,28 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>32</version>
-        <file>pscanrules-release-32.zap</file>
+        <version>33</version>
+        <file>pscanrules-release-33.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Suspicious Comments scan rule will include the offending line as evidence.&lt;/li&gt;
-&lt;li&gt;The Suspicious Comments scan rule will raise one alert per finding, instead of one aggeregated alert per HTTP message.&lt;/li&gt;
+&lt;li&gt;Added Express error string pattern (Issue 6412).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;X-Frame-Options (XFO) scan rule no longer suggests the use of &amp;quot;ALLOW-FROM&amp;quot;, and also includes CSP &amp;quot;frame-ancestors&amp;quot; as an alternative.
+&lt;ul&gt;
+&lt;li&gt;XFO headers implementing &amp;quot;ALLOW-FROM&amp;quot; will now be considered malformed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Suspicious Comments scan rule will raise one alert per pattern per page and use more suitable evidence.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v32/pscanrules-release-32.zap</url>
-        <hash>SHA-256:de045bc39d877bedc82dccd93c0c6f594190e4424075ebca78eab4265b02bfb9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v33/pscanrules-release-33.zap</url>
+        <hash>SHA-256:7abac1b93cb120aa312217b473de8791799a43518669d0a1d619586a5b5cc2df</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-01-20</date>
-        <size>761504</size>
+        <date>2021-01-29</date>
+        <size>763587</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
