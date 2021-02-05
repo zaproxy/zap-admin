@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>11</id>
+        <id>12</id>
         <default>
-            <item>Announcing the First Ever ZAPCon - Call for Papers</item>
-            <link>https://www.zaproxy.org/blog/2021-01-28-announcing-the-first-ever-zapcon/</link>
+            <item>First ever ZAPCon - Sign Up or Submit Papers</item>
+            <link>https://zapcon.io/?utm_source=zapnews</link>
         </default>
     </news>
 </ZAP>
