@@ -1493,24 +1493,22 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>pscanrulesAlpha-alpha-29.zap</file>
+        <version>30</version>
+        <file>pscanrulesAlpha-alpha-30.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add rule for Site Isolation (CORP/COEP/COOP).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;The In Page Banner Information Leak scan rule and Site Isolation scan rule now support Custom Page definitions.&lt;/li&gt;
+&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v29/pscanrulesAlpha-alpha-29.zap</url>
-        <hash>SHA-256:4eae60e511a4a3c4994893d1a1c074bc8f382e82d9bf84ab01ab164cf4b4cf56</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v30/pscanrulesAlpha-alpha-30.zap</url>
+        <hash>SHA-256:af395e9fa7d64f0bdf3b91b43ac0c99f684eb83c736a31ea1c2d704743f48cb8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-16</date>
-        <size>1039420</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-02-08</date>
+        <size>1039581</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
     <addon_pscanrulesBeta>
