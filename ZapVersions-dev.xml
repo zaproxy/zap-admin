@@ -651,21 +651,19 @@
         <name>Encoder</name>
         <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>encoder-beta-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>encoder-beta-0.5.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Promoted to Beta.&lt;/li&gt;
-&lt;li&gt;Added Info URL to manifest.&lt;/li&gt;
-&lt;li&gt;Target ZAP 2.10. Remove &amp;quot;Advanced&amp;quot; from labels, titles, and name.&lt;/li&gt;
+&lt;li&gt;Remove &amp;quot;Advanced&amp;quot; in help page.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.4.0/encoder-beta-0.4.0.zap</url>
-        <hash>SHA-256:61dc769f47c18fc1c928a807bf1415bc1736fdb8c34d069ad54b381d8134d760</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.5.0/encoder-beta-0.5.0.zap</url>
+        <hash>SHA-256:f620f8cf668b54fac0b5e1180b9c62d6f7e43d2eb64d3d9b4d595f90f7af696e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>79735</size>
+        <date>2021-02-09</date>
+        <size>79635</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_encoder>
     <addon>exportreport</addon>
