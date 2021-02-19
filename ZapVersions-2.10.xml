@@ -1575,12 +1575,12 @@
         <name>Reflect</name>
         <description>Finds reflected parameters</description>
         <author>Caleb Kinney</author>
-        <version>0.0.10</version>
-        <file>reflect-alpha-0.0.10.zap</file>
+        <version>0.0.11</version>
+        <file>reflect-alpha-0.0.11.zap</file>
         <status>alpha</status>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/reflect-alpha-0.0.10.zap</url>
-        <hash>SHA-256:7c7ab73259e591b759ee1ad486a4743ff1391f3ee3805448b1c89166ab2a9581</hash>
-        <date>2021-02-18</date>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/reflect-alpha-0.0.11.zap</url>
+        <hash>SHA-256:c45307037042e4079546a5fcb17d1165475e5cdd5ba7e8abc0d2cf0a14866466</hash>
+        <date>2021-02-19</date>
         <size>1780219</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_reflect>
