@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>12</id>
+        <id>13</id>
         <default>
-            <item>First ever ZAPCon - Sign Up or Submit Papers</item>
-            <link>https://zapcon.io/?utm_source=zapnews</link>
+            <item>The ZAPCon speakers have been announced</item>
+            <link>https://zapcon.io/#speakers?utm_source=zapnews</link>
         </default>
     </news>
 </ZAP>
