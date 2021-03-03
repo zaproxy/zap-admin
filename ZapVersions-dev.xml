@@ -2095,26 +2095,24 @@ By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;c
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.0.0</version>
-        <file>wappalyzer-release-21.0.0.zap</file>
+        <version>21.1.0</version>
+        <file>wappalyzer-release-21.1.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;Add-on promoted to Release.&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added support for CSS patterns, aligning with upstream project.&lt;/li&gt;
+&lt;li&gt;Support for DOM patterns, aligning with the upstream project (Issue 6180).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.0.0/wappalyzer-release-21.0.0.zap</url>
-        <hash>SHA-256:78c8fe4b669a6f084bfc9845fc9bf53ae62171404ecda64a333beea9b98895a5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.1.0/wappalyzer-release-21.1.0.zap</url>
+        <hash>SHA-256:14ae1100c01f9c6bd991754483f53ee0dd5402cc3bced1b7796a40201906003e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>11351712</size>
+        <date>2021-03-03</date>
+        <size>12168353</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
