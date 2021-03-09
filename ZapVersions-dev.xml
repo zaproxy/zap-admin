@@ -280,6 +280,24 @@
         <size>238686</size>
         <not-before-version>2.5.0</not-before-version>
     </addon_authstats>
+    <addon>automation</addon>
+    <addon_automation>
+        <name>Automation Framework</name>
+        <description>Automation Framework.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>automation-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.0.1/automation-alpha-0.0.1.zap</url>
+        <hash>SHA-256:c47420b365ea0aa9a5f4803cb829972eab216c34ba33fb98908e1245b5e253eb</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2021-03-09</date>
+        <size>2590603</size>
+        <not-before-version>2.10.0</not-before-version>
+    </addon_automation>
     <addon>beanshell</addon>
     <addon_beanshell>
         <name>BeanShell Console</name>
@@ -1386,33 +1404,24 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>17</version>
-        <file>openapi-beta-17.zap</file>
+        <version>18</version>
+        <file>openapi-beta-18.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handle cookie parameters (Issue 6045).&lt;/li&gt;
-&lt;li&gt;Use default values in &lt;code&gt;x-www-form-urlencoded&lt;/code&gt; and &lt;code&gt;json&lt;/code&gt; bodies (Issue 6095).&lt;/li&gt;
+&lt;li&gt;Support for the Automation Framework&lt;/li&gt;
+&lt;li&gt;Support for statistics (number of URLs added)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Show import exceptions in the Output tab (Issue 6042).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add imported messages synchronously to the Sites tree (Issue 5936).&lt;/li&gt;
-&lt;li&gt;Correct parent dialogue when choosing the file to import (Issue 6041).&lt;/li&gt;
-&lt;li&gt;Properly handle no schema when generating the request body (Issue 6042).&lt;/li&gt;
-&lt;li&gt;Return API error &lt;code&gt;illegal_parameter&lt;/code&gt; (instead of &lt;code&gt;internal_error&lt;/code&gt;) when unable to get the OpenAPI definition from the provided URL.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v17/openapi-beta-17.zap</url>
-        <hash>SHA-256:3967fb286f4e309925ea39785e1bc00e146c6c1f06af1dce6aa79b8e7a73a014</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v18/openapi-beta-18.zap</url>
+        <hash>SHA-256:f712818ec4440a4813e9fbcd774dafa3c9ca68a42d1fafa4f07563ffaa8ad45b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>11831927</size>
+        <date>2021-03-09</date>
+        <size>11840481</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
@@ -1628,6 +1637,24 @@
         <size>332794</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_replacer>
+    <addon>reports</addon>
+    <addon_reports>
+        <name>Report Generation</name>
+        <description>Official ZAP Reports.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>reports-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.0.1/reports-alpha-0.0.1.zap</url>
+        <hash>SHA-256:a4799a92bfbf2d214fba1e13cecffb13a4711e8eee33d143bb892dd281fb27e9</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2021-03-09</date>
+        <size>12304052</size>
+        <not-before-version>2.10.0</not-before-version>
+    </addon_reports>
     <addon>requester</addon>
     <addon_requester>
         <name>Requester</name>
@@ -1878,32 +1905,24 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.2.0</version>
-        <file>spiderAjax-release-23.2.0.zap</file>
+        <version>23.3.0</version>
+        <file>spiderAjax-release-23.3.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to specify allowed resources (Issue 3236). The allowed resources are always fetched
-even if out of scope, allowing to include necessary resources (e.g. scripts) from 3rd-parties.
-By default it allows files with extension &lt;code&gt;.js&lt;/code&gt; and &lt;code&gt;.css&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Initial support for the automation framework&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Unregister the event publisher when the add-on is uninstalled.&lt;/li&gt;
-&lt;li&gt;Persist the state of &amp;quot;Remove Without Confirmation&amp;quot; of non-default elements to click.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.2.0/spiderAjax-release-23.2.0.zap</url>
-        <hash>SHA-256:e400d71bb80a6bf0854e6cc9ac5ea1a1c4ecaae341cdadc3886ca57c1d178430</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.3.0/spiderAjax-release-23.3.0.zap</url>
+        <hash>SHA-256:c66f0fd445787237a08ded14b25ce751fd6f99b3973e2fc35976ae784e49406f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-09</date>
-        <size>2510914</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-03-09</date>
+        <size>2521566</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
