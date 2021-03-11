@@ -293,6 +293,7 @@
 &lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.0.1/automation-alpha-0.0.1.zap</url>
         <hash>SHA-256:c47420b365ea0aa9a5f4803cb829972eab216c34ba33fb98908e1245b5e253eb</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2021-03-09</date>
         <size>2590603</size>
@@ -1650,6 +1651,7 @@
 &lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.0.1/reports-alpha-0.0.1.zap</url>
         <hash>SHA-256:a4799a92bfbf2d214fba1e13cecffb13a4711e8eee33d143bb892dd281fb27e9</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2021-03-09</date>
         <size>12304052</size>
