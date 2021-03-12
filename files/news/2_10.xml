@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>13</id>
+        <id>14</id>
         <default>
-            <item>The ZAPCon speakers have been announced</item>
-            <link>https://zapcon.io/#speakers?utm_source=zapnews</link>
+            <item>New ZAP Reporting Competition announced</item>
+            <link>https://www.zaproxy.org/blog/2021-03-12-report-competition/</link>
         </default>
     </news>
 </ZAP>
