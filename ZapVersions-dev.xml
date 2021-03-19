@@ -1643,18 +1643,21 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>reports-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>reports-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for resources such as JavaScript and images&lt;/li&gt;
+&lt;li&gt;Support for template specific i18n property files&lt;/li&gt;
+&lt;li&gt;Reload templates on dir change and handle no reports&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.0.1/reports-alpha-0.0.1.zap</url>
-        <hash>SHA-256:a4799a92bfbf2d214fba1e13cecffb13a4711e8eee33d143bb892dd281fb27e9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.1.0/reports-alpha-0.1.0.zap</url>
+        <hash>SHA-256:4b6c3c1f46c42aede3b770a4a2b5864f7f189796c5f1e0857d17432cef48551c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-09</date>
-        <size>12304052</size>
+        <date>2021-03-19</date>
+        <size>12364307</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
