@@ -285,18 +285,24 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>automation-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>automation-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for enum parameters.&lt;/li&gt;
+&lt;li&gt;Added a new parameter &amp;quot;handleParameters&amp;quot; for the &lt;em&gt;spider&lt;/em&gt; job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A bug where the plan did not stop when it encountered an error or warning and env:parameters:failOnError or env:parameters:failOnWarning was set to true.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.0.1/automation-alpha-0.0.1.zap</url>
-        <hash>SHA-256:c47420b365ea0aa9a5f4803cb829972eab216c34ba33fb98908e1245b5e253eb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.1.0/automation-alpha-0.1.0.zap</url>
+        <hash>SHA-256:3307b8393f50259ae4c118e39ef1d55f8b4c5e74c78bbd26a35957ff541007a2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-09</date>
-        <size>2590603</size>
+        <date>2021-03-24</date>
+        <size>2591431</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
