@@ -855,28 +855,28 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>graphql-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>graphql-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Enhanced Support for Script Input Vectors.&lt;/li&gt;
-&lt;li&gt;Options are now exposed through the API.&lt;/li&gt;
-&lt;li&gt;Optional Arguments are enabled by default.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Add two new options that allow enforcing maximum query depth leniently for fields with no leaf types.&lt;/li&gt;
+&lt;li&gt;Add support for the automation framework.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix clashes in variable names. See &lt;a href="https://github.com/zaproxy/zap-extensions/pull/2550"&gt;PR#2550&lt;/a&gt; for details.&lt;/li&gt;
-&lt;li&gt;Fix a bug where the &amp;quot;GraphQL Support.js&amp;quot; script was enabled when ZAP was restarted even if it had been disabled and saved before.&lt;/li&gt;
-&lt;li&gt;Fix a bug where sites tree entries were not showing parameters because of the script.&lt;/li&gt;
+&lt;li&gt;Fix invalid query generation when query depth was reached and the deepest fields had no leaf types (Issue 6316).&lt;/li&gt;
+&lt;li&gt;Cope with missing Nashorn engine (Issue 6501).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.2.0/graphql-alpha-0.2.0.zap</url>
-        <hash>SHA-256:229a76b4e916aa5a226bb858a64a72368b22d04c707b765f6653a9f2113f5627</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.3.0/graphql-alpha-0.3.0.zap</url>
+        <hash>SHA-256:e5175d17cfd2d279ba8604cb3dd047d7b525dafebda4457bb61335cfc2794aaf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-19</date>
-        <size>2206546</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-03-30</date>
+        <size>2218576</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
     <addon_groovy>
@@ -1897,18 +1897,26 @@
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>5</version>
-        <file>soap-alpha-5.zap</file>
+        <version>6</version>
+        <file>soap-alpha-6.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add support for ValueGenerator (Issue 3345).&lt;/li&gt;
+&lt;li&gt;Accept only encoded URLs.&lt;/li&gt;
+&lt;li&gt;Add support for the Automation Framework.&lt;/li&gt;
+&lt;li&gt;Add support for statistics for the number of added URLs (or SOAP Actions).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix detection of WSDL files (Issue 6440).&lt;/li&gt;
+&lt;li&gt;Cope with missing Nashorn engine (Issue 6500).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v5/soap-alpha-5.zap</url>
-        <hash>SHA-256:624def1d9c0c31c9d863ff4288fa6c6938581c19149ad50cbb37c5eed0c6d8e5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v6/soap-alpha-6.zap</url>
+        <hash>SHA-256:797c06d2d0f21089fae8a224d6e5fa251dc06b6180797577610155a1a1e37644</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-01-04</date>
-        <size>9136558</size>
+        <date>2021-03-30</date>
+        <size>9143600</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_soap>
     <addon>spiderAjax</addon>
