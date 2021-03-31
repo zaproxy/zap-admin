@@ -1914,6 +1914,7 @@
 &lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v6/soap-alpha-6.zap</url>
         <hash>SHA-256:797c06d2d0f21089fae8a224d6e5fa251dc06b6180797577610155a1a1e37644</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2021-03-30</date>
         <size>9143600</size>
