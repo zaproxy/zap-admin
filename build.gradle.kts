@@ -42,8 +42,6 @@ repositories {
     mavenCentral()
 }
 
-buildDir = file("buildGradle")
-
 dependencies {
     "errorprone"("com.google.errorprone:error_prone_core:2.3.1")
 
