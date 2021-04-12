@@ -285,24 +285,20 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>automation-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>automation-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added support for enum parameters.&lt;/li&gt;
-&lt;li&gt;Added a new parameter &amp;quot;handleParameters&amp;quot; for the &lt;em&gt;spider&lt;/em&gt; job.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A bug where the plan did not stop when it encountered an error or warning and env:parameters:failOnError or env:parameters:failOnWarning was set to true.&lt;/li&gt;
+&lt;li&gt;Support for job result data&lt;/li&gt;
+&lt;li&gt;Support for passive scan rule configuration&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.1.0/automation-alpha-0.1.0.zap</url>
-        <hash>SHA-256:3307b8393f50259ae4c118e39ef1d55f8b4c5e74c78bbd26a35957ff541007a2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.2.0/automation-alpha-0.2.0.zap</url>
+        <hash>SHA-256:0fd0cb0f3b2f236287df38a623760cef392d50a9fab7e87a62f19d92e0b1ca61</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-24</date>
-        <size>2591431</size>
+        <date>2021-04-12</date>
+        <size>2603417</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -1649,21 +1645,25 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>reports-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>reports-alpha-0.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for resources such as JavaScript and images&lt;/li&gt;
-&lt;li&gt;Support for template specific i18n property files&lt;/li&gt;
-&lt;li&gt;Reload templates on dir change and handle no reports&lt;/li&gt;
+&lt;li&gt;Support for template sections&lt;/li&gt;
+&lt;li&gt;Automation job: support risk, confidence and section configuration&lt;/li&gt;
+&lt;li&gt;Passing rules to traditional plus HTML report&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Format HTML and XML templates as part of the build&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.1.0/reports-alpha-0.1.0.zap</url>
-        <hash>SHA-256:4b6c3c1f46c42aede3b770a4a2b5864f7f189796c5f1e0857d17432cef48551c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.2.0/reports-alpha-0.2.0.zap</url>
+        <hash>SHA-256:9f7f348efe1f291a645d62338dd9fef3fc26e1c4916292ce6743d188c601004b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-19</date>
-        <size>12364307</size>
+        <date>2021-04-12</date>
+        <size>12373091</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
