@@ -26,7 +26,6 @@ import org.apache.commons.configuration.XMLConfiguration;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Internal;
-import org.gradle.api.tasks.Optional;
 import org.kohsuke.github.GHAsset;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
@@ -58,13 +57,11 @@ public class GenerateWebsiteMainReleaseData extends AbstractGenerateWebsiteRelea
     }
 
     @Internal
-    @Optional
     public Property<String> getGhUserName() {
         return ghUserName;
     }
 
     @Internal
-    @Optional
     public Property<String> getGhUserAuthToken() {
         return ghUserAuthToken;
     }

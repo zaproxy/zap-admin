@@ -1,6 +1,6 @@
 plugins {
     `kotlin-dsl`
-    id("com.diffplug.gradle.spotless") version "3.14.0"
+    id("com.diffplug.spotless") version "5.12.1"
 }
 
 repositories {
@@ -24,7 +24,7 @@ spotless {
     java {
         licenseHeaderFile("../docs/headers/license.java")
 
-        googleJavaFormat().aosp()
+        googleJavaFormat("1.7").aosp()
     }
 
     kotlinGradle {

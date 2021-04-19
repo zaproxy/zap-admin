@@ -262,11 +262,7 @@ public abstract class GenerateReleaseStateLastCommit extends DefaultTask {
                 ObjectReader reader = git.getRepository().newObjectReader()) {
             AbstractTreeIterator oldTree = prepareTreeParser(repository, commitA);
             AbstractTreeIterator newTree = prepareTreeParser(repository, commitB);
-            return git.diff()
-                    .setOldTree(oldTree)
-                    .setNewTree(newTree)
-                    .call()
-                    .stream()
+            return git.diff().setOldTree(oldTree).setNewTree(newTree).call().stream()
                     .filter(
                             e ->
                                     e.getChangeType() == DiffEntry.ChangeType.MODIFY
