@@ -9,29 +9,13 @@ import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateWebsite
 
-buildscript {
-    repositories {
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath(if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.gradle:gradle-errorprone-plugin:0.0.16" else "net.ltgt.gradle:gradle-errorprone-javacplugin-plugin:0.5")
-    }
-}
-
 plugins {
     java
-    id("com.diffplug.gradle.spotless") version "3.23.0"
+    id("com.diffplug.spotless") version "5.12.1"
+    id("net.ltgt.errorprone") version "2.0.1"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
-apply(plugin = if (JavaVersion.current() == JavaVersion.VERSION_1_8) "net.ltgt.errorprone" else "net.ltgt.errorprone-javacplugin")
-
-tasks {
-    getByName<Wrapper>("wrapper") {
-        gradleVersion = "4.10"
-        distributionType = Wrapper.DistributionType.ALL
-    }
-}
 
 tasks.withType<JavaCompile> {
     options.encoding = "utf-8"
@@ -44,14 +28,17 @@ repositories {
 
 dependencies {
     "errorprone"("com.google.errorprone:error_prone_core:2.3.1")
+    if (JavaVersion.current() == JavaVersion.VERSION_1_8) {
+        "errorproneJavac"("com.google.errorprone:javac:9+181-r4173-1")
+    }
 
-    compile("org.kohsuke:github-api:1.101")
+    implementation("org.kohsuke:github-api:1.101")
     compileOnly("com.infradna.tool:bridge-method-annotation:1.18") {
         exclude(group = "org.jenkins-ci")
     }
     compileOnly("com.github.spotbugs:spotbugs-annotations:3.1.12")
-    compile("net.sf.json-lib:json-lib:2.4:jdk15")
-    compile("org.zaproxy:zap:2.7.0")
+    implementation("net.sf.json-lib:json-lib:2.4:jdk15")
+    implementation("org.zaproxy:zap:2.7.0")
 
     val jupiterVersion = "5.5.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
@@ -82,7 +69,7 @@ spotless {
     java {
         licenseHeaderFile("$rootDir/docs/headers/license.java")
 
-        googleJavaFormat().aosp()
+        googleJavaFormat("1.7").aosp()
     }
 }
 
@@ -173,6 +160,7 @@ val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::cl
 val websiteRepoName = "zaproxy-website"
 val websiteRepoDir = file("$rootDir/../$websiteRepoName")
 val dataDir = file("$websiteRepoDir/site/data")
+
 
 val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     group = "ZAP"
