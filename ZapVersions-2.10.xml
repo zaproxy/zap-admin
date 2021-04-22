@@ -2244,38 +2244,31 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>33</version>
-        <file>zest-beta-33.zap</file>
+        <version>34</version>
+        <file>zest-beta-34.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to create a screenshot from the browser, using the context menu &lt;code&gt;Add Zest Client&lt;/code&gt; &amp;gt; &lt;code&gt;Screenshot&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;li&gt;Update Zest library to 0.15.0:
-&lt;ul&gt;
-&lt;li&gt;Do not follow redirects when disabled;&lt;/li&gt;
-&lt;li&gt;Reduce the changes done to the requests sent.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on Script Console add-on, it's required to work with Zest scripts (Issue 2656).&lt;/li&gt;
+&lt;li&gt;Clear Zest Results Panel when new script is added.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Make sure the header fields are separated with CRLF when edited in the UI.&lt;/li&gt;
-&lt;li&gt;Handle client requests when authenticating (Issue 5940).&lt;/li&gt;
+&lt;li&gt;Track modifications done to the scripts to refresh the cached ones (Issue 6558).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v33/zest-beta-33.zap</url>
-        <hash>SHA-256:99f7464b50d1b9d19975f56c1d465b12e5bbf6db5067285a2c9a5f52a663d556</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v34/zest-beta-34.zap</url>
+        <hash>SHA-256:1c98491c9dc5b0b2b7269d05278a43efe32acc3595a028f6bf009956c21c2163</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-27</date>
-        <size>13605335</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-04-22</date>
+        <size>13574340</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>scripts</id>
+                </addon>
                 <addon>
                     <id>selenium</id>
                     <version>15.*</version>
