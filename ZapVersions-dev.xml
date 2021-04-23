@@ -2179,19 +2179,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>27</version>
-        <file>webdrivermacos-release-27.zap</file>
+        <version>28</version>
+        <file>webdrivermacos-release-28.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 90.0.4430.24.&lt;/li&gt;
+&lt;li&gt;Bundle geckodriver with the correct architecture (Issue 6543).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v27/webdrivermacos-release-27.zap</url>
-        <hash>SHA-256:84516ae2a70f4e1853513f1c85785981f71a073432a1a5206de77a1c6260510e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v28/webdrivermacos-release-28.zap</url>
+        <hash>SHA-256:ba7f755f1fe422896172cb78537214adf3419eb6201662388cb70db75466a178</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-04-15</date>
-        <size>9829734</size>
+        <date>2021-04-23</date>
+        <size>9978459</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
