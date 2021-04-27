@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>14</id>
+        <id>15</id>
         <default>
-            <item>New ZAP Reporting Competition announced</item>
+            <item>The ZAP Reporting Competition is still open</item>
             <link>https://www.zaproxy.org/blog/2021-03-12-report-competition/</link>
         </default>
     </news>
