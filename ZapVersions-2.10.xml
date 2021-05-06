@@ -1645,25 +1645,31 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>reports-alpha-0.2.0.zap</file>
-        <status>alpha</status>
+        <version>0.3.0</version>
+        <file>reports-beta-0.3.0.zap</file>
+        <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for template sections&lt;/li&gt;
-&lt;li&gt;Automation job: support risk, confidence and section configuration&lt;/li&gt;
-&lt;li&gt;Passing rules to traditional plus HTML report&lt;/li&gt;
+&lt;li&gt;API Support.&lt;/li&gt;
+&lt;li&gt;Support for statistics&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Format HTML and XML templates as part of the build&lt;/li&gt;
+&lt;li&gt;Maintenance Changes.&lt;/li&gt;
+&lt;li&gt;Promote to beta&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct logging of dependency.&lt;/li&gt;
+&lt;li&gt;Inconsistencies between traditional reports and the 'old' core ones&lt;/li&gt;
+&lt;li&gt;Do not rely on default encoding when creating the reports, use UTF-8 always (Issue 6561).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.2.0/reports-alpha-0.2.0.zap</url>
-        <hash>SHA-256:9f7f348efe1f291a645d62338dd9fef3fc26e1c4916292ce6743d188c601004b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.3.0/reports-beta-0.3.0.zap</url>
+        <hash>SHA-256:2fee334842414684d72da34452a24b340344d16e0eec21dd1973584fbb06a244</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-04-12</date>
-        <size>12373091</size>
+        <date>2021-05-06</date>
+        <size>12308882</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
