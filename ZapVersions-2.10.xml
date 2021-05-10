@@ -134,35 +134,64 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>38</version>
-        <file>ascanrules-release-38.zap</file>
+        <version>39</version>
+        <file>ascanrules-release-39.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;The following scan rules now support Custom Page definitions:
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The Path Traversal scan rule should now be less False Positive prone at High Threshold, one of it's checks will now be excluded at High Threshold (Issues: 4209, 6030, 6219, 6372, and 6380).
 &lt;ul&gt;
-&lt;li&gt;Buffer Overflow&lt;/li&gt;
-&lt;li&gt;Directory Browsing&lt;/li&gt;
-&lt;li&gt;Format String&lt;/li&gt;
-&lt;li&gt;Parameter Tamper&lt;/li&gt;
-&lt;li&gt;Path Traversal&lt;/li&gt;
-&lt;li&gt;Remote File Include&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure WEB-INF&lt;/li&gt;
+&lt;li&gt;The Other info field of Alerts will now include a reference indicating which check the triggered alert is caused by, in order to assist in future user inquiries.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Added/updated the details of some alerts (some changes might break Alert Filters)
+&lt;ul&gt;
+&lt;li&gt;Buffer Overflow
+&lt;ul&gt;
+&lt;li&gt;Includes an Attack string&lt;/li&gt;
+&lt;li&gt;Evidence changed from the whole request header to the specific string sought&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Code Injection
+&lt;ul&gt;
+&lt;li&gt;Includes evidence for PHP and ASP related alerts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CRLF Injection
+&lt;ul&gt;
+&lt;li&gt;Attack and Evidence are now more specific&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Directory Browsing
+&lt;ul&gt;
+&lt;li&gt;Attack is now the URL of the request&lt;/li&gt;
+&lt;li&gt;Evidence added&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Parameter Tampering scan rule, adjusted regular expression related to VBScript errors.&lt;/li&gt;
+&lt;li&gt;Code Injection scan rule is now using random numbers for the ASP related check.&lt;/li&gt;
+&lt;li&gt;SQL Injection scan rule now has one more payload for error based checks, and an additional SQLite related check string (Issue 6588).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix XSS false positive (Issue 5958).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v38/ascanrules-release-38.zap</url>
-        <hash>SHA-256:9f57189d59301874cafd40bdc58cabce3b091a420b7a46eefb23055553e743ed</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v39/ascanrules-release-39.zap</url>
+        <hash>SHA-256:eb1ee833f1b8c7d7c46db1a9338d321ef198e731f7cfbfa4e85a31f79e681119</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>2406227</size>
+        <date>2021-05-10</date>
+        <size>2403476</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
+                    <version>&gt;= 1.3.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -420,23 +449,20 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.2.0</version>
-        <file>commonlib-release-1.2.0.zap</file>
+        <version>1.3.0</version>
+        <file>commonlib-release-1.3.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;AbstractAppFilePlugin &amp;gt; ensure that test requests are appropriately rebuilt for this type of scan rule (Issue 6129). This will make the following Alpha and Beta active scan rules slightly more accurate:
-&lt;ul&gt;
-&lt;li&gt;Trace.axd, .env File, .htaccess file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Added AbstractHostFilePlugin for use with ElmahScanRule and other future Host level file scan rules (Issue 6133).&lt;/li&gt;
+&lt;li&gt;Maintenance changes (Issue 6376 &amp;amp; Issue 6099).&lt;/li&gt;
+&lt;li&gt;Added DiceMatcher, which implements the Dice algorithm to calculate the percentage similarity between two strings.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.2.0/commonlib-release-1.2.0.zap</url>
-        <hash>SHA-256:2199e76d008ad827c546b36c8204af663636239679f03932881802891c420a14</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.3.0/commonlib-release-1.3.0.zap</url>
+        <hash>SHA-256:c18d8d2b567fe314dcf5ff9f61f059de2ac3468bac895cf9adee9a5a2da46cd1</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>3827259</size>
+        <date>2021-05-10</date>
+        <size>3822667</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
