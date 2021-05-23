@@ -19,6 +19,7 @@
  */
 package org.zaproxy.gradle;
 
+import java.io.File;
 import java.io.InputStream;
 import java.io.Reader;
 import javax.xml.transform.Transformer;
@@ -26,7 +27,7 @@ import javax.xml.transform.TransformerException;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.XMLConfiguration;
 
-class CustomXmlConfiguration extends XMLConfiguration {
+public class CustomXmlConfiguration extends XMLConfiguration {
 
     private static final long serialVersionUID = 7018390148134058207L;
 
@@ -34,6 +35,11 @@ class CustomXmlConfiguration extends XMLConfiguration {
         setEncoding("UTF-8");
         setDelimiterParsingDisabled(true);
         setRootElementName("ZAP");
+    }
+
+    public CustomXmlConfiguration(File file) throws ConfigurationException {
+        this();
+        load(file);
     }
 
     @Override

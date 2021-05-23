@@ -1,7 +1,11 @@
+import org.zaproxy.gradle.CreatePullRequest
+import org.zaproxy.gradle.CustomXmlConfiguration
 import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
+import org.zaproxy.gradle.GitHubUser
+import org.zaproxy.gradle.GitHubRepo
 import org.zaproxy.gradle.HandleMainRelease
 import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
@@ -76,6 +80,9 @@ spotless {
 val noAddOnsZapVersions = "ZapVersions.xml"
 val latestZapVersions = file("ZapVersions-2.10.xml")
 
+val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
+val adminRepo = GitHubRepo("zaproxy", "zap-admin", rootDir)
+
 tasks {
     register<ZapTask>("generateReleaseNotes") {
         description = "Generates release notes."
@@ -120,6 +127,21 @@ tasks {
         checksumAlgorithm.set("SHA-256")
     }
 
+    register<CreatePullRequest>("createPullRequestDailyRelease") {
+        description = "Creates a pull request to update the daily release."
+
+        user.set(ghUser)
+        repo.set(adminRepo)
+        branchName.set("update-daily-relase")
+
+        commitSummary.set("Update weekly release")
+        commitDescription.set(provider {
+            val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+            val dailyVersion = zapVersionsXml.getString("core.daily-version")
+            "Update weekly release to version $dailyVersion."
+        })
+    }
+
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
         into.setFrom(files("ZapVersions-dev.xml", latestZapVersions))
         checksumAlgorithm.set("SHA-256")
@@ -128,9 +150,7 @@ tasks {
 
 val baseUserName = "zaproxy"
 val zaproxyRepo = "zaproxy"
-val adminRepo = "zap-admin"
-val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
-val websiteGeneratedDataComment = "# This file is automatically updated by $baseUserName/$adminRepo repo."
+val websiteGeneratedDataComment = "# This file is automatically updated by $adminRepo repo."
 
 val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainReleaseData::class) {
     zapVersions.set(latestZapVersions)
@@ -182,7 +202,7 @@ val updateWebsite by tasks.registering(UpdateWebsite::class) {
 
     ghBaseUserName.set(baseUserName)
     ghBaseRepo.set(websiteRepoName)
-    ghSourceRepo.set(adminRepo)
+    ghSourceRepo.set(adminRepo.name)
 
     websiteRepo.set(websiteRepoDir)
 }
@@ -222,4 +242,3 @@ tasks.register("handleRelease") {
     dependsOn(handleMainRelease)
 }
 
-data class GitHubUser(val name: String, val email: String, val authToken: String?)

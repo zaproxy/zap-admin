@@ -21,7 +21,10 @@ package org.zaproxy.gradle;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.gradle.api.DefaultTask;
@@ -30,6 +33,7 @@ import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFiles;
+import org.gradle.api.tasks.Optional;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.options.Option;
 
@@ -45,7 +49,10 @@ import org.gradle.api.tasks.options.Option;
  *       occurs while updating them.
  * </ul>
  */
-public class UpdateDailyZapVersionsEntries extends DefaultTask {
+public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
+
+    private static final String HTTPS_SCHEME = "HTTPS";
+    private static final String DAILY_RELEASE_EXTENSION = ".zip";
 
     private static final String DAILY_VERSION_ELEMENT = "core.daily-version";
     private static final String DAILY_ELEMENT = "core.daily";
@@ -56,12 +63,14 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
 
     private final RegularFileProperty from;
     private final ConfigurableFileCollection into;
+    private final Property<String> checksum;
     private final Property<String> baseDownloadUrl;
     private final Property<String> checksumAlgorithm;
 
     public UpdateDailyZapVersionsEntries() {
         this.from = getProject().getObjects().fileProperty();
         this.into = getProject().getObjects().fileCollection();
+        this.checksum = getProject().getObjects().property(String.class);
         this.baseDownloadUrl = getProject().getObjects().property(String.class);
         this.checksumAlgorithm = getProject().getObjects().property(String.class);
 
@@ -75,8 +84,28 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
     }
 
     @Input
+    @Optional
     public RegularFileProperty getFrom() {
         return from;
+    }
+
+    @Option(option = "url", description = "The URL to the daily release.")
+    public void setUrl(String url) {
+        getFromUrl().set(url);
+    }
+
+    @Input
+    public abstract Property<String> getFromUrl();
+
+    @Option(option = "checksum", description = "The checksum of the daily release.")
+    public void setChecksum(String checksum) {
+        getChecksum().set(checksum);
+    }
+
+    @Input
+    @Optional
+    public Property<String> getChecksum() {
+        return checksum;
     }
 
     @InputFiles
@@ -96,26 +125,28 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
 
     @TaskAction
     public void update() throws Exception {
-        File dailyRelease = from.get().getAsFile();
-        if (!Files.isRegularFile(dailyRelease.toPath())) {
-            throw new IllegalArgumentException(
-                    "The provided daily release does not exist or it's not a file: "
-                            + dailyRelease);
-        }
-
         if (checksumAlgorithm.get().isEmpty()) {
             throw new IllegalArgumentException("The checksum algorithm must not be empty.");
         }
 
-        if (baseDownloadUrl.get().isEmpty()) {
-            throw new IllegalArgumentException("The base download URL must not be empty.");
+        Path dailyRelease = getReleaseFile();
+        String fileName = dailyRelease.getFileName().toString();
+        String dailyVersion = getDailyVersion(fileName);
+        String url;
+        if (from.isPresent()) {
+            if (baseDownloadUrl.get().isEmpty()) {
+                throw new IllegalArgumentException("The base download URL must not be empty.");
+            }
+            url = baseDownloadUrl.get() + dailyVersion.substring(2) + "/" + fileName;
+        } else {
+            url = getFromUrl().get();
         }
 
-        String fileName = dailyRelease.getName();
-        String dailyVersion = getDailyVersion(fileName);
-        String hash = createChecksum(checksumAlgorithm.get(), dailyRelease);
-        String size = String.valueOf(dailyRelease.length());
-        String url = baseDownloadUrl.get() + dailyVersion.substring(2) + "/" + fileName;
+        String algorithm = checksumAlgorithm.get();
+        String calculatedChecksum = createChecksum(algorithm, dailyRelease);
+        validateChecksum(calculatedChecksum, getChecksum().getOrNull());
+        String hash = algorithm + ":" + calculatedChecksum;
+        String size = String.valueOf(Files.size(dailyRelease));
 
         for (File zapVersionsFile : into.getFiles()) {
             if (!Files.isRegularFile(zapVersionsFile.toPath())) {
@@ -140,7 +171,7 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
             throw new IllegalArgumentException(
                     "The file name does not have the expected daily prefix ('D-'): " + fileName);
         }
-        int endIdx = fileName.indexOf(".zip");
+        int endIdx = fileName.indexOf(DAILY_RELEASE_EXTENSION);
         if (endIdx == -1) {
             throw new IllegalArgumentException(
                     "The file name does not have the expected extension ('.zip'): " + fileName);
@@ -148,7 +179,71 @@ public class UpdateDailyZapVersionsEntries extends DefaultTask {
         return fileName.substring(beginIdx, endIdx);
     }
 
-    private static String createChecksum(String algorithm, File addOnFile) throws IOException {
-        return algorithm + ":" + new DigestUtils(algorithm).digestAsHex(addOnFile);
+    private Path getReleaseFile() throws IOException {
+        if (from.isPresent()) {
+            Path release = from.getAsFile().get().toPath();
+            if (!Files.isRegularFile(release)) {
+                throw new IllegalArgumentException(
+                        "The provided path does not exist or it's not a file: " + release);
+            }
+            return release;
+        }
+
+        if (!getChecksum().isPresent()) {
+            throw new IllegalArgumentException(
+                    "The checksum must be provided when downloading the file.");
+        }
+
+        String urlString = getFromUrl().get();
+        URL url = new URL(urlString);
+        if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
+            throw new IllegalArgumentException(
+                    "The provided URL does not use HTTPS scheme: " + url.getProtocol());
+        }
+
+        Path release = getTemporaryDir().toPath().resolve(extractFileName(urlString));
+        if (Files.exists(release)) {
+            getLogger().info("File already exists, skipping download.");
+            return release;
+        }
+
+        try (InputStream in = url.openStream()) {
+            Files.copy(in, release);
+        } catch (IOException e) {
+            throw new IOException("Failed to download the file: " + e.getMessage(), e);
+        }
+        getLogger().info("File downloaded to: " + release);
+        return release;
+    }
+
+    private static String extractFileName(String url) {
+        int idx = url.lastIndexOf("/");
+        if (idx == -1) {
+            throw new IllegalArgumentException(
+                    "The provided URL does not have a file name: " + url);
+        }
+        String fileName = url.substring(idx + 1);
+        if (!fileName.endsWith(DAILY_RELEASE_EXTENSION)) {
+            throw new IllegalArgumentException(
+                    "The provided URL does not have a file with zap extension: " + fileName);
+        }
+        return fileName;
+    }
+
+    private static String createChecksum(String algorithm, Path file) throws IOException {
+        return new DigestUtils(algorithm).digestAsHex(file.toFile());
+    }
+
+    private static void validateChecksum(String checksum, String expectedChecksum) {
+        if (expectedChecksum == null || expectedChecksum.isEmpty()) {
+            return;
+        }
+
+        if (!checksum.equals(expectedChecksum)) {
+            throw new IllegalArgumentException(
+                    String.format(
+                            "The checksums do not match expected %s got %s.",
+                            expectedChecksum, checksum));
+        }
     }
 }
