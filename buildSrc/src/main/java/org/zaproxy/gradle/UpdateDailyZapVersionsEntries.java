@@ -95,6 +95,7 @@ public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
     }
 
     @Input
+    @Optional
     public abstract Property<String> getFromUrl();
 
     @Option(option = "checksum", description = "The checksum of the daily release.")
