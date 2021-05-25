@@ -12,6 +12,7 @@ import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateWebsite
+import org.zaproxy.gradle.UpdateZapVersionWebsiteData
 
 plugins {
     java
@@ -182,6 +183,12 @@ val websiteRepoDir = file("$rootDir/../$websiteRepoName")
 val dataDir = file("$websiteRepoDir/site/data")
 
 
+val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
+    releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
+    val downloadDir = "$dataDir/download"
+    dataFiles.from(files("$downloadDir/b_details.yml", "$downloadDir/c_main.yml", "$downloadDir/g_latest.yml"))
+}
+
 val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     group = "ZAP"
     description = "Copies the generated website data to the website repo."
@@ -195,6 +202,7 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
 
 val updateWebsite by tasks.registering(UpdateWebsite::class) {
     dependsOn(copyWebsiteGeneratedData)
+    dependsOn(updateZapVersionWebsiteData)
 
     ghUserName.set(ghUser.name)
     ghUserEmail.set(ghUser.email)
