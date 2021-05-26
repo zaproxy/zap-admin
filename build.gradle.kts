@@ -1,3 +1,4 @@
+import org.eclipse.jgit.storage.file.FileRepositoryBuilder
 import org.zaproxy.gradle.CreatePullRequest
 import org.zaproxy.gradle.CustomXmlConfiguration
 import org.zaproxy.gradle.GenerateReleaseStateLastCommit
@@ -11,7 +12,6 @@ import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
-import org.zaproxy.gradle.UpdateWebsite
 import org.zaproxy.gradle.UpdateZapVersionWebsiteData
 
 plugins {
@@ -199,15 +199,30 @@ updateZapVersionWebsiteData {
     mustRunAfter(copyWebsiteGeneratedData)
 }
 
-val updateWebsite by tasks.registering(UpdateWebsite::class) {
+val updateWebsite by tasks.registering(CreatePullRequest::class) {
     dependsOn(copyWebsiteGeneratedData)
     dependsOn(updateZapVersionWebsiteData)
 
-    gitHubUser.set(ghUser)
-    gitHubRepo.set(websiteRepo)
+    user.set(ghUser)
+    repo.set(websiteRepo)
+    branchName.set("update-data")
 
-    gitHubSourceRepo.set(adminRepo)
+    commitSummary.set("Update data")
+    commitDescription.set(provider {
+        """
+        From:
+        $adminRepo@${headCommit(adminRepo.dir)}
+        """.trimIndent()
+    })
 }
+
+fun headCommit(repoDir: File) =
+    FileRepositoryBuilder()
+        .setGitDir(File(repoDir, ".git"))
+        .build()
+        .exactRef("HEAD")
+        .getObjectId()
+        .getName()
 
 val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
     zapVersionsPath.set(noAddOnsZapVersions)
