@@ -149,8 +149,7 @@ tasks {
     }
 }
 
-val baseUserName = "zaproxy"
-val zaproxyRepo = "zaproxy"
+val zaproxyRepo = GitHubRepo("zaproxy", "zaproxy", file("$rootDir/../zaproxy"))
 val websiteGeneratedDataComment = "# This file is automatically updated by $adminRepo repo."
 
 val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainReleaseData::class) {
@@ -158,11 +157,8 @@ val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainRelea
     generatedDataComment.set(websiteGeneratedDataComment)
     into.set(file("$buildDir/c_main_files.yml"))
 
-    ghUserName.set(ghUser.name)
-    ghUserAuthToken.set(ghUser.authToken)
-
-    ghBaseUserName.set(baseUserName)
-    ghBaseRepo.set(zaproxyRepo)
+    gitHubUser.set(ghUser)
+    gitHubRepo.set(zaproxyRepo)
 }
 
 val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyReleaseData::class) {
@@ -178,9 +174,8 @@ val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::cl
     websiteUrl.set("https://www.zaproxy.org/")
 }
 
-val websiteRepoName = "zaproxy-website"
-val websiteRepoDir = file("$rootDir/../$websiteRepoName")
-val dataDir = file("$websiteRepoDir/site/data")
+val websiteRepo = GitHubRepo("zaproxy", "zaproxy-website", file("$rootDir/../zaproxy-website"))
+val dataDir = file("${websiteRepo.dir}/site/data")
 
 
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
@@ -204,15 +199,10 @@ val updateWebsite by tasks.registering(UpdateWebsite::class) {
     dependsOn(copyWebsiteGeneratedData)
     dependsOn(updateZapVersionWebsiteData)
 
-    ghUserName.set(ghUser.name)
-    ghUserEmail.set(ghUser.email)
-    ghUserAuthToken.set(ghUser.authToken)
+    gitHubUser.set(ghUser)
+    gitHubRepo.set(websiteRepo)
 
-    ghBaseUserName.set(baseUserName)
-    ghBaseRepo.set(websiteRepoName)
-    ghSourceRepo.set(adminRepo.name)
-
-    websiteRepo.set(websiteRepoDir)
+    gitHubSourceRepo.set(adminRepo)
 }
 
 val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
@@ -223,11 +213,8 @@ val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLast
 val handleWeeklyRelease by tasks.registering(HandleWeeklyRelease::class) {
     releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
 
-    ghUserName.set(ghUser.name)
-    ghUserAuthToken.set(ghUser.authToken)
-
-    ghBaseUserName.set(baseUserName)
-    ghBaseRepo.set(zaproxyRepo)
+    gitHubUser.set(ghUser)
+    gitHubRepo.set(zaproxyRepo)
 
     eventType.set("release-weekly-docker")
 }
@@ -235,11 +222,8 @@ val handleWeeklyRelease by tasks.registering(HandleWeeklyRelease::class) {
 val handleMainRelease by tasks.registering(HandleMainRelease::class) {
     releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
 
-    ghUserName.set(ghUser.name)
-    ghUserAuthToken.set(ghUser.authToken)
-
-    ghBaseUserName.set(baseUserName)
-    ghBaseRepo.set(zaproxyRepo)
+    gitHubUser.set(ghUser)
+    gitHubRepo.set(zaproxyRepo)
 
     eventType.set("release-main-docker")
 }

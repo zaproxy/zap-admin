@@ -45,16 +45,10 @@ public abstract class SendRepositoryDispatch extends DefaultTask {
     private static final int NO_STATUS_CODE = -1;
 
     @Input
-    public abstract Property<String> getGhUserName();
+    public abstract Property<GitHubUser> getGitHubUser();
 
     @Input
-    public abstract Property<String> getGhUserAuthToken();
-
-    @Input
-    public abstract Property<String> getGhBaseUserName();
-
-    @Input
-    public abstract Property<String> getGhBaseRepo();
+    public abstract Property<GitHubRepo> getGitHubRepo();
 
     @Input
     public abstract Property<String> getEventType();
@@ -92,9 +86,7 @@ public abstract class SendRepositoryDispatch extends DefaultTask {
 
     private HttpURLConnection createConnection() {
         String url =
-                String.format(
-                        "https://api.github.com/repos/%s/%s/dispatches",
-                        getGhBaseUserName().get(), getGhBaseRepo().get());
+                String.format("https://api.github.com/repos/%s/dispatches", getGitHubRepo().get());
         HttpURLConnection connection;
         try {
             connection = (HttpURLConnection) new URL(url).openConnection();
@@ -111,8 +103,9 @@ public abstract class SendRepositoryDispatch extends DefaultTask {
         connection.setRequestProperty("Accept", "application/vnd.github.v3+json");
         connection.setRequestProperty("Content-Type", "application/json");
 
-        String userName = getGhUserName().get();
-        String token = getGhUserAuthToken().get();
+        GitHubUser user = getGitHubUser().get();
+        String userName = user.getName();
+        String token = user.getAuthToken();
         byte[] usernameAuthToken = (userName + ":" + token).getBytes(StandardCharsets.UTF_8);
         String authorization = "Basic " + Base64.getEncoder().encodeToString(usernameAuthToken);
         connection.setRequestProperty("Authorization", authorization);
