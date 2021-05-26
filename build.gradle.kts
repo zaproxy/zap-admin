@@ -130,6 +130,21 @@ tasks {
         checksumAlgorithm.set("SHA-256")
     }
 
+    register<CreatePullRequest>("createPullRequestMainRelease") {
+        description = "Creates a pull request to update the main release."
+
+        user.set(ghUser)
+        repo.set(adminRepo)
+        branchName.set("update-main-relase")
+
+        commitSummary.set("Update main release")
+        commitDescription.set(provider {
+            val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+            val mainVersion = zapVersionsXml.getString("core.version")
+            "Update main release to version $mainVersion."
+        })
+    }
+
     register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
         into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
