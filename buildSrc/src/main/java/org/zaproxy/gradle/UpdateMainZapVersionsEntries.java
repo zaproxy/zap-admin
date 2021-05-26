@@ -49,7 +49,7 @@ import org.gradle.api.tasks.options.Option;
  *       occurs while updating them.
  * </ul>
  */
-public class UpdateMainZapVersionsEntries extends DefaultTask {
+public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
 
     private static final String HTTPS_SCHEME = "HTTPS";
 
@@ -69,99 +69,61 @@ public class UpdateMainZapVersionsEntries extends DefaultTask {
     private static final String SIZE_ELEMENT = ".size";
     private static final String URL_ELEMENT = ".url";
 
-    private final ConfigurableFileCollection into;
-    private final Property<String> version;
-    private final Property<String> baseDownloadUrl;
-    private final Property<String> windowsFileName;
-    private final Property<String> linuxFileName;
-    private final Property<String> macFileName;
-    private final Property<String> releaseNotes;
-    private final Property<String> releaseNotesUrl;
-    private final Property<String> checksumAlgorithm;
-
     private String versionDots;
     private String versionUnderscores;
 
     public UpdateMainZapVersionsEntries() {
-        this.into = getProject().getObjects().fileCollection();
-        this.version = getProject().getObjects().property(String.class);
-        this.baseDownloadUrl = getProject().getObjects().property(String.class);
-        this.windowsFileName = getProject().getObjects().property(String.class);
-        this.linuxFileName = getProject().getObjects().property(String.class);
-        this.macFileName = getProject().getObjects().property(String.class);
-        this.releaseNotes = getProject().getObjects().property(String.class);
-        this.releaseNotesUrl = getProject().getObjects().property(String.class);
-        this.checksumAlgorithm = getProject().getObjects().property(String.class);
-
         setGroup("ZAP");
         setDescription("Updates ZapVersions.xml files with a main release.");
     }
 
     @InputFiles
-    public ConfigurableFileCollection getInto() {
-        return into;
-    }
+    public abstract ConfigurableFileCollection getInto();
 
     @Option(option = "release", description = "The main release version.")
     public void setReleaseVersion(String version) {
-        this.version.set(version);
+        getVersion().set(version);
     }
 
     @Input
-    public Property<String> getVersion() {
-        return version;
-    }
+    public abstract Property<String> getVersion();
 
     @Input
-    public Property<String> getBaseDownloadUrl() {
-        return baseDownloadUrl;
-    }
+    public abstract Property<String> getBaseDownloadUrl();
 
     @Input
-    public Property<String> getWindowsFileName() {
-        return windowsFileName;
-    }
+    public abstract Property<String> getWindowsFileName();
 
     @Input
-    public Property<String> getLinuxFileName() {
-        return linuxFileName;
-    }
+    public abstract Property<String> getLinuxFileName();
 
     @Input
-    public Property<String> getMacFileName() {
-        return macFileName;
-    }
+    public abstract Property<String> getMacFileName();
 
     @Input
-    public Property<String> getReleaseNotes() {
-        return releaseNotes;
-    }
+    public abstract Property<String> getReleaseNotes();
 
     @Input
-    public Property<String> getReleaseNotesUrl() {
-        return releaseNotesUrl;
-    }
+    public abstract Property<String> getReleaseNotesUrl();
 
     @Input
-    public Property<String> getChecksumAlgorithm() {
-        return checksumAlgorithm;
-    }
+    public abstract Property<String> getChecksumAlgorithm();
 
     @TaskAction
     public void update() throws Exception {
-        validateNotEmpty(version, "version");
-        validateNotEmpty(baseDownloadUrl, "base download URL");
-        validateNotEmpty(windowsFileName, "Windows file name");
-        validateNotEmpty(linuxFileName, "Linux file name");
-        validateNotEmpty(macFileName, "macOS file name");
-        validateNotEmpty(releaseNotes, "release notes");
-        validateNotEmpty(releaseNotesUrl, "release notes URL");
-        validateNotEmpty(checksumAlgorithm, "checksum algorithm");
+        validateNotEmpty(getVersion(), "version");
+        validateNotEmpty(getBaseDownloadUrl(), "base download URL");
+        validateNotEmpty(getWindowsFileName(), "Windows file name");
+        validateNotEmpty(getLinuxFileName(), "Linux file name");
+        validateNotEmpty(getMacFileName(), "macOS file name");
+        validateNotEmpty(getReleaseNotes(), "release notes");
+        validateNotEmpty(getReleaseNotesUrl(), "release notes URL");
+        validateNotEmpty(getChecksumAlgorithm(), "checksum algorithm");
 
-        versionDots = version.get();
+        versionDots = getVersion().get();
         versionUnderscores = versionDots.replace('.', '_');
 
-        String finalBaseDownloadUrl = replaceVersionTokens(baseDownloadUrl.get());
+        String finalBaseDownloadUrl = replaceVersionTokens(getBaseDownloadUrl().get());
         try {
             URL url = new URL(finalBaseDownloadUrl);
             if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
@@ -178,16 +140,17 @@ public class UpdateMainZapVersionsEntries extends DefaultTask {
         releaseFiles.add(
                 createReleaseFile(
                         WINDOWS_ELEMENT,
-                        createDownloadUrl(finalBaseDownloadUrl, windowsFileName.get())));
+                        createDownloadUrl(finalBaseDownloadUrl, getWindowsFileName().get())));
         releaseFiles.add(
                 createReleaseFile(
                         LINUX_ELEMENT,
-                        createDownloadUrl(finalBaseDownloadUrl, linuxFileName.get())));
+                        createDownloadUrl(finalBaseDownloadUrl, getLinuxFileName().get())));
         releaseFiles.add(
                 createReleaseFile(
-                        MAC_ELEMENT, createDownloadUrl(finalBaseDownloadUrl, macFileName.get())));
+                        MAC_ELEMENT,
+                        createDownloadUrl(finalBaseDownloadUrl, getMacFileName().get())));
 
-        for (File zapVersionsFile : into.getFiles()) {
+        for (File zapVersionsFile : getInto()) {
             if (!Files.isRegularFile(zapVersionsFile.toPath())) {
                 throw new IllegalArgumentException(
                         "The provided path is not a file: " + zapVersionsFile);
@@ -197,9 +160,9 @@ public class UpdateMainZapVersionsEntries extends DefaultTask {
             zapVersionsXml.load(zapVersionsFile);
 
             zapVersionsXml.setProperty(CORE_VERSION_ELEMENT, versionDots);
-            zapVersionsXml.setProperty(CORE_REL_NOTES_ELEMENT, releaseNotes.get());
+            zapVersionsXml.setProperty(CORE_REL_NOTES_ELEMENT, getReleaseNotes().get());
             zapVersionsXml.setProperty(
-                    CORE_REL_NOTES_URL_ELEMENT, replaceVersionTokens(releaseNotesUrl.get()));
+                    CORE_REL_NOTES_URL_ELEMENT, replaceVersionTokens(getReleaseNotesUrl().get()));
 
             releaseFiles.forEach(
                     c -> {
@@ -231,7 +194,7 @@ public class UpdateMainZapVersionsEntries extends DefaultTask {
                 keyPrefix,
                 url,
                 file.getFileName().toString(),
-                createChecksum(checksumAlgorithm.get(), file),
+                createChecksum(getChecksumAlgorithm().get(), file),
                 String.valueOf(Files.size(file)));
     }
 

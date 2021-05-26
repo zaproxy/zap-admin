@@ -25,7 +25,7 @@ import org.apache.commons.configuration.XMLConfiguration;
 import org.zaproxy.gradle.ReleaseData.ReleaseFile;
 
 /** A task that generates the weekly release data for the website. */
-public class GenerateWebsiteWeeklyReleaseData extends AbstractGenerateWebsiteReleaseData {
+public abstract class GenerateWebsiteWeeklyReleaseData extends AbstractGenerateWebsiteReleaseData {
 
     private static final String DAILY_ELEMENT = "core.daily";
     private static final String DAILY_SIZE_ELEMENT = DAILY_ELEMENT + ".size";

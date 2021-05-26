@@ -23,7 +23,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.configuration.XMLConfiguration;
-import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Internal;
 import org.kohsuke.github.GHAsset;
@@ -32,56 +31,31 @@ import org.kohsuke.github.GitHub;
 import org.zaproxy.gradle.ReleaseData.ReleaseFile;
 
 /** A task that generates the main release data for the website. */
-public class GenerateWebsiteMainReleaseData extends AbstractGenerateWebsiteReleaseData {
+public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWebsiteReleaseData {
 
     private static final String CORE_VERSION_ELEMENT = "core.version";
     private static final String TAG_PREFIX = "v";
 
-    private final Property<String> ghUserName;
-    private final Property<String> ghUserAuthToken;
-
-    private final Property<String> ghBaseUserName;
-    private final Property<String> ghBaseRepo;
-
     public GenerateWebsiteMainReleaseData() {
         super("main");
-
-        ObjectFactory objects = getProject().getObjects();
-        this.ghUserName = objects.property(String.class);
-        this.ghUserAuthToken = objects.property(String.class);
-        this.ghBaseUserName = objects.property(String.class);
-        this.ghBaseRepo = objects.property(String.class);
 
         // Execute always, in case release assets have changed.
         getOutputs().upToDateWhen(task -> false);
     }
 
     @Internal
-    public Property<String> getGhUserName() {
-        return ghUserName;
-    }
+    public abstract Property<GitHubUser> getGitHubUser();
 
     @Internal
-    public Property<String> getGhUserAuthToken() {
-        return ghUserAuthToken;
-    }
-
-    @Internal
-    public Property<String> getGhBaseUserName() {
-        return ghBaseUserName;
-    }
-
-    @Internal
-    public Property<String> getGhBaseRepo() {
-        return ghBaseRepo;
-    }
+    public abstract Property<GitHubRepo> getGitHubRepo();
 
     @Override
     protected List<ReleaseFile> createReleaseFiles(XMLConfiguration zapVersionsXml)
             throws IOException {
+        GitHubUser user = getGitHubUser().get();
         GHRepository repo =
-                createGitHubConnection(ghUserName.getOrNull(), ghUserAuthToken.getOrNull())
-                        .getRepository(ghBaseUserName.get() + "/" + ghBaseRepo.get());
+                createGitHubConnection(user.getName(), user.getAuthToken())
+                        .getRepository(getGitHubRepo().get().toString());
 
         List<GHAsset> assets =
                 repo.getReleaseByTagName(

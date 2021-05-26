@@ -23,7 +23,6 @@ import java.util.List;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
-import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFile;
@@ -36,42 +35,27 @@ public abstract class AbstractGenerateWebsiteReleaseData extends DefaultTask {
 
     private static final double MEGABYTE = 1024 * 1024;
 
-    private final RegularFileProperty zapVersions;
-    private final Property<String> generatedDataComment;
-    private final RegularFileProperty into;
-
     public AbstractGenerateWebsiteReleaseData(String releaseName) {
-        ObjectFactory objects = getProject().getObjects();
-        this.zapVersions = objects.fileProperty();
-        this.generatedDataComment = objects.property(String.class);
-        this.into = objects.fileProperty();
-
         setGroup("ZAP");
         setDescription("Generates the " + releaseName + " release data for the website.");
     }
 
     @InputFile
-    public RegularFileProperty getZapVersions() {
-        return zapVersions;
-    }
+    public abstract RegularFileProperty getZapVersions();
 
     @Input
-    public Property<String> getGeneratedDataComment() {
-        return generatedDataComment;
-    }
+    public abstract Property<String> getGeneratedDataComment();
 
     @OutputFile
-    public RegularFileProperty getInto() {
-        return into;
-    }
+    public abstract RegularFileProperty getInto();
 
     @TaskAction
     public void generate() throws Exception {
         XMLConfiguration zapVersionsXml = new CustomXmlConfiguration();
-        zapVersionsXml.load(zapVersions.get().getAsFile());
+        zapVersionsXml.load(getZapVersions().get().getAsFile());
 
         ReleaseData releaseData = new ReleaseData(createReleaseFiles(zapVersionsXml));
-        releaseData.save(into.get().getAsFile().toPath(), generatedDataComment.get());
+        releaseData.save(getInto().get().getAsFile().toPath(), getGeneratedDataComment().get());
     }
 
     protected abstract List<ReleaseFile> createReleaseFiles(XMLConfiguration zapVersionsXml)

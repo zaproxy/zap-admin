@@ -61,18 +61,10 @@ public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
     private static final String DAILY_SIZE_ELEMENT = DAILY_ELEMENT + ".size";
     private static final String DAILY_URL_ELEMENT = DAILY_ELEMENT + ".url";
 
-    private final RegularFileProperty from;
-    private final ConfigurableFileCollection into;
     private final Property<String> checksum;
-    private final Property<String> baseDownloadUrl;
-    private final Property<String> checksumAlgorithm;
 
     public UpdateDailyZapVersionsEntries() {
-        this.from = getProject().getObjects().fileProperty();
-        this.into = getProject().getObjects().fileCollection();
         this.checksum = getProject().getObjects().property(String.class);
-        this.baseDownloadUrl = getProject().getObjects().property(String.class);
-        this.checksumAlgorithm = getProject().getObjects().property(String.class);
 
         setGroup("ZAP");
         setDescription("Updates ZapVersions.xml files with a daily release.");
@@ -80,14 +72,12 @@ public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
 
     @Option(option = "file", description = "The file system path to the daily release.")
     public void setDailyFilePath(String path) {
-        from.set(getProject().file(path));
+        getFrom().set(getProject().file(path));
     }
 
     @Input
     @Optional
-    public RegularFileProperty getFrom() {
-        return from;
-    }
+    public abstract RegularFileProperty getFrom();
 
     @Option(option = "url", description = "The URL to the daily release.")
     public void setUrl(String url) {
@@ -110,23 +100,17 @@ public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
     }
 
     @InputFiles
-    public ConfigurableFileCollection getInto() {
-        return into;
-    }
+    public abstract ConfigurableFileCollection getInto();
 
     @Input
-    public Property<String> getBaseDownloadUrl() {
-        return baseDownloadUrl;
-    }
+    public abstract Property<String> getBaseDownloadUrl();
 
     @Input
-    public Property<String> getChecksumAlgorithm() {
-        return checksumAlgorithm;
-    }
+    public abstract Property<String> getChecksumAlgorithm();
 
     @TaskAction
     public void update() throws Exception {
-        if (checksumAlgorithm.get().isEmpty()) {
+        if (getChecksumAlgorithm().get().isEmpty()) {
             throw new IllegalArgumentException("The checksum algorithm must not be empty.");
         }
 
@@ -134,22 +118,22 @@ public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
         String fileName = dailyRelease.getFileName().toString();
         String dailyVersion = getDailyVersion(fileName);
         String url;
-        if (from.isPresent()) {
-            if (baseDownloadUrl.get().isEmpty()) {
+        if (getFrom().isPresent()) {
+            if (getBaseDownloadUrl().get().isEmpty()) {
                 throw new IllegalArgumentException("The base download URL must not be empty.");
             }
-            url = baseDownloadUrl.get() + dailyVersion.substring(2) + "/" + fileName;
+            url = getBaseDownloadUrl().get() + dailyVersion.substring(2) + "/" + fileName;
         } else {
             url = getFromUrl().get();
         }
 
-        String algorithm = checksumAlgorithm.get();
+        String algorithm = getChecksumAlgorithm().get();
         String calculatedChecksum = createChecksum(algorithm, dailyRelease);
         validateChecksum(calculatedChecksum, getChecksum().getOrNull());
         String hash = algorithm + ":" + calculatedChecksum;
         String size = String.valueOf(Files.size(dailyRelease));
 
-        for (File zapVersionsFile : into.getFiles()) {
+        for (File zapVersionsFile : getInto()) {
             if (!Files.isRegularFile(zapVersionsFile.toPath())) {
                 throw new IllegalArgumentException(
                         "The provided path is not a file: " + zapVersionsFile);
@@ -181,8 +165,8 @@ public abstract class UpdateDailyZapVersionsEntries extends DefaultTask {
     }
 
     private Path getReleaseFile() throws IOException {
-        if (from.isPresent()) {
-            Path release = from.getAsFile().get().toPath();
+        if (getFrom().isPresent()) {
+            Path release = getFrom().getAsFile().get().toPath();
             if (!Files.isRegularFile(release)) {
                 throw new IllegalArgumentException(
                         "The provided path does not exist or it's not a file: " + release);

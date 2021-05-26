@@ -29,7 +29,6 @@ import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.eclipse.jgit.transport.URIish;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.gradle.api.DefaultTask;
-import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Internal;
@@ -40,7 +39,7 @@ import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 
 /** A task that creates a pull request updating the website with the generated data. */
-public class UpdateWebsite extends DefaultTask {
+public abstract class UpdateWebsite extends DefaultTask {
 
     private static final String GITHUB_BASE_URL = "https://github.com/";
 
@@ -49,43 +48,18 @@ public class UpdateWebsite extends DefaultTask {
     private static final String DEFAULT_GIT_BASE_BRANCH_NAME = "master";
     private static final String DEFAULT_GIT_BRANCH_NAME = "update-data";
 
-    private final RegularFileProperty websiteRepo;
-
     private final Property<String> gitBaseBranchName;
     private final Property<String> gitBranchName;
 
-    private final Property<String> ghUserName;
-    private final Property<String> ghUserEmail;
-    private final Property<String> ghUserAuthToken;
-
-    private final Property<String> ghBaseUserName;
-    private final Property<String> ghBaseRepo;
-    private final Property<String> ghSourceRepo;
-
     public UpdateWebsite() {
         ObjectFactory objects = getProject().getObjects();
-
-        this.websiteRepo = objects.fileProperty();
 
         this.gitBaseBranchName =
                 objects.property(String.class).convention(DEFAULT_GIT_BASE_BRANCH_NAME);
         this.gitBranchName = objects.property(String.class).convention(DEFAULT_GIT_BRANCH_NAME);
 
-        this.ghUserName = objects.property(String.class);
-        this.ghUserEmail = objects.property(String.class);
-        this.ghUserAuthToken = objects.property(String.class);
-
-        this.ghBaseUserName = objects.property(String.class);
-        this.ghBaseRepo = objects.property(String.class);
-        this.ghSourceRepo = objects.property(String.class);
-
         setGroup("ZAP");
         setDescription("Creates a pull request updating the website with the generated data.");
-    }
-
-    @Internal
-    public RegularFileProperty getWebsiteRepo() {
-        return websiteRepo;
     }
 
     @Internal
@@ -99,48 +73,26 @@ public class UpdateWebsite extends DefaultTask {
     }
 
     @Internal
-    public Property<String> getGhUserName() {
-        return ghUserName;
-    }
+    public abstract Property<GitHubUser> getGitHubUser();
 
     @Internal
-    public Property<String> getGhUserEmail() {
-        return ghUserEmail;
-    }
+    public abstract Property<GitHubRepo> getGitHubRepo();
 
     @Internal
-    public Property<String> getGhUserAuthToken() {
-        return ghUserAuthToken;
-    }
-
-    @Internal
-    public Property<String> getGhBaseUserName() {
-        return ghBaseUserName;
-    }
-
-    @Internal
-    public Property<String> getGhBaseRepo() {
-        return ghBaseRepo;
-    }
-
-    @Internal
-    public Property<String> getGhSourceRepo() {
-        return ghSourceRepo;
-    }
+    public abstract Property<GitHubRepo> getGitHubSourceRepo();
 
     @TaskAction
     public void update() throws Exception {
+        GitHubRepo repo = getGitHubRepo().get();
         Repository repository =
-                new FileRepositoryBuilder()
-                        .setGitDir(new File(websiteRepo.get().getAsFile(), ".git"))
-                        .build();
+                new FileRepositoryBuilder().setGitDir(new File(repo.getDir(), ".git")).build();
         try (Git git = new Git(repository)) {
             if (git.status().call().getModified().isEmpty()) {
                 return;
             }
 
-            URIish originUri =
-                    new URIish(GITHUB_BASE_URL + ghUserName.get() + "/" + ghBaseRepo.get());
+            GitHubUser user = getGitHubUser().get();
+            URIish originUri = new URIish(GITHUB_BASE_URL + user.getName() + "/" + repo.getName());
             git.remoteSetUrl().setRemoteName(GIT_REMOTE_ORIGIN).setRemoteUri(originUri).call();
 
             git.checkout()
@@ -154,57 +106,58 @@ public class UpdateWebsite extends DefaultTask {
             String commitSummary = "Update data";
             String commitDescription =
                     "From:\n"
-                            + ghBaseUserName.get()
+                            + repo.getOwner()
                             + "/"
-                            + ghSourceRepo.get()
+                            + getGitHubSourceRepo().get().getName()
                             + "@"
                             + sourceCommitSha;
 
-            PersonIdent personIdent = new PersonIdent(ghUserName.get(), ghUserEmail.get());
+            PersonIdent personIdent = new PersonIdent(user.getName(), user.getEmail());
             git.commit()
                     .setAll(true)
                     .setSign(false)
                     .setAuthor(personIdent)
                     .setCommitter(personIdent)
-                    .setMessage(commitSummary + "\n\n" + commitDescription + signedOffBy())
+                    .setMessage(commitSummary + "\n\n" + commitDescription + signedOffBy(user))
                     .call();
 
             git.push()
                     .setCredentialsProvider(
                             new UsernamePasswordCredentialsProvider(
-                                    ghUserName.get(), ghUserAuthToken.get()))
+                                    user.getName(), user.getAuthToken()))
                     .setForce(true)
                     .add(gitBranchName.get())
                     .call();
 
             GHRepository ghRepo =
-                    GitHub.connect(ghUserName.get(), ghUserAuthToken.get())
-                            .getRepository(ghBaseUserName.get() + "/" + ghBaseRepo.get());
+                    GitHub.connect(user.getName(), user.getAuthToken())
+                            .getRepository(repo.toString());
 
             List<GHPullRequest> pulls =
                     ghRepo.queryPullRequests()
                             .base(gitBaseBranchName.get())
-                            .head(ghUserName.get() + ":" + gitBranchName.get())
+                            .head(user.getName() + ":" + gitBranchName.get())
                             .state(GHIssueState.OPEN)
                             .list()
                             .asList();
             if (pulls.isEmpty()) {
-                createPullRequest(ghRepo, commitSummary, commitDescription);
+                createPullRequest(user, ghRepo, commitSummary, commitDescription);
             } else {
                 pulls.get(0).setBody(commitDescription);
             }
         }
     }
 
-    private String signedOffBy() {
-        return "\n\nSigned-off-by: " + ghUserName.get() + " <" + ghUserEmail.get() + ">";
+    private static String signedOffBy(GitHubUser user) {
+        return "\n\nSigned-off-by: " + user.getName() + " <" + user.getEmail() + ">";
     }
 
-    private void createPullRequest(GHRepository ghRepo, String title, String description)
+    private void createPullRequest(
+            GitHubUser user, GHRepository ghRepo, String title, String description)
             throws IOException {
         ghRepo.createPullRequest(
                 title,
-                ghUserName.get() + ":" + gitBranchName.get(),
+                user.getName() + ":" + gitBranchName.get(),
                 gitBaseBranchName.get(),
                 description);
     }
