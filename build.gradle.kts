@@ -200,6 +200,10 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     }
 }
 
+updateZapVersionWebsiteData {
+    mustRunAfter(copyWebsiteGeneratedData)
+}
+
 val updateWebsite by tasks.registering(UpdateWebsite::class) {
     dependsOn(copyWebsiteGeneratedData)
     dependsOn(updateZapVersionWebsiteData)
