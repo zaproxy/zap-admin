@@ -5,8 +5,8 @@ import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
-import org.zaproxy.gradle.GitHubUser
 import org.zaproxy.gradle.GitHubRepo
+import org.zaproxy.gradle.GitHubUser
 import org.zaproxy.gradle.HandleMainRelease
 import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
@@ -75,6 +75,14 @@ spotless {
         licenseHeaderFile("$rootDir/docs/headers/license.java")
 
         googleJavaFormat("1.7").aosp()
+    }
+
+    kotlin {
+        ktlint()
+    }
+
+    kotlinGradle {
+        ktlint()
     }
 }
 
@@ -177,7 +185,6 @@ val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::cl
 val websiteRepo = GitHubRepo("zaproxy", "zaproxy-website", file("$rootDir/../zaproxy-website"))
 val dataDir = file("${websiteRepo.dir}/site/data")
 
-
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
     releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
     val downloadDir = "$dataDir/download"
@@ -252,4 +259,3 @@ tasks.register("handleRelease") {
     dependsOn(handleWeeklyRelease)
     dependsOn(handleMainRelease)
 }
-

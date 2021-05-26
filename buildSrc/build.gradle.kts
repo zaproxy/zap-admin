@@ -27,6 +27,10 @@ spotless {
         googleJavaFormat("1.7").aosp()
     }
 
+    kotlin {
+        ktlint()
+    }
+
     kotlinGradle {
         ktlint()
     }
