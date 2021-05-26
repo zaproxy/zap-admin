@@ -30,7 +30,6 @@ import java.util.List;
 import java.util.Map;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
-import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFile;
@@ -43,51 +42,32 @@ import org.zaproxy.zap.control.AddOn;
 import org.zaproxy.zap.control.AddOnCollection;
 import org.zaproxy.zap.utils.ZapXmlConfiguration;
 
-public class GenerateWebsiteAddonsData extends DefaultTask {
+public abstract class GenerateWebsiteAddonsData extends DefaultTask {
 
     private static final DumpSettings SETTINGS =
             DumpSettings.builder().setDefaultFlowStyle(FlowStyle.BLOCK).build();
     private static final Dump DUMP = new Dump(SETTINGS);
 
-    private final RegularFileProperty zapVersions;
-    private final Property<String> generatedDataComment;
-    private final Property<String> websiteUrl;
-    private final RegularFileProperty into;
-
     public GenerateWebsiteAddonsData() {
-        ObjectFactory objects = getProject().getObjects();
-        this.zapVersions = objects.fileProperty();
-        this.generatedDataComment = objects.property(String.class);
-        this.websiteUrl = objects.property(String.class);
-        this.into = objects.fileProperty();
-
         setGroup("ZAP");
         setDescription("Generates the add-ons data for the website.");
     }
 
     @OutputFile
-    public RegularFileProperty getInto() {
-        return into;
-    }
+    public abstract RegularFileProperty getInto();
 
     @InputFile
-    public RegularFileProperty getZapVersions() {
-        return zapVersions;
-    }
+    public abstract RegularFileProperty getZapVersions();
 
     @Input
-    public Property<String> getGeneratedDataComment() {
-        return generatedDataComment;
-    }
+    public abstract Property<String> getGeneratedDataComment();
 
     @Input
-    public Property<String> getWebsiteUrl() {
-        return websiteUrl;
-    }
+    public abstract Property<String> getWebsiteUrl();
 
     @TaskAction
     public void update() throws Exception {
-        File xmlFile = zapVersions.get().getAsFile();
+        File xmlFile = getZapVersions().get().getAsFile();
         if (xmlFile.exists()) {
             List<Map<String, Object>> addOnList = new ArrayList<>();
             ZapXmlConfiguration conf = new ZapXmlConfiguration(xmlFile);
@@ -99,8 +79,8 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
                 addOnData.put("description", addOn.getDescription());
                 addOnData.put("author", addOn.getAuthor());
                 addOnData.put("status", addOn.getStatus().name());
-                addOnData.put("infoUrl", getUrl(addOn.getInfo(), websiteUrl.get()));
-                addOnData.put("repoUrl", getUrl(addOn.getRepo(), websiteUrl.get()));
+                addOnData.put("infoUrl", getUrl(addOn.getInfo(), getWebsiteUrl().get()));
+                addOnData.put("repoUrl", getUrl(addOn.getRepo(), getWebsiteUrl().get()));
                 addOnData.put("downloadUrl", addOn.getUrl().toString());
                 addOnData.put("date", conf.getString("addon_" + addOn.getId() + "/date"));
                 addOnData.put(
@@ -113,8 +93,8 @@ public class GenerateWebsiteAddonsData extends DefaultTask {
 
             try (BufferedWriter writer =
                     Files.newBufferedWriter(
-                            into.get().getAsFile().toPath(), Charset.defaultCharset())) {
-                writer.write(generatedDataComment.get());
+                            getInto().get().getAsFile().toPath(), Charset.defaultCharset())) {
+                writer.write(getGeneratedDataComment().get());
                 writer.write("\n---\n");
                 writer.write(output);
             }

@@ -60,7 +60,7 @@ import org.gradle.api.tasks.options.Option;
  *       occurs while updating them.
  * </ul>
  */
-public class UpdateAddOnZapVersionsEntries extends DefaultTask {
+public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
 
     private static final String HTTPS_SCHEME = "HTTPS";
 
@@ -70,21 +70,15 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
     private static final String ADD_ON_MANIFEST_FILE_NAME = "ZapAddOn.xml";
     private static final String ADD_ON_EXTENSION = ".zap";
 
-    private final RegularFileProperty fromFile;
     private final Property<String> fromUrl;
-    private final ConfigurableFileCollection into;
     private final Property<String> downloadUrl;
-    private final Property<String> checksumAlgorithm;
     private final Property<LocalDate> releaseDate;
 
     public UpdateAddOnZapVersionsEntries() {
         ObjectFactory objects = getProject().getObjects();
-        this.fromFile = objects.fileProperty();
         this.fromUrl = objects.property(String.class);
-        this.into = objects.fileCollection();
         this.downloadUrl = objects.property(String.class);
         this.downloadUrl.set(fromUrl);
-        this.checksumAlgorithm = objects.property(String.class);
         this.releaseDate = objects.property(LocalDate.class);
         this.releaseDate.set(LocalDate.now());
 
@@ -94,14 +88,12 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
 
     @Option(option = "file", description = "The file system path to the add-on.")
     public void setFile(String path) {
-        fromFile.set(getProject().file(path));
+        getFromFile().set(getProject().file(path));
     }
 
     @Input
     @Optional
-    public RegularFileProperty getFromFile() {
-        return fromFile;
-    }
+    public abstract RegularFileProperty getFromFile();
 
     @Option(option = "url", description = "The URL to the add-on.")
     public void setUrl(String url) {
@@ -116,13 +108,11 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
 
     @Option(option = "into", description = "The ZapVersions.xml files to update.")
     public void setFiles(List<String> files) {
-        into.setFrom(files);
+        getInto().setFrom(files);
     }
 
     @InputFiles
-    public ConfigurableFileCollection getInto() {
-        return into;
-    }
+    public abstract ConfigurableFileCollection getInto();
 
     @Option(option = "downloadUrl", description = "The URL from where the add-on is downloaded.")
     public void setDownloadUrl(String url) {
@@ -136,9 +126,7 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
     }
 
     @Input
-    public Property<String> getChecksumAlgorithm() {
-        return checksumAlgorithm;
-    }
+    public abstract Property<String> getChecksumAlgorithm();
 
     @Option(option = "releaseDate", description = "The release date.")
     public void setReleaseDate(String date) {
@@ -152,11 +140,11 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
 
     @TaskAction
     public void update() throws Exception {
-        if (checksumAlgorithm.get().isEmpty()) {
+        if (getChecksumAlgorithm().get().isEmpty()) {
             throw new IllegalArgumentException("The checksum algorithm must not be empty.");
         }
 
-        if (fromFile.isPresent()) {
+        if (getFromFile().isPresent()) {
             if (fromUrl.isPresent()) {
                 throw new IllegalArgumentException(
                         "Only one of the properties, URL or file, can be set at the same time.");
@@ -195,11 +183,11 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
                         new AddOnConfBuilder(
                                         addOn,
                                         downloadUrl.get(),
-                                        checksumAlgorithm.get(),
+                                        getChecksumAlgorithm().get(),
                                         releaseDate.get())
                                 .build());
 
-        for (File zapVersionsFile : into.getFiles()) {
+        for (File zapVersionsFile : getInto()) {
             if (!Files.isRegularFile(zapVersionsFile.toPath())) {
                 throw new IllegalArgumentException(
                         "The provided path is not a file: " + zapVersionsFile);
@@ -234,8 +222,8 @@ public class UpdateAddOnZapVersionsEntries extends DefaultTask {
     }
 
     private Path getAddOn() throws IOException {
-        if (fromFile.isPresent()) {
-            Path addOn = fromFile.getAsFile().get().toPath();
+        if (getFromFile().isPresent()) {
+            Path addOn = getFromFile().getAsFile().get().toPath();
             if (!Files.isRegularFile(addOn)) {
                 throw new IllegalArgumentException(
                         "The provided path does not exist or it's not a file: " + addOn);
