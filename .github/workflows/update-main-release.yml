@@ -16,6 +16,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 8
+    - name: Create News Main Release
+      run: ./gradlew createNewsMainRelease --release="${{ github.event.client_payload.version }}"
     - name: Update Main Release
       run: ./gradlew updateMainRelease --release="${{ github.event.client_payload.version }}"
     - name: Create Pull Request
