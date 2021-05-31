@@ -135,7 +135,7 @@ tasks {
 
         user.set(ghUser)
         repo.set(adminRepo)
-        branchName.set("update-main-relase")
+        branchName.set("update-main-release")
 
         commitSummary.set("Update main release")
         commitDescription.set(provider {
@@ -156,7 +156,7 @@ tasks {
 
         user.set(ghUser)
         repo.set(adminRepo)
-        branchName.set("update-daily-relase")
+        branchName.set("update-daily-release")
 
         commitSummary.set("Update weekly release")
         commitDescription.set(provider {
