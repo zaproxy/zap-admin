@@ -5,7 +5,7 @@ on:
     types: 'main-release'
 
 jobs:
-  daily-release:
+  main-release:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
