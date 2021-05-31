@@ -19,7 +19,6 @@
  */
 package org.zaproxy.gradle;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -32,35 +31,20 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
-import org.gradle.api.DefaultTask;
-import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
-import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.Optional;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.options.Option;
 
-/**
- * A task that updates {@code ZapVersions.xml} files with an add-on.
- *
- * <p><strong>Note:</strong>
- *
- * <ul>
- *   <li>This task does not have outputs as the target {@code ZapVersions.xml} files might be
- *       changed externally/manually, for example, updated with add-ons or main releases.
- *   <li>There are no guarantees that all {@code ZapVersions.xml} files are updated if an error
- *       occurs while updating them.
- * </ul>
- */
-public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
+/** A task that updates {@code ZapVersions.xml} files with an add-on. */
+public abstract class UpdateAddOnZapVersionsEntries extends AbstractUpdateZapVersionsEntries {
 
     private static final String HTTPS_SCHEME = "HTTPS";
 
@@ -82,7 +66,6 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
         this.releaseDate = objects.property(LocalDate.class);
         this.releaseDate.set(LocalDate.now());
 
-        setGroup("ZAP");
         setDescription("Updates ZapVersions.xml files with an add-on.");
     }
 
@@ -106,14 +89,6 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
         return fromUrl;
     }
 
-    @Option(option = "into", description = "The ZapVersions.xml files to update.")
-    public void setFiles(List<String> files) {
-        getInto().setFrom(files);
-    }
-
-    @InputFiles
-    public abstract ConfigurableFileCollection getInto();
-
     @Option(option = "downloadUrl", description = "The URL from where the add-on is downloaded.")
     public void setDownloadUrl(String url) {
         downloadUrl.set(url);
@@ -124,9 +99,6 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
     public Property<String> getDownloadUrl() {
         return downloadUrl;
     }
-
-    @Input
-    public abstract Property<String> getChecksumAlgorithm();
 
     @Option(option = "releaseDate", description = "The release date.")
     public void setReleaseDate(String date) {
@@ -140,10 +112,6 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
 
     @TaskAction
     public void update() throws Exception {
-        if (getChecksumAlgorithm().get().isEmpty()) {
-            throw new IllegalArgumentException("The checksum algorithm must not be empty.");
-        }
-
         if (getFromFile().isPresent()) {
             if (fromUrl.isPresent()) {
                 throw new IllegalArgumentException(
@@ -180,45 +148,36 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
         AddOnEntry addOnEntry =
                 new AddOnEntry(
                         addOnId,
-                        new AddOnConfBuilder(
-                                        addOn,
-                                        downloadUrl.get(),
-                                        getChecksumAlgorithm().get(),
-                                        releaseDate.get())
+                        new AddOnConfBuilder(addOn, getDownloadUrl().get(), releaseDate.get())
                                 .build());
 
-        for (File zapVersionsFile : getInto()) {
-            if (!Files.isRegularFile(zapVersionsFile.toPath())) {
-                throw new IllegalArgumentException(
-                        "The provided path is not a file: " + zapVersionsFile);
-            }
+        updateZapVersionsFiles(
+                zapVersionsXml -> {
+                    SortedSet<AddOnEntry> addOns = new TreeSet<>();
+                    Arrays.stream(zapVersionsXml.getStringArray(ADD_ON_ELEMENT))
+                            .filter(id -> !addOnId.equals(id))
+                            .forEach(
+                                    id -> {
+                                        String key = ADD_ON_NODE_PREFIX + id;
+                                        addOns.add(
+                                                new AddOnEntry(
+                                                        id, zapVersionsXml.configurationAt(key)));
+                                        zapVersionsXml.clearTree(key);
+                                    });
 
-            SortedSet<AddOnEntry> addOns = new TreeSet<>();
-            XMLConfiguration zapVersionsXml = new CustomXmlConfiguration();
-            zapVersionsXml.load(zapVersionsFile);
-            Arrays.stream(zapVersionsXml.getStringArray(ADD_ON_ELEMENT))
-                    .filter(id -> !addOnId.equals(id))
-                    .forEach(
-                            id -> {
-                                String key = ADD_ON_NODE_PREFIX + id;
-                                addOns.add(new AddOnEntry(id, zapVersionsXml.configurationAt(key)));
-                                zapVersionsXml.clearTree(key);
+                    zapVersionsXml.clearTree(ADD_ON_ELEMENT);
+                    zapVersionsXml.clearTree(ADD_ON_NODE_PREFIX + addOnId);
+
+                    addOns.add(addOnEntry);
+
+                    addOns.forEach(
+                            e -> {
+                                zapVersionsXml.addProperty(ADD_ON_ELEMENT, e.getAddOnId());
+                                zapVersionsXml.addNodes(
+                                        ADD_ON_NODE_PREFIX + e.getAddOnId(),
+                                        e.getData().getRootNode().getChildren());
                             });
-
-            zapVersionsXml.clearTree(ADD_ON_ELEMENT);
-            zapVersionsXml.clearTree(ADD_ON_NODE_PREFIX + addOnId);
-
-            addOns.add(addOnEntry);
-
-            addOns.forEach(
-                    e -> {
-                        zapVersionsXml.addProperty(ADD_ON_ELEMENT, e.getAddOnId());
-                        zapVersionsXml.addNodes(
-                                ADD_ON_NODE_PREFIX + e.getAddOnId(),
-                                e.getData().getRootNode().getChildren());
-                    });
-            zapVersionsXml.save(zapVersionsFile);
-        }
+                });
     }
 
     private Path getAddOn() throws IOException {
@@ -295,7 +254,7 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
         }
     }
 
-    private static class AddOnConfBuilder {
+    private class AddOnConfBuilder {
 
         private static final String NAME_ELEMENT = "name";
         private static final String VERSION_ELEMENT = "version";
@@ -327,14 +286,11 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
 
         private final Path addOn;
         private final String downloadUrl;
-        private final String checksumAlgorithm;
         private final LocalDate releaseDate;
 
-        public AddOnConfBuilder(
-                Path addOn, String downloadUrl, String checksumAlgorithm, LocalDate releaseDate) {
+        public AddOnConfBuilder(Path addOn, String downloadUrl, LocalDate releaseDate) {
             this.addOn = addOn;
             this.downloadUrl = downloadUrl;
-            this.checksumAlgorithm = checksumAlgorithm;
             this.releaseDate = releaseDate;
         }
 
@@ -369,7 +325,7 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
             appendIfNotEmpty(manifest.getString("status", "alpha"), configuration, STATUS_ELEMENT);
             append(CHANGES_ELEMENT, manifest, configuration);
             appendIfNotEmpty(downloadUrl, configuration, URL_ELEMENT);
-            appendIfNotEmpty(createChecksum(checksumAlgorithm, addOn), configuration, HASH_ELEMENT);
+            appendIfNotEmpty(createChecksumString(addOn), configuration, HASH_ELEMENT);
             append(URL_ELEMENT, manifest, INFO_ELEMENT, configuration);
             append(REPO_ELEMENT, manifest, configuration);
             appendIfNotEmpty(releaseDate.toString(), configuration, DATE_ELEMENT);
@@ -378,10 +334,6 @@ public abstract class UpdateAddOnZapVersionsEntries extends DefaultTask {
             append(NOT_FROM_VERSION_ELEMENT, manifest, configuration);
             appendDependencies(manifest, configuration);
             return configuration;
-        }
-
-        private static String createChecksum(String algorithm, Path addOn) throws IOException {
-            return algorithm + ":" + new DigestUtils(algorithm).digestAsHex(addOn.toFile());
         }
 
         private void append(
