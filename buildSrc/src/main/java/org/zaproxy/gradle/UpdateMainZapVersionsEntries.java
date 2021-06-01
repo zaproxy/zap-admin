@@ -19,7 +19,6 @@
  */
 package org.zaproxy.gradle;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -27,29 +26,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.configuration.XMLConfiguration;
-import org.gradle.api.DefaultTask;
-import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
-import org.gradle.api.tasks.InputFiles;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.options.Option;
 
-/**
- * A task that updates {@code ZapVersions.xml} files with a main release.
- *
- * <p><strong>Note:</strong>
- *
- * <ul>
- *   <li>This task does not have outputs as the target {@code ZapVersions.xml} files might be
- *       changed externally/manually, for example, updated with add-ons or weekly releases.
- *   <li>There are no guarantees that all {@code ZapVersions.xml} files are updated if an error
- *       occurs while updating them.
- * </ul>
- */
-public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
+/** A task that updates {@code ZapVersions.xml} files with a main release. */
+public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVersionsEntries {
 
     private static final String HTTPS_SCHEME = "HTTPS";
 
@@ -73,12 +56,8 @@ public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
     private String versionUnderscores;
 
     public UpdateMainZapVersionsEntries() {
-        setGroup("ZAP");
         setDescription("Updates ZapVersions.xml files with a main release.");
     }
-
-    @InputFiles
-    public abstract ConfigurableFileCollection getInto();
 
     @Option(option = "release", description = "The main release version.")
     public void setReleaseVersion(String version) {
@@ -106,9 +85,6 @@ public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
     @Input
     public abstract Property<String> getReleaseNotesUrl();
 
-    @Input
-    public abstract Property<String> getChecksumAlgorithm();
-
     @TaskAction
     public void update() throws Exception {
         validateNotEmpty(getVersion(), "version");
@@ -118,7 +94,6 @@ public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
         validateNotEmpty(getMacFileName(), "macOS file name");
         validateNotEmpty(getReleaseNotes(), "release notes");
         validateNotEmpty(getReleaseNotesUrl(), "release notes URL");
-        validateNotEmpty(getChecksumAlgorithm(), "checksum algorithm");
 
         versionDots = getVersion().get();
         versionUnderscores = versionDots.replace('.', '_');
@@ -150,31 +125,26 @@ public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
                         MAC_ELEMENT,
                         createDownloadUrl(finalBaseDownloadUrl, getMacFileName().get())));
 
-        for (File zapVersionsFile : getInto()) {
-            if (!Files.isRegularFile(zapVersionsFile.toPath())) {
-                throw new IllegalArgumentException(
-                        "The provided path is not a file: " + zapVersionsFile);
-            }
+        updateZapVersionsFiles(
+                zapVersionsXml -> {
+                    zapVersionsXml.setProperty(CORE_VERSION_ELEMENT, versionDots);
+                    zapVersionsXml.setProperty(CORE_REL_NOTES_ELEMENT, getReleaseNotes().get());
+                    zapVersionsXml.setProperty(
+                            CORE_REL_NOTES_URL_ELEMENT,
+                            replaceVersionTokens(getReleaseNotesUrl().get()));
 
-            XMLConfiguration zapVersionsXml = new CustomXmlConfiguration();
-            zapVersionsXml.load(zapVersionsFile);
-
-            zapVersionsXml.setProperty(CORE_VERSION_ELEMENT, versionDots);
-            zapVersionsXml.setProperty(CORE_REL_NOTES_ELEMENT, getReleaseNotes().get());
-            zapVersionsXml.setProperty(
-                    CORE_REL_NOTES_URL_ELEMENT, replaceVersionTokens(getReleaseNotesUrl().get()));
-
-            releaseFiles.forEach(
-                    c -> {
-                        zapVersionsXml.setProperty(
-                                c.getKeyPrefix() + FILE_ELEMENT, c.getFileName());
-                        zapVersionsXml.setProperty(c.getKeyPrefix() + HASH_ELEMENT, c.getHash());
-                        zapVersionsXml.setProperty(c.getKeyPrefix() + SIZE_ELEMENT, c.getSize());
-                        zapVersionsXml.setProperty(c.getKeyPrefix() + URL_ELEMENT, c.getUrl());
-                    });
-
-            zapVersionsXml.save(zapVersionsFile);
-        }
+                    releaseFiles.forEach(
+                            c -> {
+                                zapVersionsXml.setProperty(
+                                        c.getKeyPrefix() + FILE_ELEMENT, c.getFileName());
+                                zapVersionsXml.setProperty(
+                                        c.getKeyPrefix() + HASH_ELEMENT, c.getHash());
+                                zapVersionsXml.setProperty(
+                                        c.getKeyPrefix() + SIZE_ELEMENT, c.getSize());
+                                zapVersionsXml.setProperty(
+                                        c.getKeyPrefix() + URL_ELEMENT, c.getUrl());
+                            });
+                });
     }
 
     private static void validateNotEmpty(Property<String> property, String propertyName) {
@@ -194,16 +164,12 @@ public abstract class UpdateMainZapVersionsEntries extends DefaultTask {
                 keyPrefix,
                 url,
                 file.getFileName().toString(),
-                createChecksum(getChecksumAlgorithm().get(), file),
+                createChecksumString(file),
                 String.valueOf(Files.size(file)));
     }
 
     private String createDownloadUrl(String baseUrl, String name) {
         return baseUrl + replaceVersionTokens(name);
-    }
-
-    private static String createChecksum(String algorithm, Path file) throws IOException {
-        return algorithm + ":" + new DigestUtils(algorithm).digestAsHex(file.toFile());
     }
 
     private Path downloadFile(String urlString) throws IOException {

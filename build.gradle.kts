@@ -200,8 +200,15 @@ val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::cl
 val websiteRepo = GitHubRepo("zaproxy", "zaproxy-website", file("$rootDir/../zaproxy-website"))
 val dataDir = file("${websiteRepo.dir}/site/data")
 
+val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
+    zapVersionsPath.set(noAddOnsZapVersions)
+    releaseState.set(file("$buildDir/release_state_last_commit.json"))
+}
+
+val releaseStateData = generateReleaseStateLastCommit.map { it.releaseState.get() }
+
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
-    releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
+    releaseState.set(releaseStateData)
     val downloadDir = "$dataDir/download"
     dataFiles.from(files("$downloadDir/b_details.yml", "$downloadDir/c_main.yml", "$downloadDir/g_latest.yml"))
 }
@@ -246,13 +253,8 @@ fun headCommit(repoDir: File) =
         .getObjectId()
         .getName()
 
-val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
-    zapVersionsPath.set(noAddOnsZapVersions)
-    releaseState.set(file("$buildDir/release_state_last_commit.json"))
-}
-
 val handleWeeklyRelease by tasks.registering(HandleWeeklyRelease::class) {
-    releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
+    releaseState.set(releaseStateData)
 
     gitHubUser.set(ghUser)
     gitHubRepo.set(zaproxyRepo)
@@ -261,7 +263,7 @@ val handleWeeklyRelease by tasks.registering(HandleWeeklyRelease::class) {
 }
 
 val handleMainRelease by tasks.registering(HandleMainRelease::class) {
-    releaseState.set(generateReleaseStateLastCommit.map { it.releaseState.get() })
+    releaseState.set(releaseStateData)
 
     gitHubUser.set(ghUser)
     gitHubRepo.set(zaproxyRepo)
