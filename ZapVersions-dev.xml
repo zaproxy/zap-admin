@@ -771,21 +771,27 @@
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.1.0</version>
-        <file>fuzz-beta-13.1.0.zap</file>
+        <version>13.2.0</version>
+        <file>fuzz-beta-13.2.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Prevent adding null fuzz handlers, which would cause exceptions when selecting the fuzz message.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Update dependency (Issue 4751).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update results panels when Look and Feel changes (Issue 6479).&lt;/li&gt;
+&lt;li&gt;Correct payload count from file.&lt;/li&gt;
+&lt;li&gt;Show Add Payload dialogue above the Payloads dialogue.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.1.0/fuzz-beta-13.1.0.zap</url>
-        <hash>SHA-256:e756e74ddd4e422e321f8fff37cfe7ef54e643894f0c80f4eaa9abc2fecc5063</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.2.0/fuzz-beta-13.2.0.zap</url>
+        <hash>SHA-256:48bfb825f72b64d28ed15df17ae4ffab0f0acf10378f53f48a647ce59ed1e584</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>1951853</size>
+        <date>2021-06-01</date>
+        <size>1921264</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_fuzz>
     <addon>fuzzdb</addon>
