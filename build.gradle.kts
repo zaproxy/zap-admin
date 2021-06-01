@@ -1,4 +1,5 @@
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder
+import org.zaproxy.gradle.CreateNewsMainRelease
 import org.zaproxy.gradle.CreatePullRequest
 import org.zaproxy.gradle.CustomXmlConfiguration
 import org.zaproxy.gradle.GenerateReleaseStateLastCommit
@@ -117,6 +118,17 @@ tasks {
     register<ZapTask>("checkLatestReleaseNotes") {
         description = "Checks the latest release notes do not contain issues from previous ones."
         main = "org.zaproxy.admin.CheckLatestReleaseNotes"
+    }
+
+    register<CreateNewsMainRelease>("createNewsMainRelease") {
+        newsDir.set(File(rootDir, "files/news"))
+        previousVersion.set(provider {
+            val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+            zapVersionsXml.getString("core.version")
+        })
+
+        item.set("ZAP @@VERSION@@ is available now")
+        link.set("https://www.zaproxy.org/download/")
     }
 
     register<UpdateMainZapVersionsEntries>("updateMainRelease") {
