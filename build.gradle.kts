@@ -11,6 +11,7 @@ import org.zaproxy.gradle.GitHubUser
 import org.zaproxy.gradle.HandleMainRelease
 import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
+import org.zaproxy.gradle.UpdateAndCreatePullRequestAddOnRelease
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateZapVersionWebsiteData
@@ -93,6 +94,9 @@ val latestZapVersions = file("ZapVersions-2.10.xml")
 val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
 val adminRepo = GitHubRepo("zaproxy", "zap-admin", rootDir)
 
+val addOnsZapVersions = files("ZapVersions-dev.xml", latestZapVersions)
+val defaultChecksumAlgorithm = "SHA-256"
+
 tasks {
     register<ZapTask>("generateReleaseNotes") {
         description = "Generates release notes."
@@ -139,7 +143,7 @@ tasks {
         macFileName.set("ZAP_@@VERSION@@.dmg")
         releaseNotes.set("Bug fix and enhancement release.")
         releaseNotesUrl.set("https://www.zaproxy.org/docs/desktop/releases/@@VERSION@@/")
-        checksumAlgorithm.set("SHA-256")
+        checksumAlgorithm.set(defaultChecksumAlgorithm)
     }
 
     register<CreatePullRequest>("createPullRequestMainRelease") {
@@ -160,7 +164,7 @@ tasks {
     register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
         into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
-        checksumAlgorithm.set("SHA-256")
+        checksumAlgorithm.set(defaultChecksumAlgorithm)
     }
 
     register<CreatePullRequest>("createPullRequestDailyRelease") {
@@ -179,8 +183,17 @@ tasks {
     }
 
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
-        into.setFrom(files("ZapVersions-dev.xml", latestZapVersions))
-        checksumAlgorithm.set("SHA-256")
+        into.setFrom(addOnsZapVersions)
+        checksumAlgorithm.set(defaultChecksumAlgorithm)
+    }
+
+    register<UpdateAndCreatePullRequestAddOnRelease>("updateAndCreatePullRequestAddOnRelease") {
+        into.setFrom(addOnsZapVersions)
+        checksumAlgorithm.set(defaultChecksumAlgorithm)
+
+        user.set(ghUser)
+        repo.set(adminRepo)
+        branchName.set("add-on-release")
     }
 }
 
