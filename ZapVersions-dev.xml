@@ -819,22 +819,20 @@
         <name>FuzzDB Offensive</name>
         <description>FuzzDB web backdoors and attack files which can be used with the ZAP fuzzer or for manual penetration testing</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>fuzzdboffensive-release-3.zap</file>
+        <version>4</version>
+        <file>fuzzdboffensive-release-4.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Do not set the background colour of the help page.&lt;/li&gt;
-&lt;li&gt;Migrated 'attack' directory and components from main FuzzDB add-on, due to anti-virus considerations (Issue 5972).&lt;/li&gt;
-&lt;li&gt;Updated from upstream.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/fuzzdb-offensive/releases/download/v3/fuzzdboffensive-release-3.zap</url>
-        <hash>SHA-256:99931859116f58fa7399eb136c157863b13041ce4d6a961a95b64d765438118d</hash>
+        <url>https://github.com/zaproxy/fuzzdb-offensive/releases/download/v4/fuzzdboffensive-release-4.zap</url>
+        <hash>SHA-256:06bf75d2745c8f6e9a861597a31bab2d3f96058a3c497539a3ba234c687e796a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzdb-offensive/</info>
         <repo>https://github.com/zaproxy/fuzzdb-offensive/</repo>
-        <date>2020-06-30</date>
-        <size>414470</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-06-11</date>
+        <size>414373</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_fuzzdboffensive>
     <addon>gettingStarted</addon>
     <addon_gettingStarted>
