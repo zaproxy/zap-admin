@@ -470,62 +470,64 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>9</version>
-        <file>communityScripts-alpha-9.zap</file>
+        <version>10</version>
+        <file>communityScripts-alpha-10.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add repo URL, shown in the marketplace and Manage Add-ons dialogue.&lt;/li&gt;
-&lt;li&gt;active/cve-2019-5418.js &amp;gt; An active scanner for Ruby on Rails Accept header content disclosure issue.&lt;/li&gt;
-&lt;li&gt;active/JWT None Exploit.js &amp;gt; Checks if the application's JWT implementation allows the usage of the 'none' algorithm.&lt;/li&gt;
-&lt;li&gt;authentication/DjangoAuthentication.js &amp;gt; Django authentication script.&lt;/li&gt;
-&lt;li&gt;authentication/GetsWithRedirectThenPost.js &amp;gt; An authentication script that follows GET redirects and then submits a POST with the authentication credentials.&lt;/li&gt;
-&lt;li&gt;extender/Simple Reverse Proxy.js &amp;gt; Adds a simple reverse proxy.&lt;/li&gt;
-&lt;li&gt;extender/ZAP onEvent Handler.js &amp;gt; An example for how to listen for internal ZAP events.&lt;/li&gt;
-&lt;li&gt;httpsender/add-extra-headers.js &amp;gt; Adds encountered 'extra' headers to all requests.&lt;/li&gt;
-&lt;li&gt;httpsender/aws-signing-for-owasp-zap.py &amp;gt; Signs requests to AWS.&lt;/li&gt;
-&lt;li&gt;httpsender/fingerprinter.js &amp;gt; Logs MD5s of responses.&lt;/li&gt;
-&lt;li&gt;httpsender/greenbone-maintain-auth.js &amp;gt; An auth helper script for OpenVAS Greenbone web interface.&lt;/li&gt;
-&lt;li&gt;httpsender/inject-xss.js &amp;gt; Injects XSS payloads into JSON responses.&lt;/li&gt;
-&lt;li&gt;httpsender/juice-shop-maintain-auth.js &amp;gt; An auth helper script for OWASP JuiceShop.&lt;/li&gt;
-&lt;li&gt;httpsender/keep-cookies-going.js &amp;gt; An auth helper script.&lt;/li&gt;
-&lt;li&gt;httpsender/maintain-jwt.js &amp;gt; Tracks JWTs and updates Authorization bearer headers.&lt;/li&gt;
-&lt;li&gt;passive/Find IBANs.js &amp;gt; Finds IBANs in HTTP response bodies.&lt;/li&gt;
-&lt;li&gt;passive/HUNT.py &amp;gt; Merge of existing HUNT scripts.&lt;/li&gt;
-&lt;li&gt;proxy/Drop requests by response code.js &amp;gt; Drops requests that have a given response code.&lt;/li&gt;
-&lt;li&gt;standalone/scan_rule_list.js &amp;gt; Lists details from both active and passive scan rules.&lt;/li&gt;
-&lt;li&gt;standalone/Split download extract.rb &amp;gt; Concatenates split file downloads.&lt;/li&gt;
+&lt;li&gt;standalone/load_context_from_burp -&amp;gt; import context from burp config file&lt;/li&gt;
+&lt;li&gt;Passive scan script for finding potential s3 Bucket URLs&lt;/li&gt;
+&lt;li&gt;payloadprocessor/to-hex.js &amp;gt; string to hex payload script.&lt;/li&gt;
+&lt;li&gt;selenium and session scripts.&lt;/li&gt;
+&lt;li&gt;httpfuzzerprocessor/random_x_forwarded_for_ip.js &amp;gt; Set 'X-Forwarded-For' to a random IP value.&lt;/li&gt;
+&lt;li&gt;httpfuzzerprocessor/randomUserAgent.js &amp;gt; Set 'User-Agent' to a random user-agent.&lt;/li&gt;
+&lt;li&gt;Add the following Payload Processor scripts ported from SQLMap:
+&lt;ul&gt;
+&lt;li&gt;apostrophemask&lt;/li&gt;
+&lt;li&gt;apostrophenullencode&lt;/li&gt;
+&lt;li&gt;chardoubleencode&lt;/li&gt;
+&lt;li&gt;charencode&lt;/li&gt;
+&lt;li&gt;charunicodeencode&lt;/li&gt;
+&lt;li&gt;equaltolike&lt;/li&gt;
+&lt;li&gt;lowercase&lt;/li&gt;
+&lt;li&gt;percentage&lt;/li&gt;
+&lt;li&gt;randomcase&lt;/li&gt;
+&lt;li&gt;space2comments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add Google API keys finder script&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Change info URL to link to the online help page.&lt;/li&gt;
-&lt;li&gt;Updated to target ZAP 2.9&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Rename reliability to confidence.&lt;/li&gt;
+&lt;li&gt;standalone/enableDebugLogging.js &amp;gt; use new Log4j 2 APIs.&lt;/li&gt;
+&lt;li&gt;standalone/window_creation_template.js &amp;gt; no longer extend &lt;code&gt;AbstractFrame&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;httpsender/Alert on HTTP Response Code Errors.js and Alert on Unexpected Content Types.js:
+&lt;ul&gt;
+&lt;li&gt;Check if messages being analyzed are globally excluded or not;&lt;/li&gt;
+&lt;li&gt;Ignore check for update messages;&lt;/li&gt;
+&lt;li&gt;Include more expected content types.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;httpsender/aws-signing-for-owasp-zap.py &amp;gt; read AWS environment variables for default values.&lt;/li&gt;
+&lt;li&gt;active/TestInsecureHTTPVerbs.py and passive/HUNT.py &amp;gt; correct links to OWASP site.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scripts were merged into a new script &lt;code&gt;HUNT.py&lt;/code&gt;:
-&lt;ul&gt;
-&lt;li&gt;passive/HUNT - Debug &amp;amp; Logic Parameters.py&lt;/li&gt;
-&lt;li&gt;passive/HUNT - File Inclusion.py&lt;/li&gt;
-&lt;li&gt;passive/HUNT - IDOR.py&lt;/li&gt;
-&lt;li&gt;passive/HUNT - RCE.py&lt;/li&gt;
-&lt;li&gt;passive/HUNT - SQLi.py&lt;/li&gt;
-&lt;li&gt;passive/HUNT - SSRF.py&lt;/li&gt;
-&lt;li&gt;passive/HUNT - SSTI.py&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;standalone/loadListInGlobalVariable.js &amp;gt; superseded by core functionality, &lt;code&gt;ScriptVars.setGlobalCustomVar(...)&lt;/code&gt; and &lt;code&gt;getGlobalCustomVar(...)&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix links to source files in zaproxy repo.&lt;/li&gt;
+&lt;li&gt;extender/HTTP Message Logger.js &amp;gt; fix typo in Integer constant.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v9/communityScripts-alpha-9.zap</url>
-        <hash>SHA-256:1ac9a02333962b6989872366912adfbb60720be4f98733ecfe27087b64a0c522</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v10/communityScripts-alpha-10.zap</url>
+        <hash>SHA-256:4660137ed039ee197ab76d0376be3c467a4f3e6d8ea3eb41bd28b2825bb63b7e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2020-01-30</date>
-        <size>402074</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-06-11</date>
+        <size>425509</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_communityScripts>
     <addon>custompayloads</addon>
     <addon_custompayloads>
