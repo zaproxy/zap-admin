@@ -16,8 +16,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 8
-    - name: Update Add-on Release and Create Pull Request
+    - name: Process Client Payload
       run: echo "ADD_ON_DATA=${{ github.event.client_payload }}" >> $GITHUB_ENV
+    - name: Update Add-on Release and Create Pull Request
       run: ./gradlew updateAndCreatePullRequestAddOnRelease --envVar=ADD_ON_DATA
       env:
         ZAPBOT_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}
