@@ -21,7 +21,6 @@ package org.zaproxy.gradle;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
@@ -36,12 +35,8 @@ import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
-import org.gradle.api.Task;
 
 interface AddOnZapVersionsUpdater extends UpdateZapVersionsEntries {
-
-    String HTTPS_SCHEME = "HTTPS";
-    String ADD_ON_EXTENSION = ".zap";
 
     String ADD_ON_ELEMENT = "addon";
     String ADD_ON_NODE_PREFIX = "addon_";
@@ -99,42 +94,6 @@ interface AddOnZapVersionsUpdater extends UpdateZapVersionsEntries {
                                         e.getData().getRootNode().getChildren());
                             });
                 });
-    }
-
-    default Path downloadAddOn(Task task, String urlString) throws IOException {
-        URL url = new URL(urlString);
-        if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
-            throw new IllegalArgumentException(
-                    "The provided URL does not use HTTPS scheme: " + url.getProtocol());
-        }
-
-        Path addOn = task.getTemporaryDir().toPath().resolve(extractFileName(urlString));
-        if (Files.exists(addOn)) {
-            task.getLogger().info("Add-on already exists, skipping download.");
-            return addOn;
-        }
-
-        try (InputStream in = url.openStream()) {
-            Files.copy(in, addOn);
-        } catch (IOException e) {
-            throw new IOException("Failed to download the add-on: " + e.getMessage(), e);
-        }
-        task.getLogger().info("Add-on downloaded to: " + addOn);
-        return addOn;
-    }
-
-    static String extractFileName(String url) {
-        int idx = url.lastIndexOf("/");
-        if (idx == -1) {
-            throw new IllegalArgumentException(
-                    "The provided URL does not have a file name: " + url);
-        }
-        String fileName = url.substring(idx + 1);
-        if (!fileName.endsWith(ADD_ON_EXTENSION)) {
-            throw new IllegalArgumentException(
-                    "The provided URL does not have a file with zap extension: " + fileName);
-        }
-        return fileName;
     }
 
     static String extractAddOnId(String fileName) {

@@ -2,6 +2,7 @@ import org.eclipse.jgit.storage.file.FileRepositoryBuilder
 import org.zaproxy.gradle.CreateNewsMainRelease
 import org.zaproxy.gradle.CreatePullRequest
 import org.zaproxy.gradle.CustomXmlConfiguration
+import org.zaproxy.gradle.DownloadReleasedAddOns
 import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
@@ -233,6 +234,14 @@ val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLast
 }
 
 val releaseStateData = generateReleaseStateLastCommit.map { it.releaseState.get() }
+val addOnsHelpWebsite = file("src/main/addons-help-website.txt")
+
+val downloadReleasedAddOns by tasks.registering(DownloadReleasedAddOns::class) {
+    releaseState.set(releaseStateData)
+    zapVersions.set(latestZapVersions)
+    allowedAddOns.set(addOnsHelpWebsite)
+    outputDir.set(file("$buildDir/releasedAddOns"))
+}
 
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
     releaseState.set(releaseStateData)

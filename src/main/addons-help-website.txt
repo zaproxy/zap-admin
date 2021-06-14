@@ -1,0 +1,97 @@
+# The IDs of the add-ons that should have the help generated to the website.
+
+# Main help.
+help
+
+# Remaining add-ons, in alphabetic order.
+accessControl
+alertFilters
+alertReport
+allinonenotes
+amf
+ascanrulesAlpha
+ascanrulesBeta
+ascanrules
+# 3rd-party, does not have help.
+# attacksurfacedetector
+authstats
+automation
+beanshell
+browserView
+bruteforce
+bugtracker
+callgraph
+codedx
+commonlib
+communityScripts
+custompayloads
+customreport
+diff
+directorylistv1
+directorylistv2_3_lc
+directorylistv2_3
+domxss
+encoder
+exportreport
+formhandler
+fuzz
+fuzzdboffensive
+fuzzdb
+gettingStarted
+graaljs
+graphql
+groovy
+highlighter
+httpsInfo
+hud
+imagelocationscanner
+importLogFiles
+importurls
+invoke
+jruby
+jsonview
+# 3rd-party, does not have help.
+# jwt
+jython
+kotlin
+neonmarker
+onlineMenu
+openapi
+plugnhack
+portscan
+pscanrulesAlpha
+pscanrulesBeta
+pscanrules
+quickstart
+# 3rd-party, does not have help.
+# reflect
+regextester
+replacer
+reports
+requester
+retire
+reveal
+revisit
+saml
+saverawmessage
+savexmlmessage
+scripts
+selenium
+sequence
+soap
+spiderAjax
+sqliplugin
+sse
+svndigger
+tips
+tlsdebug
+tokengen
+treetools
+viewstate
+wappalyzer
+webdriverlinux
+webdrivermacos
+webdriverwindows
+websocket
+zest
+

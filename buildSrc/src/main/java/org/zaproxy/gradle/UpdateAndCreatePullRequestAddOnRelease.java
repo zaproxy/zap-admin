@@ -65,7 +65,7 @@ public abstract class UpdateAndCreatePullRequestAddOnRelease extends CreatePullR
         for (AddOnReleaseData.Release release : AddOnReleaseData.read(data).getAddOns()) {
             String downloadUrl = release.getUrl();
 
-            Path addOn = downloadAddOn(this, downloadUrl);
+            Path addOn = TaskUtils.downloadAddOn(this, downloadUrl);
             calculateChecksum(addOn, release.getChecksum());
             updateAddOn(
                     addOn,
