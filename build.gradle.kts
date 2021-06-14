@@ -225,7 +225,7 @@ val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::cl
 }
 
 val websiteRepo = GitHubRepo("zaproxy", "zaproxy-website", file("$rootDir/../zaproxy-website"))
-val dataDir = file("${websiteRepo.dir}/site/data")
+val siteDir = file("${websiteRepo.dir}/site")
 
 val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
     zapVersionsPath.set(noAddOnsZapVersions)
@@ -245,7 +245,7 @@ val downloadReleasedAddOns by tasks.registering(DownloadReleasedAddOns::class) {
 
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
     releaseState.set(releaseStateData)
-    val downloadDir = "$dataDir/download"
+    val downloadDir = "$siteDir/data/download"
     dataFiles.from(files("$downloadDir/b_details.yml", "$downloadDir/c_main.yml", "$downloadDir/g_latest.yml"))
 }
 
@@ -253,10 +253,12 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     group = "ZAP"
     description = "Copies the generated website data to the website repo."
 
-    destinationDir = dataDir
-    from(generateWebsiteAddonsData)
-    into("download") {
-        from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+    destinationDir = siteDir
+    into("data") {
+        from(generateWebsiteAddonsData)
+        into("download") {
+            from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
+        }
     }
 }
 
