@@ -115,7 +115,7 @@ public abstract class UpdateAddOnZapVersionsEntries extends AbstractUpdateZapVer
 
         try {
             URL url = new URL(downloadUrl.get());
-            if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
+            if (!TaskUtils.hasSecureScheme(url)) {
                 throw new IllegalArgumentException(
                         "The provided download URL does not use HTTPS scheme: "
                                 + url.getProtocol());
@@ -138,6 +138,6 @@ public abstract class UpdateAddOnZapVersionsEntries extends AbstractUpdateZapVer
             return addOn;
         }
 
-        return downloadAddOn(this, fromUrl.get());
+        return TaskUtils.downloadAddOn(this, fromUrl.get());
     }
 }

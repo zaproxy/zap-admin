@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.function.Consumer;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.gradle.api.file.ConfigurableFileCollection;
 import org.gradle.api.provider.Property;
@@ -66,16 +65,6 @@ interface UpdateZapVersionsEntries {
     }
 
     default String calculateChecksum(Path file, String expectedChecksum) throws IOException {
-        String checksum = new DigestUtils(getChecksumAlgorithm().get()).digestAsHex(file.toFile());
-        if (expectedChecksum == null
-                || expectedChecksum.isEmpty()
-                || checksum.equals(expectedChecksum)) {
-            return checksum;
-        }
-
-        throw new IllegalArgumentException(
-                String.format(
-                        "Checksums do not match for: %s\nExpected:\n%s\nActual:\n%s",
-                        file, expectedChecksum, checksum));
+        return TaskUtils.calculateChecksum(file, getChecksumAlgorithm().get(), expectedChecksum);
     }
 }
