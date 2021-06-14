@@ -6,6 +6,7 @@ import org.zaproxy.gradle.DownloadReleasedAddOns
 import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
+import org.zaproxy.gradle.GenerateWebsitePages
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
 import org.zaproxy.gradle.GitHubRepo
 import org.zaproxy.gradle.GitHubUser
@@ -243,6 +244,24 @@ val downloadReleasedAddOns by tasks.registering(DownloadReleasedAddOns::class) {
     outputDir.set(file("$buildDir/releasedAddOns"))
 }
 
+val generateWebsitePages by tasks.registering(GenerateWebsitePages::class) {
+    allowedAddOns.set(addOnsHelpWebsite)
+    addOns.from(downloadReleasedAddOns.map { fileTree(it.outputDir).matching { include("*.zap") } })
+
+    helpAddOnRegex.set("^help(?:_[a-zA-Z_]+)?")
+    siteUrl.set("https://www.zaproxy.org/")
+    baseUrlPath.set("/docs/desktop/")
+    addOnsDirName.set("addons")
+    pageType.set("userguide")
+    redirectPageType.set("_default")
+    redirectPageLayout.set("redirect")
+    sectionPageName.set("_index.md")
+    imagesDirName.set("images")
+    noticeGeneratedPage.set("This page was generated from the add-on.")
+
+    outputDir.set(file("$buildDir/websiteHelpPages"))
+}
+
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
     releaseState.set(releaseStateData)
     val downloadDir = "$siteDir/data/download"
@@ -259,6 +278,9 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
         into("download") {
             from(generateWebsiteMainReleaseData, generateWebsiteWeeklyReleaseData)
         }
+    }
+    into("content") {
+        from(generateWebsitePages)
     }
 }
 

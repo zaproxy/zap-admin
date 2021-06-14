@@ -11,6 +11,19 @@ dependencies {
     implementation("commons-configuration:commons-configuration:1.9")
     implementation("commons-jxpath:commons-jxpath:1.3")
     implementation("commons-codec:commons-codec:1.11")
+
+    val flexmarkVersion = "0.50.48"
+    implementation("com.vladsch.flexmark:flexmark-java:$flexmarkVersion")
+    implementation("com.vladsch.flexmark:flexmark-ext-gfm-strikethrough:$flexmarkVersion")
+    implementation("com.vladsch.flexmark:flexmark-ext-gfm-tasklist:$flexmarkVersion")
+    implementation("com.vladsch.flexmark:flexmark-ext-tables:$flexmarkVersion")
+    implementation("com.vladsch.flexmark:flexmark-ext-yaml-front-matter:$flexmarkVersion")
+
+    implementation("com.vladsch.flexmark:flexmark-html2md-converter:$flexmarkVersion")
+    implementation("com.vladsch.flexmark:flexmark-ext-anchorlink:$flexmarkVersion")
+    implementation("com.vladsch.flexmark:flexmark-profile-pegdown:$flexmarkVersion")
+
+    implementation("org.apache.commons:commons-lang3:3.9")
     val jgitVersion = "5.6.0.201912101111-r"
     implementation("org.eclipse.jgit:org.eclipse.jgit:$jgitVersion")
     implementation("org.eclipse.jgit:org.eclipse.jgit.archive:$jgitVersion")
