@@ -65,6 +65,9 @@ public abstract class GenerateReleaseStateLastCommit extends DefaultTask {
     private static final String MAIN_VERSION_ELEMENT = CORE_ELEMENT + "version";
     private static final String DAILY_VERSION_ELEMENT = CORE_ELEMENT + "daily-version";
 
+    private static final String ADDON_ELEMENT = "addon";
+    private static final String ADDON_VERSION_ELEMENT = "version";
+
     private static final String GIT_DIR = ".git";
     private static final String HEAD_REF = "HEAD";
 
@@ -77,6 +80,9 @@ public abstract class GenerateReleaseStateLastCommit extends DefaultTask {
 
     @Input
     public abstract Property<String> getZapVersionsPath();
+
+    @Input
+    public abstract Property<String> getZapVersionsAddOnsPath();
 
     @OutputFile
     public abstract RegularFileProperty getReleaseState();
@@ -100,6 +106,12 @@ public abstract class GenerateReleaseStateLastCommit extends DefaultTask {
                             previousVersions,
                             currentVersions,
                             releaseState::setWeeklyRelease);
+                });
+        readVersions(
+                gitDir,
+                getZapVersionsAddOnsPath().get(),
+                (previousVersions, currentVersions) -> {
+                    updateAddOnsState(previousVersions, currentVersions, releaseState);
                 });
 
         releaseState.write(getReleaseState().get().getAsFile());
@@ -209,6 +221,31 @@ public abstract class GenerateReleaseStateLastCommit extends DefaultTask {
                 new ReleaseState.VersionChange(
                         previousVersions.getString(versionElement),
                         currentVersions.getString(versionElement)));
+    }
+
+    private static void updateAddOnsState(
+            ZapXmlConfiguration previousVersions,
+            ZapXmlConfiguration currentVersions,
+            ReleaseState releaseState) {
+        if (previousVersions == null) {
+            return;
+        }
+
+        List<ReleaseState.AddOnChange> addOns = new ArrayList<>();
+        String[] addOnIds = currentVersions.getStringArray(ADDON_ELEMENT);
+        for (String id : addOnIds) {
+            String addOnKey = ADDON_ELEMENT + "_" + id;
+            String currentVersion = getAddOnVersion(currentVersions, addOnKey);
+            String previousVersion = getAddOnVersion(previousVersions, addOnKey);
+            if (!currentVersion.equals(previousVersion)) {
+                addOns.add(new ReleaseState.AddOnChange(id, previousVersion, currentVersion));
+            }
+        }
+        releaseState.setAddOns(addOns);
+    }
+
+    private static String getAddOnVersion(ZapXmlConfiguration versions, String addOnKey) {
+        return versions.getString(addOnKey + "." + ADDON_VERSION_ELEMENT, null);
     }
 
     private static RevCommit getCommonAncestor(

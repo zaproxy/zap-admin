@@ -89,7 +89,8 @@ spotless {
 }
 
 val noAddOnsZapVersions = "ZapVersions.xml"
-val latestZapVersions = file("ZapVersions-2.10.xml")
+val nameLatestZapVersions = "ZapVersions-2.10.xml"
+val latestZapVersions = file(nameLatestZapVersions)
 
 val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
 val adminRepo = GitHubRepo("zaproxy", "zap-admin", rootDir)
@@ -227,6 +228,7 @@ val dataDir = file("${websiteRepo.dir}/site/data")
 
 val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
     zapVersionsPath.set(noAddOnsZapVersions)
+    zapVersionsAddOnsPath.set(nameLatestZapVersions)
     releaseState.set(file("$buildDir/release_state_last_commit.json"))
 }
 

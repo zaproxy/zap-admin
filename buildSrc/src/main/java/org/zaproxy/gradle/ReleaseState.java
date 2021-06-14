@@ -27,6 +27,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /** The release state computed from {@code ZapVersions.xml} files. */
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
@@ -35,6 +36,8 @@ public class ReleaseState {
 
     @JsonProperty private VersionChange mainRelease;
     @JsonProperty private VersionChange weeklyRelease;
+
+    @JsonProperty private List<AddOnChange> addOns;
 
     public ReleaseState() {}
 
@@ -52,6 +55,14 @@ public class ReleaseState {
 
     public void setWeeklyRelease(VersionChange weeklyRelease) {
         this.weeklyRelease = weeklyRelease;
+    }
+
+    public void setAddOns(List<AddOnChange> addOns) {
+        this.addOns = addOns;
+    }
+
+    public List<AddOnChange> getAddOns() {
+        return addOns;
     }
 
     /**
@@ -119,6 +130,24 @@ public class ReleaseState {
 
         public void setCurrentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
+        }
+    }
+
+    @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+    @JsonInclude(value = Include.NON_EMPTY)
+    public static class AddOnChange extends VersionChange {
+
+        @JsonProperty private String id;
+
+        public AddOnChange() {}
+
+        public AddOnChange(String id, String previousVersion, String currentVersion) {
+            super(previousVersion, currentVersion);
+            this.id = id;
+        }
+
+        public String getId() {
+            return id;
         }
     }
 }
