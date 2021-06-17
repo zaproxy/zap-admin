@@ -134,58 +134,26 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>ascanrules-release-39.zap</file>
+        <version>40</version>
+        <file>ascanrules-release-40.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The Path Traversal scan rule should now be less False Positive prone at High Threshold, one of it's checks will now be excluded at High Threshold (Issues: 4209, 6030, 6219, 6372, and 6380).
-&lt;ul&gt;
-&lt;li&gt;The Other info field of Alerts will now include a reference indicating which check the triggered alert is caused by, in order to assist in future user inquiries.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Added/updated the details of some alerts (some changes might break Alert Filters)
-&lt;ul&gt;
-&lt;li&gt;Buffer Overflow
-&lt;ul&gt;
-&lt;li&gt;Includes an Attack string&lt;/li&gt;
-&lt;li&gt;Evidence changed from the whole request header to the specific string sought&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Code Injection
-&lt;ul&gt;
-&lt;li&gt;Includes evidence for PHP and ASP related alerts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CRLF Injection
-&lt;ul&gt;
-&lt;li&gt;Attack and Evidence are now more specific&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Directory Browsing
-&lt;ul&gt;
-&lt;li&gt;Attack is now the URL of the request&lt;/li&gt;
-&lt;li&gt;Evidence added&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Parameter Tampering scan rule, adjusted regular expression related to VBScript errors.&lt;/li&gt;
-&lt;li&gt;Code Injection scan rule is now using random numbers for the ASP related check.&lt;/li&gt;
-&lt;li&gt;SQL Injection scan rule now has one more payload for error based checks, and an additional SQLite related check string (Issue 6588).&lt;/li&gt;
+&lt;li&gt;The SQL Injection scan rule will raise alerts with the URI field in encoded form.&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix XSS false positive (Issue 5958).&lt;/li&gt;
+&lt;li&gt;Correct Context check in SQL Injection scan rule.&lt;/li&gt;
+&lt;li&gt;&amp;quot;Source Code Disclosure - /WEB-INF folder&amp;quot; is no longer skipped on Java 9+ (Issue 4038).&lt;/li&gt;
+&lt;li&gt;Fix ascan rules not enforcing MaxRuleDuration when getting IOExceptions (Issue 6647).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v39/ascanrules-release-39.zap</url>
-        <hash>SHA-256:eb1ee833f1b8c7d7c46db1a9338d321ef198e731f7cfbfa4e85a31f79e681119</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v40/ascanrules-release-40.zap</url>
+        <hash>SHA-256:c8dbc5952d016d2f12c65a8e334a26d5ac5f111c80b1d43abe5941489057de73</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-05-10</date>
-        <size>2403476</size>
+        <date>2021-06-17</date>
+        <size>2402850</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
@@ -201,34 +169,47 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>30</version>
-        <file>ascanrulesAlpha-alpha-30.zap</file>
+        <version>31</version>
+        <file>ascanrulesAlpha-alpha-31.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;'Hidden File Finder' ensure that test requests are appropriately rebuilt for this scan rule (Issue 6129).&lt;/li&gt;
+&lt;li&gt;Update links to zaproxy and zap-extensions repos.&lt;/li&gt;
+&lt;li&gt;Target 2.10 core and use new logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;The LDAP Injection scan rule was modified to use:
+&lt;ul&gt;
+&lt;li&gt;The Dice algorithm for calculating the match percentage, thus improving its performance.&lt;/li&gt;
+&lt;li&gt;The URI in encoded form in alerts' other info field.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Terminology.&lt;/li&gt;
-&lt;li&gt;SocketTimeoutException in the LDAP Injection scan rule.&lt;/li&gt;
+&lt;li&gt;CORS active scan rule.&lt;/li&gt;
+&lt;li&gt;Forbidden (403) Bypass scan rule.&lt;/li&gt;
+&lt;li&gt;Web Cache Deception scan rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were removed and promoted to Beta: Cloud Meta Data, .env File, Hidden Files, XSLT Injection (Issue 6211).&lt;/li&gt;
+&lt;li&gt;Unused file, it was used by promoted scan rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct Context check in NoSQL Injection - MongoDB scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v30/ascanrulesAlpha-alpha-30.zap</url>
-        <hash>SHA-256:2333752918a991c91dfc9ecd925fa1dcdc0d3207c873f32b3877707dbcb01125</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v31/ascanrulesAlpha-alpha-31.zap</url>
+        <hash>SHA-256:9681556641c565bf05ae3342d704044a70b3a1af4f6a5fcbcdc271c5296da284</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-11-27</date>
-        <size>1207766</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-06-17</date>
+        <size>1217478</size>
+        <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
+                    <version>&gt;= 1.3.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -238,38 +219,111 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>33</version>
-        <file>ascanrulesBeta-beta-33.zap</file>
+        <version>34</version>
+        <file>ascanrulesBeta-beta-34.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;The following scan rules now support Custom Page definitions:
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;The .env file scan rule now performs even better checks to reduce false positives (Issue 6099, 6629).&lt;/li&gt;
+&lt;li&gt;The trace.axd file scan rule now performs a content check to reduce false positives (Issue 6517).&lt;/li&gt;
+&lt;li&gt;XML External Entity Attack scan rule changed to detect a possible XML File Reflection Attack when XML validation is present. (Issue 6204)&lt;/li&gt;
+&lt;li&gt;Added/updated the details of some alerts (some changes might break Alert Filters)
 &lt;ul&gt;
-&lt;li&gt;Hidden Files&lt;/li&gt;
-&lt;li&gt;HTTPS as HTTP&lt;/li&gt;
-&lt;li&gt;Insecure HTTP Methods&lt;/li&gt;
-&lt;li&gt;Integer Overflow&lt;/li&gt;
-&lt;li&gt;Padding Oracle&lt;/li&gt;
-&lt;li&gt;Remove Code Execution CVE-2012-1823&lt;/li&gt;
+&lt;li&gt;Backup File Disclosure
+&lt;ul&gt;
+&lt;li&gt;The attack, evidence, and other info will use URIs in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Insecure HTTP Method
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Integer Overflow
+&lt;ul&gt;
+&lt;li&gt;Added evidence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Relative Path Confusion
+&lt;ul&gt;
+&lt;li&gt;The attack and URI field will use URIs in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - File Inclusion
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - Git
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - SVN
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL Injection - Hypersonic SQL
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL Injection - MySQL
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL Injection - Oracle
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL Injection - PostgreSQL
+&lt;ul&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL Injection - SQLite
+&lt;ul&gt;
+&lt;li&gt;Evidence is now the string that was matched in the response&lt;/li&gt;
+&lt;li&gt;The URI field will be in encoded form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;XPath Injection
+&lt;ul&gt;
+&lt;li&gt;Added evidence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Source Code Disclosure - File Inclusion scan rule was modified to make use of the Dice algorithm for calculating the match percentage, thus improving its performance.&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add missing file, used by Hidden File Finder scan rule.&lt;/li&gt;
+&lt;li&gt;Correct Context check in scan rules:
+&lt;ul&gt;
 &lt;li&gt;Session Fixation&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure CVE-2012-1823&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure Git&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure SVN&lt;/li&gt;
+&lt;li&gt;Possible Username Enumeration&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v33/ascanrulesBeta-beta-33.zap</url>
-        <hash>SHA-256:33f8bd7950b2f6212aa210af0baf954ef7f47ff84fdb0ea4ba7028fde9f47900</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v34/ascanrulesBeta-beta-34.zap</url>
+        <hash>SHA-256:e310d55636b662beb45004dc885ffc4c20cbc5b14b8fc62163060bf26ed2e1e6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>1556432</size>
+        <date>2021-06-17</date>
+        <size>1556213</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
+                    <version>&gt;= 1.4.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -533,20 +587,27 @@
     <addon_custompayloads>
         <name>Custom Payloads</name>
         <description>Ability to add, edit or remove payloads that are used i.e. by active scanners</description>
-        <author>ZAP Core Team</author>
-        <version>0.9.0</version>
-        <file>custompayloads-alpha-0.9.0.zap</file>
+        <author>ZAP Dev Team</author>
+        <version>0.10.0</version>
+        <file>custompayloads-alpha-0.10.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Add functionality to add multiple payloads from a file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.9.0/custompayloads-alpha-0.9.0.zap</url>
-        <hash>SHA-256:ddfade1c631b4151f66825e5f3b3bd64d11e4e612e9a85042eb00a5a5bc51f9d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.10.0/custompayloads-alpha-0.10.0.zap</url>
+        <hash>SHA-256:5aa57020e937e7366e1ecc380d23804428714d020cf7aca81debe53a4cb6f6b3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/custom-payloads/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-10-31</date>
-        <size>45786</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2021-06-17</date>
+        <size>45780</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_custompayloads>
     <addon>customreport</addon>
     <addon_customreport>
@@ -1499,28 +1560,42 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>33</version>
-        <file>pscanrules-release-33.zap</file>
+        <version>34</version>
+        <file>pscanrules-release-34.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added Express error string pattern (Issue 6412).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;li&gt;Cache-control scan rule no longer checks if Pragma is set or not.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The Timestamp Disclosure scan rule now excludes values in &amp;quot;Report-To&amp;quot; or &amp;quot;NEL&amp;quot; headers (Issue 6493).&lt;/li&gt;
+&lt;li&gt;The Timestamp Disclosure scan rule no longer considers font type requests or responses when looking for possible timestamps (Issue 6274).&lt;/li&gt;
+&lt;li&gt;X-Frame-Options scan rule CWE ID changed from 16 to 1021.&lt;/li&gt;
+&lt;li&gt;Discontinued use of CWE-16 and switched to more specific weaknesses in the following scan rules:
 &lt;ul&gt;
-&lt;li&gt;X-Frame-Options (XFO) scan rule no longer suggests the use of &amp;quot;ALLOW-FROM&amp;quot;, and also includes CSP &amp;quot;frame-ancestors&amp;quot; as an alternative.
-&lt;ul&gt;
-&lt;li&gt;XFO headers implementing &amp;quot;ALLOW-FROM&amp;quot; will now be considered malformed.&lt;/li&gt;
+&lt;li&gt;Character Set Mismatch&lt;/li&gt;
+&lt;li&gt;Content Security Policy&lt;/li&gt;
+&lt;li&gt;Cookie HttpOnly&lt;/li&gt;
+&lt;li&gt;Cookie SameSite&lt;/li&gt;
+&lt;li&gt;JSF ViewState&lt;/li&gt;
+&lt;li&gt;MS ViewState&lt;/li&gt;
+&lt;li&gt;X-Content-Type-Options&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;The Suspicious Comments scan rule will raise one alert per pattern per page and use more suitable evidence.&lt;/li&gt;
+&lt;li&gt;Cache-control scan rule no longer checks CSS messages unless threshold is Low (Issue 6596).&lt;/li&gt;
+&lt;li&gt;Cookie SameSite Attribute scan rule now handles the value &amp;quot;none&amp;quot; (Issue 6482).&lt;/li&gt;
+&lt;li&gt;Content Security Policy rule has been upgraded to use version 3 of the Salvation library.
+&lt;ul&gt;
+&lt;li&gt;Messages with multiple CSPs are no longer merged/intersected instead the policies are analyzed individually.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v33/pscanrules-release-33.zap</url>
-        <hash>SHA-256:7abac1b93cb120aa312217b473de8791799a43518669d0a1d619586a5b5cc2df</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v34/pscanrules-release-34.zap</url>
+        <hash>SHA-256:38f1193b54017272ae7a8c288db1460d1a21afc9cefa38b26d8d53aeaee99f74</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-01-29</date>
-        <size>763587</size>
+        <date>2021-06-17</date>
+        <size>720346</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
@@ -1535,21 +1610,33 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>30</version>
-        <file>pscanrulesAlpha-alpha-30.zap</file>
+        <version>31</version>
+        <file>pscanrulesAlpha-alpha-31.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;The In Page Banner Information Leak scan rule and Site Isolation scan rule now support Custom Page definitions.&lt;/li&gt;
-&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Discontinued use of CWE-16 and switched to more specific weaknesses in the following scan rules:
+&lt;ul&gt;
+&lt;li&gt;Feature Policy&lt;/li&gt;
+&lt;li&gt;Site Isolation&lt;/li&gt;
+&lt;li&gt;Sub Resource Integrity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Rename of Feature-Policy header to Permissions-Policy to follow spec change.&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dangerous JS Function scan rule, use word boundaries to reduce false positives (Issue 6594).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v30/pscanrulesAlpha-alpha-30.zap</url>
-        <hash>SHA-256:af395e9fa7d64f0bdf3b91b43ac0c99f684eb83c736a31ea1c2d704743f48cb8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v31/pscanrulesAlpha-alpha-31.zap</url>
+        <hash>SHA-256:245e8114a21c4c021f32f6d2c056a27ac8457151375d81997fd2bf3f93694ebe</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-02-08</date>
-        <size>1039581</size>
+        <date>2021-06-17</date>
+        <size>1039833</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
@@ -1557,28 +1644,46 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>pscanrulesBeta-beta-24.zap</file>
+        <version>25</version>
+        <file>pscanrulesBeta-beta-25.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;The following scan rules now support Custom Page definitions:
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Update RE2/J library to latest version (1.6).&lt;/li&gt;
+&lt;li&gt;PII Scan Rule will now ignore CSS and style information (Issue 6288).&lt;/li&gt;
+&lt;li&gt;Discontinued use of CWE-16 and switched to more specific weaknesses in the following scan rules:
 &lt;ul&gt;
+&lt;li&gt;CSP Missing&lt;/li&gt;
 &lt;li&gt;Insecure Form Load&lt;/li&gt;
 &lt;li&gt;Insecure Form Post&lt;/li&gt;
-&lt;li&gt;User Controlled Charset&lt;/li&gt;
-&lt;li&gt;User Controlled HTML Attribute&lt;/li&gt;
-&lt;li&gt;User Controlled JavaScript Event&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Hash Disclosure scan rule will now only evaluate JavaScript responses at Low threshold (Issue 6071).&lt;/li&gt;
+&lt;li&gt;Added/updated the details of some alerts (some changes might break Alert Filters)
+&lt;ul&gt;
+&lt;li&gt;Insecure Form Load
+&lt;ul&gt;
+&lt;li&gt;Added evidence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Insecure Form Post
+&lt;ul&gt;
+&lt;li&gt;Added evidence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v24/pscanrulesBeta-beta-24.zap</url>
-        <hash>SHA-256:d6498a9c18a2e3350c962a68eb7875a519b0282373b37319a23e7009a89be580</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v25/pscanrulesBeta-beta-25.zap</url>
+        <hash>SHA-256:e6e0f8891df172c5b8c56b4f730e28c466f5c68f036ad934827f3db1cf20db11</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>730221</size>
+        <date>2021-06-17</date>
+        <size>733891</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
@@ -2167,24 +2272,20 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.1.0</version>
-        <file>wappalyzer-release-21.1.0.zap</file>
+        <version>21.2.0</version>
+        <file>wappalyzer-release-21.2.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Support for DOM patterns, aligning with the upstream project (Issue 6180).&lt;/li&gt;
+&lt;li&gt;Update link to repository.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.1.0/wappalyzer-release-21.1.0.zap</url>
-        <hash>SHA-256:14ae1100c01f9c6bd991754483f53ee0dd5402cc3bced1b7796a40201906003e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.2.0/wappalyzer-release-21.2.0.zap</url>
+        <hash>SHA-256:e7cb7de2ffac1e5fa1449f6da9968fa6a5accc2d5119c543fe277b1116c1d9ea</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-03</date>
-        <size>12168353</size>
+        <date>2021-06-17</date>
+        <size>12303306</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
