@@ -2279,6 +2279,13 @@
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
 &lt;li&gt;Update link to repository.&lt;/li&gt;
+&lt;li&gt;Update RE2/J library to latest version (1.6).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;DOM patterns are now only attempted against HTML responses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for automation job data to make it available in reports.&lt;/li&gt;
 &lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.2.0/wappalyzer-release-21.2.0.zap</url>
         <hash>SHA-256:e7cb7de2ffac1e5fa1449f6da9968fa6a5accc2d5119c543fe277b1116c1d9ea</hash>
