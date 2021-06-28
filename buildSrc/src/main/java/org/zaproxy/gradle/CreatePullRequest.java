@@ -22,7 +22,9 @@ package org.zaproxy.gradle;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import org.eclipse.jgit.api.AddCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.lib.PersonIdent;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
@@ -84,7 +86,8 @@ public abstract class CreatePullRequest extends DefaultTask {
         Repository repository =
                 new FileRepositoryBuilder().setGitDir(new File(ghRepo.getDir(), ".git")).build();
         try (Git git = new Git(repository)) {
-            if (git.status().call().getModified().isEmpty()) {
+            Status status = git.status().call();
+            if (!status.hasUncommittedChanges() && status.getUntracked().isEmpty()) {
                 return;
             }
 
@@ -99,6 +102,10 @@ public abstract class CreatePullRequest extends DefaultTask {
                     .setName(getBranchName().get())
                     .setStartPoint(GIT_REMOTE_ORIGIN + "/" + baseBranchName.get())
                     .call();
+
+            AddCommand add = git.add();
+            status.getUntracked().forEach(add::addFilepattern);
+            add.call();
 
             PersonIdent personIdent = new PersonIdent(ghUser.getName(), ghUser.getEmail());
             git.commit()
