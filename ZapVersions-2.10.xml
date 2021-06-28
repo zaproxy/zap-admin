@@ -368,20 +368,39 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>automation-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>automation-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for job result data&lt;/li&gt;
-&lt;li&gt;Support for passive scan rule configuration&lt;/li&gt;
+&lt;li&gt;Support for using variables in the config.&lt;/li&gt;
+&lt;li&gt;Support for data jobs.&lt;/li&gt;
+&lt;li&gt;Support for multiple top level URLs in a context.&lt;/li&gt;
+&lt;li&gt;Passive scan config enableTags parameter&lt;/li&gt;
+&lt;li&gt;Support for include/exclude regexes.&lt;/li&gt;
+&lt;li&gt;Support for param data job&lt;/li&gt;
+&lt;li&gt;Support for job tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;NPE in pscan config job when rule specified with no id (as per template).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deprecated&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spider job parameters &lt;code&gt;failIfFoundUrlsLessThan&lt;/code&gt; and &lt;code&gt;warnIfFoundUrlsLessThan&lt;/code&gt; in favour of the
+&lt;code&gt;automation.spider.urls.added&lt;/code&gt; statistic test.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.2.0/automation-alpha-0.2.0.zap</url>
-        <hash>SHA-256:0fd0cb0f3b2f236287df38a623760cef392d50a9fab7e87a62f19d92e0b1ca61</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.3.0/automation-alpha-0.3.0.zap</url>
+        <hash>SHA-256:d2cac7fb9ebabc4047721fe2623dad9dd6877709c17daf80ba19f0572b2aa2c1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-04-12</date>
-        <size>2603417</size>
+        <date>2021-06-28</date>
+        <size>2618447</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -1784,31 +1803,37 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>reports-beta-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>reports-beta-0.4.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;API Support.&lt;/li&gt;
-&lt;li&gt;Support for statistics&lt;/li&gt;
+&lt;li&gt;Wappalyzer data to the traditional-html-plus report, if it is available.&lt;/li&gt;
+&lt;li&gt;Traditional JSON report&lt;/li&gt;
+&lt;li&gt;Automation job: outputSummary, aimed at mimicking the output of the packaged scans.&lt;/li&gt;
+&lt;li&gt;Modern template - submitted via the ZAP Reporting Competition&lt;/li&gt;
+&lt;li&gt;Parameter data to the traditional-html-plus report&lt;/li&gt;
+&lt;li&gt;Methods to make it easier to generate reports from other add-ons&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance Changes.&lt;/li&gt;
-&lt;li&gt;Promote to beta&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Handle multiple context URLs in automation.&lt;/li&gt;
+&lt;li&gt;Traditional plus report - link to zaproxy.org pages for passing scan rules.&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct logging of dependency.&lt;/li&gt;
-&lt;li&gt;Inconsistencies between traditional reports and the 'old' core ones&lt;/li&gt;
-&lt;li&gt;Do not rely on default encoding when creating the reports, use UTF-8 always (Issue 6561).&lt;/li&gt;
+&lt;li&gt;Include all relevant alerts in XML report templates (Issue 6627).&lt;/li&gt;
+&lt;li&gt;Made XML reports more backwards compatible and fixed issue with generating it via the API.&lt;/li&gt;
+&lt;li&gt;Issue with reports for sites with trailing slashes&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.3.0/reports-beta-0.3.0.zap</url>
-        <hash>SHA-256:2fee334842414684d72da34452a24b340344d16e0eec21dd1973584fbb06a244</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.4.0/reports-beta-0.4.0.zap</url>
+        <hash>SHA-256:c97162799d3154f4777965e5e49e357b0417e623dfc8ab8e3bb89d43a10d3a6e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-05-06</date>
-        <size>12308882</size>
+        <date>2021-06-28</date>
+        <size>13329492</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
