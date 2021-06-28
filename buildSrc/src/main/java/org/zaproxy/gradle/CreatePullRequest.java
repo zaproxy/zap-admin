@@ -103,9 +103,11 @@ public abstract class CreatePullRequest extends DefaultTask {
                     .setStartPoint(GIT_REMOTE_ORIGIN + "/" + baseBranchName.get())
                     .call();
 
-            AddCommand add = git.add();
-            status.getUntracked().forEach(add::addFilepattern);
-            add.call();
+            if (!status.getUntracked().isEmpty()) {
+                AddCommand add = git.add();
+                status.getUntracked().forEach(add::addFilepattern);
+                add.call();
+            }
 
             PersonIdent personIdent = new PersonIdent(ghUser.getName(), ghUser.getEmail());
             git.commit()
