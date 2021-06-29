@@ -1521,24 +1521,31 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>18</version>
-        <file>openapi-beta-18.zap</file>
+        <version>19</version>
+        <file>openapi-beta-19.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for the Automation Framework&lt;/li&gt;
-&lt;li&gt;Support for statistics (number of URLs added)&lt;/li&gt;
+&lt;li&gt;Added support for Multipart form-data (Issue 6418).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Always use enum values when defined (Issue 6489).&lt;/li&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Automation parameters are now in camelCase. This is a breaking change, and older automation configurations containing all-lowercase openapi parameters will stop working.&lt;/li&gt;
+&lt;li&gt;The import dialogs now show the values used in the previous import when reopened.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;NPE if form has no schema element.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v18/openapi-beta-18.zap</url>
-        <hash>SHA-256:f712818ec4440a4813e9fbcd774dafa3c9ca68a42d1fafa4f07563ffaa8ad45b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v19/openapi-beta-19.zap</url>
+        <hash>SHA-256:1bb4d39d0d009e9d212552da9e8c9ea9e4af492b20215a90f260d63bf67a3f6c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-09</date>
-        <size>11840481</size>
+        <date>2021-06-29</date>
+        <size>11813383</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
