@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>16</id>
+        <id>17</id>
         <default>
-            <item>Sign up for an AMA with Simon Bennetts on June 30th - 8am PT / 4pm BST</item>
-            <link>https://stackhawk.typeform.com/to/gWvpePYD</link>
+            <item>The ZAP Reporting Competition has been extended until October 1st!</item>
+            <link>https://www.zaproxy.org/blog/2021-03-12-report-competition/</link>
         </default>
     </news>
 </ZAP>
