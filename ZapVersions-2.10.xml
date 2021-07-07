@@ -1533,24 +1533,28 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>32</version>
-        <file>pscanrulesAlpha-alpha-32.zap</file>
+        <version>33</version>
+        <file>pscanrulesAlpha-alpha-33.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct dependency requirements.&lt;/li&gt;
+&lt;li&gt;Correct dependency declaration on Common Library add-on (Issue 6674).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v32/pscanrulesAlpha-alpha-32.zap</url>
-        <hash>SHA-256:e39b6cfaffd56522bf25a5d77718145857e006d5a97151363e4dac2e691fd232</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v33/pscanrulesAlpha-alpha-33.zap</url>
+        <hash>SHA-256:0d253632a551b7aafdc647c1ecf530bb803f0e4a6a31c0eb7a80a738ec8921d1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-07-06</date>
-        <size>1039440</size>
+        <date>2021-07-07</date>
+        <size>1039470</size>
         <not-before-version>2.10.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.4.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_pscanrulesAlpha>
     <addon>pscanrulesBeta</addon>
     <addon_pscanrulesBeta>
