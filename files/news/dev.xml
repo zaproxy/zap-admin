@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>17</id>
+        <id>18</id>
         <default>
-            <item>The ZAP Reporting Competition has been extended until October 1st!</item>
-            <link>https://www.zaproxy.org/blog/2021-03-12-report-competition/</link>
+            <item>We want your feedback! Please fill in the all new ZAP Usage Questionnaire</item>
+            <link>https://docs.google.com/forms/d/e/1FAIpQLSciFR1tEDp-CM96LA4urFxZ3UVdy_AQ8FAM-X__afmA0hfUkQ/viewform?usp=sf_link</link>
         </default>
     </news>
 </ZAP>
