@@ -1,0 +1,21 @@
+name: Crowdin Build Translations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * 1,4'
+
+jobs:
+  build:
+    name: Build Translations
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Java
+      uses: actions/setup-java@v1
+      with:
+        java-version: 8
+    - name: Build Translations
+      env:
+        CROWDIN_AUTH_TOKEN: ${{ secrets.ZAPBOT_CROWDIN_TOKEN }}
+      run: ./gradlew crowdinBuildProjectTranslation

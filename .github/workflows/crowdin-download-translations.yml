@@ -1,0 +1,22 @@
+name: Crowdin Download Translations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * 1,4'
+
+jobs:
+  download:
+    name: Download Translations
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Java
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Download Translations
+      env:
+        CROWDIN_AUTH_TOKEN: ${{ secrets.ZAPBOT_CROWDIN_TOKEN }}
+        ZAPBOT_TOKEN: ${{ secrets.ZAPBOT_TOKEN }}
+      run: ./gradlew crowdinDownloadProjectTranslation && ./gradlew deployCrowdinTranslations

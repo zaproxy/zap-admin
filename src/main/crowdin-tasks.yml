@@ -1,0 +1,34 @@
+ - repo: "zaproxy"
+   tasks:
+    - name: "crowdinCopyProjectTranslations"
+      args: [ "--from=%packages_dir%" ]
+
+ - repo: "zap-core-help"
+   tasks:
+    - name: ":addOns:crowdinCopyProjectTranslations"
+      args: [ "--from=%packages_dir%" ]
+    - name: "updateHelpSetXmlLangAttr"
+
+ - repo: "zap-extensions"
+   tasks:
+    - name: "crowdinCopyProjectTranslations"
+      args: [ "--from=%packages_dir%" ]
+    - name: "postProcessLocalizedHelpPages"
+
+ - repo: "community-scripts"
+   tasks:
+    - name: "crowdinCopyProjectTranslations"
+      args: [ "--from=%packages_dir%" ]
+    - name: "postProcessLocalizedHelpPages"
+
+ - repo: "fuzzdb-offensive"
+   tasks:
+    - name: "crowdinCopyProjectTranslations"
+      args: [ "--from=%packages_dir%" ]
+    - name: "postProcessLocalizedHelpPages"
+
+ - repo: "zap-hud"
+   tasks:
+    - name: "crowdinCopyProjectTranslations"
+      args: [ "--from=%packages_dir%" ]
+    - name: "postProcessLocalizedHelpPages"
