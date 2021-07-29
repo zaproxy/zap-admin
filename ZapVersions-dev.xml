@@ -60,20 +60,26 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>alertFilters-release-10.zap</file>
+        <version>11</version>
+        <file>alertFilters-release-11.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;API endpoints &amp;quot;applyAll&amp;quot;, &amp;quot;applyContext&amp;quot;, and &amp;quot;applyGlobal&amp;quot; to apply enabled Alert Filters to existing alerts (Issue 5966).&lt;/li&gt;
+&lt;li&gt;API endpoints &amp;quot;testAll&amp;quot;, &amp;quot;testContext&amp;quot;, and &amp;quot;testGlobal&amp;quot; to test enabled Alert Filters against existing alerts.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v10/alertFilters-release-10.zap</url>
-        <hash>SHA-256:b49fb21e407694ecc52b9202fa53a0edc02b122b253b97b3308e24bcb9df0ab6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v11/alertFilters-release-11.zap</url>
+        <hash>SHA-256:2573f6f4aeec19899057cbd4e9543abaaf6fe8cc6406bc1143662dce3a29bedf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-01-17</date>
-        <size>320054</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2021-07-29</date>
+        <size>317767</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_alertFilters>
     <addon>alertReport</addon>
     <addon_alertReport>
@@ -1561,46 +1567,20 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>25</version>
-        <file>pscanrulesBeta-beta-25.zap</file>
+        <version>26</version>
+        <file>pscanrulesBeta-beta-26.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;Update RE2/J library to latest version (1.6).&lt;/li&gt;
-&lt;li&gt;PII Scan Rule will now ignore CSS and style information (Issue 6288).&lt;/li&gt;
-&lt;li&gt;Discontinued use of CWE-16 and switched to more specific weaknesses in the following scan rules:
-&lt;ul&gt;
-&lt;li&gt;CSP Missing&lt;/li&gt;
-&lt;li&gt;Insecure Form Load&lt;/li&gt;
-&lt;li&gt;Insecure Form Post&lt;/li&gt;
-&lt;li&gt;Strict-Transport-Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hash Disclosure scan rule will now only evaluate JavaScript responses at Low threshold (Issue 6071).&lt;/li&gt;
-&lt;li&gt;Added/updated the details of some alerts (some changes might break Alert Filters)
-&lt;ul&gt;
-&lt;li&gt;Insecure Form Load
-&lt;ul&gt;
-&lt;li&gt;Added evidence&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Insecure Form Post
-&lt;ul&gt;
-&lt;li&gt;Added evidence&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update links to repository.&lt;/li&gt;
+&lt;li&gt;PII Disclosure scan rule now ignores images (Issue 6697).&lt;/li&gt;
+&lt;li&gt;PII Disclosure scan rule will now ignore seeming decimal numbers unless at Low threshold (Issue 6639).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v25/pscanrulesBeta-beta-25.zap</url>
-        <hash>SHA-256:e6e0f8891df172c5b8c56b4f730e28c466f5c68f036ad934827f3db1cf20db11</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v26/pscanrulesBeta-beta-26.zap</url>
+        <hash>SHA-256:b3a856ed1170508c5033ffc3a38f5b84822b601ab4811fafeb3c9e806016d323</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-06-17</date>
-        <size>733891</size>
+        <date>2021-07-29</date>
+        <size>733722</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
