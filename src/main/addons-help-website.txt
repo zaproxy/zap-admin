@@ -55,6 +55,7 @@ jsonview
 jython
 kotlin
 neonmarker
+oast
 onlineMenu
 openapi
 plugnhack
