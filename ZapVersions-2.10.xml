@@ -288,24 +288,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>automation-alpha-0.4.0.zap</file>
+        <version>0.4.1</version>
+        <file>automation-alpha-0.4.1.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for alert tests&lt;/li&gt;
-&lt;li&gt;First phase of GUI&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Infrastructure changes to support planned GUI.&lt;/li&gt;
+&lt;li&gt;Missing icons&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.4.0/automation-alpha-0.4.0.zap</url>
-        <hash>SHA-256:2d1d9e3fb3fd870bd04472cd11903a2ba600c39fddbb173183b021b403a26de7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.4.1/automation-alpha-0.4.1.zap</url>
+        <hash>SHA-256:e501e7a861e0d313051f4939233aa8225d8c97c53c5bb587a8625657d568d595</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-05</date>
-        <size>2823663</size>
+        <date>2021-08-07</date>
+        <size>2829935</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
