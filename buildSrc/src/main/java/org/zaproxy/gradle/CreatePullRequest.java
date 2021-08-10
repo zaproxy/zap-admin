@@ -19,33 +19,14 @@
  */
 package org.zaproxy.gradle;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import org.eclipse.jgit.api.AddCommand;
-import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.Status;
-import org.eclipse.jgit.lib.PersonIdent;
-import org.eclipse.jgit.lib.Repository;
-import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
-import org.eclipse.jgit.transport.URIish;
-import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Internal;
 import org.gradle.api.tasks.TaskAction;
-import org.kohsuke.github.GHIssueState;
-import org.kohsuke.github.GHPullRequest;
-import org.kohsuke.github.GHRepository;
-import org.kohsuke.github.GitHub;
 
 /** A task that checks for modifications in a git repo, commits, and creates a pull request. */
 public abstract class CreatePullRequest extends DefaultTask {
-
-    private static final String GITHUB_BASE_URL = "https://github.com/";
-
-    private static final String GIT_REMOTE_ORIGIN = "origin";
 
     private static final String DEFAULT_GIT_BASE_BRANCH_NAME = "master";
 
@@ -82,89 +63,12 @@ public abstract class CreatePullRequest extends DefaultTask {
 
     @TaskAction
     public void pullRequest() throws Exception {
-        GitHubRepo ghRepo = getRepo().get();
-        Repository repository =
-                new FileRepositoryBuilder().setGitDir(new File(ghRepo.getDir(), ".git")).build();
-        try (Git git = new Git(repository)) {
-            Status status = git.status().call();
-            if (!status.hasUncommittedChanges() && status.getUntracked().isEmpty()) {
-                return;
-            }
-
-            GitHubUser ghUser = getUser().get();
-
-            URIish originUri =
-                    new URIish(GITHUB_BASE_URL + ghUser.getName() + "/" + ghRepo.getName());
-            git.remoteSetUrl().setRemoteName(GIT_REMOTE_ORIGIN).setRemoteUri(originUri).call();
-
-            git.checkout()
-                    .setCreateBranch(true)
-                    .setName(getBranchName().get())
-                    .setStartPoint(GIT_REMOTE_ORIGIN + "/" + baseBranchName.get())
-                    .call();
-
-            if (!status.getUntracked().isEmpty()) {
-                AddCommand add = git.add();
-                status.getUntracked().forEach(add::addFilepattern);
-                add.call();
-            }
-
-            PersonIdent personIdent = new PersonIdent(ghUser.getName(), ghUser.getEmail());
-            git.commit()
-                    .setAll(true)
-                    .setSign(false)
-                    .setAuthor(personIdent)
-                    .setCommitter(personIdent)
-                    .setMessage(
-                            getCommitSummary().get()
-                                    + "\n\n"
-                                    + getCommitDescription().get()
-                                    + signedOffBy(personIdent))
-                    .call();
-
-            git.push()
-                    .setCredentialsProvider(
-                            new UsernamePasswordCredentialsProvider(
-                                    ghUser.getName(), ghUser.getAuthToken()))
-                    .setForce(true)
-                    .add(getBranchName().get())
-                    .call();
-
-            GHRepository ghRepository =
-                    GitHub.connect(ghUser.getName(), ghUser.getAuthToken())
-                            .getRepository(ghRepo.toString());
-
-            List<GHPullRequest> pulls =
-                    ghRepository
-                            .queryPullRequests()
-                            .base(baseBranchName.get())
-                            .head(ghUser.getName() + ":" + getBranchName().get())
-                            .state(GHIssueState.OPEN)
-                            .list()
-                            .asList();
-            if (pulls.isEmpty()) {
-                createPullRequest(
-                        ghRepository, getCommitSummary().get(), getCommitDescription().get());
-            } else {
-                pulls.get(0).setBody(getCommitDescription().get());
-            }
-        }
-    }
-
-    private static String signedOffBy(PersonIdent personIdent) {
-        return "\n\nSigned-off-by: "
-                + personIdent.getName()
-                + " <"
-                + personIdent.getEmailAddress()
-                + ">";
-    }
-
-    private void createPullRequest(GHRepository ghRepo, String title, String description)
-            throws IOException {
-        ghRepo.createPullRequest(
-                title,
-                getUser().get().getName() + ":" + getBranchName().get(),
+        CreatePullRequestImpl.create(
+                getRepo().get(),
+                getUser().get(),
+                getBranchName().get(),
                 baseBranchName.get(),
-                description);
+                getCommitSummary().get(),
+                getCommitDescription().get());
     }
 }

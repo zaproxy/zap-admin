@@ -28,7 +28,7 @@ dependencies {
     implementation("org.eclipse.jgit:org.eclipse.jgit:$jgitVersion")
     implementation("org.eclipse.jgit:org.eclipse.jgit.archive:$jgitVersion")
     implementation("org.kohsuke:github-api:1.106")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.11.1")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.1")
     implementation("org.snakeyaml:snakeyaml-engine:2.0")
     implementation("org.zaproxy:zap:2.9.0")
 }

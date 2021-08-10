@@ -17,11 +17,13 @@ import org.zaproxy.gradle.UpdateAndCreatePullRequestAddOnRelease
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateZapVersionWebsiteData
+import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 
 plugins {
     java
     id("com.diffplug.spotless") version "5.12.1"
     id("net.ltgt.errorprone") version "2.0.1"
+    id("org.zaproxy.crowdin") version "0.1.0"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
@@ -33,6 +35,16 @@ tasks.withType<JavaCompile> {
 
 repositories {
     mavenCentral()
+}
+
+crowdin {
+    credentials {
+        token.set(System.getenv("CROWDIN_AUTH_TOKEN"))
+    }
+
+    configuration {
+        file.set(file("gradle/crowdin.yml"))
+    }
 }
 
 dependencies {
@@ -197,6 +209,16 @@ tasks {
         user.set(ghUser)
         repo.set(adminRepo)
         branchName.set("add-on-release")
+    }
+
+    register<DeployCrowdinTranslations>("deployCrowdinTranslations") {
+        deployConfiguration.set(file("src/main/crowdin-tasks.yml"))
+
+        user.set(ghUser)
+        branchName.set("crowdin-update")
+
+        commitSummary.set("Update localized resources")
+        commitDescription.set("Update resources from Crowdin.")
     }
 }
 
