@@ -24,7 +24,7 @@ dependencies {
     implementation("com.vladsch.flexmark:flexmark-profile-pegdown:$flexmarkVersion")
 
     implementation("org.apache.commons:commons-lang3:3.9")
-    val jgitVersion = "5.6.0.201912101111-r"
+    val jgitVersion = "5.12.0.202106070339-r"
     implementation("org.eclipse.jgit:org.eclipse.jgit:$jgitVersion")
     implementation("org.eclipse.jgit:org.eclipse.jgit.archive:$jgitVersion")
     implementation("org.kohsuke:github-api:1.106")
