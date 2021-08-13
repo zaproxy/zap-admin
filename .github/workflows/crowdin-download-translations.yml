@@ -2,8 +2,8 @@ name: Crowdin Download Translations
 
 on:
   workflow_dispatch:
-  #schedule:
-  #  - cron: '30 6 * * 1,4'
+  schedule:
+    - cron: '30 6 * * 1,4'
 
 jobs:
   download:
