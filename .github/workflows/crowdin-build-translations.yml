@@ -2,8 +2,8 @@ name: Crowdin Build Translations
 
 on:
   workflow_dispatch:
-  #schedule:
-  #  - cron: '0 5 * * 1,4'
+  schedule:
+    - cron: '0 5 * * 1,4'
 
 jobs:
   build:
