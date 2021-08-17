@@ -1387,20 +1387,30 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.1</version>
-        <file>oast-alpha-0.1.1.zap</file>
+        <version>0.2.0</version>
+        <file>oast-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Requests were not showing up in the OAST Callbacks panel.&lt;/li&gt;
-&lt;li&gt;BOAST servers were not being polled after registration.&lt;/li&gt;
+&lt;li&gt;An option to allow changing the polling frequency of BOAST servers.&lt;/li&gt;
+&lt;li&gt;A table that lists the payloads and canary values of all registered BOAST servers.&lt;/li&gt;
+&lt;li&gt;Two new scripts that demonstrate how to interact with this add-on:
+&lt;ul&gt;
+&lt;li&gt;OAST Register Request Handler.js (Template)&lt;/li&gt;
+&lt;li&gt;OAST Get BOAST Servers.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;ID&lt;/em&gt; and the &lt;em&gt;Canary Value&lt;/em&gt; fields, in favour of the &lt;em&gt;Active Servers&lt;/em&gt; table in the BOAST options window.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.1.1/oast-alpha-0.1.1.zap</url>
-        <hash>SHA-256:0443104b049c8f33b980be852753175ed7c0e02f4865262984e65716e71ce994</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.2.0/oast-alpha-0.2.0.zap</url>
+        <hash>SHA-256:60daa938b942f63c878863d0c6b2ae648b704dbc74c86228c85801ec18664f29</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-04</date>
-        <size>61165</size>
+        <date>2021-08-17</date>
+        <size>502492</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_oast>
     <addon>onlineMenu</addon>
