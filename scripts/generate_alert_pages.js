@@ -15,6 +15,20 @@ var date = (new Date()).toISOString().replace('T', ' ');
 var ignoreList = [50000, 50001, 50003, 60000, 60001, 60100, 60101];
 var codeMap = {40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java'}
 
+var WebSocketPassiveScript = Java.type('org.zaproxy.zap.extension.websocket.pscan.scripts.WebSocketPassiveScript');
+
+extScript = org.parosproxy.paros.control.Control.getSingleton().
+	getExtensionLoader().getExtension(
+		org.zaproxy.zap.extension.script.ExtensionScript.NAME);
+
+pscanWs = extScript.getTemplates(extScript.getScriptType("websocketpassive"));
+
+for (var i = 0; i < pscanWs.length; i++) {
+	printWsPscanRule(extScript.getInterface(pscanWs[i], WebSocketPassiveScript.class),
+       'https://github.com/zaproxy/zap-extensions/blob/main/addOns/websocket/' +
+       'src/main/zapHomeFiles/scripts/templates/websocketpassive/' + encodeURIComponent(pscanWs[i].getName()));
+}
+
 extAscan = org.parosproxy.paros.control.Control.getSingleton().
 	getExtensionLoader().getExtension(
 		org.zaproxy.zap.extension.ascan.ExtensionActiveScan.NAME);
@@ -45,7 +59,7 @@ for (var i = 0; i < plugins.length; i++) {
 
 print("Date: " + date);
 
-function printAlerts(alerts, name, type, status, clazz) {
+function printAlerts(alerts, name, type, status, clazz, scripturl) {
 	var pluginId = alerts[0].getPluginId();
 	if (ignoreList.indexOf(pluginId) !== -1) {
 		print('Plugin ID: ' + pluginId + ' - ignored');
@@ -57,6 +71,20 @@ function printAlerts(alerts, name, type, status, clazz) {
 	if (pluginId in codeMap) {
 		codeurl = codeMap[pluginId]
 	}
+     if (scripturl != null) {
+          codeurl = scripturl;
+     }
+     var linktext;
+     if (codeurl.indexOf('/main/java/') !== -1) {
+         linktext = codeurl.split('/main/java/')[1];
+     } else if (codeurl.indexOf('/main/zapHomeFiles/') !== -1) {
+         linktext = codeurl.split('/main/zapHomeFiles/')[1];
+     } else if (codeurl.indexOf('/main/') !== -1) {
+         linktext = codeurl.split('/main/')[1];
+     } else {
+         linktext = codeurl;
+     }
+     linktext = linktext.replaceAll('\%20', ' ');
 
 	if (alerts.length > 1) {
 		print('Plugin ID: ' + pluginId);
@@ -76,6 +104,7 @@ function printAlerts(alerts, name, type, status, clazz) {
 			pw.println('      name: ' + alerts[a].getName());
 		}
 		pw.println('code: ' + codeurl);
+		pw.println('linktext: "' + linktext + '"');
 		pw.println('date: ' + date);
 		pw.println('lastmod: ' + date);
 		pw.println('---');
@@ -123,6 +152,7 @@ function printAlerts(alerts, name, type, status, clazz) {
 			pw.println('wasc: ' + wascId);
 		}
 		pw.println('code: ' + codeurl);
+		pw.println('linktext: ' + linktext);
 		pw.println('date: ' + date);
 		pw.println('lastmod: ' + date);
 		pw.println('---');
@@ -148,7 +178,7 @@ function printAscanRule(plugin) {
 		examples.add(alert);
 	}
 	
-	printAlerts(examples, plugin.getName(), "Active Scan Rule", plugin.getStatus(), plugin.getClass().getName());
+	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName());
 }
 
 function getPrivateMethod(obj, methods, key, defaultVal) {
@@ -193,5 +223,12 @@ function printPscanRule(plugin) {
 		examples.add(alert);
 	}
 
-	printAlerts(examples, plugin.getName(), "Passive Scan Rule", plugin.getStatus(), plugin.getClass().getName());
+	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName());
+}
+
+function printWsPscanRule(plugin, scriptUrl) {
+	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
+	if (examples != null && examples.length > 0) {
+         printAlerts(examples, plugin.getName(), "WebSocket Passive", "release", plugin.getClass().getName(), scriptUrl);
+	}
 }
