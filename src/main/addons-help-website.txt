@@ -70,6 +70,7 @@ regextester
 replacer
 reports
 requester
+retest
 retire
 reveal
 revisit
