@@ -1393,24 +1393,23 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.1</version>
-        <file>oast-alpha-0.2.1.zap</file>
+        <version>0.2.2</version>
+        <file>oast-alpha-0.2.2.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Renamed the &amp;quot;OAST Callbacks&amp;quot; tab to &amp;quot;OAST&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Updated help pages.&lt;/li&gt;
+&lt;li&gt;The add-on did not stop when ZAP did, which led to ZAP hanging.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Script templates were being loaded twice, resulting in a warning.&lt;/li&gt;
+&lt;li&gt;Minor script and help updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.2.1/oast-alpha-0.2.1.zap</url>
-        <hash>SHA-256:5a866364722277266759a7c71be8f4a0017bf75acd317a032e3cf43bc24f0cae</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.2.2/oast-alpha-0.2.2.zap</url>
+        <hash>SHA-256:6e4569ac44787bfb34ec01dda787d086d099f754119f6bb7547cfba68dfc74d2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-19</date>
-        <size>502877</size>
+        <date>2021-08-23</date>
+        <size>555299</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_oast>
     <addon>onlineMenu</addon>
