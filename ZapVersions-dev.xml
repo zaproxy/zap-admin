@@ -288,19 +288,25 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.1</version>
-        <file>automation-alpha-0.4.1.zap</file>
+        <version>0.5.0</version>
+        <file>automation-alpha-0.5.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Missing icons&lt;/li&gt;
+&lt;li&gt;Address errors when running an automation plan with spiders and passive scan config.&lt;/li&gt;
+&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Always enable the Save button on changes and prompt user when opening a plan if the current one has changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Changes to support the Retest add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.4.1/automation-alpha-0.4.1.zap</url>
-        <hash>SHA-256:e501e7a861e0d313051f4939233aa8225d8c97c53c5bb587a8625657d568d595</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.5.0/automation-alpha-0.5.0.zap</url>
+        <hash>SHA-256:85626f46544f9d064354d782de2159715d29841b0b498e9b2db2e1629d801667</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-07</date>
-        <size>2829935</size>
+        <date>2021-08-23</date>
+        <size>3802868</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -1743,6 +1749,34 @@
         <size>65198</size>
         <not-before-version>2.9.0</not-before-version>
     </addon_requester>
+    <addon>retest</addon>
+    <addon_retest>
+        <name>Retest</name>
+        <description>An add-on to retest for presence/absence of previously generated alerts.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>retest-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow retesting for the presence/absence of certain alerts using the Automation Framework.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.0.1/retest-alpha-0.0.1.zap</url>
+        <hash>SHA-256:32c4f8df7cac90272822875eb4c163eb2a92d2fc47f4ae044d92aedcfd85ede4</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/retest/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2021-08-23</date>
+        <size>43108</size>
+        <not-before-version>2.10.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>automation</id>
+                    <version>&gt;=0.5.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_retest>
     <addon>retire</addon>
     <addon_retire>
         <name>Retire.js</name>
