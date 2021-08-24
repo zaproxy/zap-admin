@@ -24,9 +24,13 @@ extScript = org.parosproxy.paros.control.Control.getSingleton().
 pscanWs = extScript.getTemplates(extScript.getScriptType("websocketpassive"));
 
 for (var i = 0; i < pscanWs.length; i++) {
-	printWsPscanRule(extScript.getInterface(pscanWs[i], WebSocketPassiveScript.class),
-       'https://github.com/zaproxy/zap-extensions/blob/main/addOns/websocket/' +
-       'src/main/zapHomeFiles/scripts/templates/websocketpassive/' + encodeURIComponent(pscanWs[i].getName()));
+	try {
+		printWsPscanRule(extScript.getInterface(pscanWs[i], WebSocketPassiveScript.class),
+	    	'https://github.com/zaproxy/zap-extensions/blob/main/addOns/websocket/' +
+	    	'src/main/zapHomeFiles/scripts/templates/websocketpassive/' + encodeURIComponent(pscanWs[i].getName()));
+	} catch (e) {
+		print(e);
+	}
 }
 
 extAscan = org.parosproxy.paros.control.Control.getSingleton().
