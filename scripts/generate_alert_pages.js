@@ -71,7 +71,7 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 	}
 	var pkgs = clazz.split('.');
 	var pkg = pkgs[pkgs.length - 2];
-	var codeurl = 'https://github.com/zaproxy/zap-extensions/blob/master/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
+	var codeurl = 'https://github.com/zaproxy/zap-extensions/blob/main/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
 	if (pluginId in codeMap) {
 		codeurl = codeMap[pluginId]
 	}
