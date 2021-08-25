@@ -1766,20 +1766,21 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>retire-release-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>retire-release-0.8.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;Update link to repository.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.7.0/retire-release-0.7.0.zap</url>
-        <hash>SHA-256:c304c50ab1481316c576acb2c97309c2c4167a290d2bfa67fb8d8468356e4add</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.8.0/retire-release-0.8.0.zap</url>
+        <hash>SHA-256:b278c20e2e01675a5174c9f51b7ab36a42d39386fef8c474429ad7d6232e1c4e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-03-24</date>
-        <size>298250</size>
+        <date>2021-08-25</date>
+        <size>1205341</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_retire>
     <addon>reveal</addon>
@@ -2196,27 +2197,25 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.2.0</version>
-        <file>wappalyzer-release-21.2.0.zap</file>
+        <version>21.3.0</version>
+        <file>wappalyzer-release-21.3.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Update link to repository.&lt;/li&gt;
-&lt;li&gt;Update RE2/J library to latest version (1.6).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;DOM patterns are now only attempted against HTML responses.&lt;/li&gt;
+&lt;li&gt;Reduce logging of &amp;quot;Unexpected header type&amp;quot; messages from error to debug (related to Issue 6607).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for automation job data to make it available in reports.&lt;/li&gt;
+&lt;li&gt;Support for cookie patterns.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.2.0/wappalyzer-release-21.2.0.zap</url>
-        <hash>SHA-256:e7cb7de2ffac1e5fa1449f6da9968fa6a5accc2d5119c543fe277b1116c1d9ea</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.3.0/wappalyzer-release-21.3.0.zap</url>
+        <hash>SHA-256:3183da771cc2875b62730c273bce52e5c7cef73368fe1f401370ac2cace1181d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-06-17</date>
-        <size>12303306</size>
+        <date>2021-08-25</date>
+        <size>12587979</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
