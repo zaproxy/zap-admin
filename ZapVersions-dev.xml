@@ -1387,21 +1387,23 @@
         <name>Neonmarker</name>
         <description>Colors history table items based on tags</description>
         <author>Juha Kivekäs, Kingthorin</author>
-        <version>1.3.0</version>
-        <file>neonmarker-alpha-1.3.0.zap</file>
+        <version>1.4.0</version>
+        <file>neonmarker-alpha-1.4.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed an exception which was occurring when the tab was shown during install.&lt;/li&gt;
-&lt;li&gt;Fixed an exception when ZAP is used in CLI mode.&lt;/li&gt;
+&lt;li&gt;Add red/green icon to Enable/Disable toggle button.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
+&lt;li&gt;Ensure added color mappings are unique (Issue 11). Only applies when mappings are added programmatically, a user can still define the same mapping multiple times via the GUI (hopefully they'll recognize the inefficiency of doing so).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/neonmarker-alpha-1.3.0.zap</url>
-        <hash>SHA-256:e5b3862035342062feef8d0c906a5f0d758df0d1ad4b162c71a01d0c1357ffe4</hash>
+        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.4.0/neonmarker-alpha-1.4.0.zap</url>
+        <hash>SHA-256:46947eea7130298c765bf089147fa54a9e1353a57a2033829aded3947a118d55</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/neonmarker/</info>
         <repo>https://github.com/kingthorin/neonmarker</repo>
-        <date>2020-09-30</date>
-        <size>26825</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2021-08-26</date>
+        <size>28259</size>
+        <not-before-version>2.10.0</not-before-version>
     </addon_neonmarker>
     <addon>oast</addon>
     <addon_oast>
