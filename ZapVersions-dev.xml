@@ -1461,27 +1461,28 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>20</version>
-        <file>openapi-beta-20.zap</file>
+        <version>21</version>
+        <file>openapi-beta-21.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework GUI&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The import progress is now displayed using a Progress Panel.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix RequestMethod enum name for OPTIONS (Issue 6666)&lt;/li&gt;
+&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Import file definition even if it has issues (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6758"&gt;Issue #6758&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;application/json&lt;/code&gt; media type examples when available.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v20/openapi-beta-20.zap</url>
-        <hash>SHA-256:dd1c476fc9f48329927b4c26b25873498299160ed0db79864b8b5815ed9cd708</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v21/openapi-beta-21.zap</url>
+        <hash>SHA-256:bdacf11c656fef1eec2c99d63643d75fb5a09af515c4ebd749cd2b5f9ee95ae9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-05</date>
-        <size>11820716</size>
+        <date>2021-09-01</date>
+        <size>11924912</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
