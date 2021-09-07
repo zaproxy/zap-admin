@@ -451,63 +451,29 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>10</version>
-        <file>communityScripts-alpha-10.zap</file>
+        <version>11</version>
+        <file>communityScripts-alpha-11.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;standalone/load_context_from_burp -&amp;gt; import context from burp config file&lt;/li&gt;
-&lt;li&gt;Passive scan script for finding potential s3 Bucket URLs&lt;/li&gt;
-&lt;li&gt;payloadprocessor/to-hex.js &amp;gt; string to hex payload script.&lt;/li&gt;
-&lt;li&gt;selenium and session scripts.&lt;/li&gt;
-&lt;li&gt;httpfuzzerprocessor/random_x_forwarded_for_ip.js &amp;gt; Set 'X-Forwarded-For' to a random IP value.&lt;/li&gt;
-&lt;li&gt;httpfuzzerprocessor/randomUserAgent.js &amp;gt; Set 'User-Agent' to a random user-agent.&lt;/li&gt;
-&lt;li&gt;Add the following Payload Processor scripts ported from SQLMap:
-&lt;ul&gt;
-&lt;li&gt;apostrophemask&lt;/li&gt;
-&lt;li&gt;apostrophenullencode&lt;/li&gt;
-&lt;li&gt;chardoubleencode&lt;/li&gt;
-&lt;li&gt;charencode&lt;/li&gt;
-&lt;li&gt;charunicodeencode&lt;/li&gt;
-&lt;li&gt;equaltolike&lt;/li&gt;
-&lt;li&gt;lowercase&lt;/li&gt;
-&lt;li&gt;percentage&lt;/li&gt;
-&lt;li&gt;randomcase&lt;/li&gt;
-&lt;li&gt;space2comments&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Add Google API keys finder script&lt;/li&gt;
+&lt;li&gt;active/Cross Site WebSocket Hijacking.js &amp;gt; an active scan for Cross-Site WebSocket Hijacking vulnerability&lt;/li&gt;
+&lt;li&gt;targeted/cve-2021-22214.js &amp;gt; A targeted script to check for Unauthorised SSRF on GitLab - CVE 2021-22214&lt;/li&gt;
+&lt;li&gt;httpsender/full-session-n-csrf-nashorn.js &amp;gt; full session and csrf token management.&lt;/li&gt;
+&lt;li&gt;httpfuzzerprocessor/unexpected_responses.js &amp;gt; compare response codes to a (pass/fail) regex and generate alerts&lt;/li&gt;
+&lt;li&gt;targeted/dns-email-spoofing &amp;gt; Check if DMARC / SPF policies are configured on a domain.&lt;/li&gt;
+&lt;li&gt;httpsender/add-more-headers.js &amp;gt; Add caller-specified headers to all requests.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Rename reliability to confidence.&lt;/li&gt;
-&lt;li&gt;standalone/enableDebugLogging.js &amp;gt; use new Log4j 2 APIs.&lt;/li&gt;
-&lt;li&gt;standalone/window_creation_template.js &amp;gt; no longer extend &lt;code&gt;AbstractFrame&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;httpsender/Alert on HTTP Response Code Errors.js and Alert on Unexpected Content Types.js:
-&lt;ul&gt;
-&lt;li&gt;Check if messages being analyzed are globally excluded or not;&lt;/li&gt;
-&lt;li&gt;Ignore check for update messages;&lt;/li&gt;
-&lt;li&gt;Include more expected content types.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;httpsender/aws-signing-for-owasp-zap.py &amp;gt; read AWS environment variables for default values.&lt;/li&gt;
-&lt;li&gt;active/TestInsecureHTTPVerbs.py and passive/HUNT.py &amp;gt; correct links to OWASP site.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;standalone/loadListInGlobalVariable.js &amp;gt; superseded by core functionality, &lt;code&gt;ScriptVars.setGlobalCustomVar(...)&lt;/code&gt; and &lt;code&gt;getGlobalCustomVar(...)&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;extender/HTTP Message Logger.js &amp;gt; fix typo in Integer constant.&lt;/li&gt;
+&lt;li&gt;Update links in READMEs.&lt;/li&gt;
+&lt;li&gt;Update JavaDoc links to latest version.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v10/communityScripts-alpha-10.zap</url>
-        <hash>SHA-256:4660137ed039ee197ab76d0376be3c467a4f3e6d8ea3eb41bd28b2825bb63b7e</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v11/communityScripts-alpha-11.zap</url>
+        <hash>SHA-256:4f29f4807f384cf22e635583187935b44d488738510aded57ef6c2ef591eb0b7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2021-06-11</date>
-        <size>425509</size>
+        <date>2021-09-07</date>
+        <size>437294</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_communityScripts>
     <addon>custompayloads</addon>
