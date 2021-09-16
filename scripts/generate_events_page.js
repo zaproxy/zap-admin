@@ -12,6 +12,15 @@ var ZAP = Java.type('org.zaproxy.zap.ZAP');
 var fw = new FileWriter(FILE);
 var pw = new PrintWriter(fw);
 
+function isInExtensions(path) {
+	return path.startsWith("org.zaproxy.addon") || 
+		(path.startsWith("org.zaproxy.zap.extension")
+			&& ! path.startsWith("org.zaproxy.zap.extension.alert")
+			&& ! path.startsWith("org.zaproxy.zap.extension.ascan")
+			&& ! path.startsWith("org.zaproxy.zap.extension.brk")
+			&& ! path.startsWith("org.zaproxy.zap.extension.spider"));
+}
+
 pw.println ("# The events raised in ZAP");
 pw.println ("---");
 
@@ -22,13 +31,16 @@ for (var i=0; i < publishers.length; i++) {
 		// Assume the core to start with
 		var publisherJava = publishers[i].replaceAll("\\.", "\\/") + ".java";
 		var link = "https://github.com/zaproxy/zaproxy/blob/main/zap/src/main/java/" + publisherJava;
-		if (publishers[i].startsWith("org.zaproxy.addon") || 
-			(publishers[i].startsWith("org.zaproxy.zap.extension") && ! publishers[i].startsWith("org.zaproxy.zap.extension.alert"))) {
+		if (isInExtensions(publishers[i])) {
 			var pkg = publishers[i].split(".")[4];
 			if (publishers[i].startsWith("org.zaproxy.addon")) {
 				pkg = publishers[i].split(".")[3];
 			}
-			link = "https://github.com/zaproxy/zap-extensions/blob/main/addOns/" + pkg + "/src/main/java/" + publisherJava;
+			if (publishers[i].startsWith("org.zaproxy.zap.extension.hud")) {
+				link = "https://github.com/zaproxy/zap-hud/tree/main/src/main/java/" + publisherJava;
+			} else {
+				link = "https://github.com/zaproxy/zap-extensions/blob/main/addOns/" + pkg + "/src/main/java/" + publisherJava;
+			}
 		}
 		
 		pw.println();
