@@ -60,25 +60,19 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>alertFilters-release-11.zap</file>
+        <version>12</version>
+        <file>alertFilters-release-12.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;API endpoints &amp;quot;applyAll&amp;quot;, &amp;quot;applyContext&amp;quot;, and &amp;quot;applyGlobal&amp;quot; to apply enabled Alert Filters to existing alerts (Issue 5966).&lt;/li&gt;
-&lt;li&gt;API endpoints &amp;quot;testAll&amp;quot;, &amp;quot;testContext&amp;quot;, and &amp;quot;testGlobal&amp;quot; to test enabled Alert Filters against existing alerts.&lt;/li&gt;
+&lt;li&gt;Support for the Automation Framework&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v11/alertFilters-release-11.zap</url>
-        <hash>SHA-256:2573f6f4aeec19899057cbd4e9543abaaf6fe8cc6406bc1143662dce3a29bedf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v12/alertFilters-release-12.zap</url>
+        <hash>SHA-256:c638aa6bb0c90d0845a32295b1a17d24706a900be1d2ee0265556bd4a257b3f1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-07-29</date>
-        <size>317767</size>
+        <date>2021-09-16</date>
+        <size>456086</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_alertFilters>
     <addon>alertReport</addon>
@@ -288,25 +282,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>automation-alpha-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>automation-alpha-0.6.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address errors when running an automation plan with spiders and passive scan config.&lt;/li&gt;
-&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Always enable the Save button on changes and prompt user when opening a plan if the current one has changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Changes to support the Retest add-on.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.5.0/automation-alpha-0.5.0.zap</url>
-        <hash>SHA-256:85626f46544f9d064354d782de2159715d29841b0b498e9b2db2e1629d801667</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.6.0/automation-alpha-0.6.0.zap</url>
+        <hash>SHA-256:9edd7409612b36dee2acbf74505af3f044d2c08a8b800d33502e307c06b61887</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-23</date>
-        <size>3802868</size>
+        <date>2021-09-16</date>
+        <size>3796528</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -852,24 +840,23 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>graphql-alpha-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>graphql-alpha-0.5.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework GUI&lt;/li&gt;
+&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Report no URL specified in automation job as info instead of failure.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.4.0/graphql-alpha-0.4.0.zap</url>
-        <hash>SHA-256:20f2e12520610e48b2a93efd4bed8c3fc0fcd77b5c7120ba108370d12d3027e6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.5.0/graphql-alpha-0.5.0.zap</url>
+        <hash>SHA-256:d6a3a334f5d87fb32e654ffa95cdfb6f81306183baaea1343950d998236013a6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-05</date>
-        <size>2229349</size>
+        <date>2021-09-16</date>
+        <size>3583844</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
@@ -1427,28 +1414,19 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>21</version>
-        <file>openapi-beta-21.zap</file>
+        <version>22</version>
+        <file>openapi-beta-22.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The import progress is now displayed using a Progress Panel.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Import file definition even if it has issues (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6758"&gt;Issue #6758&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;application/json&lt;/code&gt; media type examples when available.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v21/openapi-beta-21.zap</url>
-        <hash>SHA-256:bdacf11c656fef1eec2c99d63643d75fb5a09af515c4ebd749cd2b5f9ee95ae9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v22/openapi-beta-22.zap</url>
+        <hash>SHA-256:19540656b08c9008610be965628c61716661f3c81d3aad062ad9f3fb81376367</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-01</date>
-        <size>11924912</size>
+        <date>2021-09-16</date>
+        <size>11931988</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
@@ -1662,24 +1640,24 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>reports-beta-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>reports-beta-0.6.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework 'theme' parameter.&lt;/li&gt;
-&lt;li&gt;Automation Framework GUI&lt;/li&gt;
+&lt;li&gt;Address errors when running the OutputSummary job with Automation Framework.&lt;/li&gt;
+&lt;li&gt;Alert counts to ignore false positives.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.5.0/reports-beta-0.5.0.zap</url>
-        <hash>SHA-256:c9a509303f64c9acb343e22eda7bb15630160a99f9787ddba6738d06519e59ea</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.6.0/reports-beta-0.6.0.zap</url>
+        <hash>SHA-256:f57fe07c91172bf2c7e5d1fd854e413b2393bbf951ead6e62d17009b27a5614a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-05</date>
-        <size>13449678</size>
+        <date>2021-09-16</date>
+        <size>14089367</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
@@ -1718,25 +1696,29 @@
         <name>Retest</name>
         <description>An add-on to retest for presence/absence of previously generated alerts.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>retest-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>retest-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow retesting for the presence/absence of certain alerts using the Automation Framework.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Show about help page.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.0.1/retest-alpha-0.0.1.zap</url>
-        <hash>SHA-256:32c4f8df7cac90272822875eb4c163eb2a92d2fc47f4ae044d92aedcfd85ede4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.1.0/retest-alpha-0.1.0.zap</url>
+        <hash>SHA-256:be65bcf779ab3ff8ab0f3be43a6c83540b9149f1197fa6b0f8c0529bcd8124ed</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-23</date>
-        <size>43108</size>
+        <date>2021-09-16</date>
+        <size>255267</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>automation</id>
-                    <version>&gt;=0.5.0</version>
+                    <version>&gt;=0.6.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1942,23 +1924,27 @@
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>8</version>
-        <file>soap-alpha-8.zap</file>
+        <version>9</version>
+        <file>soap-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework GUI&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v8/soap-alpha-8.zap</url>
-        <hash>SHA-256:72c4fb2a803e30ffaff49152bcbf3e2b1de0cdfc6fb713c7a421612d7d264297</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v9/soap-alpha-9.zap</url>
+        <hash>SHA-256:c044458cc46ddb8f0d240ea4a38c751867bf508066b6989becf174629ce37d33</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-05</date>
-        <size>12530841</size>
+        <date>2021-09-16</date>
+        <size>13969672</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_soap>
     <addon>spiderAjax</addon>
@@ -1966,30 +1952,28 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.4.0</version>
-        <file>spiderAjax-release-23.4.0.zap</file>
+        <version>23.5.0</version>
+        <file>spiderAjax-release-23.5.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework GUI&lt;/li&gt;
+&lt;li&gt;Add Job Name field in AJAX Spider Automation dialogue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address errors when running the AJAX Spider with Automation Framework.&lt;/li&gt;
+&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Handle multiple context URLs in automation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Deprecated&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Automation parameters &lt;code&gt;failIfFoundUrlsLessThan&lt;/code&gt; and &lt;code&gt;warnIfFoundUrlsLessThan&lt;/code&gt; in favour of the
-&lt;code&gt;spiderAjax.urls.added&lt;/code&gt; statistic test.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.4.0/spiderAjax-release-23.4.0.zap</url>
-        <hash>SHA-256:3b474b3c1d1481e4c5430fb0eb49f7349264ceef142457eee669ad3ee5933c73</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.5.0/spiderAjax-release-23.5.0.zap</url>
+        <hash>SHA-256:35ee05c9150f9d8cc1985aa305f83f12dcf5a3db30bae1554d499c42283b1b23</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-05</date>
-        <size>2517017</size>
+        <date>2021-09-16</date>
+        <size>2670063</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
