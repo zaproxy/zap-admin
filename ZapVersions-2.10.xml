@@ -219,19 +219,19 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>35</version>
-        <file>ascanrulesBeta-beta-35.zap</file>
+        <version>36</version>
+        <file>ascanrulesBeta-beta-36.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct dependency requirements.&lt;/li&gt;
+&lt;li&gt;Apache Range Header DoS (CVE-2011-3192) scan rule has been retired (Issue 6516)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v35/ascanrulesBeta-beta-35.zap</url>
-        <hash>SHA-256:5041361a34a6b91b6f8415dac153893dbe070e635f916475efa8d923fa503974</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v36/ascanrulesBeta-beta-36.zap</url>
+        <hash>SHA-256:961d6000380565c45bbd109591c00dfc0d2d8ec7bbbef532c2259d3b07618b4c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-07-06</date>
-        <size>1554763</size>
+        <date>2021-09-17</date>
+        <size>2010782</size>
         <not-before-version>2.10.0</not-before-version>
         <dependencies>
             <addons>
