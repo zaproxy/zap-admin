@@ -52,7 +52,7 @@ public class GenerateReleaseNotes {
 
         GHRepository ghRepo = GitHub.connectAnonymously().getRepository(REPO);
         List<GHIssue> issues =
-                ghRepo.getIssues(GHIssueState.ALL, ghRepo.getMilestone(MILESTONE_NUMBER));
+                ghRepo.getIssues(GHIssueState.CLOSED, ghRepo.getMilestone(MILESTONE_NUMBER));
 
         Map<Integer, String> devIssuesMap = new HashMap<Integer, String>();
         Map<Integer, String> bugIssuesMap = new HashMap<Integer, String>();
