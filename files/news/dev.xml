@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>18</id>
+        <id>19</id>
         <default>
-            <item>We want your feedback! Please fill in the all new ZAP Usage Questionnaire</item>
-            <link>https://docs.google.com/forms/d/e/1FAIpQLSciFR1tEDp-CM96LA4urFxZ3UVdy_AQ8FAM-X__afmA0hfUkQ/viewform?usp=sf_link</link>
+            <item>ZAP 2.11.0 is coming soon. Learn more at the OWASP 20th Anniversary event on Sept 24th</item>
+            <link>https://owasp20thanniversaryevent20.sched.com/event/m1tC</link>
         </default>
     </news>
 </ZAP>
