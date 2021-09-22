@@ -1363,19 +1363,23 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>oast-alpha-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>oast-alpha-0.4.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A &amp;quot;Poll Now&amp;quot; button to the OAST tab.&lt;/li&gt;
+&lt;li&gt;Interactsh support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;OAST Register Request Handler.js&lt;/em&gt; script template now also prints the raw request sent to the server.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.3.0/oast-alpha-0.3.0.zap</url>
-        <hash>SHA-256:c091a815f304e4c36ba53c5153413fbd23515da653c03e7fb7001f9a66f1c430</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.4.0/oast-alpha-0.4.0.zap</url>
+        <hash>SHA-256:274a6f4e040907c6d8d8a828fdd00ff99c4de64c16b7e7b1902ad3de2a7a4573</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-26</date>
-        <size>555656</size>
+        <date>2021-09-22</date>
+        <size>589813</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_oast>
     <addon>onlineMenu</addon>
