@@ -158,6 +158,13 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		if (wascId > 0) {
 			pw.println('wasc: ' + wascId);
 		}
+		var tags = alert.getTags();
+		if (tags) {
+			pw.println('alerttags: ');
+			for (tag in tags) {
+				pw.println('   ' + tag + ": " + tags[tag]);
+			}
+		}
 		pw.println('code: ' + codeurl);
 		pw.println('linktext: ' + linktext);
 		pw.println('date: ' + date);
@@ -180,9 +187,12 @@ function printAscanRule(plugin) {
 		alert.setReference(plugin.getReference());
 		alert.setCweId(plugin.getCweId());
 		alert.setWascId(plugin.getWascId());
+		alert.setTags(plugin.getAlertTags());
 		
 		examples = new ArrayList();
 		examples.add(alert);
+	} else {
+		examples.get(0).setTags(plugin.getAlertTags());
 	}
 	
 	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName());
@@ -225,9 +235,12 @@ function printPscanRule(plugin) {
 		alert.setReference(getPrivateMethod(plugin, ['getReferences', 'getReference', 'getRefs', 'getReferenceMessage', 'getReferencesMessage'], 'refs', ''));
 		alert.setCweId(getPrivateMethod(plugin, ['getCweId'], '', 0));
 		alert.setWascId(getPrivateMethod(plugin, ['getWascId'], '', 0));
+		alert.setTags(getPrivateMethod(plugin, ['getAlertTags'], '', null));
 		
 		examples = new ArrayList();
 		examples.add(alert);
+	} else {
+		examples.get(0).setTags(getPrivateMethod(plugin, ['getAlertTags'], '', null));
 	}
 
 	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName());
