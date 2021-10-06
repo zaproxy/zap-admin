@@ -103,13 +103,13 @@ spotless {
 }
 
 val noAddOnsZapVersions = "ZapVersions.xml"
-val nameLatestZapVersions = "ZapVersions-2.10.xml"
+val nameLatestZapVersions = "ZapVersions-2.11.xml"
 val latestZapVersions = file(nameLatestZapVersions)
 
 val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
 val adminRepo = GitHubRepo("zaproxy", "zap-admin", rootDir)
 
-val addOnsZapVersions = files("ZapVersions-dev.xml", "ZapVersions-2.11.xml", latestZapVersions)
+val addOnsZapVersions = files("ZapVersions-dev.xml", latestZapVersions)
 val defaultChecksumAlgorithm = "SHA-256"
 
 tasks {
