@@ -1881,29 +1881,20 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.5.0</version>
-        <file>spiderAjax-release-23.5.0.zap</file>
+        <version>23.6.0</version>
+        <file>spiderAjax-release-23.6.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add Job Name field in AJAX Spider Automation dialogue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Address errors when running the AJAX Spider with Automation Framework.&lt;/li&gt;
-&lt;li&gt;Fixed var support in URLs (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6726"&gt;Issue #6726&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.5.0/spiderAjax-release-23.5.0.zap</url>
-        <hash>SHA-256:35ee05c9150f9d8cc1985aa305f83f12dcf5a3db30bae1554d499c42283b1b23</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.6.0/spiderAjax-release-23.6.0.zap</url>
+        <hash>SHA-256:6bad1e85d988d1661bfe78ffa8fe63a813036b05c3c25ecbdf6172904278f36c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-16</date>
-        <size>2670063</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>2670429</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1971,23 +1962,20 @@
         <name>Tips and Tricks</name>
         <description>Display ZAP Tips and Tricks</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>tips-beta-8.zap</file>
+        <version>9</version>
+        <file>tips-beta-9.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Update docker refs to use zaproxy.org instead of GitHub wiki.&lt;/li&gt;
-&lt;li&gt;Update IRC link to Libera Chat.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/tips-v8/tips-beta-8.zap</url>
-        <hash>SHA-256:775f859699c2f206a08fdd2d5b68710d333ed417d4fda8da13d8a4f9115b4c8a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tips-v9/tips-beta-9.zap</url>
+        <hash>SHA-256:dd65cd0a0f1621bd759bd92fb0a4bdba67cdf498fdaea2c40a333035aec9df97</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/tips-and-tricks/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-05-28</date>
-        <size>557321</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>563979</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_tips>
     <addon>tlsdebug</addon>
     <addon_tlsdebug>
@@ -2116,111 +2104,106 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>webdriverlinux-release-31.zap</file>
+        <version>32</version>
+        <file>webdriverlinux-release-32.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.30.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v31/webdriverlinux-release-31.zap</url>
-        <hash>SHA-256:2f984a9faf138b0a85f0ffa9e3f32399cb34a65d1bfe60cbf78694cbaf84f9e6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v32/webdriverlinux-release-32.zap</url>
+        <hash>SHA-256:b7d938e6110e0572fb833b3ed26896ab05c7459eb524c11cd69dfb49574c37f0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-17</date>
-        <size>11728624</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>11728627</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
     <addon_webdrivermacos>
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>webdrivermacos-release-31.zap</file>
+        <version>32</version>
+        <file>webdrivermacos-release-32.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.30.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v31/webdrivermacos-release-31.zap</url>
-        <hash>SHA-256:9d45f8702d7e0b4d466260de8c2064ddc06b8e70698424ab21dc36482b0cbfc6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v32/webdrivermacos-release-32.zap</url>
+        <hash>SHA-256:6c3e3f6aabd4d5fc6c9f1836c291ab6437fb291713eb3b8369b8eeb1040f78e0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-17</date>
-        <size>10191109</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>10191112</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
     <addon_webdriverwindows>
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>webdriverwindows-release-31.zap</file>
+        <version>32</version>
+        <file>webdriverwindows-release-32.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.30.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v31/webdriverwindows-release-31.zap</url>
-        <hash>SHA-256:20d8b546a57efca57e5bcd7afd643aadc8d0e4391f045eaaf611d5874aeaa4da</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v32/webdriverwindows-release-32.zap</url>
+        <hash>SHA-256:d755db36fd4a7171c522c811493608e749c409fc56ecbf880f61a1d5a76a8cd8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-17</date>
-        <size>8992811</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>8992813</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
     <addon_websocket>
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>23</version>
-        <file>websocket-release-23.zap</file>
+        <version>24</version>
+        <file>websocket-release-24.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix exception when handling breakpoints with ZAP 2.10.0.&lt;/li&gt;
-&lt;li&gt;Terminology&lt;/li&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Maintenance changes (some changes impact the visibility of variables and add getters/setters, which may impact third party add-ons or scripts).&lt;/li&gt;
+&lt;li&gt;Update links to repository.&lt;/li&gt;
+&lt;li&gt;Support passive scan alert examples so they can be added to the website&lt;/li&gt;
+&lt;li&gt;Missing default scripts will always be added and enabled on start up.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v23/websocket-release-23.zap</url>
-        <hash>SHA-256:062ba3c5e358ee304a20a545d02005357768112a1a8f8b20c3a6c8df2faa64cb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v24/websocket-release-24.zap</url>
+        <hash>SHA-256:f4ce77310d8c566901f57a8fdb65382c5faab5ca781adfda5179b491cb17c562</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/websockets/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-18</date>
-        <size>1031481</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>1394965</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_websocket>
     <addon>zest</addon>
     <addon_zest>
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>zest-beta-34.zap</file>
+        <version>35</version>
+        <file>zest-beta-35.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Depend on Script Console add-on, it's required to work with Zest scripts (Issue 2656).&lt;/li&gt;
-&lt;li&gt;Clear Zest Results Panel when new script is added.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Track modifications done to the scripts to refresh the cached ones (Issue 6558).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v34/zest-beta-34.zap</url>
-        <hash>SHA-256:1c98491c9dc5b0b2b7269d05278a43efe32acc3595a028f6bf009956c21c2163</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v35/zest-beta-35.zap</url>
+        <hash>SHA-256:bbada2c5f2e07f9a8fc933eddb4d3f8bc33293c2b55c8489e3d81c42118f6667</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-04-22</date>
-        <size>13574340</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>13570172</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
