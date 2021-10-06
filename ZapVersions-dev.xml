@@ -1651,25 +1651,32 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>reports-beta-0.6.0.zap</file>
-        <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <version>0.7.0</version>
+        <file>reports-release-0.7.0.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address errors when running the OutputSummary job with Automation Framework.&lt;/li&gt;
-&lt;li&gt;Alert counts to ignore false positives.&lt;/li&gt;
+&lt;li&gt;Support for custom messages in outputSummary job.&lt;/li&gt;
+&lt;li&gt;Alert tags to the modern and traditional-plus reports.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Promoted to release.&lt;/li&gt;
+&lt;li&gt;Minimum ZAP version 2.11.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ignore false positives when listing messages in the outputSummary job.&lt;/li&gt;
+&lt;li&gt;Bug in report job add-on which prevented the right theme from being used&lt;/li&gt;
+&lt;li&gt;Added missing Modern template i18n messages&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.6.0/reports-beta-0.6.0.zap</url>
-        <hash>SHA-256:f57fe07c91172bf2c7e5d1fd854e413b2393bbf951ead6e62d17009b27a5614a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.7.0/reports-release-0.7.0.zap</url>
+        <hash>SHA-256:f3fb98218a31022fb0412055b67a2342cca90771943134f2517e5c70345c70d0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-16</date>
-        <size>14089367</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-06</date>
+        <size>14106193</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
     <addon_requester>
