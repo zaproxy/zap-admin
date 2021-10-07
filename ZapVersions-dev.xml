@@ -1053,39 +1053,52 @@
         <name>Highlighter</name>
         <description>Allows you to highlight strings in the request and response tabs.</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>highlighter-alpha-7.zap</file>
+        <version>8</version>
+        <file>highlighter-alpha-8.zap</file>
         <status>alpha</status>
-        <changes>Fix help related exception in the Highlighter panel.&lt;br&gt;
-    Correct resizing of Highlighter panel.&lt;br&gt;
-    Update minimum ZAP version to 2.5.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/highlighter-alpha-7.zap</url>
-        <hash>SHA1:6b3cbf8939c2dfc5eb0c6e74e407d3674048fe93</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/highlighter-v8/highlighter-alpha-8.zap</url>
+        <hash>SHA-256:4c4852bb2f42eb20dbe19a091e9025667947c73967a65770658333bedd01fccf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/highlighter/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-05-30</date>
-        <size>9210</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>115527</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_highlighter>
     <addon>httpsInfo</addon>
     <addon_httpsInfo>
         <name>HttpsInfo</name>
         <description>Displays HTTPS configuration information.</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>httpsInfo-alpha-12.zap</file>
+        <version>13</version>
+        <file>httpsInfo-alpha-13.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;New tabbed UI.&lt;/li&gt;
-&lt;li&gt;Update to DeepViolet 5.1.16.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Show usage info in the HTTPS Info panel (Issue 6113).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/httpsInfo-v12/httpsInfo-alpha-12.zap</url>
-        <hash>SHA1:c9c44e815522b32f3870bae898ed4e76e9011207</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/https-info/</info>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/httpsInfo-v13/httpsInfo-alpha-13.zap</url>
+        <hash>SHA-256:817e57f2ac262985685d4095003dd287e1e5fcba7ff13e622a9aeefc9592435b</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/https-info-add-on/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-04-26</date>
-        <size>7690429</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>7701037</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_httpsInfo>
     <addon>hud</addon>
     <addon_hud>
@@ -1160,18 +1173,30 @@
     <addon_importLogFiles>
         <name>Log File Importer</name>
         <description>Allows you to import log files from ModSecurity and files previously exported from ZAP</description>
-        <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>importLogFiles-alpha-4.zap</file>
+        <author>Joseph Kirwin, ZAP Dev Team</author>
+        <version>5</version>
+        <file>importLogFiles-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Use API actions when importing files.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/importLogFiles-alpha-4.zap</url>
-        <hash>SHA1:81d9d50c879301d8ce40b8b39d5e1953f95ba9ab</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Internationalise some strings.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Add import menu to (new) top level Import menu instead of Analyse menu.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/importLogFiles-v5/importLogFiles-alpha-5.zap</url>
+        <hash>SHA-256:0061e9c77959a6e828b2b607be8aac9c91f0e7f23fd3aa69fee1bfc4ca34b4d5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/log-file-importer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>152736</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>157626</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_importLogFiles>
     <addon>importurls</addon>
     <addon_importurls>
@@ -1220,31 +1245,23 @@
         <name>Ruby Scripting</name>
         <description>Allows Ruby to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>jruby-beta-7.zap</file>
+        <version>8</version>
+        <file>jruby-beta-8.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update the help to mention the bundled JRuby version.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix link in a script template.&lt;/li&gt;
-&lt;li&gt;Fix exception while uninstalling the add-on with newer Java versions.&lt;/li&gt;
-&lt;li&gt;Fix passive template.&lt;/li&gt;
+&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
+&lt;li&gt;Rename reliability to confidence in active/passive templates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/jruby-v7/jruby-beta-7.zap</url>
-        <hash>SHA-256:13d7259fbe2eea83af1c03eca17b95031ace925189a554bd1d36fee927267d93</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jruby-v8/jruby-beta-8.zap</url>
+        <hash>SHA-256:f5bb450a165f6c407b8d24f7b2776bdc7a2edb0b4b42aea385f8a6ad1ae605ca</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ruby-scripting/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>21955502</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>21968128</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_jruby>
     <addon>jsonview</addon>
     <addon_jsonview>
