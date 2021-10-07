@@ -83,24 +83,6 @@
         <size>523886</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_alertFilters>
-    <addon>alertReport</addon>
-    <addon_alertReport>
-        <name>Report alert generator</name>
-        <description>Allows you to generate reports for alerts you specify in pdf or odt format</description>
-        <author>Talsoft SRL</author>
-        <version>14</version>
-        <file>alertReport-beta-14.zap</file>
-        <status>beta</status>
-        <changes>Fix an exception while generating the report (Issue 1612).&lt;br&gt;
-	Include Alert's evidence in report of ODT format.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/alertReport-beta-14.zap</url>
-        <hash>SHA1:4e9456325fd921f7b403fa780f703c91cdf61bdd</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/report-alert-generator/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>9722880</size>
-        <not-before-version>2.4.0</not-before-version>
-    </addon_alertReport>
     <addon>allinonenotes</addon>
     <addon_allinonenotes>
         <name>All In One Notes</name>
@@ -490,34 +472,6 @@
         <size>45780</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_custompayloads>
-    <addon>customreport</addon>
-    <addon_customreport>
-        <name>CustomReport</name>
-        <description>New HTML report module allows users to customize report content.</description>
-        <author>Chienli Ma</author>
-        <version>6</version>
-        <file>customreport-alpha-6.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Add Evidence to report (Issue 6151).&lt;/li&gt;
-&lt;li&gt;Make Parameter and Attack fields optional.&lt;/li&gt;
-&lt;li&gt;Fix bug to allow writing reports with file path containing '#' (Issue 6267).&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/customreport-v6/customreport-alpha-6.zap</url>
-        <hash>SHA-256:bcda4c64076e554be555b2154e5b446249c213d40bdc81d6d90593889c464e69</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/custom-report/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>262637</size>
-        <not-before-version>2.10.0</not-before-version>
-    </addon_customreport>
     <addon>diff</addon>
     <addon_diff>
         <name>Diff</name>
@@ -662,34 +616,6 @@
         <size>388487</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_encoder>
-    <addon>exportreport</addon>
-    <addon_exportreport>
-        <name>Export Report</name>
-        <description>Report Export module that allows users to customize content and export in a desired format.</description>
-        <author>Goran Sarenkapa - JordanGS</author>
-        <version>7</version>
-        <file>exportreport-alpha-7.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Completed PDF Output support (Issue 5535)&lt;/li&gt;
-&lt;li&gt;Added option to specify active scan id in API.&lt;/li&gt;
-&lt;li&gt;Added option to specify inclusion of passive alerts in API and command line.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exportreport-v7/exportreport-alpha-7.zap</url>
-        <hash>SHA-256:2872f45ec25c0d7a30659a8a23ca9155c931a0aabb52bf386f20aa7819631d40</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/export-report/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>12510634</size>
-        <not-before-version>2.10.0</not-before-version>
-    </addon_exportreport>
     <addon>fileupload</addon>
     <addon_fileupload>
         <name>FileUpload</name>
