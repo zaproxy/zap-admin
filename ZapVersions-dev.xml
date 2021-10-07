@@ -1324,19 +1324,21 @@
         <name>Kotlin Support</name>
         <description>Allows Kotlin to be used for ZAP scripting</description>
         <author>StackHawk Engineering</author>
-        <version>1.0.0</version>
-        <file>kotlin-alpha-1.0.0.zap</file>
+        <version>1.1.0</version>
+        <file>kotlin-alpha-1.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Kotlin scripting for the JVM&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use appropriate syntax style for highlighting of code.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/kotlin-v1.0.0/kotlin-alpha-1.0.0.zap</url>
-        <hash>SHA-256:0e86e69a41110b2f6bd901fce73cd1e0b8be81b2848f51f2e1123b73fc931f65</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/kotlin-v1.1.0/kotlin-alpha-1.1.0.zap</url>
+        <hash>SHA-256:85a47ea7199b77cfb09081302c277de2ba5e2102ef79907573ebcfa6425302e9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/kotlin-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-09-14</date>
-        <size>48700873</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>48865539</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_kotlin>
     <addon>neonmarker</addon>
     <addon_neonmarker>
@@ -1628,19 +1630,29 @@
         <name>Regular Expression Tester</name>
         <description>Allows to test Regular Expressions</description>
         <author>ZAP Dev Team</author>
-        <version>1</version>
-        <file>regextester-alpha-1.zap</file>
+        <version>2</version>
+        <file>regextester-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Initial Release.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Close dialogues when the add-on is uninstalled.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/regextester-v1/regextester-alpha-1.zap</url>
-        <hash>SHA-256:433618046ca07eb3d45ee87f065790c1617921f5997943bafa4c8939a85e784f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/regextester-v2/regextester-alpha-2.zap</url>
+        <hash>SHA-256:b4706709c16a45e8bedc0bd6f28dd09532d5dbf3f1fe2c2853e20dbf6160a584</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/regular-expression-tester/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-06-20</date>
-        <size>21420</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>159441</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_regextester>
     <addon>replacer</addon>
     <addon_replacer>
@@ -1701,31 +1713,23 @@
         <name>Requester</name>
         <description>Request numbered panel.</description>
         <author>Surikato</author>
-        <version>4</version>
-        <file>requester-alpha-4.zap</file>
+        <version>5</version>
+        <file>requester-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add help.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Allow to disable cookies (Issue 4934).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add the requests to the Sites tree to be able to active scan them (Issue 5778).&lt;/li&gt;
-&lt;li&gt;Enforce the mode when sending the request and following redirections.&lt;/li&gt;
+&lt;li&gt;Warn when unable to save (malformed) HTTP message (Issue 4235).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Add button to automatically update content length (Issue 6254).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v4/requester-alpha-4.zap</url>
-        <hash>SHA-256:5d6ef302b4b80cb9142e124d42bb1c890c3fc7801e89f7a3a24841311950d930</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v5/requester-alpha-5.zap</url>
+        <hash>SHA-256:e8828eb78ab9543e6ae6a783afff6b6e7cf4a3823a7978f1d2b9bc0286df1b68</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/requester/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-07-15</date>
-        <size>65198</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>162574</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_requester>
     <addon>retest</addon>
     <addon_retest>
@@ -1818,43 +1822,52 @@
         <name>Revisit</name>
         <description>Revisit a site at any time in the past using the session history</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>revisit-alpha-3.zap</file>
+        <version>4</version>
+        <file>revisit-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
-	Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/revisit-alpha-3.zap</url>
-        <hash>SHA1:23655efe51113e48b8e2ff8bbe7e41a33235ff55</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/revisit-v4/revisit-alpha-4.zap</url>
+        <hash>SHA-256:445bb2a98e06d4ecc945c35c2777dae1b1e5b6ea20de78b920c8004bc3615195</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/revisit/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>289297</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>299864</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_revisit>
     <addon>saml</addon>
     <addon_saml>
-        <name>SAML Extension</name>
+        <name>SAML Support</name>
         <description>Detect, Show, Edit, Fuzz SAML requests</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>saml-alpha-8.zap</file>
+        <version>9</version>
+        <file>saml-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.5.0.&lt;/li&gt;
-&lt;li&gt;Compressed SAMLMessage is not required&lt;/li&gt;
-&lt;li&gt;Possibility to disable compression when sending&lt;/li&gt;
-&lt;li&gt;Added SAML Passive Scanner&lt;/li&gt;
-&lt;li&gt;Dynamically unload the add-on.&lt;/li&gt;
-&lt;li&gt;Fix exception with Java 9+ (Issue 5032).&lt;/li&gt;
-&lt;li&gt;Replaced joda.time.datetime with java.time.localtime (Java8).&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/saml-v8/saml-alpha-8.zap</url>
-        <hash>SHA-256:5ac0f8d19ab7b4b7399496a3f7250177e2183c1fc3f622655ea9191c3f697dc7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/saml-v9/saml-alpha-9.zap</url>
+        <hash>SHA-256:37c167b76115a7a0710b1e8940591797da170961ca69f517c66a25b16712cb1a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/saml-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-08-30</date>
-        <size>1720102</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>1809830</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_saml>
     <addon>saverawmessage</addon>
     <addon_saverawmessage>
@@ -1955,17 +1968,27 @@
         <name>Sequence</name>
         <description>Gives the possibility of defining a sequence of requests to be scanned.</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>sequence-alpha-5.zap</file>
+        <version>6</version>
+        <file>sequence-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Updated for 2.7.0.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/sequence-alpha-5.zap</url>
-        <hash>SHA1:24c62a7d59bec5035acc649bb0970de09fa05a4b</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Issue 2000 - Updated strings shown in active scan dialog with title caps.&lt;/li&gt;
+&lt;li&gt;Enable help button in Sequence tab of Active Scan dialog.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sequence-v6/sequence-alpha-6.zap</url>
+        <hash>SHA-256:2849204eab9ea1da50404ab9604e5ec69440c490453a24392c9a40bf95cdb164</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>1511222</size>
-        <not-before-version>2.7.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>1556476</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2079,33 +2102,57 @@
         <name>Server-Sent Events</name>
         <description>Allows you to view Server-Sent Events (SSE) communication.</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>sse-alpha-9.zap</file>
+        <version>10</version>
+        <file>sse-alpha-10.zap</file>
         <status>alpha</status>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/sse-alpha-9.zap</url>
-        <hash>SHA1:d5cbc991befbf002b171b23419d26623ab93ef73</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Adjust log levels to be less verbose.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v10/sse-alpha-10.zap</url>
+        <hash>SHA-256:1adc14442cedd3336319e94c93659118998fee42ae340b4ba757f3e7af475853</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/server-sent-events/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>333669</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>339239</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_sse>
     <addon>svndigger</addon>
     <addon_svndigger>
-        <name>SVN Digger files</name>
+        <name>SVN Digger Files</name>
         <description>SVN Digger files which can be used with ZAP forced browsing</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>svndigger-beta-3.zap</file>
-        <status>beta</status>
-        <changes>Updated for ZAP 2.4</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/svndigger-beta-3.zap</url>
-        <hash>SHA1:8c7187180ed48466d6829e39469cc3d0915b1cbf</hash>
+        <version>4</version>
+        <file>svndigger-release-4.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Promote to release status.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/svndigger-v4/svndigger-release-4.zap</url>
+        <hash>SHA-256:5556efdf3fdb84ebd6cf3e76ca31e3fb6fb57c002cf14b2cf2f05f67bf2b622a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/svn-digger-files/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>615459</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>713963</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_svndigger>
     <addon>tips</addon>
     <addon_tips>
@@ -2182,17 +2229,26 @@
         <name>TreeTools</name>
         <description>Tools to add functionality to the tree view.</description>
         <author>Carl Sampson</author>
-        <version>7</version>
-        <file>treetools-beta-7.zap</file>
+        <version>8</version>
+        <file>treetools-beta-8.zap</file>
         <status>beta</status>
-        <changes>Code changes for Java 9 (Issue 2602)</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/treetools-beta-7.zap</url>
-        <hash>SHA1:38fbc4d4e22c0da73a4048522d250fa4ac89bdab</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/treetools-v8/treetools-beta-8.zap</url>
+        <hash>SHA-256:b7f61f8939937ebc120bce8deb72713d7676087056e88801df2573112e7642e4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/treetools/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>18821</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>128931</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_treetools>
     <addon>viewstate</addon>
     <addon_viewstate>
