@@ -1327,31 +1327,27 @@
         <name>Python Scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>jython-beta-11.zap</file>
+        <version>12</version>
+        <file>jython-beta-12.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;encode-decode default and rot13 templates.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Update Jython from 2.7.1 to 2.7.2.&lt;/li&gt;
-&lt;li&gt;Update the help to mention the bundled Jython version.&lt;/li&gt;
-&lt;li&gt;Jython templates now includes an extender script (getInputsFromuser.py) for setting global script variables based on user input.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix link in a script template.&lt;/li&gt;
+&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
+&lt;li&gt;Rename reliability to confidence in active/passive templates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v11/jython-beta-11.zap</url>
-        <hash>SHA-256:5e6103473dbcc63ef937a8dd07313daa2210862c482d6ed31c7d0e285d792344</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v12/jython-beta-12.zap</url>
+        <hash>SHA-256:4519b862edf8f006c429c86b0152ade561b660ae6f74cfce684b272f4fe28ef1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/python-scripting/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>43263624</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>43312397</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_jython>
     <addon>kotlin</addon>
     <addon_kotlin>
@@ -1474,35 +1470,53 @@
         <name>Plug-n-Hack Configuration</name>
         <description>Supports the Mozilla Plug-n-Hack standard: https://developer.mozilla.org/en-US/docs/Plug-n-Hack.</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>plugnhack-beta-11.zap</file>
+        <version>12</version>
+        <file>plugnhack-beta-12.zap</file>
         <status>beta</status>
-        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/plugnhack-beta-11.zap</url>
-        <hash>SHA1:e3243495919a8d1a7f4bd69e60b7147690bb9836</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Issue 2000 - Updated strings shown in context menu with title caps.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/plugnhack-v12/plugnhack-beta-12.zap</url>
+        <hash>SHA-256:9a1cc0e664629e9f6aabdc1a2c13b800112bdc8b35b0cc4b375a011eb2430b49</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/plug-n-hack/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>722977</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>729770</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_plugnhack>
     <addon>portscan</addon>
     <addon_portscan>
         <name>Port Scanner</name>
         <description>Allows to port scan a target server</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>portscan-beta-8.zap</file>
+        <version>9</version>
+        <file>portscan-beta-9.zap</file>
         <status>beta</status>
-        <changes>Code changes for Java 9 (Issue 2602).&lt;br&gt;
-	Issue 3513: Options panel UI fixes.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/portscan-beta-8.zap</url>
-        <hash>SHA1:85b7377c65778d22a4c78fe1ff79b82245abc4c9</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update default values in the options to match the ones in the default configuration file.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/portscan-v9/portscan-beta-9.zap</url>
+        <hash>SHA-256:be85aac379e3415ccd771b983ac52d208e5ddeb5b5e591fab047e97a895b2dfb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/port-scan/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>632994</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>714392</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_portscan>
     <addon>pscanrules</addon>
     <addon_pscanrules>
@@ -2205,50 +2219,44 @@
         <name>TLS Debug</name>
         <description>Provides a tab which allows to quickly debug a TLS/SSL connection</description>
         <author>P.M.J. Roth</author>
-        <version>4</version>
-        <file>tlsdebug-alpha-4.zap</file>
+        <version>5</version>
+        <file>tlsdebug-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Use appropriate colour in dark mode (Issue 5542).&lt;/li&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/tlsdebug-v4/tlsdebug-alpha-4.zap</url>
-        <hash>SHA-256:3e470b0db652f121212fc78e0406d07e3227eece599198c420fa75d90ec31e79</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tlsdebug-v5/tlsdebug-alpha-5.zap</url>
+        <hash>SHA-256:320a15c8da70995324ae973d2d4bb66a10546e580f4ef8f692e78c71eb0c0ca7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/tls-debug/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>244464</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>237936</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_tlsdebug>
     <addon>tokengen</addon>
     <addon_tokengen>
         <name>Token Generation and Analysis</name>
         <description>Allows you to generate and analyze pseudo random tokens, such as those used for session handling or CSRF protection</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>tokengen-beta-14.zap</file>
+        <version>15</version>
+        <file>tokengen-beta-15.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Improve permissions and space handling when saving.&lt;/li&gt;
+&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/tokengen-v14/tokengen-beta-14.zap</url>
-        <hash>SHA-256:0eef2ed8a1fc410e43ba5b74f8d854166e5bc4d6be0b86c5ba4539d5a6618451</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tokengen-v15/tokengen-beta-15.zap</url>
+        <hash>SHA-256:daef1d13d44a76b8735a30ed9e1e50fa87a85d02728bd7ae575197d173f942f9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/token-generator/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>479116</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>525206</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_tokengen>
     <addon>treetools</addon>
     <addon_treetools>
