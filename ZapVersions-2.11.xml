@@ -516,26 +516,20 @@
         <name>Custom Payloads</name>
         <description>Ability to add, edit or remove payloads that are used i.e. by active scanners</description>
         <author>ZAP Dev Team</author>
-        <version>0.10.0</version>
-        <file>custompayloads-alpha-0.10.0.zap</file>
+        <version>0.11.0</version>
+        <file>custompayloads-alpha-0.11.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Add functionality to add multiple payloads from a file.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.10.0/custompayloads-alpha-0.10.0.zap</url>
-        <hash>SHA-256:5aa57020e937e7366e1ecc380d23804428714d020cf7aca81debe53a4cb6f6b3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.11.0/custompayloads-alpha-0.11.0.zap</url>
+        <hash>SHA-256:84d01dbfe0739ee70acd8286916e0106595ceb550e7793925ce48a2db6477383</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/custom-payloads/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-06-17</date>
-        <size>45780</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>234832</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_custompayloads>
     <addon>diff</addon>
     <addon_diff>
@@ -582,37 +576,54 @@
     <addon>directorylistv2_3</addon>
     <addon_directorylistv2_3>
         <name>Directory List v2.3</name>
-        <description>Lists of directory names to be used with "Forced Browse" add-on.</description>
+        <description>Lists of directory names to be used with Forced Browse or Fuzzer add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>directorylistv2_3-release-3.zap</file>
+        <version>4</version>
+        <file>directorylistv2_3-release-4.zap</file>
         <status>release</status>
-        <changes>Removed repeated files.&lt;br&gt;
-	Added strings for version control directories of Git, Mercurial, SVN, Bazaar.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/directorylistv2_3-release-3.zap</url>
-        <hash>SHA1:e3b9cb6a9bae87a0dbcf73ff52f7b4406486d5c0</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/directorylistv2_3-v4/directorylistv2_3-release-4.zap</url>
+        <hash>SHA-256:3a8b04b9363b57acd9cf8cd67abce4c630f986e2b492a1ebd01eaa9587a0a199</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/directory-list-v2.3/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>8608734</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>8722229</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_directorylistv2_3>
     <addon>directorylistv2_3_lc</addon>
     <addon_directorylistv2_3_lc>
         <name>Directory List v2.3 LC</name>
-        <description>Lists of lower case directory names to be used with "Forced Browse" add-on.</description>
+        <description>Lists of lower case directory names to be used with Forced Browse or Fuzzer add-on.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>directorylistv2_3_lc-release-3.zap</file>
+        <version>4</version>
+        <file>directorylistv2_3_lc-release-4.zap</file>
         <status>release</status>
-        <changes>Added strings for version control directories of Git, Mercurial, SVN, Bazaar.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/directorylistv2_3_lc-release-3.zap</url>
-        <hash>SHA1:03a5ec11530203be6625633821ab3c05754b2daa</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/directorylistv2_3_lc-v4/directorylistv2_3_lc-release-4.zap</url>
+        <hash>SHA-256:2603580ba53673c31800ef7373e7cc09de759369b6f8fb43cc9e5024ad5d9af4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/directory-list-v2.3-lc/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>7454767</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>7569974</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_directorylistv2_3_lc>
     <addon>domxss</addon>
     <addon_domxss>
@@ -751,20 +762,24 @@
         <name>FuzzDB Files</name>
         <description>FuzzDB files which can be used with the ZAP fuzzer</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>fuzzdb-release-7.zap</file>
+        <version>8</version>
+        <file>fuzzdb-release-8.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Removed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Removed 'attack' sub-folder and content, all of which is being migrated to the 'FuzzDB Offensive' add-on due to AV triggers (Issue 5972).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzdb-v7/fuzzdb-release-7.zap</url>
-        <hash>SHA-256:7396a6f5db1e535d1fadf6bc2e88bf29240ceeacad9c7324c561ab0a7dcd9242</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzdb-v8/fuzzdb-release-8.zap</url>
+        <hash>SHA-256:0b65cee3aa65e5dc11cbb83ed5d13ba1dcb330278fb2f8cc7d6957680b1e17c6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzdb-files/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-06-30</date>
-        <size>5923666</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>6167276</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_fuzzdb>
     <addon>fuzzdboffensive</addon>
     <addon_fuzzdboffensive>
@@ -856,33 +871,25 @@
         <name>Groovy Support</name>
         <description>Adds Groovy support to ZAP</description>
         <author>ZAP Dev Team</author>
-        <version>3.0.0</version>
-        <file>groovy-beta-3.0.0.zap</file>
+        <version>3.1.0</version>
+        <file>groovy-beta-3.1.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;encode-decode default template.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.10.0.&lt;/li&gt;
-&lt;li&gt;Promote to beta status.&lt;/li&gt;
-&lt;li&gt;Change add-on name/description and update help.&lt;/li&gt;
-&lt;li&gt;Start using Semantic Versioning.&lt;/li&gt;
-&lt;li&gt;Update Groovy from 2.4.14 to 3.0.2.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix links in script templates.&lt;/li&gt;
-&lt;li&gt;Fix missing parameter functions in template&lt;/li&gt;
+&lt;li&gt;Update links to zaproxy and zap-extensions repos.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/groovy-v3.0.0/groovy-beta-3.0.0.zap</url>
-        <hash>SHA-256:0499c6e5d43b674b9c29a770ee8dcccadf72c188827593fbe2d9137ae2f4b8e9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/groovy-v3.1.0/groovy-beta-3.1.0.zap</url>
+        <hash>SHA-256:ee208309c6b9619f6527a05f48949e38e1476f2b3fa7c6e32fbd1111f4bdac58</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/groovy-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-12-15</date>
-        <size>18987590</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>19006812</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_groovy>
     <addon>help</addon>
     <addon_help>
@@ -1241,20 +1248,30 @@
     </addon_jruby>
     <addon>jsonview</addon>
     <addon_jsonview>
-        <name>Json view</name>
+        <name>JSON View</name>
         <description>Adds a view that shows JSON messages nicely formatted</description>
         <author>Juha Kivekäs</author>
-        <version>1</version>
-        <file>jsonview-alpha-1.zap</file>
+        <version>2</version>
+        <file>jsonview-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>Initial release</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jsonview-alpha-1.zap</url>
-        <hash>SHA1:be9a95e39722ff42af1160a195a56c9af9e285c1</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add the main context menu to the JSON view.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Capitalize the view dropdown menu entry (related to Issue 2000).&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jsonview-v2/jsonview-alpha-2.zap</url>
+        <hash>SHA-256:49fd8995eac7724e5a60f7b6d7f10cfb617f3f083b6f23406075631ba23c7ebc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/json-view/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2018-02-08</date>
-        <size>10796</size>
-        <not-before-version>2.6.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>119886</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_jsonview>
     <addon>jwt</addon>
     <addon_jwt>
@@ -2247,55 +2264,43 @@
         <name>ViewState</name>
         <description>ASP/JSF ViewState Decoder and Editor</description>
         <author>Calum Hutton</author>
-        <version>2</version>
-        <file>viewstate-alpha-2.zap</file>
+        <version>3</version>
+        <file>viewstate-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add help.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix memory leak.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/viewstate-v2/viewstate-alpha-2.zap</url>
-        <hash>SHA-256:0bdc5322cd46bdd4c759b4dbd97981c5fff752e078811533f5cda08a5776f111</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/viewstate-v3/viewstate-alpha-3.zap</url>
+        <hash>SHA-256:715caefd591415e79b32195361fea82aa8c6357b24e69530c22fde0a1b6dad17</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/viewstate/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-07-10</date>
-        <size>49072</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>148716</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_viewstate>
     <addon>wappalyzer</addon>
     <addon_wappalyzer>
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.3.0</version>
-        <file>wappalyzer-release-21.3.0.zap</file>
+        <version>21.4.0</version>
+        <file>wappalyzer-release-21.4.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Reduce logging of &amp;quot;Unexpected header type&amp;quot; messages from error to debug (related to Issue 6607).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Support for cookie patterns.&lt;/li&gt;
+&lt;li&gt;Updated to handle upstream Wappalyzer data file changes (Issue 6784).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.3.0/wappalyzer-release-21.3.0.zap</url>
-        <hash>SHA-256:3183da771cc2875b62730c273bce52e5c7cef73368fe1f401370ac2cace1181d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.4.0/wappalyzer-release-21.4.0.zap</url>
+        <hash>SHA-256:f4fd7709b812402e2d0474b495509eb3f432c8397fd6d7916b092619a5187afa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-08-25</date>
-        <size>12587979</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>13417339</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
     <addon_webdriverlinux>
