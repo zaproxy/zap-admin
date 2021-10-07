@@ -171,47 +171,31 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>ascanrulesAlpha-alpha-31.zap</file>
+        <version>32</version>
+        <file>ascanrulesAlpha-alpha-32.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update links to zaproxy and zap-extensions repos.&lt;/li&gt;
-&lt;li&gt;Target 2.10 core and use new logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;The LDAP Injection scan rule was modified to use:
-&lt;ul&gt;
-&lt;li&gt;The Dice algorithm for calculating the match percentage, thus improving its performance.&lt;/li&gt;
-&lt;li&gt;The URI in encoded form in alerts' other info field.&lt;/li&gt;
+&lt;li&gt;Spring Boot Actuator Scan Rule.&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;CORS active scan rule.&lt;/li&gt;
-&lt;li&gt;Forbidden (403) Bypass scan rule.&lt;/li&gt;
-&lt;li&gt;Web Cache Deception scan rule.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Unused file, it was used by promoted scan rule.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct Context check in NoSQL Injection - MongoDB scan rule.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v31/ascanrulesAlpha-alpha-31.zap</url>
-        <hash>SHA-256:9681556641c565bf05ae3342d704044a70b3a1af4f6a5fcbcdc271c5296da284</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v32/ascanrulesAlpha-alpha-32.zap</url>
+        <hash>SHA-256:74f9bb0c0bb62295c9f5e04cb9826e9c3ae8e8dac74c78d0340c19e301e56e40</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-06-17</date>
-        <size>1217478</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>433208</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.3.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -221,25 +205,36 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>ascanrulesBeta-beta-36.zap</file>
+        <version>37</version>
+        <file>ascanrulesBeta-beta-37.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Removed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Apache Range Header DoS (CVE-2011-3192) scan rule has been retired (Issue 6516)&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Now targeting ZAP 2.11.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use OAST Callbacks for the XXE Scan Rule.&lt;/li&gt;
+&lt;li&gt;Backup File Disclosure Scan Rule: When checkout a parent folder for 404 behavior assume a minimum folder name length of four to further eliminate chance of collision on short folder names (Issue 5330).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v36/ascanrulesBeta-beta-36.zap</url>
-        <hash>SHA-256:961d6000380565c45bbd109591c00dfc0d2d8ec7bbbef532c2259d3b07618b4c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v37/ascanrulesBeta-beta-37.zap</url>
+        <hash>SHA-256:8d8faa4be190a97f7c6124d114f667d0cb7ed19bbe1b9952ef820c5c533ef36e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-09-17</date>
-        <size>2010782</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>2019204</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.4.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>oast</id>
+                    <version>&gt;= 0.3.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1136,27 +1131,35 @@
         <name>Image Location and Privacy Scanner</name>
         <description>Image Location and Privacy Passive Scanner</description>
         <author>Jay Ball (veggiespam) and the ZAP Dev Team</author>
-        <version>2</version>
-        <file>imagelocationscanner-beta-2.zap</file>
+        <version>3</version>
+        <file>imagelocationscanner-beta-3.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Updated to Image Location and Privacy Scanner version 1.1; merged from &lt;a href="https://github.com/veggiespam/ImageLocationScanner"&gt;source&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;Example alert to support documentation efforts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;li&gt;Update link to repository.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Correct repository URL in about help page.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v2/imagelocationscanner-beta-2.zap</url>
-        <hash>SHA-256:80c3f7c71854fc573f376a3bb2b38f8a4ce2ee57ae1adc7bac0ebf0e75645adc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v3/imagelocationscanner-beta-3.zap</url>
+        <hash>SHA-256:0bcf856acad95336f03a72fded0775470fcfdc5d82af2a2ddfb3c6fad03b04e1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/image-location-and-privacy-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-07-03</date>
-        <size>891854</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>1135956</size>
+        <not-before-version>2.11.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_imagelocationscanner>
     <addon>importLogFiles</addon>
     <addon_importLogFiles>
@@ -1519,25 +1522,30 @@
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>33</version>
-        <file>pscanrulesAlpha-alpha-33.zap</file>
+        <version>34</version>
+        <file>pscanrulesAlpha-alpha-34.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct dependency declaration on Common Library add-on (Issue 6674).&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ignore CSS, JavaScript, images, or font files when scanning for source code disclosures (Issues: 6595, 6795, &amp;amp; 6820).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v33/pscanrulesAlpha-alpha-33.zap</url>
-        <hash>SHA-256:0d253632a551b7aafdc647c1ecf530bb803f0e4a6a31c0eb7a80a738ec8921d1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v34/pscanrulesAlpha-alpha-34.zap</url>
+        <hash>SHA-256:6a75c9640eaf07790aee901772ef3ea8aebbcf7969a262d1bc232d42c173358f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-07-07</date>
-        <size>1039470</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>649006</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.4.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1547,25 +1555,31 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>pscanrulesBeta-beta-26.zap</file>
+        <version>27</version>
+        <file>pscanrulesBeta-beta-27.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;PII Disclosure scan rule now ignores images (Issue 6697).&lt;/li&gt;
-&lt;li&gt;PII Disclosure scan rule will now ignore seeming decimal numbers unless at Low threshold (Issue 6639).&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reverse Tabnabbing Scan Rule will now alert when the 'opener' keyword is present.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v26/pscanrulesBeta-beta-26.zap</url>
-        <hash>SHA-256:b3a856ed1170508c5033ffc3a38f5b84822b601ab4811fafeb3c9e806016d323</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v27/pscanrulesBeta-beta-27.zap</url>
+        <hash>SHA-256:596db8006d3d639720391b3deb53f0d80e4d3b6a7d213e999ede1e292466dbaa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-07-29</date>
-        <size>733722</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>1012420</size>
+        <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
+                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2037,20 +2051,40 @@
         <name>Advanced SQLInjection Scanner</name>
         <description>An advanced active injection bundle for SQLi (derived by SQLMap)</description>
         <author>Andrea Pompili (Yhawke)</author>
-        <version>13</version>
-        <file>sqliplugin-beta-13.zap</file>
+        <version>14</version>
+        <file>sqliplugin-beta-14.zap</file>
         <status>beta</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.5.0.&lt;/li&gt;
-&lt;li&gt;Bundle JDOM library instead of relying on core.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help and link to the code.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sqliplugin-v13/sqliplugin-beta-13.zap</url>
-        <hash>SHA-256:caaf8a25330c4532f6d3ab33722b77e8389614876c721885382fb413802ee75f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sqliplugin-v14/sqliplugin-beta-14.zap</url>
+        <hash>SHA-256:230482353b6c73f352856a41edd10fcc4c0ef28c8b8ee486179ad47dc2569529</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/advanced-sqlinjection-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-06-07</date>
-        <size>277848</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>533575</size>
+        <not-before-version>2.11.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_sqliplugin>
     <addon>sse</addon>
     <addon_sse>
