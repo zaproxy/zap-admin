@@ -424,30 +424,27 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>11</version>
-        <file>communityScripts-alpha-11.zap</file>
+        <version>12</version>
+        <file>communityScripts-alpha-12.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;active/Cross Site WebSocket Hijacking.js &amp;gt; an active scan for Cross-Site WebSocket Hijacking vulnerability&lt;/li&gt;
-&lt;li&gt;targeted/cve-2021-22214.js &amp;gt; A targeted script to check for Unauthorised SSRF on GitLab - CVE 2021-22214&lt;/li&gt;
-&lt;li&gt;httpsender/full-session-n-csrf-nashorn.js &amp;gt; full session and csrf token management.&lt;/li&gt;
-&lt;li&gt;httpfuzzerprocessor/unexpected_responses.js &amp;gt; compare response codes to a (pass/fail) regex and generate alerts&lt;/li&gt;
-&lt;li&gt;targeted/dns-email-spoofing &amp;gt; Check if DMARC / SPF policies are configured on a domain.&lt;/li&gt;
-&lt;li&gt;httpsender/add-more-headers.js &amp;gt; Add caller-specified headers to all requests.&lt;/li&gt;
+&lt;li&gt;authentication/OfflineTokenRefresh.js - refresh oauth2 offline tokens&lt;/li&gt;
+&lt;li&gt;httpsender/AddBearerTokenHeader.js - refresh oauth2 offline tokens&lt;/li&gt;
+&lt;li&gt;targeted/WordPress Username Enumeration.js - A targeted script to check for WordPress Username Enumeration via author archives&lt;/li&gt;
+&lt;li&gt;targeted/cve-2021-41773-apache-path-trav.js - an active scan script to test for Apache 2.4.49 CVE-2021-41773 path traversal.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update links in READMEs.&lt;/li&gt;
-&lt;li&gt;Update JavaDoc links to latest version.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v11/communityScripts-alpha-11.zap</url>
-        <hash>SHA-256:4f29f4807f384cf22e635583187935b44d488738510aded57ef6c2ef591eb0b7</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v12/communityScripts-alpha-12.zap</url>
+        <hash>SHA-256:5029c2317d0741a58555c46cc5574afe2991ffb4173d08e6b486a0c95ff4007c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2021-09-07</date>
-        <size>437294</size>
-        <not-before-version>2.10.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>443588</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_communityScripts>
     <addon>custompayloads</addon>
     <addon_custompayloads>
