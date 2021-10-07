@@ -35,25 +35,23 @@
         <name>Access Control Testing</name>
         <description>Adds a set of tools for testing access control in web applications.</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>accessControl-alpha-6.zap</file>
+        <version>7</version>
+        <file>accessControl-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add API support.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.9.0.&lt;/li&gt;
+&lt;li&gt;Don't set the font color for inherited entries (Issue 6397).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes (some changes impact the visibility of variables and add getters/setters, which may impact third party add-ons or scripts).&lt;/li&gt;
+&lt;li&gt;Change to no longer rely on core report classes, which are going to be deleted.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v6/accessControl-alpha-6.zap</url>
-        <hash>SHA-256:34143426d045bff319138d9012b50383e84989a36e17d15e145ed77fb3931165</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v7/accessControl-alpha-7.zap</url>
+        <hash>SHA-256:5bfa0e14cf227bc402c58bd35c19c474b781e519585f3d62c2b174e8c6ac55a0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/access-control-testing/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2020-10-06</date>
-        <size>545530</size>
-        <not-before-version>2.9.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>591286</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_accessControl>
     <addon>alertFilters</addon>
     <addon_alertFilters>
@@ -88,36 +86,51 @@
         <name>All In One Notes</name>
         <description>A simple extension to view all notes in one pane.</description>
         <author>David Vassallo</author>
-        <version>1</version>
-        <file>allinonenotes-alpha-1.zap</file>
+        <version>2</version>
+        <file>allinonenotes-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update link to repository.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/allinonenotes-v1/allinonenotes-alpha-1.zap</url>
-        <hash>SHA-256:3862c6b56214092fa1e50b408addcf21fddb88bcbaf756c6d08e5118c12c9ba4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/allinonenotes-v2/allinonenotes-alpha-2.zap</url>
+        <hash>SHA-256:9e70d6e76b72692e9c0cb64002a692b710710e688ea2d8834818086300632d2a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/all-in-one-notes/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2019-06-18</date>
-        <size>19614</size>
-        <not-before-version>2.8.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>249532</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_allinonenotes>
     <addon>amf</addon>
     <addon_amf>
-        <name>AMF</name>
+        <name>AMF Support</name>
         <description>Adds support for AMF messages</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>amf-alpha-2.zap</file>
+        <version>3</version>
+        <file>amf-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Deserialise the AMF request.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/amf-alpha-2.zap</url>
-        <hash>SHA1:d73da69a1a8c40a881f545aea7bcfc28ee125467</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/amf-v3/amf-alpha-3.zap</url>
+        <hash>SHA-256:01345ea00a6623d794753a3210f4e3e2b50a8c4ce2bfa6ea57324f0ff01ad7e3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/amf-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>813490</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>911943</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_amf>
     <addon>ascanrules</addon>
     <addon_ascanrules>
@@ -243,18 +256,27 @@
     <addon_authstats>
         <name>Authentication Statistics</name>
         <description>Records logged in/out statistics for all contexts in scope.</description>
-        <author>ZAP Core Team</author>
-        <version>1</version>
-        <file>authstats-alpha-1.zap</file>
+        <author>ZAP Dev Team</author>
+        <version>2</version>
+        <file>authstats-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>First version&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/authstats-alpha-1.zap</url>
-        <hash>SHA1:7191fd7491564eed5186df3567ee4002ce42b25a</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Dynamically unload the add-on.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authstats-v2/authstats-alpha-2.zap</url>
+        <hash>SHA-256:cfb604c27f3a7a58e7b5aa55fe9f19a9ce5561fab3ef7d3f6c72845671fb5dcf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-statistics/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>238686</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>247499</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_authstats>
     <addon>automation</addon>
     <addon_automation>
@@ -290,17 +312,26 @@
         <name>BeanShell Console</name>
         <description>Provides a BeanShell Console</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>beanshell-beta-6.zap</file>
+        <version>7</version>
+        <file>beanshell-beta-7.zap</file>
         <status>beta</status>
-        <changes>Minor code changes.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/beanshell-beta-6.zap</url>
-        <hash>SHA1:9546aad4694ef047822bc17d3d9f532d3aa162b8</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Improve permissions and space handling when saving.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/beanshell-v7/beanshell-beta-7.zap</url>
+        <hash>SHA-256:0a83cb7d0369ccef50768ccbda1e6c6d82b9f4e3bd9372b38fd32cc21f6a30fb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/bean-shell/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-27</date>
-        <size>574028</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>577838</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_beanshell>
     <addon>browserView</addon>
     <addon_browserView>
@@ -347,54 +378,88 @@
         <name>Bug Tracker</name>
         <description>Bug Tracker extension.</description>
         <author>ZAP Dev Team</author>
-        <version>2</version>
-        <file>bugtracker-alpha-2.zap</file>
+        <version>3</version>
+        <file>bugtracker-alpha-3.zap</file>
         <status>alpha</status>
-        <changes>Added help for the add-on</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/bugtracker-alpha-2.zap</url>
-        <hash>SHA1:8990bb1dec45749982a9cad93a7437a9281b40aa</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Remove broken link from the user guide.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Show correct help page for the options panel.&lt;/li&gt;
+&lt;li&gt;Remove the options panels when the add-on is uninstalled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove unused resource message.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bugtracker-v3/bugtracker-alpha-3.zap</url>
+        <hash>SHA-256:fe11b8ee2c39e374a578b064250563d28901fc3a7d3c4cacaefd69336c6f78a3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/bug-tracker/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>2002624</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>3427588</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_bugtracker>
     <addon>callgraph</addon>
     <addon_callgraph>
         <name>Call Graph</name>
         <description>Allows the user to view a call graph of the selected resources</description>
         <author>Colm O'Flaherty</author>
-        <version>4</version>
-        <file>callgraph-alpha-4.zap</file>
+        <version>5</version>
+        <file>callgraph-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>Finish internationalisation.&lt;br&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/callgraph-alpha-4.zap</url>
-        <hash>SHA1:4edaa3f624517ebf6a52b9f84e2209d8839429bb</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add help.&lt;/li&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callgraph-v5/callgraph-alpha-5.zap</url>
+        <hash>SHA-256:0874ce5aad0c4bbf28f72627a4940759d328396e12b7d6a5596f2e41bf24dc4e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-graph/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>1160586</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>925930</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_callgraph>
     <addon>codedx</addon>
     <addon_codedx>
         <name>Code Dx Extension</name>
         <description>Includes request and response data in XML reports and provides the ability to upload reports directly to a Code Dx server</description>
         <author>Code Dx, Inc.</author>
-        <version>8</version>
-        <file>codedx-alpha-8.zap</file>
+        <version>9</version>
+        <file>codedx-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;Make fixes to the report generation process to handle encoding the same as other ZAP reports&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add repo URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Change to no longer rely on core report classes, which are going to be deleted.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/codedx-v8/codedx-alpha-8.zap</url>
-        <hash>SHA-256:a0f90a41eb1e9fc50c87a00d78e19957e083c933ec35a84f4f9be062b1d510ae</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/codedx-v9/codedx-alpha-9.zap</url>
+        <hash>SHA-256:767e0a098de281f0bc880b036a5192f26fe0bb014b81227b385a0b63ca570428</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/code-dx/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <info>https://www.codedx.com/</info>
-        <date>2019-08-23</date>
-        <size>1740991</size>
-        <not-before-version>2.5.0</not-before-version>
+        <date>2021-10-07</date>
+        <size>1769797</size>
+        <not-before-version>2.11.0</not-before-version>
     </addon_codedx>
     <addon>commonlib</addon>
     <addon_commonlib>
