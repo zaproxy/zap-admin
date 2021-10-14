@@ -1729,23 +1729,19 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>reports-release-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>reports-release-0.9.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Default report title and description to new report jobs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;risk-confidence-html template: guard against scanJobResultData being null; fix handling of empty paragraphs and nulls; and do not include description section if description is null or empty.&lt;/li&gt;
+&lt;li&gt;Incorrect alert instances associated with alerts which have the same IDs (Issue 6873)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.8.0/reports-release-0.8.0.zap</url>
-        <hash>SHA-256:29a916eec7d55005a297c087d4cfd835d17b8f286bf24bc6706c94e865fe6a41</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.9.0/reports-release-0.9.0.zap</url>
+        <hash>SHA-256:670d48cf4bc135d0dbd1e5533cc71e0c2d552f7c5c4add48ec5eb41f85f4da38</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>14105267</size>
+        <date>2021-10-14</date>
+        <size>14105537</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
