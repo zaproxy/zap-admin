@@ -103,13 +103,14 @@ spotless {
 }
 
 val noAddOnsZapVersions = "ZapVersions.xml"
+val devZapVersions = "ZapVersions-dev.xml"
 val nameLatestZapVersions = "ZapVersions-2.11.xml"
 val latestZapVersions = file(nameLatestZapVersions)
 
 val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
 val adminRepo = GitHubRepo("zaproxy", "zap-admin", rootDir)
 
-val addOnsZapVersions = files("ZapVersions-dev.xml", latestZapVersions)
+val addOnsZapVersions = files(devZapVersions, latestZapVersions)
 val defaultChecksumAlgorithm = "SHA-256"
 
 tasks {
@@ -177,7 +178,9 @@ tasks {
     }
 
     register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
-        into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
+        into.setFrom(fileTree(rootDir).matching {
+            include(noAddOnsZapVersions, devZapVersions)
+        })
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
         checksumAlgorithm.set(defaultChecksumAlgorithm)
     }
