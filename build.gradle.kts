@@ -238,7 +238,7 @@ val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainRelea
 }
 
 val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyReleaseData::class) {
-    zapVersions.set(latestZapVersions)
+    zapVersions.set(file(noAddOnsZapVersions))
     generatedDataComment.set(websiteGeneratedDataComment)
     into.set(file("$buildDir/e_weekly_files.yml"))
 }
