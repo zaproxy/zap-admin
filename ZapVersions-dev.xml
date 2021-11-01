@@ -489,19 +489,22 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>13</version>
-        <file>communityScripts-alpha-13.zap</file>
+        <version>14</version>
+        <file>communityScripts-alpha-14.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;targeted/cve-2021-41773-apache-path-trav.js - Set path as escaped so that it's handled properly, set pluginid properly.&lt;/li&gt;
+&lt;li&gt;variant/CompoundCookies.js - An input vector script that handles splitting of compound cookies (Issue 6582).&lt;/li&gt;
+&lt;li&gt;active/corsair.py &amp;gt; An active scan script to check for CORS related issues.)&lt;/li&gt;
+&lt;li&gt;payloadgenerator/securerandom.js &amp;gt; A fuzzer payload generator script that uses Java's SecureRandom as it's source (related to issue 6892).&lt;/li&gt;
+&lt;li&gt;active/bxss.py &amp;gt; an active scan script for inject blind xss payloads to the parameters&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v13/communityScripts-alpha-13.zap</url>
-        <hash>SHA-256:27d2544e30723ec74154bff59cb0a3cd724f3eb3f1da0d15e711a4fcd6ddf973</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v14/communityScripts-alpha-14.zap</url>
+        <hash>SHA-256:4bf08142cee557697c6d4d353318433590230e6b701f67c5bcdcd8b5ed38dbd4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2021-10-14</date>
-        <size>443494</size>
+        <date>2021-11-01</date>
+        <size>447827</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_communityScripts>
     <addon>custompayloads</addon>
