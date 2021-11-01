@@ -839,19 +839,24 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>graphql-alpha-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>graphql-alpha-0.7.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;A message is displayed if the &amp;quot;data&amp;quot; object in an introspection response
+is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6890"&gt;Issue 6890&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.6.0/graphql-alpha-0.6.0.zap</url>
-        <hash>SHA-256:d3da8c9c0fc346679aa9b099d3f3b2712d45fa68488eb688842291d64570a425</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.7.0/graphql-alpha-0.7.0.zap</url>
+        <hash>SHA-256:371ae81ca9b5a2d14357211a5313eb7fc9a977f3117d3d4f678267a1a447cf61</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>3584103</size>
+        <date>2021-11-01</date>
+        <size>22083213</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
