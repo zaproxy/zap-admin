@@ -283,28 +283,34 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>automation-alpha-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>automation-alpha-0.8.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;API support: runplan action and planprogress view.&lt;/li&gt;
+&lt;li&gt;Delay job&lt;/li&gt;
+&lt;li&gt;Session management support&lt;/li&gt;
+&lt;li&gt;User and HTTP authentication support&lt;/li&gt;
+&lt;li&gt;Authentication verification support&lt;/li&gt;
+&lt;li&gt;Set ZAP exit code when &amp;quot;-cmd&amp;quot; and &amp;quot;-autorun&amp;quot; options used&lt;/li&gt;
+&lt;li&gt;Requestor, Spider and ActiveScan jobs changed to support an authenticated user&lt;/li&gt;
+&lt;li&gt;Support for site specific statistics&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;quot;Unexpected obj object java.lang.String&amp;quot; error shown during initialization&lt;/li&gt;
+&lt;li&gt;Plans saved without default &amp;quot;.yaml&amp;quot; extension.&lt;/li&gt;
+&lt;li&gt;Env vars in context names replaced on load, so lost if the plan saved again via the GUI.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.7.0/automation-alpha-0.7.0.zap</url>
-        <hash>SHA-256:ab28782ba19cc1f22140bbf6a514bf6741d5d2757d1f3abd3f4ec9f308a57390</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.8.0/automation-alpha-0.8.0.zap</url>
+        <hash>SHA-256:f7034da79b1a7bdd5e09a9a7dceed45d32674fb11b878e099555ec1e33ba4700</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>3800582</size>
+        <date>2021-11-02</date>
+        <size>3915251</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -2088,19 +2094,23 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.6.0</version>
-        <file>spiderAjax-release-23.6.0.zap</file>
+        <version>23.7.0</version>
+        <file>spiderAjax-release-23.7.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Automation authentication support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.6.0/spiderAjax-release-23.6.0.zap</url>
-        <hash>SHA-256:6bad1e85d988d1661bfe78ffa8fe63a813036b05c3c25ecbdf6172904278f36c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.7.0/spiderAjax-release-23.7.0.zap</url>
+        <hash>SHA-256:6e1b8c60a98efcb301f7d852ae108bc92cdda18a6a4d3c6ef8861f095e182931</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>2670429</size>
+        <date>2021-11-02</date>
+        <size>5810719</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
