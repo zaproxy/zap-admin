@@ -757,23 +757,23 @@
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.4.0</version>
-        <file>fuzz-beta-13.4.0.zap</file>
+        <version>13.5.0</version>
+        <file>fuzz-beta-13.5.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A right click (context menu) item to facilitate adding a fuzz message to the Sites Tree and History panel (Issue 1437).&lt;/li&gt;
+&lt;li&gt;Enhanced the help entry for the Options tab in the main fuzz dialog.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The 'Delay when Fuzzing (in milliseconds)' value can now also properly be controlled from the main fuzz window, and the options value won't be overridden (Issue 6651).&lt;/li&gt;
+&lt;li&gt;Ensure the &amp;quot;Follow Redirects&amp;quot; option is displayed.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.4.0/fuzz-beta-13.4.0.zap</url>
-        <hash>SHA-256:63c10a410b0889db5634762a10ba4e812b8e4a05cfd5cb721fecc86b6ac3abe4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.5.0/fuzz-beta-13.5.0.zap</url>
+        <hash>SHA-256:adfa97dcfc60386d55956659ac8c54c53d1959bf25b54476c274f6d35ecbe4a9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-14</date>
-        <size>1962844</size>
+        <date>2021-11-04</date>
+        <size>1972498</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_fuzz>
     <addon>fuzzdb</addon>
