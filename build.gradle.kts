@@ -21,9 +21,9 @@ import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 
 plugins {
     java
-    id("com.diffplug.spotless") version "5.12.1"
-    id("net.ltgt.errorprone") version "2.0.1"
-    id("org.zaproxy.crowdin") version "0.1.0"
+    id("com.diffplug.spotless") version "5.17.1"
+    id("net.ltgt.errorprone") version "2.0.2"
+    id("org.zaproxy.crowdin") version "0.2.1"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
@@ -116,36 +116,38 @@ val defaultChecksumAlgorithm = "SHA-256"
 tasks {
     register<ZapTask>("generateReleaseNotes") {
         description = "Generates release notes."
-        main = "org.zaproxy.admin.GenerateReleaseNotes"
+        mainClass.set("org.zaproxy.admin.GenerateReleaseNotes")
     }
 
     register<ZapTask>("listDownloadCounts") {
         description = "Lists download counts."
-        main = "org.zaproxy.admin.CountDownloads"
+        mainClass.set("org.zaproxy.admin.CountDownloads")
     }
 
     register<ZapTask>("pendingAddOnReleases") {
         description = "Reports the add-ons that are pending a release of new version."
-        main = "org.zaproxy.admin.PendingAddOnReleases"
+        mainClass.set("org.zaproxy.admin.PendingAddOnReleases")
     }
 
     register<ZapTask>("generateHelpAddOn") {
         description = "Generates the basic help files for an add-on."
-        main = "org.zaproxy.admin.HelpGenerator"
+        mainClass.set("org.zaproxy.admin.HelpGenerator")
         standardInput = System.`in`
     }
 
     register<ZapTask>("checkLatestReleaseNotes") {
         description = "Checks the latest release notes do not contain issues from previous ones."
-        main = "org.zaproxy.admin.CheckLatestReleaseNotes"
+        mainClass.set("org.zaproxy.admin.CheckLatestReleaseNotes")
     }
 
     register<CreateNewsMainRelease>("createNewsMainRelease") {
         newsDir.set(File(rootDir, "files/news"))
-        previousVersion.set(provider {
-            val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
-            zapVersionsXml.getString("core.version")
-        })
+        previousVersion.set(
+            provider {
+                val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+                zapVersionsXml.getString("core.version")
+            }
+        )
 
         item.set("ZAP @@VERSION@@ is available now")
         link.set("https://www.zaproxy.org/download/")
@@ -170,17 +172,21 @@ tasks {
         branchName.set("update-main-release")
 
         commitSummary.set("Update main release")
-        commitDescription.set(provider {
-            val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
-            val mainVersion = zapVersionsXml.getString("core.version")
-            "Update main release to version $mainVersion."
-        })
+        commitDescription.set(
+            provider {
+                val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+                val mainVersion = zapVersionsXml.getString("core.version")
+                "Update main release to version $mainVersion."
+            }
+        )
     }
 
     register<UpdateDailyZapVersionsEntries>("updateDailyRelease") {
-        into.setFrom(fileTree(rootDir).matching {
-            include(noAddOnsZapVersions, devZapVersions)
-        })
+        into.setFrom(
+            fileTree(rootDir).matching {
+                include(noAddOnsZapVersions, devZapVersions)
+            }
+        )
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
         checksumAlgorithm.set(defaultChecksumAlgorithm)
     }
@@ -193,11 +199,13 @@ tasks {
         branchName.set("update-daily-release")
 
         commitSummary.set("Update weekly release")
-        commitDescription.set(provider {
-            val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
-            val dailyVersion = zapVersionsXml.getString("core.daily-version")
-            "Update weekly release to version $dailyVersion."
-        })
+        commitDescription.set(
+            provider {
+                val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+                val dailyVersion = zapVersionsXml.getString("core.daily-version")
+                "Update weekly release to version $dailyVersion."
+            }
+        )
     }
 
     register<UpdateAddOnZapVersionsEntries>("updateAddOnRelease") {
@@ -322,12 +330,14 @@ val updateWebsite by tasks.registering(CreatePullRequest::class) {
     branchName.set("update-data")
 
     commitSummary.set("Update data")
-    commitDescription.set(provider {
-        """
-        From:
-        $adminRepo@${headCommit(adminRepo.dir)}
-        """.trimIndent()
-    })
+    commitDescription.set(
+        provider {
+            """
+            From:
+            $adminRepo@${headCommit(adminRepo.dir)}
+            """.trimIndent()
+        }
+    )
 }
 
 fun headCommit(repoDir: File) =
