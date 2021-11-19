@@ -1097,33 +1097,6 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <size>115527</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_highlighter>
-    <addon>httpsInfo</addon>
-    <addon_httpsInfo>
-        <name>HttpsInfo</name>
-        <description>Displays HTTPS configuration information.</description>
-        <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>httpsInfo-alpha-13.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;li&gt;Show usage info in the HTTPS Info panel (Issue 6113).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Updated owasp.org references (Issue 5962).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/httpsInfo-v13/httpsInfo-alpha-13.zap</url>
-        <hash>SHA-256:817e57f2ac262985685d4095003dd287e1e5fcba7ff13e622a9aeefc9592435b</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/https-info-add-on/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>7701037</size>
-        <not-before-version>2.11.0</not-before-version>
-    </addon_httpsInfo>
     <addon>hud</addon>
     <addon_hud>
         <name>HUD - Heads Up Display</name>
@@ -2226,28 +2199,6 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <size>563979</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_tips>
-    <addon>tlsdebug</addon>
-    <addon_tlsdebug>
-        <name>TLS Debug</name>
-        <description>Provides a tab which allows to quickly debug a TLS/SSL connection</description>
-        <author>P.M.J. Roth</author>
-        <version>5</version>
-        <file>tlsdebug-alpha-5.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/tlsdebug-v5/tlsdebug-alpha-5.zap</url>
-        <hash>SHA-256:320a15c8da70995324ae973d2d4bb66a10546e580f4ef8f692e78c71eb0c0ca7</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/tls-debug/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>237936</size>
-        <not-before-version>2.11.0</not-before-version>
-    </addon_tlsdebug>
     <addon>tokengen</addon>
     <addon_tokengen>
         <name>Token Generation and Analysis</name>
