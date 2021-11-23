@@ -21,6 +21,7 @@ browserView
 bruteforce
 bugtracker
 callgraph
+callhome
 codedx
 commonlib
 communityScripts
@@ -42,7 +43,6 @@ graaljs
 graphql
 groovy
 highlighter
-httpsInfo
 hud
 imagelocationscanner
 importLogFiles
@@ -86,7 +86,6 @@ sqliplugin
 sse
 svndigger
 tips
-tlsdebug
 tokengen
 treetools
 viewstate
