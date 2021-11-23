@@ -445,17 +445,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>callhome-alpha-0.0.1.zap</file>
+        <version>0.0.2</version>
+        <file>callhome-alpha-0.0.2.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version supports Check for Updates and News calls.&lt;/li&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed webswing and kali detection&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.0.1/callhome-alpha-0.0.1.zap</url>
-        <hash>SHA-256:be47ad2066a7e7b93cab06a943a0f69c23c991c1f8d3458716d26d1f866cb91e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.0.2/callhome-alpha-0.0.2.zap</url>
+        <hash>SHA-256:a76b016bd5a586ae258aa7e0305a6dd39a679c77073dd5655f88be47550daf4e</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2021-11-23</date>
-        <size>15561</size>
+        <size>16283</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_callhome>
     <addon>codedx</addon>
