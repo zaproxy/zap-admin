@@ -1992,23 +1992,23 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.4.0</version>
-        <file>selenium-release-15.4.0.zap</file>
+        <version>15.5.0</version>
+        <file>selenium-release-15.5.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
-&lt;li&gt;Maintenance changes (some changes impact the visibility of variables and getters/setters, which may impact third party add-ons or scripts).&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Disable open URL in browser from GUI in containers unless override option enabled.&lt;/li&gt;
+&lt;li&gt;Support for browser extensions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.4.0/selenium-release-15.4.0.zap</url>
-        <hash>SHA-256:0ef842f7a3285209bc921162fb2b8d5a6c5b51abb0cbb7b9a97129b8eef0e1f3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.5.0/selenium-release-15.5.0.zap</url>
+        <hash>SHA-256:a55ec69ae2170710beb314a063c4ff9e59eaf470140f249782045c24487d0a10</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>24269789</size>
+        <date>2021-11-25</date>
+        <size>24882440</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
