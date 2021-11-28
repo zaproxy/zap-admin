@@ -1992,23 +1992,19 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.5.0</version>
-        <file>selenium-release-15.5.0.zap</file>
+        <version>15.5.1</version>
+        <file>selenium-release-15.5.1.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for browser extensions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Address exception when saving the options (Issue 6951).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.5.0/selenium-release-15.5.0.zap</url>
-        <hash>SHA-256:a55ec69ae2170710beb314a063c4ff9e59eaf470140f249782045c24487d0a10</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.5.1/selenium-release-15.5.1.zap</url>
+        <hash>SHA-256:ed257051f454664ec281a044e55220e2e577f2fe3ffcef2754f352c8cc81341f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-25</date>
-        <size>24882440</size>
+        <date>2021-11-28</date>
+        <size>24882719</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
