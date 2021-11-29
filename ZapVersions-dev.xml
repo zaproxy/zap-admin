@@ -2046,23 +2046,22 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>11</version>
-        <file>soap-alpha-11.zap</file>
+        <version>12</version>
+        <file>soap-alpha-12.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;NPE when detecting parameters.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;WSDL File scan rule now includes identification of URLs in the form &amp;quot;example.com/service?wsdl&amp;quot;, and specifically excludes 404s and 500s (including support for Custom Pages).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Import a WSDL file from a URL&lt;/code&gt; now logs a more specific message for some exception conditions, or when failing to convert the input 'URL' string into an actual URL to make the WSDL request.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;Import a WSDL file from a URL&lt;/code&gt; dialog now accepts pressing the enter key to activate the import process (instead of having to click the Import button), and the escape key to close/cancel the dialog.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v11/soap-alpha-11.zap</url>
-        <hash>SHA-256:9e1d91bd378eb58f7fc0f4f684eb2d389b68dae7845eb72dae28b004e71a3c5a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v12/soap-alpha-12.zap</url>
+        <hash>SHA-256:b2231546f002a4e3703d1894be3495b1d7a9d31f24a93fa59d94674bcc59a360</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-29</date>
-        <size>13979946</size>
+        <date>2021-11-29</date>
+        <size>13980390</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
