@@ -4,7 +4,9 @@
 // The pages were created after starting a ZAP weekly release with the '-addoninstallall' option.
 
 // Change the DIR below to match the local directory containing the alert files
-var DIR = "/zap/wrk/zaproxy-website/site/content/docs/alerts/";
+var ROOT = "/zap/wrk/zaproxy-website/site/";
+var DIR = ROOT + "/content/docs/alerts/";
+var AT_FILE = ROOT + "/data/alerttags.yml";
 var Alert = Java.type('org.parosproxy.paros.core.scanner.Alert');
 var ArrayList = Java.type('java.util.ArrayList');
 var Constant = Java.type('org.parosproxy.paros.Constant');
@@ -17,6 +19,8 @@ var codeMap = {
 	40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java',
 	40041: 'https://github.com/SasanLabs/owasp-zap-fileupload-addon/blob/main/src/main/java/org/sasanlabs/fileupload/FileUploadScanRule.java',
 	}
+
+var allAlertTags = {}
 
 var WebSocketPassiveScript = Java.type('org.zaproxy.zap.extension.websocket.pscan.scripts.WebSocketPassiveScript');
 
@@ -63,6 +67,22 @@ for (var i = 0; i < plugins.length; i++) {
 		print(e);
 	}
 }
+
+// Dump out the alert tags
+var fw = new FileWriter(AT_FILE);
+var pw = new PrintWriter(fw);
+var sortedKeys = [];
+for (var key in allAlertTags) {
+	sortedKeys[sortedKeys.length] = key;
+}
+sortedKeys.sort();
+for (var i in sortedKeys) {
+	var key = sortedKeys[i];
+	pw.println(key + ':');
+	pw.println('  link: ' + allAlertTags[key]);
+	pw.println('');
+}
+pw.close();
 
 print("Date: " + date);
 
@@ -162,7 +182,8 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		if (tags) {
 			pw.println('alerttags: ');
 			for (tag in tags) {
-				pw.println('   ' + tag + ": " + tags[tag]);
+				pw.println('  - ' + tag);
+				allAlertTags[tag] = tags[tag]
 			}
 		}
 		pw.println('code: ' + codeurl);
