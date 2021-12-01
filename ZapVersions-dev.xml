@@ -737,6 +737,33 @@
         <size>388487</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_encoder>
+    <addon>evalvillain</addon>
+    <addon_evalvillain>
+        <name>Eval Villain</name>
+        <description>Adds the Eval Villain extension to Firefox when launched from ZAP.</description>
+        <author>Dennis Goodlett and the ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>evalvillain-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.0.1/evalvillain-alpha-0.0.1.zap</url>
+        <hash>SHA-256:8b1febc6361a445ed12468488762e25cc778784760f30cd3d9299bd6c2c3627a</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/eval-villain/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2021-12-01</date>
+        <size>194757</size>
+        <not-before-version>2.11.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>selenium</id>
+                    <version>&gt;=15.5.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_evalvillain>
     <addon>fileupload</addon>
     <addon_fileupload>
         <name>FileUpload</name>
