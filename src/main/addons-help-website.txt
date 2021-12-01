@@ -33,6 +33,7 @@ directorylistv2_3_lc
 directorylistv2_3
 domxss
 encoder
+evalvillain
 exportreport
 formhandler
 fuzz
