@@ -492,22 +492,23 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.5.0</version>
-        <file>commonlib-release-1.5.0.zap</file>
+        <version>1.6.0</version>
+        <file>commonlib-release-1.6.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Common alert tags for OWASP Top Ten 2021 and 2017.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Add OWASP WSTG v4.2 Alert Tags.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Adjusted the tag of &amp;quot;OWASP_A10_LOGGING_FAIL&amp;quot; to match other alert tags for 2017/2021.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.5.0/commonlib-release-1.5.0.zap</url>
-        <hash>SHA-256:8b7e08099678a43b21d17c98ceedfcb2bc61bcfdd85f96ebb3dabc19d056efaf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.6.0/commonlib-release-1.6.0.zap</url>
+        <hash>SHA-256:bdb56894a178d0af0c0e8376de093f16e0bdcbd6c1f3d84d4079c14fb02523c9</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>3927229</size>
+        <date>2021-12-01</date>
+        <size>4051357</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1540,34 +1541,32 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>pscanrules-release-36.zap</file>
+        <version>37</version>
+        <file>pscanrules-release-37.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;OWASP Top Ten 2021/2017 mappings for Insecure Authentication scan rule.&lt;/li&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed reference URL on CORS misconfiguration.&lt;/li&gt;
-&lt;li&gt;Reduce false positives from Private IP Disclosure scan rule (Issue 6749).&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure scan rule now excludes values in &amp;quot;Expect-CT&amp;quot; headers (Issue 6725), as well as zero strings (Issue 6761).&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v36/pscanrules-release-36.zap</url>
-        <hash>SHA-256:be3617d58f1edd4d7b0e4c9b851ab1b44fed36dd0e92d39e4f5363bb50640b33</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v37/pscanrules-release-37.zap</url>
+        <hash>SHA-256:08d608c19f9868c8ee8ca7b88a39b0ec3efe24ae2ca1651def8c0b83d6eac577</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>1176513</size>
+        <date>2021-12-01</date>
+        <size>1181560</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1577,30 +1576,30 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>pscanrulesAlpha-alpha-34.zap</file>
+        <version>35</version>
+        <file>pscanrulesAlpha-alpha-35.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Ignore CSS, JavaScript, images, or font files when scanning for source code disclosures (Issues: 6595, 6795, &amp;amp; 6820).&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
+&lt;li&gt;Sub Resource Integrity Attribute Missing scan rule will now include the suggested integrity hash (Base64 encoded SHA384 hash) as part of the relevant Alert's Other Info details if the referenced script can be found in the Sites Tree (Issue 5894).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v34/pscanrulesAlpha-alpha-34.zap</url>
-        <hash>SHA-256:6a75c9640eaf07790aee901772ef3ea8aebbcf7969a262d1bc232d42c173358f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v35/pscanrulesAlpha-alpha-35.zap</url>
+        <hash>SHA-256:0f94d35c66b52642cf438311b301d439cddeb192f4d5582995220a2cf6c39e05</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>649006</size>
+        <date>2021-12-01</date>
+        <size>651755</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1610,31 +1609,33 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>27</version>
-        <file>pscanrulesBeta-beta-27.zap</file>
+        <version>28</version>
+        <file>pscanrulesBeta-beta-28.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;Fixed false positive in Reverse Tabnabbing scan rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Reverse Tabnabbing Scan Rule will now alert when the 'opener' keyword is present.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v27/pscanrulesBeta-beta-27.zap</url>
-        <hash>SHA-256:596db8006d3d639720391b3deb53f0d80e4d3b6a7d213e999ede1e292466dbaa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v28/pscanrulesBeta-beta-28.zap</url>
+        <hash>SHA-256:00f4e822222ed8e40f57a2f2744716c8c47119b948d7c03d88272ea7b3c60ea8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>1012420</size>
+        <date>2021-12-01</date>
+        <size>1013210</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
