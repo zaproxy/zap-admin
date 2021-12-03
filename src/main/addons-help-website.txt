@@ -56,6 +56,7 @@ jsonview
 jython
 kotlin
 neonmarker
+network
 oast
 onlineMenu
 openapi
