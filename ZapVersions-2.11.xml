@@ -1438,6 +1438,34 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <size>28259</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_neonmarker>
+    <addon>network</addon>
+    <addon_network>
+        <name>Network</name>
+        <description>Provides core networking capabilities.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>network-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;API endpoints to generate, import (&lt;a href="https://github.com/zaproxy/zaproxy/issues/2280"&gt;Issue 2280&lt;/a&gt;), and obtain the root CA certificate.&lt;/li&gt;
+&lt;li&gt;On weekly releases and versions after 2.11:
+&lt;ul&gt;
+&lt;li&gt;Server certificates management.&lt;/li&gt;
+&lt;li&gt;Handle command line arguments &lt;code&gt;-certload&lt;/code&gt;, &lt;code&gt;-certpubdump&lt;/code&gt;, and &lt;code&gt;-certfulldump&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Options panel to manage the root CA certificate and issued certificates.&lt;/li&gt;
+&lt;li&gt;API endpoints to configure the validity of the root CA certificate and issued certificates (&lt;a href="https://github.com/zaproxy/zaproxy/issues/4673"&gt;Issue 4673&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.0.1/network-alpha-0.0.1.zap</url>
+        <hash>SHA-256:9543ba48c2e51a53e18f47a401e33c1a8e317c0e946f5e48c342e676fe802fe2</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2021-12-03</date>
+        <size>8219653</size>
+        <not-before-version>2.11.0</not-before-version>
+    </addon_network>
     <addon>oast</addon>
     <addon_oast>
         <name>OAST Support</name>
