@@ -137,26 +137,25 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>42</version>
-        <file>ascanrules-release-42.zap</file>
+        <version>43</version>
+        <file>ascanrules-release-43.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Command Injection scan rule will now initially attempt a simple injection without the original parameter value (Issue 6538).&lt;/li&gt;
-&lt;li&gt;Reflected XSS rule: added a generic 'onerror' attack and tweaked the case of the script attack&lt;/li&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v42/ascanrules-release-42.zap</url>
-        <hash>SHA-256:f1db775d223c3b11b04aa02f102777d8b899c7ac7ec0a98db7fdb576090d6d52</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v43/ascanrules-release-43.zap</url>
+        <hash>SHA-256:8f95ec46efc54a4cb05e631619268e41bc4bc3c642ab1fa12359006181b3bbff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-29</date>
-        <size>2491380</size>
+        <date>2021-12-06</date>
+        <size>2491799</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -166,31 +165,29 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>32</version>
-        <file>ascanrulesAlpha-alpha-32.zap</file>
+        <version>33</version>
+        <file>ascanrulesAlpha-alpha-33.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Spring Boot Actuator Scan Rule.&lt;/li&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;Fixed typo in payload in Forbidden (403) Bypass scan rule.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v32/ascanrulesAlpha-alpha-32.zap</url>
-        <hash>SHA-256:74f9bb0c0bb62295c9f5e04cb9826e9c3ae8e8dac74c78d0340c19e301e56e40</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v33/ascanrulesAlpha-alpha-33.zap</url>
+        <hash>SHA-256:20c3bdab51a7d30006ac8de16b715aeeaef43199a78a8a00bb3ae0564ae71985</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>433208</size>
+        <date>2021-12-06</date>
+        <size>449920</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -200,36 +197,34 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>37</version>
-        <file>ascanrulesBeta-beta-37.zap</file>
+        <version>38</version>
+        <file>ascanrulesBeta-beta-38.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;XxeScanRule: Use Out-of-band payloads in addition to existing attacks.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now targeting ZAP 2.11.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Use OAST Callbacks for the XXE Scan Rule.&lt;/li&gt;
-&lt;li&gt;Backup File Disclosure Scan Rule: When checkout a parent folder for 404 behavior assume a minimum folder name length of four to further eliminate chance of collision on short folder names (Issue 5330).&lt;/li&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v37/ascanrulesBeta-beta-37.zap</url>
-        <hash>SHA-256:8d8faa4be190a97f7c6124d114f667d0cb7ed19bbe1b9952ef820c5c533ef36e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v38/ascanrulesBeta-beta-38.zap</url>
+        <hash>SHA-256:a8ebf6d392242576fffc2abd34d90d4acb6a4e3bf6d4877296b98b2e4a49f48c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>2019204</size>
+        <date>2021-12-06</date>
+        <size>2062479</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>oast</id>
-                    <version>&gt;= 0.3.0</version>
+                    <version>&gt;= 0.6.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -283,34 +278,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>automation-alpha-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>automation-alpha-0.9.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Delay job&lt;/li&gt;
-&lt;li&gt;Session management support&lt;/li&gt;
-&lt;li&gt;User and HTTP authentication support&lt;/li&gt;
-&lt;li&gt;Authentication verification support&lt;/li&gt;
-&lt;li&gt;Set ZAP exit code when &amp;quot;-cmd&amp;quot; and &amp;quot;-autorun&amp;quot; options used&lt;/li&gt;
-&lt;li&gt;Requestor, Spider and ActiveScan jobs changed to support an authenticated user&lt;/li&gt;
-&lt;li&gt;Support for site specific statistics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Plans saved without default &amp;quot;.yaml&amp;quot; extension.&lt;/li&gt;
-&lt;li&gt;Env vars in context names replaced on load, so lost if the plan saved again via the GUI.&lt;/li&gt;
+&lt;li&gt;Disabled addOns job updateAddOns option due to problems updating the framework and jobs while they are running&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.8.0/automation-alpha-0.8.0.zap</url>
-        <hash>SHA-256:f7034da79b1a7bdd5e09a9a7dceed45d32674fb11b878e099555ec1e33ba4700</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.9.0/automation-alpha-0.9.0.zap</url>
+        <hash>SHA-256:1744ad5a02fdc48db0e17c1e95aed4badb6761bd7a40092faa06c3e3cfea526d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-02</date>
-        <size>3915251</size>
+        <date>2021-12-06</date>
+        <size>4097509</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -675,29 +655,23 @@
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>Aabha Biyani, ZAP Dev Team</author>
-        <version>11</version>
-        <file>domxss-beta-11.zap</file>
+        <version>12</version>
+        <file>domxss-beta-12.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;False Positives caused by un-related alerts or Basic auth prompts (Issue 6484).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update links to repository.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Functionality for example alert handling in order to assist in documentation efforts.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v11/domxss-beta-11.zap</url>
-        <hash>SHA-256:9b306ba99e546f1c9b8fb5a8ff056d30ada289aaadcb5a3dbe9b943ee23423f2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v12/domxss-beta-12.zap</url>
+        <hash>SHA-256:0bc30e0b2dbbea1a926e030fa8af2a95be8e5140e4bc8b99e9588886c31cbdd6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>268548</size>
+        <date>2021-12-06</date>
+        <size>268685</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
@@ -1471,21 +1445,41 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>oast-alpha-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>oast-alpha-0.6.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated the default Interactsh server URL to https://interactsh.com.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;An option to allow selecting the OAST service which will be used in active scan rules.&lt;/li&gt;
+&lt;li&gt;An alert tag (&amp;quot;OUT_OF_BAND&amp;quot;) for alerts raised by scan rules that make use of out-of-band services.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Depend on Network add-on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Interactsh:
+&lt;ul&gt;
+&lt;li&gt;Polling did not start automatically when a new payload was generated.&lt;/li&gt;
+&lt;li&gt;The deregistration request did not include the secret key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.5.0/oast-alpha-0.5.0.zap</url>
-        <hash>SHA-256:1b2a5140b5b857da5a22a26b824df2795bf99ae55a2b78150d9ba763f2c81130</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.6.0/oast-alpha-0.6.0.zap</url>
+        <hash>SHA-256:dfa910aa7fe2a1d39e886e7160dc7a59ea1be1cbcda30a3048ece52f52c23d60</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>694482</size>
+        <date>2021-12-06</date>
+        <size>701573</size>
         <not-before-version>2.11.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>network</id>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_oast>
     <addon>onlineMenu</addon>
     <addon_onlineMenu>
@@ -1513,29 +1507,25 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>23</version>
-        <file>openapi-beta-23.zap</file>
+        <version>24</version>
+        <file>openapi-beta-24.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed StackOverflow in the Body/DataGenerator when an invalid property type is specified. (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6591"&gt;Issue #6591&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Use examples defined in parameters (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6870"&gt;Issue #6870&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Tweak error message shown when content type is not supported.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use path and operation servers (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6754"&gt;Issue #6754&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Warn when request has content &lt;code&gt;application/xml&lt;/code&gt;, not supported (Related to &lt;a href="https://github.com/zaproxy/zaproxy/issues/6767"&gt;Issue #6767&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Fixed ClassCastException when using nested map properties with mixed definition styles.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v23/openapi-beta-23.zap</url>
-        <hash>SHA-256:a6ad2d616643bdd52984aca1b7beed6c81ce6bcf087897c86525645140c7e661</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v24/openapi-beta-24.zap</url>
+        <hash>SHA-256:f303e331e74ba2c624717b354bacaf2034e63be44de88c1f13b970e9b5090748</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>12166149</size>
+        <date>2021-12-06</date>
+        <size>12170929</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
@@ -1700,24 +1690,28 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>quickstart-release-31.zap</file>
+        <version>32</version>
+        <file>quickstart-release-32.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use callhome add-on for getting the news&lt;/li&gt;
+&lt;li&gt;Use the Network add-on to export the Root CA certificate.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v31/quickstart-release-31.zap</url>
-        <hash>SHA-256:e241e3fca01a79d0d0890da1308f0f412a7ee982253a2208aab292f3792f099a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v32/quickstart-release-32.zap</url>
+        <hash>SHA-256:394b1b541d5e897dcadc5a98beaa986855f3f1fac2dc7d2c133fbbc7227bab1f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-23</date>
-        <size>619808</size>
+        <date>2021-12-06</date>
+        <size>619104</size>
         <not-before-version>2.11.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>callhome</id>
+                    <version>&gt;= 0.0.1</version>
+                </addon>
+                <addon>
+                    <id>network</id>
                     <version>&gt;= 0.0.1</version>
                 </addon>
                 <addon>
@@ -1797,19 +1791,20 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.1</version>
-        <file>reports-release-0.9.1.zap</file>
+        <version>0.10.0</version>
+        <file>reports-release-0.10.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Made ReportHelper methods more defensive&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.9.1/reports-release-0.9.1.zap</url>
-        <hash>SHA-256:ccc1ba29a35d94a6af76d4db0244baef6d4cd041f4a45b942c940c25e788dc6e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.10.0/reports-release-0.10.0.zap</url>
+        <hash>SHA-256:5f3117453ae368c6121c49aa0ba8123efa18f3edaf7d93c72db0d5ac976c8dfc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-14</date>
-        <size>14105697</size>
+        <date>2021-12-06</date>
+        <size>14170794</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
