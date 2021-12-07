@@ -2334,20 +2334,20 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.5.0</version>
-        <file>wappalyzer-release-21.5.0.zap</file>
+        <version>21.6.0</version>
+        <file>wappalyzer-release-21.6.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Adapt script source handling to upstream changes.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.5.0/wappalyzer-release-21.5.0.zap</url>
-        <hash>SHA-256:3b939c191a496573da9d23023ad4d0b56767b47288d3fa6b729ed7d7545453a5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.6.0/wappalyzer-release-21.6.0.zap</url>
+        <hash>SHA-256:777ac968e5c13cc28c43ab252a40a459a22142361fdb9a0d736452d278e46fe8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-25</date>
-        <size>13588057</size>
+        <date>2021-12-07</date>
+        <size>14174381</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
