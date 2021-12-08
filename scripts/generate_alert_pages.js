@@ -212,8 +212,6 @@ function printAscanRule(plugin) {
 		
 		examples = new ArrayList();
 		examples.add(alert);
-	} else {
-		examples.get(0).setTags(plugin.getAlertTags());
 	}
 	
 	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName());
@@ -260,8 +258,6 @@ function printPscanRule(plugin) {
 		
 		examples = new ArrayList();
 		examples.add(alert);
-	} else {
-		examples.get(0).setTags(getPrivateMethod(plugin, ['getAlertTags'], '', null));
 	}
 
 	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName());
