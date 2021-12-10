@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>24</id>
+        <id>25</id>
         <default>
-            <item>ZAPCon 2022 Call for Speakers</item>
-            <link>https://sessionize.com/zapcon2-cfs/</link>
+            <item>ZAP 2.11.1 is available now</item>
+            <link>https://www.zaproxy.org/download/</link>
         </default>
     </news>
 </ZAP>
