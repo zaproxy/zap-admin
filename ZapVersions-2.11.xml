@@ -942,21 +942,19 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>12</version>
-        <file>help-release-12.zap</file>
+        <version>13</version>
+        <file>help-release-13.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated for 2.11.0.&lt;/li&gt;
-&lt;li&gt;Remove extra column in a videos table.&lt;/li&gt;
-&lt;li&gt;Update link to zaproxy and community-scripts repo.&lt;/li&gt;
+&lt;li&gt;Updated for 2.11.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v12/help-release-12.zap</url>
-        <hash>SHA-256:640c2d1e8fce1737673fc7c146d9a3c2c16a69f0c3491e66a8b73fc789e64829</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v13/help-release-13.zap</url>
+        <hash>SHA-256:fff11e2e2c99a635a599a826fc3fb1bcec250486823e4e39b7ab545b14d5c58c</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2021-10-06</date>
-        <size>873963</size>
+        <date>2021-12-10</date>
+        <size>875921</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_help>
     <addon>help_bs_BA</addon>
