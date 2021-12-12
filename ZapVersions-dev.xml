@@ -165,29 +165,34 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>33</version>
-        <file>ascanrulesAlpha-alpha-33.zap</file>
+        <version>34</version>
+        <file>ascanrulesAlpha-alpha-34.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed typo in payload in Forbidden (403) Bypass scan rule.&lt;/li&gt;
+&lt;li&gt;Log4Shell (CVE-2021-44228) Scan Rule.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Depend on the OAST add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v33/ascanrulesAlpha-alpha-33.zap</url>
-        <hash>SHA-256:20c3bdab51a7d30006ac8de16b715aeeaef43199a78a8a00bb3ae0564ae71985</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v34/ascanrulesAlpha-alpha-34.zap</url>
+        <hash>SHA-256:1a163d61f5a17b1cbac5dd3cb1caa265ccfe5b4a9a21cf133a7b63fd8b9bf80c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-06</date>
-        <size>449920</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2021-12-12</date>
+        <size>453776</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
                     <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>oast</id>
+                    <version>&gt;= 0.7.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1443,34 +1448,22 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>oast-alpha-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>oast-alpha-0.7.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;An option to allow selecting the OAST service which will be used in active scan rules.&lt;/li&gt;
-&lt;li&gt;An alert tag (&amp;quot;OUT_OF_BAND&amp;quot;) for alerts raised by scan rules that make use of out-of-band services.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Depend on Network add-on.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Interactsh:
-&lt;ul&gt;
-&lt;li&gt;Polling did not start automatically when a new payload was generated.&lt;/li&gt;
-&lt;li&gt;The deregistration request did not include the secret key.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Add a link to the OAST help in the alert tag value.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.6.0/oast-alpha-0.6.0.zap</url>
-        <hash>SHA-256:dfa910aa7fe2a1d39e886e7160dc7a59ea1be1cbcda30a3048ece52f52c23d60</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.7.0/oast-alpha-0.7.0.zap</url>
+        <hash>SHA-256:d01736e16010d72d1af1cebb114053801d4e2ccabb2f844119c099bda738aa03</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-06</date>
-        <size>701573</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2021-12-12</date>
+        <size>733066</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
