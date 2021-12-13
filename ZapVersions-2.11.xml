@@ -202,25 +202,21 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>38</version>
-        <file>ascanrulesBeta-beta-38.zap</file>
+        <version>39</version>
+        <file>ascanrulesBeta-beta-39.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;XxeScanRule: Use Out-of-band payloads in addition to existing attacks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v38/ascanrulesBeta-beta-38.zap</url>
-        <hash>SHA-256:a8ebf6d392242576fffc2abd34d90d4acb6a4e3bf6d4877296b98b2e4a49f48c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v39/ascanrulesBeta-beta-39.zap</url>
+        <hash>SHA-256:9660dd0bc77ea1ba04f0e9638039d33d078a223badff804afcd6f84365368972</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-06</date>
-        <size>2062479</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2021-12-13</date>
+        <size>2056964</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -229,7 +225,7 @@
                 </addon>
                 <addon>
                     <id>oast</id>
-                    <version>&gt;= 0.6.0</version>
+                    <version>&gt;= 0.7.0</version>
                 </addon>
             </addons>
         </dependencies>
