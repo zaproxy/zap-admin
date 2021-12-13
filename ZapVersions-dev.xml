@@ -1677,20 +1677,21 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>32</version>
-        <file>quickstart-release-32.zap</file>
+        <version>33</version>
+        <file>quickstart-release-33.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use the Network add-on to export the Root CA certificate.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Browser Launch/Manual Explore will now display a warning dialog if the selected browser executable cannot be found (Issue 6963).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v32/quickstart-release-32.zap</url>
-        <hash>SHA-256:394b1b541d5e897dcadc5a98beaa986855f3f1fac2dc7d2c133fbbc7227bab1f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v33/quickstart-release-33.zap</url>
+        <hash>SHA-256:21ff2127d865b5204b4e09b50e9615bd4435823e3b8503ac5f731d5abbe6084e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-06</date>
-        <size>619104</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2021-12-13</date>
+        <size>617848</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2030,20 +2031,21 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.5.1</version>
-        <file>selenium-release-15.5.1.zap</file>
+        <version>15.6.0</version>
+        <file>selenium-release-15.6.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address exception when saving the options (Issue 6951).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Maintenance changes (Issue 6963).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.5.1/selenium-release-15.5.1.zap</url>
-        <hash>SHA-256:ed257051f454664ec281a044e55220e2e577f2fe3ffcef2754f352c8cc81341f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.6.0/selenium-release-15.6.0.zap</url>
+        <hash>SHA-256:4f6c536954514bbe16dd9cc305f1e17e24d5198672530353624942839d3e6d02</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-28</date>
-        <size>24882719</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2021-12-13</date>
+        <size>24900793</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
     <addon_sequence>
