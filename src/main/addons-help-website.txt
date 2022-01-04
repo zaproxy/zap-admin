@@ -34,6 +34,7 @@ directorylistv2_3
 domxss
 encoder
 evalvillain
+exim
 exportreport
 formhandler
 fuzz
@@ -46,8 +47,6 @@ groovy
 highlighter
 hud
 imagelocationscanner
-importLogFiles
-importurls
 invoke
 jruby
 jsonview
@@ -77,8 +76,6 @@ retire
 reveal
 revisit
 saml
-saverawmessage
-savexmlmessage
 scripts
 selenium
 sequence
