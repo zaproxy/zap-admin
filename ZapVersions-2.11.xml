@@ -279,23 +279,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.10.0</version>
-        <file>automation-alpha-0.10.0.zap</file>
+        <version>0.10.1</version>
+        <file>automation-alpha-0.10.1.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Setting delay job parameters from the commandline&lt;/li&gt;
+&lt;li&gt;Ensure system environment variables take precedence over configuration variables (Issue 7000).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.10.0/automation-alpha-0.10.0.zap</url>
-        <hash>SHA-256:f05c3ae7ea6b439ab20d774a84eab6df45bb8588a71aff05c8c5d9df8705295d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.10.1/automation-alpha-0.10.1.zap</url>
+        <hash>SHA-256:a809c12babe5e95c4b7ae89a59a2691ab8f4bae66dd3ed216f8e2df9001af2a6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-13</date>
-        <size>4101818</size>
+        <date>2022-01-05</date>
+        <size>4103439</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
