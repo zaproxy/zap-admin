@@ -165,24 +165,24 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>ascanrulesAlpha-alpha-34.zap</file>
+        <version>35</version>
+        <file>ascanrulesAlpha-alpha-35.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Log4Shell (CVE-2021-44228) Scan Rule.&lt;/li&gt;
+&lt;li&gt;Log4Shell: Fixed the RMI Payloads (Issue 7002).&lt;/li&gt;
+&lt;li&gt;Log4Shell: Continue with further payloads if one payload throws an error&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Depend on the OAST add-on.&lt;/li&gt;
+&lt;li&gt;Log4Shell: Added detection for CVE-2021-45046&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v34/ascanrulesAlpha-alpha-34.zap</url>
-        <hash>SHA-256:1a163d61f5a17b1cbac5dd3cb1caa265ccfe5b4a9a21cf133a7b63fd8b9bf80c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v35/ascanrulesAlpha-alpha-35.zap</url>
+        <hash>SHA-256:beea43b7998b990afa2766f79672c921c3bfccbe42e7355646d0658d33354cf5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-12</date>
-        <size>453776</size>
+        <date>2022-01-07</date>
+        <size>491821</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -1601,27 +1601,22 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>37</version>
-        <file>pscanrules-release-37.zap</file>
+        <version>38</version>
+        <file>pscanrules-release-38.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings for Insecure Authentication scan rule.&lt;/li&gt;
-&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Timestamp Disclosure scan rule now excludes values in &amp;quot;Expect-CT&amp;quot; headers (Issue 6725), as well as zero strings (Issue 6761).&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Renamed 'X-Frame-Options Header Not Set' alert to 'Missing Anti-clickjacking Header', and associated scan rule 'X-Frame-Options Header' to 'Anti-clickjacking Header'. The rule already considered Content-Security-Policy 'frame-ancestors' which is a more modern solution to the same concern. Updated associated solution text. (Issue 6937)&lt;/li&gt;
+&lt;li&gt;Content Security Policy scan rule will no longer classify &amp;quot;require-trusted-types-for&amp;quot; or &amp;quot;trusted-types&amp;quot; directives as unknown (Issue 6602).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v37/pscanrules-release-37.zap</url>
-        <hash>SHA-256:08d608c19f9868c8ee8ca7b88a39b0ec3efe24ae2ca1651def8c0b83d6eac577</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v38/pscanrules-release-38.zap</url>
+        <hash>SHA-256:c8b4bd3eeff987f514c382678894340188db80927f97f37572bc9b3ee6d53a3b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-01</date>
-        <size>1181560</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-01-07</date>
+        <size>1181912</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
