@@ -1472,21 +1472,26 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>oast-alpha-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>oast-alpha-0.8.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Add a link to the OAST help in the alert tag value.&lt;/li&gt;
+&lt;li&gt;Set HttpSender's initiator to &lt;code&gt;OAST_INITIATOR&lt;/code&gt;, value 16.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed Interactsh multi threading issue during register and deregister (Issue 6997)&lt;/li&gt;
+&lt;li&gt;Interactsh: server URL change in Options deregisters old server URL and registers new server URL&lt;/li&gt;
+&lt;li&gt;OAST Interactsh Options Dialog: If host or token config changed the 'New Payload' Button generates the Payload still with the old config.
+Button is disabled in that case.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.7.0/oast-alpha-0.7.0.zap</url>
-        <hash>SHA-256:d01736e16010d72d1af1cebb114053801d4e2ccabb2f844119c099bda738aa03</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.8.0/oast-alpha-0.8.0.zap</url>
+        <hash>SHA-256:1aa548cf230341930dee4061246e4b0e1e8577624422b66ff6192dbccc190534</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-12</date>
-        <size>733066</size>
+        <date>2022-01-10</date>
+        <size>734452</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
