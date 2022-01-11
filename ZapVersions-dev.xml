@@ -2386,20 +2386,19 @@ Button is disabled in that case.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>webdriverlinux-release-34.zap</file>
+        <version>35</version>
+        <file>webdriverlinux-release-35.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to 96.0.4664.45.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 97.0.4692.71.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v34/webdriverlinux-release-34.zap</url>
-        <hash>SHA-256:63c218033753e4c1c92cb65aa7de1ae46158bb0868cf23cc62d62e7098298e3e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v35/webdriverlinux-release-35.zap</url>
+        <hash>SHA-256:9741df1e58c1c4b60f655730d6e28f96512c77e093491fd391f2cb676886582b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-14</date>
-        <size>15755315</size>
+        <date>2022-01-11</date>
+        <size>15622902</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2407,20 +2406,19 @@ Button is disabled in that case.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>webdrivermacos-release-34.zap</file>
+        <version>35</version>
+        <file>webdrivermacos-release-35.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to 96.0.4664.45.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 97.0.4692.71.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v34/webdrivermacos-release-34.zap</url>
-        <hash>SHA-256:c046e42af2977f9ef52fc6a228c5385b61b56cd0b30d0ea3fd2fc76ec4dca666</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v35/webdrivermacos-release-35.zap</url>
+        <hash>SHA-256:c26d58dcef2f374dd4e6811cdcc42bf99943fb290752d9826f0637680249807f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-14</date>
-        <size>10260306</size>
+        <date>2022-01-11</date>
+        <size>10306433</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2428,20 +2426,19 @@ Button is disabled in that case.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>webdriverwindows-release-34.zap</file>
+        <version>35</version>
+        <file>webdriverwindows-release-35.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to 96.0.4664.45.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 97.0.4692.71.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v34/webdriverwindows-release-34.zap</url>
-        <hash>SHA-256:21225e3fecd2bcdd410d0205f17a821a559ba9f176da56192fe976f725e7e60b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v35/webdriverwindows-release-35.zap</url>
+        <hash>SHA-256:bbd41211b4e3788e291d7b675bfa9e6ef6037673f384d2471ec57d830a02b21a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-14</date>
-        <size>9078434</size>
+        <date>2022-01-11</date>
+        <size>9183004</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
