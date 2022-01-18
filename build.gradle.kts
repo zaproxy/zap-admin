@@ -201,7 +201,7 @@ tasks {
         commitSummary.set("Update weekly release")
         commitDescription.set(
             provider {
-                val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
+                val zapVersionsXml = CustomXmlConfiguration(file(noAddOnsZapVersions))
                 val dailyVersion = zapVersionsXml.getString("core.daily-version")
                 "Update weekly release to version $dailyVersion."
             }
