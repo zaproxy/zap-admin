@@ -280,19 +280,24 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.10.1</version>
-        <file>automation-alpha-0.10.1.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <version>0.11.0</version>
+        <file>automation-beta-0.11.0.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Ensure system environment variables take precedence over configuration variables (Issue 7000).&lt;/li&gt;
+&lt;li&gt;Support for generating stats&lt;/li&gt;
+&lt;li&gt;Form and JSON-based authentication support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Promoted to beta&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.10.1/automation-alpha-0.10.1.zap</url>
-        <hash>SHA-256:a809c12babe5e95c4b7ae89a59a2691ab8f4bae66dd3ed216f8e2df9001af2a6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.11.0/automation-beta-0.11.0.zap</url>
+        <hash>SHA-256:4f526ad4b573aee23ed30575463ed6d1ae5f4d2a4f1beb5faae9553d9c25c0e0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-05</date>
-        <size>4103439</size>
+        <date>2022-01-19</date>
+        <size>4112463</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
