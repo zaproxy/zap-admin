@@ -432,20 +432,23 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>callhome-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>callhome-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation stats&lt;/li&gt;
-&lt;li&gt;Fuzz stats&lt;/li&gt;
+&lt;li&gt;More stats, in preparation for them being added to the respective add-ons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bugs sending telemetry on shutdown&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.2.0/callhome-alpha-0.2.0.zap</url>
-        <hash>SHA-256:32104da430d22275b1485e8341313bd3b201544d0c6cb77ca795dfdfeabcce95</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.3.0/callhome-alpha-0.3.0.zap</url>
+        <hash>SHA-256:a92078ec3bdf5309ea3688e477789c5f5e82bfc0a503e6e40bc7d0bd8dcd79a6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-14</date>
-        <size>316818</size>
+        <date>2022-01-21</date>
+        <size>317537</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_callhome>
     <addon>codedx</addon>
