@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>26</id>
+        <id>27</id>
         <default>
-            <item>Would you like to get more involved? See the new ZAP Contributing Guide</item>
-            <link>https://www.zaproxy.org/docs/contribute/</link>
+            <item>The full ZAPCon speaker lineup is now live. Register today for free!</item>
+            <link>https://zapcon.io/</link>
         </default>
     </news>
 </ZAP>
