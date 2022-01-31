@@ -1570,26 +1570,25 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>oast-alpha-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>oast-alpha-0.9.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Set HttpSender's initiator to &lt;code&gt;OAST_INITIATOR&lt;/code&gt;, value 16.&lt;/li&gt;
+&lt;li&gt;Status indicators for external OAST services.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed Interactsh multi threading issue during register and deregister (Issue 6997)&lt;/li&gt;
-&lt;li&gt;Interactsh: server URL change in Options deregisters old server URL and registers new server URL&lt;/li&gt;
-&lt;li&gt;OAST Interactsh Options Dialog: If host or token config changed the 'New Payload' Button generates the Payload still with the old config.
-Button is disabled in that case.&lt;/li&gt;
+&lt;li&gt;Close callback connections gracefully.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Make Interactsh payloads more robust by adding a further char with a dot before the actual correlationId (Issue 7003)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.8.0/oast-alpha-0.8.0.zap</url>
-        <hash>SHA-256:1aa548cf230341930dee4061246e4b0e1e8577624422b66ff6192dbccc190534</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.9.0/oast-alpha-0.9.0.zap</url>
+        <hash>SHA-256:d66663731602b0af3ea99e1f4edeb37365aff2818cfd0a194766c21424cb39ac</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-10</date>
-        <size>734452</size>
+        <date>2022-01-31</date>
+        <size>761912</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
