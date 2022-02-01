@@ -280,24 +280,28 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>automation-beta-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>automation-beta-0.12.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for generating stats&lt;/li&gt;
-&lt;li&gt;Form and JSON-based authentication support&lt;/li&gt;
+&lt;li&gt;Script authentication support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When a Job is loaded via yaml and edited via UI Dialog then the saved changes will be applied on the next job run&lt;/li&gt;
+&lt;li&gt;DelayJob will be verified on yaml load&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Promoted to beta&lt;/li&gt;
+&lt;li&gt;When a Job is edited via UI Dialog then the status will be set to Not started&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.11.0/automation-beta-0.11.0.zap</url>
-        <hash>SHA-256:4f526ad4b573aee23ed30575463ed6d1ae5f4d2a4f1beb5faae9553d9c25c0e0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.12.0/automation-beta-0.12.0.zap</url>
+        <hash>SHA-256:8f5a9185d94d80e3eed5e8902f0dbc73d93220d8940a71d474593eaf82f8cd2d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-19</date>
-        <size>4112463</size>
+        <date>2022-02-01</date>
+        <size>4128315</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -1624,24 +1628,19 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>25</version>
-        <file>openapi-beta-25.zap</file>
+        <version>26</version>
+        <file>openapi-beta-26.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Parameter examples specified as part of the schema were not being used.&lt;/li&gt;
+&lt;li&gt;Do not report &amp;quot;Unrecognised parameter&amp;quot; for valid parameters.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v25/openapi-beta-25.zap</url>
-        <hash>SHA-256:ce8eb92e74157f026278a23a4e924bc3f65d6f11f8631b42b1e736b6226c2ddf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v26/openapi-beta-26.zap</url>
+        <hash>SHA-256:1b72e3d788c05118a03d62b372717eb6ce6aeec8452e6ef0db95add14a8e0ffa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-18</date>
-        <size>12171807</size>
+        <date>2022-02-01</date>
+        <size>12175459</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_openapi>
     <addon>plugnhack</addon>
@@ -2224,23 +2223,26 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>12</version>
-        <file>soap-alpha-12.zap</file>
+        <version>13</version>
+        <file>soap-alpha-13.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;WSDL File scan rule now includes identification of URLs in the form &amp;quot;example.com/service?wsdl&amp;quot;, and specifically excludes 404s and 500s (including support for Custom Pages).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Import a WSDL file from a URL&lt;/code&gt; now logs a more specific message for some exception conditions, or when failing to convert the input 'URL' string into an actual URL to make the WSDL request.&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;Import a WSDL file from a URL&lt;/code&gt; dialog now accepts pressing the enter key to activate the import process (instead of having to click the Import button), and the escape key to close/cancel the dialog.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;When the automation Job is edited via UI Dialog then the status will be set to Not started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not report &amp;quot;Unrecognised parameter&amp;quot; for valid parameters.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v12/soap-alpha-12.zap</url>
-        <hash>SHA-256:b2231546f002a4e3703d1894be3495b1d7a9d31f24a93fa59d94674bcc59a360</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v13/soap-alpha-13.zap</url>
+        <hash>SHA-256:bf24fb94dd9d604cca964e6b27d3a8df518a413758c4f7aacfeef41d513114aa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-29</date>
-        <size>13980390</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-02-01</date>
+        <size>13982769</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
