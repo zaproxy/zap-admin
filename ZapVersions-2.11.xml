@@ -487,24 +487,23 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.6.0</version>
-        <file>commonlib-release-1.6.0.zap</file>
+        <version>1.7.0</version>
+        <file>commonlib-release-1.7.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Add OWASP WSTG v4.2 Alert Tags.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Adjusted the tag of &amp;quot;OWASP_A10_LOGGING_FAIL&amp;quot; to match other alert tags for 2017/2021.&lt;/li&gt;
+&lt;li&gt;Maintenance changes (Issue 6810).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.6.0/commonlib-release-1.6.0.zap</url>
-        <hash>SHA-256:bdb56894a178d0af0c0e8376de093f16e0bdcbd6c1f3d84d4079c14fb02523c9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.7.0/commonlib-release-1.7.0.zap</url>
+        <hash>SHA-256:60a36fc731f5c466e8d96bd693e6b2efc5095de1b12f82e433d1707b13760904</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-01</date>
-        <size>4051357</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-02-02</date>
+        <size>4053241</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
     <addon_communityScripts>
@@ -1970,34 +1969,27 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>retire-release-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>retire-release-0.10.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Version extraction pattern was fixed to reduce false positives (Issue 6818).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
+&lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.9.0/retire-release-0.9.0.zap</url>
-        <hash>SHA-256:0f2912299a9d4b20142e769dd02d995a942825ee8ca25cfab8b0cf47537a3166</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.10.0/retire-release-0.10.0.zap</url>
+        <hash>SHA-256:c21263b38e83a3473070a9a25b03c1c3860fc69ed145c036e7a22ae22bfd3810</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>1205834</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-02-02</date>
+        <size>1208058</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2459,21 +2451,33 @@ is &lt;code&gt;null&lt;/code&gt; (&lt;a href="https://github.com/zaproxy/zaproxy
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.7.0</version>
-        <file>wappalyzer-release-21.7.0.zap</file>
+        <version>21.8.0</version>
+        <file>wappalyzer-release-21.8.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;API help content.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Further support for DOM selector patterns (Issue 6607).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.7.0/wappalyzer-release-21.7.0.zap</url>
-        <hash>SHA-256:699f0020adb0771340d6f3dd4d7fb56fbeaf6fe40c88d3843f910bd530ebc42a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.8.0/wappalyzer-release-21.8.0.zap</url>
+        <hash>SHA-256:05178bd4f654e3ca913505054bfed8cc9ba2490e26ea4e30c4dcd458614c1542</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-03</date>
-        <size>14320138</size>
+        <date>2022-02-02</date>
+        <size>14322918</size>
         <not-before-version>2.11.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_wappalyzer>
     <addon>webdriverlinux</addon>
     <addon_webdriverlinux>
