@@ -2448,24 +2448,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.8.0</version>
-        <file>wappalyzer-release-21.8.0.zap</file>
+        <version>21.9.0</version>
+        <file>wappalyzer-release-21.9.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;API help content.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Further support for DOM selector patterns (Issue 6607).&lt;/li&gt;
+&lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.8.0/wappalyzer-release-21.8.0.zap</url>
-        <hash>SHA-256:05178bd4f654e3ca913505054bfed8cc9ba2490e26ea4e30c4dcd458614c1542</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.9.0/wappalyzer-release-21.9.0.zap</url>
+        <hash>SHA-256:e2ef4362d681db4a022cff51404a943bf8500b3695c4b08f85fc2830c7b746d6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-02</date>
-        <size>14322918</size>
+        <date>2022-02-03</date>
+        <size>14483155</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
