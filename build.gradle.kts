@@ -156,7 +156,8 @@ tasks {
     register<UpdateMainZapVersionsEntries>("updateMainRelease") {
         into.setFrom(fileTree(rootDir).matching { include("ZapVersions*.xml") })
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/v@@VERSION@@/")
-        windowsFileName.set("ZAP_@@VERSION_UNDERSCORES@@_windows.exe")
+        windows32FileName.set("ZAP_@@VERSION_UNDERSCORES@@_windows-x32.exe")
+        windows64FileName.set("ZAP_@@VERSION_UNDERSCORES@@_windows.exe")
         linuxFileName.set("ZAP_@@VERSION@@_Linux.tar.gz")
         macFileName.set("ZAP_@@VERSION@@.dmg")
         releaseNotes.set("Bug fix and enhancement release.")
