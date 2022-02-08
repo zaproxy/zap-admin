@@ -43,7 +43,8 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
     private static final String CORE_REL_NOTES_ELEMENT = "core.relnotes";
     private static final String CORE_REL_NOTES_URL_ELEMENT = "core.relnotes-url";
 
-    private static final String WINDOWS_ELEMENT = "core.windows";
+    private static final String WINDOWS_32_ELEMENT = "core.windows32";
+    private static final String WINDOWS_64_ELEMENT = "core.windows";
     private static final String LINUX_ELEMENT = "core.linux";
     private static final String MAC_ELEMENT = "core.mac";
 
@@ -71,7 +72,10 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
     public abstract Property<String> getBaseDownloadUrl();
 
     @Input
-    public abstract Property<String> getWindowsFileName();
+    public abstract Property<String> getWindows32FileName();
+
+    @Input
+    public abstract Property<String> getWindows64FileName();
 
     @Input
     public abstract Property<String> getLinuxFileName();
@@ -89,7 +93,8 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
     public void update() throws Exception {
         validateNotEmpty(getVersion(), "version");
         validateNotEmpty(getBaseDownloadUrl(), "base download URL");
-        validateNotEmpty(getWindowsFileName(), "Windows file name");
+        validateNotEmpty(getWindows32FileName(), "Windows 32 file name");
+        validateNotEmpty(getWindows64FileName(), "Windows 64 file name");
         validateNotEmpty(getLinuxFileName(), "Linux file name");
         validateNotEmpty(getMacFileName(), "macOS file name");
         validateNotEmpty(getReleaseNotes(), "release notes");
@@ -114,8 +119,12 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
         List<ReleaseFile> releaseFiles = new ArrayList<>();
         releaseFiles.add(
                 createReleaseFile(
-                        WINDOWS_ELEMENT,
-                        createDownloadUrl(finalBaseDownloadUrl, getWindowsFileName().get())));
+                        WINDOWS_32_ELEMENT,
+                        createDownloadUrl(finalBaseDownloadUrl, getWindows32FileName().get())));
+        releaseFiles.add(
+                createReleaseFile(
+                        WINDOWS_64_ELEMENT,
+                        createDownloadUrl(finalBaseDownloadUrl, getWindows64FileName().get())));
         releaseFiles.add(
                 createReleaseFile(
                         LINUX_ELEMENT,

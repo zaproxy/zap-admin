@@ -9,6 +9,12 @@
             <hash>SHA-256:9d4bcb12e47293f3cbc4c32285b8469e620f092bb2519e65e12e5e528a25a8ad</hash>
             <size>188556676</size>
         </daily>
+        <windows32>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.11.1/ZAP_2_11_1_windows-x32.exe</url>
+            <file>ZAP_2_11_1_windows-x32.exe</file>
+            <hash>SHA-256:4f753278b374d292a0c1c8fbabc60153acf3bd7c9ce8fb1930a5d68fdfad6638</hash>
+            <size>192166400</size>
+        </windows32>
         <windows>
             <url>https://github.com/zaproxy/zaproxy/releases/download/v2.11.1/ZAP_2_11_1_windows.exe</url>
             <file>ZAP_2_11_1_windows.exe</file>
