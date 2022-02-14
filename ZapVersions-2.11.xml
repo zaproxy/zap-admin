@@ -539,22 +539,21 @@
         <name>Core Language Files</name>
         <description>Translations of the core language files</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>coreLang-release-14.zap</file>
+        <version>15</version>
+        <file>coreLang-release-15.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update the languages files from Crowdin.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Added more people to the credits.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/coreLang-v14/coreLang-release-14.zap</url>
-        <hash>SHA-256:a3659067c1ab13caa4c17b3ae2a14b7a5485750dcf51e96a35b383040b2a2273</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/coreLang-v15/coreLang-release-15.zap</url>
+        <hash>SHA-256:d8258b914ffc95820dd045acf56677668a8cbbfc759290f72e30210056dfb88c</hash>
         <info>https://crowdin.com/project/owasp-zap</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-11-02</date>
-        <size>4508087</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-02-14</date>
+        <size>4616009</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_coreLang>
     <addon>custompayloads</addon>
     <addon_custompayloads>
