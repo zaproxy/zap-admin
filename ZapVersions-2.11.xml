@@ -172,24 +172,24 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>35</version>
-        <file>ascanrulesAlpha-alpha-35.zap</file>
+        <version>36</version>
+        <file>ascanrulesAlpha-alpha-36.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Log4Shell: Fixed the RMI Payloads (Issue 7002).&lt;/li&gt;
-&lt;li&gt;Log4Shell: Continue with further payloads if one payload throws an error&lt;/li&gt;
+&lt;li&gt;Out-of-band XSS Scan Rule.&lt;/li&gt;
+&lt;li&gt;Exponential Entity Expansion (Billion Laughs Attack) Scan Rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Log4Shell: Added detection for CVE-2021-45046&lt;/li&gt;
+&lt;li&gt;Improved performance of a Web Cache Deception scan rule (Issue 6655).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v35/ascanrulesAlpha-alpha-35.zap</url>
-        <hash>SHA-256:beea43b7998b990afa2766f79672c921c3bfccbe42e7355646d0658d33354cf5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v36/ascanrulesAlpha-alpha-36.zap</url>
+        <hash>SHA-256:16b43ebc3244a4b107e3043162f5bc173207b82d524a2a4e158a7ef76136e0fc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-07</date>
-        <size>491821</size>
+        <date>2022-02-15</date>
+        <size>511547</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
