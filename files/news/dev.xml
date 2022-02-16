@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>27</id>
+        <id>28</id>
         <default>
-            <item>The full ZAPCon speaker lineup is now live. Register today for free!</item>
-            <link>https://zapcon.io/</link>
+            <item>The ZAPCon 2022 Schedule is Now Live</item>
+            <link>https://www.zaproxy.org/blog/2022-02-16-zapcon-2022-schedule-is-now-live/</link>
         </default>
     </news>
 </ZAP>
