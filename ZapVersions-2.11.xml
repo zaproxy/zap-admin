@@ -2162,20 +2162,23 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.6.0</version>
-        <file>selenium-release-15.6.0.zap</file>
+        <version>15.7.0</version>
+        <file>selenium-release-15.7.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Maintenance changes (Issue 6963).&lt;/li&gt;
+&lt;li&gt;Statistics, number of browsers launched.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Quit all browsers when ZAP shuts down (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6643"&gt;Issue #6643&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.6.0/selenium-release-15.6.0.zap</url>
-        <hash>SHA-256:4f6c536954514bbe16dd9cc305f1e17e24d5198672530353624942839d3e6d02</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.7.0/selenium-release-15.7.0.zap</url>
+        <hash>SHA-256:be7922b5eae0f8f2cfc27dcb3910feda018290f187d55a13ce5c11dd5d09a402</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-13</date>
-        <size>24900793</size>
+        <date>2022-02-17</date>
+        <size>24906567</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
