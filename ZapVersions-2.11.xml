@@ -1572,30 +1572,35 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>oast-alpha-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>oast-alpha-0.10.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Status indicators for external OAST services.&lt;/li&gt;
+&lt;li&gt;The following two statistics for each OAST service:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stats.oast.&amp;lt;service&amp;gt;.payloadsGenerated&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stats.oast.&amp;lt;service&amp;gt;.interactions&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Close callback connections gracefully.&lt;/li&gt;
+&lt;li&gt;Use Network add-on to serve callback requests.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Make Interactsh payloads more robust by adding a further char with a dot before the actual correlationId (Issue 7003)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.9.0/oast-alpha-0.9.0.zap</url>
-        <hash>SHA-256:d66663731602b0af3ea99e1f4edeb37365aff2818cfd0a194766c21424cb39ac</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.10.0/oast-alpha-0.10.0.zap</url>
+        <hash>SHA-256:b4b4b4defc01b14675ce1f4d6dadbfaa118ec06456162bb00a585735d9a95526</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-31</date>
-        <size>761912</size>
+        <date>2022-02-18</date>
+        <size>773485</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>network</id>
+                    <version>&gt;= 0.1.0</version>
                 </addon>
             </addons>
         </dependencies>
