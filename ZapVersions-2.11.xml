@@ -1164,17 +1164,18 @@
         <name>Help - Russian</name>
         <description>Russian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>1</version>
-        <file>help_ru_RU-alpha-1.zap</file>
-        <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <version>2</version>
+        <file>help_ru_RU-release-2.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Promote to Release&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ru_RU-v1/help_ru_RU-alpha-1.zap</url>
-        <hash>SHA-256:e2bc0764bdddb2218294a2c53340f303434c0387a6059763ac1e2c89a5df8456</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ru_RU-v2/help_ru_RU-release-2.zap</url>
+        <hash>SHA-256:3fd5d8e6af7453a3a16e7c38a19ec941a330d0fd050f562ecebdc4638ae52c80</hash>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>751677</size>
+        <date>2022-02-24</date>
+        <size>779171</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_help_ru_RU>
     <addon>help_tr_TR</addon>
