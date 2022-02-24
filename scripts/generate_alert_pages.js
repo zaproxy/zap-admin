@@ -132,8 +132,6 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		}
 		pw.println('code: ' + codeurl);
 		pw.println('linktext: "' + linktext + '"');
-		pw.println('date: ' + date);
-		pw.println('lastmod: ' + date);
 		pw.println('---');
 		pw.close();
 	}
