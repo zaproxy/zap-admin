@@ -13,6 +13,7 @@ var Constant = Java.type('org.parosproxy.paros.Constant');
 var PluginPassiveScanner = Java.type('org.zaproxy.zap.extension.pscan.PluginPassiveScanner');
 var FileWriter = Java.type('java.io.FileWriter');
 var PrintWriter = Java.type('java.io.PrintWriter');
+var TreeSet = Java.type('java.util.TreeSet');
 var ignoreList = [50000, 50001, 50003, 60000, 60001, 60100, 60101];
 var codeMap = {
 	40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java',
@@ -176,7 +177,9 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		var tags = alert.getTags();
 		if (tags) {
 			pw.println('alerttags: ');
-			for (tag in tags) {
+			var sorted_tags = (new TreeSet(tags.keySet())).toArray();
+			for (var tag_i in sorted_tags) {
+				var tag = sorted_tags[tag_i];
 				pw.println('  - ' + tag);
 				allAlertTags[tag] = tags[tag]
 			}
