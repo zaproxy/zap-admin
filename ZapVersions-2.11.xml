@@ -286,28 +286,20 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.12.0</version>
-        <file>automation-beta-0.12.0.zap</file>
+        <version>0.13.0</version>
+        <file>automation-beta-0.13.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Script authentication support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;When a Job is loaded via yaml and edited via UI Dialog then the saved changes will be applied on the next job run&lt;/li&gt;
-&lt;li&gt;DelayJob will be verified on yaml load&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;When a Job is edited via UI Dialog then the status will be set to Not started&lt;/li&gt;
+&lt;li&gt;Issue when adding or removing add-ons via the UI (Issue 7075)&lt;/li&gt;
+&lt;li&gt;Issue when creating a script session management with parameters from an existing context&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.12.0/automation-beta-0.12.0.zap</url>
-        <hash>SHA-256:8f5a9185d94d80e3eed5e8902f0dbc73d93220d8940a71d474593eaf82f8cd2d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.13.0/automation-beta-0.13.0.zap</url>
+        <hash>SHA-256:af4a8d1cb8d90e33fbc4bff7d2a4824b9a113b3eb8f91ad502a9e11e9d156494</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-01</date>
-        <size>4128315</size>
+        <date>2022-02-25</date>
+        <size>4138136</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -2138,30 +2130,25 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>scripts-beta-29.zap</file>
+        <version>30</version>
+        <file>scripts-beta-30.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to choose Kotlin for syntax highlighting.&lt;/li&gt;
+&lt;li&gt;Automation ScriptJob - Add or remove any script and run a standalone script&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Do not show &lt;code&gt;Null&lt;/code&gt; script engine in Edit Script dialogue.&lt;/li&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;Update links to zaproxy and community-scripts repo.&lt;/li&gt;
-&lt;li&gt;Maintenance Changes.&lt;/li&gt;
-&lt;li&gt;'Copy as curl command menu.js' is now preceded by a separator, and the Title Caps of the menu item were fixed (Issue 2000).&lt;/li&gt;
-&lt;li&gt;'Copy as curl command menu.js' is now available in safe mode.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v29/scripts-beta-29.zap</url>
-        <hash>SHA-256:8e97926a777507eebb4bd625b2458b11c4490baeffe61f83cfc378d7d67ef718</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v30/scripts-beta-30.zap</url>
+        <hash>SHA-256:990819681db37ce24c346dc93e8065e226a3edaa0bf2a7b8986fa66b51a87d1a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>678857</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-02-25</date>
+        <size>714448</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
     <addon_selenium>
