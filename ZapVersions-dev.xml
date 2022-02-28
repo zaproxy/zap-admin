@@ -6,8 +6,8 @@
         <daily>
             <url>https://github.com/zaproxy/zaproxy/releases/download/w2022-02-28/ZAP_WEEKLY_D-2022-02-28.zip</url>
             <file>ZAP_WEEKLY_D-2022-02-28.zip</file>
-            <hash>SHA-256:8aa95cb385a70cb617ad479d368a33d92ffb15e82118e37089073e4deb43b386</hash>
-            <size>287960813</size>
+            <hash>SHA-256:3a99b476a24c994b094ca64083f536a048a1d1049ec46402fff79d92fbf32269</hash>
+            <size>287960804</size>
         </daily>
         <windows32>
             <url>https://github.com/zaproxy/zaproxy/releases/download/v2.11.1/ZAP_2_11_1_windows-x32.exe</url>
