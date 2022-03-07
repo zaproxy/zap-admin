@@ -485,22 +485,22 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.7.0</version>
-        <file>commonlib-release-1.7.0.zap</file>
+        <version>1.8.0</version>
+        <file>commonlib-release-1.8.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;A generic component for displaying progress, such as when importing an openapi definition (Issue 6783).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes (Issue 6810).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.7.0/commonlib-release-1.7.0.zap</url>
-        <hash>SHA-256:60a36fc731f5c466e8d96bd693e6b2efc5095de1b12f82e433d1707b13760904</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.8.0/commonlib-release-1.8.0.zap</url>
+        <hash>SHA-256:44e746911c499b139ce1157f74c89f8565bc7fc96369cc448e1cab9cce43aaae</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-02</date>
-        <size>4053241</size>
+        <date>2022-03-07</date>
+        <size>4073444</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -755,19 +755,34 @@
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.0.1</version>
-        <file>exim-alpha-0.0.1.zap</file>
-        <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First release.&lt;/li&gt;
+        <version>0.1.0</version>
+        <file>exim-beta-0.1.0.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduce logging and display a warning dialog when unable to read files being imported (Issue 7081).&lt;/li&gt;
+&lt;li&gt;Promoted to Beta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Importing a file of URLs or HAR is now displayed in the progress panel provided via commonlib.&lt;/li&gt;
+&lt;li&gt;Automation Framework (Issue 7078).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.0.1/exim-alpha-0.0.1.zap</url>
-        <hash>SHA-256:8e5ad75515ae97d4225bafcf3e1869b7d15e296f102a928648be52112b7b7d51</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.1.0/exim-beta-0.1.0.zap</url>
+        <hash>SHA-256:e7ed40e073b7bf355d2eabe55641651e63f73770e485d1586d7c423827a181b0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-22</date>
-        <size>294966</size>
+        <date>2022-03-07</date>
+        <size>356202</size>
         <not-before-version>2.11.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.8.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_exim>
     <addon>fileupload</addon>
     <addon_fileupload>
