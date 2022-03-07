@@ -1712,27 +1712,38 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>38</version>
-        <file>pscanrules-release-38.zap</file>
+        <version>39</version>
+        <file>pscanrules-release-39.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Renamed 'X-Frame-Options Header Not Set' alert to 'Missing Anti-clickjacking Header', and associated scan rule 'X-Frame-Options Header' to 'Anti-clickjacking Header'. The rule already considered Content-Security-Policy 'frame-ancestors' which is a more modern solution to the same concern. Updated associated solution text. (Issue 6937)&lt;/li&gt;
-&lt;li&gt;Content Security Policy scan rule will no longer classify &amp;quot;require-trusted-types-for&amp;quot; or &amp;quot;trusted-types&amp;quot; directives as unknown (Issue 6602).&lt;/li&gt;
+&lt;li&gt;Alert refs for the alerts which use them (10020 and 10032).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Moved the detail information in Content Security Policy Rule to the otherInfo field and added alertRef ids.&lt;/li&gt;
+&lt;li&gt;Address false positive condition for Timestamp Disclosure scan rule when values are percentages (Issue 7057).&lt;/li&gt;
+&lt;li&gt;Update Cache-control scan rule name, description, and solution to make it more clear that there are cases in which caching is reasonable. Reduced risk to Info (Issue 6462).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The CSRF Token scan rule will now raise alerts as Medium risk and Low confidence (Issue 7021).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CSP scan rule will now alert in situations where default-src contains 'unsafe-inline' or is not defined (Issue 7120). In certain situations this may mean a marked increase in CSP related Alerts.&lt;/li&gt;
+&lt;li&gt;A typo was corrected in the CSP scan rule which was causing invalid assessment of &amp;quot;connect-src&amp;quot; directives.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v38/pscanrules-release-38.zap</url>
-        <hash>SHA-256:c8b4bd3eeff987f514c382678894340188db80927f97f37572bc9b3ee6d53a3b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v39/pscanrules-release-39.zap</url>
+        <hash>SHA-256:c3a7244b4b8de9eacb495e6a2fb940ff0fe2e7c3eebc69a054ccf42f243182c2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-07</date>
-        <size>1181912</size>
+        <date>2022-03-07</date>
+        <size>1199816</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
