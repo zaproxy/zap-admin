@@ -2567,25 +2567,27 @@
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>24</version>
-        <file>websocket-release-24.zap</file>
+        <version>25</version>
+        <file>websocket-release-25.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Now using 2.10 logging infrastructure (Log4j 2.x).&lt;/li&gt;
-&lt;li&gt;Maintenance changes (some changes impact the visibility of variables and add getters/setters, which may impact third party add-ons or scripts).&lt;/li&gt;
-&lt;li&gt;Update links to repository.&lt;/li&gt;
-&lt;li&gt;Support passive scan alert examples so they can be added to the website&lt;/li&gt;
-&lt;li&gt;Missing default scripts will always be added and enabled on start up.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Update the reference links used in the Username IDOR passive scan script.&lt;/li&gt;
+&lt;li&gt;Reset the name of the connection threads when not actively used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix exception when manually reconnecting to the server.&lt;/li&gt;
+&lt;li&gt;Stop properly when shutting down.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v24/websocket-release-24.zap</url>
-        <hash>SHA-256:f4ce77310d8c566901f57a8fdb65382c5faab5ca781adfda5179b491cb17c562</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v25/websocket-release-25.zap</url>
+        <hash>SHA-256:33674b6631532d7ec5093e9bd9ae345ceb9bc15aa4116af802491790fb8bd159</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/websockets/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>1394965</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-03-14</date>
+        <size>1411624</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_websocket>
     <addon>zest</addon>
     <addon_zest>
