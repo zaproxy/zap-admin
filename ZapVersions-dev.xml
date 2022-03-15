@@ -209,26 +209,38 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>ascanrulesBeta-beta-39.zap</file>
+        <version>40</version>
+        <file>ascanrulesBeta-beta-40.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Hidden File Finder scan rule, content checking has been added for .svn/entries as well as detection for wc.db.&lt;/li&gt;
+&lt;li&gt;Use Network add-on to detect/serve HttPoxy scan rule requests.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The CSRF Token scan rule will now raise alerts as Medium risk (Issue 7021).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Adapted Cloud Metadata Attack scan rule to use Custom Pages and active scan analyzer to help reduce false positives in certain cases (Issue 7033).&lt;/li&gt;
+&lt;li&gt;Generic Padding Oracle scan rule will no longer raise an alert for validation fields when the error response contains expected error patterns (Issue 6183).&lt;/li&gt;
+&lt;li&gt;Hidden File Finder no longer follows redirects when sending requests for potential hidden files which should make it less false positive prone (Issue 7036).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v39/ascanrulesBeta-beta-39.zap</url>
-        <hash>SHA-256:9660dd0bc77ea1ba04f0e9638039d33d078a223badff804afcd6f84365368972</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v40/ascanrulesBeta-beta-40.zap</url>
+        <hash>SHA-256:af7fc5aefd216505e229d2ee678ef93c4fd0549bc104b3f19700d72dc65fdea3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-13</date>
-        <size>2056964</size>
+        <date>2022-03-15</date>
+        <size>2078841</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;= 0.1.0</version>
                 </addon>
                 <addon>
                     <id>oast</id>
