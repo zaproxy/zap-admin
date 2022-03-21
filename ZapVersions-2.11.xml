@@ -143,33 +143,29 @@
         <name>Active scanner rules</name>
         <description>The release quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>45</version>
-        <file>ascanrules-release-45.zap</file>
+        <version>46</version>
+        <file>ascanrules-release-46.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Remote OS Command Injection rule now has more information in the Other Info field to differentiate feedback-based or time-based tests&lt;/li&gt;
-&lt;li&gt;Path Traversal scan rule, updated the regex for case 5 to be case-insensitive when searching for Error or Exception in content body.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Server Side Code Injection scan rule, prevent use of zero when injecting ASP multiplication to avoid false positives (Issue 7107).&lt;/li&gt;
-&lt;li&gt;External Redirect scan rule to detect redirects with dots deny listed.&lt;/li&gt;
-&lt;li&gt;Cross Site Scripting (Reflected) scan rule will no longer raise an alert for unsuccessful JavaScript string injections (Issue 1641).&lt;/li&gt;
+&lt;li&gt;Fix Cross Site Scripting (Reflected) scan rule false negatives introduced in previous version.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v45/ascanrules-release-45.zap</url>
-        <hash>SHA-256:ce346b7580ac13a7379d7da776ae8142738b1caeb62ea0ee1d88b1965857faf5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v46/ascanrules-release-46.zap</url>
+        <hash>SHA-256:8bc56103b0f67966f2ccfc2d9fdb3cffe42fa1a504f1d24d2d39c85f8b5aa4eb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-15</date>
-        <size>2500756</size>
+        <date>2022-03-21</date>
+        <size>2499205</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.9.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -504,22 +500,18 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.8.0</version>
-        <file>commonlib-release-1.8.0.zap</file>
+        <version>1.9.0</version>
+        <file>commonlib-release-1.9.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A generic component for displaying progress, such as when importing an openapi definition (Issue 6783).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.8.0/commonlib-release-1.8.0.zap</url>
-        <hash>SHA-256:44e746911c499b139ce1157f74c89f8565bc7fc96369cc448e1cab9cce43aaae</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.9.0/commonlib-release-1.9.0.zap</url>
+        <hash>SHA-256:a269dda47b5c28e1abf9054c0b01c767b6f307a989e30520f8992c9d580e101d</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-07</date>
-        <size>4073444</size>
+        <date>2022-03-21</date>
+        <size>4077357</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
