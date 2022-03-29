@@ -2192,23 +2192,20 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.7.0</version>
-        <file>selenium-release-15.7.0.zap</file>
+        <version>15.8.0</version>
+        <file>selenium-release-15.8.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Statistics, number of browsers launched.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Quit all browsers when ZAP shuts down (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6643"&gt;Issue #6643&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Support aarch64/arm64 WebDrivers.&lt;/li&gt;
+&lt;li&gt;Allow to choose the location of Chrome binary (Issue 7166).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.7.0/selenium-release-15.7.0.zap</url>
-        <hash>SHA-256:be7922b5eae0f8f2cfc27dcb3910feda018290f187d55a13ce5c11dd5d09a402</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.8.0/selenium-release-15.8.0.zap</url>
+        <hash>SHA-256:4fb35e8ed16d92032a1af454e07f17d020efb6846bb5bfa2630fa096d3ee156c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-17</date>
-        <size>24906567</size>
+        <date>2022-03-29</date>
+        <size>24907051</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_selenium>
     <addon>sequence</addon>
@@ -2538,19 +2535,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>webdrivermacos-release-36.zap</file>
+        <version>37</version>
+        <file>webdrivermacos-release-37.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 99.0.4844.51.&lt;/li&gt;
+&lt;li&gt;Add aarch64/arm64 WebDrivers.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v36/webdrivermacos-release-36.zap</url>
-        <hash>SHA-256:d1972009cdba6b405fb682933a409f82a144c3480abb37bb9a907f937fb0fc01</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v37/webdrivermacos-release-37.zap</url>
+        <hash>SHA-256:d444abeae8478e51f1bf01de11c4995b37c404de44802ee53969a65c6361e143</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-04</date>
-        <size>10413614</size>
+        <date>2022-03-29</date>
+        <size>19759499</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
