@@ -1650,20 +1650,39 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>26</version>
-        <file>openapi-beta-26.zap</file>
+        <version>27</version>
+        <file>openapi-beta-27.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Do not report &amp;quot;Unrecognised parameter&amp;quot; for valid parameters.&lt;/li&gt;
+&lt;li&gt;Support content field (JSON) in parameters (Issue 6166).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Now depends on commonlib for display of import progress (Issue 6783).&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Properly generate Content-Type header when in presence of more than one supported content (Issue 7082).&lt;/li&gt;
+&lt;li&gt;Quote provided string values in JSON content (Issue 7128).&lt;/li&gt;
+&lt;li&gt;Properly handle empty default values in server variables.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v26/openapi-beta-26.zap</url>
-        <hash>SHA-256:1b72e3d788c05118a03d62b372717eb6ce6aeec8452e6ef0db95add14a8e0ffa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v27/openapi-beta-27.zap</url>
+        <hash>SHA-256:e96bd5791496cdc72951bd59869618a88932b50775a1c08b1371c6e12294d983</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-01</date>
-        <size>12175459</size>
+        <date>2022-03-29</date>
+        <size>12169396</size>
         <not-before-version>2.11.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.8.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_openapi>
     <addon>plugnhack</addon>
     <addon_plugnhack>
