@@ -175,30 +175,29 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha quality Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>ascanrulesAlpha-alpha-36.zap</file>
+        <version>37</version>
+        <file>ascanrulesAlpha-alpha-37.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Out-of-band XSS Scan Rule.&lt;/li&gt;
-&lt;li&gt;Exponential Entity Expansion (Billion Laughs Attack) Scan Rule.&lt;/li&gt;
+&lt;li&gt;Spring4Shell (CVE-2022-22965) Scan Rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Improved performance of a Web Cache Deception scan rule (Issue 6655).&lt;/li&gt;
+&lt;li&gt;The Web Cache Deception scan rule now uses a comparison mechanism which should be more performant, and will no longer scan messages which had an error response to start with (Issue 6655).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v36/ascanrulesAlpha-alpha-36.zap</url>
-        <hash>SHA-256:16b43ebc3244a4b107e3043162f5bc173207b82d524a2a4e158a7ef76136e0fc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v37/ascanrulesAlpha-alpha-37.zap</url>
+        <hash>SHA-256:c21489e82d785743ac472ae309522c7ed73560c694e978b3099ed5ff0b4b7a2d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-15</date>
-        <size>511547</size>
+        <date>2022-04-04</date>
+        <size>539624</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.8.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>oast</id>
