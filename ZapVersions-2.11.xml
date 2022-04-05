@@ -300,20 +300,28 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>automation-beta-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>automation-beta-0.14.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Issue when adding or removing add-ons via the UI (Issue 7075)&lt;/li&gt;
-&lt;li&gt;Issue when creating a script session management with parameters from an existing context&lt;/li&gt;
+&lt;li&gt;Import Job profile (Issue 7078).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The ascan job 'Scan All Header' GUI label&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Register plans run by -autorun to prevent NPEs when editing them&lt;/li&gt;
+&lt;li&gt;Issue when turning off specific active scan rules&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.13.0/automation-beta-0.13.0.zap</url>
-        <hash>SHA-256:af4a8d1cb8d90e33fbc4bff7d2a4824b9a113b3eb8f91ad502a9e11e9d156494</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.14.0/automation-beta-0.14.0.zap</url>
+        <hash>SHA-256:b7c19af519dd3ba64bfe14000e7bbf5e07ef43604a3ccbe768b801e4458328ad</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-25</date>
-        <size>4138136</size>
+        <date>2022-04-05</date>
+        <size>4138797</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -949,21 +957,19 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>graphql-alpha-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>graphql-alpha-0.9.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Reduce printed errors messages in the script Input Vector.&lt;/li&gt;
-&lt;li&gt;When the automation Job is edited via UI Dialog then the status will be set to Not started&lt;/li&gt;
+&lt;li&gt;Replace variables present in &lt;code&gt;schemaFile&lt;/code&gt; when running the automation job.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.8.0/graphql-alpha-0.8.0.zap</url>
-        <hash>SHA-256:4172c5d8a360a1ce5e20f1765e31169776884cbc3bcb3e23347f5695ea8e9ead</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.9.0/graphql-alpha-0.9.0.zap</url>
+        <hash>SHA-256:62a7c426bc7659e4ed47fa4180549946d7c8a0a49f39c6c88acc7f6c8afd4306</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-02</date>
-        <size>22088515</size>
+        <date>2022-04-05</date>
+        <size>22089194</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
@@ -1953,23 +1959,20 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.12.0</version>
-        <file>reports-release-0.12.0.zap</file>
+        <version>0.13.0</version>
+        <file>reports-release-0.13.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Problem generating 'Risk and Confidence HTML' report with Java 17 (Issue 7026)&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Replace variables present in &lt;code&gt;reportDir&lt;/code&gt; and &lt;code&gt;reportFile&lt;/code&gt; when running the automation job.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.12.0/reports-release-0.12.0.zap</url>
-        <hash>SHA-256:0b4a91168ac00f11fb7b9fa6212d3b03a306196a02cf676b6d798af8429e4939</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.13.0/reports-release-0.13.0.zap</url>
+        <hash>SHA-256:00caa27f9118d8f3953be6e6e33b17be55ebf28af8584acf7c18433e8f21d8d4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-11</date>
-        <size>66956958</size>
+        <date>2022-04-05</date>
+        <size>66963812</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_reports>
     <addon>requester</addon>
