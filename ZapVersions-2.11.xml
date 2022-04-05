@@ -1747,32 +1747,23 @@
         <name>Passive scanner rules</name>
         <description>The release quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>pscanrules-release-39.zap</file>
+        <version>40</version>
+        <file>pscanrules-release-40.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Alert refs for the alerts which use them (10020 and 10032).&lt;/li&gt;
+&lt;li&gt;Clarify the alert solution for the Cache Control scan rule.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Moved the detail information in Content Security Policy Rule to the otherInfo field and added alertRef ids.&lt;/li&gt;
-&lt;li&gt;Address false positive condition for Timestamp Disclosure scan rule when values are percentages (Issue 7057).&lt;/li&gt;
-&lt;li&gt;Update Cache-control scan rule name, description, and solution to make it more clear that there are cases in which caching is reasonable. Reduced risk to Info (Issue 6462).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The CSRF Token scan rule will now raise alerts as Medium risk and Low confidence (Issue 7021).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;CSP scan rule will now alert in situations where default-src contains 'unsafe-inline' or is not defined (Issue 7120). In certain situations this may mean a marked increase in CSP related Alerts.&lt;/li&gt;
-&lt;li&gt;A typo was corrected in the CSP scan rule which was causing invalid assessment of &amp;quot;connect-src&amp;quot; directives.&lt;/li&gt;
+&lt;li&gt;Content Security Policy (CSP) Header Not Set scan rule promoted to release.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v39/pscanrules-release-39.zap</url>
-        <hash>SHA-256:c3a7244b4b8de9eacb495e6a2fb940ff0fe2e7c3eebc69a054ccf42f243182c2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v40/pscanrules-release-40.zap</url>
+        <hash>SHA-256:d3fe5602dd99579d9e0de1b6d90833e019473c95485590653e5643c266af046c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-07</date>
-        <size>1199816</size>
+        <date>2022-04-05</date>
+        <size>1206972</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -1821,33 +1812,30 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta quality Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>28</version>
-        <file>pscanrulesBeta-beta-28.zap</file>
+        <version>29</version>
+        <file>pscanrulesBeta-beta-29.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed false positive in Reverse Tabnabbing scan rule.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings where applicable.&lt;/li&gt;
+&lt;li&gt;Content Security Policy (CSP) Header Not Set scan rule promoted to release.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v28/pscanrulesBeta-beta-28.zap</url>
-        <hash>SHA-256:00f4e822222ed8e40f57a2f2744716c8c47119b948d7c03d88272ea7b3c60ea8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v29/pscanrulesBeta-beta-29.zap</url>
+        <hash>SHA-256:c03ea666858a108eff51cfd4e7cd141d172755e3a335ae0ed297707819d6769f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-01</date>
-        <size>1013210</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-04-05</date>
+        <size>1021476</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
