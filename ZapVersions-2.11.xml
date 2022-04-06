@@ -1572,23 +1572,25 @@
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>network-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>network-alpha-0.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Provide HTTP servers/proxies to other add-ons.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;li&gt;On weekly releases and versions after 2.11:
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Management of local servers/proxies, supersedes core functionality;&lt;/li&gt;
+&lt;li&gt;Configuration of aliases for the servers/proxies (&lt;a href="https://github.com/zaproxy/zaproxy/issues/3594"&gt;Issue 3594&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;Pass-through connections (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6832"&gt;Issue 6832&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.1.0/network-alpha-0.1.0.zap</url>
-        <hash>SHA-256:4f273112527b2515959e0bd3b13eede834a8b245e3a97a6027ed27b2e96afd5c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.2.0/network-alpha-0.2.0.zap</url>
+        <hash>SHA-256:9684a67a6bdf2d221f85fb86ff7cb3c1a4aefda4f7fda4a715f5dfa182fcbbd9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-01</date>
-        <size>17766859</size>
+        <date>2022-04-06</date>
+        <size>17892519</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_network>
     <addon>oast</addon>
