@@ -296,28 +296,28 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.14.0</version>
-        <file>automation-beta-0.14.0.zap</file>
+        <version>0.15.0</version>
+        <file>automation-beta-0.15.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Import Job profile (Issue 7078).&lt;/li&gt;
+&lt;li&gt;Test type to check for presence of a URL.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The ascan job 'Scan All Header' GUI label&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Register plans run by -autorun to prevent NPEs when editing them&lt;/li&gt;
-&lt;li&gt;Issue when turning off specific active scan rules&lt;/li&gt;
+&lt;li&gt;Use correct authentication verification method for &lt;code&gt;request&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Exceptions when using the GUI.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.14.0/automation-beta-0.14.0.zap</url>
-        <hash>SHA-256:b7c19af519dd3ba64bfe14000e7bbf5e07ef43604a3ccbe768b801e4458328ad</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.15.0/automation-beta-0.15.0.zap</url>
+        <hash>SHA-256:ae47e8d528bfb9b39ab60607d092039fbca9b6875c712768ff4b0b71b6b95419</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-05</date>
-        <size>4138797</size>
+        <date>2022-04-25</date>
+        <size>4151779</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
