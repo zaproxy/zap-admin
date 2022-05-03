@@ -2017,21 +2017,19 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.10.0</version>
-        <file>retire-release-0.10.0.zap</file>
+        <version>0.11.0</version>
+        <file>retire-release-0.11.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.10.0/retire-release-0.10.0.zap</url>
-        <hash>SHA-256:c21263b38e83a3473070a9a25b03c1c3860fc69ed145c036e7a22ae22bfd3810</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.11.0/retire-release-0.11.0.zap</url>
+        <hash>SHA-256:dc9843869f48220756c551ed54e8875b5af427dd2e0a29da924ce24005e1e82b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-02</date>
-        <size>1208058</size>
+        <date>2022-05-03</date>
+        <size>1209103</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -2494,19 +2492,25 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.9.0</version>
-        <file>wappalyzer-release-21.9.0.zap</file>
+        <version>21.10.0</version>
+        <file>wappalyzer-release-21.10.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Updated the pattern parser to deal with Confidence or Version fields extending DOM patterns (for the time being they're ignored).&lt;/li&gt;
+&lt;li&gt;Updated the passive scan rule to be thread safe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address error when generating the report with Java 17 (Issue 6880).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.9.0/wappalyzer-release-21.9.0.zap</url>
-        <hash>SHA-256:e2ef4362d681db4a022cff51404a943bf8500b3695c4b08f85fc2830c7b746d6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.10.0/wappalyzer-release-21.10.0.zap</url>
+        <hash>SHA-256:2197d9236cd6f82ab7865310d17463035c0367e3fa2f530b05021cae07b41e5d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-03</date>
-        <size>14483155</size>
+        <date>2022-05-03</date>
+        <size>15700711</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
