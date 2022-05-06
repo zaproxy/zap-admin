@@ -2197,21 +2197,32 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.8.0</version>
-        <file>selenium-release-15.8.0.zap</file>
+        <version>15.9.0</version>
+        <file>selenium-release-15.9.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support aarch64/arm64 WebDrivers.&lt;/li&gt;
-&lt;li&gt;Allow to choose the location of Chrome binary (Issue 7166).&lt;/li&gt;
+&lt;li&gt;Use Network add-on to obtain main proxy address/port.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Restore usage of bundled ChromeDriver (&lt;a href="https://github.com/zaproxy/zaproxy/issues/7272"&gt;Issue #7272&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.8.0/selenium-release-15.8.0.zap</url>
-        <hash>SHA-256:4fb35e8ed16d92032a1af454e07f17d020efb6846bb5bfa2630fa096d3ee156c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.9.0/selenium-release-15.9.0.zap</url>
+        <hash>SHA-256:297114535a2e2973d96fcb18bc686cf46991386d3ccdb8157a884bc537a44228</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-29</date>
-        <size>24907051</size>
+        <date>2022-05-06</date>
+        <size>24911785</size>
         <not-before-version>2.11.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.2.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_selenium>
     <addon>sequence</addon>
     <addon_sequence>
