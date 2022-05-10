@@ -143,7 +143,7 @@ public class HelpGenerator {
         do {
             String status = null;
             do {
-                System.out.print("Enter r/b/a for release/beta or alpha quality:\t");
+                System.out.print("Enter r/b/a for release/beta or alpha status:\t");
                 String q = in.readLine();
                 if (q.equalsIgnoreCase("r")) {
                     status = "";
