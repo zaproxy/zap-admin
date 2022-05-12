@@ -52,7 +52,7 @@ final class Utils {
         return addOnTocItem
                 .getText()
                 .toLowerCase(Locale.ROOT)
-                .replaceAll("[ /]", "-")
+                .replaceAll("[ /:]", "-")
                 .replaceAll("-{2,}", "-");
     }
 
