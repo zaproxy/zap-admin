@@ -1692,16 +1692,19 @@
         <name>Collection: Pentester Pack</name>
         <description>A collection of add-ons ideal for pentesters</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>packpentester-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>packpentester-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;p&gt;First version.&lt;/p&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/packpentester-v0.0.1/packpentester-alpha-0.0.1.zap</url>
-        <hash>SHA-256:dab2736ddf2d5339cb034acd0472fac963b8ace8db358e98f6558f3e44499084</hash>
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Corrected fuzz add-on name&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/packpentester-v0.1.0/packpentester-alpha-0.1.0.zap</url>
+        <hash>SHA-256:0b8e7e4ddffdcacf46fdf9793bf84217738e281cbd5ccac732788c4b768d069c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/collection-pentester-pack/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2022-05-12</date>
-        <size>6762</size>
+        <size>6792</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -1721,10 +1724,10 @@
                     <id>fileupload</id>
                 </addon>
                 <addon>
-                    <id>fuzzdb</id>
+                    <id>fuzz</id>
                 </addon>
                 <addon>
-                    <id>fuzzer</id>
+                    <id>fuzzdb</id>
                 </addon>
                 <addon>
                     <id>jsonview</id>
