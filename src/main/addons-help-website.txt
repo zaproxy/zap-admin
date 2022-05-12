@@ -59,6 +59,9 @@ network
 oast
 onlineMenu
 openapi
+packpentester
+packscanrules
+packscripts
 plugnhack
 portscan
 pscanrulesAlpha
