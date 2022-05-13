@@ -1747,6 +1747,51 @@
             </addons>
         </dependencies>
     </addon_packpentester>
+    <addon>packscanrules</addon>
+    <addon_packscanrules>
+        <name>Collection: Scan Rules Pack</name>
+        <description>All of the add-ons just containing release, beta and alpha status scan rules</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>packscanrules-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;p&gt;First version.&lt;/p&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/packscanrules-v0.0.1/packscanrules-alpha-0.0.1.zap</url>
+        <hash>SHA-256:5ad68f153379bd96f36a7bead61e884cc42e1409cdd262dffc682b5f7bf92da4</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/collection-scan-rules-pack/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2022-05-13</date>
+        <size>9244</size>
+        <not-before-version>2.11.1</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>ascanrules</id>
+                </addon>
+                <addon>
+                    <id>ascanrulesAlpha</id>
+                </addon>
+                <addon>
+                    <id>ascanrulesBeta</id>
+                </addon>
+                <addon>
+                    <id>domxss</id>
+                </addon>
+                <addon>
+                    <id>pscanrules</id>
+                </addon>
+                <addon>
+                    <id>pscanrulesAlpha</id>
+                </addon>
+                <addon>
+                    <id>pscanrulesBeta</id>
+                </addon>
+                <addon>
+                    <id>retire</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_packscanrules>
     <addon>plugnhack</addon>
     <addon_plugnhack>
         <name>Plug-n-Hack Configuration</name>
