@@ -2706,26 +2706,24 @@
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>25</version>
-        <file>websocket-release-25.zap</file>
+        <version>26</version>
+        <file>websocket-release-26.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Update the reference links used in the Username IDOR passive scan script.&lt;/li&gt;
-&lt;li&gt;Reset the name of the connection threads when not actively used.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Cache WebSocket Passive Rules scripts for better performance with all script engines.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix exception when manually reconnecting to the server.&lt;/li&gt;
-&lt;li&gt;Stop properly when shutting down.&lt;/li&gt;
+&lt;li&gt;Handle errors caused by WebSocket Passive Rules scripts, which would break the passive scan.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v25/websocket-release-25.zap</url>
-        <hash>SHA-256:33674b6631532d7ec5093e9bd9ae345ceb9bc15aa4116af802491790fb8bd159</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v26/websocket-release-26.zap</url>
+        <hash>SHA-256:965a94bf9486b15eed5ad0dde9d681a2c121282bed73da62df2a6916acd0a1aa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/websockets/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-14</date>
-        <size>1411624</size>
+        <date>2022-05-20</date>
+        <size>1413083</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_websocket>
     <addon>zest</addon>
