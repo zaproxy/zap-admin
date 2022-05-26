@@ -2126,19 +2126,20 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>retire-release-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>retire-release-0.12.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;Relevant CVEs will now be added as Alert Tags when available.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.11.0/retire-release-0.11.0.zap</url>
-        <hash>SHA-256:dc9843869f48220756c551ed54e8875b5af427dd2e0a29da924ce24005e1e82b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.12.0/retire-release-0.12.0.zap</url>
+        <hash>SHA-256:3ea093c8f4de6944a296b3655b79f38ecf62a8a147dd7f383f226ee128e5a342</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-05-03</date>
-        <size>1209103</size>
+        <date>2022-05-26</date>
+        <size>1210654</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
