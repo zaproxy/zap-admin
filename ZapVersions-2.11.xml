@@ -2613,25 +2613,24 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.10.0</version>
-        <file>wappalyzer-release-21.10.0.zap</file>
+        <version>21.11.0</version>
+        <file>wappalyzer-release-21.11.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;p&gt;###Changed&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Updated the pattern parser to deal with Confidence or Version fields extending DOM patterns (for the time being they're ignored).&lt;/li&gt;
-&lt;li&gt;Updated the passive scan rule to be thread safe.&lt;/li&gt;
+&lt;li&gt;Update Wappalyzer URL in help documentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address error when generating the report with Java 17 (Issue 6880).&lt;/li&gt;
+&lt;li&gt;Threading issue - only reproducible with currently unreleased core changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.10.0/wappalyzer-release-21.10.0.zap</url>
-        <hash>SHA-256:2197d9236cd6f82ab7865310d17463035c0367e3fa2f530b05021cae07b41e5d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.11.0/wappalyzer-release-21.11.0.zap</url>
+        <hash>SHA-256:6eef45d6603a9d01e2cfae66f5c292255b38562f8b8f70437222c08ad76e56b5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-05-03</date>
-        <size>15700711</size>
+        <date>2022-06-03</date>
+        <size>15807241</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
