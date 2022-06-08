@@ -207,28 +207,25 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>40</version>
-        <file>ascanrulesBeta-beta-40.zap</file>
+        <version>41</version>
+        <file>ascanrulesBeta-beta-41.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Hidden File Finder scan rule, content checking has been added for .svn/entries as well as detection for wc.db.&lt;/li&gt;
-&lt;li&gt;Use Network add-on to detect/serve HttPoxy scan rule requests.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The CSRF Token scan rule will now raise alerts as Medium risk (Issue 7021).&lt;/li&gt;
+&lt;li&gt;Adding more checks to Hidden File Finder scan rule.&lt;/li&gt;
+&lt;li&gt;The Cloud Metadata scan rule will now be attempted with additional payloads (using DNS not just IPs), and supporting Alibaba.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Adapted Cloud Metadata Attack scan rule to use Custom Pages and active scan analyzer to help reduce false positives in certain cases (Issue 7033).&lt;/li&gt;
-&lt;li&gt;Generic Padding Oracle scan rule will no longer raise an alert for validation fields when the error response contains expected error patterns (Issue 6183).&lt;/li&gt;
-&lt;li&gt;Hidden File Finder no longer follows redirects when sending requests for potential hidden files which should make it less false positive prone (Issue 7036).&lt;/li&gt;
+&lt;li&gt;False Positive in XSLT Injection where &amp;quot;Microsoft-Azure-Application-Gateway&amp;quot; can be returned in a 403 if the gateway detects an attack.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v40/ascanrulesBeta-beta-40.zap</url>
-        <hash>SHA-256:af7fc5aefd216505e229d2ee678ef93c4fd0549bc104b3f19700d72dc65fdea3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v41/ascanrulesBeta-beta-41.zap</url>
+        <hash>SHA-256:703ba1d171a68a5dcdc3acb84d7f800dcc8a8a8282ab2cea362585e618b933a4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-15</date>
-        <size>2078841</size>
+        <date>2022-06-08</date>
+        <size>2079924</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
