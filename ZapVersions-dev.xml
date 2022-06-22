@@ -293,28 +293,26 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.15.0</version>
-        <file>automation-beta-0.15.0.zap</file>
+        <version>0.16.0</version>
+        <file>automation-beta-0.16.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Test type to check for presence of a URL.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use correct authentication verification method for &lt;code&gt;request&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Exceptions when using the GUI.&lt;/li&gt;
+&lt;li&gt;Show each context URL in its own line when editing in the GUI (Issue 7241).&lt;/li&gt;
+&lt;li&gt;Correct error messages.&lt;/li&gt;
+&lt;li&gt;Wrong API end point reference in help&lt;/li&gt;
+&lt;li&gt;Fix exception when alerts found during active scan no longer exist when creating the data for the report.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.15.0/automation-beta-0.15.0.zap</url>
-        <hash>SHA-256:ae47e8d528bfb9b39ab60607d092039fbca9b6875c712768ff4b0b71b6b95419</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.16.0/automation-beta-0.16.0.zap</url>
+        <hash>SHA-256:23435dffc7676da929986495dc423289a109918c5b8a379d5f10a0c5e033c828</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-25</date>
-        <size>4151779</size>
+        <date>2022-06-22</date>
+        <size>4183964</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -2047,20 +2045,23 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>reports-release-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>reports-release-0.14.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Replace variables present in &lt;code&gt;reportDir&lt;/code&gt; and &lt;code&gt;reportFile&lt;/code&gt; when running the automation job.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Exceptions when generating some reports without the Automation add-on being installed.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.13.0/reports-release-0.13.0.zap</url>
-        <hash>SHA-256:00caa27f9118d8f3953be6e6e33b17be55ebf28af8584acf7c18433e8f21d8d4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.14.0/reports-release-0.14.0.zap</url>
+        <hash>SHA-256:bdb1859345e8b44a2d11f70d816d78a6fe781cdbccd7eb35557bc32769fd3c24</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-05</date>
-        <size>66963812</size>
+        <date>2022-06-22</date>
+        <size>66962107</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_reports>
     <addon>requester</addon>
