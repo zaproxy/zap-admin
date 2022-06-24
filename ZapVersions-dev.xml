@@ -1843,25 +1843,27 @@
     <addon>pscanrules</addon>
     <addon_pscanrules>
         <name>Passive scanner rules</name>
-        <description>The release quality Passive Scanner rules</description>
+        <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>40</version>
-        <file>pscanrules-release-40.zap</file>
+        <version>41</version>
+        <file>pscanrules-release-41.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Clarify the alert solution for the Cache Control scan rule.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The &amp;quot;Viewstate without MAC Signature (Unsure)&amp;quot; alert will now only be raised at Low Alert Threshold (Issue 7230).&lt;/li&gt;
+&lt;li&gt;The Content Security Policy scan rule will now alert when &amp;quot;unsafe-hashes&amp;quot; are allowed.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Content Security Policy (CSP) Header Not Set scan rule promoted to release.&lt;/li&gt;
+&lt;li&gt;Correct parameter and evidence for Cookie without SameSite Attribute when SAMESITE was set to None (Issue 7358).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v40/pscanrules-release-40.zap</url>
-        <hash>SHA-256:d3fe5602dd99579d9e0de1b6d90833e019473c95485590653e5643c266af046c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v41/pscanrules-release-41.zap</url>
+        <hash>SHA-256:7d266cad2ac3bd691ec4cb8637be4e5cdc38861e4aced1196e257394b343bb9e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-05</date>
-        <size>1206972</size>
+        <date>2022-06-24</date>
+        <size>1231843</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
