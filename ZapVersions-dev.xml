@@ -1540,22 +1540,19 @@
         <name>Neonmarker</name>
         <description>Colors history table items based on tags</description>
         <author>Juha Kivekäs, Kingthorin</author>
-        <version>1.4.0</version>
-        <file>neonmarker-alpha-1.4.0.zap</file>
+        <version>1.5.0</version>
+        <file>neonmarker-alpha-1.5.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add red/green icon to Enable/Disable toggle button.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Now targeting ZAP 2.10.&lt;/li&gt;
-&lt;li&gt;Ensure added color mappings are unique (Issue 11). Only applies when mappings are added programmatically, a user can still define the same mapping multiple times via the GUI (hopefully they'll recognize the inefficiency of doing so).&lt;/li&gt;
+&lt;li&gt;A right-click context menu is now available in the History tab in order to Select/Set a color for arbitrary messages.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.4.0/neonmarker-alpha-1.4.0.zap</url>
-        <hash>SHA-256:46947eea7130298c765bf089147fa54a9e1353a57a2033829aded3947a118d55</hash>
+        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.5.0/neonmarker-alpha-1.5.0.zap</url>
+        <hash>SHA-256:0b888612670e66712001d0bd3cb990d7b34f88b7b6339aed2734083b8a5fe5c5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/neonmarker/</info>
         <repo>https://github.com/kingthorin/neonmarker</repo>
-        <date>2021-08-26</date>
-        <size>28259</size>
+        <date>2022-07-11</date>
+        <size>35903</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_neonmarker>
     <addon>network</addon>
