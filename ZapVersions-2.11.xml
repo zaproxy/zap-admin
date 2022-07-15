@@ -1842,25 +1842,20 @@
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>41</version>
-        <file>pscanrules-release-41.zap</file>
+        <version>42</version>
+        <file>pscanrules-release-42.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The &amp;quot;Viewstate without MAC Signature (Unsure)&amp;quot; alert will now only be raised at Low Alert Threshold (Issue 7230).&lt;/li&gt;
-&lt;li&gt;The Content Security Policy scan rule will now alert when &amp;quot;unsafe-hashes&amp;quot; are allowed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct parameter and evidence for Cookie without SameSite Attribute when SAMESITE was set to None (Issue 7358).&lt;/li&gt;
+&lt;li&gt;The Content Security Policy scan rule will now raise alerts at High confidence, all alerts now include the appropriate header as the &amp;quot;parameter&amp;quot; value, and has functionality to generate example alerts for documentation purposes.&lt;/li&gt;
+&lt;li&gt;The Content Security Policy scan rule will now raise an alert when the assessed policy contains non-ASCII characters (Issue 7379).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v41/pscanrules-release-41.zap</url>
-        <hash>SHA-256:7d266cad2ac3bd691ec4cb8637be4e5cdc38861e4aced1196e257394b343bb9e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v42/pscanrules-release-42.zap</url>
+        <hash>SHA-256:356689ff391b01969edfa4bce84997f9b4856ce6c7551bddcb21ecc9ecc4d903</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-06-24</date>
-        <size>1231843</size>
+        <date>2022-07-15</date>
+        <size>1240245</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
