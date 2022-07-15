@@ -84,6 +84,10 @@ for (var i in sortedKeys) {
 }
 pw.close();
 
+function quoteText(txt) {
+	return '"' + txt.replaceAll("\"", "'") + '"';
+}
+
 function printAlerts(alerts, name, type, status, clazz, scripturl) {
 	var pluginId = alerts[0].getPluginId();
 	if (ignoreList.indexOf(pluginId) !== -1) {
@@ -116,7 +120,7 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		var fw = new FileWriter(DIR + pluginId + ".md");
 		var pw = new PrintWriter(fw);
 		pw.println('---');
-		pw.println('title: "' + name.replaceAll("\"", "'") + '"');
+		pw.println('title: ' + quoteText(name));
 		pw.println('alertid: ' + pluginId);
 		pw.println('alertindex: ' + pluginId * 100);
 		pw.println('alerttype: "' + type + '"');
@@ -126,10 +130,10 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 	     for (var a=0; a < alerts.length; a++) {
 			pw.println('   ' + alerts[a].getPluginId() + "-" + (a+1) + ':');
 			pw.println('      alertid: ' + alerts[a].getPluginId() + "-" + (a+1));
-			pw.println('      name: ' + alerts[a].getName());
+			pw.println('      name: ' + quoteText(alerts[a].getName()));
 		}
 		pw.println('code: ' + codeurl);
-		pw.println('linktext: "' + linktext + '"');
+		pw.println('linktext: ' + quoteText(linktext));
 		pw.println('---');
 		pw.close();
 	}
@@ -145,7 +149,7 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		var pw = new PrintWriter(fw);
 		var alert = alerts[a];
 		pw.println('---');
-		pw.println('title: "' + alert.getName().replaceAll("\"", "'") + '"');
+		pw.println('title: ' + quoteText(alert.getName()));
 		pw.println('alertid: ' + pluginId);
 		pw.println('alertindex: ' + alertindex);
 		pw.println('alerttype: "' + type + '"');
@@ -155,7 +159,7 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 		if (alert.getRisk() >= 0) {
 			pw.println('risk: ' + Alert.MSG_RISK[alert.getRisk()]);
 		}
-		pw.println('solution: "' + alert.getSolution().replaceAll("\"", "'") + '"');
+		pw.println('solution: ' + quoteText(alert.getSolution()));
 		var refs = alert.getReference();
 		if (refs && refs.length() > 0) {
 			pw.println('references:');
@@ -185,7 +189,7 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 			}
 		}
 		pw.println('code: ' + codeurl);
-		pw.println('linktext: ' + linktext);
+		pw.println('linktext: ' + quoteText(linktext));
 		pw.println('---');
 		pw.println(alert.getDescription());
 		pw.close();
