@@ -447,23 +447,24 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>callhome-alpha-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>callhome-alpha-0.4.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;More stats, in preparation for them being added to the respective add-ons&lt;/li&gt;
+&lt;li&gt;Show a more user friendly log and Output tab message when Java's truststore may not contain the CA certificate(s) for intermediate proxy(ies) (Issue 1623).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Bugs sending telemetry on shutdown&lt;/li&gt;
+&lt;li&gt;HTTP Sender listeners could modify CFU and telemetry requests.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.3.0/callhome-alpha-0.3.0.zap</url>
-        <hash>SHA-256:a92078ec3bdf5309ea3688e477789c5f5e82bfc0a503e6e40bc7d0bd8dcd79a6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.4.0/callhome-alpha-0.4.0.zap</url>
+        <hash>SHA-256:38faabf191d3653c3b3f7c14ea3991409fdd997fc8f5534a32ce813dc6d6f92e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-21</date>
-        <size>317537</size>
+        <date>2022-07-18</date>
+        <size>318509</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_callhome>
     <addon>codedx</addon>
