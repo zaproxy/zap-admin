@@ -765,25 +765,30 @@
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.1.0</version>
-        <file>exim-beta-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>exim-beta-0.2.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Reduce logging and display a warning dialog when unable to read files being imported (Issue 7081).&lt;/li&gt;
-&lt;li&gt;Promoted to Beta.&lt;/li&gt;
+&lt;li&gt;Tweaked import functionality to mark import progress components completed when an exception occurs during import (thus allowing them to be cleared properly).&lt;/li&gt;
+&lt;li&gt;HAR imports will now use an indeterminate progress bar if the count of entries cannot be determined.&lt;/li&gt;
+&lt;li&gt;Correct import of HAR responses to allow them to be passively scanned.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Importing a file of URLs or HAR is now displayed in the progress panel provided via commonlib.&lt;/li&gt;
-&lt;li&gt;Automation Framework (Issue 7078).&lt;/li&gt;
+&lt;li&gt;Copy URLs, Export Context URLs, Export Selected URLs, Export Messages, and Export Responses functionality similar to what was previously offered via core functionality.&lt;/li&gt;
+&lt;li&gt;Stats for migrated core components.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Save RAW functionality now includes an All option which saves the entire HTTP message.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.1.0/exim-beta-0.1.0.zap</url>
-        <hash>SHA-256:e7ed40e073b7bf355d2eabe55641651e63f73770e485d1586d7c423827a181b0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.2.0/exim-beta-0.2.0.zap</url>
+        <hash>SHA-256:fd05904344b9a605bb1e336c2f584993d7b98c988ce8d4d425d791110df5a824</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-07</date>
-        <size>356202</size>
+        <date>2022-07-20</date>
+        <size>405753</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -814,21 +819,25 @@
         <name>Form Handler</name>
         <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>formhandler-beta-4.zap</file>
+        <version>5</version>
+        <file>formhandler-beta-5.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix an exception when generating values for unidentified fields (Issue 7386).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v4/formhandler-beta-4.zap</url>
-        <hash>SHA-256:d59d0d438d70cbc66e5785b756c6575ffa58c49e58e5585e31d6ddc45fc7d1c3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v5/formhandler-beta-5.zap</url>
+        <hash>SHA-256:a1188dc22a00cfdaa630fa35336665691cfc7b9c2edb9cbfa74871c811a9597d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/form-handler/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>2199004</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-07-20</date>
+        <size>2201882</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
     <addon_fuzz>
@@ -2040,23 +2049,25 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.14.0</version>
-        <file>reports-release-0.14.0.zap</file>
+        <version>0.15.0</version>
+        <file>reports-release-0.15.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;API problems:
+&lt;ul&gt;
+&lt;li&gt;Mixed case sections could not be referenced&lt;/li&gt;
+&lt;li&gt;Risk-confidence-html report failed if no context specified&lt;/li&gt;
+&lt;li&gt;No theme is used if one was not specified, breaking theme links&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Exceptions when generating some reports without the Automation add-on being installed.&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.14.0/reports-release-0.14.0.zap</url>
-        <hash>SHA-256:bdb1859345e8b44a2d11f70d816d78a6fe781cdbccd7eb35557bc32769fd3c24</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.15.0/reports-release-0.15.0.zap</url>
+        <hash>SHA-256:e58e24935936ab294b85dae508861c7a14df2a26f440e881602821ee4e25b37e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-06-22</date>
-        <size>66962107</size>
+        <date>2022-07-20</date>
+        <size>66963031</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_reports>
     <addon>requester</addon>
