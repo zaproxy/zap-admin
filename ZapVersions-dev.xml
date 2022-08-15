@@ -2139,21 +2139,19 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>retire-release-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>retire-release-0.14.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Performance improvements (Issue 6959).&lt;/li&gt;
-&lt;li&gt;Add Retire.js reference to the Rule name to make it more obvious in the options panel.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.13.0/retire-release-0.13.0.zap</url>
-        <hash>SHA-256:66e1ad010bc535af6ba09aa71407a66149a3838898222d3dba56988472ec2fe1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.14.0/retire-release-0.14.0.zap</url>
+        <hash>SHA-256:f29235c11e4021e54fab9c76486fd1cce8de30acf9a9670ae5097e9280bec3ae</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-02</date>
-        <size>1212842</size>
+        <date>2022-08-15</date>
+        <size>1213940</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -2637,24 +2635,20 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.11.0</version>
-        <file>wappalyzer-release-21.11.0.zap</file>
+        <version>21.12.0</version>
+        <file>wappalyzer-release-21.12.0.zap</file>
         <status>release</status>
-        <changes>&lt;p&gt;###Changed&lt;/p&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Update Wappalyzer URL in help documentation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Threading issue - only reproducible with currently unreleased core changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.11.0/wappalyzer-release-21.11.0.zap</url>
-        <hash>SHA-256:6eef45d6603a9d01e2cfae66f5c292255b38562f8b8f70437222c08ad76e56b5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.12.0/wappalyzer-release-21.12.0.zap</url>
+        <hash>SHA-256:d4a07d630aaa7efe96e4d3c43fb6caf6ecdd82567d8b8b83d4693f02643fb380</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-06-03</date>
-        <size>15807241</size>
+        <date>2022-08-15</date>
+        <size>16399674</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
