@@ -141,25 +141,34 @@
     <addon>ascanrules</addon>
     <addon_ascanrules>
         <name>Active scanner rules</name>
-        <description>The release quality Active Scanner rules</description>
+        <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>46</version>
-        <file>ascanrules-release-46.zap</file>
+        <version>47</version>
+        <file>ascanrules-release-47.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cross Site Scripting header splitting attacks.&lt;/li&gt;
+&lt;li&gt;The External Redirect scan rule now includes alert references on Alerts, and has example alert functionality for documentation generation purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Updated the External Redirect scan rule to be more accurate.&lt;/li&gt;
+&lt;li&gt;The Reflected XSS scan rule now generates alerts for all content-types when alert threshold set to LOW. If alert threshold MEDIUM or HIGH, alerts are raised for HTML responses only.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix Cross Site Scripting (Reflected) scan rule false negatives introduced in previous version.&lt;/li&gt;
+&lt;li&gt;The Remote File Inclusion scan rule no longer follows redirects before checking the response for content indicating a vulnerability (Issue 5887).&lt;/li&gt;
+&lt;li&gt;False positive where Cross Site Scripting payloads are safely rendered in a textarea tag.&lt;/li&gt;
+&lt;li&gt;Unescaped tag end causing Cross Site Scripting rule to throw an exception.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v46/ascanrules-release-46.zap</url>
-        <hash>SHA-256:8bc56103b0f67966f2ccfc2d9fdb3cffe42fa1a504f1d24d2d39c85f8b5aa4eb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v47/ascanrules-release-47.zap</url>
+        <hash>SHA-256:6ac5c0d7f92e62489afe45890802cd7d7fd363d3eb980bbbc6941038c2b3bd43</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-21</date>
-        <size>2499205</size>
+        <date>2022-08-16</date>
+        <size>2510332</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
