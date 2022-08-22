@@ -62,7 +62,7 @@ openapi
 packpentester
 packscanrules
 packscripts
-paramminer
+paramdigger
 plugnhack
 portscan
 pscanrulesAlpha

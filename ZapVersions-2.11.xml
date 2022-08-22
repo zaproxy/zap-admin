@@ -1812,22 +1812,24 @@
             </addons>
         </dependencies>
     </addon_packscanrules>
-    <addon>paramminer</addon>
-    <addon_paramminer>
-        <name>Parameter Miner</name>
+    <addon>paramdigger</addon>
+    <addon_paramdigger>
+        <name>Parameter Digger</name>
         <description>Identify hidden, unlinked parameters. Useful for finding web cache poisoning vulnerabilities.</description>
         <author>ZAP Dev Team and Arkaprabha Chakraborty</author>
-        <version>0.0.1</version>
-        <file>paramminer-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>paramdigger-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Rename multiple options in GUI and documentation.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/paramminer-v0.0.1/paramminer-alpha-0.0.1.zap</url>
-        <hash>SHA-256:045ab0b5ab7dafe6900a2b2d4c1ae24060bbc9a735484d0c616507b8ced9f5d3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/paramdigger-v0.1.0/paramdigger-alpha-0.1.0.zap</url>
+        <hash>SHA-256:29ab753e092b42a546fb83fefcb8d952af745e6ba98d647099c7d0185af13eee</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/parameter-digger/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-17</date>
-        <size>84695</size>
+        <date>2022-08-22</date>
+        <size>522848</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -1837,7 +1839,7 @@
                 </addon>
             </addons>
         </dependencies>
-    </addon_paramminer>
+    </addon_paramdigger>
     <addon>plugnhack</addon>
     <addon_plugnhack>
         <name>Plug-n-Hack Configuration</name>
