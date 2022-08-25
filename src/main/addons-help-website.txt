@@ -84,6 +84,7 @@ scripts
 selenium
 sequence
 soap
+spider
 spiderAjax
 sqliplugin
 sse
