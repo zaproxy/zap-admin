@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>30</id>
+        <id>31</id>
         <default>
-            <item>Has ZAP helped you? Now it is your turn to help ZAP!</item>
-            <link>https://www.zaproxy.org/blog/2022-06-17-help-needed-fund-zap-development/</link>
+            <item>ZAP has a new Platinum Supporter: Jit!</item>
+            <link>https://www.zaproxy.org/blog/2022-09-14-new-platinum-supporter-jit/</link>
         </default>
     </news>
 </ZAP>
