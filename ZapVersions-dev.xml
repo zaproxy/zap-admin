@@ -514,18 +514,18 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.9.0</version>
-        <file>commonlib-release-1.9.0.zap</file>
+        <version>1.10.0</version>
+        <file>commonlib-release-1.10.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.9.0/commonlib-release-1.9.0.zap</url>
-        <hash>SHA-256:a269dda47b5c28e1abf9054c0b01c767b6f307a989e30520f8992c9d580e101d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.10.0/commonlib-release-1.10.0.zap</url>
+        <hash>SHA-256:0e5dd83df042ee08a5dad17c00233bad09123e52df3bbc5579fd96aeb008babf</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-21</date>
-        <size>4077357</size>
+        <date>2022-09-15</date>
+        <size>4081774</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1904,26 +1904,29 @@
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>42</version>
-        <file>pscanrules-release-42.zap</file>
+        <version>43</version>
+        <file>pscanrules-release-43.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Content Security Policy scan rule will now raise alerts at High confidence, all alerts now include the appropriate header as the &amp;quot;parameter&amp;quot; value, and has functionality to generate example alerts for documentation purposes.&lt;/li&gt;
-&lt;li&gt;The Content Security Policy scan rule will now raise an alert when the assessed policy contains non-ASCII characters (Issue 7379).&lt;/li&gt;
+&lt;li&gt;Reduce Cache Control scan rule confidence to Low, and add new reference (Issue 6446).&lt;/li&gt;
+&lt;li&gt;Added new Custom Payloads alert tag to the example alerts of the Username IDOR and Application Error scan rules.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The Timestamp Disclosure scan rule is now scoped to a 10 year range with a cap at the Y2038 rollover point (Issue 6741).&lt;/li&gt;
+&lt;li&gt;THe Content Security Policy Header Set scan rule will no longer alert if CSP is specified via META tag (Issue 7303).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v42/pscanrules-release-42.zap</url>
-        <hash>SHA-256:356689ff391b01969edfa4bce84997f9b4856ce6c7551bddcb21ecc9ecc4d903</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v43/pscanrules-release-43.zap</url>
+        <hash>SHA-256:12c6baf7099189985d9a79d57b293923e8f0ce8d1c215334086a68ed417e25e2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-07-15</date>
-        <size>1240245</size>
+        <date>2022-09-15</date>
+        <size>1247607</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.10.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1964,32 +1967,28 @@
     <addon>pscanrulesBeta</addon>
     <addon_pscanrulesBeta>
         <name>Passive scanner rules (beta)</name>
-        <description>The beta quality Passive Scanner rules</description>
+        <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>29</version>
-        <file>pscanrulesBeta-beta-29.zap</file>
+        <version>30</version>
+        <file>pscanrulesBeta-beta-30.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Content Security Policy (CSP) Header Not Set scan rule promoted to release.&lt;/li&gt;
+&lt;li&gt;Reverse Tabnabbing scan rule now leverages the Common Library Trusted Domains implementation.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v29/pscanrulesBeta-beta-29.zap</url>
-        <hash>SHA-256:c03ea666858a108eff51cfd4e7cd141d172755e3a335ae0ed297707819d6769f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v30/pscanrulesBeta-beta-30.zap</url>
+        <hash>SHA-256:27469df673d8072927ff89bbdf5d9ef9c59dd8070c6e2c996c42735fa7f2957d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-05</date>
-        <size>1021476</size>
+        <date>2022-09-15</date>
+        <size>976693</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.10.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
