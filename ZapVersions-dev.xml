@@ -843,24 +843,20 @@
         <name>Form Handler</name>
         <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>formhandler-beta-5.zap</file>
+        <version>6.0.0</version>
+        <file>formhandler-beta-6.0.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix an exception when generating values for unidentified fields (Issue 7386).&lt;/li&gt;
+&lt;li&gt;Expose value generator for other add-ons (Related to Issue 3113).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v5/formhandler-beta-5.zap</url>
-        <hash>SHA-256:a1188dc22a00cfdaa630fa35336665691cfc7b9c2edb9cbfa74871c811a9597d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.0.0/formhandler-beta-6.0.0.zap</url>
+        <hash>SHA-256:0df12b952c8fb949e24cdd74e7ebf01de7ac3be11ba0e1ddfe389411c7a82a3e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/form-handler/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-07-20</date>
-        <size>2201882</size>
+        <date>2022-09-21</date>
+        <size>2201958</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
