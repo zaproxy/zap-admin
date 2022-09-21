@@ -1679,30 +1679,34 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>27</version>
-        <file>openapi-beta-27.zap</file>
+        <version>28</version>
+        <file>openapi-beta-28.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support content field (JSON) in parameters (Issue 6166).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Now depends on commonlib for display of import progress (Issue 6783).&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Imported specs are now persisted to the session database. They are used by the new variant to mark path parameters as
+Data Driven Nodes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Properly generate Content-Type header when in presence of more than one supported content (Issue 7082).&lt;/li&gt;
-&lt;li&gt;Quote provided string values in JSON content (Issue 7128).&lt;/li&gt;
-&lt;li&gt;Properly handle empty default values in server variables.&lt;/li&gt;
+&lt;li&gt;JSON body examples specified under &lt;code&gt;schema&lt;/code&gt; were being enclosed in quotes.&lt;/li&gt;
+&lt;li&gt;Error message when &lt;code&gt;apiFile&lt;/code&gt; field is not accessible was outputting the &lt;code&gt;targetUrl&lt;/code&gt; and not the incorrect filename (Issue 7370).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use Spider add-on (Issue 3113).&lt;/li&gt;
+&lt;li&gt;Use Form Handler add-on directly.&lt;/li&gt;
+&lt;li&gt;DDNs added as Structural Modifiers have been superseded by a custom variant. The variant supports nested DDNs and leaf
+DDNs, prevents non-parameter URL paths from being merged with DDNs, and treats paths with different HTTP methods
+uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v27/openapi-beta-27.zap</url>
-        <hash>SHA-256:e96bd5791496cdc72951bd59869618a88932b50775a1c08b1371c6e12294d983</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v28/openapi-beta-28.zap</url>
+        <hash>SHA-256:d3fc4cddcc74b4a8b3e9e707dc36327058ad2bd5c7763dde572f3ca389579656</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-03-29</date>
-        <size>12169396</size>
+        <date>2022-09-21</date>
+        <size>12183573</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
