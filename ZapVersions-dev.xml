@@ -143,32 +143,19 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>47</version>
-        <file>ascanrules-release-47.zap</file>
+        <version>48</version>
+        <file>ascanrules-release-48.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Cross Site Scripting header splitting attacks.&lt;/li&gt;
-&lt;li&gt;The External Redirect scan rule now includes alert references on Alerts, and has example alert functionality for documentation generation purposes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Updated the External Redirect scan rule to be more accurate.&lt;/li&gt;
-&lt;li&gt;The Reflected XSS scan rule now generates alerts for all content-types when alert threshold set to LOW. If alert threshold MEDIUM or HIGH, alerts are raised for HTML responses only.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The Remote File Inclusion scan rule no longer follows redirects before checking the response for content indicating a vulnerability (Issue 5887).&lt;/li&gt;
-&lt;li&gt;False positive where Cross Site Scripting payloads are safely rendered in a textarea tag.&lt;/li&gt;
-&lt;li&gt;Unescaped tag end causing Cross Site Scripting rule to throw an exception.&lt;/li&gt;
+&lt;li&gt;Command Injection Scan Rule: Decode HTML entities in HTML responses before attempting to search for attack validation patterns.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v47/ascanrules-release-47.zap</url>
-        <hash>SHA-256:6ac5c0d7f92e62489afe45890802cd7d7fd363d3eb980bbbc6941038c2b3bd43</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v48/ascanrules-release-48.zap</url>
+        <hash>SHA-256:5f777623d2f4ec74c16d84ccf00c6751e45a8c3b65398405dd53d4f9e65f3d5b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-16</date>
-        <size>2510332</size>
+        <date>2022-09-22</date>
+        <size>2517902</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -182,21 +169,27 @@
     <addon>ascanrulesAlpha</addon>
     <addon_ascanrulesAlpha>
         <name>Active scanner rules (alpha)</name>
-        <description>The alpha quality Active Scanner rules</description>
+        <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>38</version>
-        <file>ascanrulesAlpha-alpha-38.zap</file>
+        <version>39</version>
+        <file>ascanrulesAlpha-alpha-39.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Scan rules for Server Side Template Injection (&lt;a href="https://github.com/zaproxy/zaproxy/issues/2332"&gt;Issue 2332&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Forbidden Bypass scan rule will now also try a bypass based on the use of a tab character.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix an exception in Spring Actuator Information Leak scan rule when scanning responses without Content-Type header.&lt;/li&gt;
+&lt;li&gt;Correct path composition in Web Cache Deception scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v38/ascanrulesAlpha-alpha-38.zap</url>
-        <hash>SHA-256:6f394b74c7a4b925c472029302fa7f5513036198bcccdc0efcf93695abc6502c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v39/ascanrulesAlpha-alpha-39.zap</url>
+        <hash>SHA-256:829405c87a3914a1921179210ba4a83aa5cd8ff3dca40a19aee299253ff389fc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-08</date>
-        <size>576912</size>
+        <date>2022-09-22</date>
+        <size>602214</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -216,31 +209,32 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>41</version>
-        <file>ascanrulesBeta-beta-41.zap</file>
+        <version>42</version>
+        <file>ascanrulesBeta-beta-42.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Adding more checks to Hidden File Finder scan rule.&lt;/li&gt;
-&lt;li&gt;The Cloud Metadata scan rule will now be attempted with additional payloads (using DNS not just IPs), and supporting Alibaba.&lt;/li&gt;
+&lt;li&gt;Improved description, solution, and references for the Integer Overflow scan rule.&lt;/li&gt;
+&lt;li&gt;Added new Custom Payloads alert tag to the example alerts of the Hidden File Finder and User Agent scan rules.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;False Positive in XSLT Injection where &amp;quot;Microsoft-Azure-Application-Gateway&amp;quot; can be returned in a 403 if the gateway detects an attack.&lt;/li&gt;
+&lt;li&gt;New User Agent strings to the User Agent fuzz scan rule.&lt;/li&gt;
+&lt;li&gt;Additional source control paths for the Hidden Files finder scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v41/ascanrulesBeta-beta-41.zap</url>
-        <hash>SHA-256:703ba1d171a68a5dcdc3acb84d7f800dcc8a8a8282ab2cea362585e618b933a4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v42/ascanrulesBeta-beta-42.zap</url>
+        <hash>SHA-256:0ad211cf28d253c68c7055d022b500588e153f523fa2d1464b3a922c43a51400</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-06-08</date>
-        <size>2079924</size>
+        <date>2022-09-22</date>
+        <size>2083667</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.10.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
