@@ -2186,19 +2186,19 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.14.0</version>
-        <file>retire-release-0.14.0.zap</file>
+        <version>0.15.0</version>
+        <file>retire-release-0.15.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.14.0/retire-release-0.14.0.zap</url>
-        <hash>SHA-256:f29235c11e4021e54fab9c76486fd1cce8de30acf9a9670ae5097e9280bec3ae</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.15.0/retire-release-0.15.0.zap</url>
+        <hash>SHA-256:b96b6f6c84223841160f5a3b5628fe97c28bdae7c9c81f8735c7ebb63a75370a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-15</date>
-        <size>1213940</size>
+        <date>2022-09-22</date>
+        <size>1214200</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
