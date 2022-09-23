@@ -395,35 +395,23 @@
         <name>Bug Tracker</name>
         <description>Bug Tracker extension.</description>
         <author>ZAP Dev Team</author>
-        <version>3</version>
-        <file>bugtracker-alpha-3.zap</file>
+        <version>4</version>
+        <file>bugtracker-alpha-4.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Remove broken link from the user guide.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Show correct help page for the options panel.&lt;/li&gt;
-&lt;li&gt;Remove the options panels when the add-on is uninstalled.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Remove unused resource message.&lt;/li&gt;
+&lt;li&gt;Updated to use PAT not password (https://github.blog/changelog/2021-08-12-git-password-authentication-is-shutting-down/).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/bugtracker-v3/bugtracker-alpha-3.zap</url>
-        <hash>SHA-256:fe11b8ee2c39e374a578b064250563d28901fc3a7d3c4cacaefd69336c6f78a3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bugtracker-v4/bugtracker-alpha-4.zap</url>
+        <hash>SHA-256:37c57f8e7f4a1608500527ac1831f8b078427f804ea04ad5790a2970e3e1b722</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/bug-tracker/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>3427588</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>3707425</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_bugtracker>
     <addon>callgraph</addon>
     <addon_callgraph>
@@ -571,20 +559,22 @@
         <name>Custom Payloads</name>
         <description>Ability to add, edit or remove payloads that are used i.e. by active scanners</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>custompayloads-alpha-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>custompayloads-alpha-0.12.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Add help content linking to the Scan Rules which support Custom Payloads.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.11.0/custompayloads-alpha-0.11.0.zap</url>
-        <hash>SHA-256:84d01dbfe0739ee70acd8286916e0106595ceb550e7793925ce48a2db6477383</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.12.0/custompayloads-alpha-0.12.0.zap</url>
+        <hash>SHA-256:8e31acafdc1e2246e25953d8ccb87efa189a3fdadc596331feabeccc99dece65</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/custom-payloads/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>234832</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>236404</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_custompayloads>
     <addon>diff</addon>
     <addon_diff>
@@ -2002,20 +1992,26 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>33</version>
-        <file>quickstart-release-33.zap</file>
+        <version>34</version>
+        <file>quickstart-release-34.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Browser Launch/Manual Explore will now display a warning dialog if the selected browser executable cannot be found (Issue 6963).&lt;/li&gt;
+&lt;li&gt;Spider checkboxes in Automated Scan will be disabled when scan is running. (Issue 7072)&lt;/li&gt;
+&lt;li&gt;Use Network add-on to obtain main proxy address/port.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use Spider add-on (Issue 3113).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept any 2xx result code instead of just 200.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v33/quickstart-release-33.zap</url>
-        <hash>SHA-256:21ff2127d865b5204b4e09b50e9615bd4435823e3b8503ac5f731d5abbe6084e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v34/quickstart-release-34.zap</url>
+        <hash>SHA-256:332374c4d6fe5b17cd4f894cbfd06a5e8073f817fb675efadb3db0b5cb9c4ab4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-13</date>
-        <size>617848</size>
+        <date>2022-09-23</date>
+        <size>632885</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -2025,7 +2021,7 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
                 </addon>
                 <addon>
                     <id>network</id>
-                    <version>&gt;= 0.0.1</version>
+                    <version>&gt;= 0.2.0</version>
                 </addon>
                 <addon>
                     <id>reports</id>
@@ -2082,22 +2078,30 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>replacer-beta-9.zap</file>
-        <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <version>10</version>
+        <file>replacer-release-10.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
+&lt;li&gt;Allow the replacement type to be changed in existing rules (Issue 3840).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow to manage the replacer rules programmatically, for example, through ZAP scripts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Promoted to Release status.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/replacer-v9/replacer-beta-9.zap</url>
-        <hash>SHA-256:0950fac81a04e0bb791fa514aac145e05fd3483f95584dd00d880157f65c12e3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/replacer-v10/replacer-release-10.zap</url>
+        <hash>SHA-256:8a221acb5386079cf163a9d3eb8830bd67afab82e6a6a27f011e7f541ef002ab</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/replacer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>334557</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>338300</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_replacer>
     <addon>reports</addon>
     <addon_reports>
@@ -2157,20 +2161,26 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Retest</name>
         <description>An add-on to retest for presence/absence of previously generated alerts.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>retest-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>retest-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Scan Rule ID values are no longer displayed with commas.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Retest dialog now properly resets between ZAP sessions (Issue 7147).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.2.0/retest-alpha-0.2.0.zap</url>
-        <hash>SHA-256:b2fca87abb96b6e3748b3d834e6dd3e0f5cfbc2fede6c20b82cf157d87cbf2bf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.3.0/retest-alpha-0.3.0.zap</url>
+        <hash>SHA-256:89a53b8b620a0b5cd81c58596c207882a7813f4e013d15f37dab8c10cfdcd254</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>254909</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>258291</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2340,24 +2350,25 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>30</version>
-        <file>scripts-beta-30.zap</file>
-        <status>beta</status>
+        <version>31</version>
+        <file>scripts-release-31.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation ScriptJob - Add or remove any script and run a standalone script&lt;/li&gt;
+&lt;li&gt;Automation ScriptJob - Enable or Disable any script and run a targeted script (Issue 7025).&lt;/li&gt;
+&lt;li&gt;Promoted to Release status.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;'Copy as curl command menu.js' added change that prevents curl from adding User-Agent when no User-Agent should be present.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v30/scripts-beta-30.zap</url>
-        <hash>SHA-256:990819681db37ce24c346dc93e8065e226a3edaa0bf2a7b8986fa66b51a87d1a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v31/scripts-release-31.zap</url>
+        <hash>SHA-256:3398489813ecf13b3a0dbae97bd9e3d145c4c3c86b075556592dd7165bf40aa5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-25</date>
-        <size>714448</size>
+        <date>2022-09-23</date>
+        <size>781716</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
@@ -2365,23 +2376,23 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.9.0</version>
-        <file>selenium-release-15.9.0.zap</file>
+        <version>15.10.0</version>
+        <file>selenium-release-15.10.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use Network add-on to obtain main proxy address/port.&lt;/li&gt;
+&lt;li&gt;Option to register and run 'browserHooks'.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Restore usage of bundled ChromeDriver (&lt;a href="https://github.com/zaproxy/zaproxy/issues/7272"&gt;Issue #7272&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.9.0/selenium-release-15.9.0.zap</url>
-        <hash>SHA-256:297114535a2e2973d96fcb18bc686cf46991386d3ccdb8157a884bc537a44228</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.10.0/selenium-release-15.10.0.zap</url>
+        <hash>SHA-256:a7ab7ab2122ea52408395243d23941e5aa5fa669742c58a2ead141a2888fd1c2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-05-06</date>
-        <size>24911785</size>
+        <date>2022-09-23</date>
+        <size>24912328</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
