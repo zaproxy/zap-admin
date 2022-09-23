@@ -2463,29 +2463,29 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.8.0</version>
-        <file>spiderAjax-release-23.8.0.zap</file>
+        <version>23.9.0</version>
+        <file>spiderAjax-release-23.9.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Missing 'user' param in the Automation Framework help&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Use Network add-on to proxy Crawljax/browser requests.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for automation monitor tests.&lt;/li&gt;
+&lt;li&gt;Added 'runOnlyIfModern' Automation Framework option.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Stop the spider scans when ZAP shuts down (&lt;a href="https://github.com/zaproxy/zaproxy/issues/6643"&gt;Issue #6643&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Automation Framework dialog - min numberOfBrowsers now 1.&lt;/li&gt;
+&lt;li&gt;Automation Framework job - correctly pick up URL from context.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.8.0/spiderAjax-release-23.8.0.zap</url>
-        <hash>SHA-256:6310f9fa347e1448f610c8d33cbd9e862e89a0756c88dad3c7e647edbc06dc23</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.9.0/spiderAjax-release-23.9.0.zap</url>
+        <hash>SHA-256:6e87e79a9be4ffd95b9ad48ff8f09720d9229bd2e3fcbed30d490ec1c44cda8f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-04</date>
-        <size>5818295</size>
+        <date>2022-09-23</date>
+        <size>5821779</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
