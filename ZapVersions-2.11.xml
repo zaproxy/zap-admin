@@ -858,24 +858,20 @@
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.6.0</version>
-        <file>fuzz-beta-13.6.0.zap</file>
+        <version>13.7.0</version>
+        <file>fuzz-beta-13.7.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;An option to edit the selected message - note this will clear any defined fuzz locations&lt;/li&gt;
-&lt;li&gt;Fuzzer statistics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Allow circular redirects always.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.6.0/fuzz-beta-13.6.0.zap</url>
-        <hash>SHA-256:3944f5c80a5679db9e749d93c88c6c6458c097cf44e8804408ec6bead25b618f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.7.0/fuzz-beta-13.7.0.zap</url>
+        <hash>SHA-256:aa60042375750eabaaa779706caef2679f314fdd1a06c65b4199c58333cf3723</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-01-14</date>
-        <size>1980132</size>
+        <date>2022-09-23</date>
+        <size>2002848</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_fuzz>
     <addon>fuzzdb</addon>
@@ -883,24 +879,21 @@
         <name>FuzzDB Files</name>
         <description>FuzzDB files which can be used with the ZAP fuzzer</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>fuzzdb-release-8.zap</file>
+        <version>9</version>
+        <file>fuzzdb-release-9.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Terminology&lt;/li&gt;
+&lt;li&gt;Updated RAFT lists based on more recent SecLists contributions&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzdb-v8/fuzzdb-release-8.zap</url>
-        <hash>SHA-256:0b65cee3aa65e5dc11cbb83ed5d13ba1dcb330278fb2f8cc7d6957680b1e17c6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzdb-v9/fuzzdb-release-9.zap</url>
+        <hash>SHA-256:c79537362cd6b383f447359685e3bd51795600b97ca0c1fadc4ba74828a7d4f4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzdb-files/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>6167276</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>6167205</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_fuzzdb>
     <addon>fuzzdboffensive</addon>
     <addon_fuzzdboffensive>
@@ -972,19 +965,21 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>graphql-alpha-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>graphql-alpha-0.10.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Replace variables present in &lt;code&gt;schemaFile&lt;/code&gt; when running the automation job.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update dependency, which reduces add-on file size (Issue 7322).&lt;/li&gt;
+&lt;li&gt;Use Spider add-on (Issue 3113).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.9.0/graphql-alpha-0.9.0.zap</url>
-        <hash>SHA-256:62a7c426bc7659e4ed47fa4180549946d7c8a0a49f39c6c88acc7f6c8afd4306</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.10.0/graphql-alpha-0.10.0.zap</url>
+        <hash>SHA-256:d6b3db0ec9340e2d3ef942f39933d6882ec36eff093f1944381dbbcd67cb196b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-04-05</date>
-        <size>22089194</size>
+        <date>2022-09-23</date>
+        <size>5117751</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
@@ -1326,32 +1321,30 @@
         <name>Image Location and Privacy Scanner</name>
         <description>Image Location and Privacy Passive Scanner</description>
         <author>Jay Ball (veggiespam) and the ZAP Dev Team</author>
-        <version>3</version>
-        <file>imagelocationscanner-beta-3.zap</file>
+        <version>4</version>
+        <file>imagelocationscanner-beta-4.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Top Ten 2021/2017 mappings.&lt;/li&gt;
-&lt;li&gt;Example alert to support documentation efforts.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update link to repository.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v3/imagelocationscanner-beta-3.zap</url>
-        <hash>SHA-256:0bcf856acad95336f03a72fded0775470fcfdc5d82af2a2ddfb3c6fad03b04e1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v4/imagelocationscanner-beta-4.zap</url>
+        <hash>SHA-256:6d168e4d156335a0544619011b742e47e6dc1d492a2d63a0e8f787b28796b2c9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/image-location-and-privacy-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>1135956</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>1138093</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.5.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1618,29 +1611,33 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.10.0</version>
-        <file>oast-alpha-0.10.0.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <version>0.11.0</version>
+        <file>oast-beta-0.11.0.zap</file>
+        <status>beta</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following two statistics for each OAST service:
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;stats.oast.&amp;lt;service&amp;gt;.payloadsGenerated&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;stats.oast.&amp;lt;service&amp;gt;.interactions&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Use Network add-on to serve callback requests.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Rename the &lt;code&gt;OAST Register Request Handler.js&lt;/code&gt; script template to &lt;code&gt;OAST Request Handler.js&lt;/code&gt;
+and use the Extender script type for it. The request handler is now removed when the
+script is disabled.&lt;/li&gt;
+&lt;li&gt;Promoted to Beta status.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Default services notes in the help documents.&lt;/li&gt;
+&lt;li&gt;Extension description and UI name.&lt;/li&gt;
+&lt;li&gt;Allow unregistering specific OAST Request handlers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Synchronized alerts cache access to avoid locks&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.10.0/oast-alpha-0.10.0.zap</url>
-        <hash>SHA-256:b4b4b4defc01b14675ce1f4d6dadbfaa118ec06456162bb00a585735d9a95526</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.11.0/oast-beta-0.11.0.zap</url>
+        <hash>SHA-256:afcb8d951275579538d79c41a3451da5fb2ad3a7d4e7fbad6bf7db3f6be81346</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-18</date>
-        <size>773485</size>
+        <date>2022-09-23</date>
+        <size>774675</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -2434,25 +2431,23 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>13</version>
-        <file>soap-alpha-13.zap</file>
-        <status>alpha</status>
+        <version>14</version>
+        <file>soap-beta-14.zap</file>
+        <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;When the automation Job is edited via UI Dialog then the status will be set to Not started&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Do not report &amp;quot;Unrecognised parameter&amp;quot; for valid parameters.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use Spider add-on (Issue 3113).&lt;/li&gt;
+&lt;li&gt;Use Form Handler add-on directly.&lt;/li&gt;
+&lt;li&gt;Promoted to Beta status.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v13/soap-alpha-13.zap</url>
-        <hash>SHA-256:bf24fb94dd9d604cca964e6b27d3a8df518a413758c4f7aacfeef41d513114aa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v14/soap-beta-14.zap</url>
+        <hash>SHA-256:5ed80d0abd009a0902f660417a761fb3d2585e26b2f092ebdc70d44c3993d0f5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-01</date>
-        <size>13982769</size>
+        <date>2022-09-23</date>
+        <size>13988341</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -2538,30 +2533,26 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Server-Sent Events</name>
         <description>Allows you to view Server-Sent Events (SSE) communication.</description>
         <author>ZAP Dev Team</author>
-        <version>10</version>
-        <file>sse-alpha-10.zap</file>
+        <version>11</version>
+        <file>sse-alpha-11.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Terminology&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Adjust log levels to be less verbose.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Properly close the server side connection when no longer in use (Issue 6424).&lt;/li&gt;
+&lt;li&gt;Increase the size of the URL column (Issue 7354).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v10/sse-alpha-10.zap</url>
-        <hash>SHA-256:1adc14442cedd3336319e94c93659118998fee42ae340b4ba757f3e7af475853</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v11/sse-alpha-11.zap</url>
+        <hash>SHA-256:c4126a431866de8271e314a9ca1343002a4a0db05f669870f84c015eb707e372</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/server-sent-events/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>339239</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>340546</size>
+        <not-before-version>2.11.1</not-before-version>
     </addon_sse>
     <addon>svndigger</addon>
     <addon_svndigger>
@@ -2684,20 +2675,20 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.12.0</version>
-        <file>wappalyzer-release-21.12.0.zap</file>
+        <version>21.13.0</version>
+        <file>wappalyzer-release-21.13.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.12.0/wappalyzer-release-21.12.0.zap</url>
-        <hash>SHA-256:d4a07d630aaa7efe96e4d3c43fb6caf6ecdd82567d8b8b83d4693f02643fb380</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.13.0/wappalyzer-release-21.13.0.zap</url>
+        <hash>SHA-256:23f068d60f1ff095f53bbc795f805f2fbbe576174c8189843b167b3d1e40a44d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-15</date>
-        <size>16399674</size>
+        <date>2022-09-23</date>
+        <size>16419866</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
@@ -2798,23 +2789,28 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>35</version>
-        <file>zest-beta-35.zap</file>
+        <version>36</version>
+        <file>zest-beta-36.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Use Network add-on to proxy client authentication requests.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v35/zest-beta-35.zap</url>
-        <hash>SHA-256:bbada2c5f2e07f9a8fc933eddb4d3f8bc33293c2b55c8489e3d81c42118f6667</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v36/zest-beta-36.zap</url>
+        <hash>SHA-256:cbd3587709cdfeff9f85c619b88fa2af78ba7f0bb2b1aeb156598e6807d5b7bf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-06</date>
-        <size>13570172</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-09-23</date>
+        <size>13581902</size>
+        <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.2.0</version>
+                </addon>
                 <addon>
                     <id>scripts</id>
                 </addon>
