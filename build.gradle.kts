@@ -21,7 +21,7 @@ import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 
 plugins {
     java
-    id("com.diffplug.spotless") version "5.17.1"
+    id("com.diffplug.spotless") version "6.11.0"
     id("net.ltgt.errorprone") version "2.0.2"
     id("org.zaproxy.crowdin") version "0.2.1"
 }
@@ -48,10 +48,7 @@ crowdin {
 }
 
 dependencies {
-    "errorprone"("com.google.errorprone:error_prone_core:2.3.1")
-    if (JavaVersion.current() == JavaVersion.VERSION_1_8) {
-        "errorproneJavac"("com.google.errorprone:javac:9+181-r4173-1")
-    }
+    "errorprone"("com.google.errorprone:error_prone_core:2.15.0")
 
     implementation("org.kohsuke:github-api:1.101")
     compileOnly("com.infradna.tool:bridge-method-annotation:1.18") {
@@ -76,8 +73,9 @@ val copyZapVersions = tasks.create<Copy>("copyZapVersions") {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    val javaVersion = JavaVersion.VERSION_11
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
 }
 
 tasks.withType<Test>().configureEach {

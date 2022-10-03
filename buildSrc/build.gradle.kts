@@ -1,10 +1,20 @@
 plugins {
     `kotlin-dsl`
-    id("com.diffplug.spotless") version "5.17.1"
+    id("com.diffplug.spotless") version "6.11.0"
 }
 
 repositories {
     mavenCentral()
+}
+
+val javaVersion = JavaVersion.VERSION_11
+configure<JavaPluginConvention> {
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+}
+
+kotlinDslPluginOptions {
+    jvmTarget.set(javaVersion.toString())
 }
 
 dependencies {
