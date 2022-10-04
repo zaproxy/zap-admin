@@ -205,7 +205,7 @@ public class VerifyCoreZapVersionsEntries {
             if (obj == null) {
                 return false;
             }
-            if (getClass() != obj.getClass()) {
+            if (!(obj instanceof Element)) {
                 return false;
             }
             Element other = (Element) obj;
