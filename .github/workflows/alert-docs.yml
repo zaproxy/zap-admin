@@ -33,7 +33,7 @@ jobs:
         git checkout -b update-alerts
         # Update the index to be sure git is aware of changes
         git update-index -q --refresh
-        git add site/content/docs/alerts/
+        git add site/content/docs/alerts/ site/data/alerttags.yml
         ## If there are changes: comment, commit, PR
         if ! git diff-index --quiet HEAD --; then
           git remote set-url origin https://$GITHUB_USER:$GITHUB_TOKEN@github.com/$GITHUB_USER/zaproxy-website.git
