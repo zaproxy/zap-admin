@@ -296,32 +296,29 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.17.0</version>
-        <file>automation-beta-0.17.0.zap</file>
+        <version>0.18.0</version>
+        <file>automation-beta-0.18.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add Save As button that allows user to save the automation plan to a different file (Issue 7178).&lt;/li&gt;
-&lt;li&gt;Support for monitor tests.&lt;/li&gt;
+&lt;li&gt;Add support for headers in the requestor job (Issue 6917).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Rely on spider add-on (Issue 3113).&lt;/li&gt;
-&lt;li&gt;passiveScan-config job resets the state, as scanOnlyInScope is often confusing in the GUI.&lt;/li&gt;
-&lt;li&gt;Deprecated the addOns job.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct loading of custom scripts (e.g. Zest).&lt;/li&gt;
-&lt;li&gt;The activeScan and spider jobs no longer switch tabs when they run.&lt;/li&gt;
+&lt;li&gt;Allow spider to run if no OK response (Issue 7510).&lt;/li&gt;
+&lt;li&gt;Bug in passive scan reporting code which prevented specified alerts from being read.&lt;/li&gt;
+&lt;li&gt;NPE when adding users to more than one context.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.17.0/automation-beta-0.17.0.zap</url>
-        <hash>SHA-256:2bc220cb09b66ef1532b7c8874abef32844ade690137edbc87f821f0fb1a6413</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.18.0/automation-beta-0.18.0.zap</url>
+        <hash>SHA-256:85776818b38d49577fb8c45fe399d028b4634438f5771fe8fd6aa7a74117b4f7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-09</date>
-        <size>4195711</size>
+        <date>2022-10-12</date>
+        <size>4333826</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -2364,25 +2361,23 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>scripts-release-31.zap</file>
+        <version>32</version>
+        <file>scripts-release-32.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation ScriptJob - Enable or Disable any script and run a targeted script (Issue 7025).&lt;/li&gt;
-&lt;li&gt;Promoted to Release status.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;'Copy as curl command menu.js' added change that prevents curl from adding User-Agent when no User-Agent should be present.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Don't print twice to std out when running without view and executing scripts (Issue 7455).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v31/scripts-release-31.zap</url>
-        <hash>SHA-256:3398489813ecf13b3a0dbae97bd9e3d145c4c3c86b075556592dd7165bf40aa5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v32/scripts-release-32.zap</url>
+        <hash>SHA-256:481741ae386135311f7cb89e9e82178bd7f224c8ff23fac7802d35b13408d5b7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-23</date>
-        <size>781716</size>
+        <date>2022-10-12</date>
+        <size>789639</size>
         <not-before-version>2.11.1</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
