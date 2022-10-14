@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ZAP>
+    <news>
+        <id>32</id>
+        <default>
+            <item>Help the zaproxy/zaproxy repo get to 10k stars - star it now</item>
+            <link>https://github.com/zaproxy/zaproxy/</link>
+        </default>
+    </news>
+</ZAP>
