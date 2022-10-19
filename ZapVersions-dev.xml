@@ -1614,33 +1614,21 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>oast-beta-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>oast-beta-0.12.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Rename the &lt;code&gt;OAST Register Request Handler.js&lt;/code&gt; script template to &lt;code&gt;OAST Request Handler.js&lt;/code&gt;
-and use the Extender script type for it. The request handler is now removed when the
-script is disabled.&lt;/li&gt;
-&lt;li&gt;Promoted to Beta status.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Default services notes in the help documents.&lt;/li&gt;
-&lt;li&gt;Extension description and UI name.&lt;/li&gt;
-&lt;li&gt;Allow unregistering specific OAST Request handlers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Synchronized alerts cache access to avoid locks&lt;/li&gt;
+&lt;li&gt;Deregister the Interactsh service even in case of error (Issue 7504).&lt;/li&gt;
+&lt;li&gt;Clear Interactsh payloads from the GUI when the service is deregistered.&lt;/li&gt;
+&lt;li&gt;Error logged when interactsh server returns null data.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.11.0/oast-beta-0.11.0.zap</url>
-        <hash>SHA-256:afcb8d951275579538d79c41a3451da5fb2ad3a7d4e7fbad6bf7db3f6be81346</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.12.0/oast-beta-0.12.0.zap</url>
+        <hash>SHA-256:734e816567d733d9ae87f03340ae8d4af99c96974addd92bcf5a76fa3cee6449</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-23</date>
-        <size>774675</size>
+        <date>2022-10-19</date>
+        <size>778402</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
