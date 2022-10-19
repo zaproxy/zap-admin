@@ -171,25 +171,27 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>ascanrulesAlpha-alpha-39.zap</file>
+        <version>40</version>
+        <file>ascanrulesAlpha-alpha-40.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Forbidden Bypass scan rule will now also try a bypass based on the use of a tab character.&lt;/li&gt;
+&lt;li&gt;Text4shell (CVE-2022-42889) Scan Rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix an exception in Spring Actuator Information Leak scan rule when scanning responses without Content-Type header.&lt;/li&gt;
-&lt;li&gt;Correct path composition in Web Cache Deception scan rule.&lt;/li&gt;
+&lt;li&gt;Fix an exception in Bypassing 403 scan rule when creating example alerts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v39/ascanrulesAlpha-alpha-39.zap</url>
-        <hash>SHA-256:829405c87a3914a1921179210ba4a83aa5cd8ff3dca40a19aee299253ff389fc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v40/ascanrulesAlpha-alpha-40.zap</url>
+        <hash>SHA-256:ea323b1481524ac1a1034682c5a371cfee6256a69e54d4f12ef5a3f4654a5ae3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-22</date>
-        <size>602214</size>
+        <date>2022-10-19</date>
+        <size>605953</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
