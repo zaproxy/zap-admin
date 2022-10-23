@@ -50,6 +50,7 @@ crowdin {
 dependencies {
     "errorprone"("com.google.errorprone:error_prone_core:2.15.0")
 
+    implementation("org.apache.commons:commons-text:1.10.0")
     implementation("org.kohsuke:github-api:1.101")
     compileOnly("com.infradna.tool:bridge-method-annotation:1.18") {
         exclude(group = "org.jenkins-ci")
