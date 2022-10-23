@@ -24,6 +24,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.apache.commons.text.StringEscapeUtils;
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHIssueState;
 import org.kohsuke.github.GHLabel;
@@ -46,7 +47,7 @@ public class GenerateReleaseNotes {
     };
 
     private static final String REPO = "zaproxy/zaproxy";
-    private static final int MILESTONE_NUMBER = 7;
+    private static final int MILESTONE_NUMBER = 8;
 
     public static void main(String[] args) throws Exception {
 
@@ -123,14 +124,7 @@ public class GenerateReleaseNotes {
         Object[] devIssues = devIssuesMap.keySet().toArray();
         Arrays.sort(devIssues);
         for (Object key : devIssues) {
-            System.out.println(
-                    "<li><a href=\"https://github.com/zaproxy/zaproxy/issues/"
-                            + key
-                            + "\">Issue "
-                            + key
-                            + "</a> : "
-                            + devIssuesMap.get(key)
-                            + "</li>");
+            printIssue(devIssuesMap, key);
         }
         System.out.println("</ul>");
         System.out.println("");
@@ -140,14 +134,7 @@ public class GenerateReleaseNotes {
         Object[] bugIssues = bugIssuesMap.keySet().toArray();
         Arrays.sort(bugIssues);
         for (Object key : bugIssues) {
-            System.out.println(
-                    "<li><a href=\"https://github.com/zaproxy/zaproxy/issues/"
-                            + key
-                            + "\">Issue "
-                            + key
-                            + "</a> : "
-                            + bugIssuesMap.get(key)
-                            + "</li>");
+            printIssue(bugIssuesMap, key);
         }
         System.out.println("</ul>");
         System.out.println("");
@@ -166,5 +153,15 @@ public class GenerateReleaseNotes {
                 }
             }
         }
+    }
+
+    private static void printIssue(Map<Integer, String> issues, Object number) {
+        System.out.print("<li><a href=\"https://github.com/zaproxy/zaproxy/issues/");
+        System.out.print(number);
+        System.out.print("\">Issue ");
+        System.out.print(number);
+        System.out.print("</a> : ");
+        System.out.print(StringEscapeUtils.escapeHtml4(issues.get(number)));
+        System.out.print("</li>\n");
     }
 }
