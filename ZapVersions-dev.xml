@@ -1352,64 +1352,6 @@
             </addons>
         </dependencies>
     </addon_imagelocationscanner>
-    <addon>importLogFiles</addon>
-    <addon_importLogFiles>
-        <name>Log File Importer</name>
-        <description>Allows you to import log files from ModSecurity and files previously exported from ZAP</description>
-        <author>Joseph Kirwin, ZAP Dev Team</author>
-        <version>6</version>
-        <file>importLogFiles-alpha-6.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/importLogFiles-v6/importLogFiles-alpha-6.zap</url>
-        <hash>SHA-256:8e9383c3c8f13abbb98e4726cff2d0843e350e9214dd89c74778a46d679711a2</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/log-file-importer/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-22</date>
-        <size>156767</size>
-        <not-before-version>2.11.1</not-before-version>
-        <dependencies>
-            <addons>
-                <addon>
-                    <id>exim</id>
-                </addon>
-            </addons>
-        </dependencies>
-    </addon_importLogFiles>
-    <addon>importurls</addon>
-    <addon_importurls>
-        <name>Import files containing URLs</name>
-        <description>Adds an option to import a file of URLs. The file must be plain text with one URL per line.</description>
-        <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>importurls-beta-9.zap</file>
-        <status>beta</status>
-        <changes>&lt;h3&gt;Retired&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;This add-on has been retired, and its functionality has been replaced by the Import/Export Add-on.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/importurls-v9/importurls-beta-9.zap</url>
-        <hash>SHA-256:1dd3602a9fa88ff2834643556226fd2129561abf217d8b4ac0d7281e55be06ee</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/import-urls/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-22</date>
-        <size>231139</size>
-        <not-before-version>2.11.1</not-before-version>
-        <dependencies>
-            <addons>
-                <addon>
-                    <id>exim</id>
-                </addon>
-            </addons>
-        </dependencies>
-    </addon_importurls>
     <addon>invoke</addon>
     <addon_invoke>
         <name>Invoke Applications</name>
@@ -2292,60 +2234,6 @@ uniquely. DDNs are named with the parameter name from the spec.&lt;/li&gt;
         <size>1809830</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_saml>
-    <addon>saverawmessage</addon>
-    <addon_saverawmessage>
-        <name>Save Raw Message</name>
-        <description>Allows to save content of HTTP messages as binary</description>
-        <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>saverawmessage-release-7.zap</file>
-        <status>release</status>
-        <changes>&lt;h3&gt;Retired&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;This add-on has been retired, and its functionality has been replaced by the Import/Export Add-on.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/saverawmessage-v7/saverawmessage-release-7.zap</url>
-        <hash>SHA-256:530e0c46d30c9aeb0a6b4cc4fbb3d3083db0337cbb88ac0db96271076b9ec48b</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/save-raw-message/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-22</date>
-        <size>23464</size>
-        <not-before-version>2.11.1</not-before-version>
-        <dependencies>
-            <addons>
-                <addon>
-                    <id>exim</id>
-                </addon>
-            </addons>
-        </dependencies>
-    </addon_saverawmessage>
-    <addon>savexmlmessage</addon>
-    <addon_savexmlmessage>
-        <name>Save XML Message</name>
-        <description>Allows to save content of HTTP messages as XML</description>
-        <author>thatsn0tmysite</author>
-        <version>0.3.0</version>
-        <file>savexmlmessage-alpha-0.3.0.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Retired&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;This add-on has been retired, and its functionality has been replaced by the Import/Export Add-on.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/savexmlmessage-v0.3.0/savexmlmessage-alpha-0.3.0.zap</url>
-        <hash>SHA-256:0a73d4d8f07a5e7c1e9140b22faa63fb3fbb51fb88d5e33ff297723564c0c79d</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/save-xml-message/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-12-22</date>
-        <size>6034</size>
-        <not-before-version>2.11.1</not-before-version>
-        <dependencies>
-            <addons>
-                <addon>
-                    <id>exim</id>
-                </addon>
-            </addons>
-        </dependencies>
-    </addon_savexmlmessage>
     <addon>scripts</addon>
     <addon_scripts>
         <name>Script Console</name>
