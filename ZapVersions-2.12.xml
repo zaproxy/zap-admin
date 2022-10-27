@@ -1048,19 +1048,19 @@
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>14</version>
-        <file>help-release-14.zap</file>
+        <version>15</version>
+        <file>help-release-15.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated 2.11.1 release notes.&lt;/li&gt;
+&lt;li&gt;Updated for 2.12.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v14/help-release-14.zap</url>
-        <hash>SHA-256:b9a0927ce7a80df42b28b40beafad0ecfa34e45d628b302cf93e0bc825d93ee8</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v15/help-release-15.zap</url>
+        <hash>SHA-256:8db85b4f0fedb8b2fa56578222f1a76b2b48029e2d2e360a9659826241ebfaa6</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2021-12-10</date>
-        <size>875420</size>
+        <date>2022-10-27</date>
+        <size>611954</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
