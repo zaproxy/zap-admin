@@ -41,23 +41,21 @@
         <name>Access Control Testing</name>
         <description>Adds a set of tools for testing access control in web applications.</description>
         <author>ZAP Dev Team</author>
-        <version>7</version>
-        <file>accessControl-alpha-7.zap</file>
+        <version>8</version>
+        <file>accessControl-alpha-8.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Don't set the font color for inherited entries (Issue 6397).&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes (some changes impact the visibility of variables and add getters/setters, which may impact third party add-ons or scripts).&lt;/li&gt;
-&lt;li&gt;Change to no longer rely on core report classes, which are going to be deleted.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v7/accessControl-alpha-7.zap</url>
-        <hash>SHA-256:5bfa0e14cf227bc402c58bd35c19c474b781e519585f3d62c2b174e8c6ac55a0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v8/accessControl-alpha-8.zap</url>
+        <hash>SHA-256:b46903f948e9cc57f9bd2be5402ad64858da6fb39359fa4b459d5e0836492d67</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/access-control-testing/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>591286</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-10-28</date>
+        <size>596436</size>
+        <not-before-version>2.12.0</not-before-version>
     </addon_accessControl>
     <addon>alertFilters</addon>
     <addon_alertFilters>
@@ -2348,26 +2346,21 @@
         <name>SAML Support</name>
         <description>Detect, Show, Edit, Fuzz SAML requests</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>saml-alpha-9.zap</file>
+        <version>10</version>
+        <file>saml-alpha-10.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add help.&lt;/li&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/saml-v9/saml-alpha-9.zap</url>
-        <hash>SHA-256:37c167b76115a7a0710b1e8940591797da170961ca69f517c66a25b16712cb1a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/saml-v10/saml-alpha-10.zap</url>
+        <hash>SHA-256:097492271c7ec1d85def81091ffe897f4809927043844d1f5f0c7c598a0ad164</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/saml-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>1809830</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2022-10-28</date>
+        <size>1811985</size>
+        <not-before-version>2.12.0</not-before-version>
     </addon_saml>
     <addon>scripts</addon>
     <addon_scripts>
@@ -2599,26 +2592,20 @@
         <name>Server-Sent Events</name>
         <description>Allows you to view Server-Sent Events (SSE) communication.</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>sse-alpha-11.zap</file>
+        <version>12</version>
+        <file>sse-alpha-12.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Properly close the server side connection when no longer in use (Issue 6424).&lt;/li&gt;
-&lt;li&gt;Increase the size of the URL column (Issue 7354).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v11/sse-alpha-11.zap</url>
-        <hash>SHA-256:c4126a431866de8271e314a9ca1343002a4a0db05f669870f84c015eb707e372</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v12/sse-alpha-12.zap</url>
+        <hash>SHA-256:c8805d497f71495e1d7fab7dfccf1955cc996ff514e6c0154e7937a72fdafc6c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/server-sent-events/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-23</date>
-        <size>340546</size>
-        <not-before-version>2.11.1</not-before-version>
+        <date>2022-10-28</date>
+        <size>334645</size>
+        <not-before-version>2.12.0</not-before-version>
     </addon_sse>
     <addon>svndigger</addon>
     <addon_svndigger>
