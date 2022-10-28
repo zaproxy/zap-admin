@@ -10,7 +10,10 @@ var AT_FILE = ROOT + "/data/alerttags.yml";
 var Alert = Java.type('org.parosproxy.paros.core.scanner.Alert');
 var ArrayList = Java.type('java.util.ArrayList');
 var Constant = Java.type('org.parosproxy.paros.Constant');
+var HttpMessage = Java.type('org.parosproxy.paros.network.HttpMessage');
 var PluginPassiveScanner = Java.type('org.zaproxy.zap.extension.pscan.PluginPassiveScanner');
+var PassiveScanData = Java.type('org.zaproxy.zap.extension.pscan.PassiveScanData');
+var URI = Java.type('org.apache.commons.httpclient.URI');
 var FileWriter = Java.type('java.io.FileWriter');
 var PrintWriter = Java.type('java.io.PrintWriter');
 var TreeSet = Java.type('java.util.TreeSet');
@@ -53,6 +56,11 @@ for (var i = 0; i < plugins.length; i++) {
 		print(e);
 	}
 }
+
+// Have to use reflection as constructor is not public in 2.12.0
+psdCons = PassiveScanData.class.getDeclaredConstructors()[0];
+psdCons.setAccessible(true);
+passiveScanData = psdCons.newInstance(new HttpMessage(new URI("https://www.example.com", true)));
 
 extPscan = org.parosproxy.paros.control.Control.getSingleton().
 	getExtensionLoader().getExtension(
@@ -243,6 +251,8 @@ function getPrivateMethod(obj, methods, key, defaultVal) {
 }
 
 function printPscanRule(plugin) {
+	plugin.setHelper(passiveScanData);
+
 	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
 
 	if (examples == null || examples.length == 0) {
