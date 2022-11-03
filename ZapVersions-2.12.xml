@@ -2729,21 +2729,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.14.0</version>
-        <file>wappalyzer-release-21.14.0.zap</file>
+        <version>21.15.0</version>
+        <file>wappalyzer-release-21.15.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.14.0/wappalyzer-release-21.14.0.zap</url>
-        <hash>SHA-256:dcbc5d2eee34314b559b9841b507844130f254af929f0a659d406d529c29b2b9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.15.0/wappalyzer-release-21.15.0.zap</url>
+        <hash>SHA-256:783af7308289d1191a28bd19e4a1cdaaf30856d7f098356939b03e6d6bcb0d84</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>16494082</size>
+        <date>2022-11-03</date>
+        <size>16566368</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
