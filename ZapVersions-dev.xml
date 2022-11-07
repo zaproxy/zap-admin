@@ -1589,29 +1589,28 @@
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>network-beta-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>network-beta-0.4.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client Certificates management (PKCS#11 and PKCS#12).&lt;/li&gt;
-&lt;li&gt;Connection options, HTTP proxy, and SOCKS proxy.&lt;/li&gt;
-&lt;li&gt;A newer HTTP client implementation.&lt;/li&gt;
+&lt;li&gt;Allow to enable and configure ALPN for local servers/proxies.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Minor tweaks in help pages for better rendering.&lt;/li&gt;
-&lt;li&gt;Promoted to Beta status.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update user agents.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow to send TRACE requests with payload and with an outgoing proxy (Issue 7578).&lt;/li&gt;
+&lt;li&gt;Correct HTTP/NTLM reauthentication to target and proxy (Issue 7566).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.3.0/network-beta-0.3.0.zap</url>
-        <hash>SHA-256:bcd86cf6f71bc0f46a7753ad5340e15e2bf605803f16e1dc03c6824b67525cc1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.4.0/network-beta-0.4.0.zap</url>
+        <hash>SHA-256:0c2cd45f391ebebcba1491b829ca2b1422bf126552f5addab25f6c8933ad9a54</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>20571929</size>
+        <date>2022-11-07</date>
+        <size>26302393</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
