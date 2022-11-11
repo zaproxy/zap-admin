@@ -1564,6 +1564,24 @@
         <size>48865539</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_kotlin>
+    <addon>levoai</addon>
+    <addon_levoai>
+        <name>Levo.ai</name>
+        <description>Build OpenAPI Specs with ZAP traffic using Levo.ai.</description>
+        <author>Levo.ai</author>
+        <version>0.1.0</version>
+        <file>levoai-zap-addon-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.
+&lt;/ul&gt;</changes>
+        <url>https://github.com/levoai/levoai-zap-addon/releases/download/v0.1.0/levoai-zap-addon-alpha-0.1.0.zap</url>
+        <hash>SHA-256:9b356404f8fcd79093f5e559a0941330af6da77e24e2c6b6100694923acdcab2</hash>
+        <repo>https://github.com/levoai/levoai-zap-addon</repo>
+        <date>2022-11-11</date>
+        <size>2459509</size>
+        <not-before-version>2.12.0</not-before-version>
+    </addon_levoai>
     <addon>neonmarker</addon>
     <addon_neonmarker>
         <name>Neonmarker</name>
