@@ -1684,21 +1684,21 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>29</version>
-        <file>openapi-beta-29.zap</file>
+        <version>30</version>
+        <file>openapi-beta-30.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Remove parser used for core spider (Related to Issue 3113).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Each imported endpoint is included in the selected context, unless its URL matches an already existing &lt;em&gt;Include in
+Context&lt;/em&gt; regex entry.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v29/openapi-beta-29.zap</url>
-        <hash>SHA-256:cc1914097a040c60eb39bc2ab60d3a0535fb5011b1f50ce200c9f7415fc78998</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v30/openapi-beta-30.zap</url>
+        <hash>SHA-256:b4b258b988edb79f29ed5f4bde39f45bff5e190575165dcc31afdeb7dd3207fb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>12196539</size>
+        <date>2022-11-15</date>
+        <size>12823509</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
