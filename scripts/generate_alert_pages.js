@@ -16,6 +16,8 @@ var PassiveScanData = Java.type('org.zaproxy.zap.extension.pscan.PassiveScanData
 var URI = Java.type('org.apache.commons.httpclient.URI');
 var FileWriter = Java.type('java.io.FileWriter');
 var PrintWriter = Java.type('java.io.PrintWriter');
+var Tech = Java.type('org.zaproxy.zap.model.Tech');
+var TechSet = Java.type('org.zaproxy.zap.model.TechSet');
 var TreeSet = Java.type('java.util.TreeSet');
 var ignoreList = [50000, 50001, 50003, 60000, 60001, 60100, 60101];
 var codeMap = {
@@ -24,6 +26,8 @@ var codeMap = {
 	}
 
 var allAlertTags = {}
+var emptyTech = new TechSet;
+var allTech = Tech.getAll().toArray();
 
 var WebSocketPassiveScript = Java.type('org.zaproxy.zap.extension.websocket.pscan.scripts.WebSocketPassiveScript');
 
@@ -96,7 +100,7 @@ function quoteText(txt) {
 	return '"' + txt.replaceAll("\"", "'") + '"';
 }
 
-function printAlerts(alerts, name, type, status, clazz, scripturl) {
+function printAlerts(alerts, name, type, status, clazz, scripturl, tech) {
 	var pluginId = alerts[0].getPluginId();
 	if (ignoreList.indexOf(pluginId) !== -1) {
 		print('Plugin ID: ' + pluginId + ' - ignored');
@@ -187,6 +191,13 @@ function printAlerts(alerts, name, type, status, clazz, scripturl) {
 			pw.println('wasc: ' + wascId);
 		}
 		var tags = alert.getTags();
+		if (tech) {
+			pw.println('techtags: ');
+			for (var tag_i in tech) {
+				var tag = tech[tag_i];
+				pw.println('  - ' + tag);
+			}
+		}
 		if (tags) {
 			pw.println('alerttags: ');
 			var sorted_tags = (new TreeSet(tags.keySet())).toArray();
@@ -222,7 +233,18 @@ function printAscanRule(plugin) {
 		examples.add(alert);
 	}
 	
-	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName());
+	var tech;
+	if (! plugin.targets(emptyTech)) {
+		tech = [ ];
+		for (var i = 0; i < allTech.length; i++) {
+			var t = allTech[i];
+			// Ignore top level techs - those without dots in their name
+			if (t.toString().indexOf('\.') > 0 && plugin.targets(new TechSet([t]))) {
+				tech.push(t.toString().replaceAll(' ', '_'));
+			}
+		}
+	}
+	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName(), null, tech);
 }
 
 function getPrivateMethod(obj, methods, key, defaultVal) {
