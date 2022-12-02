@@ -504,25 +504,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>callhome-release-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>callhome-release-0.6.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;DOM XSS stats to telemetry&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Promoted to Release status.&lt;/li&gt;
+&lt;li&gt;Include container field for CFUs.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.5.0/callhome-release-0.5.0.zap</url>
-        <hash>SHA-256:4ab0ec07cd758808d19687a3dcd4c9b4f8a9a03634c1c726b1b17e9b5e7c4468</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.6.0/callhome-release-0.6.0.zap</url>
+        <hash>SHA-256:030facef0471ce4c63a40aedd2bd2eaa6768dff2bc61d66c68d9534a376edf47</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>321247</size>
+        <date>2022-12-02</date>
+        <size>320946</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_callhome>
     <addon>codedx</addon>
@@ -2276,19 +2270,19 @@ Context&lt;/em&gt; regex entry.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.17.0</version>
-        <file>retire-release-0.17.0.zap</file>
+        <version>0.18.0</version>
+        <file>retire-release-0.18.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.17.0/retire-release-0.17.0.zap</url>
-        <hash>SHA-256:be680d387980acd5398ba486abed7d0ba153df876a142eda0337a042d2d6a03f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.18.0/retire-release-0.18.0.zap</url>
+        <hash>SHA-256:1faa34b11494755b08e68139b9d57579ad535e18fde94c4a8a155c5bc0eb8992</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-11-14</date>
-        <size>1214351</size>
+        <date>2022-12-02</date>
+        <size>1214422</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
