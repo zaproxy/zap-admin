@@ -47,7 +47,7 @@ public class GenerateReleaseNotes {
     };
 
     private static final String REPO = "zaproxy/zaproxy";
-    private static final int MILESTONE_NUMBER = 8;
+    private static final int MILESTONE_NUMBER = 9;
 
     public static void main(String[] args) throws Exception {
 
