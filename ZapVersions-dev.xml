@@ -139,52 +139,42 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>49</version>
-        <file>ascanrules-release-49.zap</file>
+        <version>50</version>
+        <file>ascanrules-release-50.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were added, having been promoted from Beta:
+&lt;li&gt;The Directory Browsing scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;Use lower case HTTP field names for compatibility with HTTP/2.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;.env Information Leak&lt;/li&gt;
-&lt;li&gt;Cloud Metadata Attack&lt;/li&gt;
-&lt;li&gt;GET for POST&lt;/li&gt;
-&lt;li&gt;Heartbleed OpenSSL Vulnerability&lt;/li&gt;
-&lt;li&gt;Hidden File Finder&lt;/li&gt;
-&lt;li&gt;Padding Oracle&lt;/li&gt;
+&lt;li&gt;False positive in case of javascript: protocol xss attacks, when attack payload is modified by the application (Issue 6013).&lt;/li&gt;
+&lt;li&gt;Preserve the HTTP version in the scan rules:
+&lt;ul&gt;
 &lt;li&gt;Remote Code Execution - CVE-2012-1823&lt;/li&gt;
 &lt;li&gt;Source Code Disclosure - CVE-2012-1823&lt;/li&gt;
-&lt;li&gt;SQL Injection - Hypersonic (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - MsSQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - MySQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - Oracle (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - PostgreSQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - SQLite&lt;/li&gt;
-&lt;li&gt;Trace.axd Information Leak&lt;/li&gt;
-&lt;li&gt;User Agent Fuzzer&lt;/li&gt;
-&lt;li&gt;XSLT Injection&lt;/li&gt;
-&lt;li&gt;XXE&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - /WEB-INF folder&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Rely on Network add-on to obtain more information about socket timeouts.&lt;/li&gt;
+&lt;li&gt;The Hidden File Finder scan rule will now also check for &amp;quot;/_wpeprivate/config.json&amp;quot;.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v49/ascanrules-release-49.zap</url>
-        <hash>SHA-256:6a6ed2bd1aec91acb9e54b9d0ada20074003de0b23f3de3397d51cb2b699593a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v50/ascanrules-release-50.zap</url>
+        <hash>SHA-256:af6848586d1a65148b626f084db289877c8f3a854bc11129008702b82a2b027a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>2629751</size>
+        <date>2022-12-13</date>
+        <size>2938629</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.9.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.12.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -202,20 +192,27 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>41</version>
-        <file>ascanrulesAlpha-alpha-41.zap</file>
+        <version>42</version>
+        <file>ascanrulesAlpha-alpha-42.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;The Text4shell scan rule now includes an alert tag for its CVE reference.&lt;/li&gt;
+&lt;li&gt;LDAP protocol technology support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Preserve the HTTP version in Web Cache Deception scan rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Server Side Request Forgery Scan Rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v41/ascanrulesAlpha-alpha-41.zap</url>
-        <hash>SHA-256:2e43ff7c23a259b2a150432ea7f438ee2560866c61d8722cd2c25fe26ef7995e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v42/ascanrulesAlpha-alpha-42.zap</url>
+        <hash>SHA-256:a75486ff0fae911e34e2e7b1504d0fb8bdcc9b35c887cc9681aafb4539041a47</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>571490</size>
+        <date>2022-12-13</date>
+        <size>417060</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -225,7 +222,7 @@
                 </addon>
                 <addon>
                     <id>oast</id>
-                    <version>&gt;= 0.7.0</version>
+                    <version>&gt;= 0.14.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -235,73 +232,39 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>43</version>
-        <file>ascanrulesBeta-beta-43.zap</file>
+        <version>44</version>
+        <file>ascanrulesBeta-beta-44.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Depend on &lt;code&gt;database&lt;/code&gt; add-on.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Rely on Network add-on to obtain more information about socket timeouts.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were added, having been promoted to Beta:
-&lt;ul&gt;
-&lt;li&gt;CORS&lt;/li&gt;
-&lt;li&gt;Exponential Entity Expansion&lt;/li&gt;
-&lt;li&gt;Forbidden Bypass&lt;/li&gt;
-&lt;li&gt;Log4Shell&lt;/li&gt;
-&lt;li&gt;Out-of-Band XSS&lt;/li&gt;
-&lt;li&gt;Spring4Shell&lt;/li&gt;
-&lt;li&gt;Spring Actuator&lt;/li&gt;
-&lt;li&gt;Blind SSTI&lt;/li&gt;
-&lt;li&gt;SSTI&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Use lower case HTTP field names for compatibility with HTTP/2.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;NPE in Source Code Disclosure File Inclusion Scan Rule&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;li&gt;Preserve the HTTP version in the scan rules:
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Release:
-&lt;ul&gt;
-&lt;li&gt;.env Information Leak&lt;/li&gt;
-&lt;li&gt;Cloud Metadata Attack&lt;/li&gt;
-&lt;li&gt;GET for POST&lt;/li&gt;
-&lt;li&gt;Heartbleed OpenSSL Vulnerability&lt;/li&gt;
-&lt;li&gt;Hidden File Finder&lt;/li&gt;
-&lt;li&gt;Padding Oracle&lt;/li&gt;
-&lt;li&gt;Remote Code Execution - CVE-2012-1823&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure - CVE-2012-1823&lt;/li&gt;
-&lt;li&gt;SQL Injection - Hypersonic (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - MsSQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - MySQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - Oracle (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - PostgreSQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - SQLite&lt;/li&gt;
-&lt;li&gt;Trace.axd Information Leak&lt;/li&gt;
-&lt;li&gt;User Agent Fuzzer&lt;/li&gt;
-&lt;li&gt;XSLT Injection&lt;/li&gt;
-&lt;li&gt;XXE&lt;/li&gt;
+&lt;li&gt;Backup File Disclosure&lt;/li&gt;
+&lt;li&gt;Bypassing 403&lt;/li&gt;
+&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
+&lt;li&gt;Relative Path Confusion&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - Git&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - SVN&lt;/li&gt;
+&lt;li&gt;Possible Username Enumeration&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v43/ascanrulesBeta-beta-43.zap</url>
-        <hash>SHA-256:95a50a1d07c16ff63fe9e09a74cd4e3efba1dd324159f35c177b42f1dba7a68e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v44/ascanrulesBeta-beta-44.zap</url>
+        <hash>SHA-256:8ee6adfc4aac239de5d08ed749ef9fee55b62f4c63cfcdb6cd8eca2af589165f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>2023847</size>
+        <date>2022-12-13</date>
+        <size>1823563</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.10.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.12.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>database</id>
@@ -551,18 +514,22 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.11.0</version>
-        <file>commonlib-release-1.11.0.zap</file>
+        <version>1.12.0</version>
+        <file>commonlib-release-1.12.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Provide HTTP Fields names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.11.0/commonlib-release-1.11.0.zap</url>
-        <hash>SHA-256:f4a02fb129d32a4d5721da925180bd02bdfe092614c5018e53fa191be5426771</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.12.0/commonlib-release-1.12.0.zap</url>
+        <hash>SHA-256:a9f52d43743ab90fc679685418e0de4acd46794855d91dccf927e77392da5a56</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>4081777</size>
+        <date>2022-12-13</date>
+        <size>4083461</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1628,23 +1595,28 @@
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>oast-beta-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>oast-beta-0.14.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Do not include the Connection header in Callback responses for HTTP/2.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;BOAST Payloads are persisted in the permanent database, and polled in future ZAP sessions.&lt;/li&gt;
+&lt;li&gt;Allow getting both the payload and canary values for OAST services.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Interactsh canary values were reversed in the UI.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.13.0/oast-beta-0.13.0.zap</url>
-        <hash>SHA-256:380898ab3d2c7f01d00d5a10765b94dd076dc39403244b9d5ac00d6cc7ac1e89</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.14.0/oast-beta-0.14.0.zap</url>
+        <hash>SHA-256:9c77ebbaf15f01c0a6e820d15c8dca2b0c4de40d3ee2f2a19a006cf5514a31cb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>788917</size>
+        <date>2022-12-13</date>
+        <size>802214</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2728,19 +2700,23 @@ Context&lt;/em&gt; regex entry.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.16.0</version>
-        <file>wappalyzer-release-21.16.0.zap</file>
+        <version>21.17.0</version>
+        <file>wappalyzer-release-21.17.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.16.0/wappalyzer-release-21.16.0.zap</url>
-        <hash>SHA-256:e1c7f31fc608ddce80e542ba604ddab2b7df55c58edda53592a10309895dbd20</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.17.0/wappalyzer-release-21.17.0.zap</url>
+        <hash>SHA-256:6b940182bc9e006a33a3254fbff7aa9ea37f0f9bd5d3862c449ebe37f592c4d6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-11-14</date>
-        <size>16570375</size>
+        <date>2022-12-13</date>
+        <size>17426146</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
