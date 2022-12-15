@@ -773,24 +773,40 @@
         <name>Encoder</name>
         <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
         <author>ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>encoder-beta-0.7.0.zap</file>
-        <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <version>1.0.0</version>
+        <file>encoder-release-1.0.0.zap</file>
+        <status>release</status>
+        <changes>&lt;h3&gt;BREAKING CHANGE&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Existing scripts will fail as the process method signature has changed, scripts can be fixed by changing the signature from: process(value) to process(helper, value).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Add-on promoted to Release status.&lt;/li&gt;
+&lt;li&gt;Allow script processors to return strings without requiring an &amp;quot;EncodeDecodeResult&amp;quot; wrapper.&lt;/li&gt;
+&lt;li&gt;Show help and options buttons in the main dialog.&lt;/li&gt;
+&lt;li&gt;The Base64 decoder now uses a Mime decoder and handles line wrapped input.&lt;/li&gt;
+&lt;li&gt;Updated script templates to use the new process method.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A Full HTML Entity encoder (Issue 2222).&lt;/li&gt;
+&lt;li&gt;Add an option which controls whether or not Hash output panels use full caps or lower case (Issue 7503).&lt;/li&gt;
+&lt;li&gt;Utility processors (not shown by default).
+&lt;ul&gt;
+&lt;li&gt;Lower case&lt;/li&gt;
+&lt;li&gt;Remove Whitespace&lt;/li&gt;
+&lt;li&gt;Reverse&lt;/li&gt;
+&lt;li&gt;Upper case&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v0.7.0/encoder-beta-0.7.0.zap</url>
-        <hash>SHA-256:57840a3d613d6cd3caf5e08ad327f6d88c8a55bea1abee123e395c090eac3852</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v1.0.0/encoder-release-1.0.0.zap</url>
+        <hash>SHA-256:9193d2df7fbbee047c1e4284b918164250e4c0e7be915887469ad9e43721d8a8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>394028</size>
+        <date>2022-12-15</date>
+        <size>409609</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_encoder>
     <addon>evalvillain</addon>
