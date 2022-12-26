@@ -1558,17 +1558,23 @@
         <name>Levo.ai</name>
         <description>Build OpenAPI Specs with ZAP traffic using Levo.ai.</description>
         <author>Levo.ai</author>
-        <version>0.1.0</version>
-        <file>levoai-zap-addon-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>levoai-zap-addon-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Validate the Satellite URL structure when it is modified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;URLs with &apos;/&apos; as the path were not being handled correctly.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/levoai/levoai-zap-addon/releases/download/v0.1.0/levoai-zap-addon-alpha-0.1.0.zap</url>
-        <hash>SHA-256:9b356404f8fcd79093f5e559a0941330af6da77e24e2c6b6100694923acdcab2</hash>
+        <url>https://github.com/levoai/levoai-zap-addon/releases/download/v0.2.0/levoai-zap-addon-alpha-0.2.0.zap</url>
+        <hash>SHA-256:28777022d50fa8ff29ef21ab94d01786d4936dcf6ddc9303e64f52983203311d</hash>
+        <info>https://docs.levo.ai/api-observability/quickstart/quickstart-zap-addon</info>
         <repo>https://github.com/levoai/levoai-zap-addon</repo>
-        <date>2022-11-11</date>
-        <size>2459509</size>
+        <date>2022-12-26</date>
+        <size>2459871</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_levoai>
     <addon>neonmarker</addon>
