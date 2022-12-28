@@ -2,12 +2,12 @@
 <ZAP>
     <core>
         <version>2.12.0</version>
-        <daily-version>D-2022-12-19</daily-version>
+        <daily-version>D-2022-12-28</daily-version>
         <daily>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/w2022-12-19/ZAP_WEEKLY_D-2022-12-19.zip</url>
-            <file>ZAP_WEEKLY_D-2022-12-19.zip</file>
-            <hash>SHA-256:e27502f357323aa3072e92ffcdea5477a28f3aa4ea64413109be891401c4fba2</hash>
-            <size>296169730</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/w2022-12-28/ZAP_WEEKLY_D-2022-12-28.zip</url>
+            <file>ZAP_WEEKLY_D-2022-12-28.zip</file>
+            <hash>SHA-256:6b18efde7fb2eabb7956892fc323590a50d6764d8ca4a919c732cb4cf56745bc</hash>
+            <size>296356359</size>
         </daily>
         <windows32>
             <url>https://github.com/zaproxy/zaproxy/releases/download/v2.12.0/ZAP_2_12_0_windows-x32.exe</url>
@@ -1567,7 +1567,7 @@
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;URLs with &apos;/&apos; as the path were not being handled correctly.&lt;/li&gt;
+&lt;li&gt;URLs with '/' as the path were not being handled correctly.&lt;/li&gt;
 &lt;/ul&gt;</changes>
         <url>https://github.com/levoai/levoai-zap-addon/releases/download/v0.2.0/levoai-zap-addon-alpha-0.2.0.zap</url>
         <hash>SHA-256:28777022d50fa8ff29ef21ab94d01786d4936dcf6ddc9303e64f52983203311d</hash>
