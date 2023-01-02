@@ -1476,8 +1476,8 @@
         <name>JWT Support</name>
         <description>Detect JWT requests and scan them to find related vulnerabilities</description>
         <author>KSASAN preetkaran20@gmail.com</author>
-        <version>1.0.2</version>
-        <file>jwt-alpha-1.0.2.zap</file>
+        <version>1.0.3</version>
+        <file>jwt-alpha-1.0.3.zap</file>
         <status>alpha</status>
         <changes>&lt;ul&gt;
 &lt;li&gt;First version of JWT Support.
@@ -1487,11 +1487,11 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jwt-alpha-1.0.2.zap</url>
-        <hash>SHA-256:f35af7bb3fbb88ae3da5ab0ac7a5c562463dfab521f3e54c7194b44358f793b3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/jwt-alpha-1.0.3.zap</url>
+        <hash>SHA-256:d3df8480010ad2df230cbdb99619aafdb869861349455c3da0129a99b132d204</hash>
         <repo>https://github.com/SasanLabs/owasp-zap-jwt-addon/</repo>
-        <date>2022-01-22</date>
-        <size>751195</size>
+        <date>2023-01-02</date>
+        <size>751748</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
