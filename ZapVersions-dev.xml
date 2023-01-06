@@ -319,24 +319,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.21.0</version>
-        <file>automation-beta-0.21.0.zap</file>
+        <version>0.22.0</version>
+        <file>automation-beta-0.22.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Warning if unexpected element under &lt;code&gt;activeScan&lt;/code&gt; job (e.g. misplaced &lt;code&gt;rules&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Help details warning against specifying default ports (80/443) (Issue 7649).&lt;/li&gt;
+&lt;li&gt;Method to get running plans - can be used by scripts to interact with the plans.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.21.0/automation-beta-0.21.0.zap</url>
-        <hash>SHA-256:de5673055ae1d8c07a89c409ca21dce18f19901beba130bca928a54cf2340e69</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.22.0/automation-beta-0.22.0.zap</url>
+        <hash>SHA-256:3ff834573952167deaf34dd16dfc1030e04cf10f583be8bc1885a5bb185e0f96</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>4315129</size>
+        <date>2023-01-06</date>
+        <size>4315173</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
