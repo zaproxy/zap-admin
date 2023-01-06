@@ -2678,23 +2678,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.17.0</version>
-        <file>wappalyzer-release-21.17.0.zap</file>
+        <version>21.18.0</version>
+        <file>wappalyzer-release-21.18.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.17.0/wappalyzer-release-21.17.0.zap</url>
-        <hash>SHA-256:6b940182bc9e006a33a3254fbff7aa9ea37f0f9bd5d3862c449ebe37f592c4d6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.18.0/wappalyzer-release-21.18.0.zap</url>
+        <hash>SHA-256:0c34f72116c50f9fd0a9f84a591ab77d56a312fe31c0bad237c13625ebb14cec</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-13</date>
-        <size>17426146</size>
+        <date>2023-01-06</date>
+        <size>17630498</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
