@@ -2234,19 +2234,20 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.18.0</version>
-        <file>retire-release-0.18.0.zap</file>
+        <version>0.19.0</version>
+        <file>retire-release-0.19.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.18.0/retire-release-0.18.0.zap</url>
-        <hash>SHA-256:1faa34b11494755b08e68139b9d57579ad535e18fde94c4a8a155c5bc0eb8992</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.19.0/retire-release-0.19.0.zap</url>
+        <hash>SHA-256:447b425ab07b64c32c46e83c04e34337cd4d515f629a56a7da196a5e534b2933</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-02</date>
-        <size>1214422</size>
+        <date>2023-01-10</date>
+        <size>1215622</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
