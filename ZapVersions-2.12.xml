@@ -2707,19 +2707,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>47</version>
-        <file>webdriverlinux-release-47.zap</file>
+        <version>48</version>
+        <file>webdriverlinux-release-48.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 108.0.5359.71.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 109.0.5414.74.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v47/webdriverlinux-release-47.zap</url>
-        <hash>SHA-256:b197dfd36f915affb8ea61791d44616fea921492d0f41a4f5073df6f60d20a40</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v48/webdriverlinux-release-48.zap</url>
+        <hash>SHA-256:1e5f466a939022b1fad3ae5cdb0fbebd6e74902175c3b338fc8ab2c1d4a3e1c7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-01</date>
-        <size>13511444</size>
+        <date>2023-01-12</date>
+        <size>13451399</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2727,19 +2727,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>48</version>
-        <file>webdrivermacos-release-48.zap</file>
+        <version>49</version>
+        <file>webdrivermacos-release-49.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 108.0.5359.71.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 109.0.5414.74.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v48/webdrivermacos-release-48.zap</url>
-        <hash>SHA-256:3d827470325e7101c14d2322c6074df1f3c8fdf622b446bb37c5de7af9d63cc8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v49/webdrivermacos-release-49.zap</url>
+        <hash>SHA-256:055b26326e1933dfb0f0f994f40641cb2c7df65318e7ae41694b4f72ff2b714c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-01</date>
-        <size>21413421</size>
+        <date>2023-01-12</date>
+        <size>21576001</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2747,19 +2747,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>47</version>
-        <file>webdriverwindows-release-47.zap</file>
+        <version>48</version>
+        <file>webdriverwindows-release-48.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 108.0.5359.71.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 109.0.5414.74.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v47/webdriverwindows-release-47.zap</url>
-        <hash>SHA-256:c232271b591217889eb25a1918e3723aca5a99e027721ce62f0d1f394b701b50</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v48/webdriverwindows-release-48.zap</url>
+        <hash>SHA-256:19ebfabb05b33c951b41b73b8fcce24f79ab8677bd720d1e898481152992d260</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-01</date>
-        <size>10340270</size>
+        <date>2023-01-12</date>
+        <size>10508980</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
