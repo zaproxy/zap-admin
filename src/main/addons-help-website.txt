@@ -14,6 +14,7 @@ ascanrulesBeta
 ascanrules
 # 3rd-party, does not have help.
 # attacksurfacedetector
+authhelper
 authstats
 automation
 beanshell
