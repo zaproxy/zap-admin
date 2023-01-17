@@ -288,6 +288,26 @@
         <size>15604948</size>
         <not-before-version>2.7.0</not-before-version>
     </addon_attacksurfacedetector>
+    <addon>authhelper</addon>
+    <addon_authhelper>
+        <name>Authentication Helper</name>
+        <description>Authentication Helper</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>authhelper-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support of authentication request identification and configuration.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.1.0/authhelper-alpha-0.1.0.zap</url>
+        <hash>SHA-256:de0efbd352135137d01ec93cd4f4142322aee400e848c939753440fb9432e18f</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2023-01-17</date>
+        <size>25510</size>
+        <not-before-version>2.12.0</not-before-version>
+    </addon_authhelper>
     <addon>authstats</addon>
     <addon_authstats>
         <name>Authentication Statistics</name>
