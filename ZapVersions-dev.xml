@@ -2730,19 +2730,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>48</version>
-        <file>webdriverlinux-release-48.zap</file>
+        <version>49</version>
+        <file>webdriverlinux-release-49.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 109.0.5414.74.&lt;/li&gt;
+&lt;li&gt;Add aarch64/arm64 geckodriver (Issue 7650).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v48/webdriverlinux-release-48.zap</url>
-        <hash>SHA-256:1e5f466a939022b1fad3ae5cdb0fbebd6e74902175c3b338fc8ab2c1d4a3e1c7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v49/webdriverlinux-release-49.zap</url>
+        <hash>SHA-256:6b21cfcb5a7f94705d46426f22d92391239a4eb4bcdc0d9679f00faf12f8e8a4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-12</date>
-        <size>13451399</size>
+        <date>2023-01-26</date>
+        <size>16464361</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
