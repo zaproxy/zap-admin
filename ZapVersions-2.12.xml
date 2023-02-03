@@ -137,33 +137,40 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>ascanrules-release-51.zap</file>
+        <version>52</version>
+        <file>ascanrules-release-52.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Command Injection Scan Rule: Time-based blind detection heuristic has been replaced with linear regression.&lt;/li&gt;
+&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119 &amp;amp; 7100).
+&lt;ul&gt;
+&lt;li&gt;Buffer Overflow&lt;/li&gt;
+&lt;li&gt;Cloud Metadata&lt;/li&gt;
+&lt;li&gt;Code Injection&lt;/li&gt;
+&lt;li&gt;Path Traversal&lt;/li&gt;
+&lt;li&gt;Remote File Include&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Path Traversal scan rule no longer populates the Other Info field with check information, as the Alert Reference now provides that detail.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;CVE-2012-1823 Remote Execution and Source Code Disclosure, and Heart Bleed scan rules now include Alert Tags for the applicable CVEs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;SQL rule should not target NoSQL Dbs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;A false positive that could occur in the External Redirect scan rule if the payload was included in the redirect as a param or portion of the value.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v51/ascanrules-release-51.zap</url>
-        <hash>SHA-256:076de3b27d1a05ac5274681e5c82d5bfd33477d603d445a9718b2987a1810d92</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v52/ascanrules-release-52.zap</url>
+        <hash>SHA-256:a14e451625490daf959c0ed223beb66eb275bf183c8f6687a43095724aba58be</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>2941767</size>
+        <date>2023-02-03</date>
+        <size>2946053</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.12.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -519,22 +526,28 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.12.0</version>
-        <file>commonlib-release-1.12.0.zap</file>
+        <version>1.13.0</version>
+        <file>commonlib-release-1.13.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Provide HTTP Fields names.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info URL.&lt;/li&gt;
+&lt;li&gt;Constant for default number of threads.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correctly parse cookie name when set-cookie header value doesn't end with semicolon.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.12.0/commonlib-release-1.12.0.zap</url>
-        <hash>SHA-256:a9f52d43743ab90fc679685418e0de4acd46794855d91dccf927e77392da5a56</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.13.0/commonlib-release-1.13.0.zap</url>
+        <hash>SHA-256:b660912b0ca39b0b30c30919f56ba1cf754776ad20ba0f73981b6c6a3315ccd6</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-13</date>
-        <size>4083461</size>
+        <date>2023-02-03</date>
+        <size>4084441</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
