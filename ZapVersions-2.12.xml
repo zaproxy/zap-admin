@@ -2521,23 +2521,31 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.10.0</version>
-        <file>spiderAjax-release-23.10.0.zap</file>
+        <version>23.11.0</version>
+        <file>spiderAjax-release-23.11.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Default number of threads to 2 * processor count.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure default Allowed Resources are present with a new home directory (Issue 7719).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.10.0/spiderAjax-release-23.10.0.zap</url>
-        <hash>SHA-256:6901a59feb57e0772bcbe53b8fe0027b9310921fc3e8cd6752ffc6119e494611</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.11.0/spiderAjax-release-23.11.0.zap</url>
+        <hash>SHA-256:3cc9071fde10a1e26f8bd81a0d16988ff5c6730eba167e02c0e75193404ff696</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>5841092</size>
+        <date>2023-02-06</date>
+        <size>5839550</size>
         <not-before-version>2.11.1</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                </addon>
                 <addon>
                     <id>network</id>
                     <version>&gt;=0.1.0</version>
