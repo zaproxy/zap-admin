@@ -52,7 +52,8 @@ public abstract class DeployCrowdinTranslations extends DefaultTask {
         DirectoryProperty buildDirectory = getProject().getLayout().getBuildDirectory();
         getTranslationsPackageDirectory()
                 .convention(buildDirectory.dir("crowdinTranslationPackages"));
-        getRepositoriesDirectory().convention(buildDirectory.dir("deployCrowdinTranslationsRepos"));
+        getRepositoriesDirectory()
+                .convention(buildDirectory.dir("deployCrowdinTranslationsRepos").get().getAsFile());
         getBaseBranchName().convention("main");
     }
 
@@ -63,7 +64,7 @@ public abstract class DeployCrowdinTranslations extends DefaultTask {
     public abstract DirectoryProperty getTranslationsPackageDirectory();
 
     @Input
-    public abstract DirectoryProperty getRepositoriesDirectory();
+    public abstract Property<File> getRepositoriesDirectory();
 
     @Internal
     public abstract Property<String> getBaseBranchName();
@@ -82,7 +83,7 @@ public abstract class DeployCrowdinTranslations extends DefaultTask {
 
     @TaskAction
     void executeTasks() throws Exception {
-        Path reposDir = getRepositoriesDirectory().get().getAsFile().toPath();
+        Path reposDir = getRepositoriesDirectory().get().toPath();
         String packagesDir =
                 getTranslationsPackageDirectory()
                         .get()

@@ -21,9 +21,9 @@ import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 
 plugins {
     java
-    id("com.diffplug.spotless") version "6.11.0"
-    id("net.ltgt.errorprone") version "2.0.2"
-    id("org.zaproxy.crowdin") version "0.2.1"
+    id("com.diffplug.spotless") version "6.14.1"
+    id("net.ltgt.errorprone") version "3.0.1"
+    id("org.zaproxy.crowdin") version "0.3.1"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
@@ -48,7 +48,7 @@ crowdin {
 }
 
 dependencies {
-    "errorprone"("com.google.errorprone:error_prone_core:2.15.0")
+    "errorprone"("com.google.errorprone:error_prone_core:2.18.0")
 
     implementation("org.apache.commons:commons-text:1.10.0")
     implementation("org.kohsuke:github-api:1.101")
@@ -57,13 +57,13 @@ dependencies {
     }
     compileOnly("com.github.spotbugs:spotbugs-annotations:3.1.12")
     implementation("net.sf.json-lib:json-lib:2.4:jdk15")
-    implementation("org.zaproxy:zap:2.7.0")
+    implementation("org.zaproxy:zap:2.12.0")
 
-    val jupiterVersion = "5.5.2"
+    val jupiterVersion = "5.9.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$jupiterVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$jupiterVersion")
-    testImplementation("org.assertj:assertj-core:3.14.0")
+    testImplementation("org.assertj:assertj-core:3.24.2")
 }
 
 val zapVersionsDir = file("$buildDir/ZapVersionsTests")
@@ -145,7 +145,7 @@ tasks {
             provider {
                 val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
                 zapVersionsXml.getString("core.version")
-            }
+            },
         )
 
         item.set("ZAP @@VERSION@@ is available now")
@@ -177,7 +177,7 @@ tasks {
                 val zapVersionsXml = CustomXmlConfiguration(latestZapVersions)
                 val mainVersion = zapVersionsXml.getString("core.version")
                 "Update main release to version $mainVersion."
-            }
+            },
         )
     }
 
@@ -185,7 +185,7 @@ tasks {
         into.setFrom(
             fileTree(rootDir).matching {
                 include(noAddOnsZapVersions, devZapVersions)
-            }
+            },
         )
         baseDownloadUrl.set("https://github.com/zaproxy/zaproxy/releases/download/w")
         checksumAlgorithm.set(defaultChecksumAlgorithm)
@@ -204,7 +204,7 @@ tasks {
                 val zapVersionsXml = CustomXmlConfiguration(file(noAddOnsZapVersions))
                 val dailyVersion = zapVersionsXml.getString("core.daily-version")
                 "Update weekly release to version $dailyVersion."
-            }
+            },
         )
     }
 
@@ -336,7 +336,7 @@ val updateWebsite by tasks.registering(CreatePullRequest::class) {
             From:
             $adminRepo@${headCommit(adminRepo.dir)}
             """.trimIndent()
-        }
+        },
     )
 }
 
