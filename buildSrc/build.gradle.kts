@@ -1,6 +1,6 @@
 plugins {
     `kotlin-dsl`
-    id("com.diffplug.spotless") version "6.11.0"
+    id("com.diffplug.spotless") version "6.14.1"
 }
 
 repositories {
@@ -40,7 +40,7 @@ dependencies {
     implementation("org.kohsuke:github-api:1.106")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.1")
     implementation("org.snakeyaml:snakeyaml-engine:2.0")
-    implementation("org.zaproxy:zap:2.9.0")
+    implementation("org.zaproxy:zap:2.12.0")
 }
 
 spotless {

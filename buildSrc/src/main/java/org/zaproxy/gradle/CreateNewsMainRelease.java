@@ -26,7 +26,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import javax.inject.Inject;
 import org.gradle.api.DefaultTask;
-import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
@@ -59,7 +58,7 @@ public abstract class CreateNewsMainRelease extends DefaultTask {
     public abstract Property<String> getVersion();
 
     @Input
-    public abstract DirectoryProperty getNewsDir();
+    public abstract Property<File> getNewsDir();
 
     @Input
     public abstract Property<String> getItem();
@@ -73,7 +72,7 @@ public abstract class CreateNewsMainRelease extends DefaultTask {
     @TaskAction
     public void create() throws Exception {
         String currentVersion = getVersion().get();
-        Path newsDir = getNewsDir().get().getAsFile().toPath();
+        Path newsDir = getNewsDir().get().toPath();
 
         createNewsFileCurrentVersion(newsDir, currentVersion, getPreviousVersion().get());
 
