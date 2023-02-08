@@ -82,10 +82,10 @@ public abstract class GenerateWebsiteAddonsData extends DefaultTask {
                 addOnData.put("infoUrl", getUrl(addOn.getInfo(), getWebsiteUrl().get()));
                 addOnData.put("repoUrl", getUrl(addOn.getRepo(), getWebsiteUrl().get()));
                 addOnData.put("downloadUrl", addOn.getUrl().toString());
-                addOnData.put("date", conf.getString("addon_" + addOn.getId() + "/date"));
+                addOnData.put("date", conf.getString("addon_" + addOn.getId() + ".date"));
                 addOnData.put(
                         "version",
-                        convertVersion(conf.getString("addon_" + addOn.getId() + "/version")));
+                        convertVersion(conf.getString("addon_" + addOn.getId() + ".version")));
                 addOnList.add(addOnData);
             }
 
