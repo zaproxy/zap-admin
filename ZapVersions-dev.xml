@@ -300,19 +300,23 @@
         <name>Authentication Helper</name>
         <description>Authentication Helper</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>authhelper-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>authhelper-alpha-0.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support of authentication request identification and configuration.&lt;/li&gt;
+&lt;li&gt;Support for header based session management.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Code link in help.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.1.0/authhelper-alpha-0.1.0.zap</url>
-        <hash>SHA-256:de0efbd352135137d01ec93cd4f4142322aee400e848c939753440fb9432e18f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.2.0/authhelper-alpha-0.2.0.zap</url>
+        <hash>SHA-256:fbe5cde926434ca166da6352e9eeb206255fd80a50619d83d0718b94f7df4060</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-17</date>
-        <size>25510</size>
+        <date>2023-02-08</date>
+        <size>46372</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_authhelper>
     <addon>authstats</addon>
