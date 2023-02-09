@@ -350,23 +350,24 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.23.0</version>
-        <file>automation-beta-0.23.0.zap</file>
+        <version>0.24.0</version>
+        <file>automation-beta-0.24.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Support for relative file paths and ones including vars.&lt;/li&gt;
+&lt;li&gt;Option to disable all of the passive scan rules.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added workaround for core bug which meant auth header env vars were not being applied.&lt;/li&gt;
+&lt;li&gt;NPE when adding a context to an existing plan.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.23.0/automation-beta-0.23.0.zap</url>
-        <hash>SHA-256:87a798ed23c4edbcad81aac8b7d97d9a6b9f42f1bc08fbd7872cf42db5ec671e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.24.0/automation-beta-0.24.0.zap</url>
+        <hash>SHA-256:c05bb9519c1bf2e9ff579fe4d64f8da1be1bc077bc0ce93fd96585b1c4c9241f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-06</date>
-        <size>4318447</size>
+        <date>2023-02-09</date>
+        <size>4319987</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_automation>
     <addon>beanshell</addon>
@@ -863,25 +864,27 @@
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.3.0</version>
-        <file>exim-beta-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>exim-beta-0.4.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;When importing a file of URLs the output tab and log will now be more informative about failures.&lt;/li&gt;
+&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;HAR related API endpoints being migrated from core (Issue 6579).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Show missing API endpoints' descriptions.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.3.0/exim-beta-0.3.0.zap</url>
-        <hash>SHA-256:778aa0e17ea91af861adb3feb007b96117108e4f0bfc6a989431d38b9876fc27</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.4.0/exim-beta-0.4.0.zap</url>
+        <hash>SHA-256:df4289fa691471fae1f49d3141ee67fc679191beb4f9581f39098871a9761dad</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>451728</size>
+        <date>2023-02-09</date>
+        <size>476728</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -1044,27 +1047,27 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.12.0</version>
-        <file>graphql-alpha-0.12.0.zap</file>
+        <version>0.13.0</version>
+        <file>graphql-alpha-0.13.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The GraphQL Support Script has been superseded by a variant.&lt;/li&gt;
-&lt;li&gt;Argument names will now be used to get values from the form handler add-on, instead of argument types.&lt;/li&gt;
+&lt;li&gt;Support for relative file paths in the Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Dependency updates and maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Introspection was not working for some applications (Issue 7602).&lt;/li&gt;
-&lt;li&gt;Variables in JSON queries were being added incorrectly.&lt;/li&gt;
-&lt;li&gt;Attack payloads were being injected outside the quotes of inline string arguments.&lt;/li&gt;
+&lt;li&gt;Fixed exception in the variant when POST message has empty body and no content-type (Issue 7689).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.12.0/graphql-alpha-0.12.0.zap</url>
-        <hash>SHA-256:d279f273da41433d2cccb4bd9b6bc1a1f407a1ebd123b488126820596e7217dc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.13.0/graphql-alpha-0.13.0.zap</url>
+        <hash>SHA-256:6dbed7b91247ff626042187294e2cb9a62c3b0fb25454eeabe12a1b763d7f417</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-11-17</date>
-        <size>5155670</size>
+        <date>2023-02-09</date>
+        <size>5494716</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
@@ -1726,23 +1729,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>31</version>
-        <file>openapi-beta-31.zap</file>
+        <version>32</version>
+        <file>openapi-beta-32.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;When a definition doesn't define a response then an appropriate warning bubbles up, no longer resulting in a NullPointerException (Issue 7115).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v31/openapi-beta-31.zap</url>
-        <hash>SHA-256:1c957be52552631987ba0f0acec17883a9bf71ff4e58529a3687b8a910d9da57</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v32/openapi-beta-32.zap</url>
+        <hash>SHA-256:e1e6c5181e89726a248c1b3fa51c9a2cc4e7964bbf2730c171e7c90a53cda954</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>12827375</size>
+        <date>2023-02-09</date>
+        <size>12827393</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2206,23 +2209,24 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.18.0</version>
-        <file>reports-release-0.18.0.zap</file>
+        <version>0.19.0</version>
+        <file>reports-release-0.19.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A description of riskdesc fields in the relevant report templates' help (Issue 7445).&lt;/li&gt;
+&lt;li&gt;Support for relative report file and directory names in the Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.18.0/reports-release-0.18.0.zap</url>
-        <hash>SHA-256:feca380e583fe9c42274aa0de761199d8ece9be4e2fd19a7796fc8fdda049de0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.19.0/reports-release-0.19.0.zap</url>
+        <hash>SHA-256:658d5e9e2291fe4ba6bdf287262c2864d8f54ce6ffeb10180001f7037621c6d3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>67260201</size>
+        <date>2023-02-09</date>
+        <size>67262733</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
@@ -2375,23 +2379,24 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>scripts-release-34.zap</file>
+        <version>35</version>
+        <file>scripts-release-35.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
+&lt;li&gt;Help explaining how to interact with Automation Framework plans.&lt;/li&gt;
+&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v34/scripts-release-34.zap</url>
-        <hash>SHA-256:642c48b4a379de73ff8660724dd8cff61469bd0a3730049f79117806ca18de3a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v35/scripts-release-35.zap</url>
+        <hash>SHA-256:aa5e5ff9e29d3cec80b05a1c1102232c5b8d7a7a0ad840335ea2b9f486cd9096</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>789799</size>
+        <date>2023-02-09</date>
+        <size>790411</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
@@ -2461,20 +2466,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>16</version>
-        <file>soap-beta-16.zap</file>
+        <version>17</version>
+        <file>soap-beta-17.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;code&gt;SOAP Support.js&lt;/code&gt; input vector script is removed when the add-on is uninstalled.&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v16/soap-beta-16.zap</url>
-        <hash>SHA-256:dd326764160bea7de06fd8e46f7883aeb179771a7c770233d2091b876607dd53</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v17/soap-beta-17.zap</url>
+        <hash>SHA-256:7f9b12302368e2855aba909fdb6e65c757d4aef07bdf43e6f70a208ec1444baa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-11-17</date>
-        <size>12826590</size>
+        <date>2023-02-09</date>
+        <size>12826438</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
