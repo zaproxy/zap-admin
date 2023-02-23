@@ -2498,26 +2498,35 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Spider</name>
         <description>Spider used for automatically finding URIs on a site.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>spider-release-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>spider-release-0.3.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Default number of threads to 2 * processor count.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for parsing .DS_Store files to find paths to try (Issue 30).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
+&lt;li&gt;Spurious error message on setting user in AF job.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.2.0/spider-release-0.2.0.zap</url>
-        <hash>SHA-256:fc79e687a872e0d21c9a256fc0ad75d5ceb4add519b82520f9bd4b10913a34e7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.3.0/spider-release-0.3.0.zap</url>
+        <hash>SHA-256:bea5a510fd37c0bdfd76d3a93a5ad6d0638399a59dd8a13aee7c68ee49eab509</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>1100366</size>
+        <date>2023-02-23</date>
+        <size>1147689</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                </addon>
                 <addon>
                     <id>database</id>
                 </addon>
