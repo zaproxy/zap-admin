@@ -535,28 +535,19 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.13.0</version>
-        <file>commonlib-release-1.13.0.zap</file>
+        <version>1.14.0</version>
+        <file>commonlib-release-1.14.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add info URL.&lt;/li&gt;
-&lt;li&gt;Constant for default number of threads.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correctly parse cookie name when set-cookie header value doesn't end with semicolon.&lt;/li&gt;
+&lt;li&gt;Comparable Response functionality is now more robust and doesn't fail when processing types other than JSON Object (Issue 7736).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.13.0/commonlib-release-1.13.0.zap</url>
-        <hash>SHA-256:b660912b0ca39b0b30c30919f56ba1cf754776ad20ba0f73981b6c6a3315ccd6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.14.0/commonlib-release-1.14.0.zap</url>
+        <hash>SHA-256:3a658fd3bc9b3def39ad9efb90eecd8f661fa5ef7e7994c23420837efa3a6df1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-03</date>
-        <size>4084441</size>
+        <date>2023-02-24</date>
+        <size>4084762</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
