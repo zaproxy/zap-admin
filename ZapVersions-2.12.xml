@@ -137,34 +137,20 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>52</version>
-        <file>ascanrules-release-52.zap</file>
+        <version>53</version>
+        <file>ascanrules-release-53.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119 &amp;amp; 7100).
-&lt;ul&gt;
-&lt;li&gt;Buffer Overflow&lt;/li&gt;
-&lt;li&gt;Cloud Metadata&lt;/li&gt;
-&lt;li&gt;Code Injection&lt;/li&gt;
-&lt;li&gt;Path Traversal&lt;/li&gt;
-&lt;li&gt;Remote File Include&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The Path Traversal scan rule no longer populates the Other Info field with check information, as the Alert Reference now provides that detail.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;CVE-2012-1823 Remote Execution and Source Code Disclosure, and Heart Bleed scan rules now include Alert Tags for the applicable CVEs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A false positive that could occur in the External Redirect scan rule if the payload was included in the redirect as a param or portion of the value.&lt;/li&gt;
+&lt;li&gt;The SQL Injection Scan Rule filters reflected payload containing escaped characters like '&amp;amp;' and '&amp;quot;' before response content comparison to reduce false negatives.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v52/ascanrules-release-52.zap</url>
-        <hash>SHA-256:a14e451625490daf959c0ed223beb66eb275bf183c8f6687a43095724aba58be</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v53/ascanrules-release-53.zap</url>
+        <hash>SHA-256:6658fd1b616a582c84909bd8c07cf6339f61d354da660983136e73a6286730c2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-03</date>
-        <size>2946053</size>
+        <date>2023-03-03</date>
+        <size>3129569</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -228,39 +214,31 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>44</version>
-        <file>ascanrulesBeta-beta-44.zap</file>
+        <version>45</version>
+        <file>ascanrulesBeta-beta-45.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use lower case HTTP field names for compatibility with HTTP/2.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The Log4Shell scan rule alerts now include Alert References and Tags.&lt;/li&gt;
+&lt;li&gt;The Spring4Shell scan rule now includes a CVE Alert Tag and reference link.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Preserve the HTTP version in the scan rules:
-&lt;ul&gt;
-&lt;li&gt;Backup File Disclosure&lt;/li&gt;
-&lt;li&gt;Bypassing 403&lt;/li&gt;
-&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
-&lt;li&gt;Relative Path Confusion&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure - Git&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure - SVN&lt;/li&gt;
-&lt;li&gt;Possible Username Enumeration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Use same non-default port in the HTTP Only Site scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v44/ascanrulesBeta-beta-44.zap</url>
-        <hash>SHA-256:8ee6adfc4aac239de5d08ed749ef9fee55b62f4c63cfcdb6cd8eca2af589165f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v45/ascanrulesBeta-beta-45.zap</url>
+        <hash>SHA-256:1360181ecefd77ddae76a0c1c9cbd7a4c8b725e090d3753675950ac463464f26</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-13</date>
-        <size>1823563</size>
+        <date>2023-03-03</date>
+        <size>1825186</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.12.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>database</id>
@@ -1948,27 +1926,33 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>45</version>
-        <file>pscanrules-release-45.zap</file>
+        <version>46</version>
+        <file>pscanrules-release-46.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Private Address Disclosure and Session ID in URL Rewrite scan rules now include example alert functionality for documentation generation purposes (Issue 6119 and 7100).&lt;/li&gt;
-&lt;li&gt;The Content Security Policy scan rule will now alert when &amp;quot;unsafe-eval&amp;quot; is allowed.&lt;/li&gt;
+&lt;li&gt;The PII Disclosure scan rule:
+&lt;ul&gt;
+&lt;li&gt;Now includes a solution statement.&lt;/li&gt;
+&lt;li&gt;Now more specifically portrays alert Evidence.&lt;/li&gt;
+&lt;li&gt;Now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;Will now only consider PDFs at Low threshold.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The Salvation2 library used by the CSP scan rule was upgraded to v3.0.1. Alerts may now have an alert condition if the policy contains characters outside the accepted set.&lt;/li&gt;
-&lt;li&gt;The CSP scan rule now includes handling for policies defined in META tags, as well as two new alerts pertaining to those policies (Issue 7303).&lt;/li&gt;
+&lt;li&gt;The HeartBleed scan rule alert now includes a CVE tag.&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure scan rule now excludes values in &amp;quot;RateLimit-Reset&amp;quot;, &amp;quot;X-RateLimit-Reset&amp;quot;, and &amp;quot;X-Rate-Limit-Reset&amp;quot; headers (Issue 7747).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Modern App Detection scan rule now ignores non-HTML files (Issue 7617).&lt;/li&gt;
+&lt;li&gt;The CSP Missing scan rule now alerts when the Content-Security-Policy header is missing, and when the obsolete X-Content-Security-Policy or X-WebKit-CSP are found (Issue 7653).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v45/pscanrules-release-45.zap</url>
-        <hash>SHA-256:2301da52a0761ea30f4d622f0efe1887c8846502ceed597b69eb03f83bd70ba7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v46/pscanrules-release-46.zap</url>
+        <hash>SHA-256:a4c24491dfee9b6b929335ba52992845fe5589d466755d810c268a7ea5cec6ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>1840971</size>
+        <date>2023-03-03</date>
+        <size>1842272</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -1984,32 +1968,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>37</version>
-        <file>pscanrulesAlpha-alpha-37.zap</file>
+        <version>38</version>
+        <file>pscanrulesAlpha-alpha-38.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Use case insensitive HTTP field name check in Insufficient Site Isolation Against Spectre Vulnerability scan rule.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Beta:
-&lt;ul&gt;
-&lt;li&gt;Content Cacheable&lt;/li&gt;
-&lt;li&gt;In Page Banner Info Leak&lt;/li&gt;
-&lt;li&gt;JS Function&lt;/li&gt;
-&lt;li&gt;JSO&lt;/li&gt;
-&lt;li&gt;Permissions Policy&lt;/li&gt;
-&lt;li&gt;Sub Resource Integrity Attribute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v37/pscanrulesAlpha-alpha-37.zap</url>
-        <hash>SHA-256:b8852f03b1ddf94ce540b2bccac008f7082c74f86c053d77059e9a85a4952046</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v38/pscanrulesAlpha-alpha-38.zap</url>
+        <hash>SHA-256:d1f296411d7645c0e53fa3e843e3fb66d5b0e2a7f4ba383c3c9a8b8d5859fcec</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>644085</size>
+        <date>2023-03-03</date>
+        <size>444740</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2025,59 +2000,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>31</version>
-        <file>pscanrulesBeta-beta-31.zap</file>
+        <version>32</version>
+        <file>pscanrulesBeta-beta-32.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were added, having been promoted from Alpha:
-&lt;ul&gt;
-&lt;li&gt;Content Cacheable&lt;/li&gt;
-&lt;li&gt;In Page Banner Info Leak&lt;/li&gt;
-&lt;li&gt;JS Function&lt;/li&gt;
-&lt;li&gt;JSO&lt;/li&gt;
-&lt;li&gt;Permissions Policy&lt;/li&gt;
-&lt;li&gt;Sub Resource Integrity Attribute&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;Content Cacheability scan rule now has functionality to generate example alerts for documentation purposes (Issue 7502).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Release:
-&lt;ul&gt;
-&lt;li&gt;Big Redirects&lt;/li&gt;
-&lt;li&gt;Directory Browsing&lt;/li&gt;
-&lt;li&gt;Hash Disclosure&lt;/li&gt;
-&lt;li&gt;HeartBleed&lt;/li&gt;
-&lt;li&gt;Insecure Form Load&lt;/li&gt;
-&lt;li&gt;Insecure Form Post&lt;/li&gt;
-&lt;li&gt;Link Target&lt;/li&gt;
-&lt;li&gt;Modern App Detection&lt;/li&gt;
-&lt;li&gt;PII&lt;/li&gt;
-&lt;li&gt;Retrieved From Cache&lt;/li&gt;
-&lt;li&gt;Server Header Info Leak&lt;/li&gt;
-&lt;li&gt;Strict Transport Security&lt;/li&gt;
-&lt;li&gt;User Controlled Charset&lt;/li&gt;
-&lt;li&gt;User Controlled Cookie&lt;/li&gt;
-&lt;li&gt;User Controlled HTML Attributes&lt;/li&gt;
-&lt;li&gt;User Controlled Javascript Event&lt;/li&gt;
-&lt;li&gt;User Controlled Open Redirect&lt;/li&gt;
-&lt;li&gt;X-Backend-Server Information Leak&lt;/li&gt;
-&lt;li&gt;X-ChromeLogger-Data Info Leak&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The Cacheable scan rule should now be more tolerant when parsing s-max-age values.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v31/pscanrulesBeta-beta-31.zap</url>
-        <hash>SHA-256:11413812568296e3c503ed98d12a08c22c3b3ef560f96802447d9775ec374554</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v32/pscanrulesBeta-beta-32.zap</url>
+        <hash>SHA-256:8445ae5653b895d2dfc31a0828f6d27db82558ccd916b96b0dec09a775df94dc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>824771</size>
+        <date>2023-03-03</date>
+        <size>574875</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
