@@ -2284,26 +2284,26 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.19.0</version>
-        <file>retire-release-0.19.0.zap</file>
+        <version>0.20.0</version>
+        <file>retire-release-0.20.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Alert Tags for CVEs now include standardized links.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.19.0/retire-release-0.19.0.zap</url>
-        <hash>SHA-256:447b425ab07b64c32c46e83c04e34337cd4d515f629a56a7da196a5e534b2933</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.20.0/retire-release-0.20.0.zap</url>
+        <hash>SHA-256:cc23c55dd56a87a295d7a9e7cb3743c0590c828fb0e93844548d6cf4c7048b4c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-10</date>
-        <size>1215622</size>
+        <date>2023-03-03</date>
+        <size>1215804</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2749,19 +2749,20 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.18.0</version>
-        <file>wappalyzer-release-21.18.0.zap</file>
+        <version>21.19.0</version>
+        <file>wappalyzer-release-21.19.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.18.0/wappalyzer-release-21.18.0.zap</url>
-        <hash>SHA-256:0c34f72116c50f9fd0a9f84a591ab77d56a312fe31c0bad237c13625ebb14cec</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.19.0/wappalyzer-release-21.19.0.zap</url>
+        <hash>SHA-256:5c553b6112fdcc7c9150d6b637c454c89560f8d146903f075e9186f4a151ebad</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-06</date>
-        <size>17630498</size>
+        <date>2023-03-03</date>
+        <size>17833044</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
