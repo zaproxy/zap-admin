@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>36</id>
+        <id>37</id>
         <default>
-            <item>How to configure ZAP to authenticate using Selenium</item>
-            <link>https://www.zaproxy.org/blog/2023-02-01-authenticating-using-selenium/</link>
+            <item>How Should We Fund ZAP Development?</item>
+            <link>https://www.zaproxy.org/blog/2023-03-09-how-should-we-fund-zap-development/</link>
         </default>
     </news>
 </ZAP>
