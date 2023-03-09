@@ -2709,20 +2709,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>webdriverlinux-release-51.zap</file>
+        <version>52</version>
+        <file>webdriverlinux-release-52.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.32.2.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to 110.0.5481.77.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 111.0.5563.64.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v51/webdriverlinux-release-51.zap</url>
-        <hash>SHA-256:592aeaaca4787ca3caf1ac33e8835be7de417cf5240e7f2cca85d29bf7df6337</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v52/webdriverlinux-release-52.zap</url>
+        <hash>SHA-256:7b26e523549428b45ceeca59eea7d6002103a84d12230da5b3c1a93263c426ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-08</date>
-        <size>16838435</size>
+        <date>2023-03-09</date>
+        <size>16517468</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2730,20 +2729,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>webdrivermacos-release-51.zap</file>
+        <version>52</version>
+        <file>webdrivermacos-release-52.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.32.2.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to 110.0.5481.77.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 111.0.5563.64.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v51/webdrivermacos-release-51.zap</url>
-        <hash>SHA-256:acf7bbfeb3ce391855d5f65580c4a3d56bb4549fee6b1c14351ce9df13c879b7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v52/webdrivermacos-release-52.zap</url>
+        <hash>SHA-256:2af598f939f0c5e195b8338deaa0e46bf3dd86cdd4219dfc94b942eb17830f0c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-08</date>
-        <size>21797132</size>
+        <date>2023-03-09</date>
+        <size>21819726</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2751,20 +2749,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>50</version>
-        <file>webdriverwindows-release-50.zap</file>
+        <version>51</version>
+        <file>webdriverwindows-release-51.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.32.2.&lt;/li&gt;
-&lt;li&gt;Update ChromeDriver to 110.0.5481.77.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 111.0.5563.64.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v50/webdriverwindows-release-50.zap</url>
-        <hash>SHA-256:7d3063176bd2216b90b4f047720668eb2b73f2c16263aefc2596794ba8b9e629</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v51/webdriverwindows-release-51.zap</url>
+        <hash>SHA-256:a830ac04615c480c3d6b2886fd6f06c72a79f2a963a453d1f64ee2716d98025e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-08</date>
-        <size>10504327</size>
+        <date>2023-03-09</date>
+        <size>10458973</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
