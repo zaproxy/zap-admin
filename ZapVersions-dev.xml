@@ -278,24 +278,36 @@
         <name>Authentication Helper</name>
         <description>Authentication Helper</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>authhelper-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>authhelper-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for header based session management.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Code link in help.&lt;/li&gt;
+&lt;li&gt;Support for browser based authentication.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.2.0/authhelper-alpha-0.2.0.zap</url>
-        <hash>SHA-256:fbe5cde926434ca166da6352e9eeb206255fd80a50619d83d0718b94f7df4060</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.3.0/authhelper-alpha-0.3.0.zap</url>
+        <hash>SHA-256:4ef594e28962982c1ab0a618e627e850fba64b55b2a8e3b8e45f20af38734bb5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-08</date>
-        <size>46372</size>
+        <date>2023-03-13</date>
+        <size>78423</size>
         <not-before-version>2.12.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.6.0</version>
+                </addon>
+                <addon>
+                    <id>selenium</id>
+                    <version>15.*</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_authhelper>
     <addon>authstats</addon>
     <addon_authstats>
@@ -382,17 +394,27 @@
         <name>Browser View</name>
         <description>Adds an option to render HTML responses like a browser</description>
         <author>ZAP Dev Team</author>
-        <version>5</version>
-        <file>browserView-alpha-5.zap</file>
+        <version>6</version>
+        <file>browserView-alpha-6.zap</file>
         <status>alpha</status>
-        <changes>Allow to properly scroll the rendered page.</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/browserView-alpha-5.zap</url>
-        <hash>SHA1:0aaf81863ad1011136416b49a05eba3d8b262a02</hash>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Make missing JavaFX logging less verbose in regular use.&lt;/li&gt;
+&lt;li&gt;Update help with the requirements to use the add-on.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/browserView-v6/browserView-alpha-6.zap</url>
+        <hash>SHA-256:e53cfde3a009a4be2e40c84ac02e05114505160bd2bab6cbb42416ab9a65b16c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/browser-view/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2017-11-28</date>
-        <size>193880</size>
-        <not-before-version>2.4.0</not-before-version>
+        <date>2023-03-13</date>
+        <size>197667</size>
+        <not-before-version>2.12.0</not-before-version>
     </addon_browserView>
     <addon>bruteforce</addon>
     <addon_bruteforce>
@@ -767,40 +789,24 @@
         <name>Encoder</name>
         <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
         <author>ZAP Dev Team</author>
-        <version>1.0.0</version>
-        <file>encoder-release-1.0.0.zap</file>
+        <version>1.1.0</version>
+        <file>encoder-release-1.1.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;BREAKING CHANGE&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Existing scripts will fail as the process method signature has changed, scripts can be fixed by changing the signature from: process(value) to process(helper, value).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Add-on promoted to Release status.&lt;/li&gt;
-&lt;li&gt;Allow script processors to return strings without requiring an &amp;quot;EncodeDecodeResult&amp;quot; wrapper.&lt;/li&gt;
-&lt;li&gt;Show help and options buttons in the main dialog.&lt;/li&gt;
-&lt;li&gt;The Base64 decoder now uses a Mime decoder and handles line wrapped input.&lt;/li&gt;
-&lt;li&gt;Updated script templates to use the new process method.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add an option which controls whether or not Hash output panels use full caps or lower case (Issue 7503).&lt;/li&gt;
-&lt;li&gt;Utility processors (not shown by default).
-&lt;ul&gt;
-&lt;li&gt;Lower case&lt;/li&gt;
-&lt;li&gt;Remove Whitespace&lt;/li&gt;
-&lt;li&gt;Reverse&lt;/li&gt;
-&lt;li&gt;Upper case&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;A context menu active on the output text areas facilitating the replacement of input text.&lt;/li&gt;
+&lt;li&gt;PowerShell encoder (hat tip to hackvertor/hackvertor#71 for the idea and details).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v1.0.0/encoder-release-1.0.0.zap</url>
-        <hash>SHA-256:9193d2df7fbbee047c1e4284b918164250e4c0e7be915887469ad9e43721d8a8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v1.1.0/encoder-release-1.1.0.zap</url>
+        <hash>SHA-256:95243e1ea557a7e96d56f16e77a8cac6f71c8b6437ddbf4600e52470504577c2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-15</date>
-        <size>409609</size>
+        <date>2023-03-13</date>
+        <size>445128</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_encoder>
     <addon>evalvillain</addon>
@@ -1639,28 +1645,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.14.0</version>
-        <file>oast-beta-0.14.0.zap</file>
+        <version>0.15.0</version>
+        <file>oast-beta-0.15.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Do not include the Connection header in Callback responses for HTTP/2.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow getting both the payload and canary values for OAST services.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Interactsh canary values were reversed in the UI.&lt;/li&gt;
+&lt;li&gt;A context menu to paste payloads from all the supported OAST services (Issue 7665).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.14.0/oast-beta-0.14.0.zap</url>
-        <hash>SHA-256:9c77ebbaf15f01c0a6e820d15c8dca2b0c4de40d3ee2f2a19a006cf5514a31cb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.15.0/oast-beta-0.15.0.zap</url>
+        <hash>SHA-256:472c4e387057d88365885345e2e254b930928e84f2eae12fe725e0cfcc9590c8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-12-13</date>
-        <size>802214</size>
+        <date>2023-03-13</date>
+        <size>806224</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2032,20 +2029,24 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>quickstart-release-36.zap</file>
+        <version>37</version>
+        <file>quickstart-release-37.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correctly unload the add-on.&lt;/li&gt;
-&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Show correct error message when unable to access the provided URL, also, add the scheme if none provided.&lt;/li&gt;
+&lt;li&gt;Ensure the add-on is not in use before uninstalling.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v36/quickstart-release-36.zap</url>
-        <hash>SHA-256:6b98856f9d171de9899eadb7607f48d860da93d62ff100ffb78b11026469a2c9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v37/quickstart-release-37.zap</url>
+        <hash>SHA-256:c3c13c5d128a30d73e029818b304f51deb87d634ea73dd1ad13481eb58b9f800</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>631801</size>
+        <date>2023-03-13</date>
+        <size>632915</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
