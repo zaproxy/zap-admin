@@ -2476,23 +2476,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.12.0</version>
-        <file>spiderAjax-release-23.12.0.zap</file>
+        <version>23.13.0</version>
+        <file>spiderAjax-release-23.13.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework - inScopeOnly option&lt;/li&gt;
+&lt;li&gt;Automation Framework - HTML elements to click support&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add default Allowed Resources if none present in existing home directory when updating the add-on (Issue 7719).&lt;/li&gt;
+&lt;li&gt;Close the AJAX Spider dialogue when uninstalling the add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.12.0/spiderAjax-release-23.12.0.zap</url>
-        <hash>SHA-256:b240584c9ddaa0a176323e145400391b48e9f083847aaabf7b6db265b7ecf983</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.13.0/spiderAjax-release-23.13.0.zap</url>
+        <hash>SHA-256:dc96dce0da244995c181fe8073953e06c4f419ba7ee8fff51c50fbfc58b10602</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-23</date>
-        <size>5839271</size>
+        <date>2023-03-15</date>
+        <size>5841704</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
