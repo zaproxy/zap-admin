@@ -2313,24 +2313,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>35</version>
-        <file>scripts-release-35.zap</file>
+        <version>36</version>
+        <file>scripts-release-36.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Help explaining how to interact with Automation Framework plans.&lt;/li&gt;
-&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
+&lt;li&gt;Support for inline scripts in the Automation Framework.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v35/scripts-release-35.zap</url>
-        <hash>SHA-256:aa5e5ff9e29d3cec80b05a1c1102232c5b8d7a7a0ad840335ea2b9f486cd9096</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v36/scripts-release-36.zap</url>
+        <hash>SHA-256:e56b730122fa06c1f2b0b2504aa5c9da753d439cf31339e8c2e9fdea6bec6b0b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-09</date>
-        <size>790411</size>
+        <date>2023-03-17</date>
+        <size>792013</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
