@@ -558,36 +558,34 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>15</version>
-        <file>communityScripts-alpha-15.zap</file>
+        <version>16</version>
+        <file>communityScripts-alpha-16.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;active/RCE.py&lt;/li&gt;
-&lt;li&gt;active/SSTI.py&lt;/li&gt;
-&lt;li&gt;active/SSTI.js - An active scan script to check for SSTI in 14 different template engines.&lt;/li&gt;
-&lt;li&gt;httpfuzzerprocessor/addCacheBusting.js - Fuzzing with cache busting.&lt;/li&gt;
-&lt;li&gt;encode-decode
-&lt;ul&gt;
-&lt;li&gt;README.md - Summary of the script type.&lt;/li&gt;
-&lt;li&gt;double-spacer.js - A script that inserts a space after every character in a string.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;standalone/SecurityCrawlMazeScore.js&lt;/li&gt;
-&lt;li&gt;scan-hooks/LogMessagesHook.py and httpsender/LogMessages.js to help debugging, especially in docker.&lt;/li&gt;
+&lt;li&gt;httpsender/UpgradeHttp1To2.js - changes all HTTP/1.1 requests to use HTTP/2&lt;/li&gt;
+&lt;li&gt;standalone/devTools.js - Tools used to explore objects returned by the Java engine and better plug Nashorn objects into it&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;standalone/enableDebugLogging.js &amp;gt; Updated for more recent logging funtionality.&lt;/li&gt;
-&lt;li&gt;Update JS scripts to use passed singleton variables (control, model, view) if available (&amp;gt;= ZAP 2.12.0).&lt;/li&gt;
-&lt;li&gt;passive/Server Header Disclosure.js &amp;gt; Updated to check that the Server Header contains something that looks like a semantic version component.&lt;/li&gt;
+&lt;li&gt;encode-decode/double-spacer.js - adapted to the functionality of Encoder 1.0.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;standalone/Run report.js - no longer working, the old/deprecated class that it used was removed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;active/User defined attacks.js - correctly escape dot character in some evidence strings.&lt;/li&gt;
+&lt;li&gt;targeted/curl_command_generator.js - prevent and warn on local file inclusion when generating the command.
+Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v15/communityScripts-alpha-15.zap</url>
-        <hash>SHA-256:df178cb433864303dd9670fc4c66303db2ee88ee55e72621009f4d68d5bcec96</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v16/communityScripts-alpha-16.zap</url>
+        <hash>SHA-256:826fb47b8b9cdeefe006687fd3608981d5bcf089e7358645816c6c33f10f4c9b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2022-10-02</date>
-        <size>459421</size>
+        <date>2023-03-29</date>
+        <size>460288</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_communityScripts>
     <addon>coreLang</addon>
