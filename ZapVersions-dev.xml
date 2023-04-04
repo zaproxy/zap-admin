@@ -812,20 +812,21 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Eval Villain</name>
         <description>Adds the Eval Villain extension to Firefox when launched from ZAP.</description>
         <author>Dennis Goodlett and the ZAP Dev Team</author>
-        <version>0.1.1</version>
-        <file>evalvillain-alpha-0.1.1.zap</file>
+        <version>0.2.0</version>
+        <file>evalvillain-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix the downloaded version of the Eval Villain Firefox extension.&lt;/li&gt;
+&lt;li&gt;Updated with new version of Eval Villain.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.1.1/evalvillain-alpha-0.1.1.zap</url>
-        <hash>SHA-256:b0932f4f8fec19bf0dfae1dbe3668bbdadc6092707ea360216e37fdc8ae457cd</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.2.0/evalvillain-alpha-0.2.0.zap</url>
+        <hash>SHA-256:7eea4ad7c86f17b5daff5d1c59ed63c278c0833e6358503799ee9e19b7f0645e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/eval-villain/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-02-15</date>
-        <size>4943171</size>
-        <not-before-version>2.11.1</not-before-version>
+        <date>2023-04-04</date>
+        <size>4943217</size>
+        <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -840,27 +841,23 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.4.0</version>
-        <file>exim-beta-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>exim-beta-0.5.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Log cause of error when failed to import the HAR file.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Show missing API endpoints' descriptions.&lt;/li&gt;
+&lt;li&gt;Ensure the 'ZAP messages' Export delimiters are consistent with the Import expectation.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.4.0/exim-beta-0.4.0.zap</url>
-        <hash>SHA-256:df4289fa691471fae1f49d3141ee67fc679191beb4f9581f39098871a9761dad</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.5.0/exim-beta-0.5.0.zap</url>
+        <hash>SHA-256:c419cb4a27b580e75935b557e2fda721ed8b48c6c55eeee8d8a25c9c22c180e6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-09</date>
-        <size>476728</size>
+        <date>2023-04-04</date>
+        <size>477696</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -891,21 +888,25 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Form Handler</name>
         <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
         <author>ZAP Dev Team</author>
-        <version>6.1.0</version>
-        <file>formhandler-beta-6.1.0.zap</file>
+        <version>6.2.0</version>
+        <file>formhandler-beta-6.2.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
-&lt;li&gt;No longer provide the value generator through the core spider (Related to Issue 3113).&lt;/li&gt;
+&lt;li&gt;Statistics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The value generator can now match fields based on regex.&lt;/li&gt;
+&lt;li&gt;Expanded the list of default fields and values.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.1.0/formhandler-beta-6.1.0.zap</url>
-        <hash>SHA-256:c991b33bae9a4f2ebadbc81d216434a0d97da0434c44af1b70677ac0878fb34a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.2.0/formhandler-beta-6.2.0.zap</url>
+        <hash>SHA-256:817700fdedff34d9b527a3e713de42ddd92341d0605e7bb7cc14fbf790323143</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/form-handler/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>2202857</size>
+        <date>2023-04-04</date>
+        <size>2205102</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
@@ -1023,27 +1024,23 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>graphql-alpha-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>graphql-alpha-0.14.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for relative file paths in the Automation Framework job.&lt;/li&gt;
+&lt;li&gt;Do not report errors parsing valid JSON arrays.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates and maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed exception in the variant when POST message has empty body and no content-type (Issue 7689).&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.13.0/graphql-alpha-0.13.0.zap</url>
-        <hash>SHA-256:6dbed7b91247ff626042187294e2cb9a62c3b0fb25454eeabe12a1b763d7f417</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.14.0/graphql-alpha-0.14.0.zap</url>
+        <hash>SHA-256:9ea1e21e381c493c06ff2bd415173eeb3f0d4a32889376c4c4281cf20d1892ee</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-09</date>
-        <size>5494716</size>
+        <date>2023-04-04</date>
+        <size>5503192</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_graphql>
     <addon>groovy</addon>
@@ -1608,34 +1605,27 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>network-beta-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>network-beta-0.7.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow access to the ZAP API when running in command line mode.&lt;/li&gt;
-&lt;li&gt;Fallback to HTTP/1.1 in internal local servers/proxies if the client does not negotiate a protocol (ALPN).&lt;/li&gt;
-&lt;li&gt;Dynamically unload the add-on on newer core versions.&lt;/li&gt;
-&lt;li&gt;Update dependencies.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Fallback to HTTP/1.1 in the main proxy if the client does not negotiate a protocol (ALPN) (Issue 7699).&lt;/li&gt;
+&lt;li&gt;Read all main proxy configurations (&lt;code&gt;-config&lt;/code&gt;) available, even if they don't include an address.&lt;/li&gt;
+&lt;li&gt;Increase buffer used to read the HTTP body, to make reads more efficient.&lt;/li&gt;
+&lt;li&gt;Clarify the description of command line arguments &lt;code&gt;-host&lt;/code&gt; and &lt;code&gt;-port&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use always a plain connection to the outgoing HTTP proxy (Issue 7594).&lt;/li&gt;
-&lt;li&gt;Do not change the case of the Content-Length header.&lt;/li&gt;
-&lt;li&gt;Use the available response content when the Content-Length is more than what is available.&lt;/li&gt;
-&lt;li&gt;Properly persist proxy error responses.&lt;/li&gt;
-&lt;li&gt;Correctly manage cookies with domain and path attributes (Issue 7631).&lt;/li&gt;
-&lt;li&gt;Do not prevent serving internal requests to the local servers/proxies.&lt;/li&gt;
-&lt;li&gt;Consume the response body even when none expected (e.g. 204, HEAD), otherwise the previous body
-would not be cleared when reusing the same message.&lt;/li&gt;
+&lt;li&gt;Ensure the whole HTTP response is delivered to the client before closing the connection.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.6.0/network-beta-0.6.0.zap</url>
-        <hash>SHA-256:e3f36060c37d086d04dd2d0884e80c37b7a30555ee48c19dd89e42846d8a92b8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.7.0/network-beta-0.7.0.zap</url>
+        <hash>SHA-256:9cbad051932303e2165a94bd68a4d710a746228a2467fc79258b41e03aca6974</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>27350988</size>
+        <date>2023-04-04</date>
+        <size>27351075</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -1696,23 +1686,23 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>32</version>
-        <file>openapi-beta-32.zap</file>
+        <version>33</version>
+        <file>openapi-beta-33.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for relative file paths and ones including vars in the Automation Framework job.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Fix null pointer exception when importing a definition with requestBody content set as an empty dictionary (Issue 7808).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v32/openapi-beta-32.zap</url>
-        <hash>SHA-256:e1e6c5181e89726a248c1b3fa51c9a2cc4e7964bbf2730c171e7c90a53cda954</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v33/openapi-beta-33.zap</url>
+        <hash>SHA-256:754918f48a984282bcb34068764b05633e43538ec5c077161f8e517b526c8744</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-09</date>
-        <size>12827393</size>
+        <date>2023-04-04</date>
+        <size>12993451</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -1921,39 +1911,26 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>46</version>
-        <file>pscanrules-release-46.zap</file>
+        <version>47</version>
+        <file>pscanrules-release-47.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The PII Disclosure scan rule:
-&lt;ul&gt;
-&lt;li&gt;Now includes a solution statement.&lt;/li&gt;
-&lt;li&gt;Now more specifically portrays alert Evidence.&lt;/li&gt;
-&lt;li&gt;Now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;li&gt;Will now only consider PDFs at Low threshold.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The HeartBleed scan rule alert now includes a CVE tag.&lt;/li&gt;
-&lt;li&gt;Timestamp Disclosure scan rule now excludes values in &amp;quot;RateLimit-Reset&amp;quot;, &amp;quot;X-RateLimit-Reset&amp;quot;, and &amp;quot;X-Rate-Limit-Reset&amp;quot; headers (Issue 7747).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The CSP Missing scan rule now alerts when the Content-Security-Policy header is missing, and when the obsolete X-Content-Security-Policy or X-WebKit-CSP are found (Issue 7653).&lt;/li&gt;
+&lt;li&gt;Correct required version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Prevent error with the CSP scan rule when scanning &lt;code&gt;meta&lt;/code&gt; elements with missing &lt;code&gt;http-equiv&lt;/code&gt; attribute.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v46/pscanrules-release-46.zap</url>
-        <hash>SHA-256:a4c24491dfee9b6b929335ba52992845fe5589d466755d810c268a7ea5cec6ff</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v47/pscanrules-release-47.zap</url>
+        <hash>SHA-256:105a8e7754ce7b38e7979c0037aab9d8f460844f2ab021325a2b5dd48974a2bd</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-03</date>
-        <size>1842272</size>
+        <date>2023-04-04</date>
+        <size>1853283</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.10.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2141,24 +2118,31 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.19.0</version>
-        <file>reports-release-0.19.0.zap</file>
+        <version>0.20.0</version>
+        <file>reports-release-0.20.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A description of riskdesc fields in the relevant report templates' help (Issue 7445).&lt;/li&gt;
-&lt;li&gt;Support for relative report file and directory names in the Automation Framework job.&lt;/li&gt;
+&lt;li&gt;The Traditional JSON report, Traditional JSON Report with requests and responses, Traditional XML Report and Traditional XML Report with requests and responses now has &amp;quot;otherinfo&amp;quot; field per alert instance (Issue 7260).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Include templates available when reporting invalid template in the automation job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deprecated&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &amp;quot;otherinfo&amp;quot; field in the alert will be removed and replaced by the &amp;quot;otherinfo&amp;quot; field in the alert instances.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct ID of Markdown template listed in the help page.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.19.0/reports-release-0.19.0.zap</url>
-        <hash>SHA-256:658d5e9e2291fe4ba6bdf287262c2864d8f54ce6ffeb10180001f7037621c6d3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.20.0/reports-release-0.20.0.zap</url>
+        <hash>SHA-256:fc86ea17abdb6e1c8d31cc67c8adb992b17227de1e26ce1faa44356aff036c5b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-02-09</date>
-        <size>67262733</size>
+        <date>2023-04-04</date>
+        <size>67283259</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
@@ -2218,20 +2202,19 @@ would not be cleared when reusing the same message.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.20.0</version>
-        <file>retire-release-0.20.0.zap</file>
+        <version>0.21.0</version>
+        <file>retire-release-0.21.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Alert Tags for CVEs now include standardized links.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.20.0/retire-release-0.20.0.zap</url>
-        <hash>SHA-256:cc23c55dd56a87a295d7a9e7cb3743c0590c828fb0e93844548d6cf4c7048b4c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.21.0/retire-release-0.21.0.zap</url>
+        <hash>SHA-256:98e75e4f8481a548f03f76c91dcd7c179feb6d74ef20404c8d62bf6031f83f08</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-03</date>
-        <size>1215804</size>
+        <date>2023-04-04</date>
+        <size>1215903</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2679,20 +2662,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.19.0</version>
-        <file>wappalyzer-release-21.19.0.zap</file>
+        <version>21.20.0</version>
+        <file>wappalyzer-release-21.20.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.19.0/wappalyzer-release-21.19.0.zap</url>
-        <hash>SHA-256:5c553b6112fdcc7c9150d6b637c454c89560f8d146903f075e9186f4a151ebad</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.20.0/wappalyzer-release-21.20.0.zap</url>
+        <hash>SHA-256:b026ba760dfcb9778b6b9e0e6c60becf614e5b91d23a9d81f36efa5492f64553</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-03</date>
-        <size>17833044</size>
+        <date>2023-04-04</date>
+        <size>17877876</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2708,19 +2690,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>52</version>
-        <file>webdriverlinux-release-52.zap</file>
+        <version>53</version>
+        <file>webdriverlinux-release-53.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 111.0.5563.64.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to 0.33.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v52/webdriverlinux-release-52.zap</url>
-        <hash>SHA-256:7b26e523549428b45ceeca59eea7d6002103a84d12230da5b3c1a93263c426ff</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v53/webdriverlinux-release-53.zap</url>
+        <hash>SHA-256:7bfd0cd15a55421efe2c5b7cb2c1f5d9450783a1b39fd902130646aa942f03fb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-09</date>
-        <size>16517468</size>
+        <date>2023-04-04</date>
+        <size>16659875</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2728,19 +2710,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>52</version>
-        <file>webdrivermacos-release-52.zap</file>
+        <version>53</version>
+        <file>webdrivermacos-release-53.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 111.0.5563.64.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to 0.33.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v52/webdrivermacos-release-52.zap</url>
-        <hash>SHA-256:2af598f939f0c5e195b8338deaa0e46bf3dd86cdd4219dfc94b942eb17830f0c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v53/webdrivermacos-release-53.zap</url>
+        <hash>SHA-256:6dec6293c9256dcaf1a061df9c84b4f23dded7e420221cb09a1f9dc249ddc798</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-09</date>
-        <size>21819726</size>
+        <date>2023-04-04</date>
+        <size>21829493</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2748,19 +2730,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>webdriverwindows-release-51.zap</file>
+        <version>52</version>
+        <file>webdriverwindows-release-52.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 111.0.5563.64.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to 0.33.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v51/webdriverwindows-release-51.zap</url>
-        <hash>SHA-256:a830ac04615c480c3d6b2886fd6f06c72a79f2a963a453d1f64ee2716d98025e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v52/webdriverwindows-release-52.zap</url>
+        <hash>SHA-256:4cf248175d06f9c99c1ef4cf19605a8b7719507919a8ab7a0f39616f1337f6b9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-09</date>
-        <size>10458973</size>
+        <date>2023-04-04</date>
+        <size>10481292</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
