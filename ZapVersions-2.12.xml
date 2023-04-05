@@ -888,25 +888,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Form Handler</name>
         <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
         <author>ZAP Dev Team</author>
-        <version>6.2.0</version>
-        <file>formhandler-beta-6.2.0.zap</file>
+        <version>6.2.1</version>
+        <file>formhandler-beta-6.2.1.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Statistics.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The value generator can now match fields based on regex.&lt;/li&gt;
-&lt;li&gt;Expanded the list of default fields and values.&lt;/li&gt;
+&lt;li&gt;Correctly read fields provided with &lt;code&gt;-config&lt;/code&gt; arguments when setting up the default fields.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.2.0/formhandler-beta-6.2.0.zap</url>
-        <hash>SHA-256:817700fdedff34d9b527a3e713de42ddd92341d0605e7bb7cc14fbf790323143</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.2.1/formhandler-beta-6.2.1.zap</url>
+        <hash>SHA-256:1d53166fc1836669869be7120affdd63f55ab02654e252e16665ec99b51c83e1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/form-handler/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-04</date>
-        <size>2205102</size>
+        <date>2023-04-05</date>
+        <size>2205003</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
@@ -2457,23 +2451,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.13.0</version>
-        <file>spiderAjax-release-23.13.0.zap</file>
+        <version>23.13.1</version>
+        <file>spiderAjax-release-23.13.1.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework - HTML elements to click support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Close the AJAX Spider dialogue when uninstalling the add-on.&lt;/li&gt;
+&lt;li&gt;Honour &lt;code&gt;-config&lt;/code&gt; arguments when applying the default allowed resources (Issue 7809).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.13.0/spiderAjax-release-23.13.0.zap</url>
-        <hash>SHA-256:dc96dce0da244995c181fe8073953e06c4f419ba7ee8fff51c50fbfc58b10602</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.13.1/spiderAjax-release-23.13.1.zap</url>
+        <hash>SHA-256:a98404f9c5390340825c023e3a9caedea31ed878373e18990923af612dcf8362</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-03-15</date>
-        <size>5841704</size>
+        <date>2023-04-05</date>
+        <size>5847650</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
