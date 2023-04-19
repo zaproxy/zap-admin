@@ -652,6 +652,33 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <size>19560894</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_database>
+    <addon>dev</addon>
+    <addon_dev>
+        <name>Dev Add-on</name>
+        <description>An add-on to help with development of ZAP.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>dev-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.0.1/dev-alpha-0.0.1.zap</url>
+        <hash>SHA-256:faeba36594624047df0f8492434b7a87f35bc6bd924c8353c721c50f4a3b9b43</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/dev-add-on/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2023-04-19</date>
+        <size>46412</size>
+        <not-before-version>2.12.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.7.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_dev>
     <addon>diff</addon>
     <addon_diff>
         <name>Diff</name>
