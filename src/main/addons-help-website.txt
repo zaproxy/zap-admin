@@ -29,6 +29,7 @@ communityScripts
 custompayloads
 customreport
 database
+dev
 diff
 directorylistv1
 directorylistv2_3_lc
