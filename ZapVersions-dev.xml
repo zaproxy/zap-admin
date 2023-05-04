@@ -277,26 +277,23 @@
         <name>Authentication Helper</name>
         <description>Authentication Helper</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>authhelper-alpha-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>authhelper-alpha-0.5.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for session management identification.&lt;/li&gt;
-&lt;li&gt;Support for auto-detect authentication.&lt;/li&gt;
-&lt;li&gt;Support for auto-detect session management.&lt;/li&gt;
-&lt;li&gt;Support for auto-detect verification.&lt;/li&gt;
+&lt;li&gt;Support for verification type of &amp;quot;autodetect&amp;quot; (post 2.12).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Clear launched browser authentication when disabled, otherwise it would prevent enabling it again.&lt;/li&gt;
+&lt;li&gt;Ensure verification processor shut down on exit, otherwise the AF hangs.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.4.0/authhelper-alpha-0.4.0.zap</url>
-        <hash>SHA-256:96ff933bc5e885eef253772ca0eba29a4ca55bb4f1e9d6cb1f0b8ce312caad94</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.5.0/authhelper-alpha-0.5.0.zap</url>
+        <hash>SHA-256:396a0b407f759e57fab1b2da27bc907590e4b2f41388e11d9a4cb47ab82f92a0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-28</date>
-        <size>572570</size>
+        <date>2023-05-04</date>
+        <size>703787</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -346,25 +343,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.27.0</version>
-        <file>automation-beta-0.27.0.zap</file>
+        <version>0.28.0</version>
+        <file>automation-beta-0.28.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for dynamically added auto-detect authentication.&lt;/li&gt;
-&lt;li&gt;Support for dynamically added auto-detect session management.&lt;/li&gt;
-&lt;li&gt;Show job time taken in panel and output.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct file path resolution with environment variables.&lt;/li&gt;
+&lt;li&gt;Support for verification type of &amp;quot;autodetect&amp;quot; (post 2.12).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.27.0/automation-beta-0.27.0.zap</url>
-        <hash>SHA-256:d3fd8a5db3ea04f1078f8ec04ed81d09992f09f2d84e33401429898f5b435601</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.28.0/automation-beta-0.28.0.zap</url>
+        <hash>SHA-256:23ed780ba025cb536adea356a60cf1b9db1a575feac01d9580da5197e2a88b17</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-28</date>
-        <size>4348039</size>
+        <date>2023-05-04</date>
+        <size>4350696</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
