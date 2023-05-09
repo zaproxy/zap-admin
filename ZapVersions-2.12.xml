@@ -656,19 +656,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Dev Add-on</name>
         <description>An add-on to help with development of ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>dev-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>dev-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Auth pages to provide a variety of verification responses.&lt;/li&gt;
+&lt;li&gt;Auth pages where the password field is not accessible until the username is filled in.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.1.0/dev-alpha-0.1.0.zap</url>
-        <hash>SHA-256:a3d50a2963e22dd8b9b71e520b2ed1f4e554b28c2e0117007928c5365775e081</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.2.0/dev-alpha-0.2.0.zap</url>
+        <hash>SHA-256:5766843a40411ece9ec7cecaa2c0d08562046023a66baaac4751ebf455107819</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dev-add-on/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-28</date>
-        <size>46855</size>
+        <date>2023-05-09</date>
+        <size>70614</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
