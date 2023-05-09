@@ -277,23 +277,19 @@
         <name>Authentication Helper</name>
         <description>Authentication Helper</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>authhelper-alpha-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>authhelper-alpha-0.6.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for verification type of &amp;quot;autodetect&amp;quot; (post 2.12).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ensure verification processor shut down on exit, otherwise the AF hangs.&lt;/li&gt;
+&lt;li&gt;Support for login pages where the username has to be submitted before the password field is accessible.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.5.0/authhelper-alpha-0.5.0.zap</url>
-        <hash>SHA-256:396a0b407f759e57fab1b2da27bc907590e4b2f41388e11d9a4cb47ab82f92a0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.6.0/authhelper-alpha-0.6.0.zap</url>
+        <hash>SHA-256:7d1946a81b5dcc6fe4f39863a72d5cca4fb52b372eb957f214fbd6ef572706e0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-04</date>
-        <size>703787</size>
+        <date>2023-05-09</date>
+        <size>706105</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
