@@ -22,6 +22,8 @@ package org.zaproxy.gradle;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 import org.apache.commons.configuration.XMLConfiguration;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Internal;
@@ -57,10 +59,8 @@ public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWeb
                 createGitHubConnection(user.getName(), user.getAuthToken())
                         .getRepository(getGitHubRepo().get().toString());
 
-        List<GHAsset> assets =
-                repo.getReleaseByTagName(
-                                TAG_PREFIX + zapVersionsXml.getString(CORE_VERSION_ELEMENT))
-                        .getAssets();
+        String version = zapVersionsXml.getString(CORE_VERSION_ELEMENT);
+        List<GHAsset> assets = repo.getReleaseByTagName(TAG_PREFIX + version).getAssets();
 
         List<ReleaseFile> releaseFiles = new ArrayList<>();
 
@@ -96,13 +96,24 @@ public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWeb
                         toMegaBytes(asset.getSize()),
                         asset.getBrowserDownloadUrl()));
 
-        asset = getAsset(assets, ".dmg");
+        asset = getAsset(assets, version + ".dmg");
         releaseFiles.add(
                 new ReleaseFile(
-                        "MacOS Installer",
+                        "macOS (amd64) Installer",
                         "osx-i",
                         toMegaBytes(asset.getSize()),
                         asset.getBrowserDownloadUrl()));
+
+        Optional<GHAsset> optionalAsset = getOptionalAsset(assets, "_aarch64.dmg");
+        if (optionalAsset.isPresent()) {
+            asset = optionalAsset.get();
+            releaseFiles.add(
+                    new ReleaseFile(
+                            "macOS (aarch64) Installer",
+                            "osx-aarch64-i",
+                            toMegaBytes(asset.getSize()),
+                            asset.getBrowserDownloadUrl()));
+        }
 
         asset = getAsset(assets, "Crossplatform.zip");
         releaseFiles.add(
@@ -124,7 +135,12 @@ public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWeb
     }
 
     private GHAsset getAsset(List<GHAsset> assets, String suffix) {
-        return assets.stream().filter(asset -> asset.getName().endsWith(suffix)).findFirst().get();
+        return getOptionalAsset(assets, suffix)
+                .orElseThrow(() -> new NoSuchElementException("No asset with suffix: " + suffix));
+    }
+
+    private Optional<GHAsset> getOptionalAsset(List<GHAsset> assets, String suffix) {
+        return assets.stream().filter(asset -> asset.getName().endsWith(suffix)).findFirst();
     }
 
     private GitHub createGitHubConnection(String userName, String authToken) throws IOException {
