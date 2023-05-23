@@ -277,19 +277,23 @@
         <name>Authentication Helper</name>
         <description>Authentication Helper</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>authhelper-alpha-0.6.0.zap</file>
-        <status>alpha</status>
+        <version>0.7.0</version>
+        <file>authhelper-beta-0.7.0.zap</file>
+        <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for login pages where the username has to be submitted before the password field is accessible.&lt;/li&gt;
+&lt;li&gt;Authentication tester dialog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Promoted to Beta&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.6.0/authhelper-alpha-0.6.0.zap</url>
-        <hash>SHA-256:7d1946a81b5dcc6fe4f39863a72d5cca4fb52b372eb957f214fbd6ef572706e0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.7.0/authhelper-beta-0.7.0.zap</url>
+        <hash>SHA-256:74893bf6411bf5d2567562204e8de0a4bae2c11f2029bfa06b300af5810471df</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-09</date>
-        <size>706105</size>
+        <date>2023-05-23</date>
+        <size>731094</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
