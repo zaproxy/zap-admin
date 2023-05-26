@@ -2366,23 +2366,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.12.0</version>
-        <file>selenium-release-15.12.0.zap</file>
+        <version>15.12.1</version>
+        <file>selenium-release-15.12.1.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Disable JSON view in Firefox for DOM XSS rule to prevent hangs when the &amp;quot;Save As&amp;quot; option is invoked.&lt;/li&gt;
+&lt;li&gt;Install Firefox extensions without using a profile (Issue 7878).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.12.0/selenium-release-15.12.0.zap</url>
-        <hash>SHA-256:9d0474850dcce603ded513b74fc79f79c88f79e89a22efc5e59cf8ac76533b20</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.12.1/selenium-release-15.12.1.zap</url>
+        <hash>SHA-256:f1506741fd69fc9749e4a03f629063f82fdac1bf4a7ff16f6823a21c2d8bb961</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-23</date>
-        <size>24913068</size>
+        <date>2023-05-26</date>
+        <size>24912992</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
