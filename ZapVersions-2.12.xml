@@ -1052,29 +1052,23 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.15.0</version>
-        <file>graphql-alpha-0.15.0.zap</file>
+        <version>0.16.0</version>
+        <file>graphql-alpha-0.16.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;An informational alert is raised if a GraphQL endpoint that supports introspection is discovered during spidering.&lt;/li&gt;
+&lt;li&gt;An informational alert is raised when the GraphQL server implementation is identified using fingerprinting techniques.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Improved detection of GraphQl endpoints while spidering.&lt;/li&gt;
-&lt;li&gt;It is no longer a requirement for schema URLs to end with &lt;code&gt;.graphql&lt;/code&gt; or &lt;code&gt;.graphqls&lt;/code&gt; when importing from the UI.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Display the whole operation name in the Sites tree (could be missing a character).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.15.0/graphql-alpha-0.15.0.zap</url>
-        <hash>SHA-256:f08392f519bb736014e23190131ebd894317cd2b5a702edcc43a7d22a022faa5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.16.0/graphql-alpha-0.16.0.zap</url>
+        <hash>SHA-256:70d299b76608ececdc49ff3571ffa582c0c6d2433d55332028bf5ae321c0361d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-03</date>
-        <size>5509083</size>
+        <date>2023-05-31</date>
+        <size>5554344</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
