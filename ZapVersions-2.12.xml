@@ -2489,20 +2489,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.14.0</version>
-        <file>spiderAjax-release-23.14.0.zap</file>
+        <version>23.14.1</version>
+        <file>spiderAjax-release-23.14.1.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to exclude elements from crawl (Issue 5875).&lt;/li&gt;
-&lt;li&gt;Configure logging of dependencies directly, instead of relying on core.&lt;/li&gt;
+&lt;li&gt;Handle job with no parameters when reading Excluded Elements (Issue 7889).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.14.0/spiderAjax-release-23.14.0.zap</url>
-        <hash>SHA-256:31bc87985b91a87050a08945995b6909e9fc7dd50667d5138829deb5d0d1b4d7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.14.1/spiderAjax-release-23.14.1.zap</url>
+        <hash>SHA-256:80da276b4942fb392e38c06d0c05060e006cfd1d91039692fa6f06b78947aafd</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-31</date>
-        <size>5889717</size>
+        <date>2023-06-02</date>
+        <size>5889470</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
