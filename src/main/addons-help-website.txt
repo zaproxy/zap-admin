@@ -8,7 +8,6 @@ accessControl
 alertFilters
 alertReport
 allinonenotes
-amf
 ascanrulesAlpha
 ascanrulesBeta
 ascanrules
