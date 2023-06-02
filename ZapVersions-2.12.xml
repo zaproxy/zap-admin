@@ -919,22 +919,22 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
     </addon_fileupload>
     <addon>formhandler</addon>
     <addon_formhandler>
-        <name>Form Handler</name>
-        <description>This Form Handler Add-on allows a user to define field names and values to be used in a form's fields. Fields can be added, modified, enabled, and deleted for use in form fields.</description>
+        <name>Value Generator</name>
+        <description>This Value Generator Add-on allows a user to define field names and values to be used when submitting values to an app. Fields can be added, modified, enabled/disabled, and deleted.</description>
         <author>ZAP Dev Team</author>
-        <version>6.2.1</version>
-        <file>formhandler-beta-6.2.1.zap</file>
+        <version>6.3.0</version>
+        <file>formhandler-beta-6.3.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correctly read fields provided with &lt;code&gt;-config&lt;/code&gt; arguments when setting up the default fields.&lt;/li&gt;
+&lt;li&gt;Renamed to &amp;quot;Value Generator&amp;quot; to more clearly identify to users what the add-on does.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.2.1/formhandler-beta-6.2.1.zap</url>
-        <hash>SHA-256:1d53166fc1836669869be7120affdd63f55ab02654e252e16665ec99b51c83e1</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/form-handler/</info>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.3.0/formhandler-beta-6.3.0.zap</url>
+        <hash>SHA-256:09370682b4a3b5f1444ea3fb40d2251b5847deefee02251614c3c2e3a5654115</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/value-generator/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-05</date>
-        <size>2205003</size>
+        <date>2023-06-02</date>
+        <size>2213174</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
@@ -2243,19 +2243,19 @@ As well as Alert Refs where applicable (Issues 6119 &amp;amp; 7100).&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.22.0</version>
-        <file>retire-release-0.22.0.zap</file>
+        <version>0.23.0</version>
+        <file>retire-release-0.23.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.22.0/retire-release-0.22.0.zap</url>
-        <hash>SHA-256:3dfb23376e2f178f1789e8cab5e65fe98ef262b27f47e2a57e7ee4a4c4cf15f8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.23.0/retire-release-0.23.0.zap</url>
+        <hash>SHA-256:8e071e96498953c156b54c0213d5fdeb1973e6cbb7649c74abf8884fc8c50065</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-03</date>
-        <size>1218551</size>
+        <date>2023-06-02</date>
+        <size>1218632</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
