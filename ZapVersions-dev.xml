@@ -112,23 +112,29 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>54</version>
-        <file>ascanrules-release-54.zap</file>
+        <version>55</version>
+        <file>ascanrules-release-55.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The Parameter Tamper Scan rule now includes example alert functionality for documentation generation purposes (Issue 6119)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct IP used for AWS/GCP in the Cloud Metadata Potentially Exposed scan rule (Issue 7829).&lt;/li&gt;
+&lt;li&gt;Fix typo in ASP payload of Server Side Code Injection scan rule.&lt;/li&gt;
+&lt;li&gt;Include complete solution of Server Side Include scan rule.&lt;/li&gt;
+&lt;li&gt;Ensure Custom Payloads support can be properly unloaded.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Hidden File Finder scan rule now check for Blazor WASM config files.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v54/ascanrules-release-54.zap</url>
-        <hash>SHA-256:706957d674f14bd2a03fd893451e3024dc673c2329f1dc3e27963e2c0443476c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v55/ascanrules-release-55.zap</url>
+        <hash>SHA-256:e405d6d1046cf05a4666543c14a5546e32fa0f6d9f00bf80f8469a98f9b5da66</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-03</date>
-        <size>3128665</size>
+        <date>2023-06-06</date>
+        <size>3127859</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -252,23 +258,23 @@
         <name>Authentication Helper</name>
         <description>Authentication Helper</description>
         <author>ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>authhelper-beta-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>authhelper-beta-0.8.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Authentication tester dialog.&lt;/li&gt;
+&lt;li&gt;Prefer username fields with known id/name strings.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Promoted to Beta&lt;/li&gt;
+&lt;li&gt;Correct example alert of Session Management Response Identified scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.7.0/authhelper-beta-0.7.0.zap</url>
-        <hash>SHA-256:74893bf6411bf5d2567562204e8de0a4bae2c11f2029bfa06b300af5810471df</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.8.0/authhelper-beta-0.8.0.zap</url>
+        <hash>SHA-256:ad41bfaed26b229bfeb0775e146d1c11d1a088c9990bdb038dc04c9dd673ca29</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-23</date>
-        <size>731094</size>
+        <date>2023-06-06</date>
+        <size>810737</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -318,19 +324,24 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.28.0</version>
-        <file>automation-beta-0.28.0.zap</file>
+        <version>0.29.0</version>
+        <file>automation-beta-0.29.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for verification type of &amp;quot;autodetect&amp;quot; (post 2.12).&lt;/li&gt;
+&lt;li&gt;Statistic name to test summary.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Test taking into account previous statistic values.&lt;/li&gt;
+&lt;li&gt;Clear Output tab on new plan.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.28.0/automation-beta-0.28.0.zap</url>
-        <hash>SHA-256:23ed780ba025cb536adea356a60cf1b9db1a575feac01d9580da5197e2a88b17</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.29.0/automation-beta-0.29.0.zap</url>
+        <hash>SHA-256:7224d2cc088f994d7ea7041548389fae7071b5d77ee7a8cae70c7c881cf2d54b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-04</date>
-        <size>4350696</size>
+        <date>2023-06-06</date>
+        <size>4349656</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -399,21 +410,29 @@
         <name>Forced Browse</name>
         <description>Forced browsing of files and directories using code from the OWASP DirBuster tool</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>bruteforce-beta-12.zap</file>
+        <version>13</version>
+        <file>bruteforce-beta-13.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Default number of threads to 2 * processor count.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v12/bruteforce-beta-12.zap</url>
-        <hash>SHA-256:4f1f59a27ee31994cb8fddf41059df5c5759f9e7e52a123cdbfee1a438533ab1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v13/bruteforce-beta-13.zap</url>
+        <hash>SHA-256:c03333528aff28bec89c22d8e83ca582bd6939cbd44ec7c024fbcaa8b488eecc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/forced-browse/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-27</date>
-        <size>554080</size>
+        <date>2023-06-06</date>
+        <size>554319</size>
         <not-before-version>2.12.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_bruteforce>
     <addon>bugtracker</addon>
     <addon_bugtracker>
@@ -1616,26 +1635,23 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>network-beta-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>network-beta-0.9.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to log client side HTTP traffic for debug purposes, using the name &lt;code&gt;org.zaproxy.addon.network.http&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;TRACE&lt;/code&gt; level (instead of &lt;code&gt;DEBUG&lt;/code&gt;) to log client side HTTP traffic to avoid accidentally enabling it when debugging other add-ons.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Do not pass-through requests to the local proxies themselves (e.g. ZAP domain, aliases).&lt;/li&gt;
-&lt;li&gt;Correctly handle concurrent requests (Issue 7838).&lt;/li&gt;
-&lt;li&gt;Close connection on recursive request after notifying all handlers to still allow custom local proxies to serve or rewrite the request.&lt;/li&gt;
-&lt;li&gt;Ensure WebSocket and SSE connections are not incorrectly reused (Issue 7730).&lt;/li&gt;
+&lt;li&gt;Do not close the client connection when the server closes it, if not required, to keep the client connection in good state and be used longer.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.8.0/network-beta-0.8.0.zap</url>
-        <hash>SHA-256:abf9f93d2bddf10806e9b0502258c9c6453b8fda0565852e43b39c887158ebf6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.9.0/network-beta-0.9.0.zap</url>
+        <hash>SHA-256:aab240ca0bc82077830b96273b2f770d163eea017a04e9ed6c70217581ed7a99</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-03</date>
-        <size>27356656</size>
+        <date>2023-06-06</date>
+        <size>27356770</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -1833,25 +1849,32 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Parameter Digger</name>
         <description>Identify hidden, unlinked parameters. Useful for finding web cache poisoning vulnerabilities.</description>
         <author>ZAP Dev Team and Arkaprabha Chakraborty</author>
-        <version>0.1.0</version>
-        <file>paramdigger-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>paramdigger-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Rename multiple options in GUI and documentation.&lt;/li&gt;
+&lt;li&gt;NullPointerException which could occur with header guesser.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Default number of threads to 2 * processor count.&lt;/li&gt;
+&lt;li&gt;Change panel designs to allow message selection.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/paramdigger-v0.1.0/paramdigger-alpha-0.1.0.zap</url>
-        <hash>SHA-256:29ab753e092b42a546fb83fefcb8d952af745e6ba98d647099c7d0185af13eee</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/paramdigger-v0.2.0/paramdigger-alpha-0.2.0.zap</url>
+        <hash>SHA-256:a6741d85e9d9b9a01107e176f8530c3386fc4671fde4c0a38b94cd6d953a35d6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/parameter-digger/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-08-22</date>
-        <size>522848</size>
-        <not-before-version>2.11.1</not-before-version>
+        <date>2023-06-06</date>
+        <size>553729</size>
+        <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.9.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1921,26 +1944,32 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>48</version>
-        <file>pscanrules-release-48.zap</file>
+        <version>49</version>
+        <file>pscanrules-release-49.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added alert examples to Directory Browsing (Issue 6119).&lt;/li&gt;
-&lt;li&gt;Added Trusted Domains in Cross-Domain JavaScript Source File Inclusion (Issue 7775).&lt;/li&gt;
+&lt;li&gt;The X-AspNet-Version Response Header Scan Rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;The Information Disclosure Suspicious Comments scan rule:
+&lt;ul&gt;
+&lt;li&gt;Now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;Now has a Alert Tag with a OWASP WSTG reference.&lt;/li&gt;
+&lt;li&gt;Added 'DEBUG' to list of suspicious comments.&lt;/li&gt;
+&lt;li&gt;Added custom payload support (via Custom Payloads add-on).&lt;/li&gt;
+&lt;li&gt;Removed suspicious-comments.txt file in favor of payload editing via Custom Payloads add-on.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Application Error Scan Rule no longer checks JavaScript or CSS responses unless threshold is Low (Issue 7724).&lt;/li&gt;
-&lt;li&gt;The Cross-Domain JavaScript Source File Inclusion scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;li&gt;Adjust alert details of Directory Browsing, use same name and description, and use the other info field for the name of the web server identified.&lt;/li&gt;
+&lt;li&gt;Ensure Custom Payloads support can be properly unloaded.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v48/pscanrules-release-48.zap</url>
-        <hash>SHA-256:5d3a86cacf4b9d06d8a6475d4b7a3b2b0157b2586cb088ab5990f9bfe4e940d6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v49/pscanrules-release-49.zap</url>
+        <hash>SHA-256:9388d27b7274f6d4bcd2d27e0522e74297921eb31e3abd50df027f32b4c2c82d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-03</date>
-        <size>1853825</size>
+        <date>2023-06-06</date>
+        <size>1841359</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
@@ -2134,31 +2163,23 @@ As well as Alert Refs where applicable (Issues 6119 &amp;amp; 7100).&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.20.0</version>
-        <file>reports-release-0.20.0.zap</file>
+        <version>0.21.0</version>
+        <file>reports-release-0.21.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Traditional JSON report, Traditional JSON Report with requests and responses, Traditional XML Report and Traditional XML Report with requests and responses now has &amp;quot;otherinfo&amp;quot; field per alert instance (Issue 7260).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Include templates available when reporting invalid template in the automation job.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Deprecated&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The &amp;quot;otherinfo&amp;quot; field in the alert will be removed and replaced by the &amp;quot;otherinfo&amp;quot; field in the alert instances.&lt;/li&gt;
+&lt;li&gt;Add ZAP version to HTML and PDF reports.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct ID of Markdown template listed in the help page.&lt;/li&gt;
+&lt;li&gt;Validate that &lt;code&gt;outputSummary&lt;/code&gt;'s job field &lt;code&gt;summaryFile&lt;/code&gt; has a parent directory.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.20.0/reports-release-0.20.0.zap</url>
-        <hash>SHA-256:fc86ea17abdb6e1c8d31cc67c8adb992b17227de1e26ce1faa44356aff036c5b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.21.0/reports-release-0.21.0.zap</url>
+        <hash>SHA-256:519e9a73da3d0e3201cfc28f223d7147f1140aaa213d30c0d13f917d5e435163</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-04</date>
-        <size>67283259</size>
+        <date>2023-06-06</date>
+        <size>67285639</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
@@ -2665,19 +2686,19 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.21.0</version>
-        <file>wappalyzer-release-21.21.0.zap</file>
+        <version>21.22.0</version>
+        <file>wappalyzer-release-21.22.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.21.0/wappalyzer-release-21.21.0.zap</url>
-        <hash>SHA-256:c0116383e9bbae9c7e4d889a8b5a59782a216385178e45d3f1ae787d0680a0a8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.22.0/wappalyzer-release-21.22.0.zap</url>
+        <hash>SHA-256:1cec5476c36edb18147dd2692912dbd7ef738e3d7e2569bbd38763b7f5ac6d59</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-03</date>
-        <size>17946783</size>
+        <date>2023-06-06</date>
+        <size>17970691</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
