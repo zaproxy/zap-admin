@@ -62,23 +62,23 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>alertFilters-release-15.zap</file>
+        <version>16</version>
+        <file>alertFilters-release-16.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow to specify the HTTP method when filtering the alerts (Issue 5967).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v15/alertFilters-release-15.zap</url>
-        <hash>SHA-256:dd16791ffc3912ec6463da3a2e3b922eacb83ef60bee2098d4beca2d923c7cce</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v16/alertFilters-release-16.zap</url>
+        <hash>SHA-256:7c2f8f47bb727fa5c03d6ebfbc78a821baa88946f27fce91daa074491dfce606</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-01-03</date>
-        <size>535740</size>
+        <date>2023-06-12</date>
+        <size>548251</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_alertFilters>
     <addon>allinonenotes</addon>
@@ -2163,23 +2163,23 @@ As well as Alert Refs where applicable (Issues 6119 &amp;amp; 7100).&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.21.0</version>
-        <file>reports-release-0.21.0.zap</file>
+        <version>0.22.0</version>
+        <file>reports-release-0.22.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add ZAP version to HTML and PDF reports.&lt;/li&gt;
+&lt;li&gt;Automation job: support for sites (Issue 7858).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Validate that &lt;code&gt;outputSummary&lt;/code&gt;'s job field &lt;code&gt;summaryFile&lt;/code&gt; has a parent directory.&lt;/li&gt;
+&lt;li&gt;Change SARIF's Base64 encoder to not rely on the default character encoding.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.21.0/reports-release-0.21.0.zap</url>
-        <hash>SHA-256:519e9a73da3d0e3201cfc28f223d7147f1140aaa213d30c0d13f917d5e435163</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.22.0/reports-release-0.22.0.zap</url>
+        <hash>SHA-256:f3559d35696d552cfb5c1269826e91c9cb271b72c6698fae1febc72c69b5a31f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-06-06</date>
-        <size>67285639</size>
+        <date>2023-06-12</date>
+        <size>67287477</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_reports>
     <addon>requester</addon>
