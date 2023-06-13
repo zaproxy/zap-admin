@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>38</id>
+        <id>39</id>
         <default>
-            <item>It is now _much_ easier to configure ZAP to handle your app's authentication!</item>
-            <link>https://www.zaproxy.org/blog/2023-05-23-authentication-tester/</link>
+            <item>The ZAP Docker Images are now available in the GitHub Container Registry</item>
+            <link>https://www.zaproxy.org/blog/2023-06-13-ghcr-docker-images/</link>
         </default>
     </news>
 </ZAP>
