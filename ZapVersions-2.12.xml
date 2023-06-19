@@ -1071,23 +1071,23 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.16.0</version>
-        <file>graphql-alpha-0.16.0.zap</file>
+        <version>0.17.0</version>
+        <file>graphql-alpha-0.17.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;An informational alert is raised when the GraphQL server implementation is identified using fingerprinting techniques.&lt;/li&gt;
+&lt;li&gt;It is now possible to disable the query generator completely.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.16.0/graphql-alpha-0.16.0.zap</url>
-        <hash>SHA-256:70d299b76608ececdc49ff3571ffa582c0c6d2433d55332028bf5ae321c0361d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.17.0/graphql-alpha-0.17.0.zap</url>
+        <hash>SHA-256:aefbd274ca78bb9a66f02330137363dfe69df5ea30765e47b87795c0836f6e44</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-31</date>
-        <size>5554344</size>
+        <date>2023-06-19</date>
+        <size>5650675</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
