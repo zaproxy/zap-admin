@@ -1737,8 +1737,8 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>33</version>
-        <file>openapi-beta-33.zap</file>
+        <version>34</version>
+        <file>openapi-beta-34.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
@@ -1746,14 +1746,15 @@ Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix null pointer exception when importing a definition with requestBody content set as an empty dictionary (Issue 7808).&lt;/li&gt;
+&lt;li&gt;Fix exception when generating data for parameters without schema.&lt;/li&gt;
+&lt;li&gt;An exception which might occur on large definition imports (Issue 7876).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v33/openapi-beta-33.zap</url>
-        <hash>SHA-256:754918f48a984282bcb34068764b05633e43538ec5c077161f8e517b526c8744</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v34/openapi-beta-34.zap</url>
+        <hash>SHA-256:63206207b32f403f53f6dd01bf7f9521a0a8fc60582a5f142395f3d58fff2579</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-04</date>
-        <size>12993451</size>
+        <date>2023-06-27</date>
+        <size>13114271</size>
         <not-before-version>2.12.0</not-before-version>
         <dependencies>
             <addons>
