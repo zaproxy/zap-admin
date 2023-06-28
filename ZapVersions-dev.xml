@@ -555,35 +555,33 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>16</version>
-        <file>communityScripts-alpha-16.zap</file>
+        <version>17</version>
+        <file>communityScripts-alpha-17.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;httpsender/UpgradeHttp1To2.js - changes all HTTP/1.1 requests to use HTTP/2&lt;/li&gt;
-&lt;li&gt;standalone/devTools.js - Tools used to explore objects returned by the Java engine and better plug Nashorn objects into it&lt;/li&gt;
+&lt;li&gt;targeted/SQLMapCommandGenerator.js - it will generate and copy sqlmap command based on the request&lt;/li&gt;
+&lt;li&gt;encode-decode/JwtDecode.js - Decodes JWTs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;encode-decode/double-spacer.js - adapted to the functionality of Encoder 1.0.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;li&gt;Update minimum ZAP version to 2.12.0:
 &lt;ul&gt;
-&lt;li&gt;standalone/Run report.js - no longer working, the old/deprecated class that it used was removed.&lt;/li&gt;
+&lt;li&gt;Remove compatibility code that provided the singletons (&lt;code&gt;control&lt;/code&gt; and &lt;code&gt;model&lt;/code&gt;) in JavaScript scripts, they can now be accessed directly always.&lt;/li&gt;
+&lt;li&gt;Use provided singletons (&lt;code&gt;control&lt;/code&gt; and &lt;code&gt;model&lt;/code&gt;) in Python scripts.&lt;/li&gt;
+&lt;li&gt;Use non-deprecated &lt;code&gt;HttpSender&lt;/code&gt; constructor.&lt;/li&gt;
+&lt;li&gt;extender/Simple Reverse Proxy.js - replace usage of deprecated core classes.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;active/User defined attacks.js - correctly escape dot character in some evidence strings.&lt;/li&gt;
-&lt;li&gt;targeted/curl_command_generator.js - prevent and warn on local file inclusion when generating the command.
-Thanks to James Kettle (@albinowax) for reporting.&lt;/li&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove statements that return the message in HTTP Sender scripts, the message passed as parameter is used/sent always.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v16/communityScripts-alpha-16.zap</url>
-        <hash>SHA-256:826fb47b8b9cdeefe006687fd3608981d5bcf089e7358645816c6c33f10f4c9b</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v17/communityScripts-alpha-17.zap</url>
+        <hash>SHA-256:58110bdd68defdb3610886e37d4a4e46e99cbe60370d5299f5ee398762ef524d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2023-03-29</date>
-        <size>460288</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2023-06-28</date>
+        <size>460543</size>
+        <not-before-version>2.12.0</not-before-version>
     </addon_communityScripts>
     <addon>coreLang</addon>
     <addon_coreLang>
