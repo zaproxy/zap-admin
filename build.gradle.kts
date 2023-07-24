@@ -21,8 +21,8 @@ import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 
 plugins {
     java
-    id("com.diffplug.spotless") version "6.14.1"
-    id("net.ltgt.errorprone") version "3.0.1"
+    id("com.diffplug.spotless") version "6.20.0"
+    id("net.ltgt.errorprone") version "3.1.0"
     id("org.zaproxy.crowdin") version "0.3.1"
 }
 
@@ -30,7 +30,7 @@ apply(from = "$rootDir/gradle/ci.gradle.kts")
 
 tasks.withType<JavaCompile> {
     options.encoding = "utf-8"
-    options.compilerArgs = listOf("-Xlint:all", "-Xlint:-options", "-Werror")
+    options.compilerArgs = listOf("-Xlint:all", "-Werror")
 }
 
 repositories {
@@ -48,7 +48,7 @@ crowdin {
 }
 
 dependencies {
-    "errorprone"("com.google.errorprone:error_prone_core:2.18.0")
+    "errorprone"("com.google.errorprone:error_prone_core:2.20.0")
 
     implementation("org.apache.commons:commons-text:1.10.0")
     implementation("org.kohsuke:github-api:1.101")
@@ -59,10 +59,8 @@ dependencies {
     implementation("net.sf.json-lib:json-lib:2.4:jdk15")
     implementation("org.zaproxy:zap:2.12.0")
 
-    val jupiterVersion = "5.9.2"
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:$jupiterVersion")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$jupiterVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.assertj:assertj-core:3.24.2")
 }
 
@@ -89,7 +87,7 @@ spotless {
     java {
         licenseHeaderFile("$rootDir/docs/headers/license.java")
 
-        googleJavaFormat("1.7").aosp()
+        googleJavaFormat("1.17.0").aosp()
     }
 
     kotlin {

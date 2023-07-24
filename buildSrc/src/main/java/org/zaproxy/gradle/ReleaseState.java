@@ -23,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 /** The release state computed from {@code ZapVersions.xml} files. */
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonInclude(value = Include.NON_NULL)
 public class ReleaseState {
 
@@ -94,7 +94,7 @@ public class ReleaseState {
         }
     }
 
-    @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     @JsonInclude(value = Include.NON_EMPTY)
     public static class VersionChange {
 
@@ -133,7 +133,7 @@ public class ReleaseState {
         }
     }
 
-    @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     @JsonInclude(value = Include.NON_EMPTY)
     public static class AddOnChange extends VersionChange {
 

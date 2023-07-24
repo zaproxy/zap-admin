@@ -22,7 +22,8 @@ package org.zaproxy.admin;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 
 /** Utilities for common tasks. */
@@ -32,11 +33,11 @@ public class Utils {
         // Utility class.
     }
 
-    public static String readUrl(String urlString) throws IOException {
+    public static String readUrl(String urlString) throws IOException, URISyntaxException {
         try (BufferedReader reader =
                 new BufferedReader(
                         new InputStreamReader(
-                                new URL(urlString).openStream(), StandardCharsets.UTF_8))) {
+                                new URI(urlString).toURL().openStream(), StandardCharsets.UTF_8))) {
             StringBuilder builder = new StringBuilder();
             int read;
             char[] chars = new char[1024];

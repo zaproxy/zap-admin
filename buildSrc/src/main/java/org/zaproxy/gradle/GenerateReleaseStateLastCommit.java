@@ -295,8 +295,7 @@ public abstract class GenerateReleaseStateLastCommit extends DefaultTask {
 
     private static Optional<DiffEntry> isFileChanged(
             Repository repository, RevCommit commitA, RevCommit commitB, String filePath) {
-        try (Git git = new Git(repository);
-                ObjectReader reader = git.getRepository().newObjectReader()) {
+        try (Git git = new Git(repository)) {
             AbstractTreeIterator oldTree = prepareTreeParser(repository, commitA);
             AbstractTreeIterator newTree = prepareTreeParser(repository, commitB);
             return git.diff().setOldTree(oldTree).setNewTree(newTree).call().stream()
