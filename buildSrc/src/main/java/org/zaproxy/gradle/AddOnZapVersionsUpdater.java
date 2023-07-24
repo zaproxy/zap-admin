@@ -34,7 +34,6 @@ import java.util.zip.ZipFile;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
-import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
 
 interface AddOnZapVersionsUpdater extends UpdateZapVersionsEntries {
 
@@ -146,8 +145,7 @@ interface AddOnZapVersionsUpdater extends UpdateZapVersionsEntries {
 
         private static final String DEPENDENCIES_ELEMENT = "dependencies";
         private static final String DEPENDENCIES_JAVA_VERSION_ELEMENT = "javaversion";
-        private static final String DEPENDENCIES_ADDONS_ALL_ELEMENTS = "addons/addon";
-        private static final String DEPENDENCIES_ADDONS_ALL_ELEMENTS_NO_XPATH = "addons.addon";
+        private static final String DEPENDENCIES_ADDONS_ALL_ELEMENTS = "addons.addon";
         private static final String ZAPADDON_ID_ELEMENT = "id";
         private static final String ZAPADDON_VERSION_ELEMENT = "version";
         private static final String ZAPADDON_NOT_BEFORE_VERSION_ELEMENT = "not-before-version";
@@ -179,7 +177,6 @@ interface AddOnZapVersionsUpdater extends UpdateZapVersionsEntries {
             XMLConfiguration manifest = new XMLConfiguration();
             manifest.setEncoding("UTF-8");
             manifest.setDelimiterParsingDisabled(true);
-            manifest.setExpressionEngine(new XPathExpressionEngine());
 
             try (ZipFile addOnZip = new ZipFile(addOn.toFile())) {
                 ZipEntry manifestEntry = addOnZip.getEntry(ADD_ON_MANIFEST_FILE_NAME);
@@ -262,7 +259,7 @@ interface AddOnZapVersionsUpdater extends UpdateZapVersionsEntries {
                 String elementBaseKey =
                         DEPENDENCIES_ELEMENT
                                 + "."
-                                + DEPENDENCIES_ADDONS_ALL_ELEMENTS_NO_XPATH
+                                + DEPENDENCIES_ADDONS_ALL_ELEMENTS
                                 + "("
                                 + i
                                 + ").";
