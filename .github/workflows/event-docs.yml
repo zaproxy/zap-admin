@@ -26,7 +26,7 @@ jobs:
         git config --global user.email "12745184+zapbot@users.noreply.github.com"
         git config --global user.name $GITHUB_USER
         # Run the ZAP script
-        docker run -v $(pwd):/zap/wrk/:rw --user root -t owasp/zap2docker-live ./zap.sh -addoninstallall -silent -script /zap/wrk/zap-admin/scripts/generate_events_page.js -cmd
+        docker run -v $(pwd):/zap/wrk/:rw --user root -t ghcr.io/zaproxy/zaproxy:nightly ./zap.sh -addoninstallall -silent -script /zap/wrk/zap-admin/scripts/generate_events_page.js -cmd
         cd zaproxy-website
         git checkout -b update-events
         # Update the index to be sure git is aware of changes
