@@ -295,7 +295,7 @@
         <changes>Fix installation issue.</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/coreLang-release-11.zap</url>
         <hash>SHA1:11e24142cd5e30d389161a1fc2e1dd08b445309c</hash>
-        <info>https://crowdin.com/project/owasp-zap</info>
+        <info>https://crowdin.com/project/zaproxy</info>
         <date>2017-04-06</date>
         <size>2715653</size>
         <not-before-version>2.5.0</not-before-version>
@@ -535,7 +535,7 @@
         <changes>Updated for 2.6.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/help_bs_BA-alpha-6.zap</url>
         <hash>SHA1:8f54f0fe065762f101ee1818545dacca581b2a2c</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2017-11-24</date>
         <size>773399</size>
         <not-before-version>2.6.0</not-before-version>
@@ -551,7 +551,7 @@
         <changes>Updated for 2.6.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/help_es_ES-alpha-6.zap</url>
         <hash>SHA1:5055f43457c118363b828a6e83a036e4b5b13d52</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2017-11-24</date>
         <size>775922</size>
         <not-before-version>2.6.0</not-before-version>
@@ -567,7 +567,7 @@
         <changes>Updated for 2.6.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/help_fr_FR-alpha-6.zap</url>
         <hash>SHA1:d2946f64199d1b4dad767f86ae92b408fa61c66f</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2017-11-24</date>
         <size>773836</size>
         <not-before-version>2.6.0</not-before-version>
@@ -583,7 +583,7 @@
         <changes>Updated for 2.6.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/help_ja_JP-alpha-6.zap</url>
         <hash>SHA1:50cf8563f1bd97f9cc3c9e90132057b5a6f8d484</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2017-11-24</date>
         <size>799759</size>
         <not-before-version>2.6.0</not-before-version>
@@ -599,7 +599,7 @@
         <changes>Updated for 2.6.0</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.6/help_pt_BR-release-7.zap</url>
         <hash>SHA1:716cf91fdf7fc2e599120134157f672e0147672b</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2017-11-24</date>
         <size>817771</size>
         <not-before-version>2.6.0</not-before-version>

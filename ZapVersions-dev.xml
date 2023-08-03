@@ -628,7 +628,7 @@
 &lt;/ul&gt;</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/coreLang-v15/coreLang-release-15.zap</url>
         <hash>SHA-256:d8258b914ffc95820dd045acf56677668a8cbbfc759290f72e30210056dfb88c</hash>
-        <info>https://crowdin.com/project/owasp-zap</info>
+        <info>https://crowdin.com/project/zaproxy</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2022-02-14</date>
         <size>4616009</size>
