@@ -263,7 +263,7 @@
         <changes>Updated for 2.4.2</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/coreLang-release-9.zap</url>
         <hash>SHA1:20944b6d83163d81b981a571933bce0a38b4ccee</hash>
-        <info>https://crowdin.com/project/owasp-zap</info>
+        <info>https://crowdin.com/project/zaproxy</info>
         <date>2015-09-07</date>
         <size>2582669</size>
         <not-before-version>2.4.2</not-before-version>
@@ -450,7 +450,7 @@
         <changes>Updated for 2.4.3</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_bs_BA-alpha-4.zap</url>
         <hash>SHA1:35c5b1b5f1a5cada187be51b50fda04d9b84edfa</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2015-12-04</date>
         <size>728733</size>
         <not-before-version>2.4.3</not-before-version>
@@ -466,7 +466,7 @@
         <changes>Updated for 2.4.3</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_es_ES-alpha-4.zap</url>
         <hash>SHA1:e47e9fb0ee21ae2612b4bc16f83b5c504f389442</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2015-12-04</date>
         <size>731964</size>
         <not-before-version>2.4.3</not-before-version>
@@ -482,7 +482,7 @@
         <changes>Updated for 2.4.3</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_fr_FR-alpha-4.zap</url>
         <hash>SHA1:803e9ff2a6ef6342dcf8b9fe1f8ea5059c98ad90</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2015-12-04</date>
         <size>728018</size>
         <not-before-version>2.4.3</not-before-version>
@@ -498,7 +498,7 @@
         <changes>Updated for 2.4.3</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_ja_JP-alpha-4.zap</url>
         <hash>SHA1:5981c8e3924145ce2762d87aa2c80b3d036f4acf</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2015-12-04</date>
         <size>755403</size>
         <not-before-version>2.4.3</not-before-version>
@@ -514,7 +514,7 @@
         <changes>Updated for 2.4.3</changes>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.4/help_pt_BR-release-5.zap</url>
         <hash>SHA1:a8d7861b23253f0e68489b9c05009210f36fac29</hash>
-        <info>https://crowdin.com/project/owasp-zap-help</info>
+        <info>https://crowdin.com/project/zap-help</info>
         <date>2015-12-04</date>
         <size>766697</size>
         <not-before-version>2.4.3</not-before-version>
