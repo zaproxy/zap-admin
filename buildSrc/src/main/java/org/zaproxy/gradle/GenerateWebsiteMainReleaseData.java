@@ -99,7 +99,7 @@ public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWeb
         asset = getAsset(assets, version + ".dmg");
         releaseFiles.add(
                 new ReleaseFile(
-                        "macOS (amd64) Installer",
+                        "macOS (Intel - amd64) Installer",
                         "osx-i",
                         toMegaBytes(asset.getSize()),
                         asset.getBrowserDownloadUrl()));
@@ -109,7 +109,7 @@ public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWeb
             asset = optionalAsset.get();
             releaseFiles.add(
                     new ReleaseFile(
-                            "macOS (aarch64) Installer",
+                            "macOS (Apple Silicon - aarch64) Installer",
                             "osx-aarch64-i",
                             toMegaBytes(asset.getSize()),
                             asset.getBrowserDownloadUrl()));
