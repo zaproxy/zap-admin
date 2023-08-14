@@ -31,9 +31,7 @@ var allTech = Tech.getAll().toArray();
 
 var WebSocketPassiveScript = Java.type('org.zaproxy.zap.extension.websocket.pscan.scripts.WebSocketPassiveScript');
 
-extScript = org.parosproxy.paros.control.Control.getSingleton().
-	getExtensionLoader().getExtension(
-		org.zaproxy.zap.extension.script.ExtensionScript.NAME);
+extScript = control.getExtensionLoader().getExtension(org.zaproxy.zap.extension.script.ExtensionScript.NAME);
 
 pscanWs = extScript.getTemplates(extScript.getScriptType("websocketpassive"));
 
@@ -47,9 +45,7 @@ for (var i = 0; i < pscanWs.length; i++) {
 	}
 }
 
-extAscan = org.parosproxy.paros.control.Control.getSingleton().
-	getExtensionLoader().getExtension(
-		org.zaproxy.zap.extension.ascan.ExtensionActiveScan.NAME);
+extAscan = control.getExtensionLoader().getExtension(org.zaproxy.zap.extension.ascan.ExtensionActiveScan.NAME);
 
 plugins = extAscan.getPolicyManager().getDefaultScanPolicy().getPluginFactory().getAllPlugin().toArray();
 
@@ -66,9 +62,7 @@ psdCons = PassiveScanData.class.getDeclaredConstructors()[0];
 psdCons.setAccessible(true);
 passiveScanData = psdCons.newInstance(new HttpMessage(new URI("https://www.example.com", true)));
 
-extPscan = org.parosproxy.paros.control.Control.getSingleton().
-	getExtensionLoader().getExtension(
-		org.zaproxy.zap.extension.pscan.ExtensionPassiveScan.NAME);
+extPscan = control.getExtensionLoader().getExtension(org.zaproxy.zap.extension.pscan.ExtensionPassiveScan.NAME);
 
 plugins = extPscan.getPluginPassiveScanners().toArray();
 
