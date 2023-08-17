@@ -1659,19 +1659,24 @@
         <name>Neonmarker</name>
         <description>Colors history table items based on tags</description>
         <author>Juha Kivekäs, Kingthorin</author>
-        <version>1.5.0</version>
-        <file>neonmarker-alpha-1.5.0.zap</file>
+        <version>1.6.0</version>
+        <file>neonmarker-alpha-1.6.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A right-click context menu is now available in the History tab in order to Select/Set a color for arbitrary messages.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The script example in the Help content was updated to use the injected core variables instead of using the fully qualified class name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An NPE which could happen when removing an entry that didn't yet have a tag assigned.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.5.0/neonmarker-alpha-1.5.0.zap</url>
-        <hash>SHA-256:0b888612670e66712001d0bd3cb990d7b34f88b7b6339aed2734083b8a5fe5c5</hash>
+        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.6.0/neonmarker-alpha-1.6.0.zap</url>
+        <hash>SHA-256:b6b1eef2673821189dee4877fe07cd78b64af662e3c6bff6e32c4f868b290ad3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/neonmarker/</info>
         <repo>https://github.com/kingthorin/neonmarker</repo>
-        <date>2022-07-11</date>
-        <size>35903</size>
+        <date>2023-08-17</date>
+        <size>35557</size>
         <not-before-version>2.10.0</not-before-version>
     </addon_neonmarker>
     <addon>network</addon>
