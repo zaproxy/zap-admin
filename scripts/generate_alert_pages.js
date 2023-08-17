@@ -91,7 +91,12 @@ for (var i in sortedKeys) {
 pw.close();
 
 function quoteText(txt) {
-	return '"' + txt.replaceAll("\"", "'") + '"';
+	// Pragmatic escaping ;)
+	return '"' + txt.
+		replaceAll("\n", " ").
+		replaceAll("\\'", "'").
+		replaceAll("\\\\", "\\").
+		replaceAll("\"", "'") + '"';
 }
 
 function printAlerts(alerts, name, type, status, clazz, scripturl, tech) {
@@ -176,6 +181,7 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech) {
 				}
 			}
 		}
+		pw.println('other: ' + quoteText(alert.getOtherInfo()));
 		var cweId = alert.getCweId();
 		if (cweId > 0) {
 			pw.println('cwe: ' + cweId);
@@ -219,6 +225,7 @@ function printAscanRule(plugin) {
 		alert.setDescription(plugin.getDescription());
 		alert.setSolution(plugin.getSolution());
 		alert.setReference(plugin.getReference());
+		alert.setOtherInfo(plugin.getOtherInfo());
 		alert.setCweId(plugin.getCweId());
 		alert.setWascId(plugin.getWascId());
 		alert.setTags(plugin.getAlertTags());
@@ -278,6 +285,7 @@ function printPscanRule(plugin) {
 		alert.setDescription(getPrivateMethod(plugin, ['getDescription', 'getDesc', 'getDescriptionMessage'], 'desc', '_Unavailable_'));
 		alert.setSolution(getPrivateMethod(plugin, ['getSolution', 'getSoln', 'getSolutionMessage'], 'soln', '_Unavailable_'));
 		alert.setReference(getPrivateMethod(plugin, ['getReferences', 'getReference', 'getRefs', 'getReferenceMessage', 'getReferencesMessage'], 'refs', ''));
+		alert.setOtherInfo(getPrivateMethod(plugin, ['getOther', 'getOtherInfo'], 'other', ''));
 		alert.setCweId(getPrivateMethod(plugin, ['getCweId'], '', 0));
 		alert.setWascId(getPrivateMethod(plugin, ['getWascId'], '', 0));
 		alert.setTags(getPrivateMethod(plugin, ['getAlertTags'], '', null));
