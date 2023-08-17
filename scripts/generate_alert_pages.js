@@ -91,12 +91,14 @@ for (var i in sortedKeys) {
 pw.close();
 
 function quoteText(txt) {
-	// Pragmatic escaping ;)
-	return '"' + txt.
-		replaceAll("\n", " ").
-		replaceAll("\\'", "'").
-		replaceAll("\\\\", "\\").
-		replaceAll("\"", "'") + '"';
+  return '"' + txt
+    .replace(/[\\]/g, '\\\\')
+    .replace(/[\"]/g, '\\\"')
+    .replace(/[\b]/g, '\\b')
+    .replace(/[\f]/g, '\\f')
+    .replace(/[\n]/g, ' ')
+    .replace(/[\r]/g, '')
+    .replace(/[\t]/g, '\\t') + '"';
 }
 
 function printAlerts(alerts, name, type, status, clazz, scripturl, tech) {
