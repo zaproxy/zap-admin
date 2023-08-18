@@ -227,7 +227,7 @@ function printAscanRule(plugin) {
 		alert.setDescription(plugin.getDescription());
 		alert.setSolution(plugin.getSolution());
 		alert.setReference(plugin.getReference());
-		alert.setOtherInfo(plugin.getOtherInfo());
+		alert.setOtherInfo(getPrivateMethod(plugin, ['getOther', 'getOtherInfo'], 'other', ''));
 		alert.setCweId(plugin.getCweId());
 		alert.setWascId(plugin.getWascId());
 		alert.setTags(plugin.getAlertTags());
