@@ -74,6 +74,17 @@ for (var i = 0; i < plugins.length; i++) {
 	}
 }
 
+// Extensions can now declare example alerts
+for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
+	try {
+		var ext = control.getExtensionLoader().getExtension(i);
+		printAlerts(ext.getExampleAlerts(), ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null);
+	} catch (e) {
+		// This one doesnt ;)
+	}
+}
+
+
 // Dump out the alert tags
 var fw = new FileWriter(AT_FILE);
 var pw = new PrintWriter(fw);
