@@ -78,9 +78,30 @@ for (var i = 0; i < plugins.length; i++) {
 for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 	try {
 		var ext = control.getExtensionLoader().getExtension(i);
-		printAlerts(ext.getExampleAlerts(), ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null);
+		var examples = ext.getExampleAlerts();
+		// Extension level examples can have different IDs, just to complicate matters
+		var exList = new ArrayList();
+		var lastId = -1;
+		for (var y=0; y < examples.size(); y++) {
+			var ex = examples.get(y);
+			if (exList.size() > 0 && ex.getPluginId() !== lastId) {
+				// Must have some examples
+				printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null);
+				exList.clear();
+			}
+			exList.add(ex);
+			lastId = ex.getPluginId();
+		}
+		if (exList.size() > 0) {
+			// Include the last set
+			printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null);
+		}
 	} catch (e) {
-		// This one doesnt ;)
+		if (e.toString().indexOf('is not a function') > 0) {
+			// This one doesnt ;)
+		} else {
+			print("Failed accessing extension examples: " + e);
+		}
 	}
 }
 
