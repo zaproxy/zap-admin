@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>42</id>
+        <id>43</id>
         <default>
-            <item>ZAP is Joining the Software Security Project (and leaving OWASP)</item>
-            <link>https://www.zaproxy.org/blog/2023-08-01-zap-is-joining-the-software-security-project/</link>
+            <item>What should the ZAP developers focus on?</item>
+            <link>https://www.zaproxy.org/blog/2023-08-29-what-should-we-focus-on/</link>
         </default>
     </news>
 </ZAP>
