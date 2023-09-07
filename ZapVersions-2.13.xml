@@ -718,20 +718,28 @@
         <name>Dev Add-on</name>
         <description>An add-on to help with development of ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>dev-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>dev-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Auth pages where the password field is not accessible until the username is filled in.&lt;/li&gt;
+&lt;li&gt;Auth page where the return key does not submit the form&lt;/li&gt;
+&lt;li&gt;Auth page which uses one request and one cookie&lt;/li&gt;
+&lt;li&gt;Auth page which uses multiple requests and multiple cookies&lt;/li&gt;
+&lt;li&gt;OpenAPI auth and unauth pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Added TestAuthDirectory abstract class to reduce duplicated code.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.2.0/dev-alpha-0.2.0.zap</url>
-        <hash>SHA-256:5766843a40411ece9ec7cecaa2c0d08562046023a66baaac4751ebf455107819</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.3.0/dev-alpha-0.3.0.zap</url>
+        <hash>SHA-256:9dc700c105437cb10362f8a88e080b59fc830747e28a864f8c8bad8e3a19db01</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dev-add-on/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-05-09</date>
-        <size>70614</size>
-        <not-before-version>2.12.0</not-before-version>
+        <date>2023-09-07</date>
+        <size>98137</size>
+        <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1627,27 +1635,26 @@
         <name>Python Scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>jython-beta-12.zap</file>
+        <version>13</version>
+        <file>jython-beta-13.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;encode-decode default and rot13 templates.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Replace usage of singletons with injected variables (e.g. &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;control&lt;/code&gt;) in scripts.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update links to zaproxy repo.&lt;/li&gt;
-&lt;li&gt;Rename reliability to confidence in active/passive templates.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Updated encode-decode script templates to conform to the latest method signatures.&lt;/li&gt;
+&lt;li&gt;Update the content-length header field after setting the request body in the authentication template.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v12/jython-beta-12.zap</url>
-        <hash>SHA-256:4519b862edf8f006c429c86b0152ade561b660ae6f74cfce684b272f4fe28ef1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v13/jython-beta-13.zap</url>
+        <hash>SHA-256:9ff83016415835e6271a5913057b995c6b784c0c19d328e772f0dc297452103a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/python-scripting/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>43312397</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2023-09-07</date>
+        <size>43313819</size>
+        <not-before-version>2.13.0</not-before-version>
     </addon_jython>
     <addon>kotlin</addon>
     <addon_kotlin>
@@ -2815,27 +2822,30 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.23.0</version>
-        <file>wappalyzer-release-21.23.0.zap</file>
+        <version>21.24.0</version>
+        <file>wappalyzer-release-21.24.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Updated with upstream Wappalyzer icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure icons render when expected.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.23.0/wappalyzer-release-21.23.0.zap</url>
-        <hash>SHA-256:9e7c98a73a978e93810af528f6da76ab47cde88eb699e8e8bec1b1c03e840e2e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.24.0/wappalyzer-release-21.24.0.zap</url>
+        <hash>SHA-256:e7eb95f310da0874ba2baa2c2a35f83af314f5dac49edb95cb38ae5e8fda541d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-08-14</date>
-        <size>18921759</size>
+        <date>2023-09-07</date>
+        <size>18942985</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.7.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
