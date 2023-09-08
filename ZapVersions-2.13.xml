@@ -41,21 +41,36 @@
         <name>Access Control Testing</name>
         <description>Adds a set of tools for testing access control in web applications.</description>
         <author>ZAP Dev Team</author>
-        <version>8</version>
-        <file>accessControl-alpha-8.zap</file>
+        <version>9</version>
+        <file>accessControl-alpha-9.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Add OWASP Top 10 tags to the alerts raised.&lt;/li&gt;
+&lt;li&gt;The add-on now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Depend on Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v8/accessControl-alpha-8.zap</url>
-        <hash>SHA-256:b46903f948e9cc57f9bd2be5402ad64858da6fb39359fa4b459d5e0836492d67</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v9/accessControl-alpha-9.zap</url>
+        <hash>SHA-256:a3a3f34f62a9f5061b7601d85c6b961deebe2f8deec4a6302d220aa5bf17fbd6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/access-control-testing/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-28</date>
-        <size>596436</size>
-        <not-before-version>2.12.0</not-before-version>
+        <date>2023-09-08</date>
+        <size>595517</size>
+        <not-before-version>2.13.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_accessControl>
     <addon>alertFilters</addon>
     <addon_alertFilters>
@@ -137,40 +152,31 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>56</version>
-        <file>ascanrules-release-56.zap</file>
+        <version>57</version>
+        <file>ascanrules-release-57.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Format String Error scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;li&gt;Corrected Hidden File Finder scan rule Blazor WASM config file path.&lt;/li&gt;
-&lt;li&gt;The following scan rules were added, having been promoted from Beta:
-&lt;ul&gt;
-&lt;li&gt;Log4Shell&lt;/li&gt;
-&lt;li&gt;Spring Actuator Information Leak&lt;/li&gt;
-&lt;li&gt;Spring4Shell&lt;/li&gt;
-&lt;li&gt;Server Side Template Injection&lt;/li&gt;
-&lt;li&gt;Server Side Template Injection (Blind)&lt;/li&gt;
-&lt;li&gt;XPath Injection&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;False positive where linear regression time-based tests returned true when there were not enough requests for a statistically meaningful measurement.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v56/ascanrules-release-56.zap</url>
-        <hash>SHA-256:9a2c15ae6abe19adcc97edf41e022595b0c2a20522182e8b50ed0f98d56168c4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v57/ascanrules-release-57.zap</url>
+        <hash>SHA-256:4607b061616e69e8445d8d7f0dc0dcea76da3d5fd759e0c0694512b9dcda841c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>3170050</size>
+        <date>2023-09-08</date>
+        <size>3263327</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -188,39 +194,28 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>43</version>
-        <file>ascanrulesAlpha-alpha-43.zap</file>
+        <version>44</version>
+        <file>ascanrulesAlpha-alpha-44.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Beta:
-&lt;ul&gt;
-&lt;li&gt;Server Side Request Forgery&lt;/li&gt;
-&lt;li&gt;Text4shell (CVE-2022-42889)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Remove the dependency on OAST add-on, no longer required.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v43/ascanrulesAlpha-alpha-43.zap</url>
-        <hash>SHA-256:7ecf1d58e8a4f3f72bfab8a7114ac40543dce7df4cab784cabf6ddf5cd5f04f2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v44/ascanrulesAlpha-alpha-44.zap</url>
+        <hash>SHA-256:e4a9eb4f7148f32ca0671740a432fc1a3c6f043e1928f9daadef2a87b67cd4f4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-20</date>
-        <size>427009</size>
+        <date>2023-09-08</date>
+        <size>389877</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
-                </addon>
-                <addon>
-                    <id>oast</id>
-                    <version>&gt;= 0.14.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -230,48 +225,35 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>47</version>
-        <file>ascanrulesBeta-beta-47.zap</file>
+        <version>48</version>
+        <file>ascanrulesBeta-beta-48.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Source Code Disclosure - File Inclusion now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;li&gt;The following scan rules were added, having been promoted from Alpha:
-&lt;ul&gt;
-&lt;li&gt;Server Side Request Forgery&lt;/li&gt;
-&lt;li&gt;Text4shell (CVE-2022-42889)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The HTTP Only Site scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Release:
-&lt;ul&gt;
-&lt;li&gt;Log4Shell&lt;/li&gt;
-&lt;li&gt;Spring Actuator Information Leak&lt;/li&gt;
-&lt;li&gt;Spring4Shell&lt;/li&gt;
-&lt;li&gt;Server Side Template Injection&lt;/li&gt;
-&lt;li&gt;Server Side Template Injection (Blind)&lt;/li&gt;
-&lt;li&gt;XPath Injection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The Source Code Disclosure - File Inclusion alerts now consistently leverage the description and solution from the associated vulnerability details.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v47/ascanrulesBeta-beta-47.zap</url>
-        <hash>SHA-256:886c6a5914429e58258bb20dbf5205076eeea98a812619e2287967761491e6e9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v48/ascanrulesBeta-beta-48.zap</url>
+        <hash>SHA-256:7e2c15a577234a3cff5bb9caea44f1899cc0b5d3733130c588c206dec4367069</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-20</date>
-        <size>1803302</size>
+        <date>2023-09-08</date>
+        <size>1733028</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>database</id>
@@ -847,30 +829,26 @@
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>Aabha Biyani, ZAP Dev Team</author>
-        <version>16</version>
-        <file>domxss-release-16.zap</file>
+        <version>17</version>
+        <file>domxss-release-17.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Respect global exclusions (Issue 7746).&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v16/domxss-release-16.zap</url>
-        <hash>SHA-256:d4c6438a6bf9937813c9f5669ef3cdd7d738e7e3a661343cf174cb13389415d2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v17/domxss-release-17.zap</url>
+        <hash>SHA-256:a556bf8d72bc889d2f0718326baceec1b41ff89f3b1a804e42a478db461e0382</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>271662</size>
+        <date>2023-09-08</date>
+        <size>271370</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -888,19 +866,23 @@
         <name>Encoder</name>
         <description>Adds encode/decode/hash dialog and support for scripted processors as well</description>
         <author>ZAP Dev Team</author>
-        <version>1.2.0</version>
-        <file>encoder-release-1.2.0.zap</file>
+        <version>1.3.0</version>
+        <file>encoder-release-1.3.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not rely on the default charset in Full URL and ASCII Hex encoders/decoders.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v1.2.0/encoder-release-1.2.0.zap</url>
-        <hash>SHA-256:cd51589604d139779f3eae5d92c8ee27aba8041122a87d9c41c28bb74354e611</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/encoder-v1.3.0/encoder-release-1.3.0.zap</url>
+        <hash>SHA-256:09f0d774e9363078a9321bc081360fb179c014f2fd0e4499ab96318a90281cbb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>468861</size>
+        <date>2023-09-08</date>
+        <size>469000</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_encoder>
     <addon>evalvillain</addon>
@@ -2052,35 +2034,37 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>50</version>
-        <file>pscanrules-release-50.zap</file>
+        <version>51</version>
+        <file>pscanrules-release-51.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;The following now include example alert functionality for documentation generation purposes (Issue 6119):
 &lt;ul&gt;
-&lt;li&gt;Re-examine Cache-control Directives Scan Rule&lt;/li&gt;
-&lt;li&gt;X-Backend-Server Scan Rule&lt;/li&gt;
-&lt;li&gt;X-ChromeLogger-Data Header Information Leak Scan Rule&lt;/li&gt;
+&lt;li&gt;Loosely Scoped Cookie scan rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The alerts of the Hash Disclosure scan rule no longer have the evidence duplicated in the Other Info field.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v50/pscanrules-release-50.zap</url>
-        <hash>SHA-256:2361017f4bd47c93b49905d90856eb63a458ea119bea005542e24f0219d7bb7d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v51/pscanrules-release-51.zap</url>
+        <hash>SHA-256:60f55d4eb43f0a4180ad30cea08f15ea775fe76d3d0ceeba46d43e8c77c27d0e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>1845961</size>
+        <date>2023-09-08</date>
+        <size>1854322</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2090,38 +2074,29 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Passive scanner rules (alpha)</name>
         <description>The alpha status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>40</version>
-        <file>pscanrulesAlpha-alpha-40.zap</file>
+        <version>41</version>
+        <file>pscanrulesAlpha-alpha-41.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fetch Metadata Request Headers scan rule (Issue 6955).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Beta:
-&lt;ul&gt;
-&lt;li&gt;Insufficient Site Isolation Against Spectre Vulnerability&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use HTTPS and resolve redirections in the alert references.&lt;/li&gt;
+&lt;li&gt;The alerts ASP.NET ViewState Disclosure and ASP.NET ViewState Integrity no longer have the evidence duplicated in the Other Info field.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v40/pscanrulesAlpha-alpha-40.zap</url>
-        <hash>SHA-256:9b9fa2240f0a5ae86774bdcb8dcbd954ef3d8059c93fd999692d1710a7effd92</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesAlpha-v41/pscanrulesAlpha-alpha-41.zap</url>
+        <hash>SHA-256:9954ac2e22cfb694de8e7b5b9cc664d04c8be5c7537e6b78f96cbdf643152e56</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-20</date>
-        <size>438690</size>
+        <date>2023-09-08</date>
+        <size>422582</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.10.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2131,29 +2106,20 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>34</version>
-        <file>pscanrulesBeta-beta-34.zap</file>
+        <version>35</version>
+        <file>pscanrulesBeta-beta-35.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were added, having been promoted from Alpha:
-&lt;ul&gt;
-&lt;li&gt;Insufficient Site Isolation Against Spectre Vulnerability&lt;/li&gt;
-&lt;li&gt;Source Code Disclosure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Use HTTPS and resolve redirections in the alert references.&lt;/li&gt;
+&lt;li&gt;The alerts of the Source Code Disclosure scan rule no longer have the evidence duplicated in the Other Info field.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v34/pscanrulesBeta-beta-34.zap</url>
-        <hash>SHA-256:c44f1bb579c7b6e8a6094d0e5e7eb91f8a7f3b5aa39200e0bd88fac0a80cadd5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v35/pscanrulesBeta-beta-35.zap</url>
+        <hash>SHA-256:a601066cc33aec17eb4552fb5d6bbee815e4bc65f7c2b36734b6748a010a57e1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-20</date>
-        <size>598151</size>
+        <date>2023-09-08</date>
+        <size>671228</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -2331,26 +2297,30 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Retest</name>
         <description>An add-on to retest for presence/absence of previously generated alerts.</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>retest-alpha-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>retest-alpha-0.7.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
+&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.6.0/retest-alpha-0.6.0.zap</url>
-        <hash>SHA-256:8f5b0118b6b1cec506f903af881668f04b9499d69397f3c062879b3106b9a8f8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retest-v0.7.0/retest-alpha-0.7.0.zap</url>
+        <hash>SHA-256:da6f5e62c32c68ba88b7815abd666163851d61be02aa9d24ce54be12c52eb3af</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>258362</size>
+        <date>2023-09-08</date>
+        <size>258633</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>automation</id>
-                    <version>&gt;=0.20.0</version>
+                    <version>&gt;=0.31.0</version>
+                </addon>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
