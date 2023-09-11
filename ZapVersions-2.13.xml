@@ -549,6 +549,37 @@
         <size>321705</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_callhome>
+    <addon>client</addon>
+    <addon_client>
+        <name>Client Side Integration</name>
+        <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>client-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.0.1/client-alpha-0.0.1.zap</url>
+        <hash>SHA-256:52257505b2020be4d668ec4dde7e5f075c4099c27ccb71992888c4c98c29ae0d</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2023-09-11</date>
+        <size>1065756</size>
+        <not-before-version>2.13.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.8.0</version>
+                </addon>
+                <addon>
+                    <id>selenium</id>
+                    <version>15.*</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_client>
     <addon>codedx</addon>
     <addon_codedx>
         <name>Code Dx Extension</name>
@@ -2427,19 +2458,22 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>scripts-release-39.zap</file>
+        <version>40</version>
+        <file>scripts-release-40.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Allow to select a script node without focusing on it.&lt;/li&gt;
+&lt;li&gt;Allow to display script without focusing on it.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Automation Framework add-on (Related to Issue 7961).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v39/scripts-release-39.zap</url>
-        <hash>SHA-256:1ab7bb4a2018cf7997325ef3a409328defd290a70058007f2ba97d2c4ba94c61</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v40/scripts-release-40.zap</url>
+        <hash>SHA-256:4a5763ef869b03e263d0300d590f52e97d412914565a7f16d16eb0541f1933af</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>817283</size>
+        <date>2023-09-11</date>
+        <size>811882</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
@@ -2907,31 +2941,27 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>zest-beta-39.zap</file>
+        <version>40</version>
+        <file>zest-beta-40.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dialogs for scroll, scrollTo, window resize and mouse over.&lt;/li&gt;
+&lt;li&gt;Client support to record Zest scripts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Update Zest library to 0.18.0:
-&lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.&lt;/li&gt;
-&lt;li&gt;jBrowserDriver (JBD), Opera, and PhantomJS are no longer supported (no longer being actively maintained).&lt;/li&gt;
-&lt;li&gt;Add client statements for Scroll, MouseOver, and Window Resize events.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Resolved the browser window focus loss problem during the recording of Zest scripts.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v39/zest-beta-39.zap</url>
-        <hash>SHA-256:ae052c181c119dc0da30c460bf83c70a51ccd4e09c8b8d715480ae51efe33925</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v40/zest-beta-40.zap</url>
+        <hash>SHA-256:d4e097879f5e7ecf1ca8601bda20c64703b75bf5a28d2e0ae404ba415bfe036d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>2951288</size>
+        <date>2023-09-11</date>
+        <size>2952762</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
