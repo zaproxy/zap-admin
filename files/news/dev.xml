@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>43</id>
+        <id>44</id>
         <default>
-            <item>What should the ZAP developers focus on?</item>
-            <link>https://www.zaproxy.org/blog/2023-08-29-what-should-we-focus-on/</link>
+            <item>We've just launched ZAP Chat - a new video series</item>
+            <link>https://www.zaproxy.org/blog/2023-09-15-zap-chat-video-series/</link>
         </default>
     </news>
 </ZAP>
