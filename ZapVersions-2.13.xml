@@ -554,18 +554,20 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>client-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>client-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated the Firefox extension to v0.0.6.&lt;/li&gt;
+&lt;li&gt;Updated the Chrome extension to v0.0.5.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.0.1/client-alpha-0.0.1.zap</url>
-        <hash>SHA-256:52257505b2020be4d668ec4dde7e5f075c4099c27ccb71992888c4c98c29ae0d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.1.0/client-alpha-0.1.0.zap</url>
+        <hash>SHA-256:4b02aaacc46f61cf032bca6b040e5a16c5adf40fb73314baa4595c86bffa3b2e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-11</date>
-        <size>1065756</size>
+        <date>2023-09-19</date>
+        <size>1296909</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -2899,19 +2901,19 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>60</version>
-        <file>webdriverwindows-release-60.zap</file>
+        <version>61</version>
+        <file>webdriverwindows-release-61.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 117.0.5938.88.&lt;/li&gt;
+&lt;li&gt;ChromeDriver for x64 arch.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v60/webdriverwindows-release-60.zap</url>
-        <hash>SHA-256:0faef7ce4eede3a7934bac265929c4a3fc453391485f56cdb78bd59b30db5b3f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v61/webdriverwindows-release-61.zap</url>
+        <hash>SHA-256:88695f16bc63935c4448a95a899f96918affb44fd9db9878eb2a7abd7383dbae</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-18</date>
-        <size>10749952</size>
+        <date>2023-09-19</date>
+        <size>17987143</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
