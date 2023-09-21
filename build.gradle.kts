@@ -325,6 +325,7 @@ val updateWebsite by tasks.registering(CreatePullRequest::class) {
 
     user.set(ghUser)
     repo.set(websiteRepo)
+    baseBranchName.set("main")
     branchName.set("update-data")
 
     commitSummary.set("Update data")
