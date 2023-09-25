@@ -2038,6 +2038,33 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
             </addons>
         </dependencies>
     </addon_portscan>
+    <addon>postman</addon>
+    <addon_postman>
+        <name>Postman Support</name>
+        <description>Imports and spiders Postman collections.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>postman-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.0.1/postman-alpha-0.0.1.zap</url>
+        <hash>SHA-256:8ee4cf0edf6362a291c76ad7ff562eb7a48a941b06378f46969be7126c4bfada</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/postman-support/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2023-09-25</date>
+        <size>45292</size>
+        <not-before-version>2.13.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.16.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_postman>
     <addon>pscanrules</addon>
     <addon_pscanrules>
         <name>Passive scanner rules</name>
