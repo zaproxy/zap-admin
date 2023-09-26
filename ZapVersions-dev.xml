@@ -2171,23 +2171,20 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>quickstart-release-39.zap</file>
+        <version>40</version>
+        <file>quickstart-release-40.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;ZAPit recon scan.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update names of the default cert and report.&lt;/li&gt;
+&lt;li&gt;ZAPit help links.&lt;/li&gt;
+&lt;li&gt;Scan could incorrectly select leaf node for active scanning.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v39/quickstart-release-39.zap</url>
-        <hash>SHA-256:d7f5e35236e572fc690f9a026a1635828a805da4bb69a09b08c8215c6c2d0f9f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v40/quickstart-release-40.zap</url>
+        <hash>SHA-256:e51ed6f0d543ad2bc869e163d81f211fd8cf1bac5e5e84ebc78fe82edf20ac55</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-22</date>
-        <size>639026</size>
+        <date>2023-09-26</date>
+        <size>718477</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
