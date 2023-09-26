@@ -529,20 +529,21 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>client-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>client-alpha-0.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated the Firefox extension to v0.0.6.&lt;/li&gt;
-&lt;li&gt;Updated the Chrome extension to v0.0.5.&lt;/li&gt;
+&lt;li&gt;Updated the Chrome extension to v0.0.6.&lt;/li&gt;
+&lt;li&gt;Disable client events automatically only for Zest recording.&lt;/li&gt;
+&lt;li&gt;Create Firefox profile to enable the ZAP extension for all sites.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.1.0/client-alpha-0.1.0.zap</url>
-        <hash>SHA-256:4b02aaacc46f61cf032bca6b040e5a16c5adf40fb73314baa4595c86bffa3b2e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.2.0/client-alpha-0.2.0.zap</url>
+        <hash>SHA-256:857c63d7daa4eeda6fb22cb8a9ed2850f37c5e382b0663f321e1153a0a9934d6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-19</date>
-        <size>1296909</size>
+        <date>2023-09-26</date>
+        <size>1299179</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -552,7 +553,7 @@
                 </addon>
                 <addon>
                     <id>selenium</id>
-                    <version>15.*</version>
+                    <version>&gt;=15.14.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1722,31 +1723,29 @@
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.10.0</version>
-        <file>network-beta-0.10.0.zap</file>
+        <version>0.11.0</version>
+        <file>network-beta-0.11.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;HTTP/HTTPS rate limiting capability.&lt;/li&gt;
-&lt;li&gt;Allow to add a CRL Distribution Point in generated server certificates.&lt;/li&gt;
-&lt;li&gt;On weekly releases and versions after 2.12 allow to manage global exclusions, supersedes core functionality.&lt;/li&gt;
+&lt;li&gt;Allow to create custom servers with the ZAP API.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Update dependencies.&lt;/li&gt;
-&lt;li&gt;Update default user-agents.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update names of generated root CA certificate and issued server certificates.&lt;/li&gt;
+&lt;li&gt;Help improvements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Keep the original stack trace of timeout and unknown host exceptions.&lt;/li&gt;
+&lt;li&gt;Correct declaration of mandatory parameters of the API endpoint &lt;code&gt;setRateLimitRuleEnabled&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.10.0/network-beta-0.10.0.zap</url>
-        <hash>SHA-256:2a5cae9e75a9bce9efdfcb41ca2888543b47136f3c34e09d7ae79fa42f1b0ac6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.11.0/network-beta-0.11.0.zap</url>
+        <hash>SHA-256:ac95093e271e4e6618963c6762bfdb081d0cfa02b54fb1e64520b09bf7d923ba</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>24608590</size>
+        <date>2023-09-26</date>
+        <size>24779884</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -2487,24 +2486,31 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.13.0</version>
-        <file>selenium-release-15.13.0.zap</file>
+        <version>15.14.0</version>
+        <file>selenium-release-15.14.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Update Selenium to version 4.&lt;/li&gt;
+&lt;li&gt;Add statistics for browser launch successes and failures that include the requester, e.g.:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stats.selenium.launch.&amp;lt;requester-id&amp;gt;.&amp;lt;browser-id&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stats.selenium.launch.&amp;lt;requester-id&amp;gt;.&amp;lt;browser-id&amp;gt;.failure&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;Allow to configure additional (CLI) arguments for Chrome and Firefox.&lt;/li&gt;
+&lt;li&gt;Support for selecting a default Firefox profile.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Remove support for Opera and PhantomJS (no longer being actively maintained).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.12.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.13.0/selenium-release-15.13.0.zap</url>
-        <hash>SHA-256:b92e8bdb2c46e8e7dd6a076684e78f475a68afc734e4221aba53aa770ee55b56</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.14.0/selenium-release-15.14.0.zap</url>
+        <hash>SHA-256:844e5909a3ed5510febb947a525f9b006500a9018491b558082d9d7ceab3e388</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>31325264</size>
+        <date>2023-09-26</date>
+        <size>34139169</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -2625,35 +2631,31 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.15.0</version>
-        <file>spiderAjax-release-23.15.0.zap</file>
+        <version>23.16.0</version>
+        <file>spiderAjax-release-23.16.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for authentication handlers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
-&lt;li&gt;Update Crawljax to 3.7.1, to use the newer version of Selenium.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Network add-on and allow to access the ZAP API while spidering.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.15.0/spiderAjax-release-23.15.0.zap</url>
-        <hash>SHA-256:8c699bde85425cc0d5e47e7d535bcf7013cad9b20a6ad9e2e27cc2c7a43c9b28</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.16.0/spiderAjax-release-23.16.0.zap</url>
+        <hash>SHA-256:856ba83c0e216be114e1dfa51802aa94309af3890f0da20a09004840b60c9515</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>7537885</size>
+        <date>2023-09-26</date>
+        <size>7534502</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.13.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
-                    <version>&gt;=0.1.0</version>
+                    <version>&gt;=0.11.0</version>
                 </addon>
                 <addon>
                     <id>selenium</id>
@@ -2947,30 +2949,31 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>40</version>
-        <file>zest-beta-40.zap</file>
+        <version>41</version>
+        <file>zest-beta-41.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client support to record Zest scripts.&lt;/li&gt;
+&lt;li&gt;Allow rendering Zest scripts in YAML. The format (JSON/YAML) may be changed via the Zest Options screen.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Depend on Common Library add-on.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Resolved the browser window focus loss problem during the recording of Zest scripts.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v40/zest-beta-40.zap</url>
-        <hash>SHA-256:d4e097879f5e7ecf1ca8601bda20c64703b75bf5a28d2e0ae404ba415bfe036d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v41/zest-beta-41.zap</url>
+        <hash>SHA-256:1484c14efa69fea0c3bd07ff1813c238b8abd20306a193a4ac8a4aeff36f5856</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-11</date>
-        <size>2952762</size>
+        <date>2023-09-26</date>
+        <size>5554220</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.16.0</version>
+                </addon>
                 <addon>
                     <id>network</id>
                     <version>&gt;=0.2.0</version>
