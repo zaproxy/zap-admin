@@ -898,21 +898,21 @@
         <name>Eval Villain</name>
         <description>Adds the Eval Villain extension to Firefox when launched from ZAP.</description>
         <author>Dennis Goodlett and the ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>evalvillain-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>evalvillain-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with new version of Eval Villain.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.2.0/evalvillain-alpha-0.2.0.zap</url>
-        <hash>SHA-256:7eea4ad7c86f17b5daff5d1c59ed63c278c0833e6358503799ee9e19b7f0645e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.3.0/evalvillain-alpha-0.3.0.zap</url>
+        <hash>SHA-256:ae7013ded7bd1e6b25ba8822c8fb5609ebef8818934bb8ac20b92067af76acb7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/eval-villain/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-04-04</date>
-        <size>4943217</size>
-        <not-before-version>2.12.0</not-before-version>
+        <date>2023-09-26</date>
+        <size>4944088</size>
+        <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
