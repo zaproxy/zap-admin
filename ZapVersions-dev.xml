@@ -1723,29 +1723,19 @@
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>network-beta-0.11.0.zap</file>
+        <version>0.11.1</version>
+        <file>network-beta-0.11.1.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to create custom servers with the ZAP API.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update names of generated root CA certificate and issued server certificates.&lt;/li&gt;
-&lt;li&gt;Help improvements.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct declaration of mandatory parameters of the API endpoint &lt;code&gt;setRateLimitRuleEnabled&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Ensure servers are stopped when initialising after installation in &lt;code&gt;cmd&lt;/code&gt; and &lt;code&gt;daemon&lt;/code&gt; modes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.11.0/network-beta-0.11.0.zap</url>
-        <hash>SHA-256:ac95093e271e4e6618963c6762bfdb081d0cfa02b54fb1e64520b09bf7d923ba</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.11.1/network-beta-0.11.1.zap</url>
+        <hash>SHA-256:643a28ca9168fc524041245d43770a496ef3ad2c573a972f96bd466ddebae10a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-26</date>
-        <size>24779884</size>
+        <date>2023-09-27</date>
+        <size>24779808</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
