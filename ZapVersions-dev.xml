@@ -335,35 +335,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.31.0</version>
-        <file>automation-beta-0.31.0.zap</file>
+        <version>0.32.0</version>
+        <file>automation-beta-0.32.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add support for max alerts per rule in the Active Scan job (Issue 7784).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on (Related to Issue 7961).&lt;/li&gt;
-&lt;li&gt;Clarify authentication docs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The SnakeYAML Engine dependency was removed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Address error logged when using the Active Scan job.&lt;/li&gt;
-&lt;li&gt;Do not fail to load plans without jobs.&lt;/li&gt;
-&lt;li&gt;Support converting Lists to arrays when updating objects.&lt;/li&gt;
+&lt;li&gt;Correct output of array values set to the jobs.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.31.0/automation-beta-0.31.0.zap</url>
-        <hash>SHA-256:311431a3eaffcb619587f5122961716bb57dcb810d5400c49c0e77864eee8e65</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.32.0/automation-beta-0.32.0.zap</url>
+        <hash>SHA-256:d103308ab54db7dad3ebc749de34e10ea16630fe63a590f35fa32afa0e7952d0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-07</date>
-        <size>1742049</size>
+        <date>2023-10-04</date>
+        <size>1741300</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -992,21 +976,23 @@
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.10.0</version>
-        <file>fuzz-beta-13.10.0.zap</file>
+        <version>13.11.0</version>
+        <file>fuzz-beta-13.11.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Default number of threads to 2 * processor count.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Show actual contents of the message after edits (Issue 7947).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.10.0/fuzz-beta-13.10.0.zap</url>
-        <hash>SHA-256:23b1beef61a3ef4e05f53069b6ee8185972928bc83427d0e12dd4d67067c8d6d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.11.0/fuzz-beta-13.11.0.zap</url>
+        <hash>SHA-256:28f6cc9249fa72888e50fdcd8d029daaece9224277f4f2ad8c868baac3ec516b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>2003000</size>
+        <date>2023-10-04</date>
+        <size>1999872</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -2032,18 +2018,19 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Postman Support</name>
         <description>Imports and spiders Postman collections.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>postman-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>postman-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support collection JSON variables.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.0.1/postman-alpha-0.0.1.zap</url>
-        <hash>SHA-256:8ee4cf0edf6362a291c76ad7ff562eb7a48a941b06378f46969be7126c4bfada</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.1.0/postman-alpha-0.1.0.zap</url>
+        <hash>SHA-256:c8196ff878a86d70026cf77a177fafc0976f903db9a570369220bd48e70dac25</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/postman-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-25</date>
-        <size>45292</size>
+        <date>2023-10-04</date>
+        <size>235055</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -2160,24 +2147,20 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>41</version>
-        <file>quickstart-release-41.zap</file>
+        <version>42</version>
+        <file>quickstart-release-42.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;ZAPit: report summary of all requests and responses made.&lt;/li&gt;
-&lt;li&gt;ZAPit: report technology version if available.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;ZAPit: Support cookies in redirects.&lt;/li&gt;
+&lt;li&gt;ZAPit: carry on even if non success code returned.&lt;/li&gt;
+&lt;li&gt;ZAPit: scan HTTP and HTTPS if protocol not specified.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v41/quickstart-release-41.zap</url>
-        <hash>SHA-256:5e38ad2e706abae175e7417a64ae8388d3802e769a3b6632ac23e4b48801225b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v42/quickstart-release-42.zap</url>
+        <hash>SHA-256:a6acd0154989b125332f95da4160d71ff52aa965f161a59b9ece05f2c9c3527f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-28</date>
-        <size>722850</size>
+        <date>2023-10-04</date>
+        <size>729481</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
@@ -2269,35 +2252,30 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.24.0</version>
-        <file>reports-release-0.24.0.zap</file>
+        <version>0.25.0</version>
+        <file>reports-release-0.25.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The following reports now include &amp;quot;Other Info&amp;quot; for alerts:
-&lt;ul&gt;
-&lt;li&gt;Traditional HTML Report&lt;/li&gt;
-&lt;li&gt;Traditional HTML Report with requests and responses&lt;/li&gt;
-&lt;li&gt;Traditional Markdown Report&lt;/li&gt;
-&lt;li&gt;Traditional PDF Report&lt;/li&gt;
+&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
+&lt;li&gt;Update JavaDoc links to always link to latest version of ZAP.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Depend on Common Library add-on to reuse libraries (Issue 7961).&lt;/li&gt;
-&lt;li&gt;Update program name in reports.&lt;/li&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix error when generating the High Level Report Sample with an alert that has an empty description (Issue 8071).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.24.0/reports-release-0.24.0.zap</url>
-        <hash>SHA-256:ed3890f3629d22f5e187417c041796fdf534dad9ef9f162db00e8112290f826e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.25.0/reports-release-0.25.0.zap</url>
+        <hash>SHA-256:944e0cd682cb4cdd9017c1cafee44b59b42c03c26dc65ce19de39046bd6b9921</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-08-17</date>
-        <size>14056785</size>
+        <date>2023-10-04</date>
+        <size>14063781</size>
         <not-before-version>2.13.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.16.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2457,22 +2435,24 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>40</version>
-        <file>scripts-release-40.zap</file>
+        <version>41</version>
+        <file>scripts-release-41.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to select a script node without focusing on it.&lt;/li&gt;
-&lt;li&gt;Allow to display script without focusing on it.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Automation Framework add-on (Related to Issue 7961).&lt;/li&gt;
+&lt;li&gt;Allow selecting a default behaviour when a script in the console changes on disk (Issues 5463, 7582). The allowed
+options are &amp;quot;Ask Each Time&amp;quot;, &amp;quot;Keep Script&amp;quot;, and &amp;quot;Replace Script&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update extender template scripts to also work with Graal.js engine.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v40/scripts-release-40.zap</url>
-        <hash>SHA-256:4a5763ef869b03e263d0300d590f52e97d412914565a7f16d16eb0541f1933af</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v41/scripts-release-41.zap</url>
+        <hash>SHA-256:ec84afb53897092cd055bb9e9f58a0df706fdbdad9c15e0b3091d497bf3e0402</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-11</date>
-        <size>811882</size>
+        <date>2023-10-04</date>
+        <size>819519</size>
         <not-before-version>2.13.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
