@@ -1704,6 +1704,32 @@
         <size>2459871</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_levoai>
+    <addon>maplocal</addon>
+    <addon_maplocal>
+        <name>Map Local</name>
+        <description>Allows mapping of responses to content of a chosen local file.</description>
+        <author>Keindel (Andrey Maksimov)</author>
+        <version>0.0.1</version>
+        <file>maplocal-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version of Map Local extension. Provides feature to map Response Body to a content of chosen local file.
+&lt;ul&gt;
+&lt;li&gt;Has status panel in UI with 3 columns: Enabled / URL / Local Path.&lt;/li&gt;
+&lt;li&gt;Has add / edit dialog with browse button to choose file.&lt;/li&gt;
+&lt;li&gt;Has file choice verification check.&lt;/li&gt;
+&lt;li&gt;Popup menus in sites and history, edit / remove - popups in status panel.&lt;/li&gt;
+&lt;li&gt;Persists to session DB.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/maplocal-alpha-0.0.1.zap</url>
+        <hash>SHA-256:d3ecd2a6e23b06ffed8646ee2314d921a1c1925c3ab08070a624a090734ebdca</hash>
+        <repo>https://github.com/Keindel/owasp-zap-maplocal-addon</repo>
+        <date>2023-10-05</date>
+        <size>49040</size>
+        <not-before-version>2.12.0</not-before-version>
+    </addon_maplocal>
     <addon>neonmarker</addon>
     <addon_neonmarker>
         <name>Neonmarker</name>
