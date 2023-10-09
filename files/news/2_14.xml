@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ZAP>
+    <news>
+        <id>44</id>
+        <default>
+            <item>We've just launched ZAP Chat - a new video series</item>
+            <link>https://www.zaproxy.org/blog/2023-09-15-zap-chat-video-series/</link>
+        </default>
+    </news>
+</ZAP>
