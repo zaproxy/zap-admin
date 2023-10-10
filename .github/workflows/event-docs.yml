@@ -36,4 +36,4 @@ jobs:
         git add site/data/events.yaml
         git commit -m "Update events page" --signoff
         git push --set-upstream origin update-events --force
-        hub pull-request -b zaproxy:main --no-edit
+        gh pr create -R zaproxy/zaproxy-website -f
