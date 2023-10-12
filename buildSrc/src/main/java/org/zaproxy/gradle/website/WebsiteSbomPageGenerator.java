@@ -55,21 +55,11 @@ public class WebsiteSbomPageGenerator {
                         .sorted(Comparator.comparing(jsonNode -> jsonNode.get("name").asText()))
                         .collect(Collectors.toList());
         for (JsonNode component : sortedComponentsList) {
-            var licenses = (ArrayNode) component.get("licenses");
-            String licensesStr =
-                    StreamSupport.stream(licenses.spliterator(), false)
-                            .map(l -> l.get("license"))
-                            .map(
-                                    l ->
-                                            l.has("id")
-                                                    ? l.get("id").asText()
-                                                    : l.has("name") ? l.get("name").asText() : "")
-                            .collect(Collectors.joining(", "));
             resultComponents.add(
                     new PageFrontMatter.SbomDataComponent(
                             component.get("name").asText(),
                             component.get("version").asText(),
-                            licensesStr));
+                            createLicensesString(component)));
         }
         frontMatter.setSbomData(
                 new PageFrontMatter.SbomData(
@@ -78,5 +68,36 @@ public class WebsiteSbomPageGenerator {
         var writer = new StringWriter();
         frontMatter.writeTo(NOTICE, writer);
         Files.write(outputFile, writer.toString().getBytes(StandardCharsets.UTF_8));
+    }
+
+    private static String createLicensesString(JsonNode component) {
+        var licenses = (ArrayNode) component.get("licenses");
+        if (licenses == null) {
+            return "";
+        }
+
+        return StreamSupport.stream(licenses.spliterator(), false)
+                .map(WebsiteSbomPageGenerator::licenseObjectToString)
+                .filter(e -> e != null)
+                .collect(Collectors.joining(", "));
+    }
+
+    private static String licenseObjectToString(JsonNode l) {
+        if (!l.has("license")) {
+            return get(l, "expression");
+        }
+        var license = l.get("license");
+        var id = get(license, "id");
+        if (id != null) {
+            return id;
+        }
+        return get(license, "name");
+    }
+
+    private static String get(JsonNode node, String property) {
+        if (node.has(property)) {
+            return node.get(property).asText();
+        }
+        return null;
     }
 }
