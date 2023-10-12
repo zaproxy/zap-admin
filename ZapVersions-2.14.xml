@@ -923,25 +923,26 @@
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.6.0</version>
-        <file>exim-beta-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>exim-beta-0.7.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.6.0/exim-beta-0.6.0.zap</url>
-        <hash>SHA-256:55ca235b84d2fadf773c796612dd1011330d78282fbbe48612c1c438ced202e0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.7.0/exim-beta-0.7.0.zap</url>
+        <hash>SHA-256:db07f46ab31796099caa2373424890a1525e42e6fd858e2193c56141489cbd9f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>478261</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>478582</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.8.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -967,44 +968,42 @@
         <name>Value Generator</name>
         <description>This Value Generator Add-on allows a user to define field names and values to be used when submitting values to an app. Fields can be added, modified, enabled/disabled, and deleted.</description>
         <author>ZAP Dev Team</author>
-        <version>6.4.0</version>
-        <file>formhandler-beta-6.4.0.zap</file>
+        <version>6.5.0</version>
+        <file>formhandler-beta-6.5.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Tweak help for proper rendering in the website.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.4.0/formhandler-beta-6.4.0.zap</url>
-        <hash>SHA-256:71baa94e5a2729d3dced75114c685e41e03c47bd7315c336181b4fcf9d97f543</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/formhandler-v6.5.0/formhandler-beta-6.5.0.zap</url>
+        <hash>SHA-256:29550071eca41043383b06a1e85dde00fd1a31ffaba6406c320fce22f4667943</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/value-generator/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>2126133</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>2126661</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_formhandler>
     <addon>fuzz</addon>
     <addon_fuzz>
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.11.0</version>
-        <file>fuzz-beta-13.11.0.zap</file>
+        <version>13.12.0</version>
+        <file>fuzz-beta-13.12.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Show actual contents of the message after edits (Issue 7947).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.11.0/fuzz-beta-13.11.0.zap</url>
-        <hash>SHA-256:28f6cc9249fa72888e50fdcd8d029daaece9224277f4f2ad8c868baac3ec516b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.12.0/fuzz-beta-13.12.0.zap</url>
+        <hash>SHA-256:6304093e3112215840b64917b7f2f988c46e3e322f112f4b310eda4caefbe882</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-04</date>
-        <size>1999872</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>2030800</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1060,83 +1059,67 @@
         <name>Getting Started with ZAP Guide</name>
         <description>A short Getting Started with ZAP Guide</description>
         <author>ZAP Dev Team</author>
-        <version>15</version>
-        <file>gettingStarted-release-15.zap</file>
+        <version>16</version>
+        <file>gettingStarted-release-16.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Update OWASP description in Getting Started Guide.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix typo in Getting Started Guide.&lt;/li&gt;
+&lt;li&gt;Update Getting Started Guide.&lt;/li&gt;
+&lt;li&gt;Updated for 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/gettingStarted-v15/gettingStarted-release-15.zap</url>
-        <hash>SHA-256:baf54589cfce5d5b86ab44f3eeddf16a2a0fae6d6c3184a194950abf540307bf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/gettingStarted-v16/gettingStarted-release-16.zap</url>
+        <hash>SHA-256:46bb4914a35a04be3de8ed19b38b851c449c182ede9f546027f97b4a299805b8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/getting-started-guide/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>789404</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>784111</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_gettingStarted>
     <addon>graaljs</addon>
     <addon_graaljs>
         <name>GraalVM JavaScript</name>
         <description>Provides the GraalVM JavaScript engine for ZAP scripting.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>graaljs-alpha-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>graaljs-alpha-0.5.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info URL.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Replace usage of singletons with injected variables (e.g. &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;control&lt;/code&gt;) in scripts.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Updated encode-decode script templates to conform to the latest method signatures.&lt;/li&gt;
-&lt;li&gt;Update the content-length header field after setting the request body in the authentication templates.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Update Graal JavaScript engine.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.4.0/graaljs-alpha-0.4.0.zap</url>
-        <hash>SHA-256:2d6df072488cc85cafdf0e6dbe503e981ca3086ee25e63eb14af3c3a8e050084</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.5.0/graaljs-alpha-0.5.0.zap</url>
+        <hash>SHA-256:86794300311549bed82e8dbe91e0d7376cbfb9d1842b09997a24654013087fd2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>20441382</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>24535986</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_graaljs>
     <addon>graphql</addon>
     <addon_graphql>
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.19.0</version>
-        <file>graphql-alpha-0.19.0.zap</file>
+        <version>0.20.0</version>
+        <file>graphql-alpha-0.20.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The add-on now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;Fingerprinting check for the Absinthe GraphQL engine.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
-&lt;li&gt;Use Common Library add-on to obtain the Value Generator (Issue 8016).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.19.0/graphql-alpha-0.19.0.zap</url>
-        <hash>SHA-256:a697070d6edaaea3c3f257697d7262b5b7609d5a02888f59e3f9003854c303f9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.20.0/graphql-alpha-0.20.0.zap</url>
+        <hash>SHA-256:c42b14a9f2ff34999b9513d1fbf2bb92c4f041e551a439ee57d29b45af59ed72</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-07</date>
-        <size>5370866</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>5385176</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1519,21 +1502,21 @@
         <name>Invoke Applications</name>
         <description>Invoke external applications passing context related information such as URLs and parameters</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>invoke-beta-13.zap</file>
+        <version>14</version>
+        <file>invoke-beta-14.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/invoke-v13/invoke-beta-13.zap</url>
-        <hash>SHA-256:76fabf09a9bbd6175e283849e04be7b88b122a0a0023c67c7dc01c6a464a3d21</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/invoke-v14/invoke-beta-14.zap</url>
+        <hash>SHA-256:62819ea13c18db031d01d1a74b9111f9a832fe14e8510f67232c38dab35ccaaf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/invoke-applications/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>323777</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>322621</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_invoke>
     <addon>jruby</addon>
     <addon_jruby>
@@ -1753,41 +1736,51 @@
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.2</version>
-        <file>network-beta-0.11.2.zap</file>
+        <version>0.12.0</version>
+        <file>network-beta-0.12.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Ensure the main proxy with custom port (&lt;code&gt;-port&lt;/code&gt;) is stopped when initialising after installation in &lt;code&gt;cmd&lt;/code&gt; and &lt;code&gt;daemon&lt;/code&gt; modes.&lt;/li&gt;
+&lt;li&gt;Allow to completely disable host header normalization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Update default user-agents.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not initialize the view when failed to start the main proxy in &lt;code&gt;cmd&lt;/code&gt; and &lt;code&gt;daemon&lt;/code&gt; modes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.11.2/network-beta-0.11.2.zap</url>
-        <hash>SHA-256:f43ca365fb23b330fa48c7960e90404aed99c7613e2eb5b9597b52c416217bc6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.12.0/network-beta-0.12.0.zap</url>
+        <hash>SHA-256:426553f8f25666bfbf7a52ffd7c09f4ca4d687eac89f90f137b51d07437d249c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-27</date>
-        <size>24779843</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>24814384</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
     <addon_oast>
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.16.0</version>
-        <file>oast-beta-0.16.0.zap</file>
+        <version>0.17.0</version>
+        <file>oast-beta-0.17.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Replace usage of singletons with injected variables (e.g. &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;control&lt;/code&gt;) in scripts.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.16.0/oast-beta-0.16.0.zap</url>
-        <hash>SHA-256:3a5b01896924ef933944cc6049e283d8c1b4c57ca7b3d84270fcaee5b669e4b2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.17.0/oast-beta-0.17.0.zap</url>
+        <hash>SHA-256:b05341c052722baccef2a055e6fe9f64e6818cbfda00bb9c50fa260e51a3d96d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>812399</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>813582</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1806,48 +1799,40 @@
         <name>Online menus</name>
         <description>ZAP Online menu items</description>
         <author>ZAP Dev Team</author>
-        <version>11</version>
-        <file>onlineMenu-release-11.zap</file>
+        <version>12</version>
+        <file>onlineMenu-release-12.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/onlineMenu-v11/onlineMenu-release-11.zap</url>
-        <hash>SHA-256:bdad8dc5dce74ac3c02feb759560ee26b673d78d9d25580245ca7b8b3b0226c0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/onlineMenu-v12/onlineMenu-release-12.zap</url>
+        <hash>SHA-256:a966a81a4fd57660e9c703d16a7472d0cb1b816941cc8d84cf5e58597afa24c6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/online-menu/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>209046</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>208613</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_onlineMenu>
     <addon>openapi</addon>
     <addon_openapi>
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>36</version>
-        <file>openapi-beta-36.zap</file>
+        <version>37</version>
+        <file>openapi-beta-37.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;The &amp;quot;Import an OpenAPI definition from the local file system&amp;quot; and &amp;quot;Import an OpenAPI definition from a URL&amp;quot; menu items
-were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
-&lt;li&gt;Use Common Library add-on to obtain the Value Generator (Issue 8016).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Importing empty or invalid OpenAPI definitions failed silently in some cases (Issue 7949).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v36/openapi-beta-36.zap</url>
-        <hash>SHA-256:79c06cada581b3d60c7fbabc9f9cec6c6cac34c0b53bf9051b87b10d50b40ead</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v37/openapi-beta-37.zap</url>
+        <hash>SHA-256:e37fa68d68986405d926a965bc2c599874a6f7532006cec7de8d81c850644524</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-07</date>
-        <size>13133444</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>13361126</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2090,32 +2075,26 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>pscanrules-release-51.zap</file>
+        <version>52</version>
+        <file>pscanrules-release-52.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following now include example alert functionality for documentation generation purposes (Issue 6119):
-&lt;ul&gt;
-&lt;li&gt;Loosely Scoped Cookie scan rule.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The CSRF Countermeasures scan rule now skips responses that are not HTML (Issue 7890).&lt;/li&gt;
+&lt;li&gt;A potential NullPointerException when a CSP declared via META tag was invalid.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The alerts of the Hash Disclosure scan rule no longer have the evidence duplicated in the Other Info field.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;CSP scan rule: Add deprecation warning for inclusion of prefetch-src (Issue 8077).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v51/pscanrules-release-51.zap</url>
-        <hash>SHA-256:60f55d4eb43f0a4180ad30cea08f15ea775fe76d3d0ceeba46d43e8c77c27d0e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v52/pscanrules-release-52.zap</url>
+        <hash>SHA-256:d12a4e33cb1948f54e7f50e7ee9886c7f273f71770ab177483f7c32a1d8f87ed</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-08</date>
-        <size>1854322</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>1861549</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2191,21 +2170,20 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>42</version>
-        <file>quickstart-release-42.zap</file>
+        <version>43</version>
+        <file>quickstart-release-43.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;ZAPit: carry on even if non success code returned.&lt;/li&gt;
-&lt;li&gt;ZAPit: scan HTTP and HTTPS if protocol not specified.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v42/quickstart-release-42.zap</url>
-        <hash>SHA-256:a6acd0154989b125332f95da4160d71ff52aa965f161a59b9ece05f2c9c3527f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v43/quickstart-release-43.zap</url>
+        <hash>SHA-256:335df7c4e3493132f712229efd2cef9f525b5651315f65d57fd1acf377d60db6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-04</date>
-        <size>729481</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>732069</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2271,50 +2249,40 @@ were merged into one, &amp;quot;Import an OpenAPI Definition&amp;quot;.&lt;/li&g
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>replacer-release-14.zap</file>
+        <version>15</version>
+        <file>replacer-release-15.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for the Automation Framework (Issue 7686).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Document that Token Processing applies just to string match types and disable the field in
-the dialogue when other match types are selected.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/replacer-v14/replacer-release-14.zap</url>
-        <hash>SHA-256:a7a4f45158c861f1a7d03f3228362d5223f7d665a6f978394d3b244c51e5358c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/replacer-v15/replacer-release-15.zap</url>
+        <hash>SHA-256:7daf9b8ce93d9b6640723ef3802505251719fffb5c99c1a2414854cd6eb79758</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/replacer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-07</date>
-        <size>383959</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>435783</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_replacer>
     <addon>reports</addon>
     <addon_reports>
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.25.0</version>
-        <file>reports-release-0.25.0.zap</file>
+        <version>0.26.0</version>
+        <file>reports-release-0.26.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
-&lt;li&gt;Update JavaDoc links to always link to latest version of ZAP.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix error when generating the High Level Report Sample with an alert that has an empty description (Issue 8071).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.25.0/reports-release-0.25.0.zap</url>
-        <hash>SHA-256:944e0cd682cb4cdd9017c1cafee44b59b42c03c26dc65ce19de39046bd6b9921</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.26.0/reports-release-0.26.0.zap</url>
+        <hash>SHA-256:528a1f5c7a126075d8dd3ff8244e07e6bf0c8290a573ba22cd2c610a56778a23</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-04</date>
-        <size>14063781</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>14143430</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2329,20 +2297,25 @@ the dialogue when other match types are selected.&lt;/li&gt;
         <name>Requester</name>
         <description>Allows to manually edit and send messages.</description>
         <author>Surikato and the ZAP Dev Team</author>
-        <version>7.3.0</version>
-        <file>requester-beta-7.3.0.zap</file>
+        <version>7.4.0</version>
+        <file>requester-beta-7.4.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Option to manipulate Host header.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v7.3.0/requester-beta-7.3.0.zap</url>
-        <hash>SHA-256:810619a6034c96ef7a7ba549f293075f75cb4c6b639b63bda22862092099d077</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v7.4.0/requester-beta-7.4.0.zap</url>
+        <hash>SHA-256:239a281a7f9c0c1d86c2a3b886d40ca0046e0b02ad1b82ce44e7cf2174f3ef78</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/requester/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-07-11</date>
-        <size>712648</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>732769</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_requester>
     <addon>retest</addon>
     <addon_retest>
