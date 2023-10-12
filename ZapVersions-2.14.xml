@@ -1462,20 +1462,24 @@
         <name>HUD - Heads Up Display</name>
         <description>Display information from ZAP in browser.</description>
         <author>ZAP Dev Team</author>
-        <version>0.17.0</version>
-        <file>hud-beta-0.17.0.zap</file>
+        <version>0.18.0</version>
+        <file>hud-beta-0.18.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update displayed time format to include leading zeros (Issue 1256).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.17.0/hud-beta-0.17.0.zap</url>
-        <hash>SHA-256:70cfb654ebb9beffcd2a1749c935eda2ff33e6e721b7e1a94b0a480b01183020</hash>
+        <url>https://github.com/zaproxy/zap-hud/releases/download/v0.18.0/hud-beta-0.18.0.zap</url>
+        <hash>SHA-256:19bc423d3ecc765b994319dd6edcc710a38fb4f379ac578d69acfd9fa0c98934</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/hud/</info>
         <repo>https://github.com/zaproxy/zap-hud/</repo>
-        <date>2023-07-11</date>
-        <size>1369388</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>1382584</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
