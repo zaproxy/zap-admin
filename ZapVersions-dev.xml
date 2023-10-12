@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <core>
-        <version>2.13.0</version>
+        <version>2.14.0</version>
         <daily-version>D-2023-10-09</daily-version>
         <daily>
             <url>https://github.com/zaproxy/zaproxy/releases/download/w2023-10-09/ZAP_WEEKLY_D-2023-10-09.zip</url>
@@ -10,31 +10,31 @@
             <size>261212564</size>
         </daily>
         <windows32>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.13.0/ZAP_2_13_0_windows-x32.exe</url>
-            <file>ZAP_2_13_0_windows-x32.exe</file>
-            <hash>SHA-256:1c7601b6253a47e6e4e93e0f4e64799b4f11381e73914ed74cb94da697688d82</hash>
-            <size>203996672</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2_14_0_windows-x32.exe</url>
+            <file>ZAP_2_14_0_windows-x32.exe</file>
+            <hash>SHA-256:5dae52e27da12fba5115e40ebc0cd2da24f6d9ba91608a7b0b7b254984a0b798</hash>
+            <size>220967424</size>
         </windows32>
         <windows>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.13.0/ZAP_2_13_0_windows.exe</url>
-            <file>ZAP_2_13_0_windows.exe</file>
-            <hash>SHA-256:5e1df341b91f65fe0768cb659af41e7671d475074ceab1b332b6520bcedf1dac</hash>
-            <size>204125696</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2_14_0_windows.exe</url>
+            <file>ZAP_2_14_0_windows.exe</file>
+            <hash>SHA-256:df49ffbd14cf82cde5ac06902615e40cbfce1576f866436366708c0845eb9ec6</hash>
+            <size>221097472</size>
         </windows>
         <linux>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.13.0/ZAP_2.13.0_Linux.tar.gz</url>
-            <file>ZAP_2.13.0_Linux.tar.gz</file>
-            <hash>SHA-256:936eb52a0fd390c1ef890c455420d95ce20062fe136ec0927e023e2baf50f549</hash>
-            <size>205883305</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2.14.0_Linux.tar.gz</url>
+            <file>ZAP_2.14.0_Linux.tar.gz</file>
+            <hash>SHA-256:219d7f25bbe25247713805ab02cc12279898c870743c1aae3c2b0b1882191960</hash>
+            <size>215142045</size>
         </linux>
         <mac>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.13.0/ZAP_2.13.0.dmg</url>
-            <file>ZAP_2.13.0.dmg</file>
-            <hash>SHA-256:914ca4a6ce2ba6e44f9ad0a9720f5a1879a16e56a56ac63fd0a5d67d54df0148</hash>
-            <size>234629799</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2.14.0.dmg</url>
+            <file>ZAP_2.14.0.dmg</file>
+            <hash>SHA-256:3b9862a647b1c5c26d6917f2316113dfaceac06bdb79ad3f2c96e0cbd73861f7</hash>
+            <size>244671708</size>
         </mac>
         <relnotes>Bug fix and enhancement release.</relnotes>
-        <relnotes-url>https://www.zaproxy.org/docs/desktop/releases/2.13.0/</relnotes-url>
+        <relnotes-url>https://www.zaproxy.org/docs/desktop/releases/2.14.0/</relnotes-url>
     </core>
     <addon>accessControl</addon>
     <addon_accessControl>
