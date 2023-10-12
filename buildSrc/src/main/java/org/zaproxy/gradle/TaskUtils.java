@@ -45,25 +45,28 @@ final class TaskUtils {
     }
 
     static Path downloadAddOn(Task task, String urlString, Path outputDir) throws IOException {
+        return downloadFile(task, urlString, outputDir.resolve(extractFileName(urlString)));
+    }
+
+    static Path downloadFile(Task task, String urlString, Path outputFile) throws IOException {
         URL url = new URL(urlString);
         if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
             throw new IllegalArgumentException(
                     "The provided URL does not use HTTPS scheme: " + url.getProtocol());
         }
 
-        Path addOn = outputDir.resolve(extractFileName(urlString));
-        if (Files.exists(addOn)) {
-            task.getLogger().info("Add-on already exists, skipping download.");
-            return addOn;
+        if (Files.exists(outputFile)) {
+            task.getLogger().info("File already exists at specified path, skipping download.");
+            return outputFile;
         }
 
         try (InputStream in = url.openStream()) {
-            Files.copy(in, addOn);
+            Files.copy(in, outputFile);
         } catch (IOException e) {
-            throw new IOException("Failed to download the add-on: " + e.getMessage(), e);
+            throw new IOException("Failed to download the file: " + e.getMessage(), e);
         }
-        task.getLogger().info("Add-on downloaded to: " + addOn);
-        return addOn;
+        task.getLogger().info("File downloaded to: " + outputFile);
+        return outputFile;
     }
 
     private static String extractFileName(String url) {
