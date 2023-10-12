@@ -1165,25 +1165,28 @@
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>16</version>
-        <file>help-release-16.zap</file>
+        <version>17</version>
+        <file>help-release-17.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Desktop HTML Injection Fix section.&lt;/li&gt;
-&lt;li&gt;Help details warning against specifying default ports (80/443) (Issue 7649).&lt;/li&gt;
+&lt;li&gt;SBOM help page.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated for 2.13.0.&lt;/li&gt;
+&lt;li&gt;Updated for 2.14.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add 2.13.0 release page to table of contents.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v16/help-release-16.zap</url>
-        <hash>SHA-256:46d549b0f68d707bdb11f0129fe37858c2384487465e4e1748e0558d1dae0b71</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v17/help-release-17.zap</url>
+        <hash>SHA-256:a2aeaf638fc83b7a5ba0eefcaa5ff806b0a3c9981d20abd107026724f9f128b3</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2023-07-11</date>
-        <size>619277</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-12</date>
+        <size>628064</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
     <addon_help_ar_SA>
