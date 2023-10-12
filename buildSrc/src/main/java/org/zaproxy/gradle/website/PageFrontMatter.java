@@ -53,6 +53,7 @@ class PageFrontMatter {
     private final int weight;
 
     private AddOnData addOnData;
+    private SbomData sbomData;
 
     PageFrontMatter(String type, String title, int weight) {
         this(type, null, title, weight, null);
@@ -72,6 +73,14 @@ class PageFrontMatter {
 
     void setAddOnData(AddOnData addOnData) {
         this.addOnData = addOnData;
+    }
+
+    SbomData getSbomData() {
+        return sbomData;
+    }
+
+    void setSbomData(SbomData sbomData) {
+        this.sbomData = sbomData;
     }
 
     void writeTo(String notice, Writer writer) {
@@ -99,6 +108,55 @@ class PageFrontMatter {
 
         String getVersion() {
             return version;
+        }
+    }
+
+    static class SbomData {
+        private final String bomFormat;
+        private final String downloadUrl;
+        private final List<SbomDataComponent> components;
+
+        SbomData(String bomFormat, String downloadUrl, List<SbomDataComponent> components) {
+            this.bomFormat = bomFormat;
+            this.downloadUrl = downloadUrl;
+            this.components = components;
+        }
+
+        public String getBomFormat() {
+            return bomFormat;
+        }
+
+        public String getDownloadUrl() {
+            return downloadUrl;
+        }
+
+        public List<SbomDataComponent> getComponents() {
+            return components;
+        }
+    }
+
+    static class SbomDataComponent {
+        private final String name;
+        private final String version;
+        private final String licenses;
+
+        SbomDataComponent(String name, String version, String licenses) {
+            super();
+            this.name = name;
+            this.version = version;
+            this.licenses = licenses;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getVersion() {
+            return version;
+        }
+
+        public String getLicenses() {
+            return licenses;
         }
     }
 
@@ -142,6 +200,27 @@ class PageFrontMatter {
                                     string("cascade"),
                                     PageFrontMatterRepresenter.this.representData(cascade)));
                 }
+
+                PageFrontMatter.SbomData sbomData = frontMatter.getSbomData();
+                if (sbomData != null) {
+                    Map<String, Object> sbom = new LinkedHashMap<>();
+                    sbom.put("format", sbomData.getBomFormat());
+                    sbom.put("downloadUrl", sbomData.getDownloadUrl());
+                    List<Map<String, String>> components = new ArrayList<>();
+                    for (SbomDataComponent component : sbomData.getComponents()) {
+                        Map<String, String> componentsMap = new LinkedHashMap<>();
+                        componentsMap.put("name", component.getName());
+                        componentsMap.put("version", component.getVersion());
+                        componentsMap.put("licenses", component.getLicenses());
+                        components.add(componentsMap);
+                    }
+                    sbom.put("components", components);
+                    pageData.add(
+                            new NodeTuple(
+                                    string("sbom"),
+                                    PageFrontMatterRepresenter.this.representData(sbom)));
+                }
+
                 return node;
             }
 

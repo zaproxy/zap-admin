@@ -7,6 +7,7 @@ import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsitePages
+import org.zaproxy.gradle.GenerateWebsiteSbomPages
 import org.zaproxy.gradle.GenerateWebsiteWeeklyReleaseData
 import org.zaproxy.gradle.GitHubRepo
 import org.zaproxy.gradle.GitHubUser
@@ -293,6 +294,12 @@ val generateWebsitePages by tasks.registering(GenerateWebsitePages::class) {
     outputDir.set(file("$buildDir/websiteHelpPages"))
 }
 
+val generateWebsiteSbomPages by tasks.registering(GenerateWebsiteSbomPages::class) {
+    releaseState.set(releaseStateData)
+    zapVersions.set(latestZapVersions)
+    outputDir.set(file("$buildDir/websiteSbomPages"))
+}
+
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
     releaseState.set(releaseStateData)
     val downloadDir = "$siteDir/data/download"
@@ -312,6 +319,7 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     }
     into("content") {
         from(generateWebsitePages)
+        from(generateWebsiteSbomPages)
     }
 }
 
