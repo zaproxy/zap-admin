@@ -2802,20 +2802,21 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.25.0</version>
-        <file>wappalyzer-release-21.25.0.zap</file>
+        <version>21.26.0</version>
+        <file>wappalyzer-release-21.26.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Moved from Apache batik libraries to weisJ's jsvg library (thus reducing the size of the add-on).&lt;/li&gt;
+&lt;li&gt;Updated with last AliasIO/Wappalyzer icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Updated with first set of icon and pattern changes from enthec/webappanalyzer.&lt;/li&gt;
+&lt;li&gt;Help entries are now identified as 'Technology Detection - Wappalyzer' to simplify searching/filtering.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.25.0/wappalyzer-release-21.25.0.zap</url>
-        <hash>SHA-256:a45676cd7e5855e1bae8ba47ab700529c83b6ddf0aedd9bad9f84364b231d28f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.26.0/wappalyzer-release-21.26.0.zap</url>
+        <hash>SHA-256:dca09cf1e906fafe961f5d2add720198c494c67554910526307ca62a07d1863d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-13</date>
-        <size>12182736</size>
+        <date>2023-10-18</date>
+        <size>12274834</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
