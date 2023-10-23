@@ -961,15 +961,14 @@
         <name>FileUpload</name>
         <description>Detect File upload requests and scan them to find related vulnerabilities</description>
         <author>KSASAN preetkaran20@gmail.com</author>
-        <version>1.1.0</version>
-        <file>fileupload-alpha-1.1.0.zap</file>
+        <version>1.2.1</version>
+        <file>fileupload-alpha-1.2.1.zap</file>
         <status>alpha</status>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/fileupload-alpha-1.1.0.zap</url>
-        <hash>SHA-256:47f2d93c6a53c55983056af282ebef09e80d27c0980517a73347778ad9e47932</hash>
-        <info>https://www.zaproxy.org/blog/2021-08-20-zap-fileupload-addon/</info>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/fileupload-alpha-1.2.1.zap</url>
+        <hash>SHA-256:84734320ed04f6e287cc0458897e99e80fe16d632d071e73187e446448b5fa7f</hash>
         <repo>https://github.com/SasanLabs/owasp-zap-fileupload-addon/</repo>
-        <date>2021-09-17</date>
-        <size>77520</size>
+        <date>2023-10-23</date>
+        <size>78272</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_fileupload>
     <addon>formhandler</addon>
