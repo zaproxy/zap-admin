@@ -530,22 +530,31 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>client-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>client-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated the Chrome extension to v0.0.6.&lt;/li&gt;
-&lt;li&gt;Disable client events automatically only for Zest recording.&lt;/li&gt;
-&lt;li&gt;Create Firefox profile to enable the ZAP extension for all sites.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Updated the Firefox extension to v0.0.7.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;AJAX spider enhancement.&lt;/li&gt;
+&lt;li&gt;More help pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not show ZAP API calls.&lt;/li&gt;
+&lt;li&gt;Missing 'Cookies' translation.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.2.0/client-alpha-0.2.0.zap</url>
-        <hash>SHA-256:857c63d7daa4eeda6fb22cb8a9ed2850f37c5e382b0663f321e1153a0a9934d6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.3.0/client-alpha-0.3.0.zap</url>
+        <hash>SHA-256:7624a848a1a1deae05b8a2d67fcdc4f5d83b7425f05375335df8d40475be9833</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-26</date>
-        <size>1299179</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2023-10-23</date>
+        <size>1334660</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1819,19 +1828,23 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>37</version>
-        <file>openapi-beta-37.zap</file>
+        <version>38</version>
+        <file>openapi-beta-38.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An issue in the headers generator which might lead to content-type header being incorrectly set.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v37/openapi-beta-37.zap</url>
-        <hash>SHA-256:e37fa68d68986405d926a965bc2c599874a6f7532006cec7de8d81c850644524</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v38/openapi-beta-38.zap</url>
+        <hash>SHA-256:58988bd550a98130f306a6efbcd349581b7a2cd4b27aa85af5217c3132221c50</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>13361126</size>
+        <date>2023-10-23</date>
+        <size>13848523</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2403,26 +2416,25 @@
         <name>Revisit</name>
         <description>Revisit a site at any time in the past using the session history</description>
         <author>ZAP Dev Team</author>
-        <version>4</version>
-        <file>revisit-alpha-4.zap</file>
+        <version>5</version>
+        <file>revisit-alpha-5.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Prevent exception when processing history after deleting messages.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/revisit-v4/revisit-alpha-4.zap</url>
-        <hash>SHA-256:445bb2a98e06d4ecc945c35c2777dae1b1e5b6ea20de78b920c8004bc3615195</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/revisit-v5/revisit-alpha-5.zap</url>
+        <hash>SHA-256:cdaf29b98bab8f5f899840950974837122bab6f00a9dc7ec72aecdffd6b83c02</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/revisit/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>299864</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2023-10-23</date>
+        <size>302425</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_revisit>
     <addon>saml</addon>
     <addon_saml>
@@ -2499,27 +2511,25 @@
         <name>Sequence</name>
         <description>Gives the possibility of defining a sequence of requests to be scanned.</description>
         <author>ZAP Dev Team</author>
-        <version>6</version>
-        <file>sequence-alpha-6.zap</file>
+        <version>7</version>
+        <file>sequence-alpha-7.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add info and repo URLs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Issue 2000 - Updated strings shown in active scan dialog with title caps.&lt;/li&gt;
-&lt;li&gt;Enable help button in Sequence tab of Active Scan dialog.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent exception if no display (Issue 3978).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sequence-v6/sequence-alpha-6.zap</url>
-        <hash>SHA-256:2849204eab9ea1da50404ab9604e5ec69440c490453a24392c9a40bf95cdb164</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sequence-v7/sequence-alpha-7.zap</url>
+        <hash>SHA-256:422d278ae7619f02adec8a43e997443a04b0d3f00e44fffd64e556b2f1941a4d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>1556476</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2023-10-23</date>
+        <size>1558728</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
