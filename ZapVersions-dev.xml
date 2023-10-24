@@ -941,6 +941,7 @@
         <status>alpha</status>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/fileupload-alpha-1.2.1.zap</url>
         <hash>SHA-256:84734320ed04f6e287cc0458897e99e80fe16d632d071e73187e446448b5fa7f</hash>
+        <info>https://www.zaproxy.org/blog/2021-08-20-zap-fileupload-addon/</info>
         <repo>https://github.com/SasanLabs/owasp-zap-fileupload-addon/</repo>
         <date>2023-10-23</date>
         <size>78272</size>
