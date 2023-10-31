@@ -482,22 +482,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>callhome-release-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>callhome-release-0.9.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Add client stats to telemetry.&lt;/li&gt;
-&lt;li&gt;Add config stats to telemetry.&lt;/li&gt;
+&lt;li&gt;Add API stats to telemetry.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.8.0/callhome-release-0.8.0.zap</url>
-        <hash>SHA-256:35eeff575f54b421609d9a36c919bdd3764ef80c7b26c4a4d1b3ca22a34e9e1f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.9.0/callhome-release-0.9.0.zap</url>
+        <hash>SHA-256:5d971223e5d9c683d6d6c5a223a819c714b626af346a8ce9527a3f57a4002193</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>322152</size>
+        <date>2023-10-31</date>
+        <size>322117</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_callhome>
     <addon>client</addon>
@@ -505,30 +502,29 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>client-alpha-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>client-alpha-0.4.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Updated the Firefox extension to v0.0.7.&lt;/li&gt;
+&lt;li&gt;Note about custom containers in the help.&lt;/li&gt;
+&lt;li&gt;Client Map context menu items.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;AJAX spider enhancement.&lt;/li&gt;
-&lt;li&gt;More help pages.&lt;/li&gt;
+&lt;li&gt;Updated the Chrome extension to v0.0.7.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Do not show ZAP API calls.&lt;/li&gt;
-&lt;li&gt;Missing 'Cookies' translation.&lt;/li&gt;
+&lt;li&gt;Cases where the Firefox profile was not added successfully via Selenium.&lt;/li&gt;
+&lt;li&gt;Reworked the Client Map to correctly handle parameters and more edge cases.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.3.0/client-alpha-0.3.0.zap</url>
-        <hash>SHA-256:7624a848a1a1deae05b8a2d67fcdc4f5d83b7425f05375335df8d40475be9833</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.4.0/client-alpha-0.4.0.zap</url>
+        <hash>SHA-256:e73bdc11c92cdf9cb14384dc0e9e82071ef29d74456af182a2c662188723f438</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-23</date>
-        <size>1334660</size>
+        <date>2023-10-31</date>
+        <size>1422855</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
