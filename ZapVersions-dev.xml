@@ -502,29 +502,27 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>client-alpha-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>client-alpha-0.5.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Note about custom containers in the help.&lt;/li&gt;
-&lt;li&gt;Client Map context menu items.&lt;/li&gt;
+&lt;li&gt;Client History and Details context menu items.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated the Chrome extension to v0.0.7.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Cases where the Firefox profile was not added successfully via Selenium.&lt;/li&gt;
-&lt;li&gt;Reworked the Client Map to correctly handle parameters and more edge cases.&lt;/li&gt;
+&lt;li&gt;Do not use white background in Client Details and show Client Map icons properly when using Mac OS X look and feel (Issue 8175).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.4.0/client-alpha-0.4.0.zap</url>
-        <hash>SHA-256:e73bdc11c92cdf9cb14384dc0e9e82071ef29d74456af182a2c662188723f438</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.5.0/client-alpha-0.5.0.zap</url>
+        <hash>SHA-256:bac9808cb3572cbd66a073eb9ee67708ee91079b8cceeab8240c4270edd0de22</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-31</date>
-        <size>1422855</size>
+        <date>2023-11-07</date>
+        <size>1461336</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
