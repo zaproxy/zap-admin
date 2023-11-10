@@ -569,21 +569,23 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.18.0</version>
-        <file>commonlib-release-1.18.0.zap</file>
+        <version>1.19.0</version>
+        <file>commonlib-release-1.19.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Add solution to 'Brute Forcing Log-in Credentials', 'Brute Forcing Session Identifiers' and 'Brute Forcing Directories and Files' vulnerabilities (Issue 8056).&lt;/li&gt;
-&lt;li&gt;Update vulnerabilities' CWE references to use HTTPS scheme.&lt;/li&gt;
+&lt;li&gt;A generic UI component for keeping menu items sorted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add solution to 'Brute Forcing Credit Card Information', 'Content Spoofing', 'Credential and Session Prediction', 'XML Injection' and 'XML External Entities' vulnerabilities (Issue 8056).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.18.0/commonlib-release-1.18.0.zap</url>
-        <hash>SHA-256:37397464f2491ebd3f7d40a8a00255d768582bc03dd73fa0212adf199f5e64df</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.19.0/commonlib-release-1.19.0.zap</url>
+        <hash>SHA-256:1b0e16550ccf0661eb53a761356075c3ef5a14abc750d463a04e93ef4ffd02ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>10603667</size>
+        <date>2023-11-10</date>
+        <size>10634629</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -645,22 +647,45 @@
         <name>Custom Payloads</name>
         <description>Ability to add, edit or remove payloads that are used i.e. by active scanners</description>
         <author>ZAP Dev Team</author>
-        <version>0.12.0</version>
-        <file>custompayloads-alpha-0.12.0.zap</file>
-        <status>alpha</status>
+        <version>0.13.0</version>
+        <file>custompayloads-beta-0.13.0.zap</file>
+        <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
-&lt;li&gt;Add help content linking to the Scan Rules which support Custom Payloads.&lt;/li&gt;
+&lt;li&gt;Promoted to Beta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial API support:
+&lt;ul&gt;
+&lt;li&gt;Actions
+&lt;ul&gt;
+&lt;li&gt;Enable payloads.&lt;/li&gt;
+&lt;li&gt;Disable payloads.&lt;/li&gt;
+&lt;li&gt;Enable payload.&lt;/li&gt;
+&lt;li&gt;Disable payload.&lt;/li&gt;
+&lt;li&gt;Add payload.&lt;/li&gt;
+&lt;li&gt;Remove payload.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Views:
+&lt;ul&gt;
+&lt;li&gt;Payload categories.&lt;/li&gt;
+&lt;li&gt;Payloads (optionally filtered by category).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.12.0/custompayloads-alpha-0.12.0.zap</url>
-        <hash>SHA-256:8e31acafdc1e2246e25953d8ccb87efa189a3fdadc596331feabeccc99dece65</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.13.0/custompayloads-beta-0.13.0.zap</url>
+        <hash>SHA-256:07c571e121291980add70fad1b64933382742e93959c7dd470426b4fb111921e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/custom-payloads/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-23</date>
-        <size>236404</size>
-        <not-before-version>2.11.1</not-before-version>
+        <date>2023-11-10</date>
+        <size>246425</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_custompayloads>
     <addon>database</addon>
     <addon_database>
@@ -901,26 +926,25 @@
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.7.0</version>
-        <file>exim-beta-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>exim-beta-0.8.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Depend on newer versions of Automation Framework and Common Library add-ons (Related to Issue 7961).&lt;/li&gt;
+&lt;li&gt;Keep the Export menu items sorted alphabetically.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.7.0/exim-beta-0.7.0.zap</url>
-        <hash>SHA-256:db07f46ab31796099caa2373424890a1525e42e6fd858e2193c56141489cbd9f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.8.0/exim-beta-0.8.0.zap</url>
+        <hash>SHA-256:28b10c94fd6b8de4d5b85a757d47f75a3ace0608744ce7b6b84bea26d9e024ec</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>478582</size>
+        <date>2023-11-10</date>
+        <size>478370</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.19.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -1079,24 +1103,25 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.20.0</version>
-        <file>graphql-alpha-0.20.0.zap</file>
+        <version>0.21.0</version>
+        <file>graphql-alpha-0.21.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fingerprinting check for the Absinthe GraphQL engine.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The query generator was not using lists and non-null fields to generate queries when the lenient maximum query depth
+criteria was met.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.20.0/graphql-alpha-0.20.0.zap</url>
-        <hash>SHA-256:c42b14a9f2ff34999b9513d1fbf2bb92c4f041e551a439ee57d29b45af59ed72</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.21.0/graphql-alpha-0.21.0.zap</url>
+        <hash>SHA-256:0211a2d453e3673f4a46cea0adca29a0eb51e6c540201771025492081ad6bd2c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>5385176</size>
+        <date>2023-11-10</date>
+        <size>5431677</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2450,20 +2475,23 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.15.0</version>
-        <file>selenium-release-15.15.0.zap</file>
+        <version>15.16.0</version>
+        <file>selenium-release-15.16.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.14.0.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.15.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add vertical scroll bar to the options panel to prevent the options from being hidden when resizing the Options dialogue (Issue 8178).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.15.0/selenium-release-15.15.0.zap</url>
-        <hash>SHA-256:1700640bad6a529b96d3b67de462b97126e277324277529c8e4a0e391e992002</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.16.0/selenium-release-15.16.0.zap</url>
+        <hash>SHA-256:9fd420a8ab11572d8a6b95505b16d0880f7349ba119cbbd7cf480dbd7e7e4621</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>31817496</size>
+        <date>2023-11-10</date>
+        <size>31658081</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2575,23 +2603,24 @@
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.17.0</version>
-        <file>spiderAjax-release-23.17.0.zap</file>
+        <version>23.18.0</version>
+        <file>spiderAjax-release-23.18.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Add context menu item to Contexts tree to show the AJAX Spider dialogue with the selected Context.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add URL to start event.&lt;/li&gt;
+&lt;li&gt;Add icon to the Tools menu item.&lt;/li&gt;
+&lt;li&gt;Scale icons.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.17.0/spiderAjax-release-23.17.0.zap</url>
-        <hash>SHA-256:8b749c9c05b84d759a6077e10602dc1d55bf569f56e8b7b4f1a8dd6937c9cb6d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.18.0/spiderAjax-release-23.18.0.zap</url>
+        <hash>SHA-256:19d1737f404bdd3ccb0f368760d8783629f915b4f8d5cb585ed50ebc3c1e9602</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>7561877</size>
+        <date>2023-11-10</date>
+        <size>7563777</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
