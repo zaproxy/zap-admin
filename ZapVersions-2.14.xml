@@ -2455,19 +2455,33 @@ criteria was met.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>42</version>
-        <file>scripts-release-42.zap</file>
+        <version>43</version>
+        <file>scripts-release-43.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Allow setting the tab size and whether to use tabs or spaces for indentation in the console.
+The old defaults were to use the tab character with a tab size of 5.
+The new defaults are to use spaces with a tab size of 4.&lt;/li&gt;
+&lt;li&gt;A gear button to the console toolbar to open the Script Console options screen.&lt;/li&gt;
+&lt;li&gt;An enable / disable script button to the console toolbar to toggle enabling the open script.&lt;/li&gt;
+&lt;li&gt;Options to allow editing the font name and size used in the console (Issue 8065).&lt;/li&gt;
+&lt;li&gt;The shortcut &lt;code&gt;ctrl+S&lt;/code&gt; (&lt;code&gt;cmd+S&lt;/code&gt; on macOS) to save the script in the console.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &amp;quot;Save Script&amp;quot; button was moved to the console toolbar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Saving the script was causing the &amp;quot;Keep or Replace&amp;quot; dialog to show, even when no external changes were made to the script.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v42/scripts-release-42.zap</url>
-        <hash>SHA-256:3723536f525c8eba9fcc490d6b2b71f9b58633806ef888379048c7275dd48377</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v43/scripts-release-43.zap</url>
+        <hash>SHA-256:e578f0e44e959d8f529697c6dfc04e390ef1dc7a390b115b880597635c7c3e61</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>849844</size>
+        <date>2023-11-13</date>
+        <size>859959</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
