@@ -77,21 +77,27 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>alertFilters-release-18.zap</file>
+        <version>19</version>
+        <file>alertFilters-release-19.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Allow to filter by alert reference (Issue 7438).&lt;/li&gt;
+&lt;li&gt;Allow to specify custom IDs through the GUI.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Automation Framework add-on for the automation job (Related to Issue 7961).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not fail to import or load a context with invalid alert filters.&lt;/li&gt;
+&lt;li&gt;Incorrect warning about 'Unrecognised parameter' for deleteGlobalAlerts.&lt;/li&gt;
+&lt;li&gt;Persist context filter data.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v18/alertFilters-release-18.zap</url>
-        <hash>SHA-256:27dd62fe396fb7f993419ed88906328c9ba7a063d3e1f60ee91c961c9106662f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v19/alertFilters-release-19.zap</url>
+        <hash>SHA-256:e96f38d0053b0de191b879ae88c0547367adb4939e2f4789c9e7f1d9766b9777</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>552590</size>
+        <date>2023-11-16</date>
+        <size>556902</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_alertFilters>
     <addon>allinonenotes</addon>
@@ -323,19 +329,23 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.33.0</version>
-        <file>automation-beta-0.33.0.zap</file>
+        <version>0.34.0</version>
+        <file>automation-beta-0.34.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Show column control in the Automation tab to allow to show/hide columns and auto resize them (&lt;code&gt;Pack All Columns&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Save context.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.33.0/automation-beta-0.33.0.zap</url>
-        <hash>SHA-256:f11e007343d27f86bb56c0a61165812dd6fe3df246971bddabe7584b8d24f831</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.34.0/automation-beta-0.34.0.zap</url>
+        <hash>SHA-256:6deaa8cc163bb34b0c702c8bdfde5c10f3cf76cd3abe03f0a716a08d986f4e03</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>1741692</size>
+        <date>2023-11-16</date>
+        <size>1741113</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
