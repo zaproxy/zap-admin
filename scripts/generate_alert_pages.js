@@ -79,6 +79,7 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 	try {
 		var ext = control.getExtensionLoader().getExtension(i);
 		var examples = ext.getExampleAlerts();
+		var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 		// Extension level examples can have different IDs, just to complicate matters
 		var exList = new ArrayList();
 		var lastId = -1;
@@ -94,7 +95,7 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 		}
 		if (exList.size() > 0) {
 			// Include the last set
-			printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null);
+			printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null, help);
 		}
 	} catch (e) {
 		if (e.toString().indexOf('is not a function') > 0) {
@@ -105,6 +106,20 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 	}
 }
 
+var extClient = control.getExtensionLoader().getExtension(org.zaproxy.addon.client.ExtensionClientIntegration.NAME);
+
+if (extClient != null) {
+	var pscanCl = extClient.getPassiveScanController().getAllScanners();
+
+	for (var i = 0; i < pscanCl.length; i++) {
+		var plugin = pscanCl.get(i);
+		var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
+		var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
+		if (examples != null && examples.length > 0) {
+			printAlerts(examples, plugin.getName(), "Client Passive", "alpha", plugin.getClass().getName(), null, null, help);
+		}
+	}
+}
 
 // Dump out the alert tags
 var fw = new FileWriter(AT_FILE);
@@ -133,14 +148,19 @@ function quoteText(txt) {
     .replace(/[\t]/g, '\\t') + '"';
 }
 
-function printAlerts(alerts, name, type, status, clazz, scripturl, tech) {
+function printAlerts(alerts, name, type, status, clazz, scripturl, tech, help) {
 	var pluginId = alerts[0].getPluginId();
 	if (ignoreList.indexOf(pluginId) !== -1) {
 		print('Plugin ID: ' + pluginId + ' - ignored');
 		return;
 	}
 	var pkgs = clazz.split('.');
-	var pkg = pkgs[pkgs.length - 2];
+	// Works if package hierarchy is org.zaproxy.addon.<package>
+	var pkg = pkgs[3];
+	if (clazz.indexOf('.extension.') > 0) {
+		// Package hierarchy is actually org.zaproxy.zap.extension.<package>
+		pkg = pkgs[4];
+	}
 	var codeurl = 'https://github.com/zaproxy/zap-extensions/blob/main/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
 	if (pluginId in codeMap) {
 		codeurl = codeMap[pluginId]
@@ -243,6 +263,9 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech) {
 		}
 		pw.println('code: ' + codeurl);
 		pw.println('linktext: ' + quoteText(linktext));
+		if (help) {
+			pw.println('help: ' + help);
+		}
 		pw.println('---');
 		pw.println(alert.getDescription());
 		pw.close();
@@ -279,7 +302,9 @@ function printAscanRule(plugin) {
 			}
 		}
 	}
-	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName(), null, tech);
+	var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
+	
+	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName(), null, tech, help);
 }
 
 function getPrivateMethod(obj, methods, key, defaultVal) {
@@ -327,13 +352,16 @@ function printPscanRule(plugin) {
 		examples = new ArrayList();
 		examples.add(alert);
 	}
+	var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 
-	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName());
+	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName(), null, null, help);
 }
 
 function printWsPscanRule(plugin, scriptUrl) {
 	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
+	var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
+
 	if (examples != null && examples.length > 0) {
-         printAlerts(examples, plugin.getName(), "WebSocket Passive", "release", plugin.getClass().getName(), scriptUrl);
+         printAlerts(examples, plugin.getName(), "WebSocket Passive", "release", plugin.getClass().getName(), scriptUrl, null, help);
 	}
 }
