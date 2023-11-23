@@ -79,7 +79,6 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 	try {
 		var ext = control.getExtensionLoader().getExtension(i);
 		var examples = ext.getExampleAlerts();
-		var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 		// Extension level examples can have different IDs, just to complicate matters
 		var exList = new ArrayList();
 		var lastId = -1;
@@ -95,7 +94,7 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 		}
 		if (exList.size() > 0) {
 			// Include the last set
-			printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null, help);
+			printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null, getHelp(ext));
 		}
 	} catch (e) {
 		if (e.toString().indexOf('is not a function') > 0) {
@@ -114,9 +113,8 @@ if (extClient != null) {
 	for (var i = 0; i < pscanCl.length; i++) {
 		var plugin = pscanCl.get(i);
 		var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
-		var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 		if (examples != null && examples.length > 0) {
-			printAlerts(examples, plugin.getName(), "Client Passive", "alpha", plugin.getClass().getName(), null, null, help);
+			printAlerts(examples, plugin.getName(), "Client Passive", "alpha", plugin.getClass().getName(), null, null, getHelp(plugin));
 		}
 	}
 }
@@ -273,6 +271,14 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech, help) {
 
 }
 
+function getHelp(obj) {
+    try {
+        return obj.getHelpLink();
+    } catch (e) {
+        return null;
+    }
+}
+
 function printAscanRule(plugin) {
 	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
 	if (examples == null || examples.length == 0) {
@@ -302,9 +308,8 @@ function printAscanRule(plugin) {
 			}
 		}
 	}
-	var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 	
-	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName(), null, tech, help);
+	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName(), null, tech, getHelp(plugin));
 }
 
 function getPrivateMethod(obj, methods, key, defaultVal) {
@@ -352,16 +357,14 @@ function printPscanRule(plugin) {
 		examples = new ArrayList();
 		examples.add(alert);
 	}
-	var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 
-	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName(), null, null, help);
+	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName(), null, null, getHelp(plugin));
 }
 
 function printWsPscanRule(plugin, scriptUrl) {
 	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
-	var help = getPrivateMethod(plugin, ['getHelpLink'], '', null);
 
 	if (examples != null && examples.length > 0) {
-         printAlerts(examples, plugin.getName(), "WebSocket Passive", "release", plugin.getClass().getName(), scriptUrl, null, help);
+         printAlerts(examples, plugin.getName(), "WebSocket Passive", "release", plugin.getClass().getName(), scriptUrl, null, getHelp(plugin));
 	}
 }
