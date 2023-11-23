@@ -109,7 +109,7 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 var extClient = control.getExtensionLoader().getExtension(org.zaproxy.addon.client.ExtensionClientIntegration.NAME);
 
 if (extClient != null) {
-	var pscanCl = extClient.getPassiveScanController().getAllScanners();
+	var pscanCl = extClient.getPassiveScanController().getAllScanRules();
 
 	for (var i = 0; i < pscanCl.length; i++) {
 		var plugin = pscanCl.get(i);
