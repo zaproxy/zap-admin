@@ -512,27 +512,30 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>client-alpha-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>client-alpha-0.6.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client History and Details context menu items.&lt;/li&gt;
+&lt;li&gt;Support for passive scanning&lt;/li&gt;
+&lt;li&gt;Passive scan rules:
+&lt;ul&gt;
+&lt;li&gt;Information Disclosure - Information in Browser Storage&lt;/li&gt;
+&lt;li&gt;Information Disclosure - Sensitive Information in Browser Storage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Do not use white background in Client Details and show Client Map icons properly when using Mac OS X look and feel (Issue 8175).&lt;/li&gt;
+&lt;li&gt;Dropped &amp;quot;to Clipboard&amp;quot; from ZAP copy menu items (Issue 8179).&lt;/li&gt;
+&lt;li&gt;Changed to add back '#' nodes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.5.0/client-alpha-0.5.0.zap</url>
-        <hash>SHA-256:bac9808cb3572cbd66a073eb9ee67708ee91079b8cceeab8240c4270edd0de22</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.6.0/client-alpha-0.6.0.zap</url>
+        <hash>SHA-256:6b5170af287c170742139d1a65f8dec0361b925d84576aa278869e7ee22e17d5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-07</date>
-        <size>1461336</size>
+        <date>2023-11-23</date>
+        <size>1492723</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
