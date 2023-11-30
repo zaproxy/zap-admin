@@ -2090,25 +2090,21 @@ criteria was met.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>52</version>
-        <file>pscanrules-release-52.zap</file>
+        <version>53</version>
+        <file>pscanrules-release-53.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The CSRF Countermeasures scan rule now skips responses that are not HTML (Issue 7890).&lt;/li&gt;
-&lt;li&gt;A potential NullPointerException when a CSP declared via META tag was invalid.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;CSP scan rule: Add deprecation warning for inclusion of prefetch-src (Issue 8077).&lt;/li&gt;
+&lt;li&gt;The Application Error Disclosure rule no longer considers responses that contain ISO control characters (those which are likely to be binary file types).&lt;/li&gt;
+&lt;li&gt;The Time Stamp Disclosure rule now includes the header field name as Parameter in alerts when a time stamp is identified in a header value (Issue 8160).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v52/pscanrules-release-52.zap</url>
-        <hash>SHA-256:d12a4e33cb1948f54e7f50e7ee9886c7f273f71770ab177483f7c32a1d8f87ed</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v53/pscanrules-release-53.zap</url>
+        <hash>SHA-256:168f35168c1eae3ca0e8a89b0711ff9f5cc0ed7a8bf82d2ffbaa53e1ff80f12c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>1861549</size>
+        <date>2023-11-30</date>
+        <size>1862384</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
