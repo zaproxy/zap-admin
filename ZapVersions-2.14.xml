@@ -512,33 +512,31 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>client-alpha-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>client-alpha-0.7.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for passive scanning&lt;/li&gt;
-&lt;li&gt;Passive scan rules:
-&lt;ul&gt;
-&lt;li&gt;Information Disclosure - Information in Browser Storage&lt;/li&gt;
-&lt;li&gt;Information Disclosure - Sensitive Information in Browser Storage&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Support for base64 decoding in existing scan rules.&lt;/li&gt;
+&lt;li&gt;Passive scan rule: JWT in Browser Storage.&lt;/li&gt;
+&lt;li&gt;Additional input field data returned from the extension.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dropped &amp;quot;to Clipboard&amp;quot; from ZAP copy menu items (Issue 8179).&lt;/li&gt;
-&lt;li&gt;Changed to add back '#' nodes.&lt;/li&gt;
+&lt;li&gt;Updated the Firefox extension to v0.0.8.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.6.0/client-alpha-0.6.0.zap</url>
-        <hash>SHA-256:6b5170af287c170742139d1a65f8dec0361b925d84576aa278869e7ee22e17d5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.7.0/client-alpha-0.7.0.zap</url>
+        <hash>SHA-256:76dcf62da59c94f0bc6e72dad9b89cc6835ccc4ef5911f47fe15d5cf17dd4825</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-23</date>
-        <size>1492723</size>
+        <date>2023-12-01</date>
+        <size>1562991</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>commonlib</id>
+                </addon>
                 <addon>
                     <id>network</id>
                     <version>&gt;=0.8.0</version>
