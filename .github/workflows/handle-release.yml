@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: zap-admin
         fetch-depth: 10
     - name: Checkout zaproxy-website
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: zaproxy/zaproxy-website
         persist-credentials: false
         path: zaproxy-website
         fetch-depth: 0
     - name: Setup Java
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: 11

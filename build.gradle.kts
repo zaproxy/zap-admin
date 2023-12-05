@@ -22,21 +22,13 @@ import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 
 plugins {
     java
-    id("com.diffplug.spotless") version "6.20.0"
+    id("com.diffplug.spotless")
+    id("org.zaproxy.common")
     id("net.ltgt.errorprone") version "3.1.0"
     id("org.zaproxy.crowdin") version "0.3.1"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
-
-tasks.withType<JavaCompile> {
-    options.encoding = "utf-8"
-    options.compilerArgs = listOf("-Xlint:all", "-Werror")
-}
-
-repositories {
-    mavenCentral()
-}
 
 crowdin {
     credentials {
@@ -65,7 +57,7 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.24.2")
 }
 
-val zapVersionsDir = file("$buildDir/ZapVersionsTests")
+val zapVersionsDir = layout.buildDirectory.dir("ZapVersionsTests")
 val copyZapVersions = tasks.create<Copy>("copyZapVersions") {
     from(rootDir)
     into(zapVersionsDir)
@@ -85,11 +77,7 @@ tasks.withType<Test>().configureEach {
 sourceSets["test"].output.dir(mapOf("builtBy" to copyZapVersions), zapVersionsDir)
 
 spotless {
-    java {
-        licenseHeaderFile("$rootDir/docs/headers/license.java")
-
-        googleJavaFormat("1.17.0").aosp()
-    }
+    format("properties", { targetExclude("buildSrc/**", "gradle/**") })
 
     kotlin {
         ktlint()
@@ -238,7 +226,7 @@ val websiteGeneratedDataComment = "# This file is automatically updated by $admi
 val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainReleaseData::class) {
     zapVersions.set(latestZapVersions)
     generatedDataComment.set(websiteGeneratedDataComment)
-    into.set(file("$buildDir/c_main_files.yml"))
+    into.set(layout.buildDirectory.file("c_main_files.yml"))
 
     gitHubUser.set(ghUser)
     gitHubRepo.set(zaproxyRepo)
@@ -247,13 +235,13 @@ val generateWebsiteMainReleaseData by tasks.registering(GenerateWebsiteMainRelea
 val generateWebsiteWeeklyReleaseData by tasks.registering(GenerateWebsiteWeeklyReleaseData::class) {
     zapVersions.set(file(noAddOnsZapVersions))
     generatedDataComment.set(websiteGeneratedDataComment)
-    into.set(file("$buildDir/e_weekly_files.yml"))
+    into.set(layout.buildDirectory.file("e_weekly_files.yml"))
 }
 
 val generateWebsiteAddonsData by tasks.registering(GenerateWebsiteAddonsData::class) {
     zapVersions.set(latestZapVersions)
     generatedDataComment.set(websiteGeneratedDataComment)
-    into.set(file("$buildDir/addons.yaml"))
+    into.set(layout.buildDirectory.file("addons.yaml"))
     websiteUrl.set("https://www.zaproxy.org/")
 }
 
@@ -263,7 +251,7 @@ val siteDir = file("${websiteRepo.dir}/site")
 val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class) {
     zapVersionsPath.set(noAddOnsZapVersions)
     zapVersionsAddOnsPath.set(nameLatestZapVersions)
-    releaseState.set(file("$buildDir/release_state_last_commit.json"))
+    releaseState.set(layout.buildDirectory.file("release_state_last_commit.json"))
 }
 
 val releaseStateData = generateReleaseStateLastCommit.map { it.releaseState.get() }
@@ -273,7 +261,7 @@ val downloadReleasedAddOns by tasks.registering(DownloadReleasedAddOns::class) {
     releaseState.set(releaseStateData)
     zapVersions.set(latestZapVersions)
     allowedAddOns.set(addOnsHelpWebsite)
-    outputDir.set(file("$buildDir/releasedAddOns"))
+    outputDir.set(layout.buildDirectory.dir("releasedAddOns"))
 }
 
 val generateWebsitePages by tasks.registering(GenerateWebsitePages::class) {
@@ -291,13 +279,13 @@ val generateWebsitePages by tasks.registering(GenerateWebsitePages::class) {
     imagesDirName.set("images")
     noticeGeneratedPage.set("This page was generated from the add-on.")
 
-    outputDir.set(file("$buildDir/websiteHelpPages"))
+    outputDir.set(layout.buildDirectory.dir("websiteHelpPages"))
 }
 
 val generateWebsiteSbomPages by tasks.registering(GenerateWebsiteSbomPages::class) {
     releaseState.set(releaseStateData)
     zapVersions.set(latestZapVersions)
-    outputDir.set(file("$buildDir/websiteSbomPages"))
+    outputDir.set(layout.buildDirectory.dir("websiteSbomPages"))
 }
 
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {

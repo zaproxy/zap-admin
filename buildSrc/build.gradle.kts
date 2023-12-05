@@ -1,6 +1,7 @@
 plugins {
     `kotlin-dsl`
-    id("com.diffplug.spotless") version "6.20.0"
+    id("com.diffplug.spotless")
+    id("org.zaproxy.common")
 }
 
 repositories {
@@ -11,11 +12,6 @@ val javaVersion = JavaVersion.VERSION_11
 java {
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion
-}
-
-tasks.withType<JavaCompile> {
-    options.encoding = "utf-8"
-    options.compilerArgs = listOf("-Xlint:all", "-Werror")
 }
 
 kotlin {
@@ -49,16 +45,10 @@ dependencies {
     }
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.2")
     implementation("org.snakeyaml:snakeyaml-engine:2.6")
-    implementation("org.zaproxy:zap:2.13.0")
+    implementation("org.zaproxy:zap:2.14.0")
 }
 
 spotless {
-    java {
-        licenseHeaderFile("../docs/headers/license.java")
-
-        googleJavaFormat("1.17.0").aosp()
-    }
-
     kotlin {
         ktlint()
     }
