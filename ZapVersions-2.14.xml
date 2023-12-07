@@ -131,25 +131,35 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>58</version>
-        <file>ascanrules-release-58.zap</file>
+        <version>59</version>
+        <file>ascanrules-release-59.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Support for mutations in reflected XSS rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use high and low delays for linear regression time-based tests to fix false positives from delays that were smaller than normal variance in application response times, which affected Command Injection scan rule.&lt;/li&gt;
+&lt;li&gt;Improved SQL Injection - PostgreSQL (Time Based) scan rule by using time-based linear regression tests.&lt;/li&gt;
+&lt;li&gt;Catch correct context while analysing attributes instead of the last attribute where eyecatcher was reflected.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v58/ascanrules-release-58.zap</url>
-        <hash>SHA-256:21d46ae795c8d078d5a465c17906775e4e917f2bd87d63f0d070d7e09d5f2142</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v59/ascanrules-release-59.zap</url>
+        <hash>SHA-256:f7e7b26b1720d97b3fb702061b987e135a24b17cb751372b7c48d603296878b8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>3271247</size>
+        <date>2023-12-07</date>
+        <size>3270471</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.20.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -580,23 +590,27 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.19.0</version>
-        <file>commonlib-release-1.19.0.zap</file>
+        <version>1.20.0</version>
+        <file>commonlib-release-1.20.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A generic UI component for keeping menu items sorted.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add utilities for time-based checks, migrated from Active scanner rules add-on.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add solution to 'Brute Forcing Credit Card Information', 'Content Spoofing', 'Credential and Session Prediction', 'XML Injection' and 'XML External Entities' vulnerabilities (Issue 8056).&lt;/li&gt;
+&lt;li&gt;Added solution to 'Insecure Indexing', 'Insufficient Anti automation', 'Fingerprinting' (Issue 8056).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.19.0/commonlib-release-1.19.0.zap</url>
-        <hash>SHA-256:1b0e16550ccf0661eb53a761356075c3ef5a14abc750d463a04e93ef4ffd02ff</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.20.0/commonlib-release-1.20.0.zap</url>
+        <hash>SHA-256:dff7c1e10716b57fb8721de990a9af2070bd54139149c659e181ff5d17e9e315</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-10</date>
-        <size>10634629</size>
+        <date>2023-12-07</date>
+        <size>10735329</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -2854,19 +2868,19 @@ The new defaults are to use spaces with a tab size of 4.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>65</version>
-        <file>webdriverlinux-release-65.zap</file>
+        <version>66</version>
+        <file>webdriverlinux-release-66.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 119.0.6045.105.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 120.0.6099.71.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v65/webdriverlinux-release-65.zap</url>
-        <hash>SHA-256:5e29c60c1d2f2b6adf8ae971acd884fb86785b7429216f56a72facf4a8c447cf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v66/webdriverlinux-release-66.zap</url>
+        <hash>SHA-256:fcf776123a92a0068471c1e76f78db5c5daf88b8183ab78b435fd93d794f6234</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-01</date>
-        <size>17419342</size>
+        <date>2023-12-07</date>
+        <size>17369675</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2874,19 +2888,19 @@ The new defaults are to use spaces with a tab size of 4.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>65</version>
-        <file>webdrivermacos-release-65.zap</file>
+        <version>66</version>
+        <file>webdrivermacos-release-66.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 119.0.6045.105.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 120.0.6099.71.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v65/webdrivermacos-release-65.zap</url>
-        <hash>SHA-256:72ec78d88c96ff49fb8c40328a461b6b80720d698282af5e8a5d76093fe99bd7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v66/webdrivermacos-release-66.zap</url>
+        <hash>SHA-256:609deb56518a93d2a104757150e21b75bde8724df07bc935bb6568b878bad3b9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-01</date>
-        <size>21609525</size>
+        <date>2023-12-07</date>
+        <size>20551451</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2894,19 +2908,19 @@ The new defaults are to use spaces with a tab size of 4.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>65</version>
-        <file>webdriverwindows-release-65.zap</file>
+        <version>66</version>
+        <file>webdriverwindows-release-66.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 119.0.6045.105.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 120.0.6099.71.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v65/webdriverwindows-release-65.zap</url>
-        <hash>SHA-256:dbb995f03f7ae09e156ecf166baa0baa0e3b6442a0c18b77fcb955d65d914c6c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v66/webdriverwindows-release-66.zap</url>
+        <hash>SHA-256:b72be9688be19611cc0027e31ff53225c8d14752456cb00e22e6f088af57b274</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-01</date>
-        <size>19056408</size>
+        <date>2023-12-07</date>
+        <size>18083040</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
