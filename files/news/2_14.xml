@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>45</id>
+        <id>46</id>
         <default>
-            <item>ZAP 2.14.0 is available now</item>
-            <link>https://www.zaproxy.org/download/</link>
+            <item>Please fill in the ZAP User Personas Questionnaire</item>
+            <link>https://docs.google.com/forms/d/e/1FAIpQLScOW2Evb7Sj9dbj6Gw19TG3k49BJU5amgBDcRkeyL9qg13m-w/viewform</link>
         </default>
     </news>
 </ZAP>
