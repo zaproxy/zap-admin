@@ -2384,19 +2384,19 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.28.0</version>
-        <file>retire-release-0.28.0.zap</file>
+        <version>0.29.0</version>
+        <file>retire-release-0.29.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.28.0/retire-release-0.28.0.zap</url>
-        <hash>SHA-256:fee5daa101ef24616373071ea985c846be7608bddb89b8083c42e723a6a355cf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.29.0/retire-release-0.29.0.zap</url>
+        <hash>SHA-256:42c05238add583bcec3e84aaecaf11bcb2195f7ca4c62697524c1f789bb666c9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-04</date>
-        <size>981375</size>
+        <date>2024-01-03</date>
+        <size>982010</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2837,20 +2837,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.28.0</version>
-        <file>wappalyzer-release-21.28.0.zap</file>
+        <version>21.29.0</version>
+        <file>wappalyzer-release-21.29.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.28.0/wappalyzer-release-21.28.0.zap</url>
-        <hash>SHA-256:ac2cdc367002044d5abd796fbb2f048c9094b307dd72ab45506ac8da9836f547</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.29.0/wappalyzer-release-21.29.0.zap</url>
+        <hash>SHA-256:5683f8f14764f41e268fc9843fe530fd482a7aa049a52ae905f1bfa0c4a77905</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-04</date>
-        <size>12513038</size>
+        <date>2024-01-03</date>
+        <size>12689047</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2866,19 +2865,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>67</version>
-        <file>webdriverlinux-release-67.zap</file>
+        <version>68</version>
+        <file>webdriverlinux-release-68.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 120.0.6099.109.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to 0.34.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v67/webdriverlinux-release-67.zap</url>
-        <hash>SHA-256:70c0e96b0999e9ad875e2b5be36e537248368c21ee220f1008156df98a54545c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v68/webdriverlinux-release-68.zap</url>
+        <hash>SHA-256:68394b36c001297d60068e793f906853ca8408256d6235dff9f3b9c54004b302</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>17414249</size>
+        <date>2024-01-03</date>
+        <size>17414245</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2886,19 +2885,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>67</version>
-        <file>webdrivermacos-release-67.zap</file>
+        <version>68</version>
+        <file>webdrivermacos-release-68.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 120.0.6099.109.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to 0.34.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v67/webdrivermacos-release-67.zap</url>
-        <hash>SHA-256:19408bd498012e50a2807c85148d2a3ea3673c0ac42ded2e0b48fad2ef460bb1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v68/webdrivermacos-release-68.zap</url>
+        <hash>SHA-256:3827a1c83eede3fa1053df05b1d2466c03cf3f65c85e8a51f3e58908c022acb1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>20546337</size>
+        <date>2024-01-03</date>
+        <size>20546326</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2906,19 +2905,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>67</version>
-        <file>webdriverwindows-release-67.zap</file>
+        <version>68</version>
+        <file>webdriverwindows-release-68.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 120.0.6099.109.&lt;/li&gt;
+&lt;li&gt;Update geckodriver to 0.34.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v67/webdriverwindows-release-67.zap</url>
-        <hash>SHA-256:66c1d6c08c12b965a0b5fb710ab71fde1983b81ac04d33656b189b1aedeec8d3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v68/webdriverwindows-release-68.zap</url>
+        <hash>SHA-256:0c76840aae90f940386925bed6b2afabb2d4965fcb09e8e527bd271b894c57e6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>18085388</size>
+        <date>2024-01-03</date>
+        <size>18085401</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
