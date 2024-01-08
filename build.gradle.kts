@@ -16,9 +16,11 @@ import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateAndCreatePullRequestAddOnRelease
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
+import org.zaproxy.gradle.UpdateGettingStartedWebsitePage
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateZapVersionWebsiteData
 import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
+import java.util.Optional
 
 plugins {
     java
@@ -282,6 +284,18 @@ val generateWebsitePages by tasks.registering(GenerateWebsitePages::class) {
     outputDir.set(layout.buildDirectory.dir("websiteHelpPages"))
 }
 
+val updateGettingStartedWebsitePage by tasks.registering(UpdateGettingStartedWebsitePage::class) {
+    addOn.set(
+        downloadReleasedAddOns.map {
+            var files = fileTree(it.outputDir).matching { include("gettingStarted*.zap") }.files
+            if (files.isEmpty()) Optional.empty() else Optional.of(files.first())
+        },
+    )
+    filenameRegex.set("ZAPGettingStartedGuide-.+\\.pdf")
+    gettingStartedPage.set(file("$siteDir/content/getting-started/index.md"))
+    pdfDirectory.set(file("$siteDir/static/pdf/"))
+}
+
 val generateWebsiteSbomPages by tasks.registering(GenerateWebsiteSbomPages::class) {
     releaseState.set(releaseStateData)
     zapVersions.set(latestZapVersions)
@@ -315,8 +329,13 @@ updateZapVersionWebsiteData {
     mustRunAfter(copyWebsiteGeneratedData)
 }
 
+updateGettingStartedWebsitePage {
+    mustRunAfter(copyWebsiteGeneratedData)
+}
+
 val updateWebsite by tasks.registering(CreatePullRequest::class) {
     dependsOn(copyWebsiteGeneratedData)
+    dependsOn(updateGettingStartedWebsitePage)
     dependsOn(updateZapVersionWebsiteData)
 
     user.set(ghUser)
