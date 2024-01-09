@@ -26,9 +26,8 @@ import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -48,13 +47,9 @@ public class WebsiteSbomPageGenerator {
             throws Exception {
         PageFrontMatter frontMatter = new PageFrontMatter("sbom", pageTitle, 1);
         JsonNode bomJson = MAPPER.readTree(bomPath.toFile());
-        List<PageFrontMatter.SbomDataComponent> resultComponents = new ArrayList<>();
+        Set<PageFrontMatter.SbomDataComponent> resultComponents = new TreeSet<>();
         var componentsJsonArray = (ArrayNode) bomJson.get("components");
-        List<JsonNode> sortedComponentsList =
-                StreamSupport.stream(componentsJsonArray.spliterator(), false)
-                        .sorted(Comparator.comparing(jsonNode -> jsonNode.get("name").asText()))
-                        .collect(Collectors.toList());
-        for (JsonNode component : sortedComponentsList) {
+        for (JsonNode component : componentsJsonArray) {
             resultComponents.add(
                     new PageFrontMatter.SbomDataComponent(
                             component.get("name").asText(),
