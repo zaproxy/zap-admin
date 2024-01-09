@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.snakeyaml.engine.v2.api.Dump;
 import org.snakeyaml.engine.v2.api.DumpSettings;
 import org.snakeyaml.engine.v2.api.RepresentToNode;
@@ -114,9 +115,9 @@ class PageFrontMatter {
     static class SbomData {
         private final String bomFormat;
         private final String downloadUrl;
-        private final List<SbomDataComponent> components;
+        private final Set<SbomDataComponent> components;
 
-        SbomData(String bomFormat, String downloadUrl, List<SbomDataComponent> components) {
+        SbomData(String bomFormat, String downloadUrl, Set<SbomDataComponent> components) {
             this.bomFormat = bomFormat;
             this.downloadUrl = downloadUrl;
             this.components = components;
@@ -130,12 +131,12 @@ class PageFrontMatter {
             return downloadUrl;
         }
 
-        public List<SbomDataComponent> getComponents() {
+        public Set<SbomDataComponent> getComponents() {
             return components;
         }
     }
 
-    static class SbomDataComponent {
+    static class SbomDataComponent implements Comparable<SbomDataComponent> {
         private final String name;
         private final String version;
         private final String licenses;
@@ -157,6 +158,19 @@ class PageFrontMatter {
 
         public String getLicenses() {
             return licenses;
+        }
+
+        @Override
+        public int compareTo(SbomDataComponent o) {
+            int result = name.compareTo(o.name);
+            if (result != 0) {
+                return result;
+            }
+            result = version.compareTo(o.version);
+            if (result != 0) {
+                return result;
+            }
+            return licenses.compareTo(o.licenses);
         }
     }
 
