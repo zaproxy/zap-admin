@@ -2560,23 +2560,19 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.16.0</version>
-        <file>selenium-release-15.16.0.zap</file>
+        <version>15.17.0</version>
+        <file>selenium-release-15.17.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.15.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add vertical scroll bar to the options panel to prevent the options from being hidden when resizing the Options dialogue (Issue 8178).&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.16.0/selenium-release-15.16.0.zap</url>
-        <hash>SHA-256:9fd420a8ab11572d8a6b95505b16d0880f7349ba119cbbd7cf480dbd7e7e4621</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.17.0/selenium-release-15.17.0.zap</url>
+        <hash>SHA-256:2002eb417f750123feb249d91e7d48ded7463228eb0ced603513974ab9b2f818</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-10</date>
-        <size>31658081</size>
+        <date>2024-01-18</date>
+        <size>31487082</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
