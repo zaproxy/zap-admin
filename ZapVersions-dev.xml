@@ -131,54 +131,28 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>60</version>
-        <file>ascanrules-release-60.zap</file>
+        <version>61</version>
+        <file>ascanrules-release-61.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Leave data empty instead of adding &amp;quot;N/A&amp;quot; for the scan rules:
-&lt;ul&gt;
-&lt;li&gt;Cross Site Scripting (Persistent) - Prime&lt;/li&gt;
-&lt;li&gt;Cross Site Scripting (Persistent) - Spider&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Update reference for Server Side Code Injection (Issue 8262).&lt;/li&gt;
-&lt;li&gt;Now depends on minimum Common Library version 1.21.0.&lt;/li&gt;
+&lt;li&gt;Update reference for Server Side Include (Issue 8262)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Threshold handling in the Hidden File Finder scan rule.&lt;/li&gt;
-&lt;li&gt;Improved the following scan rules by using time-based linear regression tests:
+&lt;li&gt;False positives on redirects for:
 &lt;ul&gt;
-&lt;li&gt;Server Side Template Injection (Blind)&lt;/li&gt;
-&lt;li&gt;SQL Injection - Hypersonic SQL&lt;/li&gt;
-&lt;li&gt;SQL Injection - MsSQL&lt;/li&gt;
-&lt;li&gt;SQL Injection - MySQL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Help entry for the Spring Actuators scan rule (missed during previous promotion).&lt;/li&gt;
-&lt;li&gt;Website alert links to the help page (Issue 8189).&lt;/li&gt;
-&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119) and in some cases updated references (Issue 8262).
-&lt;ul&gt;
-&lt;li&gt;CRLF Injection&lt;/li&gt;
-&lt;li&gt;Remote OS Command Injection&lt;/li&gt;
-&lt;li&gt;GET for POST&lt;/li&gt;
-&lt;li&gt;ELMAH Information Leak&lt;/li&gt;
-&lt;li&gt;.env Information Leak&lt;/li&gt;
-&lt;li&gt;.htaccess Information Leak&lt;/li&gt;
-&lt;li&gt;Trace.axd Information Leak&lt;/li&gt;
+&lt;li&gt;Cloud Metadata (Issue 7710)&lt;/li&gt;
+&lt;li&gt;Hidden Files&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v60/ascanrules-release-60.zap</url>
-        <hash>SHA-256:b65d4c64753c4891ee8a79432ec5e884493c55c849f4e17a6c41b9b2cd545214</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v61/ascanrules-release-61.zap</url>
+        <hash>SHA-256:d4da0e3df9985b439833987ad5515f27d7ce8a2110b1bcc6cb6b6431921b6525</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>3279485</size>
+        <date>2024-01-24</date>
+        <size>3279826</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2919,19 +2893,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>69</version>
-        <file>webdriverlinux-release-69.zap</file>
+        <version>70</version>
+        <file>webdriverlinux-release-70.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.34.0. Previous version included 0.33.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 121.0.6167.85.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v69/webdriverlinux-release-69.zap</url>
-        <hash>SHA-256:6d12ff0b40a65c43a96c868db3a15944a9b899c660297a09c3df0125be0d7940</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v70/webdriverlinux-release-70.zap</url>
+        <hash>SHA-256:0ca532c378a2b0eaf10be513f5026d82aef29bf15c62bd4b4019e25f6cc40220</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-03</date>
-        <size>17981066</size>
+        <date>2024-01-24</date>
+        <size>17969025</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2939,19 +2913,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>69</version>
-        <file>webdrivermacos-release-69.zap</file>
+        <version>70</version>
+        <file>webdrivermacos-release-70.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.34.0. Previous version included 0.33.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 121.0.6167.85.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v69/webdrivermacos-release-69.zap</url>
-        <hash>SHA-256:47b695779afa8e71131fb26039fbaa70697b5e8deaa8a596d4b5c75191ca6546</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v70/webdrivermacos-release-70.zap</url>
+        <hash>SHA-256:65c6926fb111fed3b1bd26728bf9ef841b277de40382c5c12c15af6d0bb77d76</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-03</date>
-        <size>20818666</size>
+        <date>2024-01-24</date>
+        <size>20784691</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2959,19 +2933,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>69</version>
-        <file>webdriverwindows-release-69.zap</file>
+        <version>70</version>
+        <file>webdriverwindows-release-70.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update geckodriver to 0.34.0. Previous version included 0.33.0.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 121.0.6167.85.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v69/webdriverwindows-release-69.zap</url>
-        <hash>SHA-256:7b4ecc0356f8499769285f5dea99036eec6df1ac962eec0ba443f9056737c851</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v70/webdriverwindows-release-70.zap</url>
+        <hash>SHA-256:c5a4b707161dd7c35feaf23d2b0c1bff267ddd586270e2b214b1891811b3473c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-03</date>
-        <size>18399434</size>
+        <date>2024-01-24</date>
+        <size>19613288</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
