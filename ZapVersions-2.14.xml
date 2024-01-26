@@ -131,28 +131,19 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>61</version>
-        <file>ascanrules-release-61.zap</file>
+        <version>62</version>
+        <file>ascanrules-release-62.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update reference for Server Side Include (Issue 8262)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;False positives on redirects for:
-&lt;ul&gt;
-&lt;li&gt;Cloud Metadata (Issue 7710)&lt;/li&gt;
-&lt;li&gt;Hidden Files&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The Source Code Disclosure - /WEB-INF Folder rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v61/ascanrules-release-61.zap</url>
-        <hash>SHA-256:d4da0e3df9985b439833987ad5515f27d7ce8a2110b1bcc6cb6b6431921b6525</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v62/ascanrules-release-62.zap</url>
+        <hash>SHA-256:d6d8ff8c6036aba752786d2013b04a960a62bc0162d6c95dd1ea73de81fdb91e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-24</date>
-        <size>3279826</size>
+        <date>2024-01-26</date>
+        <size>3280154</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -176,31 +167,26 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>45</version>
-        <file>ascanrulesAlpha-alpha-45.zap</file>
+        <version>46</version>
+        <file>ascanrulesAlpha-alpha-46.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Move MongoDB time based tests to its own scan rule, NoSQL Injection - MongoDB (Time Based) with ID 90039 (Issue 7341).&lt;/li&gt;
 &lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Add website alert links to the help page (Issue 8189).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix time-based false positives in NoSQL Injection - MongoDB scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v45/ascanrulesAlpha-alpha-45.zap</url>
-        <hash>SHA-256:8186168bfb816c7efdbb07989461cb5730621a92a497561e36908049dc01ef0e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v46/ascanrulesAlpha-alpha-46.zap</url>
+        <hash>SHA-256:17202f0e556bf9fa75f9161fd3dde897fdad8c0419641a9e8b0d11a54ed9609b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>390845</size>
+        <date>2024-01-26</date>
+        <size>394880</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.20.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.22.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -210,25 +196,32 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>49</version>
-        <file>ascanrulesBeta-beta-49.zap</file>
+        <version>50</version>
+        <file>ascanrulesBeta-beta-50.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Update references for Expression Language Injection and HTTP Parameter Pollution (Issue 8262).&lt;/li&gt;
-&lt;li&gt;The Source Code Disclosure - SVN scan rule includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;li&gt;References for the following scan rules were updated (Issue 8262):
 &lt;ul&gt;
-&lt;li&gt;Help entry for the Spring Actuators scan rule (missed during previous removal/promotion).&lt;/li&gt;
+&lt;li&gt;Exponential Entity Expansion (Billion Laughs Attack)&lt;/li&gt;
+&lt;li&gt;Relative Path Confusion&lt;/li&gt;
+&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
+&lt;li&gt;Remote Code Execution - Shell Shock&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
+&lt;ul&gt;
+&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
+&lt;li&gt;Remote Code Execution - Shell Shock (it now also uses Alert Refs (Issue 7100))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v49/ascanrulesBeta-beta-49.zap</url>
-        <hash>SHA-256:6ddae5f9e9c90fab7c81e4f15e76aa050913d84b729ae2203c1e87e7c5822a27</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v50/ascanrulesBeta-beta-50.zap</url>
+        <hash>SHA-256:a7cf0a9f16493b21387eb7ec5ad630ae51c8de1bfc7d12a85caaa3b309be06dc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>1739035</size>
+        <date>2024-01-26</date>
+        <size>1739680</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -591,24 +584,19 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.21.0</version>
-        <file>commonlib-release-1.21.0.zap</file>
+        <version>1.22.0</version>
+        <file>commonlib-release-1.22.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add solution to 'Server Misconfiguration' and 'Application Misconfiguration' vulnerabilities (Issue 8056).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update Vulnerabilities' references to use https links and retire some which were out-dated (Issue 8262).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Add alert tag for scan rules that use time based tests.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.21.0/commonlib-release-1.21.0.zap</url>
-        <hash>SHA-256:ef032287106e12c20b151115b43d73cf268294a859e8dd4ff5d6b99f12acf524</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.22.0/commonlib-release-1.22.0.zap</url>
+        <hash>SHA-256:5f88c3a00cb118790e96ee801f7f305ead8c199a827b3293c1effc1a7db13e18</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>10793045</size>
+        <date>2024-01-26</date>
+        <size>10793000</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1838,23 +1826,23 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>38</version>
-        <file>openapi-beta-38.zap</file>
+        <version>39</version>
+        <file>openapi-beta-39.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;An issue in the headers generator which might lead to content-type header being incorrectly set.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v38/openapi-beta-38.zap</url>
-        <hash>SHA-256:58988bd550a98130f306a6efbcd349581b7a2cd4b27aa85af5217c3132221c50</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v39/openapi-beta-39.zap</url>
+        <hash>SHA-256:9f4eec172dc3dd32052eee670854afbbd12a3b61269beebaa0329b358621a1c9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-23</date>
-        <size>13848523</size>
+        <date>2024-01-26</date>
+        <size>13941067</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2098,58 +2086,46 @@
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>54</version>
-        <file>pscanrules-release-54.zap</file>
+        <version>55</version>
+        <file>pscanrules-release-55.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Big Redirect scan rule will now also alert on responses that have multiple HREFs (idea from xnl-h4ck3r).&lt;/li&gt;
-&lt;li&gt;The references for the following scan rules are now all HTTPS (Issue 8262) and in some cases updated:
+&lt;li&gt;The Salvation2 library used by the CSP scan rule has been replaced by htmlunit-csp.&lt;/li&gt;
+&lt;li&gt;The following rules now include example alert functionality for documentation generation purposes (Issue 6119):
 &lt;ul&gt;
-&lt;li&gt;Loosely Scoped Cookie&lt;/li&gt;
-&lt;li&gt;Charset Mismatch&lt;/li&gt;
-&lt;li&gt;Strict-Transport-Security Header&lt;/li&gt;
-&lt;li&gt;Content Security Policy (CSP) Header Not Set&lt;/li&gt;
-&lt;li&gt;CSP&lt;/li&gt;
-&lt;li&gt;Session ID in URL Rewrite&lt;/li&gt;
-&lt;li&gt;HTTP Server Response Header&lt;/li&gt;
-&lt;li&gt;Cookie Poisoning&lt;/li&gt;
-&lt;li&gt;User Controllable HTML Element Attribute (Potential XSS)&lt;/li&gt;
-&lt;li&gt;X-Content-Type-Options Header Missing&lt;/li&gt;
-&lt;li&gt;Content-Type Header Missing&lt;/li&gt;
-&lt;li&gt;Server Leaks Information via &amp;quot;X-Powered-By&amp;quot; HTTP Response Header Field(s)&lt;/li&gt;
+&lt;li&gt;HTTPS to HTTP Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;HTTP to HTTPS Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;Secure Pages Include Mixed Content&lt;/li&gt;
+&lt;li&gt;User Controllable JavaScript Event (XSS)&lt;/li&gt;
+&lt;li&gt;Cookie without SameSite Attribute&lt;/li&gt;
+&lt;li&gt;X-Debug-Token Information Leak&lt;/li&gt;
 &lt;li&gt;Retrieved from Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;The Absence of Anti-CSRF Tokens scan rule now takes into account the Partial Match settings from the Anti-CSRF Options (Issue 8280).&lt;/li&gt;
-&lt;li&gt;On Non-LOW threshold, PII Scan rule only evaluates HTML, JSON and XML responses (Issue 8264).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The following rules now include example alert functionality for documentation generation and cross linking purposes (Issues 6119, and 8189).
+&lt;li&gt;The following scan rules now have alert references (Issue 7100):
 &lt;ul&gt;
-&lt;li&gt;Big Redirect&lt;/li&gt;
-&lt;li&gt;Information Disclosure: Debug Errors&lt;/li&gt;
-&lt;li&gt;Information Disclosure: In URL&lt;/li&gt;
-&lt;li&gt;Information Disclosure: Referrer&lt;/li&gt;
-&lt;li&gt;Cookie Poisoning&lt;/li&gt;
-&lt;li&gt;User Controllable Charset&lt;/li&gt;
-&lt;li&gt;Open Redirect&lt;/li&gt;
-&lt;li&gt;User Controllable HTML Element Attribute (Potential XSS)&lt;/li&gt;
-&lt;li&gt;Heartbleed OpenSSL Vulnerability (Indicative)&lt;/li&gt;
-&lt;li&gt;Strict-Transport-Security Header&lt;/li&gt;
-&lt;li&gt;Server Leaks Information via &amp;quot;X-Powered-By&amp;quot; HTTP Response Header Field(s)&lt;/li&gt;
-&lt;li&gt;X-Content-Type-Options Header Missing&lt;/li&gt;
-&lt;li&gt;Content-Type Header Missing&lt;/li&gt;
+&lt;li&gt;Cookie without SameSite Attribute&lt;/li&gt;
+&lt;li&gt;Retrieved from Cache (raw text was also trimmed from one Alert reference (Issue 8262))&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;The CWE for the Cookie Poisoning scan rule was updated to a more specific one.&lt;/li&gt;
-&lt;li&gt;The Strict-Transport-Security Header and Big Redirect scan rules now use alert references for their different types of alerts (Issue 7100).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An issue where Other Info on alerts for the following rules may have been hard to read (missing spaces or new lines):
+&lt;ul&gt;
+&lt;li&gt;HTTPS to HTTP Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;HTTP to HTTPS Insecure Transition in Form Post&lt;/li&gt;
+&lt;li&gt;User Controllable JavaScript Event (XSS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v54/pscanrules-release-54.zap</url>
-        <hash>SHA-256:32d97b36a344b2f57572523f25d78494a508aae32fc727bdb38ff5e81c3a32a4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v55/pscanrules-release-55.zap</url>
+        <hash>SHA-256:9f33849866f0d1893d1c3459a25f292e675497b0d92250d068d631cbedcd5434</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>1868648</size>
+        <date>2024-01-26</date>
+        <size>1859979</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2534,19 +2510,19 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.17.0</version>
-        <file>selenium-release-15.17.0.zap</file>
+        <version>15.18.0</version>
+        <file>selenium-release-15.18.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.16.1.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.17.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.17.0/selenium-release-15.17.0.zap</url>
-        <hash>SHA-256:2002eb417f750123feb249d91e7d48ded7463228eb0ced603513974ab9b2f818</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.18.0/selenium-release-15.18.0.zap</url>
+        <hash>SHA-256:32eea6ed408c37b0c4edf9d39de06d47408486e638cab5e79acc142049add735</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-18</date>
-        <size>31487082</size>
+        <date>2024-01-26</date>
+        <size>31558250</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2623,20 +2599,23 @@
         <name>Spider</name>
         <description>Spider used for automatically finding URIs on a site.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>spider-release-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>spider-release-0.9.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handle multiple &amp;quot;Link&amp;quot; HTTP Response headers.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The sitemap.xml parser will now accept and process a greater range of possible file content (Issue 8299).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.8.0/spider-release-0.8.0.zap</url>
-        <hash>SHA-256:d34817e760a4faf6fbeb3a8a264c6662df537e82dceeab10e088ed69fc6fe7c5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.9.0/spider-release-0.9.0.zap</url>
+        <hash>SHA-256:8f5863ee4b5c36199cd5cda6b4871b40e566f413b4d0ac13d7e99f70dce83747</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>1150808</size>
+        <date>2024-01-26</date>
+        <size>1150320</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
