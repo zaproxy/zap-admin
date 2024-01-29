@@ -604,33 +604,28 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>17</version>
-        <file>communityScripts-alpha-17.zap</file>
+        <version>18</version>
+        <file>communityScripts-alpha-18.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;targeted/SQLMapCommandGenerator.js - it will generate and copy sqlmap command based on the request&lt;/li&gt;
-&lt;li&gt;encode-decode/JwtDecode.js - Decodes JWTs&lt;/li&gt;
+&lt;li&gt;httpsender/RsaSigningForZap.py - A script that signs requests using RSA&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0:
-&lt;ul&gt;
-&lt;li&gt;Remove compatibility code that provided the singletons (&lt;code&gt;control&lt;/code&gt; and &lt;code&gt;model&lt;/code&gt;) in JavaScript scripts, they can now be accessed directly always.&lt;/li&gt;
-&lt;li&gt;Use provided singletons (&lt;code&gt;control&lt;/code&gt; and &lt;code&gt;model&lt;/code&gt;) in Python scripts.&lt;/li&gt;
-&lt;li&gt;Use non-deprecated &lt;code&gt;HttpSender&lt;/code&gt; constructor.&lt;/li&gt;
-&lt;li&gt;extender/Simple Reverse Proxy.js - replace usage of deprecated core classes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Remove statements that return the message in HTTP Sender scripts, the message passed as parameter is used/sent always.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Remove checks for CFU initiator in HTTP Sender scripts and docs, no longer needed.&lt;/li&gt;
+&lt;li&gt;Rename AWS signing script.&lt;/li&gt;
+&lt;li&gt;Update descriptions/comments in scripts.&lt;/li&gt;
+&lt;li&gt;standalone/Open Fortune 500 websites in a browser.zst - Fix typo in &lt;code&gt;http://www,pbfenergy.com&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v17/communityScripts-alpha-17.zap</url>
-        <hash>SHA-256:58110bdd68defdb3610886e37d4a4e46e99cbe60370d5299f5ee398762ef524d</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v18/communityScripts-alpha-18.zap</url>
+        <hash>SHA-256:2bc83a772178e32debbdaae6a95b454af1ac8acbc278547856d9a1e39e5a2763</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2023-06-28</date>
-        <size>460543</size>
-        <not-before-version>2.12.0</not-before-version>
+        <date>2024-01-29</date>
+        <size>461243</size>
+        <not-before-version>2.14.0</not-before-version>
     </addon_communityScripts>
     <addon>coreLang</addon>
     <addon_coreLang>
