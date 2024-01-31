@@ -21,6 +21,7 @@ package org.zaproxy.gradle;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -40,16 +41,16 @@ final class TaskUtils {
     private static final String HTTPS_SCHEME = "HTTPS";
     private static final String ADD_ON_EXTENSION = ".zap";
 
-    static Path downloadAddOn(Task task, String urlString) throws IOException {
+    static Path downloadAddOn(Task task, String urlString) throws Exception {
         return downloadAddOn(task, urlString, task.getTemporaryDir().toPath());
     }
 
-    static Path downloadAddOn(Task task, String urlString, Path outputDir) throws IOException {
+    static Path downloadAddOn(Task task, String urlString, Path outputDir) throws Exception {
         return downloadFile(task, urlString, outputDir.resolve(extractFileName(urlString)));
     }
 
-    static Path downloadFile(Task task, String urlString, Path outputFile) throws IOException {
-        URL url = new URL(urlString);
+    static Path downloadFile(Task task, String urlString, Path outputFile) throws Exception {
+        URL url = new URI(urlString).toURL();
         if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
             throw new IllegalArgumentException(
                     "The provided URL does not use HTTPS scheme: " + url.getProtocol());

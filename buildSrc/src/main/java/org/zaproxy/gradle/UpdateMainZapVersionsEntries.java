@@ -21,6 +21,7 @@ package org.zaproxy.gradle;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -105,13 +106,13 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
 
         String finalBaseDownloadUrl = replaceVersionTokens(getBaseDownloadUrl().get());
         try {
-            URL url = new URL(finalBaseDownloadUrl);
+            URL url = new URI(finalBaseDownloadUrl).toURL();
             if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
                 throw new IllegalArgumentException(
                         "The provided download URL does not use HTTPS scheme: "
                                 + url.getProtocol());
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new IllegalArgumentException(
                     "Failed to parse the download URL: " + e.getMessage(), e);
         }
@@ -167,7 +168,7 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
                 .replace(VERSION_UNDERSCORES_TOKEN, versionUnderscores);
     }
 
-    private ReleaseFile createReleaseFile(String keyPrefix, String url) throws IOException {
+    private ReleaseFile createReleaseFile(String keyPrefix, String url) throws Exception {
         Path file = downloadFile(url);
         return new ReleaseFile(
                 keyPrefix,
@@ -181,8 +182,8 @@ public abstract class UpdateMainZapVersionsEntries extends AbstractUpdateZapVers
         return baseUrl + replaceVersionTokens(name);
     }
 
-    private Path downloadFile(String urlString) throws IOException {
-        URL url = new URL(urlString);
+    private Path downloadFile(String urlString) throws Exception {
+        URL url = new URI(urlString).toURL();
         if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
             throw new IllegalArgumentException(
                     "The provided URL does not use HTTPS scheme: " + url.getProtocol());

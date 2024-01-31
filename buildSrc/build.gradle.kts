@@ -8,14 +8,10 @@ repositories {
     mavenCentral()
 }
 
-val javaVersion = JavaVersion.VERSION_11
-java {
-    sourceCompatibility = javaVersion
-    targetCompatibility = javaVersion
-}
-
-kotlin {
-    jvmToolchain(11)
+tasks.withType<JavaCompile>().configureEach {
+    if (JavaVersion.current().getMajorVersion() >= "21") {
+       options.compilerArgs = options.compilerArgs + "-Xlint:-this-escape"
+    }
 }
 
 dependencies {

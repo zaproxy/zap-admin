@@ -66,12 +66,6 @@ val copyZapVersions = tasks.create<Copy>("copyZapVersions") {
     include("ZapVersions*.xml")
 }
 
-java {
-    val javaVersion = JavaVersion.VERSION_11
-    sourceCompatibility = javaVersion
-    targetCompatibility = javaVersion
-}
-
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }

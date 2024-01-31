@@ -20,6 +20,7 @@
 package org.zaproxy.gradle;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -115,13 +116,13 @@ public abstract class UpdateAddOnZapVersionsEntries extends AbstractUpdateZapVer
         }
 
         try {
-            URL url = new URL(downloadUrl.get());
+            URL url = new URI(downloadUrl.get()).toURL();
             if (!TaskUtils.hasSecureScheme(url)) {
                 throw new IllegalArgumentException(
                         "The provided download URL does not use HTTPS scheme: "
                                 + url.getProtocol());
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new IllegalArgumentException(
                     "Failed to parse the download URL: " + e.getMessage(), e);
         }
@@ -129,7 +130,7 @@ public abstract class UpdateAddOnZapVersionsEntries extends AbstractUpdateZapVer
         updateAddOn(getAddOn(), getDownloadUrl().get(), getReleaseDate().get());
     }
 
-    private Path getAddOn() throws IOException {
+    private Path getAddOn() throws Exception {
         if (getFromFile().isPresent()) {
             Path addOn = getFromFile().getAsFile().get().toPath();
             if (!Files.isRegularFile(addOn)) {

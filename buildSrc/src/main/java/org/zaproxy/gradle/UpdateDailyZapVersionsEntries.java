@@ -21,6 +21,7 @@ package org.zaproxy.gradle;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -126,7 +127,7 @@ public abstract class UpdateDailyZapVersionsEntries extends AbstractUpdateZapVer
         return fileName.substring(beginIdx, endIdx);
     }
 
-    private Path getReleaseFile() throws IOException {
+    private Path getReleaseFile() throws Exception {
         if (getFrom().isPresent()) {
             Path release = getFrom().getAsFile().get().toPath();
             if (!Files.isRegularFile(release)) {
@@ -142,7 +143,7 @@ public abstract class UpdateDailyZapVersionsEntries extends AbstractUpdateZapVer
         }
 
         String urlString = getFromUrl().get();
-        URL url = new URL(urlString);
+        URL url = new URI(urlString).toURL();
         if (!HTTPS_SCHEME.equalsIgnoreCase(url.getProtocol())) {
             throw new IllegalArgumentException(
                     "The provided URL does not use HTTPS scheme: " + url.getProtocol());
