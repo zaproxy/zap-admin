@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -323,8 +325,8 @@ public class WebsitePageGenerator {
                             String newSourceUrl = contentsDir + "/" + href;
 
                             try {
-                                to = addSourcePage(new URL(newSourceUrl));
-                            } catch (MalformedURLException e) {
+                                to = addSourcePage(new URI(newSourceUrl).toURL());
+                            } catch (URISyntaxException | MalformedURLException e) {
                                 throw new WebsitePageGenerationException(
                                         "Failed to create URL from: " + newSourceUrl);
                             }

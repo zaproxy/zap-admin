@@ -73,7 +73,7 @@ public abstract class GenerateWebsiteSbomPages extends DefaultTask {
             Path bomPath = getTemporaryDir().toPath().resolve(addOnId + ".cdx.json");
             try {
                 TaskUtils.downloadFile(this, bomUrl, bomPath);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 getLogger().warn(e.getMessage(), e);
                 continue;
             }

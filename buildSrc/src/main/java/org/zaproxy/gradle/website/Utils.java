@@ -19,7 +19,7 @@
  */
 package org.zaproxy.gradle.website;
 
-import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.util.Locale;
 import java.util.regex.Pattern;
@@ -86,8 +86,9 @@ final class Utils {
 
     static URL createUrlFor(URL file, String path) {
         try {
-            return new URL(file, path);
-        } catch (MalformedURLException e) {
+            var resolved = new URI(file.getPath()).resolve(path);
+            return new URI(file.getProtocol(), resolved.toASCIIString(), null).toURL();
+        } catch (Exception e) {
             throw new WebsitePageGenerationException(
                     "Failed to create the URL with " + file + " and " + path, e);
         }
