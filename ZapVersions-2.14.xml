@@ -267,25 +267,24 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>authhelper-beta-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>authhelper-beta-0.12.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Dropped &amp;quot;to Clipboard&amp;quot; from ZAP copy menu items or buttons (Issue 8179).&lt;/li&gt;
-&lt;li&gt;Update cookies in header based session management, to cope with apps that set them via JavaScript.&lt;/li&gt;
+&lt;li&gt;Handle traditional apps better in authentication detection dialog.&lt;/li&gt;
+&lt;li&gt;Make cookies set in auth request available to header based session management.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Read the user details from the session rather than the individual messages, which could cause an NPE.&lt;/li&gt;
+&lt;li&gt;Correct HTTP field names shown in diagnostic data.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.11.0/authhelper-beta-0.11.0.zap</url>
-        <hash>SHA-256:eaf63db338c89c8aed4bb716f7600f4f18b7063fdb678473ddf5da36e51bd558</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.12.0/authhelper-beta-0.12.0.zap</url>
+        <hash>SHA-256:ad7f6f0e1a03dbda503603660224e66b3fca88438ccfe28a818140442af9a934</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-10</date>
-        <size>813857</size>
+        <date>2024-02-06</date>
+        <size>812379</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
