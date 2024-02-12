@@ -131,19 +131,23 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>62</version>
-        <file>ascanrules-release-62.zap</file>
+        <version>63</version>
+        <file>ascanrules-release-63.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Source Code Disclosure - /WEB-INF Folder rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The SQL Injection scan rule now includes a MySQL/MariaDB generic error message.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v62/ascanrules-release-62.zap</url>
-        <hash>SHA-256:d6d8ff8c6036aba752786d2013b04a960a62bc0162d6c95dd1ea73de81fdb91e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v63/ascanrules-release-63.zap</url>
+        <hash>SHA-256:f5ed0715da63a023af2ff83931df1de3c84530d0051833cec80523cc73a46740</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>3280154</size>
+        <date>2024-02-12</date>
+        <size>3280078</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2168,20 +2172,23 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>36</version>
-        <file>pscanrulesBeta-beta-36.zap</file>
+        <version>37</version>
+        <file>pscanrulesBeta-beta-37.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;The Source Code Disclosure rule no longer considers responses that contain ISO control characters (those which are likely to be binary file types) (Issue 8191).&lt;/li&gt;
+&lt;li&gt;Website alert links (Issue 8189).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v36/pscanrulesBeta-beta-36.zap</url>
-        <hash>SHA-256:eaf4c04e4af32b5d594faf97a457af945b03254456ac449e5b6f9853b9dfae1c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v37/pscanrulesBeta-beta-37.zap</url>
+        <hash>SHA-256:58dc13cdb8ff693d8bf9f866be6a5e653a6fc3b521ad715b190fd013b65c20d5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>667777</size>
+        <date>2024-02-12</date>
+        <size>668776</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2296,24 +2303,22 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.28.0</version>
-        <file>reports-release-0.28.0.zap</file>
+        <version>0.29.0</version>
+        <file>reports-release-0.29.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Default to same dir as plan if none specified.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ensure the Sections' options are fully shown always in Generate Report Dialog (Issue 8259).&lt;/li&gt;
-&lt;li&gt;Replace env vars in URL when used for report file name.&lt;/li&gt;
+&lt;li&gt;Error message to give report name.&lt;/li&gt;
+&lt;li&gt;Issues with illegal XML characters in pdf reports (Issue 8330).&lt;/li&gt;
+&lt;li&gt;Corrected pdf report href from #olugin to #plugin.&lt;/li&gt;
+&lt;li&gt;Deprecated syntax in risk-confidence report.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.28.0/reports-release-0.28.0.zap</url>
-        <hash>SHA-256:2e99913f5e66774ee36daa8541ad445c197e9184d06dc8ac28a6e991272ad623</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.29.0/reports-release-0.29.0.zap</url>
+        <hash>SHA-256:760c9a20c901438e66fd20fa4502fccae527fe1921c23afd5a1cdf4ca727a5e0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>14752717</size>
+        <date>2024-02-12</date>
+        <size>14754597</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2386,20 +2391,23 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.30.0</version>
-        <file>retire-release-0.30.0.zap</file>
+        <version>0.31.0</version>
+        <file>retire-release-0.31.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Now only targets relevant responses (HTML and JS).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Website alert links (Issue 8189).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.30.0/retire-release-0.30.0.zap</url>
-        <hash>SHA-256:40f5ee6d7cd3a977e931b5af796f7316f461b0b13988bb78f698b0ff2389da7b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.31.0/retire-release-0.31.0.zap</url>
+        <hash>SHA-256:26d014ed767410d3281f0c5f3ef97a1e7de098164e146d1e0cdb1c9e8dce6358</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-29</date>
-        <size>984237</size>
+        <date>2024-02-12</date>
+        <size>984385</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2481,23 +2489,27 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>44</version>
-        <file>scripts-release-44.zap</file>
+        <version>45.0.0</version>
+        <file>scripts-release-45.0.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Rename &amp;quot;Script Console&amp;quot; in the Options panel list to &amp;quot;Console&amp;quot;.&lt;/li&gt;
+&lt;li&gt;The scan rule functionality of scripts was moved from the ZAP core to this add-on (Related to Issue 7105).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prevent GUI initialization in daemon mode when installing the add-on.&lt;/li&gt;
+&lt;li&gt;The save button was not enabled for new scripts upon creation.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v44/scripts-release-44.zap</url>
-        <hash>SHA-256:01690b34cb95c625f7e9757b45a898fc23d020be4e2ddc88dcc1b01c8a0d430d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.0.0/scripts-release-45.0.0.zap</url>
+        <hash>SHA-256:9d90586fe097e47383da0c2d90eac97b79d8a28a31f7884548b415f6db84a91a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>878910</size>
+        <date>2024-02-12</date>
+        <size>892456</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_scripts>
     <addon>selenium</addon>
@@ -2594,23 +2606,26 @@
         <name>Spider</name>
         <description>Spider used for automatically finding URIs on a site.</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>spider-release-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>spider-release-0.10.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
+&lt;li&gt;Skip parsing of empty SVGs.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Setting &amp;quot;Query Parameters Handling&amp;quot; via automation framework should now be more forgiving as to the case of the values (enums).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The sitemap.xml parser will now accept and process a greater range of possible file content (Issue 8299).&lt;/li&gt;
+&lt;li&gt;Ensure issues in one parser don't break the whole parsing process.&lt;/li&gt;
+&lt;li&gt;Fix exception that happened with absolute dotted URLs in inlined content.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.9.0/spider-release-0.9.0.zap</url>
-        <hash>SHA-256:8f5863ee4b5c36199cd5cda6b4871b40e566f413b4d0ac13d7e99f70dce83747</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.10.0/spider-release-0.10.0.zap</url>
+        <hash>SHA-256:d1e87efd56ad55efb727827398c8345f4d0d3f9af5e99fb50615520e6aa6d3e2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>1150320</size>
+        <date>2024-02-12</date>
+        <size>1150781</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
