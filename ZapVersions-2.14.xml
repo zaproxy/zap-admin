@@ -200,32 +200,35 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>50</version>
-        <file>ascanrulesBeta-beta-50.zap</file>
+        <version>51</version>
+        <file>ascanrulesBeta-beta-51.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;References for the following scan rules were updated (Issue 8262):
-&lt;ul&gt;
-&lt;li&gt;Exponential Entity Expansion (Billion Laughs Attack)&lt;/li&gt;
-&lt;li&gt;Relative Path Confusion&lt;/li&gt;
-&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
-&lt;li&gt;Remote Code Execution - Shell Shock&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
 &lt;ul&gt;
-&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
-&lt;li&gt;Remote Code Execution - Shell Shock (it now also uses Alert Refs (Issue 7100))&lt;/li&gt;
+&lt;li&gt;Backup File Disclosure&lt;/li&gt;
+&lt;li&gt;Httpoxy - Proxy Header Misuse&lt;/li&gt;
+&lt;li&gt;Anti-CSRF Tokens Check&lt;/li&gt;
+&lt;li&gt;HTTP Parameter Pollution&lt;/li&gt;
+&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Alerts from the HTTP Parameter Pollution scan rule are now raised with Low confidence.&lt;/li&gt;
+&lt;li&gt;Updated reference for scan rules (Issue 8262):
+&lt;ul&gt;
+&lt;li&gt;Session Fixation&lt;/li&gt;
+&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add website alert links to the help page (Issue 8189).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v50/ascanrulesBeta-beta-50.zap</url>
-        <hash>SHA-256:a7cf0a9f16493b21387eb7ec5ad630ae51c8de1bfc7d12a85caaa3b309be06dc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v51/ascanrulesBeta-beta-51.zap</url>
+        <hash>SHA-256:bbff102e43fa96e4ee74bcb2ca657faff8720def2be979b52790a5673a0165b5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>1739680</size>
+        <date>2024-02-16</date>
+        <size>1742652</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2083,46 +2086,46 @@
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>55</version>
-        <file>pscanrules-release-55.zap</file>
+        <version>56</version>
+        <file>pscanrules-release-56.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The Salvation2 library used by the CSP scan rule has been replaced by htmlunit-csp.&lt;/li&gt;
+&lt;li&gt;Website alert links for Passive Scan Rules (Issue 8189).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;li&gt;The following rules now include example alert functionality for documentation generation purposes (Issue 6119):
 &lt;ul&gt;
-&lt;li&gt;HTTPS to HTTP Insecure Transition in Form Post&lt;/li&gt;
-&lt;li&gt;HTTP to HTTPS Insecure Transition in Form Post&lt;/li&gt;
-&lt;li&gt;Secure Pages Include Mixed Content&lt;/li&gt;
-&lt;li&gt;User Controllable JavaScript Event (XSS)&lt;/li&gt;
-&lt;li&gt;Cookie without SameSite Attribute&lt;/li&gt;
-&lt;li&gt;X-Debug-Token Information Leak&lt;/li&gt;
-&lt;li&gt;Retrieved from Cache&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure - Unix&lt;/li&gt;
+&lt;li&gt;Hash Disclosure&lt;/li&gt;
+&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
+&lt;li&gt;Weak Authentication Method&lt;/li&gt;
+&lt;li&gt;Reverse Tabnabbing&lt;/li&gt;
+&lt;li&gt;CSRF Countermeasures&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;The following scan rules now have alert references (Issue 7100):
 &lt;ul&gt;
-&lt;li&gt;Cookie without SameSite Attribute&lt;/li&gt;
-&lt;li&gt;Retrieved from Cache (raw text was also trimmed from one Alert reference (Issue 8262))&lt;/li&gt;
+&lt;li&gt;Weak Authentication Method&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;li&gt;The references for Alerts from the following rules were also updated (Issue 8262):
 &lt;ul&gt;
-&lt;li&gt;An issue where Other Info on alerts for the following rules may have been hard to read (missing spaces or new lines):
-&lt;ul&gt;
-&lt;li&gt;HTTPS to HTTP Insecure Transition in Form Post&lt;/li&gt;
-&lt;li&gt;HTTP to HTTPS Insecure Transition in Form Post&lt;/li&gt;
-&lt;li&gt;User Controllable JavaScript Event (XSS)&lt;/li&gt;
+&lt;li&gt;Timestamp Disclosure - Unix&lt;/li&gt;
+&lt;li&gt;Hash Disclosure&lt;/li&gt;
+&lt;li&gt;View State Scan Rule&lt;/li&gt;
+&lt;li&gt;Weak Authentication Method&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v55/pscanrules-release-55.zap</url>
-        <hash>SHA-256:9f33849866f0d1893d1c3459a25f292e675497b0d92250d068d631cbedcd5434</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v56/pscanrules-release-56.zap</url>
+        <hash>SHA-256:8f9c82d703908dc3ee06bd43222babbcd6d0dd0336b8343608baaa51f961c614</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>1859979</size>
+        <date>2024-02-16</date>
+        <size>1864022</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
