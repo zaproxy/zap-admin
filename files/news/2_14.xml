@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>46</id>
+        <id>47</id>
         <default>
-            <item>Please fill in the ZAP User Personas Questionnaire</item>
-            <link>https://docs.google.com/forms/d/e/1FAIpQLScOW2Evb7Sj9dbj6Gw19TG3k49BJU5amgBDcRkeyL9qg13m-w/viewform</link>
+            <item>Are you interested in ZAP Professional Services?</item>
+            <link>https://www.zaproxy.org/blog/2024-02-19-zap-professional-services/</link>
         </default>
     </news>
 </ZAP>
