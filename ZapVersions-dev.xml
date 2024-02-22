@@ -1112,19 +1112,28 @@
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.22.0</version>
-        <file>graphql-alpha-0.22.0.zap</file>
+        <version>0.23.0</version>
+        <file>graphql-alpha-0.23.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fingerprinting check for the GraphQL.NET engine.&lt;/li&gt;
+&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
+&lt;li&gt;Website alert links to the help page (Issue 8189).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix graphql parameter injection in URL query.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.22.0/graphql-alpha-0.22.0.zap</url>
-        <hash>SHA-256:cfdf5c43d29ce4e916612a0e07bb800968126184ae6ce5331c23968c4b786c40</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.23.0/graphql-alpha-0.23.0.zap</url>
+        <hash>SHA-256:328c6d93d0497e414b9d661a5ad7d2ceb285b70abfc77260984b0341004a1c1b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>5431463</size>
+        <date>2024-02-22</date>
+        <size>5433142</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2520,19 +2529,20 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.18.0</version>
-        <file>selenium-release-15.18.0.zap</file>
+        <version>15.19.0</version>
+        <file>selenium-release-15.19.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.17.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.18.1.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.18.0/selenium-release-15.18.0.zap</url>
-        <hash>SHA-256:32eea6ed408c37b0c4edf9d39de06d47408486e638cab5e79acc142049add735</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.19.0/selenium-release-15.19.0.zap</url>
+        <hash>SHA-256:4016e757848f8df1605c6c0405a1a9888bb46362fb17b3c174e68dfebf01def0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>31558250</size>
+        <date>2024-02-22</date>
+        <size>31729199</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2885,19 +2895,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>70</version>
-        <file>webdriverlinux-release-70.zap</file>
+        <version>71</version>
+        <file>webdriverlinux-release-71.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 121.0.6167.85.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 122.0.6261.57.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v70/webdriverlinux-release-70.zap</url>
-        <hash>SHA-256:0ca532c378a2b0eaf10be513f5026d82aef29bf15c62bd4b4019e25f6cc40220</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v71/webdriverlinux-release-71.zap</url>
+        <hash>SHA-256:f17a5057316d9d52f4378e83c3b3fef181fef0818e6b3187361a0a965d0ed6b7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-24</date>
-        <size>17969025</size>
+        <date>2024-02-22</date>
+        <size>17945277</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2905,19 +2915,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>70</version>
-        <file>webdrivermacos-release-70.zap</file>
+        <version>71</version>
+        <file>webdrivermacos-release-71.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 121.0.6167.85.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 122.0.6261.57.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v70/webdrivermacos-release-70.zap</url>
-        <hash>SHA-256:65c6926fb111fed3b1bd26728bf9ef841b277de40382c5c12c15af6d0bb77d76</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v71/webdrivermacos-release-71.zap</url>
+        <hash>SHA-256:b1951a542f4c893ddf408b1769ec5653b21ac2dd8729de9900c4dfc9951ee6e2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-24</date>
-        <size>20784691</size>
+        <date>2024-02-22</date>
+        <size>20738475</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2925,19 +2935,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>70</version>
-        <file>webdriverwindows-release-70.zap</file>
+        <version>71</version>
+        <file>webdriverwindows-release-71.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 121.0.6167.85.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 122.0.6261.57.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v70/webdriverwindows-release-70.zap</url>
-        <hash>SHA-256:c5a4b707161dd7c35feaf23d2b0c1bff267ddd586270e2b214b1891811b3473c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v71/webdriverwindows-release-71.zap</url>
+        <hash>SHA-256:e703f6d89d8f8a8d4e9233a3b50e2f424fda12e466758fbb38f837788d122cc0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-24</date>
-        <size>19613288</size>
+        <date>2024-02-22</date>
+        <size>19634871</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
