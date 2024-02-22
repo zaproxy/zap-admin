@@ -1758,24 +1758,37 @@
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>network-beta-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>network-beta-0.14.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;On weekly releases and versions after 2.14, handle content encodings and add &lt;code&gt;br&lt;/code&gt; content encoding on supported OSes (Issue 2198).&lt;/li&gt;
+&lt;li&gt;Notify proxy listeners concurrently, might break listeners that do not correctly handle concurrency.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove legacy options panels that helped the user find the new options panels:
+&lt;ul&gt;
+&lt;li&gt;Client Certificate&lt;/li&gt;
+&lt;li&gt;Connection&lt;/li&gt;
+&lt;li&gt;Dynamic SSL Certificates&lt;/li&gt;
+&lt;li&gt;Local Proxies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handle cookies like browsers, mostly send what is received (Issues 1232 and 7874).&lt;/li&gt;
-&lt;li&gt;Do not set content-length to SSE responses, which would end up being closed prematurely.&lt;/li&gt;
+&lt;li&gt;Accept rate limit rule's group by in lower case, when handling the API requests.&lt;/li&gt;
+&lt;li&gt;Prevent configuration of the outgoing HTTP/SOCKS Proxy with the address of one of the Local Servers/Proxies, as it would lead to unintended request loops (Issue 5308).&lt;/li&gt;
+&lt;li&gt;Fix exception while proxying NTLM authentication (Issue 7685).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.13.0/network-beta-0.13.0.zap</url>
-        <hash>SHA-256:51080cc44cf05dd88932244bb4ccd3d73b74d1f33b331e735482d2f31586488d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.14.0/network-beta-0.14.0.zap</url>
+        <hash>SHA-256:487043a1742e4084ebb08b4789423171fc407ed53fca595044bc6fd036607ffd</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-17</date>
-        <size>28089230</size>
+        <date>2024-02-22</date>
+        <size>28109000</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
