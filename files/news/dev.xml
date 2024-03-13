@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>47</id>
+        <id>48</id>
         <default>
-            <item>Are you interested in ZAP Professional Services?</item>
-            <link>https://www.zaproxy.org/blog/2024-02-19-zap-professional-services/</link>
+            <item>BIG ZAP funding announcement!</item>
+            <link>https://www.zaproxy.org/blog/2024-03-13-zap-funding-and-the-open-source-fellowship/</link>
         </default>
     </news>
 </ZAP>
