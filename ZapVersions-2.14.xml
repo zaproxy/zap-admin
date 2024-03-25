@@ -41,28 +41,29 @@
         <name>Access Control Testing</name>
         <description>Adds a set of tools for testing access control in web applications.</description>
         <author>ZAP Dev Team</author>
-        <version>9</version>
-        <file>accessControl-alpha-9.zap</file>
+        <version>10</version>
+        <file>accessControl-alpha-10.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add OWASP Top 10 tags to the alerts raised.&lt;/li&gt;
-&lt;li&gt;The add-on now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
-&lt;li&gt;Depend on Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Use vulnerability data directly from Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Link website alert pages and help (Issues 8189).&lt;/li&gt;
+&lt;li&gt;The results table now presents the same context menu as other similar tables (History, Search, etc) facilitating copying URLs, etc (Issue 8356).&lt;/li&gt;
+&lt;li&gt;Now has a table export button (Issue 8356).&lt;/li&gt;
+&lt;li&gt;Adjusted some labels/titles to use title caps (Issue 2000 &amp;amp; 8356).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Now uses the General Font (Issue 8356), as set in the Display options.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v9/accessControl-alpha-9.zap</url>
-        <hash>SHA-256:a3a3f34f62a9f5061b7601d85c6b961deebe2f8deec4a6302d220aa5bf17fbd6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v10/accessControl-alpha-10.zap</url>
+        <hash>SHA-256:8e068a789650cd31a5a4592cf57af3dbcb04b98f6fcd20bf752889c3843cbce8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/access-control-testing/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-08</date>
-        <size>595517</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2024-03-25</date>
+        <size>597028</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -131,23 +132,28 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>63</version>
-        <file>ascanrules-release-63.zap</file>
+        <version>64</version>
+        <file>ascanrules-release-64.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
 &lt;ul&gt;
-&lt;li&gt;The SQL Injection scan rule now includes a MySQL/MariaDB generic error message.&lt;/li&gt;
+&lt;li&gt;Source Code Disclosure - CVE-2012-1823&lt;/li&gt;
+&lt;li&gt;Remote Code Execution - CVE-2012-1823&lt;/li&gt;
+&lt;li&gt;Server Side Include&lt;/li&gt;
+&lt;li&gt;Cross Site Scripting (Reflected)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Alerts from the Remote Code Execution - CVE-2012-1823 scan rule no longer have evidence duplicated in the Other Info field.&lt;/li&gt;
+&lt;li&gt;The GET for POST scan rule now uses a different comparison mechanism which should be more tolerant of unrelated response differences.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v63/ascanrules-release-63.zap</url>
-        <hash>SHA-256:f5ed0715da63a023af2ff83931df1de3c84530d0051833cec80523cc73a46740</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v64/ascanrules-release-64.zap</url>
+        <hash>SHA-256:c16cbfd6697b01810f0dec6b7aca9bcb95ea03825973a7601dd28be2d33b2546</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-02-12</date>
-        <size>3280078</size>
+        <date>2024-03-25</date>
+        <size>3281396</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -200,35 +206,31 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>ascanrulesBeta-beta-51.zap</file>
+        <version>52</version>
+        <file>ascanrulesBeta-beta-52.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Updated reference for scan rule: Possible Username Enumeration (Issue 8262)&lt;/li&gt;
+&lt;li&gt;Cookie Slack Detector scan rule now has a more specific CWE.&lt;/li&gt;
+&lt;li&gt;Possible Username Enumeration scan rule now includes CWE-204 as a reference link.&lt;/li&gt;
 &lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
 &lt;ul&gt;
-&lt;li&gt;Backup File Disclosure&lt;/li&gt;
-&lt;li&gt;Httpoxy - Proxy Header Misuse&lt;/li&gt;
-&lt;li&gt;Anti-CSRF Tokens Check&lt;/li&gt;
-&lt;li&gt;HTTP Parameter Pollution&lt;/li&gt;
-&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
+&lt;li&gt;Relative Path Confusion&lt;/li&gt;
+&lt;li&gt;Integer Overflow Error&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Alerts from the HTTP Parameter Pollution scan rule are now raised with Low confidence.&lt;/li&gt;
-&lt;li&gt;Updated reference for scan rules (Issue 8262):
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Session Fixation&lt;/li&gt;
-&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Add website alert links to the help page (Issue 8189).&lt;/li&gt;
+&lt;li&gt;Removed HTTP only reference for scan rule: Integer Overflow Error (Issue 8262)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v51/ascanrulesBeta-beta-51.zap</url>
-        <hash>SHA-256:bbff102e43fa96e4ee74bcb2ca657faff8720def2be979b52790a5673a0165b5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v52/ascanrulesBeta-beta-52.zap</url>
+        <hash>SHA-256:2bfae785be1d8b77e3b0759fc57871236a5f9a633627a72353abe3ee799a566c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-02-16</date>
-        <size>1742652</size>
+        <date>2024-03-25</date>
+        <size>1743235</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -341,33 +343,38 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.35.0</version>
-        <file>automation-beta-0.35.0.zap</file>
+        <version>0.36.0</version>
+        <file>automation-beta-0.36.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Video links in help for Automation Framework jobs.&lt;/li&gt;
+&lt;li&gt;Support for upstream proxy in environment (Issue 8360).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to include techs in a context.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Cut down env data when generating min template.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Show method and URL when outputting the status code mismatch of &lt;code&gt;requestor&lt;/code&gt; job.&lt;/li&gt;
+&lt;li&gt;Correct parsing of attack strength and alert threshold in some locales.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.35.0/automation-beta-0.35.0.zap</url>
-        <hash>SHA-256:49e42e66b225434b527047bdd24bea8077d298dac2dbbc240c3b813f3b16b41d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.36.0/automation-beta-0.36.0.zap</url>
+        <hash>SHA-256:c8d38b88691621dc69dcc405fca596527ab4e3fc7741a6fae87d37e673ef17fa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>1744787</size>
+        <date>2024-03-25</date>
+        <size>1749866</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
                     <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;= 0.15.0 &amp; &lt; 1.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -589,19 +596,24 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.22.0</version>
-        <file>commonlib-release-1.22.0.zap</file>
+        <version>1.23.0</version>
+        <file>commonlib-release-1.23.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add alert tag for scan rules that use time based tests.&lt;/li&gt;
+&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
+&lt;li&gt;Add solution to HTTP Response Smuggling alert (Issue 8056)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.22.0/commonlib-release-1.22.0.zap</url>
-        <hash>SHA-256:5f88c3a00cb118790e96ee801f7f305ead8c199a827b3293c1effc1a7db13e18</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.23.0/commonlib-release-1.23.0.zap</url>
+        <hash>SHA-256:3aac455fccf683881206ea16d2f9627dd96bc98f2f251c3ba2322982d1690933</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>10793000</size>
+        <date>2024-03-25</date>
+        <size>10794781</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -2228,25 +2240,19 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>44</version>
-        <file>quickstart-release-44.zap</file>
+        <version>45</version>
+        <file>quickstart-release-45.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support panel.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Dropped &amp;quot;to Clipboard&amp;quot; from ZAP copy menu items and buttons (Issue 8179).&lt;/li&gt;
-&lt;li&gt;Panels to include OSF image and link.&lt;/li&gt;
+&lt;li&gt;Tweaked OSF sponsorship links.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v44/quickstart-release-44.zap</url>
-        <hash>SHA-256:f0f5c1ceea7003ba04bc70c4761d1cced8f035febf3dc40cb3375d0a5d00750a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v45/quickstart-release-45.zap</url>
+        <hash>SHA-256:7ed57852979e95b6002a1221615f788659175f766e4a51e5bc89bc423f5f0327</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-13</date>
-        <size>765783</size>
+        <date>2024-03-25</date>
+        <size>765685</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2333,19 +2339,24 @@
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.30.0</version>
-        <file>reports-release-0.30.0.zap</file>
+        <version>0.31.0</version>
+        <file>reports-release-0.31.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added OSF sponsorship line to reports.&lt;/li&gt;
+&lt;li&gt;Tweaked OSF sponsorship links.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Handle alerts without HTTP message gracefully (Issue 6880).&lt;/li&gt;
+&lt;li&gt;More issues with illegal XML characters in pdf reports (Issue 8330).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.30.0/reports-release-0.30.0.zap</url>
-        <hash>SHA-256:4faf1e5a1e5c46677a483723413bc362e60ee24be53179f6674aa028f4824d64</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.31.0/reports-release-0.31.0.zap</url>
+        <hash>SHA-256:f18cc9a82dcaf7bb13fed678b8f92256f28201acfa77acb85e107e8a25f84882</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-13</date>
-        <size>14755461</size>
+        <date>2024-03-25</date>
+        <size>14759803</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2361,25 +2372,34 @@
         <name>Requester</name>
         <description>Allows to manually edit and send messages.</description>
         <author>Surikato and the ZAP Dev Team</author>
-        <version>7.4.0</version>
-        <file>requester-beta-7.4.0.zap</file>
+        <version>7.5.0</version>
+        <file>requester-beta-7.5.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Option to manipulate Host header.&lt;/li&gt;
+&lt;li&gt;Button to lowercase request header names (Issue 8176).&lt;/li&gt;
+&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Manual request dialog to be opened with selected message on CTRL-M (Issue 8365)&lt;/li&gt;
+&lt;li&gt;Manual request dialog to be used instead of a separate Resend dialog.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v7.4.0/requester-beta-7.4.0.zap</url>
-        <hash>SHA-256:239a281a7f9c0c1d86c2a3b886d40ca0046e0b02ad1b82ce44e7cf2174f3ef78</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v7.5.0/requester-beta-7.5.0.zap</url>
+        <hash>SHA-256:c0998121e21977c8ba0cd8b0257a4263c455e9566347184a0f287ad3ec0269ce</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/requester/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>732769</size>
+        <date>2024-03-25</date>
+        <size>756987</size>
         <not-before-version>2.14.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.23.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_requester>
     <addon>retest</addon>
     <addon_retest>
@@ -2516,28 +2536,32 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.0.0</version>
-        <file>scripts-release-45.0.0.zap</file>
+        <version>45.1.0</version>
+        <file>scripts-release-45.1.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The scan rule functionality of scripts was moved from the ZAP core to this add-on (Related to Issue 7105).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The save button was not enabled for new scripts upon creation.&lt;/li&gt;
+&lt;li&gt;Propagate script errors to the Automation Framework when running them.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.0.0/scripts-release-45.0.0.zap</url>
-        <hash>SHA-256:9d90586fe097e47383da0c2d90eac97b79d8a28a31f7884548b415f6db84a91a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.1.0/scripts-release-45.1.0.zap</url>
+        <hash>SHA-256:ab0fe0986439c7a33deb628e9a4bb3700e7cfeb2cf2efb7b4bc0cf3a11725bf4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-02-12</date>
-        <size>892456</size>
+        <date>2024-03-25</date>
+        <size>892892</size>
         <not-before-version>2.14.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.23.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_scripts>
     <addon>selenium</addon>
     <addon_selenium>
@@ -2605,20 +2629,25 @@
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>21</version>
-        <file>soap-beta-21.zap</file>
+        <version>22</version>
+        <file>soap-beta-22.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use empty values as defined by the Value Generator configuration (Issue 8202).&lt;/li&gt;
-&lt;li&gt;Correct generation of values for &lt;code&gt;date&lt;/code&gt; and &lt;code&gt;dateTime&lt;/code&gt;, it would fail with warnings in previous versions.&lt;/li&gt;
+&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Link website alert pages and help (Issue 8189).&lt;/li&gt;
+&lt;li&gt;Updated Alerts' reference links (Issue 8262).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v21/soap-beta-21.zap</url>
-        <hash>SHA-256:01f9c2145edc93e7201930d73b27fce4bd6792cc5ce11af7bf8048f03ca67445</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v22/soap-beta-22.zap</url>
+        <hash>SHA-256:97e774addc0b3ebdaa5cde6236d65ae6b2b647ecaeb6fe6e0ff8fd3734e9e3f9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>12846321</size>
+        <date>2024-03-25</date>
+        <size>12848881</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
