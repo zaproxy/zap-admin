@@ -132,28 +132,19 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>64</version>
-        <file>ascanrules-release-64.zap</file>
+        <version>65</version>
+        <file>ascanrules-release-65.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
-&lt;ul&gt;
-&lt;li&gt;Source Code Disclosure - CVE-2012-1823&lt;/li&gt;
-&lt;li&gt;Remote Code Execution - CVE-2012-1823&lt;/li&gt;
-&lt;li&gt;Server Side Include&lt;/li&gt;
-&lt;li&gt;Cross Site Scripting (Reflected)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The Alerts from the Remote Code Execution - CVE-2012-1823 scan rule no longer have evidence duplicated in the Other Info field.&lt;/li&gt;
-&lt;li&gt;The GET for POST scan rule now uses a different comparison mechanism which should be more tolerant of unrelated response differences.&lt;/li&gt;
+&lt;li&gt;Change link to use HTTPS in other info of SQL Injection - SQLite (Issue 8262).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v64/ascanrules-release-64.zap</url>
-        <hash>SHA-256:c16cbfd6697b01810f0dec6b7aca9bcb95ea03825973a7601dd28be2d33b2546</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v65/ascanrules-release-65.zap</url>
+        <hash>SHA-256:84b91ad0dc613838ab57b5f78fb091d63026cef77c2bf223ea68e97fa05b4181</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-25</date>
-        <size>3281396</size>
+        <date>2024-03-28</date>
+        <size>3281175</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -177,20 +168,19 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>46</version>
-        <file>ascanrulesAlpha-alpha-46.zap</file>
+        <version>47</version>
+        <file>ascanrulesAlpha-alpha-47.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Move MongoDB time based tests to its own scan rule, NoSQL Injection - MongoDB (Time Based) with ID 90039 (Issue 7341).&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;References for the LDAP Injection scan rule's Alerts were updated (Issue 8262).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v46/ascanrulesAlpha-alpha-46.zap</url>
-        <hash>SHA-256:17202f0e556bf9fa75f9161fd3dde897fdad8c0419641a9e8b0d11a54ed9609b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v47/ascanrulesAlpha-alpha-47.zap</url>
+        <hash>SHA-256:a526c2f7b7e38153440a8f8c96a9c7a3343aa43cd9a3018ff15762e0e9fb79c8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-26</date>
-        <size>394880</size>
+        <date>2024-03-28</date>
+        <size>394839</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -206,31 +196,19 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>52</version>
-        <file>ascanrulesBeta-beta-52.zap</file>
+        <version>53</version>
+        <file>ascanrulesBeta-beta-53.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated reference for scan rule: Possible Username Enumeration (Issue 8262)&lt;/li&gt;
-&lt;li&gt;Cookie Slack Detector scan rule now has a more specific CWE.&lt;/li&gt;
-&lt;li&gt;Possible Username Enumeration scan rule now includes CWE-204 as a reference link.&lt;/li&gt;
-&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
-&lt;ul&gt;
-&lt;li&gt;Relative Path Confusion&lt;/li&gt;
-&lt;li&gt;Integer Overflow Error&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Removed HTTP only reference for scan rule: Integer Overflow Error (Issue 8262)&lt;/li&gt;
+&lt;li&gt;Change links to use HTTPS in other info of Insecure HTTP Method (Issue 8262).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v52/ascanrulesBeta-beta-52.zap</url>
-        <hash>SHA-256:2bfae785be1d8b77e3b0759fc57871236a5f9a633627a72353abe3ee799a566c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v53/ascanrulesBeta-beta-53.zap</url>
+        <hash>SHA-256:719db8dba4c3f3bec0360e55c46105910fb44aa6c1b97eb6ac00277a0a8c5151</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-25</date>
-        <size>1743235</size>
+        <date>2024-03-28</date>
+        <size>1743045</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -343,28 +321,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.36.0</version>
-        <file>automation-beta-0.36.0.zap</file>
+        <version>0.37.0</version>
+        <file>automation-beta-0.37.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for upstream proxy in environment (Issue 8360).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Cut down env data when generating min template.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct parsing of attack strength and alert threshold in some locales.&lt;/li&gt;
+&lt;li&gt;Allow to use variables composed of multiple variables.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.36.0/automation-beta-0.36.0.zap</url>
-        <hash>SHA-256:c8d38b88691621dc69dcc405fca596527ab4e3fc7741a6fae87d37e673ef17fa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.37.0/automation-beta-0.37.0.zap</url>
+        <hash>SHA-256:5a75642fd27e67528259555dce021c557d405f1e5e402c29c46108dcc3347374</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-25</date>
-        <size>1749866</size>
+        <date>2024-03-28</date>
+        <size>1750162</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2103,46 +2072,25 @@
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>56</version>
-        <file>pscanrules-release-56.zap</file>
+        <version>57</version>
+        <file>pscanrules-release-57.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Website alert links for Passive Scan Rules (Issue 8189).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;li&gt;Use of HTTP for example URLs in the descriptions or other info details for the following rules have been updated to HTTPS (Issue 8262):
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The following rules now include example alert functionality for documentation generation purposes (Issue 6119):
-&lt;ul&gt;
-&lt;li&gt;Timestamp Disclosure - Unix&lt;/li&gt;
-&lt;li&gt;Hash Disclosure&lt;/li&gt;
-&lt;li&gt;Cross-Domain Misconfiguration&lt;/li&gt;
-&lt;li&gt;Weak Authentication Method&lt;/li&gt;
-&lt;li&gt;Reverse Tabnabbing&lt;/li&gt;
-&lt;li&gt;CSRF Countermeasures&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The following scan rules now have alert references (Issue 7100):
-&lt;ul&gt;
-&lt;li&gt;Weak Authentication Method&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The references for Alerts from the following rules were also updated (Issue 8262):
-&lt;ul&gt;
-&lt;li&gt;Timestamp Disclosure - Unix&lt;/li&gt;
-&lt;li&gt;Hash Disclosure&lt;/li&gt;
-&lt;li&gt;View State Scan Rule&lt;/li&gt;
-&lt;li&gt;Weak Authentication Method&lt;/li&gt;
+&lt;li&gt;Cookie Poisoning&lt;/li&gt;
+&lt;li&gt;Open Redirect&lt;/li&gt;
+&lt;li&gt;X-Debug-Token Information Leak&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v56/pscanrules-release-56.zap</url>
-        <hash>SHA-256:8f9c82d703908dc3ee06bd43222babbcd6d0dd0336b8343608baaa51f961c614</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v57/pscanrules-release-57.zap</url>
+        <hash>SHA-256:8506bb08f6fc4be1794b66c4035f93370522c4c628e350cc2a881a7a3c778e74</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-02-16</date>
-        <size>1864022</size>
+        <date>2024-03-28</date>
+        <size>1863892</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2551,23 +2499,35 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.19.0</version>
-        <file>selenium-release-15.19.0.zap</file>
+        <version>15.20.0</version>
+        <file>selenium-release-15.20.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.18.1.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Support for menu weights (Issue 8369).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update Selenium to version 4.19.0.&lt;/li&gt;
+&lt;li&gt;Update HtmlUnit to major version 3.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A typo on the intro page in the add-on's help.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.19.0/selenium-release-15.19.0.zap</url>
-        <hash>SHA-256:4016e757848f8df1605c6c0405a1a9888bb46362fb17b3c174e68dfebf01def0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.20.0/selenium-release-15.20.0.zap</url>
+        <hash>SHA-256:a29fb51129726bc676bc35a5d0185806bdfee86cdad61f027ae644d1b5501343</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-02-22</date>
-        <size>31729199</size>
+        <date>2024-03-28</date>
+        <size>32197548</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.23.0</version>
+                </addon>
                 <addon>
                     <id>network</id>
                     <version>&gt;=0.2.0</version>
@@ -2894,20 +2854,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.32.0</version>
-        <file>wappalyzer-release-21.32.0.zap</file>
+        <version>21.33.0</version>
+        <file>wappalyzer-release-21.33.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.32.0/wappalyzer-release-21.32.0.zap</url>
-        <hash>SHA-256:ed2176c7a0ead84b89cfd5a6cedff1064fb1a85b5a35afda1aaed84f2742f246</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.33.0/wappalyzer-release-21.33.0.zap</url>
+        <hash>SHA-256:16509985abee1cbb2b8b38aac1a33f83a277a1053c6fe0c9034ddbc7233265ba</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-04</date>
-        <size>12749679</size>
+        <date>2024-03-28</date>
+        <size>12803037</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2923,19 +2882,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>76</version>
-        <file>webdriverlinux-release-76.zap</file>
+        <version>77</version>
+        <file>webdriverlinux-release-77.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.58.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 123.0.6312.86.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v76/webdriverlinux-release-76.zap</url>
-        <hash>SHA-256:3e9ef4f73db08c652a071da0974f74a3d85515ea1a3fd04042fd8719ee1be47d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v77/webdriverlinux-release-77.zap</url>
+        <hash>SHA-256:0d5c1f137bb526c6eb21400fa55980e96686e4bb2009b5820b5621691c732fd9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-21</date>
-        <size>17894687</size>
+        <date>2024-03-28</date>
+        <size>17970903</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2943,19 +2902,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>76</version>
-        <file>webdrivermacos-release-76.zap</file>
+        <version>77</version>
+        <file>webdrivermacos-release-77.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.58.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 123.0.6312.86.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v76/webdrivermacos-release-76.zap</url>
-        <hash>SHA-256:683d3718be1d0d78fd38d90baba614f1080f9bb1e68a046b43c3e9642c8adc96</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v77/webdrivermacos-release-77.zap</url>
+        <hash>SHA-256:ebbdd9ca33a0248a4cfda25375f573db322089dd4a9e06b51b7de1d1a9b4fe2f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-21</date>
-        <size>21841682</size>
+        <date>2024-03-28</date>
+        <size>21846274</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2963,19 +2922,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>76</version>
-        <file>webdriverwindows-release-76.zap</file>
+        <version>77</version>
+        <file>webdriverwindows-release-77.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.58.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 123.0.6312.86.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v76/webdriverwindows-release-76.zap</url>
-        <hash>SHA-256:7100c63d9ba0b6af09d495c17a10baff8d669744d24f09d24464d7ec31641602</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v77/webdriverwindows-release-77.zap</url>
+        <hash>SHA-256:d99d1a3e6589c5248e614c4b7a7553f74143b18a6bd22dda13332b9b24389658</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-21</date>
-        <size>19883085</size>
+        <date>2024-03-28</date>
+        <size>19885752</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
