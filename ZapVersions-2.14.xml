@@ -78,27 +78,24 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>19</version>
-        <file>alertFilters-release-19.zap</file>
+        <version>20</version>
+        <file>alertFilters-release-20.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to filter by alert reference (Issue 7438).&lt;/li&gt;
-&lt;li&gt;Allow to specify custom IDs through the GUI.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Do not fail to import or load a context with invalid alert filters.&lt;/li&gt;
-&lt;li&gt;Incorrect warning about 'Unrecognised parameter' for deleteGlobalAlerts.&lt;/li&gt;
-&lt;li&gt;Persist context filter data.&lt;/li&gt;
+&lt;li&gt;Reword label in the automation job to prevent any confusion between the Alert Filters and the Alerts.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v19/alertFilters-release-19.zap</url>
-        <hash>SHA-256:e96f38d0053b0de191b879ae88c0547367adb4939e2f4789c9e7f1d9766b9777</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v20/alertFilters-release-20.zap</url>
+        <hash>SHA-256:c4d8b0590f17b16c1eb0fcab877220bcec6ca396323d5ff23c25daa84788d335</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-16</date>
-        <size>556902</size>
+        <date>2024-04-02</date>
+        <size>561146</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_alertFilters>
     <addon>allinonenotes</addon>
@@ -2043,19 +2040,23 @@
         <name>Postman Support</name>
         <description>Imports and spiders Postman collections.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>postman-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>postman-alpha-0.3.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Automation support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct deserialization of item groups (Issue 8400).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.2.0/postman-alpha-0.2.0.zap</url>
-        <hash>SHA-256:91375f5a8e196cb8c9ec550c8845c2bff5c274021d83e5bf894876faf266ad6b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.3.0/postman-alpha-0.3.0.zap</url>
+        <hash>SHA-256:b4338c0c54cfd99d1f8b1477bc853f07af225810e546b58ade7c33148564e898</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/postman-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>238827</size>
+        <date>2024-04-02</date>
+        <size>250100</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2368,23 +2369,19 @@
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.33.0</version>
-        <file>retire-release-0.33.0.zap</file>
+        <version>0.34.0</version>
+        <file>retire-release-0.34.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Version matching was improved to address some false positives (Issue 8384 &amp;amp; 8398).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.33.0/retire-release-0.33.0.zap</url>
-        <hash>SHA-256:938283810f070652ad337ad33cfb2f5753a072e4214beb8ec7441c2602795b74</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.34.0/retire-release-0.34.0.zap</url>
+        <hash>SHA-256:dfe1e0f8d252f0ef27fb2f9db95ee4e4ea184b18f9f443f610de886b01d914dd</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-21</date>
-        <size>986956</size>
+        <date>2024-04-02</date>
+        <size>987181</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2498,28 +2495,19 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.20.0</version>
-        <file>selenium-release-15.20.0.zap</file>
+        <version>15.21.0</version>
+        <file>selenium-release-15.21.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for menu weights (Issue 8369).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.19.0.&lt;/li&gt;
-&lt;li&gt;Update HtmlUnit to major version 3.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A typo on the intro page in the add-on's help.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.19.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.20.0/selenium-release-15.20.0.zap</url>
-        <hash>SHA-256:a29fb51129726bc676bc35a5d0185806bdfee86cdad61f027ae644d1b5501343</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.21.0/selenium-release-15.21.0.zap</url>
+        <hash>SHA-256:b04ecb5b673ee2082d16050ec1ead9c227703663e33f4cdab1381a209f143933</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-28</date>
-        <size>32197548</size>
+        <date>2024-04-02</date>
+        <size>32361613</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
