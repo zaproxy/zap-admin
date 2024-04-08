@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>48</id>
+        <id>49</id>
         <default>
-            <item>BIG ZAP funding announcement!</item>
-            <link>https://www.zaproxy.org/blog/2024-03-13-zap-funding-and-the-open-source-fellowship/</link>
+            <item>ZAP Professional Services are now available!</item>
+            <link>https://www.zaproxy.org/blog/2024-04-08-zap-professional-services/</link>
         </default>
     </news>
 </ZAP>
