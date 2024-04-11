@@ -318,19 +318,47 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.37.0</version>
-        <file>automation-beta-0.37.0.zap</file>
+        <version>0.38.0</version>
+        <file>automation-beta-0.38.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to use variables composed of multiple variables.&lt;/li&gt;
+&lt;li&gt;Correctly expose all information in the &lt;code&gt;planProgress&lt;/code&gt; API view (Issue 8433). This might break existing clients as the format has changed.
+&lt;ul&gt;
+&lt;li&gt;JSON changed to, e.g.:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="language-json"&gt;{
+  &amp;quot;warn&amp;quot; : [ ],
+  &amp;quot;planId&amp;quot; : 0,
+  &amp;quot;started&amp;quot; : &amp;quot;2024-04-08T00:00:00.615Z&amp;quot;,
+  &amp;quot;finished&amp;quot; : &amp;quot;2024-04-08T00:00:00.702Z&amp;quot;,
+  &amp;quot;error&amp;quot; : [ ],
+  &amp;quot;info&amp;quot; : [ &amp;quot;Job requestor started&amp;quot;, &amp;quot;Job requestor finished, time taken: 00:00:00&amp;quot; ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;XML changed to, e.g.:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="language-xml"&gt; &amp;lt;planProgress type=&amp;quot;set&amp;quot;&amp;gt;
+   &amp;lt;planId&amp;gt;0&amp;lt;/planId&amp;gt;
+   &amp;lt;started&amp;gt;2024-04-08T00:00:00.615Z&amp;lt;/started&amp;gt;
+   &amp;lt;finished&amp;gt;2024-04-08T00:00:00.702Z&amp;lt;/finished&amp;gt;
+   &amp;lt;info type=&amp;quot;list&amp;quot;&amp;gt;
+     &amp;lt;message&amp;gt;Job requestor started&amp;lt;/message&amp;gt;
+     &amp;lt;message&amp;gt;Job requestor finished, time taken: 00:00:00&amp;lt;/message&amp;gt;
+   &amp;lt;/info&amp;gt;
+   &amp;lt;warn type=&amp;quot;list&amp;quot;/&amp;gt;
+   &amp;lt;error type=&amp;quot;list&amp;quot;/&amp;gt;
+ &amp;lt;/planProgress&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.37.0/automation-beta-0.37.0.zap</url>
-        <hash>SHA-256:5a75642fd27e67528259555dce021c557d405f1e5e402c29c46108dcc3347374</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.38.0/automation-beta-0.38.0.zap</url>
+        <hash>SHA-256:8831d83d24dd41aebadbe43b0bb8123c1749e4096c540bf9fa229cd6abe7e3d6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-28</date>
-        <size>1750162</size>
+        <date>2024-04-11</date>
+        <size>1749990</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -562,24 +590,19 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.23.0</version>
-        <file>commonlib-release-1.23.0.zap</file>
+        <version>1.24.0</version>
+        <file>commonlib-release-1.24.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
-&lt;li&gt;Add solution to HTTP Response Smuggling alert (Issue 8056)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Helper classes for scripts used as scan-rules (Issue 7105).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.23.0/commonlib-release-1.23.0.zap</url>
-        <hash>SHA-256:3aac455fccf683881206ea16d2f9627dd96bc98f2f251c3ba2322982d1690933</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.24.0/commonlib-release-1.24.0.zap</url>
+        <hash>SHA-256:1b7518cf5013dffd4aa52ed590ef90890d0589842526cf958f9a2f05e63335f8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-25</date>
-        <size>10794781</size>
+        <date>2024-04-11</date>
+        <size>10800667</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1068,21 +1091,34 @@
         <name>GraalVM JavaScript</name>
         <description>Provides the GraalVM JavaScript engine for ZAP scripting.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>graaljs-alpha-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>graaljs-alpha-0.6.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Update Graal JavaScript engine.&lt;/li&gt;
+&lt;li&gt;Update Active and Passive Script Templates to include a &lt;code&gt;getMetadata&lt;/code&gt; function. This will allow them to be used as regular scan rules.&lt;/li&gt;
+&lt;li&gt;Depend on the &lt;code&gt;commonlib&lt;/code&gt; and &lt;code&gt;scripts&lt;/code&gt; add-ons for scan rule scripts.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.5.0/graaljs-alpha-0.5.0.zap</url>
-        <hash>SHA-256:86794300311549bed82e8dbe91e0d7376cbfb9d1842b09997a24654013087fd2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.6.0/graaljs-alpha-0.6.0.zap</url>
+        <hash>SHA-256:2c69221ad6746bc30d78e429c13f6ee4ac202a46e35fde3d802bdf85a3c04a67</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-10-12</date>
-        <size>24535986</size>
+        <date>2024-04-11</date>
+        <size>24536229</size>
         <not-before-version>2.14.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.24.0</version>
+                </addon>
+                <addon>
+                    <id>scripts</id>
+                    <version>&gt;=45.2.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_graaljs>
     <addon>graphql</addon>
     <addon_graphql>
@@ -1126,25 +1162,41 @@
         <name>Groovy Support</name>
         <description>Adds Groovy support to ZAP</description>
         <author>ZAP Dev Team</author>
-        <version>3.1.0</version>
-        <file>groovy-beta-3.1.0.zap</file>
+        <version>3.2.0</version>
+        <file>groovy-beta-3.2.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;encode-decode default template.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Replace usage of singletons with injected variables (e.g. &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;control&lt;/code&gt;) in scripts.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Update Active and Passive Script Templates to include a &lt;code&gt;getMetadata&lt;/code&gt; function. This will allow them to be used as regular scan rules.&lt;/li&gt;
+&lt;li&gt;Depend on the &lt;code&gt;commonlib&lt;/code&gt; and &lt;code&gt;scripts&lt;/code&gt; add-ons for scan rule scripts.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update links to zaproxy and zap-extensions repos.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
+&lt;li&gt;Updated encode-decode script template to conform to the latest method signatures.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/groovy-v3.1.0/groovy-beta-3.1.0.zap</url>
-        <hash>SHA-256:ee208309c6b9619f6527a05f48949e38e1476f2b3fa7c6e32fbd1111f4bdac58</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/groovy-v3.2.0/groovy-beta-3.2.0.zap</url>
+        <hash>SHA-256:2603bcff3728308c6dab09135def96a1209ce8219b0d1f9d861c59b5a8fc522e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/groovy-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>19006812</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2024-04-11</date>
+        <size>20168743</size>
+        <not-before-version>2.14.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.24.0</version>
+                </addon>
+                <addon>
+                    <id>scripts</id>
+                    <version>&gt;=45.2.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_groovy>
     <addon>help</addon>
     <addon_help>
@@ -1461,25 +1513,25 @@
         <name>Image Location and Privacy Scanner</name>
         <description>Image Location and Privacy Passive Scanner</description>
         <author>Jay Ball (veggiespam) and the ZAP Dev Team</author>
-        <version>4</version>
-        <file>imagelocationscanner-beta-4.zap</file>
+        <version>5</version>
+        <file>imagelocationscanner-beta-5.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.1.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OWASP Web Security Testing Guide v4.2 mappings.&lt;/li&gt;
+&lt;li&gt;Website alert links (Issue 8189).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v4/imagelocationscanner-beta-4.zap</url>
-        <hash>SHA-256:6d168e4d156335a0544619011b742e47e6dc1d492a2d63a0e8f787b28796b2c9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v5/imagelocationscanner-beta-5.zap</url>
+        <hash>SHA-256:4d95a4e8c09fbae9372a28b2501c57ac3789b2357f4988fc0dcdc3c11f3f0fe8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/image-location-and-privacy-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-09-23</date>
-        <size>1138093</size>
-        <not-before-version>2.11.1</not-before-version>
+        <date>2024-04-11</date>
+        <size>1147406</size>
+        <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1606,30 +1658,32 @@
         <name>Python Scripting</name>
         <description>Allows Python to be used for ZAP scripting - templates included</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>jython-beta-14.zap</file>
+        <version>15</version>
+        <file>jython-beta-15.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Move &amp;quot;Jython&amp;quot; under &amp;quot;Scripts &amp;gt; Engine&amp;quot; in the Options panel list.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Remove the script engine when the add-on is uninstalled.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update Active and Passive Script Templates to include a &lt;code&gt;getMetadata&lt;/code&gt; function. This will allow them to be used as regular scan rules.&lt;/li&gt;
+&lt;li&gt;Depend on the &lt;code&gt;commonlib&lt;/code&gt; add-on for scan rule scripts.&lt;/li&gt;
+&lt;li&gt;Update minimum &lt;code&gt;scripts&lt;/code&gt; add-on version to 45.1.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v14/jython-beta-14.zap</url>
-        <hash>SHA-256:331eba86485a5b3cdb78a34e21a025c4f7efd26d56291c0f6a03a89e89792d08</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/jython-v15/jython-beta-15.zap</url>
+        <hash>SHA-256:019a64ba85cc9021a841e7253ae14f619129b603ab2048bec9593f5d59c1da02</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/python-scripting/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>43315476</size>
+        <date>2024-04-11</date>
+        <size>43315501</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.24.0</version>
+                </addon>
+                <addon>
                     <id>scripts</id>
-                    <version>&gt;=44</version>
+                    <version>&gt;=45.2.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2463,29 +2517,30 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.1.0</version>
-        <file>scripts-release-45.1.0.zap</file>
+        <version>45.2.0</version>
+        <file>scripts-release-45.2.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
+&lt;li&gt;Active and Passive Scripts with a &lt;code&gt;getMetadata()&lt;/code&gt; function are now treated as first-class scan rules (Issue 7105).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Propagate script errors to the Automation Framework when running them.&lt;/li&gt;
+&lt;li&gt;Error when trying to run an unsupported script type through the Automation Framework.&lt;/li&gt;
+&lt;li&gt;The &amp;quot;Scripts Passive Scanner&amp;quot; scan rule was being loaded twice.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.1.0/scripts-release-45.1.0.zap</url>
-        <hash>SHA-256:ab0fe0986439c7a33deb628e9a4bb3700e7cfeb2cf2efb7b4bc0cf3a11725bf4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.2.0/scripts-release-45.2.0.zap</url>
+        <hash>SHA-256:76b5c5a58abc667bc50bf4bbb40190a9b20a3fcb92ddebb69bb99b0679e044e1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-25</date>
-        <size>892892</size>
+        <date>2024-04-11</date>
+        <size>5082980</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.23.0</version>
+                    <version>&gt;=1.24.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2841,19 +2896,19 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.33.0</version>
-        <file>wappalyzer-release-21.33.0.zap</file>
+        <version>21.34.0</version>
+        <file>wappalyzer-release-21.34.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.33.0/wappalyzer-release-21.33.0.zap</url>
-        <hash>SHA-256:16509985abee1cbb2b8b38aac1a33f83a277a1053c6fe0c9034ddbc7233265ba</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.34.0/wappalyzer-release-21.34.0.zap</url>
+        <hash>SHA-256:2c1f10ff456d93c045994651f964765449953bc652eaaab4ebf57bd233d5978c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-28</date>
-        <size>12803037</size>
+        <date>2024-04-11</date>
+        <size>12802890</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2869,19 +2924,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>78</version>
-        <file>webdriverlinux-release-78.zap</file>
+        <version>79</version>
+        <file>webdriverlinux-release-79.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.105.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 123.0.6312.122.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v78/webdriverlinux-release-78.zap</url>
-        <hash>SHA-256:ffa9b3f16073ce58b3cafcb3c4b93ad00c243145889fc7b35d2a808fef9f8a17</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v79/webdriverlinux-release-79.zap</url>
+        <hash>SHA-256:9366e9e77049f82a7c2e6a78277bf047d9e59a6876b9cea8bdd3b3ada6d75253</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-05</date>
-        <size>17970918</size>
+        <date>2024-04-11</date>
+        <size>17970883</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2889,19 +2944,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>78</version>
-        <file>webdrivermacos-release-78.zap</file>
+        <version>79</version>
+        <file>webdrivermacos-release-79.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.105.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 123.0.6312.122.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v78/webdrivermacos-release-78.zap</url>
-        <hash>SHA-256:1279f252791ae36ddaee552ffd4f65eb907d388f3076987ffbb31b2b4feda036</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v79/webdrivermacos-release-79.zap</url>
+        <hash>SHA-256:45acc44e95b5bbee2fd0c2205b5f43e48daef91b8bd3a338608985e30a80ee25</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-05</date>
-        <size>21846536</size>
+        <date>2024-04-11</date>
+        <size>21846617</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2909,19 +2964,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>78</version>
-        <file>webdriverwindows-release-78.zap</file>
+        <version>79</version>
+        <file>webdriverwindows-release-79.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.105.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 123.0.6312.122.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v78/webdriverwindows-release-78.zap</url>
-        <hash>SHA-256:b8c91d4d2f9bde22dbc5e6df509768c0b3bb4d306039626d72194228f3bd6612</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v79/webdriverwindows-release-79.zap</url>
+        <hash>SHA-256:96b66b3d5314394c402bda21a493b979589627be688278119fbe226c3a560e38</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-05</date>
-        <size>19886635</size>
+        <date>2024-04-11</date>
+        <size>19886175</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
@@ -2950,25 +3005,30 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>43</version>
-        <file>zest-beta-43.zap</file>
+        <version>44</version>
+        <file>zest-beta-44.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Move &amp;quot;Zest&amp;quot; under &amp;quot;Scripts &amp;gt; Engine&amp;quot; in the Options panel list.&lt;/li&gt;
+&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum &lt;code&gt;scripts&lt;/code&gt; add-on version to 45.1.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v43/zest-beta-43.zap</url>
-        <hash>SHA-256:b0e23a81e6c83d1195747cf7537e77b9d70c434ab8da19178be220cc6e31795d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v44/zest-beta-44.zap</url>
+        <hash>SHA-256:b62e0f5a39fc0071a58fb2f7a7d35000e67087addf41db373607166c93a4be24</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-12-19</date>
-        <size>5596944</size>
+        <date>2024-04-11</date>
+        <size>5601877</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;=1.16.0</version>
+                    <version>&gt;=1.24.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -2976,7 +3036,7 @@
                 </addon>
                 <addon>
                     <id>scripts</id>
-                    <version>&gt;=44</version>
+                    <version>&gt;=45.2.0</version>
                 </addon>
                 <addon>
                     <id>selenium</id>
