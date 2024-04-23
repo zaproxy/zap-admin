@@ -318,47 +318,23 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.38.0</version>
-        <file>automation-beta-0.38.0.zap</file>
+        <version>0.39.0</version>
+        <file>automation-beta-0.39.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correctly expose all information in the &lt;code&gt;planProgress&lt;/code&gt; API view (Issue 8433). This might break existing clients as the format has changed.
-&lt;ul&gt;
-&lt;li&gt;JSON changed to, e.g.:&lt;/li&gt;
+&lt;li&gt;Allow reports to know the number of Sites tree nodes actively scanned (Issue 7022).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class="language-json"&gt;{
-  &amp;quot;warn&amp;quot; : [ ],
-  &amp;quot;planId&amp;quot; : 0,
-  &amp;quot;started&amp;quot; : &amp;quot;2024-04-08T00:00:00.615Z&amp;quot;,
-  &amp;quot;finished&amp;quot; : &amp;quot;2024-04-08T00:00:00.702Z&amp;quot;,
-  &amp;quot;error&amp;quot; : [ ],
-  &amp;quot;info&amp;quot; : [ &amp;quot;Job requestor started&amp;quot;, &amp;quot;Job requestor finished, time taken: 00:00:00&amp;quot; ]
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;XML changed to, e.g.:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class="language-xml"&gt; &amp;lt;planProgress type=&amp;quot;set&amp;quot;&amp;gt;
-   &amp;lt;planId&amp;gt;0&amp;lt;/planId&amp;gt;
-   &amp;lt;started&amp;gt;2024-04-08T00:00:00.615Z&amp;lt;/started&amp;gt;
-   &amp;lt;finished&amp;gt;2024-04-08T00:00:00.702Z&amp;lt;/finished&amp;gt;
-   &amp;lt;info type=&amp;quot;list&amp;quot;&amp;gt;
-     &amp;lt;message&amp;gt;Job requestor started&amp;lt;/message&amp;gt;
-     &amp;lt;message&amp;gt;Job requestor finished, time taken: 00:00:00&amp;lt;/message&amp;gt;
-   &amp;lt;/info&amp;gt;
-   &amp;lt;warn type=&amp;quot;list&amp;quot;/&amp;gt;
-   &amp;lt;error type=&amp;quot;list&amp;quot;/&amp;gt;
- &amp;lt;/planProgress&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;li&gt;Allow to run remote plans through the command line.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.38.0/automation-beta-0.38.0.zap</url>
-        <hash>SHA-256:8831d83d24dd41aebadbe43b0bb8123c1749e4096c540bf9fa229cd6abe7e3d6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.39.0/automation-beta-0.39.0.zap</url>
+        <hash>SHA-256:85656d58e2a26cbc973273cd76c3a38313d71b72ac853d6f622a84ac18306a85</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-11</date>
-        <size>1749990</size>
+        <date>2024-04-23</date>
+        <size>1751673</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2225,19 +2201,24 @@
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>45</version>
-        <file>quickstart-release-45.zap</file>
+        <version>46</version>
+        <file>quickstart-release-46.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Tweaked OSF sponsorship links.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;AJAX spider selection to include &amp;quot;if modern&amp;quot; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Help content typos.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v45/quickstart-release-45.zap</url>
-        <hash>SHA-256:7ed57852979e95b6002a1221615f788659175f766e4a51e5bc89bc423f5f0327</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v46/quickstart-release-46.zap</url>
+        <hash>SHA-256:5375cd33327eb1551295093f7623fa7c118b7885e3403c34ca03a51bc4684fde</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-25</date>
-        <size>765685</size>
+        <date>2024-04-23</date>
+        <size>769172</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2896,19 +2877,23 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.34.0</version>
-        <file>wappalyzer-release-21.34.0.zap</file>
+        <version>21.35.0</version>
+        <file>wappalyzer-release-21.35.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A typo in the help content.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.34.0/wappalyzer-release-21.34.0.zap</url>
-        <hash>SHA-256:2c1f10ff456d93c045994651f964765449953bc652eaaab4ebf57bd233d5978c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.35.0/wappalyzer-release-21.35.0.zap</url>
+        <hash>SHA-256:7630438d1101359a9f508f5a625657f3b7da31b546f1bd0eff08de36c4aeef20</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-11</date>
-        <size>12802890</size>
+        <date>2024-04-23</date>
+        <size>12822533</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
@@ -2924,19 +2909,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>79</version>
-        <file>webdriverlinux-release-79.zap</file>
+        <version>80</version>
+        <file>webdriverlinux-release-80.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.122.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 124.0.6367.60.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v79/webdriverlinux-release-79.zap</url>
-        <hash>SHA-256:9366e9e77049f82a7c2e6a78277bf047d9e59a6876b9cea8bdd3b3ada6d75253</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v80/webdriverlinux-release-80.zap</url>
+        <hash>SHA-256:24c3ef8f76f551ab3d58ff5ebb64b1f5e4b4c7ede087ad40b4586608d8782c5c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-11</date>
-        <size>17970883</size>
+        <date>2024-04-23</date>
+        <size>18011977</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2944,19 +2929,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>79</version>
-        <file>webdrivermacos-release-79.zap</file>
+        <version>80</version>
+        <file>webdrivermacos-release-80.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.122.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 124.0.6367.60.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v79/webdrivermacos-release-79.zap</url>
-        <hash>SHA-256:45acc44e95b5bbee2fd0c2205b5f43e48daef91b8bd3a338608985e30a80ee25</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v80/webdrivermacos-release-80.zap</url>
+        <hash>SHA-256:262485ca3c86fd58d2d2e35c7b725ecdb6a6b558ce531a53a00548a6d2109c1a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-11</date>
-        <size>21846617</size>
+        <date>2024-04-23</date>
+        <size>22899155</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2964,19 +2949,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>79</version>
-        <file>webdriverwindows-release-79.zap</file>
+        <version>80</version>
+        <file>webdriverwindows-release-80.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 123.0.6312.122.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 124.0.6367.60.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v79/webdriverwindows-release-79.zap</url>
-        <hash>SHA-256:96b66b3d5314394c402bda21a493b979589627be688278119fbe226c3a560e38</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v80/webdriverwindows-release-80.zap</url>
+        <hash>SHA-256:b37e6c7bd0318b98ff4b162329f5ae758255e3ef1d742d665f9d4bf5023cd85c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-11</date>
-        <size>19886175</size>
+        <date>2024-04-23</date>
+        <size>19981952</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
