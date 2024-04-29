@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ZAP>
+    <news>
+        <id>49</id>
+        <default>
+            <item>ZAP Professional Services are now available!</item>
+            <link>https://www.zaproxy.org/blog/2024-04-08-zap-professional-services/</link>
+        </default>
+    </news>
+</ZAP>
