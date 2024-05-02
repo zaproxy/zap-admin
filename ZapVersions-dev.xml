@@ -2878,23 +2878,23 @@
         <name>Wappalyzer - Technology Detection</name>
         <description>Technology detection using Wappalyzer: wappalyzer.com</description>
         <author>ZAP Dev Team</author>
-        <version>21.35.0</version>
-        <file>wappalyzer-release-21.35.0.zap</file>
+        <version>21.36.0</version>
+        <file>wappalyzer-release-21.36.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Implemented a change to address a resource contention issue when loading Tech Detection details (Issue 8464).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A typo in the help content.&lt;/li&gt;
+&lt;li&gt;Suppress further un-helpful messages from the jsvg library logger.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.35.0/wappalyzer-release-21.35.0.zap</url>
-        <hash>SHA-256:7630438d1101359a9f508f5a625657f3b7da31b546f1bd0eff08de36c4aeef20</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.36.0/wappalyzer-release-21.36.0.zap</url>
+        <hash>SHA-256:fe21684aaacf68b4260d3d89a826571d4f2e0bed8ba06933cf91333e6b2bc884</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-23</date>
-        <size>12822533</size>
+        <date>2024-05-02</date>
+        <size>12822765</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
