@@ -1,35 +1,35 @@
  - repo: "zaproxy"
    tasks:
     - name: "crowdinCopyProjectTranslations"
-      args: [ "--from=%packages_dir%" ]
+      args: [ "--from=%packages_dir%", "--file-filter=_kaa" ]
 
  - repo: "zap-core-help"
    tasks:
     - name: ":addOns:crowdinCopyProjectTranslations"
-      args: [ "--from=%packages_dir%" ]
+      args: [ "--from=%packages_dir%", "--file-filter=_kaa" ]
     - name: "updateHelpSetXmlLangAttr"
 
  - repo: "zap-extensions"
    tasks:
     - name: "crowdinCopyProjectTranslations"
-      args: [ "--from=%packages_dir%" ]
+      args: [ "--from=%packages_dir%", "--file-filter=_kaa" ]
     - name: "postProcessLocalizedHelpPages"
     - name: "spotlessApply"
 
  - repo: "community-scripts"
    tasks:
     - name: "crowdinCopyProjectTranslations"
-      args: [ "--from=%packages_dir%" ]
+      args: [ "--from=%packages_dir%", "--file-filter=_kaa" ]
     - name: "postProcessLocalizedHelpPages"
 
  - repo: "fuzzdb-offensive"
    tasks:
     - name: "crowdinCopyProjectTranslations"
-      args: [ "--from=%packages_dir%" ]
+      args: [ "--from=%packages_dir%", "--file-filter=_kaa" ]
     - name: "postProcessLocalizedHelpPages"
 
  - repo: "zap-hud"
    tasks:
     - name: "crowdinCopyProjectTranslations"
-      args: [ "--from=%packages_dir%" ]
+      args: [ "--from=%packages_dir%", "--file-filter=_kaa" ]
     - name: "postProcessLocalizedHelpPages"
