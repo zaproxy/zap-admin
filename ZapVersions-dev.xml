@@ -1180,27 +1180,24 @@
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>17</version>
-        <file>help-release-17.zap</file>
+        <version>18</version>
+        <file>help-release-18.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;SBOM help page.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-loglevel&lt;/code&gt; option to the command line help page.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated for 2.14.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add 2.13.0 release page to table of contents.&lt;/li&gt;
+&lt;li&gt;Update OWASP ZAP homepage link in 1.1.0 release notes.&lt;/li&gt;
+&lt;li&gt;Updated for 2.15.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v17/help-release-17.zap</url>
-        <hash>SHA-256:a2aeaf638fc83b7a5ba0eefcaa5ff806b0a3c9981d20abd107026724f9f128b3</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v18/help-release-18.zap</url>
+        <hash>SHA-256:0e2dc4126f58cbcb07a7959dd14c2646b9070499760764854081cd86784737e3</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2023-10-12</date>
-        <size>628064</size>
+        <date>2024-05-07</date>
+        <size>633801</size>
         <not-before-version>2.14.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
