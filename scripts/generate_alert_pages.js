@@ -308,8 +308,20 @@ function printAscanRule(plugin) {
 			}
 		}
 	}
+
+	var type = "Active"
+	var clazz = plugin.getClass().getName()
+	var scripturl = null
+	if (clazz.indexOf("ActiveScriptScanRule") > 0) {
+		type = "Script Active"
+		try {
+			scripturl = plugin.getCodeLink();
+		} catch (e) {
+			// Ignore
+		}
+	}
 	
-	printAlerts(examples, plugin.getName(), "Active", plugin.getStatus(), plugin.getClass().getName(), null, tech, getHelp(plugin));
+	printAlerts(examples, plugin.getName(), type, plugin.getStatus(), clazz, scripturl, tech, getHelp(plugin));
 }
 
 function getPrivateMethod(obj, methods, key, defaultVal) {
@@ -358,7 +370,19 @@ function printPscanRule(plugin) {
 		examples.add(alert);
 	}
 
-	printAlerts(examples, plugin.getName(), "Passive", plugin.getStatus(), plugin.getClass().getName(), null, null, getHelp(plugin));
+	var type = "Passive"
+	var clazz = plugin.getClass().getName()
+	var scripturl = null
+	if (clazz.indexOf("PassiveScriptScanRule") > 0) {
+		type = "Script Passive"
+		try {
+			scripturl = plugin.getCodeLink();
+		} catch (e) {
+			// Ignore
+		}
+	}
+
+	printAlerts(examples, plugin.getName(), type, plugin.getStatus(), clazz, scripturl, null, getHelp(plugin));
 }
 
 function printWsPscanRule(plugin, scriptUrl) {
