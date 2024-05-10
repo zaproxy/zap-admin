@@ -561,24 +561,19 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.25.0</version>
-        <file>commonlib-release-1.25.0.zap</file>
+        <version>1.26.0</version>
+        <file>commonlib-release-1.26.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for code and help links for script scan rules.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Include the Jackson Datatype: JSR310 library for other add-ons to use.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.25.0/commonlib-release-1.25.0.zap</url>
-        <hash>SHA-256:2b48220e185f9fa77fd04712623a243bb8066094042202dec41d235affed7352</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.26.0/commonlib-release-1.26.0.zap</url>
+        <hash>SHA-256:58906b99fcfc75bb967480d769c77f5149ebcde200c6042d465e5270b93c0388</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>15013201</size>
+        <date>2024-05-10</date>
+        <size>15140316</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1873,27 +1868,25 @@
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>40</version>
-        <file>openapi-beta-40.zap</file>
+        <version>41</version>
+        <file>openapi-beta-41.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Rely on Common Library add-on for use of Jackson library.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v40/openapi-beta-40.zap</url>
-        <hash>SHA-256:6eb5df2475f9a77ce678267a27834565367d7849f8b923484812c672354e0954</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v41/openapi-beta-41.zap</url>
+        <hash>SHA-256:10b05839366885534dd93ad808e261e61f8d8c5e27b5d173a299db470d58c54f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>18122326</size>
+        <date>2024-05-10</date>
+        <size>11508365</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.26.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2931,19 +2924,19 @@
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>83</version>
-        <file>webdriverlinux-release-83.zap</file>
+        <version>84</version>
+        <file>webdriverlinux-release-84.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 124.0.6367.155.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 124.0.6367.201.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v83/webdriverlinux-release-83.zap</url>
-        <hash>SHA-256:476e4c64f3e950625d75b70d12cb47d8fc8359c9736c99de8718457a941e8811</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v84/webdriverlinux-release-84.zap</url>
+        <hash>SHA-256:169f49627790c82a8a20bde2335046c3a03cec005f3a2de34145f1c150d78dc2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-08</date>
-        <size>18016773</size>
+        <date>2024-05-10</date>
+        <size>18016915</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2951,19 +2944,19 @@
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>83</version>
-        <file>webdrivermacos-release-83.zap</file>
+        <version>84</version>
+        <file>webdrivermacos-release-84.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 124.0.6367.155.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 124.0.6367.201.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v83/webdrivermacos-release-83.zap</url>
-        <hash>SHA-256:44c0df8c8987682fdc4d5f7243b33ff8650815ec99146371f765b48dc262550a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v84/webdrivermacos-release-84.zap</url>
+        <hash>SHA-256:a344b33862d8afb14b9aa7d9d3f2c5a77ffd7fbaadb7f66e4dc08fbdcd747486</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-08</date>
-        <size>22712952</size>
+        <date>2024-05-10</date>
+        <size>22713008</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2971,19 +2964,19 @@
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>83</version>
-        <file>webdriverwindows-release-83.zap</file>
+        <version>84</version>
+        <file>webdriverwindows-release-84.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 124.0.6367.155.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 124.0.6367.201.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v83/webdriverwindows-release-83.zap</url>
-        <hash>SHA-256:dc567d7711003c3639b3305ad9893096f771a43f99b6fc9534ae345f3e746a1f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v84/webdriverwindows-release-84.zap</url>
+        <hash>SHA-256:2503ec8671b32cb4eee6dbe4f37c84a4fa4732fc5e3267b0c4615b6423ed23d9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-08</date>
-        <size>19985132</size>
+        <date>2024-05-10</date>
+        <size>19985408</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
