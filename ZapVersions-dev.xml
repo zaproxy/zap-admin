@@ -2515,24 +2515,23 @@
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.3.0</version>
-        <file>scripts-release-45.3.0.zap</file>
+        <version>45.4.0</version>
+        <file>scripts-release-45.4.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for code and help links for script scan rules.&lt;/li&gt;
+&lt;li&gt;Support for Automtion Framework loaddir action, which loads all of the scripts under the specified directory.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Allow to set raw parameter values from Active Rules, by calling &lt;code&gt;as.setEscapedParam(HttpMessage msg, String param, String value)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;File parameter to &lt;code&gt;source&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt; will still work.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.3.0/scripts-release-45.3.0.zap</url>
-        <hash>SHA-256:e96bb0f248c61736d41278d72024cd9e8e7ef8cf89232c9880f2e2e8adf775e3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.4.0/scripts-release-45.4.0.zap</url>
+        <hash>SHA-256:06473f8e627526e9eecd16c75d2d3bd1831f33a0b20321b4f8f8883e4eae9fb6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>5132107</size>
+        <date>2024-05-16</date>
+        <size>5135216</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
