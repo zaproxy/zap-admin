@@ -1195,6 +1195,30 @@
             </addons>
         </dependencies>
     </addon_groovy>
+    <addon>grpc</addon>
+    <addon_grpc>
+        <name>gRPC Support</name>
+        <description>Inspect, attack gRPC endpoints, and decode protobuf messages.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>grpc-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;ProtoBuf Message Decoding and Encoding in the message view panels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/grpc-v0.0.1/grpc-alpha-0.0.1.zap</url>
+        <hash>SHA-256:87b9ada8cb97e157621221159dd0ed18cffba19cbf6f91d06a54ddf5872b110d</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/grpc-support/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2024-05-21</date>
+        <size>7993742</size>
+        <not-before-version>2.14.0</not-before-version>
+    </addon_grpc>
     <addon>help</addon>
     <addon_help>
         <name>Help - English</name>

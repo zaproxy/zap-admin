@@ -47,6 +47,7 @@ gettingStarted
 graaljs
 graphql
 groovy
+grpc
 highlighter
 hud
 imagelocationscanner
