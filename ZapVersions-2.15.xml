@@ -2570,19 +2570,19 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.23.0</version>
-        <file>selenium-release-15.23.0.zap</file>
+        <version>15.24.0</version>
+        <file>selenium-release-15.24.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.21.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.23.0/selenium-release-15.23.0.zap</url>
-        <hash>SHA-256:4815a445abeb9e5ccfa97ed08dd745bc0007cb38bf30da052e04a51952cba7f5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.24.0/selenium-release-15.24.0.zap</url>
+        <hash>SHA-256:4c5783943a56de22c40e06438b531225f0935fa1b3a85e429dbe0518f8156496</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>31104136</size>
+        <date>2024-05-21</date>
+        <size>31096615</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2779,20 +2779,25 @@
         <name>Server-Sent Events</name>
         <description>Allows you to view Server-Sent Events (SSE) communication.</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>sse-alpha-12.zap</file>
+        <version>13</version>
+        <file>sse-alpha-13.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.12.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;More gracefully handle missing value for &amp;quot;id&amp;quot; field (Issue 8320)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v12/sse-alpha-12.zap</url>
-        <hash>SHA-256:c8805d497f71495e1d7fab7dfccf1955cc996ff514e6c0154e7937a72fdafc6c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v13/sse-alpha-13.zap</url>
+        <hash>SHA-256:38cf84e00664287e691606f473343ba0c0db0711c4f895312d0d482c3354731b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/server-sent-events/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2022-10-28</date>
-        <size>334645</size>
-        <not-before-version>2.12.0</not-before-version>
+        <date>2024-05-21</date>
+        <size>330079</size>
+        <not-before-version>2.15.0</not-before-version>
     </addon_sse>
     <addon>svndigger</addon>
     <addon_svndigger>
@@ -2912,27 +2917,25 @@
     </addon_viewstate>
     <addon>wappalyzer</addon>
     <addon_wappalyzer>
-        <name>Wappalyzer - Technology Detection</name>
-        <description>Technology detection using Wappalyzer: wappalyzer.com</description>
+        <name>Technology Detection</name>
+        <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.36.0</version>
-        <file>wappalyzer-release-21.36.0.zap</file>
+        <version>21.37.0</version>
+        <file>wappalyzer-release-21.37.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Implemented a change to address a resource contention issue when loading Tech Detection details (Issue 8464).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Suppress further un-helpful messages from the jsvg library logger.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Maintenance changes (standardize on &amp;quot;Technology Detection&amp;quot; naming).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.36.0/wappalyzer-release-21.36.0.zap</url>
-        <hash>SHA-256:fe21684aaacf68b4260d3d89a826571d4f2e0bed8ba06933cf91333e6b2bc884</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.37.0/wappalyzer-release-21.37.0.zap</url>
+        <hash>SHA-256:db2a32dc016d4859d1930641808cd2a64b964a7a328fc0e661550094a6853c1c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-02</date>
-        <size>12822765</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2024-05-21</date>
+        <size>12888052</size>
+        <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
