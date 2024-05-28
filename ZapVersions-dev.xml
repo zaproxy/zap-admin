@@ -309,19 +309,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.40.0</version>
-        <file>automation-beta-0.40.0.zap</file>
+        <version>0.40.1</version>
+        <file>automation-beta-0.40.1.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Address HTTP authentication failure when the realm is not configured.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.40.0/automation-beta-0.40.0.zap</url>
-        <hash>SHA-256:50b0bbf7ae9498bc8a034e12e5134f2f4bdc77d04839689a897f34311463523f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.40.1/automation-beta-0.40.1.zap</url>
+        <hash>SHA-256:1660e9bf5d957a1f602eaa53e54df32cc139a46f7ef50f7f8d6c259fbb1dadf4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>1774837</size>
+        <date>2024-05-28</date>
+        <size>1774724</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
