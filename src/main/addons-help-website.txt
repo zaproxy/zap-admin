@@ -23,11 +23,9 @@ bugtracker
 callgraph
 callhome
 client
-codedx
 commonlib
 communityScripts
 custompayloads
-customreport
 database
 dev
 diff
@@ -38,7 +36,6 @@ domxss
 encoder
 evalvillain
 exim
-exportreport
 formhandler
 fuzz
 fuzzdboffensive
