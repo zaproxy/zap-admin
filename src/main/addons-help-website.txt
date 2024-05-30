@@ -68,7 +68,6 @@ packscanrules
 packscripts
 paramdigger
 plugnhack
-portscan
 postman
 pscanrulesAlpha
 pscanrulesBeta
