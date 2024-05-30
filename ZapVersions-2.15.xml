@@ -530,32 +530,6 @@
             </addons>
         </dependencies>
     </addon_client>
-    <addon>codedx</addon>
-    <addon_codedx>
-        <name>Code Dx Extension</name>
-        <description>Includes request and response data in XML reports and provides the ability to upload reports directly to a Code Dx server</description>
-        <author>Code Dx, Inc.</author>
-        <version>9</version>
-        <file>codedx-alpha-9.zap</file>
-        <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add repo URL.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
-&lt;li&gt;Change info URL to link to the site.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Change to no longer rely on core report classes, which are going to be deleted.&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/codedx-v9/codedx-alpha-9.zap</url>
-        <hash>SHA-256:767e0a098de281f0bc880b036a5192f26fe0bb014b81227b385a0b63ca570428</hash>
-        <info>https://www.zaproxy.org/docs/desktop/addons/code-dx/</info>
-        <date>2021-10-07</date>
-        <size>1769797</size>
-        <not-before-version>2.11.0</not-before-version>
-    </addon_codedx>
     <addon>commonlib</addon>
     <addon_commonlib>
         <name>Common Library</name>
