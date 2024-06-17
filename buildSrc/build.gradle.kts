@@ -41,7 +41,7 @@ dependencies {
     }
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.2")
     implementation("org.snakeyaml:snakeyaml-engine:2.6")
-    implementation("org.zaproxy:zap:2.14.0")
+    implementation("org.zaproxy:zap:2.15.0")
 }
 
 spotless {

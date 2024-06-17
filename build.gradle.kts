@@ -60,11 +60,12 @@ dependencies {
 }
 
 val zapVersionsDir = layout.buildDirectory.dir("ZapVersionsTests")
-val copyZapVersions = tasks.create<Copy>("copyZapVersions") {
-    from(rootDir)
-    into(zapVersionsDir)
-    include("ZapVersions*.xml")
-}
+val copyZapVersions =
+    tasks.create<Copy>("copyZapVersions") {
+        from(rootDir)
+        into(zapVersionsDir)
+        include("ZapVersions*.xml")
+    }
 
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
