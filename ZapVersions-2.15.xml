@@ -2509,19 +2509,19 @@
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.25.0</version>
-        <file>selenium-release-15.25.0.zap</file>
+        <version>15.26.0</version>
+        <file>selenium-release-15.26.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Ensure the specified WebDriver is executable always.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.22.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.25.0/selenium-release-15.25.0.zap</url>
-        <hash>SHA-256:12ae872d0ccff8332a75cbf2468825db7105f8ee059eab94d226f0ed399a8cd3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.26.0/selenium-release-15.26.0.zap</url>
+        <hash>SHA-256:2cdb05de434d4e0fbff30deb573ed1dfc64c4311b66b1003966aeedce9888db4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-31</date>
-        <size>31096189</size>
+        <date>2024-06-21</date>
+        <size>31109788</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
