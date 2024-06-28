@@ -2154,28 +2154,19 @@
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>38</version>
-        <file>pscanrulesBeta-beta-38.zap</file>
+        <version>39</version>
+        <file>pscanrulesBeta-beta-39.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Polyfill.io script detection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Alert text for various rules has been updated to more consistently use periods and spaces in a uniform manner.&lt;/li&gt;
+&lt;li&gt;More 'polyfill' related domains.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v38/pscanrulesBeta-beta-38.zap</url>
-        <hash>SHA-256:5063b7d4ac15864ec6ecea424caa44e91688568b170746a2f90f60e530b2aaf7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v39/pscanrulesBeta-beta-39.zap</url>
+        <hash>SHA-256:ebd980881437fb47230624a271541277f55b55253ae6426749ae3af2aba1df80</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-06-27</date>
-        <size>682068</size>
+        <date>2024-06-28</date>
+        <size>682725</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2327,19 +2318,19 @@
         <name>Requester</name>
         <description>Allows to manually edit and send messages.</description>
         <author>Surikato and the ZAP Dev Team</author>
-        <version>7.6.0</version>
-        <file>requester-beta-7.6.0.zap</file>
+        <version>7.7.0</version>
+        <file>requester-beta-7.7.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Allow to display a message in the editor dialogue.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v7.6.0/requester-beta-7.6.0.zap</url>
-        <hash>SHA-256:88b2e823ccfaa6eef358dba454ee1c782cd3fd332c84cf1e20c88e77da0cedf4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/requester-v7.7.0/requester-beta-7.7.0.zap</url>
+        <hash>SHA-256:4b48f337b548d2170e5c8d15e3cf0b9e7dd5ea5fe359bc68426b6bf8f5da665d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/requester/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>761180</size>
+        <date>2024-06-28</date>
+        <size>763092</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2985,25 +2976,28 @@
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>45</version>
-        <file>zest-beta-45.zap</file>
+        <version>46</version>
+        <file>zest-beta-46.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Update Zest library to 0.21.0:
+&lt;li&gt;Document the engine name in the help page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.20.0.&lt;/li&gt;
-&lt;li&gt;Update HtmlUnit to major version 3.&lt;/li&gt;
+&lt;li&gt;Use script engines from ZAP when executing scripts.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.22.0:
+&lt;ul&gt;
+&lt;li&gt;Update Selenium to version 4.22.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v45/zest-beta-45.zap</url>
-        <hash>SHA-256:08722cc691f29d740e859ecfe320c5a656280016484706c6e3d3d0a554afced0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v46/zest-beta-46.zap</url>
+        <hash>SHA-256:c0aff882bd54f9c9bc6122d92c1717f29bb51b21c4f2089d523bee0099f955fa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>5601493</size>
+        <date>2024-06-28</date>
+        <size>5607325</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
