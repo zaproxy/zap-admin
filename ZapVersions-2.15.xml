@@ -555,28 +555,67 @@
         <name>Community Scripts</name>
         <description>Useful ZAP scripts written by the ZAP community.</description>
         <author>ZAP Community</author>
-        <version>18</version>
-        <file>communityScripts-alpha-18.zap</file>
+        <version>19</version>
+        <file>communityScripts-alpha-19.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;httpsender/RsaSigningForZap.py - A script that signs requests using RSA&lt;/li&gt;
+&lt;li&gt;extender/arpSyndicateSubdomainDiscovery.js - uses the API of &lt;a href="https://www.subdomain.center/"&gt;ARPSyndicate's Subdomain Center&lt;/a&gt;
+to find and add subdomains to the Sites Tree.&lt;/li&gt;
+&lt;li&gt;passive/JavaDisclosure.js - Passive scan for Java error messages leaks&lt;/li&gt;
+&lt;li&gt;httpsender/RsaEncryptPayloadForZap.py - A script that encrypts requests using RSA&lt;/li&gt;
+&lt;li&gt;selenium/FillOTPInMFA.js - A script that fills the OTP in MFA&lt;/li&gt;
+&lt;li&gt;authentication/KratosApiAuthentication.js - A script to authenticate with Kratos using the API flow&lt;/li&gt;
+&lt;li&gt;authentication/KratosBrowserAuthentication.js - A script to authenticate with Kratos using the browser flow&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Remove checks for CFU initiator in HTTP Sender scripts and docs, no longer needed.&lt;/li&gt;
-&lt;li&gt;Rename AWS signing script.&lt;/li&gt;
-&lt;li&gt;Update descriptions/comments in scripts.&lt;/li&gt;
-&lt;li&gt;standalone/Open Fortune 500 websites in a browser.zst - Fix typo in &lt;code&gt;http://www,pbfenergy.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Use Prettier to format all JavaScript scripts.&lt;/li&gt;
+&lt;li&gt;Update the following scripts to implement the &lt;code&gt;getMetadata()&lt;/code&gt; function with revised metadata:
+&lt;ul&gt;
+&lt;li&gt;active/Cross Site WebSocket Hijacking.js&lt;/li&gt;
+&lt;li&gt;active/cve-2019-5418.js&lt;/li&gt;
+&lt;li&gt;active/gof_lite.js&lt;/li&gt;
+&lt;li&gt;active/JWT None Exploit.js&lt;/li&gt;
+&lt;li&gt;active/SSTI.js&lt;/li&gt;
+&lt;li&gt;passive/clacks.js&lt;/li&gt;
+&lt;li&gt;passive/CookieHTTPOnly.js&lt;/li&gt;
+&lt;li&gt;passive/detect_csp_notif_and_reportonly.js&lt;/li&gt;
+&lt;li&gt;passive/detect_samesite_protection.js&lt;/li&gt;
+&lt;li&gt;passive/f5_bigip_cookie_internal_ip.js&lt;/li&gt;
+&lt;li&gt;passive/find base64 strings.js&lt;/li&gt;
+&lt;li&gt;passive/Find Credit Cards.js&lt;/li&gt;
+&lt;li&gt;passive/Find Emails.js&lt;/li&gt;
+&lt;li&gt;passive/Find Hashes.js&lt;/li&gt;
+&lt;li&gt;passive/Find HTML Comments.js&lt;/li&gt;
+&lt;li&gt;passive/Find IBANs.js&lt;/li&gt;
+&lt;li&gt;passive/Find Internal IPs.js&lt;/li&gt;
+&lt;li&gt;passive/find_reflected_params.py&lt;/li&gt;
+&lt;li&gt;passive/HUNT.py&lt;/li&gt;
+&lt;li&gt;passive/Mutliple Security Header Check.js&lt;/li&gt;
+&lt;li&gt;passive/google_api_keys_finder.js&lt;/li&gt;
+&lt;li&gt;passive/JavaDisclosure.js&lt;/li&gt;
+&lt;li&gt;passive/Report non static sites.js&lt;/li&gt;
+&lt;li&gt;passive/RPO.js&lt;/li&gt;
+&lt;li&gt;passive/s3.js&lt;/li&gt;
+&lt;li&gt;passive/Server Header Disclosure.js&lt;/li&gt;
+&lt;li&gt;passive/SQL injection detection.js&lt;/li&gt;
+&lt;li&gt;passive/Telerik Using Poor Crypto.js&lt;/li&gt;
+&lt;li&gt;passive/Upload form discovery.js&lt;/li&gt;
+&lt;li&gt;passive/X-Powered-By_header_checker.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;httpsender/Alert on Unexpected Content Types.js now checks for common content-types (&lt;code&gt;json&lt;/code&gt;, &lt;code&gt;xml&lt;/code&gt;, and &lt;code&gt;yaml&lt;/code&gt;) more consistently.&lt;/li&gt;
+&lt;li&gt;targeted/request_to_xml.js no longer uses deprecated method to show the message in the editor dialogue.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/community-scripts/releases/download/v18/communityScripts-alpha-18.zap</url>
-        <hash>SHA-256:2bc83a772178e32debbdaae6a95b454af1ac8acbc278547856d9a1e39e5a2763</hash>
+        <url>https://github.com/zaproxy/community-scripts/releases/download/v19/communityScripts-alpha-19.zap</url>
+        <hash>SHA-256:f96502b471dd349ae2fceba4a68bde9465091580040ad8798e13bb176030bbba</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/community-scripts/</info>
         <repo>https://github.com/zaproxy/community-scripts/</repo>
-        <date>2024-01-29</date>
-        <size>461243</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2024-07-01</date>
+        <size>475346</size>
+        <not-before-version>2.15.0</not-before-version>
     </addon_communityScripts>
     <addon>coreLang</addon>
     <addon_coreLang>
