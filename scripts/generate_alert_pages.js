@@ -352,7 +352,11 @@ function getPrivateMethod(obj, methods, key, defaultVal) {
 function printPscanRule(plugin) {
 	plugin.setHelper(passiveScanData);
 
-	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
+	try {
+		var examples = plugin.getExampleAlerts()
+	} catch (e) {
+		var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
+	}
 
 	if (examples == null || examples.length == 0) {
 		var alert = new Alert(plugin.getPluginId());
