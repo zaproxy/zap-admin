@@ -1212,19 +1212,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>gRPC Support</name>
         <description>Inspect, attack gRPC endpoints, and decode protobuf messages.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>grpc-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>grpc-alpha-0.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;gRPC Variant Support Added&lt;/li&gt;
+&lt;li&gt;gRPC WebSocket Support Added&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not try to decode non-gRPC responses when active scanning, which would lead to unnecessary warnings.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/grpc-v0.1.0/grpc-alpha-0.1.0.zap</url>
-        <hash>SHA-256:e662cf5d31c9634fa28268bd5fa997f2cd8767b078e656250bdc16c768cde9c6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/grpc-v0.2.0/grpc-alpha-0.2.0.zap</url>
+        <hash>SHA-256:028464ebc6c80f36fd32088c7aede870f68940dcbb2064a0ed6bfe2bb93f37e1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/grpc-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-06-11</date>
-        <size>8196983</size>
+        <date>2024-07-02</date>
+        <size>8202269</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_grpc>
     <addon>help</addon>
