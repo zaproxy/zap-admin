@@ -2422,19 +2422,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.36.0</version>
-        <file>retire-release-0.36.0.zap</file>
+        <version>0.37.0</version>
+        <file>retire-release-0.37.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.36.0/retire-release-0.36.0.zap</url>
-        <hash>SHA-256:456baf5a02ef04428f34cdf08808579cadaed72a06feb13bf7d5c8ca7f735e15</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.37.0/retire-release-0.37.0.zap</url>
+        <hash>SHA-256:793a951cc5c7fbf0ec1661820a9d574f92ba8fffc73e76fbe7a86ce3013ff617</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-06-03</date>
-        <size>989509</size>
+        <date>2024-07-04</date>
+        <size>990979</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2898,19 +2898,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.38.0</version>
-        <file>wappalyzer-release-21.38.0.zap</file>
+        <version>21.39.0</version>
+        <file>wappalyzer-release-21.39.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.38.0/wappalyzer-release-21.38.0.zap</url>
-        <hash>SHA-256:2b8eba247af60df9bdf2e13cc22d83d76594c323feb1d29141b57e0f8bef10b6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.39.0/wappalyzer-release-21.39.0.zap</url>
+        <hash>SHA-256:2ff125b2f805a308ba75f8b8638fd68ed68dd0b8dc7b5eba65d065d9cbe5ea0b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-06-03</date>
-        <size>13014943</size>
+        <date>2024-07-04</date>
+        <size>13048021</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
