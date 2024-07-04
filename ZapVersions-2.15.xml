@@ -1905,19 +1905,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>41</version>
-        <file>openapi-beta-41.zap</file>
+        <version>42</version>
+        <file>openapi-beta-42.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Rely on Common Library add-on for use of Jackson library.&lt;/li&gt;
+&lt;li&gt;Workaround issue loading fully resolved definitions that are too large by trying to use the original definition only (Issue 8193).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v41/openapi-beta-41.zap</url>
-        <hash>SHA-256:10b05839366885534dd93ad808e261e61f8d8c5e27b5d173a299db470d58c54f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v42/openapi-beta-42.zap</url>
+        <hash>SHA-256:9aaa4abcadf333d00591b196194e7e113bf97a800d7c192600d68ed9e7958737</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-10</date>
-        <size>11508365</size>
+        <date>2024-07-04</date>
+        <size>11510609</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
