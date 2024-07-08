@@ -2225,23 +2225,21 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>47</version>
-        <file>quickstart-release-47.zap</file>
+        <version>48</version>
+        <file>quickstart-release-48.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Sub panel names.&lt;/li&gt;
+&lt;li&gt;News display tweak.&lt;/li&gt;
+&lt;li&gt;Updated messages from &amp;quot;wappalyzer&amp;quot; to &amp;quot;Technology Detection&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Changed the Crash Override logo.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v47/quickstart-release-47.zap</url>
-        <hash>SHA-256:899926a96bfd3b87a57c7506d6587d223c6207d42031d0ea8d5d059c79caa393</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v48/quickstart-release-48.zap</url>
+        <hash>SHA-256:10d1de70d7d64b3077fb65482dddde56df0e24cbde9a8439c06071fd0ef8352c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>785873</size>
+        <date>2024-07-08</date>
+        <size>786154</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
