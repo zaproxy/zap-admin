@@ -1752,23 +1752,21 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Levo.ai</name>
         <description>Build OpenAPI Specs with ZAP traffic using Levo.ai.</description>
         <author>Levo.ai</author>
-        <version>0.2.0</version>
-        <file>levoai-zap-addon-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>levoai-zap-addon-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Validate the Satellite URL structure when it is modified.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;URLs with '/' as the path were not being handled correctly.&lt;/li&gt;
+&lt;li&gt;Option to configure an organization ID that is added as a header in the requests made to the Satellite.&lt;/li&gt;
+&lt;li&gt;Option to specify the environment under which the discovered apps will be shown in the Levo dashboard.&lt;/li&gt;
+&lt;li&gt;Set the sensor type in the requests made to the Satellite.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/levoai/levoai-zap-addon/releases/download/v0.2.0/levoai-zap-addon-alpha-0.2.0.zap</url>
-        <hash>SHA-256:28777022d50fa8ff29ef21ab94d01786d4936dcf6ddc9303e64f52983203311d</hash>
-        <info>https://docs.levo.ai/api-observability/quickstart/quickstart-zap-addon</info>
+        <url>https://github.com/levoai/levoai-zap-addon/releases/download/v0.3.0/levoai-zap-addon-alpha-0.3.0.zap</url>
+        <hash>SHA-256:1a86d7c288bf4284e83f54203f4ed8dd7d40b2bd47fbb8f8f853da67676269d2</hash>
+        <info>https://levo.ai</info>
         <repo>https://github.com/levoai/levoai-zap-addon</repo>
-        <date>2022-12-26</date>
-        <size>2459871</size>
+        <date>2024-07-10</date>
+        <size>2465951</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_levoai>
     <addon>maplocal</addon>
