@@ -124,19 +124,30 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>66</version>
-        <file>ascanrules-release-66.zap</file>
+        <version>67</version>
+        <file>ascanrules-release-67.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;The following rules now includes example alert functionality for documentation generation purposes (Issue 6119), as well as now including Alert Tags (OWASP Top 10, WSTG, and updated CWE):
+&lt;ul&gt;
+&lt;li&gt;Server Side Template Injection&lt;/li&gt;
+&lt;li&gt;Server Side Template Injection (Blind)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;False positives in the Path Traversal rule.&lt;/li&gt;
+&lt;li&gt;Alert text for various rules has been updated to more consistently use periods and spaces in a uniform manner.&lt;/li&gt;
+&lt;li&gt;False Positives in the Remote File Inclusion rule (Issue 8561).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v66/ascanrules-release-66.zap</url>
-        <hash>SHA-256:6c63ac358a5a183a757cb63ac13040e58eb3087aa9ca25bf40a02fab83f3736f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v67/ascanrules-release-67.zap</url>
+        <hash>SHA-256:32c72168aa7a5ecf5fc896b3e7ab38274289259af60a30ce6a86d52b0b511d18</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>3302394</size>
+        <date>2024-07-22</date>
+        <size>3307267</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -188,20 +199,26 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>53</version>
-        <file>ascanrulesBeta-beta-53.zap</file>
+        <version>54</version>
+        <file>ascanrulesBeta-beta-54.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Change links to use HTTPS in other info of Insecure HTTP Method (Issue 8262).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed regex for Relative Path Confusion, which detected absolute url as relative&lt;/li&gt;
+&lt;li&gt;Alert text for various rules has been updated to more consistently use periods and spaces in a uniform manner.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v53/ascanrulesBeta-beta-53.zap</url>
-        <hash>SHA-256:719db8dba4c3f3bec0360e55c46105910fb44aa6c1b97eb6ac00277a0a8c5151</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v54/ascanrulesBeta-beta-54.zap</url>
+        <hash>SHA-256:9b37cbe49f5dbf2ea0fd8b270ce78e2105c397cc46c3590fa37b161b6e33045a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-28</date>
-        <size>1743045</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2024-07-22</date>
+        <size>1768968</size>
+        <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -708,20 +725,24 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Dev Add-on</name>
         <description>An add-on to help with development of ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.5.0</version>
-        <file>dev-alpha-0.5.0.zap</file>
+        <version>0.6.0</version>
+        <file>dev-alpha-0.6.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Auth page which uses header and a cookie set via JavaScript.&lt;/li&gt;
+&lt;li&gt;Page protected by auth in order to provide a simple test for authenticated spidering.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.5.0/dev-alpha-0.5.0.zap</url>
-        <hash>SHA-256:182b597916a24f98376b61de7c38220a8eaf525e2721ce352343a4fc79699217</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.6.0/dev-alpha-0.6.0.zap</url>
+        <hash>SHA-256:a0899a42ef4c32a850622df619e23657dc475301246bab2f12713c43b5db9c47</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dev-add-on/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-10</date>
-        <size>132875</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2024-07-22</date>
+        <size>145053</size>
+        <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -944,25 +965,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.9.0</version>
-        <file>exim-beta-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>exim-beta-0.10.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Initial PCAP import support (Issue 4812).&lt;/li&gt;
-&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;HAR importing now uses Sebastian Stöhr's har-reader library. It should be much more tolerant of 'weird' HAR things, and thus be able to import more samples. (If you come across HAR that won't import please open an issue and provide a sample so we can work on further improvements!)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.9.0/exim-beta-0.9.0.zap</url>
-        <hash>SHA-256:ff31251b7bdbd364c8912eed27c24c09b25b96e4cf007aec734f852fd7974a79</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.10.0/exim-beta-0.10.0.zap</url>
+        <hash>SHA-256:605d3293521cc7f9d6f3c70a08b8d99e27bc9c627ebd17bc7954919bed668a50</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>481231</size>
+        <date>2024-07-22</date>
+        <size>2807556</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2510,23 +2525,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.4.0</version>
-        <file>scripts-release-45.4.0.zap</file>
+        <version>45.5.0</version>
+        <file>scripts-release-45.5.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for Automtion Framework loaddir action, which loads all of the scripts under the specified directory.&lt;/li&gt;
+&lt;li&gt;Provide the &lt;code&gt;script&lt;/code&gt; API on newer ZAP versions.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;File parameter to &lt;code&gt;source&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt; will still work.&lt;/li&gt;
+&lt;li&gt;Handle missing &amp;quot;references&amp;quot; field in the script metadata correctly.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.4.0/scripts-release-45.4.0.zap</url>
-        <hash>SHA-256:06473f8e627526e9eecd16c75d2d3bd1831f33a0b20321b4f8f8883e4eae9fb6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.5.0/scripts-release-45.5.0.zap</url>
+        <hash>SHA-256:b9964606065993b7d01906755ac2cb123a34d00deb5419664e36481f57d3a02d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-16</date>
-        <size>5135216</size>
+        <date>2024-07-22</date>
+        <size>5161213</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2542,19 +2557,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.26.0</version>
-        <file>selenium-release-15.26.0.zap</file>
+        <version>15.27.0</version>
+        <file>selenium-release-15.27.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.22.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.23.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.26.0/selenium-release-15.26.0.zap</url>
-        <hash>SHA-256:2cdb05de434d4e0fbff30deb573ed1dfc64c4311b66b1003966aeedce9888db4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.27.0/selenium-release-15.27.0.zap</url>
+        <hash>SHA-256:a34ba462a6fc348561e46707048cf965f87bac305d4a21eb7184cd7be0d4c743</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-06-21</date>
-        <size>31109788</size>
+        <date>2024-07-22</date>
+        <size>31215698</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2677,29 +2692,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.19.0</version>
-        <file>spiderAjax-release-23.19.0.zap</file>
+        <version>23.20.0</version>
+        <file>spiderAjax-release-23.20.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Video link in help for Automation Framework job.&lt;/li&gt;
-&lt;li&gt;Support for menu weights (Issue 8369)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A typo in an API end-point description.&lt;/li&gt;
+&lt;li&gt;Issue with browser based auth.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.19.0/spiderAjax-release-23.19.0.zap</url>
-        <hash>SHA-256:660f7dba00dcc4e9fcff093320d83aecad55813137b81bc7254d20fa072d6b33</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.20.0/spiderAjax-release-23.20.0.zap</url>
+        <hash>SHA-256:5baee17b6d06da1816fcc1023cf067c2a5842b5d23fa314fe7202d4cf87c67d7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>7564067</size>
+        <date>2024-07-22</date>
+        <size>7569111</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
