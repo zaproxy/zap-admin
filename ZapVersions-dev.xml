@@ -2142,24 +2142,28 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>58</version>
-        <file>pscanrules-release-58.zap</file>
+        <version>59</version>
+        <file>pscanrules-release-59.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;The library (htmlunit-csp) used by the Content Security Policy scan rule was updated to v4.0.0, which includes support for the wasm-unsafe-eval source expression.&lt;/li&gt;
+&lt;li&gt;Polyfill scan rule, promoted from beta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A typo in the Other Info of one of the Retrieved from Cache Alerts.&lt;/li&gt;
+&lt;li&gt;Alert text for various rules has been updated to more consistently use periods and spaces in a uniform manner.&lt;/li&gt;
+&lt;li&gt;Typo in Polyfill.io script detection alert description.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v58/pscanrules-release-58.zap</url>
-        <hash>SHA-256:951bab597b977ab1d0c9c40552e0a236270123a3a9827654479ddeb7ddd17103</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v59/pscanrules-release-59.zap</url>
+        <hash>SHA-256:8bc0bb0fe5a8662054ea272460bfa5f8b6c62f36616dbe532001ea41c9aeb02e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>1894699</size>
+        <date>2024-07-24</date>
+        <size>1901959</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2208,19 +2212,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>39</version>
-        <file>pscanrulesBeta-beta-39.zap</file>
+        <version>40</version>
+        <file>pscanrulesBeta-beta-40.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;More 'polyfill' related domains.&lt;/li&gt;
+&lt;li&gt;Polyfill scan rule, promoted to release.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v39/pscanrulesBeta-beta-39.zap</url>
-        <hash>SHA-256:ebd980881437fb47230624a271541277f55b55253ae6426749ae3af2aba1df80</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v40/pscanrulesBeta-beta-40.zap</url>
+        <hash>SHA-256:d2745be86a220dcbe388f2430a7302fe9919a9db05008ceacbd6cb453de90f89</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-06-28</date>
-        <size>682725</size>
+        <date>2024-07-24</date>
+        <size>702919</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2925,19 +2929,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>95</version>
-        <file>webdriverlinux-release-95.zap</file>
+        <version>96</version>
+        <file>webdriverlinux-release-96.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 126.0.6478.182.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 127.0.6533.72.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v95/webdriverlinux-release-95.zap</url>
-        <hash>SHA-256:15502226f03dff8042cb81a9e86cb29c57aacce49b34a7a914a3c2743419c680</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v96/webdriverlinux-release-96.zap</url>
+        <hash>SHA-256:777b0b1975311a47e1a1c4624900b706cd43056da3c9fc4d052d2230a51123f9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-18</date>
-        <size>18216856</size>
+        <date>2024-07-24</date>
+        <size>18616204</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2945,19 +2949,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>95</version>
-        <file>webdrivermacos-release-95.zap</file>
+        <version>96</version>
+        <file>webdrivermacos-release-96.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 126.0.6478.182.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 127.0.6533.72.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v95/webdrivermacos-release-95.zap</url>
-        <hash>SHA-256:db59be3b502f9af55cdc81b4891bfc31fd5ad8b477f3b1c28dea71295f74f60f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v96/webdrivermacos-release-96.zap</url>
+        <hash>SHA-256:f98c989f71f4064a72df511176e3f7019cd2fc814aa7b3f8ef8fde250577f2b6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-18</date>
-        <size>22755956</size>
+        <date>2024-07-24</date>
+        <size>23020370</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2965,19 +2969,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>95</version>
-        <file>webdriverwindows-release-95.zap</file>
+        <version>96</version>
+        <file>webdriverwindows-release-96.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 126.0.6478.182.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 127.0.6533.72.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v95/webdriverwindows-release-95.zap</url>
-        <hash>SHA-256:211061a8656a74ea3fbf6c3309acc025dc9fbfa80315e9a74e988ea8a9ffc011</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v96/webdriverwindows-release-96.zap</url>
+        <hash>SHA-256:e92c000f74929320a4da24d2d044deed3ed91a2ae86cf0a47cae4f686af1daf3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-18</date>
-        <size>20283339</size>
+        <date>2024-07-24</date>
+        <size>19079802</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
