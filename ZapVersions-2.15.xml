@@ -263,20 +263,20 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>authhelper-beta-0.13.0.zap</file>
+        <version>0.14.0</version>
+        <file>authhelper-beta-0.14.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Potential timing issue trying to use browser based auth to authenticate before the session management method has been identified.&lt;/li&gt;
+&lt;li&gt;Timing issue with session management detection.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.13.0/authhelper-beta-0.13.0.zap</url>
-        <hash>SHA-256:8157a8fdba5b8860ee6f7ec9b4d94ec281869659d1b3f3cc3ccf5e67703983b8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.14.0/authhelper-beta-0.14.0.zap</url>
+        <hash>SHA-256:d0f4d9e8bd91139704d4fd8b1ad4036895916ae57bf32fb4f0d47b9ab8f900fb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>811697</size>
+        <date>2024-07-31</date>
+        <size>814838</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -326,19 +326,27 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.40.1</version>
-        <file>automation-beta-0.40.1.zap</file>
+        <version>0.41.0</version>
+        <file>automation-beta-0.41.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address HTTP authentication failure when the realm is not configured.&lt;/li&gt;
+&lt;li&gt;Env / continueOnFailure option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address errors when the last plan loaded had a &lt;code&gt;passiveScan-config&lt;/code&gt; job with configured rules.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.40.1/automation-beta-0.40.1.zap</url>
-        <hash>SHA-256:1660e9bf5d957a1f602eaa53e54df32cc139a46f7ef50f7f8d6c259fbb1dadf4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.41.0/automation-beta-0.41.0.zap</url>
+        <hash>SHA-256:ef4643b3228ba620c74493ffcd423a581472803d0558efde102949142c072d2a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-28</date>
-        <size>1774724</size>
+        <date>2024-07-31</date>
+        <size>1782660</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2929,19 +2937,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>96</version>
-        <file>webdriverlinux-release-96.zap</file>
+        <version>97</version>
+        <file>webdriverlinux-release-97.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 127.0.6533.72.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 127.0.6533.88.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v96/webdriverlinux-release-96.zap</url>
-        <hash>SHA-256:777b0b1975311a47e1a1c4624900b706cd43056da3c9fc4d052d2230a51123f9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v97/webdriverlinux-release-97.zap</url>
+        <hash>SHA-256:309c8b7892f0c6c6e706186fc16bc331aded9423d793a57219250a944d2e16eb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-24</date>
-        <size>18616204</size>
+        <date>2024-07-31</date>
+        <size>18613545</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2949,19 +2957,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>96</version>
-        <file>webdrivermacos-release-96.zap</file>
+        <version>97</version>
+        <file>webdrivermacos-release-97.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 127.0.6533.72.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 127.0.6533.88.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v96/webdrivermacos-release-96.zap</url>
-        <hash>SHA-256:f98c989f71f4064a72df511176e3f7019cd2fc814aa7b3f8ef8fde250577f2b6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v97/webdrivermacos-release-97.zap</url>
+        <hash>SHA-256:49d07fce36cde618fd1beace90ed8bb4d55551d58898cb8c309625e73d8632ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-24</date>
-        <size>23020370</size>
+        <date>2024-07-31</date>
+        <size>23025842</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2969,19 +2977,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>96</version>
-        <file>webdriverwindows-release-96.zap</file>
+        <version>97</version>
+        <file>webdriverwindows-release-97.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 127.0.6533.72.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 127.0.6533.88.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v96/webdriverwindows-release-96.zap</url>
-        <hash>SHA-256:e92c000f74929320a4da24d2d044deed3ed91a2ae86cf0a47cae4f686af1daf3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v97/webdriverwindows-release-97.zap</url>
+        <hash>SHA-256:02263946a5eeb2519e682e6d53f840db8961b584d3151bb97f0cba0d5a50dc9b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-24</date>
-        <size>19079802</size>
+        <date>2024-07-31</date>
+        <size>19032972</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
