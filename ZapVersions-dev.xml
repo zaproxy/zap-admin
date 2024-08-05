@@ -713,19 +713,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Database</name>
         <description>Provides database engines and related infrastructure.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>database-alpha-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>database-alpha-0.5.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/database-v0.4.0/database-alpha-0.4.0.zap</url>
-        <hash>SHA-256:f102cbf3d3731e00065b6f431531a53751d0b02db78249a349309a380a65bff6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/database-v0.5.0/database-alpha-0.5.0.zap</url>
+        <hash>SHA-256:617a7b4b7c483c6213139bba66df796e57d783707f3c67a7f345b05e044ad505</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/database/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>20245926</size>
+        <date>2024-08-05</date>
+        <size>23081406</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_database>
     <addon>dev</addon>
@@ -2443,19 +2444,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Retire.js</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.37.0</version>
-        <file>retire-release-0.37.0.zap</file>
+        <version>0.38.0</version>
+        <file>retire-release-0.38.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.37.0/retire-release-0.37.0.zap</url>
-        <hash>SHA-256:793a951cc5c7fbf0ec1661820a9d574f92ba8fffc73e76fbe7a86ce3013ff617</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.38.0/retire-release-0.38.0.zap</url>
+        <hash>SHA-256:d6d6c642ca72d24f1bed77bc6f7303f72c7187f8262b73d97cc9233b72cb4f68</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-04</date>
-        <size>990979</size>
+        <date>2024-08-05</date>
+        <size>991034</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
