@@ -2938,19 +2938,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>99</version>
-        <file>webdriverlinux-release-99.zap</file>
+        <version>100</version>
+        <file>webdriverlinux-release-100.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 127.0.6533.119.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 128.0.6613.84.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v99/webdriverlinux-release-99.zap</url>
-        <hash>SHA-256:8843e84ee05e2123e7b4611458388675d51863922cd31fc6125530de550e275c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v100/webdriverlinux-release-100.zap</url>
+        <hash>SHA-256:8c5aee7d9d63edc4454e44e420bea738cbf73c648f37016d4e4d89b5d7a49c92</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-08-14</date>
-        <size>15328628</size>
+        <date>2024-08-22</date>
+        <size>15355644</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -2958,19 +2958,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>99</version>
-        <file>webdrivermacos-release-99.zap</file>
+        <version>100</version>
+        <file>webdrivermacos-release-100.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 127.0.6533.119.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 128.0.6613.84.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v99/webdrivermacos-release-99.zap</url>
-        <hash>SHA-256:39ef1ff0fdf5c35eb36adf755a59459e24950dedf24a05de3b301dfcec861132</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v100/webdrivermacos-release-100.zap</url>
+        <hash>SHA-256:e5ac47e060a48037b47974c573c4f531ad36afef25a2d68e2d339a9e1451ecb6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-08-14</date>
-        <size>22876139</size>
+        <date>2024-08-22</date>
+        <size>22918530</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -2978,19 +2978,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>99</version>
-        <file>webdriverwindows-release-99.zap</file>
+        <version>100</version>
+        <file>webdriverwindows-release-100.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 127.0.6533.119.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 128.0.6613.84.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v99/webdriverwindows-release-99.zap</url>
-        <hash>SHA-256:a3787871b407dcca80dd5d5af07b7db8c465feeb52c8fb3b99ddd2ccba8e449d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v100/webdriverwindows-release-100.zap</url>
+        <hash>SHA-256:39c37d6b457c56da1602c88cee34dae4fd18af611b74c7c6780d6d84fbc3ed37</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-08-14</date>
-        <size>18898140</size>
+        <date>2024-08-22</date>
+        <size>20449158</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
