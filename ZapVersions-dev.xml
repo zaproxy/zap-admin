@@ -263,20 +263,23 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.14.0</version>
-        <file>authhelper-beta-0.14.0.zap</file>
+        <version>0.15.0</version>
+        <file>authhelper-beta-0.15.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Potential timing issue trying to use browser based auth to authenticate before the session management method has been identified.&lt;/li&gt;
-&lt;li&gt;Timing issue with session management detection.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bug in session detection scan rule which impacted performance.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.14.0/authhelper-beta-0.14.0.zap</url>
-        <hash>SHA-256:d0f4d9e8bd91139704d4fd8b1ad4036895916ae57bf32fb4f0d47b9ab8f900fb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.15.0/authhelper-beta-0.15.0.zap</url>
+        <hash>SHA-256:99c06a5d0a8938e2b820a84cf64bb540245518d64a05b56b8e96a64b794932eb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-31</date>
-        <size>814838</size>
+        <date>2024-08-28</date>
+        <size>813557</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
