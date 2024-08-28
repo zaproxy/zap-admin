@@ -2445,21 +2445,25 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
     <addon>retire</addon>
     <addon_retire>
         <name>Retire.js</name>
-        <description>Retire.js</description>
+        <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.38.0</version>
-        <file>retire-release-0.38.0.zap</file>
+        <version>0.39.0</version>
+        <file>retire-release-0.39.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A helpful description for the add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.38.0/retire-release-0.38.0.zap</url>
-        <hash>SHA-256:d6d6c642ca72d24f1bed77bc6f7303f72c7187f8262b73d97cc9233b72cb4f68</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.39.0/retire-release-0.39.0.zap</url>
+        <hash>SHA-256:5e9ec1ac332074d74433bfe90d7c73eec7b4e6cf3e5792f4bb22953705327e54</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-08-05</date>
-        <size>991034</size>
+        <date>2024-08-28</date>
+        <size>991419</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2913,19 +2917,33 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.39.0</version>
-        <file>wappalyzer-release-21.39.0.zap</file>
+        <version>21.40.0</version>
+        <file>wappalyzer-release-21.40.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;The add-on now has an options screen to allow users to select Quick/Exhaustive mode used by the passive scanner (part of Issue 8361).
+&lt;ul&gt;
+&lt;li&gt;Quick &amp;gt; Return on first match; which may mean missing version information, but should be slightly more performant. (This is the default.)&lt;/li&gt;
+&lt;li&gt;Exhaustive &amp;gt; Keep matching and don't return early; likely slightly less performant.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The add-on now also has the ability to optionally raise Alerts for each technology identified. The default setting is enabled. (Issue 8361)&lt;/li&gt;
+&lt;li&gt;Maintenance changes.
+&lt;ul&gt;
+&lt;li&gt;This may be a breaking change for anyone that has code using the Automation Framework's Tech Detection (Wappalyzer) data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
+&lt;li&gt;Link website alert page and help (Issues 8189).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.39.0/wappalyzer-release-21.39.0.zap</url>
-        <hash>SHA-256:2ff125b2f805a308ba75f8b8638fd68ed68dd0b8dc7b5eba65d065d9cbe5ea0b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.40.0/wappalyzer-release-21.40.0.zap</url>
+        <hash>SHA-256:8e045787326a3bcfc689591f79a40546f4c64f187142687336887fdf935fdd04</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-07-04</date>
-        <size>13048021</size>
+        <date>2024-08-28</date>
+        <size>18861529</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
