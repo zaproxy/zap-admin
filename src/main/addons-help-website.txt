@@ -38,6 +38,7 @@ evalvillain
 exim
 formhandler
 fuzz
+fuzzai
 fuzzdboffensive
 fuzzdb
 gettingStarted
