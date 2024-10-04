@@ -2374,6 +2374,7 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <status>alpha</status>
         <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/reflect-alpha-0.0.11.zap</url>
         <hash>SHA-256:c45307037042e4079546a5fcb17d1165475e5cdd5ba7e8abc0d2cf0a14866466</hash>
+        <repo>https://github.com/TypeError/reflect/</repo>
         <date>2021-02-19</date>
         <size>1780219</size>
         <not-before-version>2.9.0</not-before-version>
