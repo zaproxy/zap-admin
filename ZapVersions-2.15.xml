@@ -124,31 +124,23 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>68</version>
-        <file>ascanrules-release-68.zap</file>
+        <version>69</version>
+        <file>ascanrules-release-69.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
-&lt;ul&gt;
-&lt;li&gt;Spring Actuator&lt;/li&gt;
-&lt;li&gt;XSLT Injection&lt;/li&gt;
-&lt;li&gt;XPath Injection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The XML External Entity Attack scan rule now include example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address false positives with Source Code Disclosure - CVE-2012-1823 scan rule, by not scanning binary responses and responses that already contain PHP source (Issue 8638).&lt;/li&gt;
-&lt;li&gt;Cross Site Scripting Rule false positives at medium threshold by matching the expected context (Issue 8640).&lt;/li&gt;
+&lt;li&gt;Added more checks for valid .htaccess files to reduce false positives (Issue 7632).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v68/ascanrules-release-68.zap</url>
-        <hash>SHA-256:f66847dacea00eac5da8de34159f6e733acbc5a91a95fc249986b4fb7d79069a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v69/ascanrules-release-69.zap</url>
+        <hash>SHA-256:0d5aae9ca89f7329590591199f382d9c12248b3cb02fa7d73167fb87c5e2646a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>3301667</size>
+        <date>2024-10-23</date>
+        <size>3302878</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -3009,19 +3001,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>109</version>
-        <file>webdriverlinux-release-109.zap</file>
+        <version>110</version>
+        <file>webdriverlinux-release-110.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 130.0.6723.58.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 130.0.6723.69.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v109/webdriverlinux-release-109.zap</url>
-        <hash>SHA-256:d2bb0739bbdab8a39b0238f94b55989c7d00cd643576340a685cb88022b025aa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v110/webdriverlinux-release-110.zap</url>
+        <hash>SHA-256:3896bf7eb93e40add35391804d22557aab106cd297e09f28adb14cf6b5f8f31a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-10-16</date>
-        <size>15299755</size>
+        <date>2024-10-23</date>
+        <size>15036483</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -3029,19 +3021,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>MacOS WebDrivers</name>
         <description>MacOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>109</version>
-        <file>webdrivermacos-release-109.zap</file>
+        <version>110</version>
+        <file>webdrivermacos-release-110.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 130.0.6723.58.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 130.0.6723.69.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v109/webdrivermacos-release-109.zap</url>
-        <hash>SHA-256:a3c8ab5e4711b36cd46845c5ebae7e894b0aa71b221c477ad9cba146e94e9f53</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v110/webdrivermacos-release-110.zap</url>
+        <hash>SHA-256:a75d779fdcc926e74feec551bcf870a056a53f5efe1440b63dcb25990a0b73d8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-10-16</date>
-        <size>23790580</size>
+        <date>2024-10-23</date>
+        <size>22915537</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -3049,19 +3041,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>109</version>
-        <file>webdriverwindows-release-109.zap</file>
+        <version>110</version>
+        <file>webdriverwindows-release-110.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 130.0.6723.58.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 130.0.6723.69.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v109/webdriverwindows-release-109.zap</url>
-        <hash>SHA-256:1e8092ea085d307c1b8a6ca97baf89239af1748648774a58e3ffb2fe2095b390</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v110/webdriverwindows-release-110.zap</url>
+        <hash>SHA-256:53392c17bd983275db92b620fbe8c745c2bd78905e30171c569c7a947e4f8d9d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-10-16</date>
-        <size>19915106</size>
+        <date>2024-10-23</date>
+        <size>20400032</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
