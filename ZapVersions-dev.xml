@@ -261,19 +261,19 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.15.1</version>
-        <file>authhelper-beta-0.15.1.zap</file>
+        <version>0.16.0</version>
+        <file>authhelper-beta-0.16.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Restored stats removed in previous release as these could be used in AF tests.&lt;/li&gt;
+&lt;li&gt;Address concurrency issue while passive scanning with the Session Management Response Identified scan rule (Issue 8187).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.15.1/authhelper-beta-0.15.1.zap</url>
-        <hash>SHA-256:f50390a68c6e5d7def333add878903bc150034897b8e7bc7d1ba76c9754470b8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.16.0/authhelper-beta-0.16.0.zap</url>
+        <hash>SHA-256:ef6a2362387c67598cd6861dbf9350b646c14d79b923e6013404ccddc2db547f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-02</date>
-        <size>813757</size>
+        <date>2024-11-06</date>
+        <size>813708</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
