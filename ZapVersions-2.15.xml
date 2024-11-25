@@ -935,21 +935,21 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Eval Villain</name>
         <description>Adds the Eval Villain extension to Firefox when launched from ZAP.</description>
         <author>Dennis Goodlett and the ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>evalvillain-alpha-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>evalvillain-alpha-0.4.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with new version of Eval Villain.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.13.0.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.3.0/evalvillain-alpha-0.3.0.zap</url>
-        <hash>SHA-256:ae7013ded7bd1e6b25ba8822c8fb5609ebef8818934bb8ac20b92067af76acb7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/evalvillain-v0.4.0/evalvillain-alpha-0.4.0.zap</url>
+        <hash>SHA-256:dedb6245cee2383b13eb4c0c58301ee2518c6e0af36359559f2e1638a8a076e3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/eval-villain/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-09-26</date>
-        <size>4944088</size>
-        <not-before-version>2.13.0</not-before-version>
+        <date>2024-11-25</date>
+        <size>4957040</size>
+        <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -2502,20 +2502,21 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.41.0</version>
-        <file>retire-release-0.41.0.zap</file>
+        <version>0.42.0</version>
+        <file>retire-release-0.42.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Performance improvements (Issue 8659).&lt;/li&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;The Risk level associated with Alerts raised by this scan rule are mapped to the severity ratings provided in the Retire.js data. If no severity is matched then a default of Medium Risk is used (Issue 7926).&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.41.0/retire-release-0.41.0.zap</url>
-        <hash>SHA-256:3b8ecfc75c520632da8594d4a08791d4e5f0bf07cc81a86deea516228890e8a3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.42.0/retire-release-0.42.0.zap</url>
+        <hash>SHA-256:e43d8eedc67af0ca34502cc39ad18a75043b8719ff882babd67069072fbe6bd1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-10-07</date>
-        <size>992367</size>
+        <date>2024-11-25</date>
+        <size>994720</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2968,20 +2969,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.42.0</version>
-        <file>wappalyzer-release-21.42.0.zap</file>
+        <version>21.43.0</version>
+        <file>wappalyzer-release-21.43.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.42.0/wappalyzer-release-21.42.0.zap</url>
-        <hash>SHA-256:245c9d0e59ff2e3ab272d6c59415eabf6d92b81a32fdace319806614cc3db400</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.43.0/wappalyzer-release-21.43.0.zap</url>
+        <hash>SHA-256:f5bf3028d5a9bc262f522b920c9012a542d84e75b4429919c3eeb12851127c7b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>18907329</size>
+        <date>2024-11-25</date>
+        <size>19759181</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
