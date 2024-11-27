@@ -2593,6 +2593,36 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <size>1811985</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_saml>
+    <addon>scanpolicies</addon>
+    <addon_scanpolicies>
+        <name>Scan Policies</name>
+        <description>A set of standard scan policies.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>scanpolicies-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A set of standardized active scan policies:
+&lt;ul&gt;
+&lt;li&gt;Default Policy&lt;/li&gt;
+&lt;li&gt;Developer CI/CD&lt;/li&gt;
+&lt;li&gt;Developer Standard&lt;/li&gt;
+&lt;li&gt;Developer Full&lt;/li&gt;
+&lt;li&gt;QA Standard&lt;/li&gt;
+&lt;li&gt;QA Full&lt;/li&gt;
+&lt;li&gt;API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scanpolicies-v0.1.0/scanpolicies-alpha-0.1.0.zap</url>
+        <hash>SHA-256:c9077c973ccaed3e886908c5536bb51dc67f98765a43eebf641e31490a3deb15</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/scan-policies/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2024-11-27</date>
+        <size>17453</size>
+        <not-before-version>2.15.0</not-before-version>
+    </addon_scanpolicies>
     <addon>scripts</addon>
     <addon_scripts>
         <name>Script Console</name>
