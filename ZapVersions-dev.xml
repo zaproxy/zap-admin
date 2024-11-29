@@ -524,24 +524,34 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>client-alpha-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>client-alpha-0.9.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated the Chrome extension to v0.0.8.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox extensions to v0.0.9.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for menu weights (Issue 8369).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address exception with deleted messages while handling client event.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.8.0/client-alpha-0.8.0.zap</url>
-        <hash>SHA-256:8c732069b6c2b88f2ab985f1ebd0356881bcb5230e9f6a4707b8b63a19064b4d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.9.0/client-alpha-0.9.0.zap</url>
+        <hash>SHA-256:262028f8388d8e948097e716c315c0d3943d4835753505dc88be5efe92655cf2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-01-16</date>
-        <size>1607021</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2024-11-29</date>
+        <size>1652849</size>
+        <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
+                    <version>&gt;=1.23.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
