@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: 11
+        java-version: 17
     - name: Create News Main Release
       run: ./gradlew createNewsMainRelease --release="${{ github.event.client_payload.version }}"
     - name: Update Main Release

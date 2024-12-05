@@ -46,13 +46,13 @@ dependencies {
     "errorprone"("com.google.errorprone:error_prone_core:2.20.0")
 
     implementation("org.apache.commons:commons-text:1.10.0")
-    implementation("org.kohsuke:github-api:1.101")
+    implementation("org.kohsuke:github-api:1.326")
     compileOnly("com.infradna.tool:bridge-method-annotation:1.18") {
         exclude(group = "org.jenkins-ci")
     }
     compileOnly("com.github.spotbugs:spotbugs-annotations:3.1.12")
     implementation("net.sf.json-lib:json-lib:2.4:jdk15")
-    implementation("org.zaproxy:zap:2.12.0")
+    implementation("org.zaproxy:zap:2.15.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
