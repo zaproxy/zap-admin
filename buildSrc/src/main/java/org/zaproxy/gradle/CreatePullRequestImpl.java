@@ -101,7 +101,7 @@ public class CreatePullRequestImpl {
                             .head(ghUser.getName() + ":" + branchName)
                             .state(GHIssueState.OPEN)
                             .list()
-                            .asList();
+                            .toList();
             if (pulls.isEmpty()) {
                 ghRepository.createPullRequest(
                         commitSummary,

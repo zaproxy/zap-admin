@@ -60,7 +60,7 @@ public abstract class GenerateWebsiteMainReleaseData extends AbstractGenerateWeb
                         .getRepository(getGitHubRepo().get().toString());
 
         String version = zapVersionsXml.getString(CORE_VERSION_ELEMENT);
-        List<GHAsset> assets = repo.getReleaseByTagName(TAG_PREFIX + version).getAssets();
+        List<GHAsset> assets = repo.getReleaseByTagName(TAG_PREFIX + version).listAssets().toList();
 
         List<ReleaseFile> releaseFiles = new ArrayList<>();
 
