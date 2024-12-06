@@ -93,7 +93,7 @@ val latestZapVersions = file(nameLatestZapVersions)
 val ghUser = GitHubUser("zapbot", "12745184+zapbot@users.noreply.github.com", System.getenv("ZAPBOT_TOKEN"))
 val adminRepo = GitHubRepo("zaproxy", "zap-admin", rootDir)
 
-val addOnsZapVersions = files(devZapVersions, latestZapVersions)
+val addOnsZapVersions = files(devZapVersions, latestZapVersions, "ZapVersions-2.16.xml")
 val defaultChecksumAlgorithm = "SHA-256"
 
 tasks {

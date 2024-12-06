@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ZAP>
+    <news>
+        <id>51</id>
+        <default>
+            <item>ZAP has joined forces with Checkmarx</item>
+            <link>https://www.zaproxy.org/blog/2024-09-24-zap-has-joined-forces-with-checkmarx/</link>
+        </default>
+    </news>
+</ZAP>
