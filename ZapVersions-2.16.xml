@@ -569,19 +569,28 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.28.0</version>
-        <file>commonlib-release-1.28.0.zap</file>
+        <version>1.29.0</version>
+        <file>commonlib-release-1.29.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Let the Value Generator add-on provide the custom values through this add-on (Issue 8016).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Policy tags for use with scan rules and the new Scan Policies add-on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Be more lenient with the input used for providing values, to prevent exceptions.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.28.0/commonlib-release-1.28.0.zap</url>
-        <hash>SHA-256:243aea9f7273c0b69621b7a6fb5a912fc8e91e2b24f34236929f87b24804cbdc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.29.0/commonlib-release-1.29.0.zap</url>
+        <hash>SHA-256:423202fc2597edb5fa172f00dd2d6411f8ea5ec6405f08f07257e11d0f9bba07</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>15141417</size>
+        <date>2024-12-23</date>
+        <size>15145366</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -875,26 +884,37 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>Aabha Biyani, ZAP Dev Team</author>
-        <version>19</version>
-        <file>domxss-release-19.zap</file>
+        <version>20</version>
+        <file>domxss-release-20.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Address deprecation warnings with newer Selenium version (4.27).&lt;/li&gt;
+&lt;li&gt;Include the whole HTTP message in the raised alerts.&lt;/li&gt;
+&lt;li&gt;Include the steps to reproduce the DOM XSS in the other info of the alert.&lt;/li&gt;
+&lt;li&gt;Do not request URLs explicitly excluded from the context or global excludes&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address false negatives through query parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Standardized Scan Policy related alert tags on the rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v19/domxss-release-19.zap</url>
-        <hash>SHA-256:6bc85e3ced67a1e2039bdda92b9d3cc0e8e4a8abea8b49fc3685c793736b101d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v20/domxss-release-20.zap</url>
+        <hash>SHA-256:69a551db6553a16462faa63a04c232ec56f80c0db1d37b0f6dccf9dc02d8db7f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-07</date>
-        <size>271507</size>
+        <date>2024-12-23</date>
+        <size>275082</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.29.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
@@ -1878,27 +1898,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.18.0</version>
-        <file>network-beta-0.18.0.zap</file>
+        <version>0.19.0</version>
+        <file>network-beta-0.19.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Send success/failure stats.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Stop retrying 429 and 503 responses, instead of waiting for &lt;code&gt;retry-after&lt;/code&gt; (Issue 8627).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix typo in log message.&lt;/li&gt;
+&lt;li&gt;Configure the logging to prevent verbose log messages when using BC JSSE provider.&lt;/li&gt;
+&lt;li&gt;Improve error handling on client's unknown CA TLS alert.&lt;/li&gt;
+&lt;li&gt;Report available TLS providers when failed to query the TLS/SSL protocol versions.&lt;/li&gt;
+&lt;li&gt;Rely on the default secure random generator when creating the Root CA certificate to use the most appropriate defined by the security provider.&lt;/li&gt;
+&lt;li&gt;Update default user-agents.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.18.0/network-beta-0.18.0.zap</url>
-        <hash>SHA-256:cfae49285ac293ac13212e772a7f651b0d244bc6bfccf73a835f82e6f9e9d2b0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.19.0/network-beta-0.19.0.zap</url>
+        <hash>SHA-256:68d797708fba51da2edc4dee58130057c0d85a9c73eedde008833a24693ba12b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>28118824</size>
+        <date>2024-12-23</date>
+        <size>28128362</size>
         <not-before-version>2.15.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -2512,21 +2528,24 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.42.0</version>
-        <file>retire-release-0.42.0.zap</file>
+        <version>0.43.0</version>
+        <file>retire-release-0.43.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An issue that was resulting in False Positives.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;The Risk level associated with Alerts raised by this scan rule are mapped to the severity ratings provided in the Retire.js data. If no severity is matched then a default of Medium Risk is used (Issue 7926).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The scan rule now uses a more specific CWE (Issue 8732).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.42.0/retire-release-0.42.0.zap</url>
-        <hash>SHA-256:e43d8eedc67af0ca34502cc39ad18a75043b8719ff882babd67069072fbe6bd1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.43.0/retire-release-0.43.0.zap</url>
+        <hash>SHA-256:bba6ba79b4fca51729eb10dc5ac7d737777889eb7434b45d2665e8cb8eb2afc7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-11-25</date>
-        <size>994720</size>
+        <date>2024-12-23</date>
+        <size>1000658</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
@@ -2668,24 +2687,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.30.0</version>
-        <file>selenium-release-15.30.0.zap</file>
+        <version>15.31.0</version>
+        <file>selenium-release-15.31.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.25.0.&lt;/li&gt;
-&lt;li&gt;Update script template:
-&lt;ul&gt;
-&lt;li&gt;selenium/Selenium default template.js - update documentation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.27.0.&lt;/li&gt;
+&lt;li&gt;Use WebDriver BiDi with Firefox.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.30.0/selenium-release-15.30.0.zap</url>
-        <hash>SHA-256:540709b714e2ed0a68fc4ff04fbc0cb3db29faf4ce1d4043f8e086c66cc083a7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.31.0/selenium-release-15.31.0.zap</url>
+        <hash>SHA-256:3f6c03d349aa9911cf8c48a29bb419666ddd8a781f674b2324d025d256aaa5cc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>31622033</size>
+        <date>2024-12-23</date>
+        <size>35281222</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
