@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ZAP>
     <news>
-        <id>50</id>
+        <id>51</id>
         <default>
-            <item>ZAP 2.15.0 is available now</item>
-            <link>https://www.zaproxy.org/blog/2024-05-07-zap-2-15-0/</link>
+            <item>ZAP 2.16.0 is available now</item>
+            <link>https://www.zaproxy.org/blog/2025-01-10-zap-2-16-0/</link>
         </default>
     </news>
 </ZAP>
