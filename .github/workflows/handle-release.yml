@@ -24,6 +24,13 @@ jobs:
         persist-credentials: false
         path: zaproxy-website
         fetch-depth: 0
+    - name: Checkout org.zaproxy.ZAP
+      uses: actions/checkout@v4
+      with:
+        repository: flathub/org.zaproxy.ZAP
+        persist-credentials: false
+        path: org.zaproxy.ZAP
+        fetch-depth: 0
     - name: Setup Java
       uses: actions/setup-java@v4
       with:

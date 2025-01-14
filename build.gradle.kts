@@ -16,6 +16,7 @@ import org.zaproxy.gradle.HandleWeeklyRelease
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateAndCreatePullRequestAddOnRelease
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
+import org.zaproxy.gradle.UpdateFlathubData
 import org.zaproxy.gradle.UpdateGettingStartedWebsitePage
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
 import org.zaproxy.gradle.UpdateZapVersionWebsiteData
@@ -375,8 +376,39 @@ val handleMainRelease by tasks.registering(HandleMainRelease::class) {
     eventType.set("release-main-docker")
 }
 
+val flathubRepo = GitHubRepo("flathub", "org.zaproxy.ZAP", file("$rootDir/../org.zaproxy.ZAP"))
+
+val updateFlathubData by tasks.registering(UpdateFlathubData::class) {
+    releaseState.set(releaseStateData)
+
+    zapVersions.set(latestZapVersions)
+    baseDirectory.set(flathubRepo.dir)
+}
+
+val updateFlathub by tasks.registering(CreatePullRequest::class) {
+    dependsOn(updateFlathubData)
+
+    user.set(ghUser)
+    repo.set(flathubRepo)
+    baseBranchName.set("master")
+    branchName.set("update-zap")
+
+    commitSummary.set("Update ZAP version")
+    commitDescription.set(
+        provider {
+            """
+            From:
+            $adminRepo@${headCommit(adminRepo.dir)}
+            """.trimIndent()
+        },
+    )
+
+    mustRunAfter(handleMainRelease)
+}
+
 tasks.register("handleRelease") {
     dependsOn(updateWebsite)
     dependsOn(handleWeeklyRelease)
     dependsOn(handleMainRelease)
+    dependsOn(updateFlathub)
 }
