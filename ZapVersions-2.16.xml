@@ -227,31 +227,41 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>56</version>
-        <file>ascanrulesBeta-beta-56.zap</file>
+        <version>57</version>
+        <file>ascanrulesBeta-beta-57.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Log exception details in Out of Band XSS scan rule.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The Anti-CSRF Tokens Check scan rule now only considers GET requests at Low Threshold (Issue 7741).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;The following scan rules now use more specific CWE IDs:
+&lt;ul&gt;
+&lt;li&gt;Proxy Disclosure (Issue 8713)&lt;/li&gt;
+&lt;li&gt;Possible Username Enumeration (Issue 8715)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove double dot in skipped message of scan rules that use the Active Scan OAST service.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address time-based false positives in Remote Code Execution - Shell Shock scan rule (Issue 8516).&lt;/li&gt;
+&lt;li&gt;Address exception when scanning a message without path with Possible Username Enumeration scan rule.&lt;/li&gt;
+&lt;li&gt;The WSTG alert tags on the HTTP Only Site scan rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Standardized Scan Policy related alert tags on various rules.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v56/ascanrulesBeta-beta-56.zap</url>
-        <hash>SHA-256:e6dd4dc66fe79f192fae8e336e1708ca710eac190a04c79f1cd01e3fa9f2432c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v57/ascanrulesBeta-beta-57.zap</url>
+        <hash>SHA-256:d2574f4a79137a5d3d0b1bb82563863a8c414bd13c9ef42e0084090e37337b03</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>1768903</size>
-        <not-before-version>2.15.0</not-before-version>
+        <date>2025-01-15</date>
+        <size>1777403</size>
+        <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.29.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>database</id>
@@ -736,45 +746,41 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Custom Payloads</name>
         <description>Ability to add, edit or remove payloads that are used i.e. by active scanners</description>
         <author>ZAP Dev Team</author>
-        <version>0.13.0</version>
-        <file>custompayloads-beta-0.13.0.zap</file>
-        <status>beta</status>
+        <version>0.14.0</version>
+        <file>custompayloads-release-0.14.0.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Promoted to Release status.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Promoted to Beta.&lt;/li&gt;
+&lt;li&gt;The superfluous/unused ID element of the custom payloads has been removed from the GUI and config.&lt;/li&gt;
+&lt;li&gt;Now depends on the Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Initial API support:
-&lt;ul&gt;
-&lt;li&gt;Actions
-&lt;ul&gt;
-&lt;li&gt;Enable payloads.&lt;/li&gt;
-&lt;li&gt;Disable payloads.&lt;/li&gt;
-&lt;li&gt;Enable payload.&lt;/li&gt;
-&lt;li&gt;Disable payload.&lt;/li&gt;
-&lt;li&gt;Add payload.&lt;/li&gt;
-&lt;li&gt;Remove payload.&lt;/li&gt;
+&lt;li&gt;Add help button to Options panel and add further detailed Help content.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Views:
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Payload categories.&lt;/li&gt;
-&lt;li&gt;Payloads (optionally filtered by category).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The add-on will no longer attempt to save or load Payloads for which there is no Category.&lt;/li&gt;
+&lt;li&gt;Ensure file is selected, exists, and is readable when attempting to import multiple payloads.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.13.0/custompayloads-beta-0.13.0.zap</url>
-        <hash>SHA-256:07c571e121291980add70fad1b64933382742e93959c7dd470426b4fb111921e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/custompayloads-v0.14.0/custompayloads-release-0.14.0.zap</url>
+        <hash>SHA-256:fe99e67a3a456c70a25c35e5d25961c1dca417d2c94124316c2ea26965009ec2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/custom-payloads/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2023-11-10</date>
-        <size>246425</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2025-01-15</date>
+        <size>292156</size>
+        <not-before-version>2.16.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                </addon>
+            </addons>
+        </dependencies>
     </addon_custompayloads>
     <addon>database</addon>
     <addon_database>
@@ -2373,20 +2379,30 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>41</version>
-        <file>pscanrulesBeta-beta-41.zap</file>
+        <version>42</version>
+        <file>pscanrulesBeta-beta-42.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A possible false positive condition with the Dangerous JS Functions scan rule with substrings in certain circumstances (Issue 8553).&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;Updated help with specific Category identifier for use with the Custom Payloads add-on for the &amp;quot;Dangerous JS Functions&amp;quot; rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix typo in log message.&lt;/li&gt;
+&lt;li&gt;Fix Insufficient Site Isolation scan rule check that filters responses based on whether a response is a success or not.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v41/pscanrulesBeta-beta-41.zap</url>
-        <hash>SHA-256:afb76940929bf4f3bf2ab4a2d0a0fa9d50ef834969b551c5397459746caf6e76</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v42/pscanrulesBeta-beta-42.zap</url>
+        <hash>SHA-256:91626262fbe76d097b508a2e85b3192c8b12645dfb82387715ac12358989d562</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-02</date>
-        <size>677612</size>
-        <not-before-version>2.15.0</not-before-version>
+        <date>2025-01-15</date>
+        <size>678315</size>
+        <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -3168,26 +3184,32 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.43.0</version>
-        <file>wappalyzer-release-21.43.0.zap</file>
+        <version>21.44.0</version>
+        <file>wappalyzer-release-21.44.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;Depend on Passive Scanner add-on (Issue 7959).&lt;/li&gt;
+&lt;li&gt;The scan rule no longer sets a CWE for alerts (Issue 8733).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.43.0/wappalyzer-release-21.43.0.zap</url>
-        <hash>SHA-256:f5bf3028d5a9bc262f522b920c9012a542d84e75b4429919c3eeb12851127c7b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.44.0/wappalyzer-release-21.44.0.zap</url>
+        <hash>SHA-256:b740a362994d4d21ec06be7b96889bb82c9743b9c2baecd8682c3758dd9f82bc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-11-25</date>
-        <size>19759181</size>
-        <not-before-version>2.15.0</not-before-version>
+        <date>2025-01-15</date>
+        <size>20162575</size>
+        <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
                     <version>&gt;= 1.17.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>pscan</id>
+                    <version>&gt;= 0.1.0 &amp; &lt; 1.0.0</version>
                 </addon>
             </addons>
         </dependencies>
