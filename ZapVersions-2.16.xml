@@ -2806,19 +2806,24 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.32.0</version>
-        <file>selenium-release-15.32.0.zap</file>
+        <version>15.33.0</version>
+        <file>selenium-release-15.33.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;Allow to log browser's &lt;code&gt;console.log&lt;/code&gt;, done at DEBUG level with the name &lt;code&gt;org.zaproxy.webdriver&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use WebDriver BiDi with Chrome.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.28.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.32.0/selenium-release-15.32.0.zap</url>
-        <hash>SHA-256:58064a207acf51ae4ef32632819b0460660b31da2962c1382c59a59854ce27dd</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.33.0/selenium-release-15.33.0.zap</url>
+        <hash>SHA-256:14bd671497bec531c2fd884ea1fe255140bc473397c5cab1f8369ca52581e64b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-10</date>
-        <size>35284942</size>
+        <date>2025-01-23</date>
+        <size>34991613</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -3311,26 +3316,25 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.0.0</version>
-        <file>zest-beta-48.0.0.zap</file>
+        <version>48.1.0</version>
+        <file>zest-beta-48.1.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow other add-ons to create a Zest script from a list of messages.&lt;/li&gt;
+&lt;li&gt;Use ZAP for launching Firefox and Chrome.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.23.0:
+&lt;ul&gt;
+&lt;li&gt;Update Selenium to version 4.28.0.&lt;/li&gt;
+&lt;li&gt;Update minimum Java version to 17.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Use Semantic Version.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on Passive Scanner add-on (Issue 7959).&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.0.0/zest-beta-48.0.0.zap</url>
-        <hash>SHA-256:5a53a230c9672dcb61e08d47242cebb8eccaea06cad1fa5811800c8103e41f9e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.1.0/zest-beta-48.1.0.zap</url>
+        <hash>SHA-256:652eb4a1ac9f2efaace2d4d222652857b9a88353767ce0a06966df195ed2e061</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-10</date>
-        <size>5627343</size>
+        <date>2025-01-23</date>
+        <size>3030602</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
