@@ -589,27 +589,20 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.11.0</version>
-        <file>client-alpha-0.11.0.zap</file>
+        <version>0.12.0</version>
+        <file>client-alpha-0.12.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix concurrency issue with page components which could lead to exceptions in the GUI.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Updated Chrome and Firefox extensions to v0.0.11.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A context menu allowing users to Export Client Map.&lt;/li&gt;
+&lt;li&gt;Extension not enabled when launched from ZAP.&lt;/li&gt;
+&lt;li&gt;Browser recording not enabled when launched from ZAP recorder.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.11.0/client-alpha-0.11.0.zap</url>
-        <hash>SHA-256:c7475c713a310cc872a110db80ebfd4e965d71e24ed31c5029bac2db985944f1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.12.0/client-alpha-0.12.0.zap</url>
+        <hash>SHA-256:b0fedbc6e44b40c918b8897279914b65ca219de3ca0415911ab4060e73f41249</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-17</date>
-        <size>2136081</size>
+        <date>2025-01-24</date>
+        <size>2142829</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
