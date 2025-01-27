@@ -301,22 +301,24 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.17.0</version>
-        <file>authhelper-beta-0.17.0.zap</file>
+        <version>0.18.0</version>
+        <file>authhelper-beta-0.18.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Depend on Passive Scanner add-on (Issue 7959).&lt;/li&gt;
-&lt;li&gt;Address deprecation warnings with newer Selenium version (4.27).&lt;/li&gt;
-&lt;li&gt;Optionally depend on the Client Integration add-on to provide Browser Based Authentication to the Client Spider.&lt;/li&gt;
+&lt;li&gt;Ignore non-displayed fields when selecting the user name and password.&lt;/li&gt;
+&lt;li&gt;Use single displayed field for user name, e.g. multi step login.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Input fields that do not explicitly declare their type were no longer being chosen by the Browser Based Authentication.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.17.0/authhelper-beta-0.17.0.zap</url>
-        <hash>SHA-256:d3b6a90ef97d57db528c971fe548a07ec15a77f1923fac1bf0e175b8c3655be4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.18.0/authhelper-beta-0.18.0.zap</url>
+        <hash>SHA-256:6b447e4d755161d82730f0728965ad907c30049402257a855d7a70914d94d7a7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>818701</size>
+        <date>2025-01-27</date>
+        <size>820310</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
