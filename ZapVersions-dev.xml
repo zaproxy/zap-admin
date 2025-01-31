@@ -802,21 +802,24 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Dev Add-on</name>
         <description>An add-on to help with development of ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>dev-alpha-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>dev-alpha-0.9.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Sequence performance test to make it actually possible to test it using automation.&lt;/li&gt;
-&lt;li&gt;CSS and JS responses are now set cache enabled.&lt;/li&gt;
+&lt;li&gt;Link which is only shown if a localStorage item is set, for testing in browser spider authentication.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.8.0/dev-alpha-0.8.0.zap</url>
-        <hash>SHA-256:45b8d23e224a2cfcaae3d1c210ff8044e5176efdb12a71509593637d14ce1762</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/dev-v0.9.0/dev-alpha-0.9.0.zap</url>
+        <hash>SHA-256:88bdc80a59a0efb7d6b7d85fc7aded3037c712e0a8460f743fb70e66107be322</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dev-add-on/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-11-13</date>
-        <size>153852</size>
-        <not-before-version>2.15.0</not-before-version>
+        <date>2025-01-31</date>
+        <size>155773</size>
+        <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
