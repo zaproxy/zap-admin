@@ -301,24 +301,24 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.18.0</version>
-        <file>authhelper-beta-0.18.0.zap</file>
+        <version>0.19.0</version>
+        <file>authhelper-beta-0.19.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Ignore non-displayed fields when selecting the user name and password.&lt;/li&gt;
-&lt;li&gt;Use single displayed field for user name, e.g. multi step login.&lt;/li&gt;
+&lt;li&gt;Added support for Client Script Authentication when used in conjunction with the Ajax Spider add-on or the Client Spider via the Client Side Integration add-on.&lt;/li&gt;
+&lt;li&gt;Add support for custom authentication steps in Browser Based Authentication.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Input fields that do not explicitly declare their type were no longer being chosen by the Browser Based Authentication.&lt;/li&gt;
+&lt;li&gt;Reset always the state of the demo mode in the Authentication Tester dialogue.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.18.0/authhelper-beta-0.18.0.zap</url>
-        <hash>SHA-256:6b447e4d755161d82730f0728965ad907c30049402257a855d7a70914d94d7a7</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.19.0/authhelper-beta-0.19.0.zap</url>
+        <hash>SHA-256:4e4511f7e007900bb61f4cbf45839b29410e49c5147e39b9dc9b221476ec2a1e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-27</date>
-        <size>820310</size>
+        <date>2025-02-04</date>
+        <size>1255693</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -337,6 +337,10 @@
                 <addon>
                     <id>selenium</id>
                     <version>15.*</version>
+                </addon>
+                <addon>
+                    <id>zest</id>
+                    <version>&gt;=48.2.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -372,51 +376,27 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.44.0</version>
-        <file>automation-beta-0.44.0.zap</file>
+        <version>0.45.0</version>
+        <file>automation-beta-0.45.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Active scan policy job.&lt;/li&gt;
-&lt;li&gt;Add job to configure the active scanner, &lt;code&gt;activeScan-config&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Allow to enable/disable jobs (Issue 5845).&lt;/li&gt;
-&lt;li&gt;Method to allow the user to set the exit code via a script.&lt;/li&gt;
-&lt;li&gt;Add exitStatus job (Issue #6928)&lt;/li&gt;
+&lt;li&gt;Correctly load numeric user passwords.&lt;/li&gt;
+&lt;li&gt;Address malformed HTML in the help.&lt;/li&gt;
+&lt;li&gt;Correct default value of &lt;code&gt;threadPerHost&lt;/code&gt; property of the &lt;code&gt;activeScan-config&lt;/code&gt; job's help.&lt;/li&gt;
+&lt;li&gt;Ensure the value zero is saved to the automation plan in the statistics test.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Updated automation framework documentation and templates for &lt;code&gt;activeScan&lt;/code&gt; job to reflect changes to the default value of threadPerHost parameter&lt;/li&gt;
-&lt;li&gt;Update help for the &amp;quot;requestor&amp;quot; job.&lt;/li&gt;
-&lt;li&gt;Update help to indicate that job order is important (Issue 8675).&lt;/li&gt;
-&lt;li&gt;Fields with default or missing values are omitted for the following automation jobs in saved plans:
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;activeScan&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;delay&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;requestor&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Remove job implementations that were previously migrated to the Passive Scanner add-on (Issue 7959).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Templates generated with &lt;code&gt;-autogenmin&lt;/code&gt; or &lt;code&gt;-autogenmax&lt;/code&gt; were invalid in some cases.&lt;/li&gt;
-&lt;li&gt;Allow to choose one thread for the &lt;code&gt;activeScan&lt;/code&gt; job through the GUI.&lt;/li&gt;
-&lt;li&gt;Active Scan jobs will once again use the default policy if neither a policy nor a policyDefinition has been set.&lt;/li&gt;
-&lt;li&gt;Bug in job alert tests related to alert matching.&lt;/li&gt;
-&lt;li&gt;Active scan rule ID 0 (Directory Browsing) will be included in the plan (yaml) when saved (Issue 8746).&lt;/li&gt;
-&lt;li&gt;Sizing/display of the Active Scan Policy job rule add/modify dialogs.&lt;/li&gt;
+&lt;li&gt;Added support for Client Script Authentication when the Ajax Spider is used in conjunction with the Auth Helper add-on.&lt;/li&gt;
+&lt;li&gt;Add support for custom authentication steps in Browser Based Authentication.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.44.0/automation-beta-0.44.0.zap</url>
-        <hash>SHA-256:7733123076ff40a7636c88baf4929765530ea9fe67aed4e912b6d39b8b2bace4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.45.0/automation-beta-0.45.0.zap</url>
+        <hash>SHA-256:bff51afeffd705071ca52345c76ca0cf00ad10dcb85919a78fae207583a9d58f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>1809201</size>
+        <date>2025-02-04</date>
+        <size>1980689</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -591,20 +571,19 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.12.0</version>
-        <file>client-alpha-0.12.0.zap</file>
+        <version>0.13.0</version>
+        <file>client-alpha-0.13.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Extension not enabled when launched from ZAP.&lt;/li&gt;
-&lt;li&gt;Browser recording not enabled when launched from ZAP recorder.&lt;/li&gt;
+&lt;li&gt;Added support for Client Script Authentication when installed in conjunction with the Authentication Helper add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.12.0/client-alpha-0.12.0.zap</url>
-        <hash>SHA-256:b0fedbc6e44b40c918b8897279914b65ca219de3ca0415911ab4060e73f41249</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.13.0/client-alpha-0.13.0.zap</url>
+        <hash>SHA-256:64be16089fc028badd969a4dc390f7b79d76e6332d14f19e43bef33a49e6df94</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-24</date>
-        <size>2142829</size>
+        <date>2025-02-04</date>
+        <size>2142810</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -3313,25 +3292,28 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.1.0</version>
-        <file>zest-beta-48.1.0.zap</file>
+        <version>48.2.0</version>
+        <file>zest-beta-48.2.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use ZAP for launching Firefox and Chrome.&lt;/li&gt;
-&lt;li&gt;Update Zest library to 0.23.0:
-&lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.28.0.&lt;/li&gt;
-&lt;li&gt;Update minimum Java version to 17.&lt;/li&gt;
+&lt;li&gt;Firefox to recorder.&lt;/li&gt;
+&lt;li&gt;Added support for custom script authentication.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Record script order to be alphabetical.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Record Client Submit statement.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.1.0/zest-beta-48.1.0.zap</url>
-        <hash>SHA-256:652eb4a1ac9f2efaace2d4d222652857b9a88353767ce0a06966df195ed2e061</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.2.0/zest-beta-48.2.0.zap</url>
+        <hash>SHA-256:9ff5a0078ade20d0fe807a40fa1962869b8ba2f34b3d1104c6124b0710017ede</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-23</date>
-        <size>3030602</size>
+        <date>2025-02-04</date>
+        <size>3035322</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
