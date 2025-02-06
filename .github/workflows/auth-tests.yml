@@ -1,0 +1,20 @@
+name: Run Auth Tests
+on:
+  workflow_dispatch:
+  schedule:
+    # Every day at the 1am
+    - cron:  '0 1 * * *'
+
+jobs:
+  publish:
+    name: Authentication Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - 
+        name: Authentication plan tests
+        id: "test-auth-plans"
+        if: ${{ ! cancelled() }}
+        run: |
+          docker pull ghcr.io/zaproxy/zaproxy:nightly
+          docker run -v $(pwd):/zap/wrk/:rw -t zaproxy/zap-nightly /zap/wrk/.github/test_resources/auth_plan_tests.sh
