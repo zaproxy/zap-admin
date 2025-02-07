@@ -301,24 +301,26 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.19.0</version>
-        <file>authhelper-beta-0.19.0.zap</file>
+        <version>0.20.0</version>
+        <file>authhelper-beta-0.20.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added support for Client Script Authentication when used in conjunction with the Ajax Spider add-on or the Client Spider via the Client Side Integration add-on.&lt;/li&gt;
-&lt;li&gt;Add support for custom authentication steps in Browser Based Authentication.&lt;/li&gt;
+&lt;li&gt;Reduce add-on size.&lt;/li&gt;
+&lt;li&gt;Improved session management detection.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Reset always the state of the demo mode in the Authentication Tester dialogue.&lt;/li&gt;
+&lt;li&gt;Maintain the correct cookie state when using client script authentication.&lt;/li&gt;
+&lt;li&gt;Do not close windows when running client auth in the spiders.&lt;/li&gt;
+&lt;li&gt;Always close all of the windows when running client auth not in the spiders.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.19.0/authhelper-beta-0.19.0.zap</url>
-        <hash>SHA-256:4e4511f7e007900bb61f4cbf45839b29410e49c5147e39b9dc9b221476ec2a1e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.20.0/authhelper-beta-0.20.0.zap</url>
+        <hash>SHA-256:2965ec8d0d07cec535905d2b19211fc68f103bc9895de8975ca5c0abf32c5c6e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-02-04</date>
-        <size>1255693</size>
+        <date>2025-02-07</date>
+        <size>969043</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -3292,28 +3294,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.2.0</version>
-        <file>zest-beta-48.2.0.zap</file>
+        <version>48.3.0</version>
+        <file>zest-beta-48.3.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Firefox to recorder.&lt;/li&gt;
-&lt;li&gt;Added support for custom script authentication.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Record script order to be alphabetical.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Record Client Submit statement.&lt;/li&gt;
+&lt;li&gt;Enable ZAP API in the authentication runner so ZAP browser extension callbacks work.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.2.0/zest-beta-48.2.0.zap</url>
-        <hash>SHA-256:9ff5a0078ade20d0fe807a40fa1962869b8ba2f34b3d1104c6124b0710017ede</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.3.0/zest-beta-48.3.0.zap</url>
+        <hash>SHA-256:c8ed8c347ee29d42044286c3d20d5d59f3b7ef63af5444db758e026f2d8c5a77</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-02-04</date>
-        <size>3035322</size>
+        <date>2025-02-07</date>
+        <size>3035514</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
