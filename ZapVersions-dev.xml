@@ -301,19 +301,19 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.21.0</version>
-        <file>authhelper-beta-0.21.0.zap</file>
+        <version>0.22.0</version>
+        <file>authhelper-beta-0.22.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Delays identifying verification due to tests being performed on too many unlikely URLs (such as images).&lt;/li&gt;
+&lt;li&gt;Initial authentication report (JSON).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.21.0/authhelper-beta-0.21.0.zap</url>
-        <hash>SHA-256:ec13d44efd5d32d4cc0912d93418f2f4134b38b66c14100380670e5dca131189</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.22.0/authhelper-beta-0.22.0.zap</url>
+        <hash>SHA-256:fd45568474fd3a41a4a51d649ea4d05a1b00d37c527e80988b2b973c10be3ef5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-02-10</date>
-        <size>969102</size>
+        <date>2025-02-12</date>
+        <size>983211</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -371,19 +371,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.46.0</version>
-        <file>automation-beta-0.46.0.zap</file>
+        <version>0.47.0</version>
+        <file>automation-beta-0.47.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Read (and write) the TOTP data from user's credentials in the automation plan.&lt;/li&gt;
+&lt;li&gt;Method to get the YAML representation of a plan.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.46.0/automation-beta-0.46.0.zap</url>
-        <hash>SHA-256:60f7655c0daf3241ce32bac56f079d84a05f757c5660cf8041be37dbb54a89b0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.47.0/automation-beta-0.47.0.zap</url>
+        <hash>SHA-256:fb2e0fd3a28f122f9f0eec1bd3f6bfc6eb7ca2850ad253099250f467457297ed</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-02-10</date>
-        <size>1988839</size>
+        <date>2025-02-12</date>
+        <size>1988906</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2500,30 +2500,15 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.35.0</version>
-        <file>reports-release-0.35.0.zap</file>
+        <version>0.36.0</version>
+        <file>reports-release-0.36.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Stats counter to the main toolbar button (Issue 8375).&lt;/li&gt;
-&lt;li&gt;Sequence data to JSON &amp;amp; HTML reports.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Update automation job help.&lt;/li&gt;
-&lt;li&gt;Fields with default or missing values are omitted for the &lt;code&gt;report&lt;/code&gt; job in saved Automation Framework plans.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Do not log an error when the statistics do not have a resource message (Issue 8788).&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.35.0/reports-release-0.35.0.zap</url>
-        <hash>SHA-256:246a056d9f232cfcc08401df50cd334e09149b3086a5d2339ce71a0b088ef680</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.36.0/reports-release-0.36.0.zap</url>
+        <hash>SHA-256:d315cdbcf18acd9f76c3a7dae5e50dac9810d890de89a529354902b90578b462</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-10</date>
-        <size>14874633</size>
+        <date>2025-02-12</date>
+        <size>14871347</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
