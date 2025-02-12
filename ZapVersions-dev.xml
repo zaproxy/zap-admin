@@ -2237,34 +2237,29 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive Scanner</name>
         <description>Provides core passive scanning capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.1.0</version>
-        <file>pscan-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>pscan-alpha-0.2.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Manage the passive scan related options and the scan rules (Issue 7959).&lt;/li&gt;
-&lt;li&gt;Add passive scanner (Issue 7959).&lt;/li&gt;
+&lt;li&gt;Allow add-ons to obtain the auto tagging tags.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Fields with default or missing values are omitted for the following automation jobs in saved Automation Framework plans:
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;passiveScan-config&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;passiveScan-wait&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Correct help configuration to work with any language.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Clarified passiveScan-wait &amp;gt; maxDuration documentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed &lt;code&gt;passiveScan-wait&lt;/code&gt; alert tests.&lt;/li&gt;
+&lt;li&gt;Fix broken link the help page.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscan-v0.1.0/pscan-alpha-0.1.0.zap</url>
-        <hash>SHA-256:566cfd1d8d2416150165727fedc732409e127ea1ff5005078f548bf068798dde</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscan-v0.2.0/pscan-alpha-0.2.0.zap</url>
+        <hash>SHA-256:136d098e5ba3d3b2be71ee33fa3bd9cb0464a3f754fd5859763103d4ba12f354</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-10</date>
-        <size>139937</size>
+        <date>2025-02-12</date>
+        <size>140324</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_pscan>
     <addon>pscanrules</addon>
