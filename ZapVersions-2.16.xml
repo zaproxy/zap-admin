@@ -1907,20 +1907,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Neonmarker</name>
         <description>Colors history table items based on tags</description>
         <author>Juha Kivekäs, Kingthorin</author>
-        <version>1.7.0</version>
-        <file>neonmarker-alpha-1.7.0.zap</file>
+        <version>1.8.0</version>
+        <file>neonmarker-alpha-1.8.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Updates to work appropriately with ZAP 2.16 and the Passive Scan Add-on.&lt;/li&gt;
+&lt;li&gt;Adjust initialization of the Tags list&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.7.0/neonmarker-alpha-1.7.0.zap</url>
-        <hash>SHA-256:ef13d7d7d5259bf4ac447cab7b9d0919b7996db6247266d205d400c91dc98ac1</hash>
+        <url>https://github.com/kingthorin/neonmarker/releases/download/v1.8.0/neonmarker-alpha-1.8.0.zap</url>
+        <hash>SHA-256:b4a52ab49d887fa1772b4b371d9ec9e48f2bb5dd0add25f21130b9e58e053e0b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/neonmarker/</info>
         <repo>https://github.com/kingthorin/neonmarker</repo>
-        <date>2025-02-12</date>
-        <size>35989</size>
+        <date>2025-02-14</date>
+        <size>35958</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
