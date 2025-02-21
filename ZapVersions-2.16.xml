@@ -2498,15 +2498,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.36.0</version>
-        <file>reports-release-0.36.0.zap</file>
+        <version>0.37.0</version>
+        <file>reports-release-0.37.0.zap</file>
         <status>release</status>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.36.0/reports-release-0.36.0.zap</url>
-        <hash>SHA-256:d315cdbcf18acd9f76c3a7dae5e50dac9810d890de89a529354902b90578b462</hash>
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Include correct alert instances in Traditional JSON Report with requests and responses (Issue 8861).&lt;/li&gt;
+&lt;li&gt;Bug where false positives were included in Sarif reports with their original alert level.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.37.0/reports-release-0.37.0.zap</url>
+        <hash>SHA-256:475ebc4e72861f65ccf8c6a34b2e75ec45d7325272503cd6de5e1d16ed11d417</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-02-12</date>
-        <size>14871347</size>
+        <date>2025-02-21</date>
+        <size>14921337</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
