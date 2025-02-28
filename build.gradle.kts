@@ -27,8 +27,8 @@ plugins {
     java
     id("com.diffplug.spotless")
     id("org.zaproxy.common")
-    id("net.ltgt.errorprone") version "3.1.0"
-    id("org.zaproxy.crowdin") version "0.3.1"
+    id("net.ltgt.errorprone") version "4.1.0"
+    id("org.zaproxy.crowdin") version "0.6.0"
 }
 
 apply(from = "$rootDir/gradle/ci.gradle.kts")
@@ -44,7 +44,7 @@ crowdin {
 }
 
 dependencies {
-    "errorprone"("com.google.errorprone:error_prone_core:2.20.0")
+    "errorprone"("com.google.errorprone:error_prone_core:2.36.0")
 
     implementation("org.apache.commons:commons-text:1.10.0")
     implementation("org.kohsuke:github-api:1.326")
@@ -53,16 +53,16 @@ dependencies {
     }
     compileOnly("com.github.spotbugs:spotbugs-annotations:3.1.12")
     implementation("net.sf.json-lib:json-lib:2.4:jdk15")
-    implementation("org.zaproxy:zap:2.15.0")
+    implementation("org.zaproxy:zap:2.16.0")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.12.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    testImplementation("org.assertj:assertj-core:3.24.2")
+    testImplementation("org.assertj:assertj-core:3.27.3")
 }
 
 val zapVersionsDir = layout.buildDirectory.dir("ZapVersionsTests")
 val copyZapVersions =
-    tasks.create<Copy>("copyZapVersions") {
+    tasks.register<Copy>("copyZapVersions") {
         from(rootDir)
         into(zapVersionsDir)
         include("ZapVersions*.xml")
