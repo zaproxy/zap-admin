@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
 import org.apache.tools.ant.taskdefs.condition.Os;
 import org.eclipse.jgit.api.Git;
 import org.gradle.api.DefaultTask;
@@ -38,6 +39,7 @@ import org.gradle.api.tasks.InputDirectory;
 import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.Internal;
 import org.gradle.api.tasks.TaskAction;
+import org.gradle.process.ExecOperations;
 import org.zaproxy.gradle.CreatePullRequestImpl;
 import org.zaproxy.gradle.GitHubRepo;
 import org.zaproxy.gradle.GitHubUser;
@@ -55,6 +57,11 @@ public abstract class DeployCrowdinTranslations extends DefaultTask {
         getRepositoriesDirectory()
                 .convention(buildDirectory.dir("deployCrowdinTranslationsRepos").get().getAsFile());
         getBaseBranchName().convention("main");
+    }
+
+    @Inject
+    protected ExecOperations getExecOperations() {
+        throw new UnsupportedOperationException();
     }
 
     @InputFile
@@ -138,7 +145,7 @@ public abstract class DeployCrowdinTranslations extends DefaultTask {
         execArgs.add("-Dorg.gradle.jvmargs=-Xmx2g -XX:MaxMetaspaceSize=512m");
         execArgs.add("-q");
         execArgs.addAll(args);
-        getProject()
+        getExecOperations()
                 .exec(
                         spec -> {
                             spec.environment(System.getenv());
