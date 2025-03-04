@@ -3,6 +3,7 @@
 .gradle
 /build
 /buildSrc/build
+/buildSrc/.kotlin
 
 # IDEA
 # ----
