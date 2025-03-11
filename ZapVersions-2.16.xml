@@ -2765,19 +2765,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.34.0</version>
-        <file>selenium-release-15.34.0.zap</file>
+        <version>15.35.0</version>
+        <file>selenium-release-15.35.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.29.0.&lt;/li&gt;
+&lt;li&gt;Add debug log for the Firefox profile creation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create profiles with Firefox headless.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.34.0/selenium-release-15.34.0.zap</url>
-        <hash>SHA-256:da8b65b7b8ecae11b9507e7f7ec3bf5aefcb28d9aee91a2c1a6e4d417c1e414a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.35.0/selenium-release-15.35.0.zap</url>
+        <hash>SHA-256:667a78d21ff07296df7199704e393c05f2c6e4562a424bf525e757d98efd4739</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-02-27</date>
-        <size>34567125</size>
+        <date>2025-03-11</date>
+        <size>34564333</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
