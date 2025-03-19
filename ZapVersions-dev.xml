@@ -2,12 +2,12 @@
 <ZAP>
     <core>
         <version>2.16.0</version>
-        <daily-version>D-2025-03-11</daily-version>
+        <daily-version>D-2025-03-19</daily-version>
         <daily>
-            <url>https://github.com/zaproxy/zaproxy/releases/download/w2025-03-11/ZAP_WEEKLY_D-2025-03-11.zip</url>
-            <file>ZAP_WEEKLY_D-2025-03-11.zip</file>
-            <hash>SHA-256:fd2e8eca93615d9f272f43cc869ac5fcaad4e9f5547786324e4b1940f29c2d92</hash>
-            <size>288267125</size>
+            <url>https://github.com/zaproxy/zaproxy/releases/download/w2025-03-19/ZAP_WEEKLY_D-2025-03-19.zip</url>
+            <file>ZAP_WEEKLY_D-2025-03-19.zip</file>
+            <hash>SHA-256:c75870ee7f3ddaecf8d4ca387daf0ffb56a0f6d2c6df38fc9277b913f48e5008</hash>
+            <size>288276145</size>
         </daily>
         <windows32>
             <url>https://github.com/zaproxy/zaproxy/releases/download/v2.16.0/ZAP_2_16_0_windows-x32.exe</url>
