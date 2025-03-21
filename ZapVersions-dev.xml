@@ -266,36 +266,37 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.23.0</version>
-        <file>authhelper-beta-0.23.0.zap</file>
+        <version>0.24.0</version>
+        <file>authhelper-beta-0.24.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;If authentication fails then try to find a likely looking login link.&lt;/li&gt;
-&lt;li&gt;Persist diagnostics to the session and include it in the Authentication Report (JSON) for Client Script and Browser Based Authentication methods.&lt;/li&gt;
-&lt;li&gt;A reset button.&lt;/li&gt;
-&lt;li&gt;Checks to try to find a verification URL with a login link, if nothing better has been found.&lt;/li&gt;
+&lt;li&gt;Document custom steps for Browser Based Authentication.&lt;/li&gt;
+&lt;li&gt;Document Authentication Report diagnostics data.&lt;/li&gt;
+&lt;li&gt;Sanitized post data to auth diagnostics.&lt;/li&gt;
+&lt;li&gt;Help content for configuration and use of Header Based Session Management via ZAP API (these additions will only work properly when used with ZAP 2.16.1 or later).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prefer form related fields in Browser Based Authentication for the selection of username field.&lt;/li&gt;
-&lt;li&gt;Tweaked the auth report summary keys.&lt;/li&gt;
-&lt;li&gt;Only check URLs and methods once for being good verification requests.&lt;/li&gt;
-&lt;li&gt;Added API support to the browser based auth method proxy.&lt;/li&gt;
+&lt;li&gt;Add any session related cookies which are not being tracked.&lt;/li&gt;
+&lt;li&gt;Ignore non proxied requests in auth tester diagnostics.&lt;/li&gt;
+&lt;li&gt;Replace credentials with special tokens.&lt;/li&gt;
+&lt;li&gt;Rewrite of the auth request detection code to handle more cases.&lt;/li&gt;
+&lt;li&gt;Add domain to context if creds posted to it and using using auto-detect for session management.&lt;/li&gt;
+&lt;li&gt;Skip disabled authentication steps when creating the context from the Authentication Tester dialog.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correctly read the API parameters when setting up Browser Based Authentication.&lt;/li&gt;
-&lt;li&gt;Tweaked auth report output to ensure that values are properly escaped.&lt;/li&gt;
-&lt;li&gt;Report to use better stats with browser based auth.&lt;/li&gt;
-&lt;li&gt;Session handling to cope with X-CSRF-Token headers.&lt;/li&gt;
+&lt;li&gt;Allow the Client Script Authentication, and Browser Based Authentication method types as well as Header Based Session Management to be configured via the API (these fixes will only work properly when used with ZAP 2.16.1 or later).&lt;/li&gt;
+&lt;li&gt;Bug where some of the data structures were not being reset when the session changed.&lt;/li&gt;
+&lt;li&gt;Address concurrent modification exceptions.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.23.0/authhelper-beta-0.23.0.zap</url>
-        <hash>SHA-256:3903d1e48f23c13b37a1f155315f4fad8165bd8610eb34d457a5799fad06825c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.24.0/authhelper-beta-0.24.0.zap</url>
+        <hash>SHA-256:4eaa97d757f8b76f26c88e449d7f6f97adff82fda63f540a7fc5a8e25729a221</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-04</date>
-        <size>1149160</size>
+        <date>2025-03-21</date>
+        <size>1183683</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -1235,34 +1236,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.26.0</version>
-        <file>graphql-alpha-0.26.0.zap</file>
+        <version>0.27.0</version>
+        <file>graphql-alpha-0.27.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on (Issue 8016).&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fingerprinting checks for the following engines:
-&lt;ul&gt;
-&lt;li&gt;pg_graphql&lt;/li&gt;
-&lt;li&gt;tailcall&lt;/li&gt;
-&lt;li&gt;Hot Chocolate&lt;/li&gt;
-&lt;li&gt;Inigo&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Support for importing an introspection query response from a file (Issue 8569).&lt;/li&gt;
-&lt;li&gt;If the Tech Detection (Wappalyzer) add-on is installed and a GraphQL engine is successfully fingerprinted, it is added to the Technology tab/data.&lt;/li&gt;
+&lt;li&gt;A Null Pointer Exception which occurred when Fingerprinting and the Tech Detection (Wappalyzer) add-on wasn't available (Issue 8890).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.26.0/graphql-alpha-0.26.0.zap</url>
-        <hash>SHA-256:7578897dd3e517d653d779f90b1565a6cac7c6c838f4107dd44d01f6233faae8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.27.0/graphql-alpha-0.27.0.zap</url>
+        <hash>SHA-256:86057a17e477f5285f4b66d5ed5a2ba36571627dc0d04306b7eaf0d888bf772d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>5475010</size>
+        <date>2025-03-21</date>
+        <size>5524730</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
