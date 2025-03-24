@@ -1991,21 +1991,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>44</version>
-        <file>openapi-beta-44.zap</file>
+        <version>45</version>
+        <file>openapi-beta-45.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on (Issue 8016).&lt;/li&gt;
-&lt;li&gt;Fields with default or missing values are omitted for the &lt;code&gt;openapi&lt;/code&gt; job in saved Automation Framework plans.&lt;/li&gt;
+&lt;li&gt;Correct definition detection while spidering.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Clarified an error message which occurs in automation if there's a problem importing.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v44/openapi-beta-44.zap</url>
-        <hash>SHA-256:e0c15ccdf49c083b6992bc3ef0175e1aa24bc32912ec3dbdcc7b71beafe46a46</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v45/openapi-beta-45.zap</url>
+        <hash>SHA-256:a6eb04864d5c8887dd7a625b1bc01d0e0c2a8cb3ed412762faa9143bb4d65d93</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>11575879</size>
+        <date>2025-03-24</date>
+        <size>11575308</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
