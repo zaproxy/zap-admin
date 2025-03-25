@@ -1329,25 +1329,24 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>19</version>
-        <file>help-release-19.zap</file>
+        <version>20</version>
+        <file>help-release-20.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Details for setting Gnome proxy settings.&lt;/li&gt;
-&lt;li&gt;History -&amp;gt; Alert tag details.&lt;/li&gt;
+&lt;li&gt;Remove TOC entries that no longer exist.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated for 2.16.0.&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v19/help-release-19.zap</url>
-        <hash>SHA-256:5bc6bf5bca3f0f146c4922eecf06d5d1b0d5a63ea41707190008e692735613e7</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v20/help-release-20.zap</url>
+        <hash>SHA-256:851d68575d96abcfc1bc24307b4d83c0f697383785b3107251d85b95e887b929</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2025-01-10</date>
-        <size>637180</size>
-        <not-before-version>2.15.0</not-before-version>
+        <date>2025-03-25</date>
+        <size>639618</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
     <addon_help_ar_SA>
