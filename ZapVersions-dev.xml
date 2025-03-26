@@ -1211,19 +1211,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.27.0</version>
-        <file>graphql-alpha-0.27.0.zap</file>
+        <version>0.28.0</version>
+        <file>graphql-alpha-0.28.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A Null Pointer Exception which occurred when Fingerprinting and the Tech Detection (Wappalyzer) add-on wasn't available (Issue 8890).&lt;/li&gt;
+&lt;li&gt;A Null Pointer Exception which occurred when installing the add-on when Tech Detection (Wappalyzer) add-on was already installed (Issue 8902).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.27.0/graphql-alpha-0.27.0.zap</url>
-        <hash>SHA-256:86057a17e477f5285f4b66d5ed5a2ba36571627dc0d04306b7eaf0d888bf772d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.28.0/graphql-alpha-0.28.0.zap</url>
+        <hash>SHA-256:f71725838a911988ce76cc2f188fa27b6e899e1fae900f5e75996a9ccf605db9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-21</date>
-        <size>5524730</size>
+        <date>2025-03-26</date>
+        <size>5524748</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
