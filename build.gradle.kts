@@ -406,9 +406,21 @@ val updateFlathub by tasks.registering(CreatePullRequest::class) {
     mustRunAfter(handleMainRelease)
 }
 
+val handleSnapRelease by tasks.registering(HandleMainRelease::class) {
+    releaseState.set(releaseStateData)
+
+    gitHubUser.set(ghUser)
+    gitHubRepo.set(zaproxyRepo)
+
+    eventType.set("release-snap")
+
+    mustRunAfter(handleMainRelease)
+}
+
 tasks.register("handleRelease") {
     dependsOn(updateWebsite)
     dependsOn(handleWeeklyRelease)
     dependsOn(handleMainRelease)
     dependsOn(updateFlathub)
+    dependsOn(handleSnapRelease)
 }
