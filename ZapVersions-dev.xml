@@ -580,20 +580,19 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.31.0</version>
-        <file>commonlib-release-1.31.0.zap</file>
+        <version>1.32.0</version>
+        <file>commonlib-release-1.32.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Replace the default Output panel with a tabbed version to allow multiple sources of output to be displayed in separate tabs.&lt;/li&gt;
-&lt;li&gt;Add support functionality for usage of TOTP data defined under user credentials.&lt;/li&gt;
+&lt;li&gt;Add an alert tag for scan rules that are believed to be of interest to Penetration Testers (essentially everything except the Example rules).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.31.0/commonlib-release-1.31.0.zap</url>
-        <hash>SHA-256:6966a90b9acfec699e8b7c82033a08acd163aa507ee8a0d05d3f4d08a00fedd3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.32.0/commonlib-release-1.32.0.zap</url>
+        <hash>SHA-256:f198fea5352ed36a6b1c4a6764c48394b4c80041693fba3488a464fa18ea8743</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-25</date>
-        <size>15211780</size>
+        <date>2025-04-09</date>
+        <size>15249237</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -2645,29 +2644,35 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.9.0</version>
-        <file>scripts-release-45.9.0.zap</file>
+        <version>45.10.0</version>
+        <file>scripts-release-45.10.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Remove unnecessary custom parameter handling.&lt;/li&gt;
+&lt;li&gt;NPE when using some scripts after re-installing the scripts add-on.&lt;/li&gt;
+&lt;li&gt;Correct error message of the Automation Framework job.&lt;/li&gt;
+&lt;li&gt;Templates and Zest scripts were not being shown in the editor (Issue 8922).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Standardized Policy Tags to the base Scripts Passive Scanner.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use the main Output panel for script output.&lt;/li&gt;
+&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.9.0/scripts-release-45.9.0.zap</url>
-        <hash>SHA-256:0ed12824add81f998430f7bbb738f8644dc14ad809df0a76cec95c5a54031e99</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.10.0/scripts-release-45.10.0.zap</url>
+        <hash>SHA-256:26649fd4e86bf1565864c894077d4909f993a116223634e09c6d856e553d6e6f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-25</date>
-        <size>5192464</size>
+        <date>2025-04-09</date>
+        <size>5192387</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;=1.31.0</version>
+                    <version>&gt;=1.32.0</version>
                 </addon>
                 <addon>
                     <id>pscan</id>
