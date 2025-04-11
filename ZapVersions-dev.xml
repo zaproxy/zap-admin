@@ -2644,29 +2644,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.10.0</version>
-        <file>scripts-release-45.10.0.zap</file>
+        <version>45.11.0</version>
+        <file>scripts-release-45.11.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;NPE when using some scripts after re-installing the scripts add-on.&lt;/li&gt;
-&lt;li&gt;Correct error message of the Automation Framework job.&lt;/li&gt;
-&lt;li&gt;Templates and Zest scripts were not being shown in the editor (Issue 8922).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Standardized Policy Tags to the base Scripts Passive Scanner.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;NPE when using scripts with no UI.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.10.0/scripts-release-45.10.0.zap</url>
-        <hash>SHA-256:26649fd4e86bf1565864c894077d4909f993a116223634e09c6d856e553d6e6f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.11.0/scripts-release-45.11.0.zap</url>
+        <hash>SHA-256:0ad1ee85caaf042b8ede1460439979b801769a2c5fef16ecc57cac630a05f388</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-04-09</date>
-        <size>5192387</size>
+        <date>2025-04-11</date>
+        <size>5192223</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
