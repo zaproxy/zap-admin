@@ -29,21 +29,7 @@ var allAlertTags = {}
 var emptyTech = new TechSet;
 var allTech = Tech.getAll().toArray();
 
-var WebSocketPassiveScript = Java.type('org.zaproxy.zap.extension.websocket.pscan.scripts.WebSocketPassiveScript');
-
-extScript = control.getExtensionLoader().getExtension(org.zaproxy.zap.extension.script.ExtensionScript.NAME);
-
-pscanWs = extScript.getTemplates(extScript.getScriptType("websocketpassive"));
-
-for (var i = 0; i < pscanWs.length; i++) {
-	try {
-		printWsPscanRule(extScript.getInterface(pscanWs[i], WebSocketPassiveScript.class),
-	    	'https://github.com/zaproxy/zap-extensions/blob/main/addOns/websocket/' +
-	    	'src/main/zapHomeFiles/scripts/templates/websocketpassive/' + encodeURIComponent(pscanWs[i].getName()));
-	} catch (e) {
-		print(e);
-	}
-}
+printWsPscanRules();
 
 extAscan = control.getExtensionLoader().getExtension(org.zaproxy.zap.extension.ascan.ExtensionActiveScan.NAME);
 
@@ -389,10 +375,59 @@ function printPscanRule(plugin) {
 	printAlerts(examples, plugin.getName(), type, plugin.getStatus(), clazz, scripturl, null, getHelp(plugin));
 }
 
-function printWsPscanRule(plugin, scriptUrl) {
-	var examples = getPrivateMethod(plugin, ['getExampleAlerts'], '', null);
+function getPrivateField(obj, field) {
+  var field = obj.getClass().getDeclaredField(field);
+  field.setAccessible(true);
+  return field.get(obj);
+}
 
-	if (examples != null && examples.length > 0) {
-         printAlerts(examples, plugin.getName(), "WebSocket Passive", "release", plugin.getClass().getName(), scriptUrl, null, getHelp(plugin));
-	}
+function printWsPscanRules() {
+  const ExtensionWebSocket = Java.type(
+    "org.zaproxy.zap.extension.websocket.ExtensionWebSocket"
+  );
+
+  extensionWebSocket = control
+    .getExtensionLoader()
+    .getExtension(ExtensionWebSocket.class);
+  if (extensionWebSocket) {
+    try {
+      const passiveScannersSet = getPrivateField(
+        getPrivateField(extensionWebSocket, "webSocketPassiveScannerManager"),
+        "passiveScannersSet"
+      );
+      passiveScannersSet.forEach((item) => {
+        if ("WS.ScriptPassiveScan" == item.getName()) {
+          const scriptsCache = getPrivateField(
+            getPrivateField(item, "webSocketPassiveScanner"),
+            "scripts"
+          );
+          scriptsCache.refresh();
+          scriptsCache.getCachedScripts().forEach((cachedScript) => {
+            printWsPscanRule(cachedScript);
+          });
+        }
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+}
+
+function printWsPscanRule(cachedScript) {
+  const decorator = cachedScript.getScript();
+  const scriptWrapper = cachedScript.getScriptWrapper();
+  const script = getPrivateField(decorator, "webSocketPassiveScript");
+
+  printAlerts(
+    script.getExampleAlerts(),
+    script.getName(),
+    "WebSocket Passive",
+    "release",
+    decorator.getClass().getName(),
+    "https://github.com/zaproxy/zap-extensions/blob/main/addOns/websocket/" +
+      "src/main/zapHomeFiles/scripts/templates/websocketpassive/" +
+      encodeURIComponent(scriptWrapper.getFile().getName()),
+    null,
+    decorator.getHelpLink()
+  );
 }
