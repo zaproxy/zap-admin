@@ -3169,25 +3169,38 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.5.0</version>
-        <file>zest-beta-48.5.0.zap</file>
+        <version>48.6.0</version>
+        <file>zest-beta-48.6.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use TOTP data defined under user credentials during authentication when available.&lt;/li&gt;
-&lt;li&gt;Update Zest library to 0.25.0:
+&lt;li&gt;Client element waitForMsec parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.30.0.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.29.0:
+&lt;ul&gt;
+&lt;li&gt;Allow to access the &lt;code&gt;WebElement&lt;/code&gt; referenced by a &lt;code&gt;ZestClientElement&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add new &lt;code&gt;waitForMsec&lt;/code&gt; parameter to all client elements.&lt;/li&gt;
+&lt;li&gt;Change &lt;code&gt;ZestClientElementClick&lt;/code&gt;, &lt;code&gt;ZestClientElementSendKeys&lt;/code&gt;, and &lt;code&gt;ZestClientElementSubmit&lt;/code&gt; to wait for the element to also be enabled when using &lt;code&gt;waitForMsec&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.32.0.&lt;/li&gt;
+&lt;li&gt;Change &lt;code&gt;ZestClientElementClick&lt;/code&gt; to click on the position of the element instead of the element itself when obscured, to better reproduce a manual click.&lt;/li&gt;
+&lt;li&gt;Change &lt;code&gt;ZestClientElementScrollTo&lt;/code&gt; to only scroll to the element when not already in view and to scroll with &lt;code&gt;nearest&lt;/code&gt; vertical alignment, to ensure the element is kept visible.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Allow to copy the script's file system path from the Edit Zest Script dialogue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Print statements should print to the relevant script Output tab.&lt;/li&gt;
+&lt;li&gt;Recording client Zest scripts.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.5.0/zest-beta-48.5.0.zap</url>
-        <hash>SHA-256:36679f3b5c6ab3774b89f722c99d58ab4db545e09816b87d6223e6776d2fbe1c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.6.0/zest-beta-48.6.0.zap</url>
+        <hash>SHA-256:56ddf579015bd84315d9f919550447569f8c8f786996747ffa38bde552c081a2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-25</date>
-        <size>3033243</size>
+        <date>2025-05-20</date>
+        <size>3045009</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
