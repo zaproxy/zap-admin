@@ -2675,19 +2675,24 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.36.0</version>
-        <file>selenium-release-15.36.0.zap</file>
+        <version>15.37.0</version>
+        <file>selenium-release-15.37.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.30.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.33.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent concurrent modification exceptions.&lt;/li&gt;
+&lt;li&gt;Restore loading of extensions with newer Chrome versions.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.36.0/selenium-release-15.36.0.zap</url>
-        <hash>SHA-256:730011f1cf5d6a5ba3dca0e77cdbfb2727df59faede3fb68d85f391622f9a0a1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.37.0/selenium-release-15.37.0.zap</url>
+        <hash>SHA-256:57e40600b57b5a7066243699cf968aec2d3af266922b4bbe953295d5f7805b57</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-25</date>
-        <size>36509959</size>
+        <date>2025-06-06</date>
+        <size>33939100</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
