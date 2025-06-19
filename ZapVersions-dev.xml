@@ -1604,31 +1604,44 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
     <addon_imagelocationscanner>
         <name>Image Location and Privacy Scanner</name>
         <description>Image Location and Privacy Passive Scanner</description>
-        <author>Jay Ball (veggiespam) and the ZAP Dev Team</author>
-        <version>5</version>
-        <file>imagelocationscanner-beta-5.zap</file>
+        <author>Jay Ball (@veggiespam) and the ZAP Dev Team</author>
+        <version>6</version>
+        <file>imagelocationscanner-beta-6.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Updated to Image Location and Privacy Scanner version 1.2; merged from &lt;a href="https://github.com/veggiespam/ImageLocationScanner"&gt;source&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated dependency Metadata Extractor to 2.19.0&lt;/li&gt;
+&lt;li&gt;Added support for scanning HEIF image format used by modern iPhone images&lt;/li&gt;
+&lt;li&gt;Added support for Samsung, more Reconyxs, &amp;amp; Sony camera proprietary privacy leakage&lt;/li&gt;
+&lt;li&gt;Added detection for a few new information leakage tags in currently supported cameras.&lt;/li&gt;
+&lt;li&gt;Added GPS elevation detection&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;The rule has been tagged of interest to Penetration Testers and QA.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Website alert links (Issue 8189).&lt;/li&gt;
+&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;No longer support XMP as it was too unreliable.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v5/imagelocationscanner-beta-5.zap</url>
-        <hash>SHA-256:4d95a4e8c09fbae9372a28b2501c57ac3789b2357f4988fc0dcdc3c11f3f0fe8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/imagelocationscanner-v6/imagelocationscanner-beta-6.zap</url>
+        <hash>SHA-256:1f2ec1b0f05617ba5d6c4078751ddb2ddbd23ae4aa47b9c7520bacc61d2c85e8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/image-location-and-privacy-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-04-11</date>
-        <size>1147406</size>
-        <not-before-version>2.14.0</not-before-version>
+        <date>2025-06-19</date>
+        <size>1392553</size>
+        <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.6.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.32.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
