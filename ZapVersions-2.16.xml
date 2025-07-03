@@ -283,69 +283,23 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.26.0</version>
-        <file>authhelper-beta-0.26.0.zap</file>
+        <version>0.27.0</version>
+        <file>authhelper-beta-0.27.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add configuration support for the wait time after Client Script Based Authentication.&lt;/li&gt;
-&lt;li&gt;Include the Web Element being interacted with in the Client Script Based Authentication diagnostics.&lt;/li&gt;
-&lt;li&gt;Allow to enable authentication diagnostics for Client Script and Browser Based Authentication through the GUI.&lt;/li&gt;
-&lt;li&gt;Automation Framework errors to the Authentication Report.&lt;/li&gt;
-&lt;li&gt;Replace TOTP token during Client Script Based Authentication.&lt;/li&gt;
-&lt;li&gt;Include more diagnostics in Client Script and Browser Based Authentication methods.&lt;/li&gt;
-&lt;li&gt;Improve Authentication Report:
-&lt;ul&gt;
-&lt;li&gt;Add the ID of the step to make it easier to match with extracted screenshots.&lt;/li&gt;
-&lt;li&gt;Include the script used by the Client Script Based Authentication.&lt;/li&gt;
-&lt;li&gt;Add the initiator to the HTTP Messages to know what those messages correspond to.&lt;/li&gt;
-&lt;li&gt;Include the tag name of the Web Element, now collecting &lt;code&gt;button&lt;/code&gt;s along with &lt;code&gt;input&lt;/code&gt;s.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Detection of session tokens in non standard headers.&lt;/li&gt;
-&lt;li&gt;Search for username/password fields under shadow DOMs with Browser Based Authentication.&lt;/li&gt;
+&lt;li&gt;Support for recorded scripts in the Authentication Tester.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Warn when the recorded script used with Client Script Based Authentication does not launch a browser.&lt;/li&gt;
-&lt;li&gt;Updated to depend on Zest add-on 48.6.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on reports 0.39.0 to include AF errors.&lt;/li&gt;
-&lt;li&gt;Use Header Based Session Management configuration to find a better candidate authentication message with Client Script and Browser Based Authentication methods.&lt;/li&gt;
-&lt;li&gt;Client Script authentication to refresh the page of no suitable verification URL found.&lt;/li&gt;
-&lt;li&gt;Wait for the detection of the session method in Client Script Based Authentication method.&lt;/li&gt;
-&lt;li&gt;Include the name of the interaction in the Client Script Based Authentication diagnostics.&lt;/li&gt;
-&lt;li&gt;Clear fields before sending keys for Browser Based Authentication, including when using steps.&lt;/li&gt;
-&lt;li&gt;Do not add an empty line to the start of the Other Info of Session Management Response Identified scan rule's alerts.&lt;/li&gt;
-&lt;li&gt;Update the Client Script Based Authentication help page with the new Automation Framework &lt;code&gt;scriptInline&lt;/code&gt; field.&lt;/li&gt;
-&lt;li&gt;The Authentication Request Detection and Session Management Detection scan rules now skip resources (images, css, js, etc) which are unlikely to be relevant.&lt;/li&gt;
-&lt;li&gt;The Verification Detection scan rule now skips messages that seem related to login/logout/registration functionality.&lt;/li&gt;
-&lt;li&gt;Now depends on minimum Common Library version 1.33.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct descriptions of the Zest script steps in the Authentication Report.&lt;/li&gt;
-&lt;li&gt;Fix loading/saving of Client Script Based Authentication through the GUI.&lt;/li&gt;
-&lt;li&gt;Inject user credentials into the script when running the Client Script Based Authentication browser integration.&lt;/li&gt;
-&lt;li&gt;Delay when recording diagnostics.&lt;/li&gt;
-&lt;li&gt;Allow to use zero login page wait for Client Script and Browser Based Authentication methods through the GUI.&lt;/li&gt;
-&lt;li&gt;Ensure Client Script Based Authentication method has a clean state when reauthenticating.&lt;/li&gt;
-&lt;li&gt;Handle missing username field in Browser Based Authentication.&lt;/li&gt;
-&lt;li&gt;Correct the processing of cookies with the same name in Header Based Session Management method.&lt;/li&gt;
-&lt;li&gt;Correct redirection handling when checking verification URLs.&lt;/li&gt;
-&lt;li&gt;Verification URL comparison.&lt;/li&gt;
-&lt;li&gt;Use the session token from JSON string response.&lt;/li&gt;
-&lt;li&gt;Do not auto configure the Header Based Session Management method with duplicated session tokens.&lt;/li&gt;
-&lt;li&gt;Ensure that auth messages with both known and unknown Session tokens are correctly processed.&lt;/li&gt;
-&lt;li&gt;Respect Client Script Based Authentication's Login Page Wait when authenticating in browsers (e.g. AJAX Spider).&lt;/li&gt;
-&lt;li&gt;Correct handling of JSON arrays in the Authentication Request Identified scan rule.&lt;/li&gt;
+&lt;li&gt;Updated to depend on Zest add-on 48.8.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.26.0/authhelper-beta-0.26.0.zap</url>
-        <hash>SHA-256:b1f803d8faa1355e523cd1e59e13fd3d6519a7b673f36c2b9ad9ff5d166686eb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.27.0/authhelper-beta-0.27.0.zap</url>
+        <hash>SHA-256:3f0b407f25354b6cd00fdb1617139eebe6f107938cd1626da9e921a119c7dc82</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>1317779</size>
+        <date>2025-07-03</date>
+        <size>1334989</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -371,7 +325,7 @@
                 </addon>
                 <addon>
                     <id>zest</id>
-                    <version>&gt;=48.6.0</version>
+                    <version>&gt;=48.8.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2807,24 +2761,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.37.0</version>
-        <file>selenium-release-15.37.0.zap</file>
+        <version>15.38.0</version>
+        <file>selenium-release-15.38.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.33.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Prevent concurrent modification exceptions.&lt;/li&gt;
-&lt;li&gt;Restore loading of extensions with newer Chrome versions.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.34.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.37.0/selenium-release-15.37.0.zap</url>
-        <hash>SHA-256:57e40600b57b5a7066243699cf968aec2d3af266922b4bbe953295d5f7805b57</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.38.0/selenium-release-15.38.0.zap</url>
+        <hash>SHA-256:3ab0d5fc238b30792e8be301fe8c74a1fb9dec22af4c225c768ac8de58173465</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-06</date>
-        <size>33939100</size>
+        <date>2025-07-03</date>
+        <size>34087965</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -3322,24 +3271,28 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.7.0</version>
-        <file>zest-beta-48.7.0.zap</file>
+        <version>48.8.0</version>
+        <file>zest-beta-48.8.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Zest library to 0.30.0:
+&lt;li&gt;New extension level method for recording client scripts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.33.0.&lt;/li&gt;
-&lt;li&gt;Send RETURN key if submit fails for input elements not in a form.&lt;/li&gt;
+&lt;li&gt;Fail fast on client errors.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.31.0:
+&lt;ul&gt;
+&lt;li&gt;Update Selenium to version 4.34.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.7.0/zest-beta-48.7.0.zap</url>
-        <hash>SHA-256:5823a0371f456b3428e66d95924cc566a07ee546786f3bf025be9a27f10e5a9c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.8.0/zest-beta-48.8.0.zap</url>
+        <hash>SHA-256:10224379bcaaeda42aa9dc6cff16b81532160d27fdc66a7a7a9a8a93c3c61a31</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-10</date>
-        <size>3045587</size>
+        <date>2025-07-03</date>
+        <size>3045383</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
