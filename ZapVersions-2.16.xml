@@ -608,19 +608,20 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.33.0</version>
-        <file>commonlib-release-1.33.0.zap</file>
+        <version>1.34.0</version>
+        <file>commonlib-release-1.34.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Constants related to authentication.&lt;/li&gt;
+&lt;li&gt;Added Alert Tags for PCI DSS and HIPAA standards.&lt;/li&gt;
+&lt;li&gt;Added a help page for the alert tags provided through this add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.33.0/commonlib-release-1.33.0.zap</url>
-        <hash>SHA-256:07f9cf5358f4407a91e4fc7bde87c2a01acc49ec57d80d3b5a317cabf3e4cc67</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.34.0/commonlib-release-1.34.0.zap</url>
+        <hash>SHA-256:4315f458c913950ac4cdc1276e9f651ee77d3c05e3e70d960d3bc9c1e9dbe88a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>15250049</size>
+        <date>2025-07-04</date>
+        <size>15253018</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
