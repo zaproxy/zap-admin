@@ -913,23 +913,21 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>DOM XSS Active scanner rule</name>
         <description>DOM XSS Active scanner rule</description>
         <author>Aabha Biyani, ZAP Dev Team</author>
-        <version>21</version>
-        <file>domxss-release-21.zap</file>
+        <version>22</version>
+        <file>domxss-release-22.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle exceptions while obtaining the XPath of an element.&lt;/li&gt;
+&lt;li&gt;Allow to use Edge.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v21/domxss-release-21.zap</url>
-        <hash>SHA-256:4902e5d519c7b4a68441d9fb3ae2edc1df3d1c4086333a2e4844279e65ea96ec</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/domxss-v22/domxss-release-22.zap</url>
+        <hash>SHA-256:8acb646338b259eb31f3ca9b4ffd54a94e89b6a58fa7726d45c37c5cced42e17</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>284336</size>
+        <date>2025-07-10</date>
+        <size>285349</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -943,7 +941,7 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
                 </addon>
                 <addon>
                     <id>selenium</id>
-                    <version>&gt;= 15.13.0</version>
+                    <version>&gt;= 15.39.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2381,29 +2379,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>quickstart-release-51.zap</file>
+        <version>52</version>
+        <file>quickstart-release-52.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Stats counter to the main toolbar button (Issue 8375).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
-&lt;li&gt;Depend on Passive Scanner add-on (Issue 7959).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;An exception that prevented the look and feel from changing completely.&lt;/li&gt;
-&lt;li&gt;Issues setting the AJAX Spider options.&lt;/li&gt;
+&lt;li&gt;Add icon for Edge browser.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v51/quickstart-release-51.zap</url>
-        <hash>SHA-256:907d8ef64109a853974222b3a64d2021335d19db426f8670134e8d7312bdc0ce</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v52/quickstart-release-52.zap</url>
+        <hash>SHA-256:fc48c145e63143934c2ecdb0ad9b3c7e7e268d8dc3f09e0d81452363adb41a69</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-10</date>
-        <size>774568</size>
+        <date>2025-07-10</date>
+        <size>774747</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2762,19 +2750,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.38.0</version>
-        <file>selenium-release-15.38.0.zap</file>
+        <version>15.39.0</version>
+        <file>selenium-release-15.39.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.34.0.&lt;/li&gt;
+&lt;li&gt;Allow to use Edge browser.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.38.0/selenium-release-15.38.0.zap</url>
-        <hash>SHA-256:3ab0d5fc238b30792e8be301fe8c74a1fb9dec22af4c225c768ac8de58173465</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.39.0/selenium-release-15.39.0.zap</url>
+        <hash>SHA-256:19fe40af02188d930be170365c6eba18754c4c7d6f082d551bc3614ea2959e62</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-07-03</date>
-        <size>34087965</size>
+        <date>2025-07-10</date>
+        <size>34090430</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2930,28 +2918,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.24.0</version>
-        <file>spiderAjax-release-23.24.0.zap</file>
+        <version>23.25.0</version>
+        <file>spiderAjax-release-23.25.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to configure how the scope is checked, either Flexible or Strict, to allow or not access to out of scope domains.&lt;/li&gt;
-&lt;li&gt;Allow to avoid logout elements.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow access to domains out of context (e.g. SSO) when using Client Script and Browser Based Authentication.&lt;/li&gt;
+&lt;li&gt;Correct configuration key for Logout Avoidance (Issue 8994).&lt;/li&gt;
+&lt;li&gt;Error logs to always include stack trace.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.24.0/spiderAjax-release-23.24.0.zap</url>
-        <hash>SHA-256:3f0c69698bbfea65065f891970f0d0dccc4ed9059f8e2060ba522c1c1a1c089f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.25.0/spiderAjax-release-23.25.0.zap</url>
+        <hash>SHA-256:91b785d1328237dd74ac05501cc4c28fbd3bb9ee31d65b603784af2cecbe35e8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>7584850</size>
+        <date>2025-07-10</date>
+        <size>7608216</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
