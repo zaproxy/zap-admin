@@ -3126,19 +3126,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.46.0</version>
-        <file>wappalyzer-release-21.46.0.zap</file>
+        <version>21.47.0</version>
+        <file>wappalyzer-release-21.47.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.46.0/wappalyzer-release-21.46.0.zap</url>
-        <hash>SHA-256:637356cf77f36afe419991d57ee3ed7429b321465e412865cf6db09fb734e962</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.47.0/wappalyzer-release-21.47.0.zap</url>
+        <hash>SHA-256:af7e69139032f1f2186f2af2c258defdd4fc0cad3f2825e568bca06166eb23af</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>21024941</size>
+        <date>2025-07-15</date>
+        <size>25204154</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
