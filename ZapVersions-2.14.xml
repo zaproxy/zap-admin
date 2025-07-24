@@ -2102,25 +2102,27 @@
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>57</version>
-        <file>pscanrules-release-57.zap</file>
+        <version>57.1.0</version>
+        <file>pscanrules-release-57.1.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use of HTTP for example URLs in the descriptions or other info details for the following rules have been updated to HTTPS (Issue 8262):
-&lt;ul&gt;
-&lt;li&gt;Cookie Poisoning&lt;/li&gt;
-&lt;li&gt;Open Redirect&lt;/li&gt;
-&lt;li&gt;X-Debug-Token Information Leak&lt;/li&gt;
+&lt;li&gt;A ZAP is Out of Date rule.
 &lt;/ul&gt;
-&lt;/li&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The library (htmlunit-csp) used by the Content Security Policy scan rule was updated to v4.0.0, which includes support for the wasm-unsafe-eval source expression.
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A typo in the Other Info of one of the Retrieved from Cache Alerts.
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v57/pscanrules-release-57.zap</url>
-        <hash>SHA-256:8506bb08f6fc4be1794b66c4035f93370522c4c628e350cc2a881a7a3c778e74</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v57.1.0/pscanrules-release-57.1.0.zap</url>
+        <hash>SHA-256:da6f87c7c505f75488df346d1d6c2b465b6aa25b513ff15db643d87da8c94ed0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-03-28</date>
-        <size>1863892</size>
+        <date>2025-07-24</date>
+        <size>1871657</size>
         <not-before-version>2.14.0</not-before-version>
         <dependencies>
             <addons>
