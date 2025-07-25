@@ -2239,22 +2239,28 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>61</version>
-        <file>pscanrules-release-61.zap</file>
+        <version>61.1.0</version>
+        <file>pscanrules-release-61.1.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Rename Mac OSX salted SHA-1 in the Hash Disclosure scan rule to &amp;quot;Salted SHA-1&amp;quot;, reduce the associated alerts to Low risk and Low confidence, to align with other SHA related patterns it will only be evaluated a Low Threshold. (Note such matches may indicate leaks related but not limited to: MacOS X, Oracle, Tiger-192, Haval-192) (Issue 8624).&lt;/li&gt;
-&lt;li&gt;The Insecure JSF ViewState now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;li&gt;The Absence of Anti-CSRF Tokens scan rule now only considers GET requests at Low Threshold (Issue 7741).&lt;/li&gt;
+&lt;li&gt;A ZAP is Out of Date rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated help with specific Category identifiers for use with the Custom Payloads add-on for rules:&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Application Error Disclosure&lt;/li&gt;
+&lt;li&gt;Information Disclosure - Suspicious Comments&lt;/li&gt;
+&lt;li&gt;Username Hash Found&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v61/pscanrules-release-61.zap</url>
-        <hash>SHA-256:419ce3e8057be1542cb6605539f0ffb41ed77ef45dae5c81dfcf8b99290dd30b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v61.1.0/pscanrules-release-61.1.0.zap</url>
+        <hash>SHA-256:9093b0b75869833560e3c0b959791bf9f33f7f2bec7c90d9ffae6154700a9435</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>1919217</size>
+        <date>2025-07-25</date>
+        <size>1929432</size>
         <not-before-version>2.15.0</not-before-version>
         <dependencies>
             <addons>
