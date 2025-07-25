@@ -2266,25 +2266,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>65</version>
-        <file>pscanrules-release-65.zap</file>
+        <version>66</version>
+        <file>pscanrules-release-66.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;All rules have been tagged of interest to Penetration Testers, as well as adding tags associated with DEV or QA applicability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Clarified details of the Viewstate scan rule alerts, in some instances they were misleading (containing colons suggesting further data).&lt;/li&gt;
-&lt;li&gt;The Open Redirect scan rule (ID: 10028) and its alerts have been renamed &amp;quot;Off-site Redirect&amp;quot; as this is a passive rule which compares the authority of the origin and destination and there is no assurance of a truly &amp;quot;open&amp;quot; redirect.&lt;/li&gt;
+&lt;li&gt;The Reverse Tabnabbing and Retrieved from Cache scan rules now have CWE references.&lt;/li&gt;
+&lt;li&gt;A ZAP is Out of Date rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v65/pscanrules-release-65.zap</url>
-        <hash>SHA-256:c604a5924a1f1934751e8018ef69bd8015e4ba4d6088a120cbff63d52ebccf2f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v66/pscanrules-release-66.zap</url>
+        <hash>SHA-256:1e7e5cd439eb2c87b191c0e0fb7313b1a78b921ecbf923c75d9512b7b7d42abd</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>1943150</size>
+        <date>2025-07-25</date>
+        <size>1954059</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
