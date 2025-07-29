@@ -2580,25 +2580,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.47.0</version>
-        <file>retire-release-0.47.0.zap</file>
+        <version>0.48.0</version>
+        <file>retire-release-0.48.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The scan rule as been tagged of interest to Penetration Testers, as well as adding tags associated with DEV or QA applicability.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.47.0/retire-release-0.47.0.zap</url>
-        <hash>SHA-256:a5a0320de40aa1426724b12e24e6308af4035cd54806a664c6180743e7e59e69</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.48.0/retire-release-0.48.0.zap</url>
+        <hash>SHA-256:e071aeaccbc19a1527015c9e5fccda612ba55629d291d7288bee93ccb4ee65b0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>1006728</size>
+        <date>2025-07-29</date>
+        <size>1007315</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
