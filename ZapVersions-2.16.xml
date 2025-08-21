@@ -1318,23 +1318,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>20</version>
-        <file>help-release-20.zap</file>
+        <version>21</version>
+        <file>help-release-21.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Remove TOC entries that no longer exist.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
+&lt;li&gt;Update available JavaScript engine and links.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v20/help-release-20.zap</url>
-        <hash>SHA-256:851d68575d96abcfc1bc24307b4d83c0f697383785b3107251d85b95e887b929</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v21/help-release-21.zap</url>
+        <hash>SHA-256:6a86b3f60a5d3d46988674840b04b996d79160fd39772604557bc64b23a3e66b</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2025-03-25</date>
-        <size>639618</size>
+        <date>2025-08-21</date>
+        <size>640142</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
@@ -1342,222 +1338,240 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Help - Arabic</name>
         <description>Arabic version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>1</version>
-        <file>help_ar_SA-alpha-1.zap</file>
+        <version>2</version>
+        <file>help_ar_SA-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ar_SA-v1/help_ar_SA-alpha-1.zap</url>
-        <hash>SHA-256:8208b0c788d5e29a2bb34f3c44c07db613faefb17d8d9cfb60adc02629c2b3f1</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ar_SA-v2/help_ar_SA-alpha-2.zap</url>
+        <hash>SHA-256:938663e7a1ff6a36bb7336bc80eec07366af3ff36acf817b472c2e959f8eb0fe</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>649333</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>700495</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_ar_SA>
     <addon>help_bs_BA</addon>
     <addon_help_bs_BA>
         <name>Help - Bosnian</name>
         <description>Bosnian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>9</version>
-        <file>help_bs_BA-alpha-9.zap</file>
+        <version>10</version>
+        <file>help_bs_BA-alpha-10.zap</file>
         <status>alpha</status>
-        <changes>Updated with the latest files from crowdin</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/2.7/help_bs_BA-alpha-9.zap</url>
-        <hash>SHA1:d33a3277e877da4734e6bf9c911c61c4e6ce2f3f</hash>
-        <date>2018-02-08</date>
-        <size>747536</size>
-        <not-before-version>2.7.0</not-before-version>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_bs_BA-v10/help_bs_BA-alpha-10.zap</url>
+        <hash>SHA-256:f61b6df64dfaf669942899843f8f8eedd6d02fa4f980883276bfaca22ffefadd</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
+        <repo>https://github.com/zaproxy/zap-core-help/</repo>
+        <date>2025-08-21</date>
+        <size>688882</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_bs_BA>
     <addon>help_es_ES</addon>
     <addon_help_es_ES>
         <name>Help - Spanish</name>
         <description>Spanish version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>10</version>
-        <file>help_es_ES-release-10.zap</file>
+        <version>11</version>
+        <file>help_es_ES-release-11.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_es_ES-v10/help_es_ES-release-10.zap</url>
-        <hash>SHA-256:63cc24e180374cf038d6aefe31b3f62e170437958ad61d2d3e65d2722fbedc1a</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_es_ES-v11/help_es_ES-release-11.zap</url>
+        <hash>SHA-256:d85348dd51a2110ef9be994d2df39af675666f13682114d5161895ecbbaff7d5</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>697066</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>750150</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_es_ES>
     <addon>help_fil_PH</addon>
     <addon_help_fil_PH>
         <name>Help - Filipino</name>
         <description>Filipino version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>3</version>
-        <file>help_fil_PH-alpha-3.zap</file>
-        <status>alpha</status>
+        <version>4</version>
+        <file>help_fil_PH-release-4.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_fil_PH-v3/help_fil_PH-alpha-3.zap</url>
-        <hash>SHA-256:64bbeb0f9404b70c0d49e9fd5da789b8d3902a20f518c7305eb412242831a180</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_fil_PH-v4/help_fil_PH-release-4.zap</url>
+        <hash>SHA-256:e19ef5a3645e528a44c4508e682b1d1d2b9bda104518e2c765a0586797f384d0</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>710027</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>756582</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_fil_PH>
     <addon>help_fr_FR</addon>
     <addon_help_fr_FR>
         <name>Help - French</name>
         <description>French version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>10</version>
-        <file>help_fr_FR-alpha-10.zap</file>
+        <version>11</version>
+        <file>help_fr_FR-alpha-11.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_fr_FR-v10/help_fr_FR-alpha-10.zap</url>
-        <hash>SHA-256:f1ede9441e5de48170fdef598eb543ef6ad0813eed2e838d2c4803ea114fcb1a</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_fr_FR-v11/help_fr_FR-alpha-11.zap</url>
+        <hash>SHA-256:49b144d2fb7a31d55b69df0834f82efb24c1ac541da1fe271aa7c896c4b02c63</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>646717</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>695730</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_fr_FR>
     <addon>help_id_ID</addon>
     <addon_help_id_ID>
         <name>Help - Indonesian</name>
         <description>Indonesian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>3</version>
-        <file>help_id_ID-beta-3.zap</file>
-        <status>beta</status>
+        <version>4</version>
+        <file>help_id_ID-release-4.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_id_ID-v3/help_id_ID-beta-3.zap</url>
-        <hash>SHA-256:ef50363872d783c3c49417bc821b28256cf35d8390004c48f6d4e030ceb8a7c5</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_id_ID-v4/help_id_ID-release-4.zap</url>
+        <hash>SHA-256:636f1bf1a6c8c344243a99dc45010060da1a343ee67312901a9a76e2c9dea129</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>671009</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>721864</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_id_ID>
     <addon>help_ja_JP</addon>
     <addon_help_ja_JP>
         <name>Help - Japanese</name>
         <description>Japanese version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>10</version>
-        <file>help_ja_JP-beta-10.zap</file>
+        <version>11</version>
+        <file>help_ja_JP-beta-11.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ja_JP-v10/help_ja_JP-beta-10.zap</url>
-        <hash>SHA-256:11d310352e8719fe50587c5b97dd5eeb3a2e2ab23e450a7c1d0fad013d003536</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ja_JP-v11/help_ja_JP-beta-11.zap</url>
+        <hash>SHA-256:16bbeabe913f66105c1a7de32aa670e20a76d3bec6d20d28c6175043c068c7bd</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>661964</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>712619</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_ja_JP>
     <addon>help_ms_MY</addon>
     <addon_help_ms_MY>
         <name>Help - Malay</name>
         <description>Malay version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>1</version>
-        <file>help_ms_MY-alpha-1.zap</file>
+        <version>2</version>
+        <file>help_ms_MY-alpha-2.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ms_MY-v1/help_ms_MY-alpha-1.zap</url>
-        <hash>SHA-256:6407990b8ebaa2e401c3addc47081c742ab7fce25cec107ef49b4e627ad3ceae</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ms_MY-v2/help_ms_MY-alpha-2.zap</url>
+        <hash>SHA-256:f640cb80be1859aef002e6717e9549f1d08e89f8614a9c53db049b06baa74164</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>636908</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>687911</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_ms_MY>
     <addon>help_pt_BR</addon>
     <addon_help_pt_BR>
         <name>Help - Portuguese, Brazilian</name>
         <description>Portuguese, Brazilian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>11</version>
-        <file>help_pt_BR-release-11.zap</file>
+        <version>12</version>
+        <file>help_pt_BR-release-12.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_pt_BR-v11/help_pt_BR-release-11.zap</url>
-        <hash>SHA-256:3fdf92763c1c851848df6b3588c97bbeb22837002351fd00c8208d8ab01ff710</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_pt_BR-v12/help_pt_BR-release-12.zap</url>
+        <hash>SHA-256:98e5d9911bb25718a373ecd9c37388224e8b59ecb203c2ec3d91b84eaf8c1e5c</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>682092</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>732259</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_pt_BR>
     <addon>help_ru_RU</addon>
     <addon_help_ru_RU>
         <name>Help - Russian</name>
         <description>Russian version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>2</version>
-        <file>help_ru_RU-release-2.zap</file>
+        <version>3</version>
+        <file>help_ru_RU-release-3.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Promote to Release&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ru_RU-v2/help_ru_RU-release-2.zap</url>
-        <hash>SHA-256:3fd5d8e6af7453a3a16e7c38a19ec941a330d0fd050f562ecebdc4638ae52c80</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_ru_RU-v3/help_ru_RU-release-3.zap</url>
+        <hash>SHA-256:ec0e82c2e805b028f1fd38963b88aa82126c3f1fc95d5c0562e0e0bc026f4207</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-02-24</date>
-        <size>779171</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>829148</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_ru_RU>
     <addon>help_tr_TR</addon>
     <addon_help_tr_TR>
         <name>Help - Turkish</name>
         <description>Turkish version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>2</version>
-        <file>help_tr_TR-release-2.zap</file>
+        <version>3</version>
+        <file>help_tr_TR-release-3.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_tr_TR-v2/help_tr_TR-release-2.zap</url>
-        <hash>SHA-256:a92b43beab5e196341d8ddf40d594f1596c225c74f0f5b9280e223acc9a8535c</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_tr_TR-v3/help_tr_TR-release-3.zap</url>
+        <hash>SHA-256:7623354df0309798953860fbf4650d7a771d5beb8355a287da58b5c51371080f</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>710766</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>759564</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_tr_TR>
     <addon>help_zh_CN</addon>
     <addon_help_zh_CN>
         <name>Help - Chinese Simplified</name>
         <description>Chinese Simplified version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>3</version>
-        <file>help_zh_CN-beta-3.zap</file>
-        <status>beta</status>
+        <version>4</version>
+        <file>help_zh_CN-release-4.zap</file>
+        <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated with the latest files from crowdin&lt;/li&gt;
+&lt;li&gt;Updated for 2.16.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_zh_CN-v3/help_zh_CN-beta-3.zap</url>
-        <hash>SHA-256:959b718a307ca32c7807c0d327533765eeb6a0a799b9bc98a2a1e22b3b47bc5a</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help_zh_CN-v4/help_zh_CN-release-4.zap</url>
+        <hash>SHA-256:18937e5678c949ff15f55e213cf9b0da8da03ed61774308d2fc5257fecad77b2</hash>
+        <info>https://www.zaproxy.org/docs/contribute/translate/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2022-01-18</date>
-        <size>656718</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2025-08-21</date>
+        <size>708657</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_help_zh_CN>
     <addon>highlighter</addon>
     <addon_highlighter>
