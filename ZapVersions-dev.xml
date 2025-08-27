@@ -452,19 +452,20 @@
         <name>Forced Browse</name>
         <description>Forced browsing of files and directories using code from the OWASP DirBuster tool</description>
         <author>ZAP Dev Team</author>
-        <version>17</version>
-        <file>bruteforce-beta-17.zap</file>
+        <version>18</version>
+        <file>bruteforce-beta-18.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;Error logs to always include stack trace.&lt;/li&gt;
+&lt;li&gt;Address performance issue when checking responses.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v17/bruteforce-beta-17.zap</url>
-        <hash>SHA-256:4c5828447d69da32e450e65a6b082284b56538383d5cf4036b743805115a9a90</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v18/bruteforce-beta-18.zap</url>
+        <hash>SHA-256:547d4f1c69b745313d5986fbe4ac9167072460c8b2e1262181da156405f08069</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/forced-browse/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>552468</size>
+        <date>2025-08-27</date>
+        <size>552972</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
