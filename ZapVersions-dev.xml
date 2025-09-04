@@ -2499,20 +2499,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.40.0</version>
-        <file>reports-release-0.40.0.zap</file>
+        <version>0.41.0</version>
+        <file>reports-release-0.41.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Provide/log details on report errors through the Automation Framework job.&lt;/li&gt;
-&lt;li&gt;Allow to include Automation Framework errors and warnings in the Traditional JSON Report with Requests and Responses report.&lt;/li&gt;
+&lt;li&gt;Corrected a minor typo and image alt tags in the help.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An ISO 8601 date and time field (ex: &amp;quot;created&amp;quot;: &amp;quot;2025-09-03T12:49:35.236211400Z&amp;quot;) has been added to the Traditional JSON, Traditional JSON with Requests and Responses, Traditional XML, Traditional XML with Requests and Responses.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.40.0/reports-release-0.40.0.zap</url>
-        <hash>SHA-256:543c1a42c202f4ade60025134d31332dd1567c001aa8362c0836ac357bbe6b84</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.41.0/reports-release-0.41.0.zap</url>
+        <hash>SHA-256:af44c18f994aabc87bcbe60d35f0b2786baddd15eacfa7f4bfdcbe41bb4c4d30</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>14932608</size>
+        <date>2025-09-04</date>
+        <size>14940098</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
