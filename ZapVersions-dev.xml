@@ -3152,19 +3152,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>156</version>
-        <file>webdriverwindows-release-156.zap</file>
+        <version>157</version>
+        <file>webdriverwindows-release-157.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 140.0.7339.82.&lt;/li&gt;
+&lt;li&gt;Re-release because of accidental binary deletion of version 156.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v156/webdriverwindows-release-156.zap</url>
-        <hash>SHA-256:c9025fc706b56ab31c11931527fce03d7376d2af48a074faee548a3c7922ba3a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v157/webdriverwindows-release-157.zap</url>
+        <hash>SHA-256:a8fa9663fc6401ea578f3918eb168650d8b39b2742f62a10d1ac53716849fa84</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
         <date>2025-09-10</date>
-        <size>22188962</size>
+        <size>22188980</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
