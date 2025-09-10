@@ -230,30 +230,19 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>60</version>
-        <file>ascanrulesBeta-beta-60.zap</file>
+        <version>61</version>
+        <file>ascanrulesBeta-beta-61.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Add help details about behavior of scan rules which leverage OAST (Issue 8682)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Error logs to always include stack trace.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Rules (as applicable) have been tagged in relation to HIPAA and PCI DSS.&lt;/li&gt;
-&lt;li&gt;The 403 Bypass scan rule now has a CWE reference.&lt;/li&gt;
-&lt;li&gt;The Shell Shock scan rule now has the TEST_TIMING alert tag.&lt;/li&gt;
+&lt;li&gt;Add alert references to CORS Header scan rule alerts (Issue 7100).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v60/ascanrulesBeta-beta-60.zap</url>
-        <hash>SHA-256:cb2192a200be868fec193e32cc3e4ad78a80a4c3af5f3aa8017f6086393aae59</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v61/ascanrulesBeta-beta-61.zap</url>
+        <hash>SHA-256:8d9b1a0ec93c7358a0df8b0f31f8c8f0520bacce890416625251037f868aec81</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>1779425</size>
+        <date>2025-09-10</date>
+        <size>1780633</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2025,23 +2014,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>45</version>
-        <file>openapi-beta-45.zap</file>
+        <version>46</version>
+        <file>openapi-beta-46.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct definition detection while spidering.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Clarified an error message which occurs in automation if there's a problem importing.&lt;/li&gt;
+&lt;li&gt;Warn logs to always include stack trace.&lt;/li&gt;
+&lt;li&gt;Correct generation of empty object.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v45/openapi-beta-45.zap</url>
-        <hash>SHA-256:a6eb04864d5c8887dd7a625b1bc01d0e0c2a8cb3ed412762faa9143bb4d65d93</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v46/openapi-beta-46.zap</url>
+        <hash>SHA-256:df24124ef26da2cafb027b4d3c81ec74668541b48b48e6139b3201070b9681fe</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-03-24</date>
-        <size>11575308</size>
+        <date>2025-09-10</date>
+        <size>11575438</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2254,25 +2240,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive Scanner</name>
         <description>Provides core passive scanning capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.4.0</version>
-        <file>pscan-alpha-0.4.0.zap</file>
+        <version>0.5.0</version>
+        <file>pscan-alpha-0.5.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to configure the option max body size through the API (Issue 8974).&lt;/li&gt;
-&lt;li&gt;Support for stopping the passiveScan-wait automation job.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;To only record &lt;code&gt;stats.pscan.&amp;lt;rule-name&amp;gt;&lt;/code&gt; statistics for scanners that have no IDs.&lt;/li&gt;
-&lt;li&gt;To support other add-ons which manage passive scan rules. These rules will not currently be fully supported in the UI.&lt;/li&gt;
+&lt;li&gt;Updated Automation Framework template plans and help content for passiveScan-* jobs to be more consistent.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscan-v0.4.0/pscan-alpha-0.4.0.zap</url>
-        <hash>SHA-256:e2b74441aa4da970a36b5efcc0d377289019a92b541bbbe96d0e87d2e22607e8</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscan-v0.5.0/pscan-alpha-0.5.0.zap</url>
+        <hash>SHA-256:354e64d7df7594b328b708bff1ecd7ef78abd31fa90abb2a5b79b88f3071ebef</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scanner/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>679460</size>
+        <date>2025-09-10</date>
+        <size>684133</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2352,28 +2332,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Passive scanner rules (beta)</name>
         <description>The beta status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>44</version>
-        <file>pscanrulesBeta-beta-44.zap</file>
+        <version>45</version>
+        <file>pscanrulesBeta-beta-45.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dropped period from extension name used in the GUI.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A false positive with the Sub Resource Integrity Attribute Missing scan rule with regard to which link tags it raises alerts on (Issue 8938).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;All rules have been tagged of interest to Penetration Testers, as well as adding tags associated with DEV or QA applicability.&lt;/li&gt;
+&lt;li&gt;Add alert references to Content Cacheability scan rule alerts (Issue 7100).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v44/pscanrulesBeta-beta-44.zap</url>
-        <hash>SHA-256:3a24c0b21897b3bd2a9472196b7a0a1f11f566172aef075487d358bfa80eb087</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrulesBeta-v45/pscanrulesBeta-beta-45.zap</url>
+        <hash>SHA-256:b8e61ffe479aceed1075137a6b65673c0f12ed04e49ccf00d2573b211b549ee7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>682438</size>
+        <date>2025-09-10</date>
+        <size>682357</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2837,19 +2808,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>26</version>
-        <file>soap-beta-26.zap</file>
+        <version>27</version>
+        <file>soap-beta-27.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The SOAP Action Spoofing, SOAP XML Injection, and WSDL File Detection scan rules now all have CWE references.&lt;/li&gt;
+&lt;li&gt;When parsing WSDL files ensure the dateTime values are generated in UTC.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v26/soap-beta-26.zap</url>
-        <hash>SHA-256:b29faa089d58959e13556b37f222f4086f56fdf55880d57ed18e72cd78adb16b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v27/soap-beta-27.zap</url>
+        <hash>SHA-256:d353496965024eca720dbf35cd747da6a97363a29dc4118e6b7cf051cfde18e9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>12910617</size>
+        <date>2025-09-10</date>
+        <size>12910697</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -3018,19 +2989,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Tips and Tricks</name>
         <description>Display ZAP Tips and Tricks</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>tips-beta-14.zap</file>
+        <version>15</version>
+        <file>tips-beta-15.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;Change IRC tip to reference Slack.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/tips-v14/tips-beta-14.zap</url>
-        <hash>SHA-256:732458ced13378724804c26a84a31383fca18db397841b03a2e7e7743504e192</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/tips-v15/tips-beta-15.zap</url>
+        <hash>SHA-256:39b4a8e7bfcf86f8c09baa846b837d5045020f80350b73dccae6c03f1a57fe27</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/tips-and-tricks/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-10</date>
-        <size>572632</size>
+        <date>2025-09-10</date>
+        <size>572756</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_tips>
     <addon>tokengen</addon>
