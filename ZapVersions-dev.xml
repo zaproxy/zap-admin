@@ -2892,6 +2892,28 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
             </addons>
         </dependencies>
     </addon_sqliplugin>
+    <addon>srm</addon>
+    <addon_srm>
+        <name>Software Risk Manager Extension</name>
+        <description>Includes request and response data in XML reports and provides the ability to upload reports directly to a Software Risk Manager server</description>
+        <author>Black Duck, Inc.</author>
+        <version>2025.9.0</version>
+        <file>srm-alpha-2025.9.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.14.0.&lt;/li&gt;
+&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy-addons/srm/releases/download/v2025.9.0/srm-alpha-2025.9.0.zap</url>
+        <hash>SHA-256:1911accf494b92c28ed58f74827f99d0637b68217faca871f1dc19ae34b9ae7d</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/software-risk-manager/</info>
+        <repo>https://github.com/codedx/zap-extensions/</repo>
+        <date>2025-09-26</date>
+        <size>1902689</size>
+        <not-before-version>2.16.0</not-before-version>
+    </addon_srm>
     <addon>sse</addon>
     <addon_sse>
         <name>Server-Sent Events</name>
