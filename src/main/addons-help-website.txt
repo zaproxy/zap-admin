@@ -91,6 +91,7 @@ soap
 spider
 spiderAjax
 sqliplugin
+srm
 sse
 svndigger
 tips
