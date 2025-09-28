@@ -177,8 +177,8 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech, help) {
 		pw.println('type: alertset');
 		pw.println('alerts:');
 	     for (var a=0; a < alerts.length; a++) {
-			pw.println('   ' + alerts[a].getPluginId() + "-" + (a+1) + ':');
-			pw.println('      alertid: ' + alerts[a].getPluginId() + "-" + (a+1));
+			pw.println('   ' + alerts[a].getAlertRef() + ':');
+			pw.println('      alertid: ' + alerts[a].getAlertRef());
 			pw.println('      name: ' + quoteText(alerts[a].getName()));
 		}
 		pw.println('code: ' + codeurl);
@@ -190,8 +190,8 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech, help) {
      for (var a=0; a < alerts.length; a++) {
 		alertindex = alerts[a].getPluginId() * 100;
 		if (alerts.length > 1) {
-			pluginId = alerts[a].getPluginId() + "-" + (a+1);
-			alertindex += a + 1;
+			pluginId = alerts[a].getAlertRef();
+			alertindex += parseInt(pluginId.split("-").pop());
 		}
 		print('Plugin ID: ' + pluginId);
 		var fw = new FileWriter(DIR + pluginId + ".md");
