@@ -182,19 +182,23 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>51</version>
-        <file>ascanrulesAlpha-alpha-51.zap</file>
+        <version>52</version>
+        <file>ascanrulesAlpha-alpha-52.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update alert references to latest locations to fix 404s and resolve redirections.&lt;/li&gt;
+&lt;li&gt;Suspicious Input Transformation Script Scan Rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The two example active scan rules were removed from this add-on and are now part of: https://github.com/zaproxy/addon-java&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v51/ascanrulesAlpha-alpha-51.zap</url>
-        <hash>SHA-256:557f20c26571f2dfcc65d738a8057259c85950b55bcca2b9fc5c30d930760e50</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v52/ascanrulesAlpha-alpha-52.zap</url>
+        <hash>SHA-256:c032cb290d1b39720b723fb999e16a0dcf712b11846dbc6ddce89dcb2c5c2380</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-18</date>
-        <size>408700</size>
+        <date>2025-10-07</date>
+        <size>406658</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -597,19 +601,19 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.36.0</version>
-        <file>commonlib-release-1.36.0.zap</file>
+        <version>1.37.0</version>
+        <file>commonlib-release-1.37.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;QA CICD policy tag.&lt;/li&gt;
+&lt;li&gt;Support for alert reference overrides in script scan rule metadata.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.36.0/commonlib-release-1.36.0.zap</url>
-        <hash>SHA-256:d52b7d025b88c7e7140ddaa1e34542c53a292476a985075ca1c5df26ab2df408</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.37.0/commonlib-release-1.37.0.zap</url>
+        <hash>SHA-256:a0316a5d3213d5ca38cf186f79ab381ef44eef0ad2cfb946f95eaab202896b71</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-18</date>
-        <size>11276273</size>
+        <date>2025-10-07</date>
+        <size>11278052</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1172,29 +1176,31 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraalVM JavaScript</name>
         <description>Provides the GraalVM JavaScript engine for ZAP scripting.</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>graaljs-alpha-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>graaljs-alpha-0.10.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.16.0.&lt;/li&gt;
+&lt;li&gt;Update Graal JavaScript engine to version 25 (Issues 8477 and 9010).&lt;/li&gt;
+&lt;li&gt;Use example links in Active/Passive Rule templates' references.&lt;/li&gt;
+&lt;li&gt;Update scan rule templates to use alertRefOverrides.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.9.0/graaljs-alpha-0.9.0.zap</url>
-        <hash>SHA-256:8abec96df1ff90177953d5fffd4dfd57228c1a8d8e140a521e81ea80a256ca19</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.10.0/graaljs-alpha-0.10.0.zap</url>
+        <hash>SHA-256:485b124f02207281ebb5f85de58e1ebc49ea97c6a6352bddf3b4888104b28ce0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-01-09</date>
-        <size>24540532</size>
+        <date>2025-10-07</date>
+        <size>27815109</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;=1.24.0</version>
+                    <version>&gt;=1.37.0</version>
                 </addon>
                 <addon>
                     <id>scripts</id>
-                    <version>&gt;=45.2.0</version>
+                    <version>&gt;=45.14.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2643,29 +2649,29 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.13.0</version>
-        <file>scripts-release-45.13.0.zap</file>
+        <version>45.14.0</version>
+        <file>scripts-release-45.14.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update help with newer JavaScript engine and links.&lt;/li&gt;
+&lt;li&gt;Support for alert reference overrides in script scan rule metadata.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Error logs to always include stack trace.&lt;/li&gt;
+&lt;li&gt;Do not report authentication script errors as warnings in the Automation Framework for consistent behavior with all authentication methods, which handle errors as authentication failures.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.13.0/scripts-release-45.13.0.zap</url>
-        <hash>SHA-256:cbf088ecd08a5318815d9460d9af1fad1f7cbe19499f1425e9c84f9fa3002825</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.14.0/scripts-release-45.14.0.zap</url>
+        <hash>SHA-256:3fd917e7f00f40b0eb262ab5f4019ef5f04d8121609f00a2e77a726f42a7562b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>5191053</size>
+        <date>2025-10-07</date>
+        <size>5193128</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;=1.32.0</version>
+                    <version>&gt;=1.37.0</version>
                 </addon>
                 <addon>
                     <id>pscan</id>
