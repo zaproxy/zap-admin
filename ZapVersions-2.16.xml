@@ -529,19 +529,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.15.0</version>
-        <file>callhome-release-0.15.0.zap</file>
+        <version>0.16.0</version>
+        <file>callhome-release-0.16.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;LLM, and Value Generator (Form Handler) stats to telemetry.&lt;/li&gt;
+&lt;li&gt;Add statistics for the number of fatal/warn/error logged.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.15.0/callhome-release-0.15.0.zap</url>
-        <hash>SHA-256:e564cf47bc4ac4c7d3af6fc9dd7d2832a0d64269cdb93fc06a3f89e6b4cc6821</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.16.0/callhome-release-0.16.0.zap</url>
+        <hash>SHA-256:9fe75a8968299ce290dd53bfbf50f1d4943efce45aaa754a0468e52f0181e9da</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>322826</size>
+        <date>2025-10-22</date>
+        <size>326109</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_callhome>
     <addon>client</addon>
