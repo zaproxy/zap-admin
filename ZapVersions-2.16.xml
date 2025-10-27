@@ -365,26 +365,32 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.53.0</version>
-        <file>automation-beta-0.53.0.zap</file>
+        <version>0.54.0</version>
+        <file>automation-beta-0.54.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct Session Management script's path validation with variables.&lt;/li&gt;
-&lt;li&gt;Correct default value for Active Scan option &lt;code&gt;handleAntiCSRFTokens&lt;/code&gt; in templates and help.&lt;/li&gt;
+&lt;li&gt;Setting arbitrary config values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reinstate the validation of the Scan Policy in the &lt;code&gt;activeScan&lt;/code&gt; job.&lt;/li&gt;
+&lt;li&gt;Adjust the text for the plan load warning/error dialog text to be clear which output panel it's referring to.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.53.0/automation-beta-0.53.0.zap</url>
-        <hash>SHA-256:bd35aaf68720cc8d1dd8716cb8302c8f5a368edeb45e08738e63dd6f2a159700</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.54.0/automation-beta-0.54.0.zap</url>
+        <hash>SHA-256:d4f9c8200a16dcba40aca1a494f316125ebf41f2bfa1d5cb6be5d14cb357d78a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-18</date>
-        <size>2104232</size>
+        <date>2025-10-27</date>
+        <size>2119507</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.31.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.38.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>network</id>
