@@ -3214,19 +3214,29 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.9.0</version>
-        <file>zest-beta-48.9.0.zap</file>
+        <version>48.10.0</version>
+        <file>zest-beta-48.10.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to keep auhtenticator's proxy running after the authentication.&lt;/li&gt;
+&lt;li&gt;Support for Edge in scripts run from the script console.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deprecate the &lt;code&gt;Username&lt;/code&gt; and &lt;code&gt;Password&lt;/code&gt; credential parameters in favor of the lowercase &lt;code&gt;username&lt;/code&gt; and
+&lt;code&gt;password&lt;/code&gt; variants, aligning them with the naming convention of the other authentication credentials.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.32.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for Internet Explorer.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.9.0/zest-beta-48.9.0.zap</url>
-        <hash>SHA-256:238ca3e5f6ce682da7ad178bd450a26354f6cb782dc8d09d72128e2821b56fc5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.10.0/zest-beta-48.10.0.zap</url>
+        <hash>SHA-256:430031b9f05c009c770e9e79261ab9a826458aaf3690dfdcab24d628b141fe93</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>3045438</size>
+        <date>2025-10-29</date>
+        <size>3047375</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
