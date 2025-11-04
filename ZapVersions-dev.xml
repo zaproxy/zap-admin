@@ -1087,22 +1087,18 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
     <addon>fuzzai</addon>
     <addon_fuzzai>
         <name>FuzzAI Files</name>
-        <description>FuzzAI files which can be used with the ZAP fuzzer</description>
-        <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>fuzzai-release-0.0.1.zap</file>
-        <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;First version&lt;/li&gt;
-&lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzzai-v0.0.1/fuzzai-release-0.0.1.zap</url>
-        <hash>SHA-256:7d60565b5814b8523514c5d8001d0bdf1f30f6d96cae9b4ac0abb45ee7abcaea</hash>
+        <description>FuzzAI files which can be used with the ZAP fuzzer!!!</description>
+        <author>Marios Gyftos &amp; Yiannis Pavlosoglou</author>
+        <version>0.0.2</version>
+        <file>fuzzai-alpha-0.0.2.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy-addons/fuzzai/releases/download/v0.0.2/fuzzai-alpha-0.0.2.zap</url>
+        <hash>SHA-256:ad03171e3638452088707ee75d8f4c71d7614f71aa1658a1c76813f1d02d54c5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzai-files/</info>
-        <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-09-24</date>
-        <size>50063</size>
-        <not-before-version>2.15.0</not-before-version>
+        <repo>https://github.com/CyberRiskEngineering/zap-fuzzai-addon</repo>
+        <date>2025-11-04</date>
+        <size>441417</size>
+        <not-before-version>2.16.0</not-before-version>
     </addon_fuzzai>
     <addon>fuzzdb</addon>
     <addon_fuzzdb>
