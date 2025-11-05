@@ -271,30 +271,19 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.30.0</version>
-        <file>authhelper-beta-0.30.0.zap</file>
+        <version>0.31.0</version>
+        <file>authhelper-beta-0.31.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Click on button when login form does not handle return in Browser Based Authentication.&lt;/li&gt;
-&lt;li&gt;Handle password fields by ID and name in Browser Based Authentication.&lt;/li&gt;
-&lt;li&gt;Check div elements when searching for login links.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Zest add-on.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Inform when the Authentication Report being imported does not contain any diagnostics.&lt;/li&gt;
+&lt;li&gt;Domains to auth tester.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.30.0/authhelper-beta-0.30.0.zap</url>
-        <hash>SHA-256:55925f2cbcb74e12938713fb8ce45efe6b0231e1a087c3ad49bf94f876bc8745</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.31.0/authhelper-beta-0.31.0.zap</url>
+        <hash>SHA-256:39f068aeea1311e8549f88bcfd83c459c395510c31f905569aeeb60e41941a79</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>1522749</size>
+        <date>2025-11-05</date>
+        <size>1523574</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -356,26 +345,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.54.0</version>
-        <file>automation-beta-0.54.0.zap</file>
+        <version>0.55.0</version>
+        <file>automation-beta-0.55.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Setting arbitrary config values&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Reinstate the validation of the Scan Policy in the &lt;code&gt;activeScan&lt;/code&gt; job.&lt;/li&gt;
-&lt;li&gt;Adjust the text for the plan load warning/error dialog text to be clear which output panel it's referring to.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Depend on newer version of Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Use CWD for relative file names if plan loaded from a URL.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.54.0/automation-beta-0.54.0.zap</url>
-        <hash>SHA-256:d4f9c8200a16dcba40aca1a494f316125ebf41f2bfa1d5cb6be5d14cb357d78a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.55.0/automation-beta-0.55.0.zap</url>
+        <hash>SHA-256:e55c59edb9e7bc30caeec2a35d7590809f547880a3d48c6fd898a4d6f506181b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-10-27</date>
-        <size>2119507</size>
+        <date>2025-11-05</date>
+        <size>2144475</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
