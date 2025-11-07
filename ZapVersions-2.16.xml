@@ -271,19 +271,20 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.31.0</version>
-        <file>authhelper-beta-0.31.0.zap</file>
+        <version>0.32.0</version>
+        <file>authhelper-beta-0.32.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Domains to auth tester.&lt;/li&gt;
+&lt;li&gt;Track authentication headers with key in the name.&lt;/li&gt;
+&lt;li&gt;No longer quote domains as these will not get counted as valid URLs in the Automation Framework.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.31.0/authhelper-beta-0.31.0.zap</url>
-        <hash>SHA-256:39f068aeea1311e8549f88bcfd83c459c395510c31f905569aeeb60e41941a79</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.32.0/authhelper-beta-0.32.0.zap</url>
+        <hash>SHA-256:1c62cc7047e5a4c72b585e4b610c2214168a10fb9b281f1f9a8c9c3b81b77865</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-05</date>
-        <size>1523574</size>
+        <date>2025-11-07</date>
+        <size>1533745</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -345,19 +346,23 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.55.0</version>
-        <file>automation-beta-0.55.0.zap</file>
+        <version>0.56.0</version>
+        <file>automation-beta-0.56.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use CWD for relative file names if plan loaded from a URL.&lt;/li&gt;
+&lt;li&gt;Command line -autocheck option which checks if the specified yaml plan has the right format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Include in Context regular expressions when creating the plan from a context.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.55.0/automation-beta-0.55.0.zap</url>
-        <hash>SHA-256:e55c59edb9e7bc30caeec2a35d7590809f547880a3d48c6fd898a4d6f506181b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.56.0/automation-beta-0.56.0.zap</url>
+        <hash>SHA-256:96b143dd11e2fd4ef7ad0c6edcd5eef9541e7408dd16540c21ae749ed94c68ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-05</date>
-        <size>2144475</size>
+        <date>2025-11-07</date>
+        <size>2145281</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2425,23 +2430,21 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.41.0</version>
-        <file>reports-release-0.41.0.zap</file>
+        <version>0.42.0</version>
+        <file>reports-release-0.42.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Corrected a minor typo and image alt tags in the help.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;An ISO 8601 date and time field (ex: &amp;quot;created&amp;quot;: &amp;quot;2025-09-03T12:49:35.236211400Z&amp;quot;) has been added to the Traditional JSON, Traditional JSON with Requests and Responses, Traditional XML, Traditional XML with Requests and Responses.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;li&gt;All relevant reports to support nodeName and systemic counts.&lt;/li&gt;
+&lt;li&gt;Do not try to validate the AF report file in the GUI as the plan may run on another system.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.41.0/reports-release-0.41.0.zap</url>
-        <hash>SHA-256:af44c18f994aabc87bcbe60d35f0b2786baddd15eacfa7f4bfdcbe41bb4c4d30</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.42.0/reports-release-0.42.0.zap</url>
+        <hash>SHA-256:cc857079a8a0eb14c0b0e5204fb2839f2b8a254ee1790cc427a462bcf8efa395</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-04</date>
-        <size>14940098</size>
+        <date>2025-11-07</date>
+        <size>16767013</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
