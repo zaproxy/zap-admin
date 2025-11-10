@@ -435,20 +435,19 @@
         <name>Forced Browse</name>
         <description>Forced browsing of files and directories using code from the OWASP DirBuster tool</description>
         <author>ZAP Dev Team</author>
-        <version>18</version>
-        <file>bruteforce-beta-18.zap</file>
+        <version>19</version>
+        <file>bruteforce-beta-19.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Error logs to always include stack trace.&lt;/li&gt;
-&lt;li&gt;Address performance issue when checking responses.&lt;/li&gt;
+&lt;li&gt;Statistics.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v18/bruteforce-beta-18.zap</url>
-        <hash>SHA-256:547d4f1c69b745313d5986fbe4ac9167072460c8b2e1262181da156405f08069</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v19/bruteforce-beta-19.zap</url>
+        <hash>SHA-256:18073f1da073db7e6f04a0618bd1dc9006c50a0ab2991096abb37b738fa95ae8</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/forced-browse/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-08-27</date>
-        <size>552972</size>
+        <date>2025-11-10</date>
+        <size>554412</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -513,19 +512,24 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.17.0</version>
-        <file>callhome-release-0.17.0.zap</file>
+        <version>0.18.0</version>
+        <file>callhome-release-0.18.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;AJAX Spider stats to telemetry.&lt;/li&gt;
+&lt;li&gt;Postman stats to telemetry.&lt;/li&gt;
+&lt;li&gt;Forced browse stats to telemetry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Include the exception name in logger statistics.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.17.0/callhome-release-0.17.0.zap</url>
-        <hash>SHA-256:34a918986b918debb50d4c93f445863fd843c5a479181cf5bd83e4783d7296c1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.18.0/callhome-release-0.18.0.zap</url>
+        <hash>SHA-256:d1cf55060c43cacf30cb0d4cba33bb92ec7035929e14ed7cac9b5e23e696a52a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>326114</size>
+        <date>2025-11-10</date>
+        <size>326357</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_callhome>
     <addon>client</addon>
@@ -2158,19 +2162,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Postman Support</name>
         <description>Imports and spiders Postman collections.</description>
         <author>ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>postman-alpha-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>postman-alpha-0.8.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Enable API functionality for imports.&lt;/li&gt;
+&lt;li&gt;Statistics.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.7.0/postman-alpha-0.7.0.zap</url>
-        <hash>SHA-256:8069006363a5808913f96069bd5980df219efc2d6c2dd4888c798eedd1412846</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.8.0/postman-alpha-0.8.0.zap</url>
+        <hash>SHA-256:8fb32b1907ec533fcb104569ee7a37169d38cdf5c85112393121bcfbeb147714</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/postman-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-09-02</date>
-        <size>283943</size>
+        <date>2025-11-10</date>
+        <size>289302</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
