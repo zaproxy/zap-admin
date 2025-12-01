@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         path: zap-admin
         fetch-depth: 10
     - name: Checkout zaproxy-website
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         repository: zaproxy/zaproxy-website
         persist-credentials: false
         path: zaproxy-website
         fetch-depth: 0
     - name: Checkout org.zaproxy.ZAP
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         repository: flathub/org.zaproxy.ZAP
         persist-credentials: false
