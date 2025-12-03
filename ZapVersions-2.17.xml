@@ -271,20 +271,32 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.32.0</version>
-        <file>authhelper-beta-0.32.0.zap</file>
+        <version>0.33.0</version>
+        <file>authhelper-beta-0.33.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Track authentication headers with key in the name.&lt;/li&gt;
-&lt;li&gt;No longer quote domains as these will not get counted as valid URLs in the Automation Framework.&lt;/li&gt;
+&lt;li&gt;Handle account selection and TOTP step in Microsoft login.&lt;/li&gt;
+&lt;li&gt;Allow to include domains completely and partially out of scope in the Authentication Report.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fail the Microsoft login if not able to perform all the expected steps.&lt;/li&gt;
+&lt;li&gt;Track GWT headers.&lt;/li&gt;
+&lt;li&gt;Handle additional exceptions when processing JSON authentication components.&lt;/li&gt;
+&lt;li&gt;Improved performance of the Session Detection scan rule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not include known authentication providers in context.&lt;/li&gt;
+&lt;li&gt;Ensure all domains accessed during authentication are included in the Authentication Report.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.32.0/authhelper-beta-0.32.0.zap</url>
-        <hash>SHA-256:1c62cc7047e5a4c72b585e4b610c2214168a10fb9b281f1f9a8c9c3b81b77865</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.33.0/authhelper-beta-0.33.0.zap</url>
+        <hash>SHA-256:5919e3fa551b06335f62e2dd43b3ca7837ff9d397b8c8af55b1c900b0276f116</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-07</date>
-        <size>1533745</size>
+        <date>2025-12-03</date>
+        <size>1547592</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -346,23 +358,29 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.56.0</version>
-        <file>automation-beta-0.56.0.zap</file>
+        <version>0.57.0</version>
+        <file>automation-beta-0.57.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Command line -autocheck option which checks if the specified yaml plan has the right format.&lt;/li&gt;
+&lt;li&gt;Allow to specify the defaults for the alert threshold and attack strength of the active scan policy.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Include in Context regular expressions when creating the plan from a context.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Make the &amp;quot;pass&amp;quot; output of Monitor Tests consistent with the &amp;quot;fail&amp;quot; output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Restore default standard output on absent &lt;code&gt;env&lt;/code&gt; &lt;code&gt;parameters&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Delay Scan Policy validation to runtime phase in the &lt;code&gt;activeScan&lt;/code&gt; job, the Scan Policy might be created dynamically by other jobs.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.56.0/automation-beta-0.56.0.zap</url>
-        <hash>SHA-256:96b143dd11e2fd4ef7ad0c6edcd5eef9541e7408dd16540c21ae749ed94c68ff</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.57.0/automation-beta-0.57.0.zap</url>
+        <hash>SHA-256:5b21e679f75799088a3bc91ec57e19afb3d83340ac2d2da18ebc06b2272d8042</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-07</date>
-        <size>2145281</size>
+        <date>2025-12-03</date>
+        <size>2148395</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -532,25 +550,20 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.18.0</version>
-        <file>client-alpha-0.18.0.zap</file>
+        <version>0.19.0</version>
+        <file>client-alpha-0.19.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add optional parameters for the Client Spider API action &lt;code&gt;scan&lt;/code&gt;:
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;numberOfBrowsers&lt;/code&gt; - control concurrency (number of browser windows).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scopeCheck&lt;/code&gt; - select Scope Check (Flexible or Strict).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Spider stats.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox extensions to v0.1.7.&lt;/li&gt;
+&lt;li&gt;Bundle Chrome extension unpacked due changes in Chrome.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.18.0/client-alpha-0.18.0.zap</url>
-        <hash>SHA-256:bdf69baa8aa355bb42058f6ed112e37a834e119a2e609e216c02744ada7e12df</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.19.0/client-alpha-0.19.0.zap</url>
+        <hash>SHA-256:81067d6019fecd3aaec6debf1257f159bfde53ca7e4c784df5077c24a2003aa9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>2735593</size>
+        <date>2025-12-03</date>
+        <size>2782455</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2527,20 +2540,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Retire.js</name>
         <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.50.0</version>
-        <file>retire-release-0.50.0.zap</file>
+        <version>0.51.0</version>
+        <file>retire-release-0.51.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;Reduced usage of error level logging.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.50.0/retire-release-0.50.0.zap</url>
-        <hash>SHA-256:6b70b4bcebfe96d5430bcffd9b8159bce37452792ae9c7157708b0c7ada96c35</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.51.0/retire-release-0.51.0.zap</url>
+        <hash>SHA-256:394200231a11e16a4ab8311cf8aeac4a70c0e1d15146a0013efda0de7567d7e6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>1009548</size>
+        <date>2025-12-03</date>
+        <size>1009570</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2648,23 +2660,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.15.0</version>
-        <file>scripts-release-45.15.0.zap</file>
+        <version>45.16.0</version>
+        <file>scripts-release-45.16.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;scanHost&lt;/code&gt; method to the active script scan rule interface that is called once per host being scanned.&lt;/li&gt;
+&lt;li&gt;Script scan rules were not using the attack strength and alert threshold from active scan policies.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.15.0/scripts-release-45.15.0.zap</url>
-        <hash>SHA-256:4cfef2bb0ea79781fe5b7e4c6f0dd785b739a6a336272b70ea2d04e053cbbf57</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.16.0/scripts-release-45.16.0.zap</url>
+        <hash>SHA-256:b314ba182d6a6966877c8af01a0ecbc95e07690cf3b4191a6a6d5ebf92534668</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>9968099</size>
+        <date>2025-12-03</date>
+        <size>10168734</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2684,20 +2696,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.41.0</version>
-        <file>selenium-release-15.41.0.zap</file>
+        <version>15.42.0</version>
+        <file>selenium-release-15.42.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.37.0.&lt;/li&gt;
-&lt;li&gt;Use configured Firefox binary when creating profiles.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.38.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Restore loading of Chrome extensions, which now have to be unpacked/folders due changes in Chrome.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.41.0/selenium-release-15.41.0.zap</url>
-        <hash>SHA-256:bf32e21f1476ae832ccdce68cd72c101b814d446de2f5471b87fb4e190c845ad</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.42.0/selenium-release-15.42.0.zap</url>
+        <hash>SHA-256:d9011dcca74e4fd1e78f0ab44a48f461986f208813efc8519ff01c0243674e0f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-10-21</date>
-        <size>34733664</size>
+        <date>2025-12-03</date>
+        <size>34752918</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -2841,23 +2856,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.27.0</version>
-        <file>spiderAjax-release-23.27.0.zap</file>
+        <version>23.28.0</version>
+        <file>spiderAjax-release-23.28.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Spider stats.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correctly validate browser IDs.&lt;/li&gt;
+&lt;li&gt;Correct bundled logging dependencies.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.27.0/spiderAjax-release-23.27.0.zap</url>
-        <hash>SHA-256:e22d513f3ca7d7bb4798c02ee9af7971cce0eefdb0dc8342f1a1908c9380741a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.28.0/spiderAjax-release-23.28.0.zap</url>
+        <hash>SHA-256:c83116c9e81ffdb3a3883c9a7e943f574422d0903f27e6e16ad4f5c17fd0aa94</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>7963705</size>
+        <date>2025-12-03</date>
+        <size>7636037</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
@@ -3074,26 +3085,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.49.0</version>
-        <file>wappalyzer-release-21.49.0.zap</file>
+        <version>21.50.0</version>
+        <file>wappalyzer-release-21.50.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The Technology panel toolbar now includes a toggle button to link its displayed contents to the Sites Tree selection.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Icon sizing in the Technology table when a transparent placeholder needs to be used.&lt;/li&gt;
-&lt;li&gt;Reduced usage of error level logging.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.49.0/wappalyzer-release-21.49.0.zap</url>
-        <hash>SHA-256:69cc0035af4e6a50665ed294aaee393a68f3e0442782f383bcf70f8d4ee58dda</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.50.0/wappalyzer-release-21.50.0.zap</url>
+        <hash>SHA-256:7f32cd0c698a81424f3b00b1010c20062b1bf469e4f96f4aaa92e6cdb065d26c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>25452200</size>
+        <date>2025-12-03</date>
+        <size>29241951</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
