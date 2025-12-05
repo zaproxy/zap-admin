@@ -132,25 +132,23 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>75</version>
-        <file>ascanrules-release-75.zap</file>
+        <version>76</version>
+        <file>ascanrules-release-76.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;SYSTEMIC tag to selected rules.&lt;/li&gt;
+&lt;li&gt;Remote Code Execution (React2Shell) Scan Rule (CVE-2025-55182, CVE-2025-66478)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address potential false positives with the XSLT Injection scan rule when payloads cause a failure which may still contain the expected evidence.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Reduced usage of error level logging.&lt;/li&gt;
+&lt;li&gt;The External Redirect scan rule has been updated to account for potential false positives involving JavaScript comments.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v75/ascanrules-release-75.zap</url>
-        <hash>SHA-256:fe42b6418a2641401101ac5477764389cc157efc57d6b84b8768f212a3b9961d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v76/ascanrules-release-76.zap</url>
+        <hash>SHA-256:4de55a8adc2694dc225882457f5ff7da4c2576233d681c5b61d6cf0f9b7ecea2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-11-04</date>
-        <size>3307034</size>
+        <date>2025-12-05</date>
+        <size>4582768</size>
         <not-before-version>2.16.0</not-before-version>
         <dependencies>
             <addons>
