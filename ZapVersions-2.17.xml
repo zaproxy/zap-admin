@@ -1048,6 +1048,46 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
             </addons>
         </dependencies>
     </addon_formhandler>
+    <addon>foxhound</addon>
+    <addon_foxhound>
+        <name>Foxhound ZAP Add-on</name>
+        <description>Capture and analysis of client-side data flows from the Foxhound browser.</description>
+        <author>Thomas Barber</author>
+        <version>0.1.0</version>
+        <file>foxhound-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;First addition of Foxhound files&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/foxhound-v0.1.0/foxhound-alpha-0.1.0.zap</url>
+        <hash>SHA-256:e105d6e5c2c2b074d7a4e5ee4950a4efed0208f6f4259030858c31dd3c81b72e</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/foxhound/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2025-12-08</date>
+        <size>119381</size>
+        <not-before-version>2.16.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;= 1.29.0 &amp; &lt; 2.0.0</version>
+                </addon>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.1.0</version>
+                </addon>
+                <addon>
+                    <id>pscan</id>
+                    <version>&gt;= 0.1.0 &amp; &lt; 1.0.0</version>
+                </addon>
+                <addon>
+                    <id>selenium</id>
+                    <version>&gt;=15.14.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_foxhound>
     <addon>fuzz</addon>
     <addon_fuzz>
         <name>Fuzzer</name>
