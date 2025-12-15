@@ -1327,19 +1327,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>21</version>
-        <file>help-release-21.zap</file>
+        <version>22</version>
+        <file>help-release-22.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update available JavaScript engine and links.&lt;/li&gt;
+&lt;li&gt;Fix a typo in Breakpoints features page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated for 2.17.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v21/help-release-21.zap</url>
-        <hash>SHA-256:6a86b3f60a5d3d46988674840b04b996d79160fd39772604557bc64b23a3e66b</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v22/help-release-22.zap</url>
+        <hash>SHA-256:a99fcf18187ae3e232fafbe8150d3d65cbdd328c2284bd04016d82f2d2a5c945</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2025-08-21</date>
-        <size>640142</size>
+        <date>2025-12-15</date>
+        <size>647250</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
