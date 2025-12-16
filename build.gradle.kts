@@ -19,6 +19,7 @@ import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
 import org.zaproxy.gradle.UpdateFlathubData
 import org.zaproxy.gradle.UpdateGettingStartedWebsitePage
 import org.zaproxy.gradle.UpdateMainZapVersionsEntries
+import org.zaproxy.gradle.UpdateZapMgmtScriptsData
 import org.zaproxy.gradle.UpdateZapVersionWebsiteData
 import org.zaproxy.gradle.crowdin.DeployCrowdinTranslations
 import java.util.Optional
@@ -406,6 +407,38 @@ val updateFlathub by tasks.registering(CreatePullRequest::class) {
     mustRunAfter(handleMainRelease)
 }
 
+val zapMgmtScriptsRepo = GitHubRepo("zapbot", "zap-mgmt-scripts", file("$rootDir/../zap-mgmt-scripts"))
+
+val updateZapMgmtScriptsData by tasks.registering(UpdateZapMgmtScriptsData::class) {
+    releaseState.set(releaseStateData)
+
+    zapVersions.set(latestZapVersions)
+    baseDirectory.set(zapMgmtScriptsRepo.dir)
+}
+
+val updateZapMgmtScripts by tasks.registering(CreatePullRequest::class) {
+    dependsOn(updateZapMgmtScriptsData)
+
+    user.set(ghUser)
+    repo.set(zapMgmtScriptsRepo)
+    baseBranchName.set("master")
+    branchName.set("update-main-release")
+
+    commitSummary.set("Update post main release")
+    commitDescription.set(
+        provider {
+            """
+            Update GitHub tags.
+            
+            From:
+            $adminRepo@${headCommit(adminRepo.dir)}
+            """.trimIndent()
+        },
+    )
+
+    mustRunAfter(handleMainRelease)
+}
+
 val handleSnapRelease by tasks.registering(HandleMainRelease::class) {
     releaseState.set(releaseStateData)
 
@@ -423,4 +456,5 @@ tasks.register("handleRelease") {
     dependsOn(handleMainRelease)
     dependsOn(updateFlathub)
     dependsOn(handleSnapRelease)
+    dependsOn(updateZapMgmtScripts)
 }

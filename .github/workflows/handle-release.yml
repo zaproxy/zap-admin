@@ -31,6 +31,13 @@ jobs:
         persist-credentials: false
         path: org.zaproxy.ZAP
         fetch-depth: 0
+    - name: Checkout zap-mgmt-scripts
+      uses: actions/checkout@v6
+      with:
+        repository: zapbot/zap-mgmt-scripts
+        persist-credentials: false
+        path: zap-mgmt-scripts
+        fetch-depth: 0
     - name: Setup Java
       uses: actions/setup-java@v5
       with:
