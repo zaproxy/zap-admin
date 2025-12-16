@@ -49,6 +49,7 @@ grpc
 highlighter
 hud
 imagelocationscanner
+insights
 invoke
 jruby
 jsonview
