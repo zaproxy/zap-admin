@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import javax.inject.Inject;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.RegularFileProperty;
@@ -40,6 +42,12 @@ import org.gradle.workers.WorkerExecutor;
 public abstract class CreateNewsMainRelease extends DefaultTask {
 
     private static final String VERSION_TOKEN = "@@VERSION@@";
+    private static final String VERSION_HYPHENS_TOKEN = "@@VERSION_HYPHENS@@";
+    private static final String DATE_TOKEN = "@@DATE@@";
+
+    private String currentVersion;
+    private String currentVersionHyphens;
+    private String date;
 
     public CreateNewsMainRelease() {
         setGroup("ZAP");
@@ -66,30 +74,55 @@ public abstract class CreateNewsMainRelease extends DefaultTask {
     @Input
     public abstract Property<String> getLink();
 
+    @Input
+    public abstract Property<String> getItemCurrent();
+
+    @Input
+    public abstract Property<String> getLinkCurrent();
+
     @Inject
     public abstract WorkerExecutor getWorkerExecutor();
 
     @TaskAction
     public void create() throws Exception {
-        String currentVersion = getVersion().get();
+        currentVersion = getVersion().get();
+        currentVersionHyphens = currentVersion.replace('.', '-');
+        date = LocalDate.now(ZoneId.of("Z")).toString();
+
         Path newsDir = getNewsDir().get().toPath();
 
         createNewsFileCurrentVersion(newsDir, currentVersion, getPreviousVersion().get());
 
-        String item = replaceVersion(getItem().get(), currentVersion);
-        String link = replaceVersion(getLink().get(), currentVersion);
+        String item = replaceVars(getItem().get());
+        String link = replaceVars(getLink().get());
+
+        String itemLatest = replaceVars(getItemCurrent().get());
+        String linkLatest = replaceVars(getLinkCurrent().get());
         WorkQueue workQueue = getWorkerExecutor().noIsolation();
 
+        Path currentNewsFile = newsDir.resolve(convertToNewsFileName(currentVersion));
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(newsDir)) {
             stream.forEach(
-                    file ->
+                    file -> {
+                        if (currentNewsFile.equals(file)) {
+                            workQueue.submit(
+                                    CreateNewsEntry.class,
+                                    parameters -> {
+                                        parameters.getFile().set(file.toFile());
+                                        parameters.getItem().set(itemLatest);
+                                        parameters.getLink().set(linkLatest);
+                                    });
+                        } else {
+
                             workQueue.submit(
                                     CreateNewsEntry.class,
                                     parameters -> {
                                         parameters.getFile().set(file.toFile());
                                         parameters.getItem().set(item);
                                         parameters.getLink().set(link);
-                                    }));
+                                    });
+                        }
+                    });
         }
     }
 
@@ -150,8 +183,10 @@ public abstract class CreateNewsMainRelease extends DefaultTask {
         }
     }
 
-    private static String replaceVersion(String string, String version) {
-        return string.replace(VERSION_TOKEN, version);
+    private String replaceVars(String string) {
+        return string.replace(VERSION_TOKEN, currentVersion)
+                .replace(VERSION_HYPHENS_TOKEN, currentVersionHyphens)
+                .replace(DATE_TOKEN, date);
     }
 
     private static String convertToNewsFileName(String version) {
