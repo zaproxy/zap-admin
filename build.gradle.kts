@@ -136,6 +136,9 @@ tasks {
 
         item.set("ZAP @@VERSION@@ is available now")
         link.set("https://www.zaproxy.org/download/")
+
+        itemCurrent.set("Learn all about @@VERSION@@ in the ZAP blog post")
+        linkCurrent.set("https://www.zaproxy.org/blog/@@DATE@@-zap-@@VERSION_HYPHENS@@/")
     }
 
     register<UpdateMainZapVersionsEntries>("updateMainRelease") {
