@@ -19,25 +19,32 @@
  */
 package org.zaproxy.gradle;
 
+import java.util.Map;
 import org.gradle.api.file.RegularFileProperty;
+import org.gradle.api.provider.Property;
+import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputFile;
 import org.zaproxy.gradle.ReleaseState.VersionChange;
 
 /**
  * Task that handles a main release, if any.
  *
- * <p>Sends a repository dispatch to release the main Docker images.
+ * <p>Sends a repository dispatch to release the main and nightly Docker images.
  */
 public abstract class HandleMainRelease extends SendRepositoryDispatch {
 
     @InputFile
     public abstract RegularFileProperty getReleaseState();
 
+    @Input
+    public abstract Property<String> getEventTypeNightly();
+
     @Override
     void send() {
         ReleaseState releaseState = ReleaseState.read(getReleaseState().getAsFile().get());
         if (isNewMainRelease(releaseState)) {
             super.send();
+            sendRepositoryDispatch(getEventTypeNightly().get(), Map.of());
         }
     }
 

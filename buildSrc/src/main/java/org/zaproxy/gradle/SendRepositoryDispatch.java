@@ -59,8 +59,12 @@ public abstract class SendRepositoryDispatch extends DefaultTask {
 
     @TaskAction
     void send() {
+        sendRepositoryDispatch(getEventType().get(), getClientPayload().getOrNull());
+    }
+
+    protected void sendRepositoryDispatch(String eventType, Map<String, Object> clientPayload) {
         HttpURLConnection connection = createConnection();
-        writeRepositoryDispatch(connection);
+        writeRepositoryDispatch(eventType, clientPayload, connection);
 
         int statusCode = getStatusCode(connection);
         if (statusCode == EXPECTED_STATUS_CODE) {
@@ -113,10 +117,11 @@ public abstract class SendRepositoryDispatch extends DefaultTask {
         return connection;
     }
 
-    private void writeRepositoryDispatch(HttpURLConnection connection) {
+    private void writeRepositoryDispatch(
+            String eventType, Map<String, Object> clientPayload, HttpURLConnection connection) {
         byte[] repositoryDispatch;
         try {
-            repositoryDispatch = createRepositoryDispatch();
+            repositoryDispatch = createRepositoryDispatch(eventType, clientPayload);
         } catch (JsonProcessingException e) {
             throw new TaskException("Failed to create the request body:", e);
         }
@@ -128,11 +133,11 @@ public abstract class SendRepositoryDispatch extends DefaultTask {
         }
     }
 
-    private byte[] createRepositoryDispatch() throws JsonProcessingException {
+    private byte[] createRepositoryDispatch(String eventType, Map<String, Object> clientPayload)
+            throws JsonProcessingException {
         Map<String, Object> repositoryDispatch = new LinkedHashMap<>();
-        repositoryDispatch.put("event_type", getEventType().get());
+        repositoryDispatch.put("event_type", eventType);
 
-        Map<String, Object> clientPayload = getClientPayload().getOrNull();
         if (clientPayload != null && !clientPayload.isEmpty()) {
             repositoryDispatch.put("client_payload", clientPayload);
         }
