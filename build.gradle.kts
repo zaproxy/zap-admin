@@ -378,6 +378,7 @@ val handleMainRelease by tasks.registering(HandleMainRelease::class) {
     gitHubRepo.set(zaproxyRepo)
 
     eventType.set("release-main-docker")
+    eventTypeNightly.set("release-nightly-docker")
 }
 
 val flathubRepo = GitHubRepo("flathub", "org.zaproxy.ZAP", file("$rootDir/../org.zaproxy.ZAP"))
