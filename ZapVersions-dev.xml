@@ -3133,23 +3133,20 @@ but if you encounter problems, please refer to the following.
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.51.0</version>
-        <file>wappalyzer-release-21.51.0.zap</file>
+        <version>21.52.0</version>
+        <file>wappalyzer-release-21.52.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A help page for the tech-detection (&lt;code&gt;wappalyzer&lt;/code&gt;) automation framework job.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Adjust warnings logged when a pattern incorrectly contains Confidence or Version tags, use just one punctuation character.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.51.0/wappalyzer-release-21.51.0.zap</url>
-        <hash>SHA-256:d7e5e1fb426bd033fc432476f09ca2d0b3a29352f42709cb93ef5a8d2cc3a754</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.52.0/wappalyzer-release-21.52.0.zap</url>
+        <hash>SHA-256:89032a1848b4f34a84977f832b102094c517e055acd6c289505f996fa1a276e2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>29243463</size>
+        <date>2025-12-18</date>
+        <size>29268890</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
