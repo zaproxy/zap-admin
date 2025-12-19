@@ -3,7 +3,7 @@
  *
  * ZAP is an HTTP/HTTPS proxy for assessing web application security.
  *
- * Copyright 2020 The ZAP Development Team
+ * Copyright 2025 The ZAP Development Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,22 +20,34 @@
 package org.zaproxy.gradle;
 
 import java.util.Map;
+import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
+import org.gradle.api.tasks.InputFile;
+import org.zaproxy.gradle.ReleaseState.VersionChange;
 
 /**
- * Task that handles a main release, if any.
- *
- * <p>Sends a repository dispatch to release the main and nightly Docker images.
+ * A {@link SendRepositoryDispatch} that only runs on a main release.
  */
-public abstract class HandleMainRelease extends MainReleaseRepositoryDispatch {
+public abstract class MainReleaseRepositoryDispatch extends SendRepositoryDispatch {
 
-    @Input
-    public abstract Property<String> getEventTypeNightly();
+    @InputFile
+    public abstract RegularFileProperty getReleaseState();
 
     @Override
+    void send() {
+        ReleaseState releaseState = ReleaseState.read(getReleaseState().getAsFile().get());
+        if (isNewMainRelease(releaseState)) {
+            sendDispatch();
+        }
+    }
+
     protected void sendDispatch() {
-        super.sendDispatch();
-        sendRepositoryDispatch(getEventTypeNightly().get(), Map.of());
+        super.send();
+    }
+
+    private static boolean isNewMainRelease(ReleaseState releaseState) {
+        VersionChange mainRelease = releaseState.getMainRelease();
+        return mainRelease != null && mainRelease.isNewVersion();
     }
 }
