@@ -13,6 +13,7 @@ import org.zaproxy.gradle.GitHubRepo
 import org.zaproxy.gradle.GitHubUser
 import org.zaproxy.gradle.HandleMainRelease
 import org.zaproxy.gradle.HandleWeeklyRelease
+import org.zaproxy.gradle.MainReleaseRepositoryDispatch
 import org.zaproxy.gradle.UpdateAddOnZapVersionsEntries
 import org.zaproxy.gradle.UpdateAndCreatePullRequestAddOnRelease
 import org.zaproxy.gradle.UpdateDailyZapVersionsEntries
@@ -443,7 +444,7 @@ val updateZapMgmtScripts by tasks.registering(CreatePullRequest::class) {
     mustRunAfter(handleMainRelease)
 }
 
-val handleSnapRelease by tasks.registering(HandleMainRelease::class) {
+val handleSnapRelease by tasks.registering(MainReleaseRepositoryDispatch::class) {
     releaseState.set(releaseStateData)
 
     gitHubUser.set(ghUser)
