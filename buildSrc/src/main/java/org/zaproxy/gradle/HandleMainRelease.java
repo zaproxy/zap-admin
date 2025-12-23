@@ -20,6 +20,7 @@
 package org.zaproxy.gradle;
 
 import java.util.Map;
+import org.gradle.api.provider.MapProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 
@@ -33,9 +34,16 @@ public abstract class HandleMainRelease extends MainReleaseRepositoryDispatch {
     @Input
     public abstract Property<String> getEventTypeNightly();
 
+    @Input
+    public abstract Property<String> getEventTypeWeekly();
+
+    @Input
+    public abstract MapProperty<String, Object>  getClientPayloadWeekly();
+
     @Override
     protected void sendDispatch() {
         super.sendDispatch();
         sendRepositoryDispatch(getEventTypeNightly().get(), Map.of());
+        sendRepositoryDispatch(getEventTypeWeekly().get(), getClientPayloadWeekly().get());
     }
 }
