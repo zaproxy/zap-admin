@@ -23,6 +23,7 @@ import java.net.URI;
 import java.net.URL;
 import java.util.Locale;
 import java.util.regex.Pattern;
+import org.apache.commons.lang3.Strings;
 import org.apache.commons.lang3.StringUtils;
 import org.zaproxy.gradle.website.TocTree.TocItem;
 
@@ -132,10 +133,7 @@ final class Utils {
     }
 
     static boolean isExternalLink(String href) {
-        return StringUtils.startsWithIgnoreCase(href, HTTP_SCHEME)
-                || StringUtils.startsWithIgnoreCase(href, HTTPS_SCHEME)
-                || StringUtils.startsWithIgnoreCase(href, ABSOLUTE_SCHEME)
-                || StringUtils.startsWithIgnoreCase(href, MAILTO_SCHEME)
-                || StringUtils.startsWithIgnoreCase(href, WWW_SUBDOMAIN);
+        return Strings.CI.startsWithAny(
+                href, HTTP_SCHEME, HTTPS_SCHEME, ABSOLUTE_SCHEME, MAILTO_SCHEME, WWW_SUBDOMAIN);
     }
 }

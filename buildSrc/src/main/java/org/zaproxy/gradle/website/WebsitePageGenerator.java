@@ -43,7 +43,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import javax.help.HelpSet;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -446,6 +446,6 @@ public class WebsitePageGenerator {
     }
 
     private static String removeLeadingSlash(String value) {
-        return StringUtils.removeStart(value, "/");
+        return Strings.CS.removeStart(value, "/");
     }
 }
