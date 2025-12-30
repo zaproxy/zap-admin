@@ -125,31 +125,27 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>78</version>
-        <file>ascanrules-release-78.zap</file>
+        <version>79</version>
+        <file>ascanrules-release-79.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The following scan rules were added, having been promoted from beta:
-&lt;ul&gt;
-&lt;li&gt;Exponential Entity Expansion (Billion Laughs Attack)&lt;/li&gt;
-&lt;li&gt;HTTP Only Site&lt;/li&gt;
-&lt;li&gt;HTTPS Content Available via HTTP&lt;/li&gt;
-&lt;li&gt;ShellShock - CVE-2014-6271&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The following scan rule was removed, having been demoted to Alpha:
+&lt;ul&gt;
+&lt;li&gt;SQL Injection - SQLite (Time Based)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v78/ascanrules-release-78.zap</url>
-        <hash>SHA-256:764a9f803304b6aa266d13f4c39f23b013e206c9e831435cd405871919a021fe</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v79/ascanrules-release-79.zap</url>
+        <hash>SHA-256:114dd7dfcd743cb34f66f100a646e7e291086475ef5d34e93b72fb4da87cdd4f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>4641328</size>
+        <date>2025-12-30</date>
+        <size>5070079</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -173,29 +169,23 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>54</version>
-        <file>ascanrulesAlpha-alpha-54.zap</file>
+        <version>55</version>
+        <file>ascanrulesAlpha-alpha-55.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
-&lt;li&gt;Address redirections in references.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;li&gt;The following scan rule was added, having been demoted from Release:
 &lt;ul&gt;
-&lt;li&gt;The following scan rules were removed, having been promoted to Beta:
-&lt;ul&gt;
-&lt;li&gt;NoSQL Injection - MongoDB&lt;/li&gt;
-&lt;li&gt;NoSQL Injection - MongoDB (Time Based)&lt;/li&gt;
+&lt;li&gt;SQL Injection - SQLite (Time Based)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v54/ascanrulesAlpha-alpha-54.zap</url>
-        <hash>SHA-256:96299541c8f2a5ebc33c1aad89a635fc5b3de24c7d26b813ad5be43003674a1c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v55/ascanrulesAlpha-alpha-55.zap</url>
+        <hash>SHA-256:6e0a1c58163384708459fa0fe628faef2a97b648b730940a20dbb0e52340354f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>391941</size>
+        <date>2025-12-30</date>
+        <size>360706</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
