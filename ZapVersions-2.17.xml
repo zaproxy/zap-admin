@@ -1680,17 +1680,18 @@ but if you encounter problems, please refer to the following.
         <name>Insights</name>
         <description>An add-on providing additional insights into what ZAP finds.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>insights-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>insights-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version.&lt;/li&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address concurrency issue while generating report with insights.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/insights-v0.0.1/insights-alpha-0.0.1.zap</url>
-        <hash>SHA-256:7b6720f0112f33a614d67563fb4347c5ef4123d49a7b16d735c5fc635b7d3e4c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/insights-v0.1.0/insights-alpha-0.1.0.zap</url>
+        <hash>SHA-256:2319b49ad2b7e8c8255a8f5631d9358dd85c36f7e6addf7c5eae204f4e464b1f</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>57558</size>
+        <date>2025-12-31</date>
+        <size>393195</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_insights>
     <addon>invoke</addon>
