@@ -2023,20 +2023,24 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>48</version>
-        <file>openapi-beta-48.zap</file>
+        <version>49</version>
+        <file>openapi-beta-49.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Added an optional LLM extension for importing OpenAPI definitions.&lt;/li&gt;
+&lt;li&gt;Initial support for OpenAPI 3.1 definitions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependency update.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v48/openapi-beta-48.zap</url>
-        <hash>SHA-256:8384f8b71a0cb8a69bfc859603d7418f2d9b59ceb499063909e11e78e152c698</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v49/openapi-beta-49.zap</url>
+        <hash>SHA-256:b25b69150b613e14a773b22a0b9598e7645907ec98af80e05788ed379172842a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>11688307</size>
+        <date>2026-01-12</date>
+        <size>11701297</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
