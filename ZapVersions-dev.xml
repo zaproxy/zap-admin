@@ -2390,6 +2390,28 @@ but if you encounter problems, please refer to the following.
             </addons>
         </dependencies>
     </addon_pscanrulesBeta>
+    <addon>ptk</addon>
+    <addon_ptk>
+        <name>OWASP PTK</name>
+        <description>Adds the OWASP PTK extension to browsers launched from ZAP.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.1.0</version>
+        <file>ptk-alpha-0.1.0.zap</file>
+        <status>alpha</status>
+        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.1.0/ptk-alpha-0.1.0.zap</url>
+        <hash>SHA-256:f34d4907b4e81aaca3df1b05ca5d6ca1cff3decbd67b033aaace161b816c00cb</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/owasp-ptk/</info>
+        <date>2026-01-14</date>
+        <size>16373508</size>
+        <not-before-version>2.17.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>selenium</id>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_ptk>
     <addon>quickstart</addon>
     <addon_quickstart>
         <name>Quick Start</name>
