@@ -2023,24 +2023,19 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>49</version>
-        <file>openapi-beta-49.zap</file>
+        <version>50</version>
+        <file>openapi-beta-50.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added an optional LLM extension for importing OpenAPI definitions.&lt;/li&gt;
-&lt;li&gt;Initial support for OpenAPI 3.1 definitions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Dependency update.&lt;/li&gt;
+&lt;li&gt;Swagger Secret Detector Script Scan Rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v49/openapi-beta-49.zap</url>
-        <hash>SHA-256:b25b69150b613e14a773b22a0b9598e7645907ec98af80e05788ed379172842a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v50/openapi-beta-50.zap</url>
+        <hash>SHA-256:fe7e5dc01028b1b584a04ecc81da495bc957e8a1c35b4c383667a4159aea3f52</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-01-12</date>
-        <size>11701297</size>
+        <date>2026-01-21</date>
+        <size>11755886</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
