@@ -1189,19 +1189,23 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraalVM JavaScript</name>
         <description>Provides the GraalVM JavaScript engine for ZAP scripting.</description>
         <author>ZAP Dev Team</author>
-        <version>0.12.0</version>
-        <file>graaljs-alpha-0.12.0.zap</file>
+        <version>0.13.0</version>
+        <file>graaljs-alpha-0.13.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Close script engine when no longer in use (Issue 9230).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.12.0/graaljs-alpha-0.12.0.zap</url>
-        <hash>SHA-256:09eef48f9d59da168ca6be03935001ceb927f3f71990ef617c4a53509bdb7757</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graaljs-v0.13.0/graaljs-alpha-0.13.0.zap</url>
+        <hash>SHA-256:7da5acf5b59f2a6556b0e6aa9201a998566ef25a3915095382ec1ed7c0acf420</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>27817739</size>
+        <date>2026-01-29</date>
+        <size>27824920</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
