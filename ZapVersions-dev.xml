@@ -1225,24 +1225,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.29.0</version>
-        <file>graphql-alpha-0.29.0.zap</file>
+        <version>0.30.0</version>
+        <file>graphql-alpha-0.30.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Statistics for GraphQL schema imports and message additions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
-&lt;li&gt;Dependency updates.&lt;/li&gt;
+&lt;li&gt;GraphQL Cycle detection: Imported schemas are processed for circular type references, and an alert is created for each unique circular relationship that is found.
+The cycle detection exhaustiveness and the maximum number of alerts raised are configurable.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.29.0/graphql-alpha-0.29.0.zap</url>
-        <hash>SHA-256:6ba6b0135189dffe62933db3b3e8b29acab1aba8026af29be20cc896ff99e4ca</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.30.0/graphql-alpha-0.30.0.zap</url>
+        <hash>SHA-256:77f61f23692710363400fd4bb314ccfe5624182cabe6b9aad9ae34f228a12f6d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>5643568</size>
+        <date>2026-02-03</date>
+        <size>5660886</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
