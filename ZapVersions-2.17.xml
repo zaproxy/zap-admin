@@ -1225,20 +1225,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.30.0</version>
-        <file>graphql-alpha-0.30.0.zap</file>
+        <version>0.31.0</version>
+        <file>graphql-alpha-0.31.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;GraphQL Cycle detection: Imported schemas are processed for circular type references, and an alert is created for each unique circular relationship that is found.
-The cycle detection exhaustiveness and the maximum number of alerts raised are configurable.&lt;/li&gt;
+&lt;li&gt;Tech Detection integration was not working due to handler reset on each run.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.30.0/graphql-alpha-0.30.0.zap</url>
-        <hash>SHA-256:77f61f23692710363400fd4bb314ccfe5624182cabe6b9aad9ae34f228a12f6d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.31.0/graphql-alpha-0.31.0.zap</url>
+        <hash>SHA-256:28166d2cc9d131719d14a91a5eb5953a19be5f1c4e908c7eb0712bd8d80cb9e9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-02-03</date>
-        <size>5660886</size>
+        <date>2026-02-11</date>
+        <size>5697640</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2023,19 +2022,19 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>51</version>
-        <file>openapi-beta-51.zap</file>
+        <version>52</version>
+        <file>openapi-beta-52.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Disable Swagger Secret Detector Script Scan Rule by default due to JS Engine memory leak (Issue 9230).&lt;/li&gt;
+&lt;li&gt;Enable Swagger Secret Detector Script Scan Rule, the JS Engine memory leak has been addressed (Issue 9230).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v51/openapi-beta-51.zap</url>
-        <hash>SHA-256:811688b49f25ca626fbacd3daeb3ef22480dcd9a5b9429f815e8840095dc82e2</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v52/openapi-beta-52.zap</url>
+        <hash>SHA-256:11586667dec8cd97c439db8f127a99c86a69841fc14f27e90d16b8f846691c70</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-01-28</date>
-        <size>11775165</size>
+        <date>2026-02-11</date>
+        <size>11774993</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
