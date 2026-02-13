@@ -3271,30 +3271,32 @@ but if you encounter problems, please refer to the following.
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.11.0</version>
-        <file>zest-beta-48.11.0.zap</file>
+        <version>48.12.0</version>
+        <file>zest-beta-48.12.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
-&lt;li&gt;Use lowercase credential parameters in the Authentication default template.&lt;/li&gt;
-&lt;li&gt;Update Zest library to 0.33.0:
-&lt;ul&gt;
-&lt;li&gt;Support for script level &lt;code&gt;statementDelay&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Update Selenium to version 4.39.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;UI support for Zest script options.&lt;/li&gt;
+&lt;li&gt;Now supports authentication for client side scripts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address deadlock when adding scripts.&lt;/li&gt;
+&lt;li&gt;Bug which prevented client side scripts from being recorded in ZAP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update Zest library to 0.35.0:
+&lt;ul&gt;
+&lt;li&gt;Migrate JSON serialization from Gson to Jackson.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.11.0/zest-beta-48.11.0.zap</url>
-        <hash>SHA-256:67ccc066a94086e1ac24af100f4030e924a8c13145d38e6adb0b1d68c77bb7fc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.12.0/zest-beta-48.12.0.zap</url>
+        <hash>SHA-256:9d6cd06978da16d87740151d1c07106a22c646ecce7e91e5666f8bc9d4ecadb6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>3047331</size>
+        <date>2026-02-13</date>
+        <size>3401833</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3316,7 +3318,7 @@ but if you encounter problems, please refer to the following.
                 </addon>
                 <addon>
                     <id>selenium</id>
-                    <version>&gt;= 15.13.0</version>
+                    <version>&gt;= 15.44.0</version>
                 </addon>
             </addons>
         </dependencies>
