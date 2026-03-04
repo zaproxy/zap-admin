@@ -2765,28 +2765,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.44.0</version>
-        <file>selenium-release-15.44.0.zap</file>
+        <version>15.45.0</version>
+        <file>selenium-release-15.45.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for custom browsers&lt;/li&gt;
-&lt;li&gt;Support for browser preferences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.41.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Support for IE and disabled Safari.&lt;/li&gt;
+&lt;li&gt;Close all webdrivers when ZAP exits.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.44.0/selenium-release-15.44.0.zap</url>
-        <hash>SHA-256:6cb22751bae5ecbe2206d7ccd816bfafc233806b206f1101f1227c919f91ecb3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.45.0/selenium-release-15.45.0.zap</url>
+        <hash>SHA-256:5690db65c8d16532ef1863628be2bb5fa85147e9337973ccfca07205d745fc38</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-02-24</date>
-        <size>34911806</size>
+        <date>2026-03-04</date>
+        <size>34963674</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
