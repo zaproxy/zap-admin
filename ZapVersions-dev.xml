@@ -2400,19 +2400,19 @@ but if you encounter problems, please refer to the following.
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>54</version>
-        <file>quickstart-release-54.zap</file>
+        <version>55</version>
+        <file>quickstart-release-55.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Address exception when using configurations in the Automation Framework plan in command line mode.&lt;/li&gt;
+&lt;li&gt;Attacking domain level URLs with a trailing slash.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v54/quickstart-release-54.zap</url>
-        <hash>SHA-256:fb44e3fec6649a6c0bac156f3e2bd0f7051afbb96ed756ef56bed317e1f06a3c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v55/quickstart-release-55.zap</url>
+        <hash>SHA-256:1c618c5381fe85cc63e89ab64e2881c4f376a687e82f35ee08078b79e312bc92</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-02</date>
-        <size>777122</size>
+        <date>2026-03-09</date>
+        <size>777676</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
