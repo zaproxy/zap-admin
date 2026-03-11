@@ -83,7 +83,8 @@ for (var i = 0; i < control.getExtensionLoader().getExtensionCount(); i++) {
 			printAlerts(exList, ext.getName(), "Tool", ext.getAddOn().getStatus(), ext.getClass().getName(), null, null, getHelp(ext));
 		}
 	} catch (e) {
-		if (e.toString().indexOf('is not a function') > 0) {
+		if (e.toString().indexOf('is not a function') > 0 ||
+				e.toString().indexOf('Unknown identifier') > 0) {
 			// This one doesnt ;)
 		} else {
 			print("Failed accessing extension examples: " + e);
@@ -145,38 +146,53 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech, help) {
 		// Package hierarchy is actually org.zaproxy.zap.extension.<package>
 		pkg = pkgs[4];
 	}
-	var codeurl = 'https://github.com/zaproxy/zap-extensions/blob/main/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
-	if (pluginId in codeMap) {
-		codeurl = codeMap[pluginId]
+	var codeurl;
+	try {
+		codeurl = alerts[0].getCodeLink();
+	} catch {
+		codeurl = 'https://github.com/zaproxy/zap-extensions/blob/main/addOns/' + pkg + '/src/main/java/' + pkgs.join('/') + '.java';
+		if (pluginId in codeMap) {
+			codeurl = codeMap[pluginId]
+		}
+		if (scripturl != null) {
+			codeurl = scripturl;
+		}
 	}
-     if (scripturl != null) {
-          codeurl = scripturl;
-     }
-     var linktext;
-     if (codeurl.indexOf('/main/java/') !== -1) {
-         linktext = codeurl.split('/main/java/')[1];
-     } else if (codeurl.indexOf('/main/zapHomeFiles/') !== -1) {
-         linktext = codeurl.split('/main/zapHomeFiles/')[1];
-     } else if (codeurl.indexOf('/main/') !== -1) {
-         linktext = codeurl.split('/main/')[1];
-     } else {
-         linktext = codeurl;
-     }
-     linktext = linktext.replaceAll('\%20', ' ');
+	var linktext;
+	try {
+		linktext = alerts[0].getCodeLinkText();
+	} catch {
+		if (codeurl.indexOf('/main/java/') !== -1) {
+			linktext = codeurl.split('/main/java/')[1];
+		} else if (codeurl.indexOf('/main/zapHomeFiles/') !== -1) {
+			linktext = codeurl.split('/main/zapHomeFiles/')[1];
+		} else if (codeurl.indexOf('/main/') !== -1) {
+			linktext = codeurl.split('/main/')[1];
+		} else {
+			linktext = codeurl;
+		}
+		linktext = linktext.replaceAll('\%20', ' ');
+	 }
 
-	if (alerts.length > 1) {
-		print('Plugin ID: ' + pluginId);
+	 if (alerts.length > 1) {
+		var alertName;
+		try {
+			alertName = alerts[0].getParentAlertName()
+		} catch {
+			alertName = name;
+		}
+		print('Plugin ID: ' + pluginId + " " + alertName);
 		var fw = new FileWriter(DIR + pluginId + ".md");
 		var pw = new PrintWriter(fw);
 		pw.println('---');
-		pw.println('title: ' + quoteText(name));
+		pw.println('title: ' + quoteText(alertName));
 		pw.println('alertid: ' + pluginId);
 		pw.println('alertindex: ' + pluginId * 100);
 		pw.println('alerttype: "' + type + '"');
 		pw.println('status: ' + status);
 		pw.println('type: alertset');
 		pw.println('alerts:');
-	     for (var a=0; a < alerts.length; a++) {
+		 for (var a=0; a < alerts.length; a++) {
 			pw.println('   ' + alerts[a].getAlertRef() + ':');
 			pw.println('      alertid: ' + alerts[a].getAlertRef());
 			pw.println('      name: ' + quoteText(alerts[a].getName()));
