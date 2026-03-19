@@ -47,6 +47,7 @@ graphql
 groovy
 grpc
 highlighter
+httpsInfo
 hud
 imagelocationscanner
 insights
