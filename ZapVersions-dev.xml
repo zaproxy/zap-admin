@@ -280,24 +280,23 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.35.0</version>
-        <file>authhelper-beta-0.35.0.zap</file>
+        <version>0.36.0</version>
+        <file>authhelper-beta-0.36.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Exception in authentication diagnostics.&lt;/li&gt;
-&lt;li&gt;Ensure the login link verification URL has both logged in and out indicators.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Autodetect HTTP authentication, and added more auth diagnostics.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.35.0/authhelper-beta-0.35.0.zap</url>
-        <hash>SHA-256:f0dd2fac0dc43bdd2573d0b197d922e0024e4d71cdc06240e09e5322cb41bd20</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.36.0/authhelper-beta-0.36.0.zap</url>
+        <hash>SHA-256:52e155e9571289601cbd42604a9173f447f2754b505bd20a7203bd12d6dfe7d7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-02</date>
-        <size>1552630</size>
+        <date>2026-03-19</date>
+        <size>1553539</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -587,20 +586,25 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.39.0</version>
-        <file>commonlib-release-1.39.0.zap</file>
+        <version>1.40.0</version>
+        <file>commonlib-release-1.40.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
 &lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;li&gt;Use a monospaced font for the output panel.&lt;/li&gt;
+&lt;li&gt;Remove Markdown formatting from vulnerabilities' solutions (Issue 8056).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Added OWASP Top 10 2025 and OWASP API Top 10 2023 Alert Tags.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.39.0/commonlib-release-1.39.0.zap</url>
-        <hash>SHA-256:477af158c562770951abedefb5bb988fda935ef253a80616c3e298174fc58fb0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.40.0/commonlib-release-1.40.0.zap</url>
+        <hash>SHA-256:ed7640d2e439438e012ffc2ca0237e2027d136c80180025396ef052e6fdeff0f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>11878908</size>
+        <date>2026-03-19</date>
+        <size>11896459</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -1949,20 +1953,19 @@ but if you encounter problems, please refer to the following.
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.25.0</version>
-        <file>network-beta-0.25.0.zap</file>
+        <version>0.26.0</version>
+        <file>network-beta-0.26.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
-&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;li&gt;Method to expose if proxy enabled.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.25.0/network-beta-0.25.0.zap</url>
-        <hash>SHA-256:bf32c4d2c40c76171efa29da1987375a312cc09595ece29d67018e7ae54d6cf3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.26.0/network-beta-0.26.0.zap</url>
+        <hash>SHA-256:0cbf12aa5597c4b80e0cdff6d956c834da343aa64e08c25b00903eab1cd20523</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>28165092</size>
+        <date>2026-03-19</date>
+        <size>28162873</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -2022,19 +2025,23 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>52</version>
-        <file>openapi-beta-52.zap</file>
+        <version>53</version>
+        <file>openapi-beta-53.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Enable Swagger Secret Detector Script Scan Rule, the JS Engine memory leak has been addressed (Issue 9230).&lt;/li&gt;
+&lt;li&gt;Dependency update.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Issue with data generation for arrays in OpenAPI 3.1 definitions (Issue 9261).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v52/openapi-beta-52.zap</url>
-        <hash>SHA-256:11586667dec8cd97c439db8f127a99c86a69841fc14f27e90d16b8f846691c70</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v53/openapi-beta-53.zap</url>
+        <hash>SHA-256:c6a02b429fd0ad0be8b227668be1705b4e9ec9a5116b142d5caeb0b79deba728</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-02-11</date>
-        <size>11774993</size>
+        <date>2026-03-19</date>
+        <size>11796018</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2484,20 +2491,27 @@ but if you encounter problems, please refer to the following.
         <name>Replacer</name>
         <description>Easy way to replace strings in requests and responses.</description>
         <author>ZAP Dev Team</author>
-        <version>21</version>
-        <file>replacer-release-21.zap</file>
+        <version>22</version>
+        <file>replacer-release-22.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Method parameter matcher to allow rules to apply to specific HTTP methods (Issue 9016).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support multiline replacements in GUI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct error message which was shown as missing.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/replacer-v21/replacer-release-21.zap</url>
-        <hash>SHA-256:ed08e4eaef6bd3287525f9e6e5470435c7bbe9ff0889326969209b8feb61dc6e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/replacer-v22/replacer-release-22.zap</url>
+        <hash>SHA-256:e2cc4478f69fb0ea3fd65f21449e09664ae128df7b3903f1a1aa3ec026ed5b51</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/replacer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>447555</size>
+        <date>2026-03-19</date>
+        <size>448534</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_replacer>
     <addon>reports</addon>
@@ -2505,24 +2519,24 @@ but if you encounter problems, please refer to the following.
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.43.0</version>
-        <file>reports-release-0.43.0.zap</file>
+        <version>0.44.0</version>
+        <file>reports-release-0.44.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Insights to the reports.&lt;/li&gt;
+&lt;li&gt;&amp;quot;Other Info&amp;quot; to the modern HTML report&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update the automation framework &lt;code&gt;outputSummary&lt;/code&gt; template to include missing field (&lt;code&gt;rules&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;&amp;quot;Other Info&amp;quot; sections of the HTML reports to split the text on newlines.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.43.0/reports-release-0.43.0.zap</url>
-        <hash>SHA-256:af27617b76a5f89594fe25109c3f811a431dda01e3b58d814f1589b698fad8ee</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.44.0/reports-release-0.44.0.zap</url>
+        <hash>SHA-256:f9bba543d522bdaf57c6db9b2fe3b47cadc0eca1de84ccd6304df628ea63ba64</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>16780200</size>
+        <date>2026-03-19</date>
+        <size>16794347</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
