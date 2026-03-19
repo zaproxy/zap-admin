@@ -1618,6 +1618,39 @@ but if you encounter problems, please refer to the following.
         <size>115527</size>
         <not-before-version>2.11.0</not-before-version>
     </addon_highlighter>
+    <addon>httpsInfo</addon>
+    <addon_httpsInfo>
+        <name>HTTPS Info</name>
+        <description>Displays HTTPS configuration information.</description>
+        <author>ZAP Dev Team</author>
+        <version>14</version>
+        <file>httpsInfo-alpha-14.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Active scan rules Info level &amp;quot;HTTPS Configuration&amp;quot; alert and a Low, Medium or High alert if any problems reported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update to DeepViolet 6.1.0 with new API. Requires Java 21+.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/httpsInfo-v14/httpsInfo-alpha-14.zap</url>
+        <hash>SHA-256:a5aefd1782562b0aa464d2e772733953843a80f0ada555260d28fdef9b876fb5</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/https-info/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2026-03-19</date>
+        <size>2005691</size>
+        <not-before-version>2.17.0</not-before-version>
+        <dependencies>
+            <javaversion>21</javaversion>
+            <addons>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.26.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_httpsInfo>
     <addon>hud</addon>
     <addon_hud>
         <name>HUD - Heads Up Display</name>
