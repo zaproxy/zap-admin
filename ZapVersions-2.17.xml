@@ -2410,22 +2410,28 @@ but if you encounter problems, please refer to the following.
         <name>OWASP PTK</name>
         <description>Adds the OWASP PTK extension to browsers launched from ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>ptk-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>ptk-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated OWASP Penetration Testing Kit browser extension to 9.5.0&lt;/li&gt;
+&lt;li&gt;Added mapping to and from ZAP alert ids and PTK module names&lt;/li&gt;
+&lt;li&gt;Example alerts&lt;/li&gt;
+&lt;li&gt;Raising ZAP alerts from PTK alerts&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.2.0/ptk-alpha-0.2.0.zap</url>
-        <hash>SHA-256:b6917a90c174f8f9eeba06274e6dc8acf06ac084cc0280df433b38c9c22a8790</hash>
+        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.3.0/ptk-alpha-0.3.0.zap</url>
+        <hash>SHA-256:608781f4c10f79b6f160328875bf726b52ab4622e2d5ee8795927618f556bc13</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/owasp-ptk/</info>
         <repo>https://github.com/DenisPodgurskii/ZAP_PTK</repo>
-        <date>2026-01-19</date>
-        <size>16618134</size>
+        <date>2026-03-31</date>
+        <size>18902096</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
+                <addon>
+                    <id>client</id>
+                    <version>&gt;=0.21.0</version>
+                </addon>
                 <addon>
                     <id>selenium</id>
                 </addon>
