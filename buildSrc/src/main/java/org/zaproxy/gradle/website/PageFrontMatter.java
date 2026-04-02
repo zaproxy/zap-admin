@@ -53,6 +53,7 @@ class PageFrontMatter {
     private final String redirect;
     private final int weight;
 
+    private List<String> aliases;
     private AddOnData addOnData;
     private SbomData sbomData;
 
@@ -66,6 +67,14 @@ class PageFrontMatter {
         this.title = title;
         this.weight = weight;
         this.redirect = redirect;
+    }
+
+    List<String> getAliases() {
+        return aliases;
+    }
+
+    void setAliases(List<String> aliases) {
+        this.aliases = aliases;
     }
 
     AddOnData getAddOnData() {
@@ -199,6 +208,14 @@ class PageFrontMatter {
                 }
                 if (frontMatter.weight > 0) {
                     pageData.add(new NodeTuple(string("weight"), integer(frontMatter.weight)));
+                }
+
+                List<String> aliases = frontMatter.getAliases();
+                if (aliases != null && !aliases.isEmpty()) {
+                    pageData.add(
+                            new NodeTuple(
+                                    string("aliases"),
+                                    PageFrontMatterRepresenter.this.representData(aliases)));
                 }
 
                 PageFrontMatter.AddOnData addOnData = frontMatter.getAddOnData();

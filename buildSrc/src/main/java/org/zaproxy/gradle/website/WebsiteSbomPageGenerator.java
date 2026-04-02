@@ -26,6 +26,7 @@ import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -60,6 +61,7 @@ public class WebsiteSbomPageGenerator {
                 new PageFrontMatter.SbomData(
                         bomJson.get("bomFormat").asText(), bomUrl, resultComponents));
         frontMatter.setAddOnData(new PageFrontMatter.AddOnData(addOnId, addOnVersion));
+        frontMatter.setAliases(List.of("/docs/sbom/" + addOnId + "/"));
         var writer = new StringWriter();
         frontMatter.writeTo(NOTICE, writer);
         Files.write(outputFile, writer.toString().getBytes(StandardCharsets.UTF_8));
