@@ -58,6 +58,7 @@ jsonview
 # jwt
 jython
 kotlin
+mcp
 neonmarker
 network
 oast
