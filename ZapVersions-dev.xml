@@ -354,23 +354,30 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.58.0</version>
-        <file>automation-beta-0.58.0.zap</file>
+        <version>0.59.0</version>
+        <file>automation-beta-0.59.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for a &amp;quot;soft&amp;quot; stop which allows &amp;quot;always run&amp;quot; jobs to run.&lt;/li&gt;
+&lt;li&gt;Allow to load a plan from the contents of the clipboard.&lt;/li&gt;
+&lt;li&gt;Access to the progress of long running jobs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Move the Automation panel to the workspace window.&lt;/li&gt;
+&lt;li&gt;Use the main output panel for plan output messages.&lt;/li&gt;
+&lt;li&gt;Add a status panel to inform users about the panel relocation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct error message.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.58.0/automation-beta-0.58.0.zap</url>
-        <hash>SHA-256:34958cd9b94264296cdd05bab585bcc72af7b0610d9b91cd4b8e280cb9915c6c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.59.0/automation-beta-0.59.0.zap</url>
+        <hash>SHA-256:6cb28f527d1edfc5fcf7982c2632a91573d3b72fccb42a86ae200dd2b9bf3387</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>2150219</size>
+        <date>2026-04-02</date>
+        <size>2164653</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -520,19 +527,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.20.0</version>
-        <file>callhome-release-0.20.0.zap</file>
+        <version>0.21.0</version>
+        <file>callhome-release-0.21.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;MCP stats to telemetry.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.20.0/callhome-release-0.20.0.zap</url>
-        <hash>SHA-256:a9e499dfa9f2fc85992faba66ab90db48d46b47e4241dc60106c78094412a679</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.21.0/callhome-release-0.21.0.zap</url>
+        <hash>SHA-256:656b610e7a5e2688710dabdd0da859d92802eb0922b45c2cc3d1a0ab3ec916f1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>326709</size>
+        <date>2026-04-02</date>
+        <size>326720</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_callhome>
     <addon>client</addon>
@@ -1952,6 +1959,48 @@ but if you encounter problems, please refer to the following.
         <size>49040</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_maplocal>
+    <addon>mcp</addon>
+    <addon_mcp>
+        <name>MCP Integration</name>
+        <description>An add-on that integrates MCP in ZAP.</description>
+        <author>ZAP Dev Team</author>
+        <version>0.0.1</version>
+        <file>mcp-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;ul&gt;
+&lt;li&gt;First version with initial resources, tools, and prompts.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.0.1/mcp-alpha-0.0.1.zap</url>
+        <hash>SHA-256:a187d056ed61c6618f70cbfc6a0de1d1b1b7990c74d0f18421aa6de338310201</hash>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2026-04-02</date>
+        <size>105255</size>
+        <not-before-version>2.17.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>automation</id>
+                    <version>&gt;=0.59.0</version>
+                </addon>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.17.0</version>
+                </addon>
+                <addon>
+                    <id>network</id>
+                    <version>&gt;=0.1.0</version>
+                </addon>
+                <addon>
+                    <id>pscan</id>
+                    <version>&gt;=0.6.0</version>
+                </addon>
+                <addon>
+                    <id>reports</id>
+                    <version>&gt;=0.44.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_mcp>
     <addon>neonmarker</addon>
     <addon_neonmarker>
         <name>Neonmarker</name>
@@ -2917,24 +2966,19 @@ but if you encounter problems, please refer to the following.
         <name>Spider</name>
         <description>Spider used for automatically finding URIs on a site.</description>
         <author>ZAP Dev Team</author>
-        <version>0.19.0</version>
-        <file>spider-release-0.19.0.zap</file>
+        <version>0.20.0</version>
+        <file>spider-release-0.20.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Handle persistence errors and forced shutdown in automation job.&lt;/li&gt;
-&lt;li&gt;Address memory leak.&lt;/li&gt;
+&lt;li&gt;Access to the spider job status.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.19.0/spider-release-0.19.0.zap</url>
-        <hash>SHA-256:ffe4e456c0c3cc58a48dc1458364cb0dc9619a2e668157782a7e4fb67854de21</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spider-v0.20.0/spider-release-0.20.0.zap</url>
+        <hash>SHA-256:82acf7e307fdd4f46ac4d387656370ecad9c2ab940e1c81d9776768bacdedcd5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-02-24</date>
-        <size>1200181</size>
+        <date>2026-04-02</date>
+        <size>1201993</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2957,19 +3001,19 @@ but if you encounter problems, please refer to the following.
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.29.0</version>
-        <file>spiderAjax-release-23.29.0.zap</file>
+        <version>23.30.0</version>
+        <file>spiderAjax-release-23.30.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Update Crawljax to version 3.8.0 (Issues 3412 and 7138).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.29.0/spiderAjax-release-23.29.0.zap</url>
-        <hash>SHA-256:b57eacb990f6f08e3941798965b339e07f6d28bb7687d7464bad3327c4879fab</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.30.0/spiderAjax-release-23.30.0.zap</url>
+        <hash>SHA-256:c165905a2532e0ff728b10c33cf3853dabe779c9147080a1ec3a1e0bb048d822</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>7636237</size>
+        <date>2026-04-02</date>
+        <size>7790569</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
