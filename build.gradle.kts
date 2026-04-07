@@ -5,6 +5,7 @@ import org.zaproxy.gradle.CustomXmlConfiguration
 import org.zaproxy.gradle.DownloadReleasedAddOns
 import org.zaproxy.gradle.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.GenerateWebsiteAddonsData
+import org.zaproxy.gradle.GenerateWebsiteChangelogPages
 import org.zaproxy.gradle.GenerateWebsiteMainReleaseData
 import org.zaproxy.gradle.GenerateWebsitePages
 import org.zaproxy.gradle.GenerateWebsiteSbomPages
@@ -303,6 +304,12 @@ val generateWebsiteSbomPages by tasks.registering(GenerateWebsiteSbomPages::clas
     outputDir.set(layout.buildDirectory.dir("websiteSbomPages"))
 }
 
+val generateWebsiteChangelogPages by tasks.registering(GenerateWebsiteChangelogPages::class) {
+    releaseState.set(releaseStateData)
+    zapVersions.set(latestZapVersions)
+    outputDir.set(layout.buildDirectory.dir("websiteChangelogPages"))
+}
+
 val updateZapVersionWebsiteData by tasks.registering(UpdateZapVersionWebsiteData::class) {
     releaseState.set(releaseStateData)
     val downloadDir = "$siteDir/data/download"
@@ -323,6 +330,7 @@ val copyWebsiteGeneratedData by tasks.registering(Copy::class) {
     into("content") {
         from(generateWebsitePages)
         from(generateWebsiteSbomPages)
+        from(generateWebsiteChangelogPages)
     }
 }
 

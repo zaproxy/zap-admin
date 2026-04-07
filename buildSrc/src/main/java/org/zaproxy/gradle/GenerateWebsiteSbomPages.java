@@ -19,7 +19,6 @@
  */
 package org.zaproxy.gradle;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -78,16 +77,17 @@ public abstract class GenerateWebsiteSbomPages extends DefaultTask {
                 continue;
             }
 
-            String pageTitle = getString(zapVersions, addOnId, NAME_ELEMENT) + " Add-on SBOM";
-            Path bomPageOutputPath = outputDir.resolve(Path.of("docs", "sbom", addOnId + ".md"));
-            Files.createDirectories(bomPageOutputPath.getParent());
+            String addOnName = getString(zapVersions, addOnId, NAME_ELEMENT);
+            Path addOnDir = outputDir.resolve(Path.of("docs", "addons", addOnId));
+            Files.createDirectories(addOnDir);
+
             WebsiteSbomPageGenerator.generate(
                     bomPath,
                     bomUrl,
-                    pageTitle,
+                    addOnName + " Add-on SBOM",
                     addOnId,
                     addOn.getCurrentVersion(),
-                    outputDir.resolve(bomPageOutputPath));
+                    addOnDir.resolve("sbom.md"));
         }
     }
 
