@@ -22,6 +22,7 @@ package org.zaproxy.gradle;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Set;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
@@ -42,6 +43,8 @@ public abstract class GenerateWebsiteChangelogPages extends DefaultTask {
             "https://github.com/zaproxy/zap-extensions/";
     private static final String GITHUB_PREFIX = "https://github.com/";
     private static final String RAW_GITHUB_BASE = "https://raw.githubusercontent.com/";
+    private static final Set<String> WEBDRIVER_ADDON_IDS =
+            Set.of("webdriverlinux", "webdrivermacos", "webdriverwindows");
 
     @InputFile
     public abstract RegularFileProperty getReleaseState();
@@ -96,11 +99,15 @@ public abstract class GenerateWebsiteChangelogPages extends DefaultTask {
 
     private static String buildChangelogUrl(String addOnId, String url, String tag) {
         if (url.startsWith(ZAP_EXTENSIONS_PREFIX)) {
+            String addOnPath = addOnId;
+            if (WEBDRIVER_ADDON_IDS.contains(addOnId)) {
+                addOnPath = "webdrivers/" + addOnId;
+            }
             return RAW_GITHUB_BASE
                     + "zaproxy/zap-extensions/"
                     + tag
                     + "/addOns/"
-                    + addOnId
+                    + addOnPath
                     + "/CHANGELOG.md";
         }
 
