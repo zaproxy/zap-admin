@@ -2102,21 +2102,23 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>54</version>
-        <file>openapi-beta-54.zap</file>
+        <version>55</version>
+        <file>openapi-beta-55.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dependency update to fix stack overflows when importing the definitions.&lt;/li&gt;
-&lt;li&gt;The scan rule script now has new tags for the OWASP Top 10 2025, and API Top 10 2023.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Dependency update.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Address exception importing definition with indirect &lt;code&gt;additionalProperties&lt;/code&gt; referencing an &lt;code&gt;oneOf&lt;/code&gt; (Issue 9305).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v54/openapi-beta-54.zap</url>
-        <hash>SHA-256:890aa160139ffd2442a711864b098053c62926c5da39509a6444e9c6050bffa1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v55/openapi-beta-55.zap</url>
+        <hash>SHA-256:17bc5d84bfea78c7e28cd654dea6b10cfc366213c9220c97c4cefa3bb6223521</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>11800434</size>
+        <date>2026-04-21</date>
+        <size>11968732</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
