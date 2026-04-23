@@ -1718,18 +1718,19 @@ but if you encounter problems, please refer to the following.
         <name>Insights</name>
         <description>An add-on providing additional insights into what ZAP finds.</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>insights-alpha-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>insights-alpha-0.4.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct check of memory usage.&lt;/li&gt;
+&lt;li&gt;Elevated insight.auth.failure from Medium to High severity so that exitAutoOnHigh can stop scans with persistent auth failures.&lt;/li&gt;
+&lt;li&gt;Reduced minimum auth request threshold from 10 to 5 to detect browser-based auth failures earlier.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/insights-v0.3.0/insights-alpha-0.3.0.zap</url>
-        <hash>SHA-256:4527659c1569eaaa526793cc750525e1919f7dbda50eaa37353ddac0de158207</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/insights-v0.4.0/insights-alpha-0.4.0.zap</url>
+        <hash>SHA-256:895aebcc28974c1b7590c67de4683e25963683f78ae1f82a6f73c66990d30752</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-31</date>
-        <size>393361</size>
+        <date>2026-04-23</date>
+        <size>393582</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_insights>
     <addon>invoke</addon>
