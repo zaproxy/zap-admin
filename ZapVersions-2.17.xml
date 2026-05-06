@@ -130,21 +130,28 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>81</version>
-        <file>ascanrules-release-81.zap</file>
+        <version>82</version>
+        <file>ascanrules-release-82.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The scan rules now have new tags for the OWASP Top 10 2025, and API Top 10 2023.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
+&lt;ul&gt;
+&lt;li&gt;SQL Injection - Hypersonic SQL (Time Based)&lt;/li&gt;
+&lt;li&gt;SQL Injection - MsSQL (Time Based)&lt;/li&gt;
+&lt;li&gt;SQL Injection - MySQL (Time Based)&lt;/li&gt;
+&lt;li&gt;SQL Injection - Oracle (Time Based)&lt;/li&gt;
+&lt;li&gt;SQL Injection - PostgreSQL (Time Based)&lt;/li&gt;
+&lt;li&gt;Cross Site Scripting (Persistent) (Also now includes alert references (Issue 7100))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v81/ascanrules-release-81.zap</url>
-        <hash>SHA-256:6ee3193086d04b8ff2735b3d9b1818702c9c194ecd3810150401435723585955</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v82/ascanrules-release-82.zap</url>
+        <hash>SHA-256:170f98c204347dc473f1c4118e8240b36281966396c36377d7a0768e83948761</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>5077307</size>
+        <date>2026-05-06</date>
+        <size>5080263</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -168,21 +175,20 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>56</version>
-        <file>ascanrulesAlpha-alpha-56.zap</file>
+        <version>57</version>
+        <file>ascanrulesAlpha-alpha-57.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The SQL Injection - SQLite (Time Based) scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
-&lt;li&gt;The scan rules now have new tags for the OWASP Top 10 2025, and API Top 10 2023.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;The LDAP Injection scan rule now includes example alert functionality for documentation generation purposes (Issue 6119) and alert references (Issue 7100).&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v56/ascanrulesAlpha-alpha-56.zap</url>
-        <hash>SHA-256:de0c990c5f7c933ec6209a7c575f4b50d6300468bf4a094581acfaa22b6ace06</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v57/ascanrulesAlpha-alpha-57.zap</url>
+        <hash>SHA-256:8c6180689ef4edd50a169efca55a1c1bf4a66224fbcc71bd2bf6d61c21938489</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>400080</size>
+        <date>2026-05-06</date>
+        <size>400319</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -198,23 +204,26 @@
         <name>Active scanner rules (beta)</name>
         <description>The beta status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>65</version>
-        <file>ascanrulesBeta-beta-65.zap</file>
+        <version>66</version>
+        <file>ascanrulesBeta-beta-66.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119) and alert references (Issue 7100):
+&lt;ul&gt;
+&lt;li&gt;Insecure HTTP Method&lt;/li&gt;
+&lt;li&gt;Session Fixation&lt;/li&gt;
+&lt;li&gt;Proxy Disclosure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Dependency update.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The scan rules now have new tags for the OWASP Top 10 2025, and API Top 10 2023.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;li&gt;The Possible Username Enumeration scan rule now includes example alert functionality for documentation generation purposes (Issue 6119).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v65/ascanrulesBeta-beta-65.zap</url>
-        <hash>SHA-256:5c73f112f2e0a22b189e35b267f273f5b90e0a40bc8d7fd716a0c96062984979</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesBeta-v66/ascanrulesBeta-beta-66.zap</url>
+        <hash>SHA-256:e5be0cee46abb673abdd3c5e2572e577454887aab00ea141da44856accd49a84</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-beta/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>1800334</size>
+        <date>2026-05-06</date>
+        <size>1810539</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -260,19 +269,23 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.38.0</version>
-        <file>authhelper-beta-0.38.0.zap</file>
+        <version>0.39.0</version>
+        <file>authhelper-beta-0.39.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct reported username/password fields' state in the Authentication Report.&lt;/li&gt;
+&lt;li&gt;Do not attempt to extract session tokens from big responses, to reduce memory usage, which are more likely to represent application data rather than having session tokens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve detection of finished Microsoft login.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.38.0/authhelper-beta-0.38.0.zap</url>
-        <hash>SHA-256:bc2b4f1f7cfb62c3a0c3e49fe269c7cccd5e02380e364770287d675fa9f0d90f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.39.0/authhelper-beta-0.39.0.zap</url>
+        <hash>SHA-256:e5a860023886b30192ed153244327d25a16c8924cf4a0032ac6e7416a200368c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>1559785</size>
+        <date>2026-05-06</date>
+        <size>1560123</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -527,26 +540,19 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.22.0</version>
-        <file>client-alpha-0.22.0.zap</file>
+        <version>0.23.0</version>
+        <file>client-alpha-0.23.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Persist Client History entries in the session.&lt;/li&gt;
-&lt;li&gt;Add a button in the Client History tab to clear the history from both the GUI and session.&lt;/li&gt;
-&lt;li&gt;Support exporting the Client Map via the Automation Framework export job (requires the Import/Export add-on).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow callback implementors to handle browsers closing.&lt;/li&gt;
-&lt;li&gt;Depend on Database add-on.&lt;/li&gt;
+&lt;li&gt;Client spider to wait for all browsers to close before reporting it has finished.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.22.0/client-alpha-0.22.0.zap</url>
-        <hash>SHA-256:55b413fc2525aeef695b18b0f2b5b4c57a642fd216c51a9fa8844b41a0435dd3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.23.0/client-alpha-0.23.0.zap</url>
+        <hash>SHA-256:29d7914cf88ff02dde8c4a5454dfc2ccff50f43921598eba40e4678f2fdde5d3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>2838955</size>
+        <date>2026-05-06</date>
+        <size>2865193</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2031,19 +2037,20 @@ but if you encounter problems, please refer to the following.
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.26.0</version>
-        <file>network-beta-0.26.0.zap</file>
+        <version>0.27.0</version>
+        <file>network-beta-0.27.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Method to expose if proxy enabled.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;li&gt;Include the Authority Key Identifier in generated server certificates per RFC 5280 (Issue 9301).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.26.0/network-beta-0.26.0.zap</url>
-        <hash>SHA-256:0cbf12aa5597c4b80e0cdff6d956c834da343aa64e08c25b00903eab1cd20523</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.27.0/network-beta-0.27.0.zap</url>
+        <hash>SHA-256:1ee957c473eca42865417115a126927790dbc972771cc86354d0f7f0cc7edbb9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-19</date>
-        <size>28162873</size>
+        <date>2026-05-06</date>
+        <size>28542615</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -2103,23 +2110,22 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>55</version>
-        <file>openapi-beta-55.zap</file>
+        <version>56</version>
+        <file>openapi-beta-56.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dependency update.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Address exception importing definition with indirect &lt;code&gt;additionalProperties&lt;/code&gt; referencing an &lt;code&gt;oneOf&lt;/code&gt; (Issue 9305).&lt;/li&gt;
+&lt;li&gt;Exceptions caught by the Automation Framework job now include the exception message.&lt;/li&gt;
+&lt;li&gt;Improved Swagger Secret Detector Script with false positive scenarios and ensuring correct Swagger version flagging.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v55/openapi-beta-55.zap</url>
-        <hash>SHA-256:17bc5d84bfea78c7e28cd654dea6b10cfc366213c9220c97c4cefa3bb6223521</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v56/openapi-beta-56.zap</url>
+        <hash>SHA-256:12bdc14392a270ff003b9875701232802fa788ef78b5eceacf1462e498d140ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-21</date>
-        <size>11968732</size>
+        <date>2026-05-06</date>
+        <size>11967423</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2494,19 +2500,19 @@ but if you encounter problems, please refer to the following.
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>55</version>
-        <file>quickstart-release-55.zap</file>
+        <version>56</version>
+        <file>quickstart-release-56.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Attacking domain level URLs with a trailing slash.&lt;/li&gt;
+&lt;li&gt;Add Scan Policy option to the Automated Scan panel.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v55/quickstart-release-55.zap</url>
-        <hash>SHA-256:1c618c5381fe85cc63e89ab64e2881c4f376a687e82f35ee08078b79e312bc92</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v56/quickstart-release-56.zap</url>
+        <hash>SHA-256:b8b77e38e69792a28466f28f9e0d13baf784316ccfe495ce1f7ddb918bfba859</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-09</date>
-        <size>777676</size>
+        <date>2026-05-06</date>
+        <size>786009</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2606,24 +2612,24 @@ but if you encounter problems, please refer to the following.
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.44.0</version>
-        <file>reports-release-0.44.0.zap</file>
+        <version>0.45.0</version>
+        <file>reports-release-0.45.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;quot;Other Info&amp;quot; to the modern HTML report&lt;/li&gt;
+&lt;li&gt;The alert's systemic flag in JSON and XML reports now correctly reflects its state (Issue 9254).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;&amp;quot;Other Info&amp;quot; sections of the HTML reports to split the text on newlines.&lt;/li&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.44.0/reports-release-0.44.0.zap</url>
-        <hash>SHA-256:f9bba543d522bdaf57c6db9b2fe3b47cadc0eca1de84ccd6304df628ea63ba64</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.45.0/reports-release-0.45.0.zap</url>
+        <hash>SHA-256:04d3a774a3a719ada6e338d9d2faba9ea1162900957ff0ddc01e7c855a2bc7b5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-19</date>
-        <size>16794347</size>
+        <date>2026-05-06</date>
+        <size>16802413</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2705,21 +2711,19 @@ but if you encounter problems, please refer to the following.
         <name>Retire.js</name>
         <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.56.0</version>
-        <file>retire-release-0.56.0.zap</file>
+        <version>0.57.0</version>
+        <file>retire-release-0.57.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
-&lt;li&gt;The scan rule now has new tags for the OWASP Top 10 2025, and API Top 10 2023.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.56.0/retire-release-0.56.0.zap</url>
-        <hash>SHA-256:d5b3881326703bbad85ba27ba30c9e7a5d637f38ad82b36b0030857516e9e08b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.57.0/retire-release-0.57.0.zap</url>
+        <hash>SHA-256:93951be0fcc430498e895cbb12267d34f2f953977b649278f18a5d045f58d76a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>1052659</size>
+        <date>2026-05-06</date>
+        <size>1057299</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3239,19 +3243,20 @@ but if you encounter problems, please refer to the following.
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.54.0</version>
-        <file>wappalyzer-release-21.54.0.zap</file>
+        <version>21.55.0</version>
+        <file>wappalyzer-release-21.55.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
+&lt;li&gt;Dependency update.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.54.0/wappalyzer-release-21.54.0.zap</url>
-        <hash>SHA-256:0d9fb8ef959b9201ae2bacab8232548d6891dc4c9ceca868fb8e3d212eb619ea</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.55.0/wappalyzer-release-21.55.0.zap</url>
+        <hash>SHA-256:2fd2edd92359218e5e7aff6c5e51567ed7c7b13d2caa68ec96b07b8c704481fc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-31</date>
-        <size>31230850</size>
+        <date>2026-05-06</date>
+        <size>31242376</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
