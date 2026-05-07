@@ -540,19 +540,23 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.23.0</version>
-        <file>client-alpha-0.23.0.zap</file>
+        <version>0.24.0</version>
+        <file>client-alpha-0.24.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client spider to wait for all browsers to close before reporting it has finished.&lt;/li&gt;
+&lt;li&gt;Client spider option &amp;quot;Action Wait Time&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Client map export to report the number of items exported.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.23.0/client-alpha-0.23.0.zap</url>
-        <hash>SHA-256:29d7914cf88ff02dde8c4a5454dfc2ccff50f43921598eba40e4678f2fdde5d3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.24.0/client-alpha-0.24.0.zap</url>
+        <hash>SHA-256:779510906f67fc62e5cd535e13663f3d374ef3270818c8333264fc81c13826a9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>2865193</size>
+        <date>2026-05-07</date>
+        <size>2867322</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -974,23 +978,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.19.0</version>
-        <file>exim-beta-0.19.0.zap</file>
+        <version>0.20.0</version>
+        <file>exim-beta-0.20.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for add-on provided source exporters, allowing add-ons to provide new data sources for the export job (e.g. the Client Map via the Client Side Integration add-on).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Save the context when saving the export job.&lt;/li&gt;
+&lt;li&gt;Source exporters to report the number of items exported.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.19.0/exim-beta-0.19.0.zap</url>
-        <hash>SHA-256:a7df97fa19363b029caabd12e0cf57f2d331e7bc77dcc9e5ad52fed2fe40fb4e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.20.0/exim-beta-0.20.0.zap</url>
+        <hash>SHA-256:05f8235fc8e335062306de22dc933d952d4014dfd5c5f4459c31ebd9dcd1a796</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>1152363</size>
+        <date>2026-05-07</date>
+        <size>1156501</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
