@@ -347,30 +347,19 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.59.0</version>
-        <file>automation-beta-0.59.0.zap</file>
+        <version>0.60.0</version>
+        <file>automation-beta-0.60.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to load a plan from the contents of the clipboard.&lt;/li&gt;
-&lt;li&gt;Access to the progress of long running jobs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Move the Automation panel to the workspace window.&lt;/li&gt;
-&lt;li&gt;Use the main output panel for plan output messages.&lt;/li&gt;
-&lt;li&gt;Add a status panel to inform users about the panel relocation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Correct error message.&lt;/li&gt;
+&lt;li&gt;Fix exception during forced shutdown in the Active Scan job.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.59.0/automation-beta-0.59.0.zap</url>
-        <hash>SHA-256:6cb28f527d1edfc5fcf7982c2632a91573d3b72fccb42a86ae200dd2b9bf3387</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.60.0/automation-beta-0.60.0.zap</url>
+        <hash>SHA-256:e02c90abea15cb5802be1aa1adb959e5f76c4c517494087388732d71345e4ea9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-02</date>
-        <size>2164653</size>
+        <date>2026-05-08</date>
+        <size>2172308</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
