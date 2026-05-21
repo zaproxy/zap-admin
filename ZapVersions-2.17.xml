@@ -1956,17 +1956,27 @@ but if you encounter problems, please refer to the following.
         <name>MCP Integration</name>
         <description>An add-on that integrates MCP in ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.0.1</version>
-        <file>mcp-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>mcp-alpha-0.1.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;ul&gt;
-&lt;li&gt;First version with initial resources, tools, and prompts.&lt;/li&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MCP Import.&lt;/li&gt;
+&lt;li&gt;Automation framework support.&lt;/li&gt;
+&lt;li&gt;Support for SSE responses.&lt;/li&gt;
+&lt;li&gt;Automatically import MCP definitions discovered by the traditional spider.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;li&gt;Default MCP server to disabled.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.0.1/mcp-alpha-0.0.1.zap</url>
-        <hash>SHA-256:a187d056ed61c6618f70cbfc6a0de1d1b1b7990c74d0f18421aa6de338310201</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.1.0/mcp-alpha-0.1.0.zap</url>
+        <hash>SHA-256:a04e356cc7cf2f1f26b51d157954427c217720259913f9c1d06f42a450cfcb56</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-02</date>
-        <size>105255</size>
+        <date>2026-05-21</date>
+        <size>622309</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2026,20 +2036,19 @@ but if you encounter problems, please refer to the following.
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.27.0</version>
-        <file>network-beta-0.27.0.zap</file>
+        <version>0.28.0</version>
+        <file>network-beta-0.28.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update dependencies.&lt;/li&gt;
-&lt;li&gt;Include the Authority Key Identifier in generated server certificates per RFC 5280 (Issue 9301).&lt;/li&gt;
+&lt;li&gt;Update dependencies (Issue 9337).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.27.0/network-beta-0.27.0.zap</url>
-        <hash>SHA-256:1ee957c473eca42865417115a126927790dbc972771cc86354d0f7f0cc7edbb9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.28.0/network-beta-0.28.0.zap</url>
+        <hash>SHA-256:bce232c3f369237638bc545f0ac38203c71e2313cffd683bac0012490901f8c4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>28542615</size>
+        <date>2026-05-21</date>
+        <size>28793774</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -2868,19 +2877,20 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.47.0</version>
-        <file>selenium-release-15.47.0.zap</file>
+        <version>15.48.0</version>
+        <file>selenium-release-15.48.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.43.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.44.0.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.47.0/selenium-release-15.47.0.zap</url>
-        <hash>SHA-256:da994c0e0414050b46cac6906cd3e13b74941bf0659f22c3bf7096e62f6f276e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.48.0/selenium-release-15.48.0.zap</url>
+        <hash>SHA-256:f9ecd4cfbd2fc822c330db149aa707f43e44b2e8733674a28593458ecf5943cf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>35187161</size>
+        <date>2026-05-21</date>
+        <size>35343520</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3001,19 +3011,23 @@ but if you encounter problems, please refer to the following.
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.30.0</version>
-        <file>spiderAjax-release-23.30.0.zap</file>
+        <version>23.31.0</version>
+        <file>spiderAjax-release-23.31.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Crawljax to version 3.8.0 (Issues 3412 and 7138).&lt;/li&gt;
+&lt;li&gt;Missing parameters from the spiderAjax help page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.30.0/spiderAjax-release-23.30.0.zap</url>
-        <hash>SHA-256:c165905a2532e0ff728b10c33cf3853dabe779c9147080a1ec3a1e0bb048d822</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.31.0/spiderAjax-release-23.31.0.zap</url>
+        <hash>SHA-256:7170995637de5ddb8cd7a9d85baf6dc156d470055fd359f601b52cbf4ae3578d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-02</date>
-        <size>7790569</size>
+        <date>2026-05-21</date>
+        <size>7790073</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
