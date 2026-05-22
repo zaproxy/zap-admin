@@ -529,23 +529,25 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.24.0</version>
-        <file>client-alpha-0.24.0.zap</file>
+        <version>0.25.0</version>
+        <file>client-alpha-0.25.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client spider option &amp;quot;Action Wait Time&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox extensions to v0.1.9.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client map export to report the number of items exported.&lt;/li&gt;
+&lt;li&gt;Prevent interferences between the spiders and manual actions.&lt;/li&gt;
+&lt;li&gt;Prevent loops when acting on elements due appended input data.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.24.0/client-alpha-0.24.0.zap</url>
-        <hash>SHA-256:779510906f67fc62e5cd535e13663f3d374ef3270818c8333264fc81c13826a9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.25.0/client-alpha-0.25.0.zap</url>
+        <hash>SHA-256:fbfcb058590cfb1dfaebc4b014baa4881d7dfff067e6822e49d7b5af01d9a6a4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-07</date>
-        <size>2867322</size>
+        <date>2026-05-22</date>
+        <size>2905876</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
