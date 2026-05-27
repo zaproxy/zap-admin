@@ -529,25 +529,19 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.25.0</version>
-        <file>client-alpha-0.25.0.zap</file>
+        <version>0.26.0</version>
+        <file>client-alpha-0.26.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated Chrome and Firefox extensions to v0.1.9.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Prevent interferences between the spiders and manual actions.&lt;/li&gt;
-&lt;li&gt;Prevent loops when acting on elements due appended input data.&lt;/li&gt;
+&lt;li&gt;More programmatic control of the spider.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.25.0/client-alpha-0.25.0.zap</url>
-        <hash>SHA-256:fbfcb058590cfb1dfaebc4b014baa4881d7dfff067e6822e49d7b5af01d9a6a4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.26.0/client-alpha-0.26.0.zap</url>
+        <hash>SHA-256:580b32e5f221dab833a17ca390b0be15605c27238d0a3ee84a159d05f09dbb6b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-22</date>
-        <size>2905876</size>
+        <date>2026-05-27</date>
+        <size>2909057</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -569,7 +563,7 @@
                 </addon>
                 <addon>
                     <id>selenium</id>
-                    <version>&gt;=15.14.0</version>
+                    <version>&gt;=15.49.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2879,20 +2873,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.48.0</version>
-        <file>selenium-release-15.48.0.zap</file>
+        <version>15.49.0</version>
+        <file>selenium-release-15.49.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.44.0.&lt;/li&gt;
-&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;li&gt;Programmatic options to force extensions to be included or excluded.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.48.0/selenium-release-15.48.0.zap</url>
-        <hash>SHA-256:f9ecd4cfbd2fc822c330db149aa707f43e44b2e8733674a28593458ecf5943cf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.49.0/selenium-release-15.49.0.zap</url>
+        <hash>SHA-256:ea260b4d5cf7cb91433d7f81bd28e727d7fa6d430475a4065e47e1d56ce08699</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-21</date>
-        <size>35343520</size>
+        <date>2026-05-27</date>
+        <size>35344850</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
