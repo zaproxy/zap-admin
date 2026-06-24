@@ -3236,23 +3236,24 @@ but if you encounter problems, please refer to the following.
     <addon>viewstate</addon>
     <addon_viewstate>
         <name>ViewState</name>
-        <description>ASP/JSF ViewState Decoder and Editor</description>
+        <description>ASP ViewState Decoder and Editor</description>
         <author>Calum Hutton</author>
-        <version>3</version>
-        <file>viewstate-alpha-3.zap</file>
+        <version>4</version>
+        <file>viewstate-alpha-4.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.11.0.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Disable support for JSF.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/viewstate-v3/viewstate-alpha-3.zap</url>
-        <hash>SHA-256:715caefd591415e79b32195361fea82aa8c6357b24e69530c22fde0a1b6dad17</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/viewstate-v4/viewstate-alpha-4.zap</url>
+        <hash>SHA-256:7024ba573ddcfd5f9a4f6018e05922064b1e89838cd6f453ac8ae5e38a191e5e</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/viewstate/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2021-10-07</date>
-        <size>148716</size>
-        <not-before-version>2.11.0</not-before-version>
+        <date>2026-06-24</date>
+        <size>151275</size>
+        <not-before-version>2.17.0</not-before-version>
     </addon_viewstate>
     <addon>wappalyzer</addon>
     <addon_wappalyzer>
