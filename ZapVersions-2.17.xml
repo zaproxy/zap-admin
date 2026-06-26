@@ -41,25 +41,23 @@
         <name>Access Control Testing</name>
         <description>Adds a set of tools for testing access control in web applications.</description>
         <author>ZAP Dev Team</author>
-        <version>12</version>
-        <file>accessControl-alpha-12.zap</file>
+        <version>13</version>
+        <file>accessControl-alpha-13.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;The alerts now have new tags for the OWASP Top 10 2025.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prevent GUI freeze on result selection.&lt;/li&gt;
+&lt;li&gt;Discrepancy between Sites tree node name &amp;amp; Access Control recomputed node name made check silently fail and fallback to parent rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v12/accessControl-alpha-12.zap</url>
-        <hash>SHA-256:fe2c3a432f8d11f1d8f042fc36bc816098a879bc27a99d03df8dc680690a5e19</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/accessControl-v13/accessControl-alpha-13.zap</url>
+        <hash>SHA-256:4c3cad240fc797f8e5a013236fd98e1256a03938fc31eb621e0bedf367760f07</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/access-control-testing/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>627215</size>
+        <date>2026-06-26</date>
+        <size>625916</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -130,28 +128,19 @@
         <name>Active scanner rules</name>
         <description>The release status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>82</version>
-        <file>ascanrules-release-82.zap</file>
+        <version>83</version>
+        <file>ascanrules-release-83.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The following scan rules now include example alert functionality for documentation generation purposes (Issue 6119):
-&lt;ul&gt;
-&lt;li&gt;SQL Injection - Hypersonic SQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - MsSQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - MySQL (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - Oracle (Time Based)&lt;/li&gt;
-&lt;li&gt;SQL Injection - PostgreSQL (Time Based)&lt;/li&gt;
-&lt;li&gt;Cross Site Scripting (Persistent) (Also now includes alert references (Issue 7100))&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Updated a reference link for the XSLT Injection scan rule.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v82/ascanrules-release-82.zap</url>
-        <hash>SHA-256:170f98c204347dc473f1c4118e8240b36281966396c36377d7a0768e83948761</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrules-v83/ascanrules-release-83.zap</url>
+        <hash>SHA-256:9c1b64c2fceda629f7c0ab0c21b5901035494f78da51d584972eaf85e94e91cc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>5080263</size>
+        <date>2026-06-26</date>
+        <size>5080128</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -509,19 +498,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.21.0</version>
-        <file>callhome-release-0.21.0.zap</file>
+        <version>0.22.0</version>
+        <file>callhome-release-0.22.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Removed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;MCP stats to telemetry.&lt;/li&gt;
+&lt;li&gt;Stop collecting &amp;quot;stats.auth.detect.session.*&amp;quot;.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.21.0/callhome-release-0.21.0.zap</url>
-        <hash>SHA-256:656b610e7a5e2688710dabdd0da859d92802eb0922b45c2cc3d1a0ab3ec916f1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.22.0/callhome-release-0.22.0.zap</url>
+        <hash>SHA-256:85738072438f76b51cd9f45222eb74fb8613adb54e9ca22b5e3b9633b48ee735</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-02</date>
-        <size>326720</size>
+        <date>2026-06-26</date>
+        <size>326777</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_callhome>
     <addon>client</addon>
@@ -529,30 +518,30 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.27.0</version>
-        <file>client-alpha-0.27.0.zap</file>
+        <version>0.28.0</version>
+        <file>client-alpha-0.28.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client Spider Options panel.&lt;/li&gt;
-&lt;li&gt;Support for ZAP modes in the Client Spider.&lt;/li&gt;
-&lt;li&gt;Show Client Spider icon in the Sites tree.&lt;/li&gt;
-&lt;li&gt;More option API endpoints.&lt;/li&gt;
+&lt;li&gt;Client Spider existingOnly option, e.g. for scan rules.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Change the Client Spider to crawl through page components (e.g. links) to reduce full page reloads, improving support for SPAs.&lt;/li&gt;
+&lt;li&gt;Reduce duplicated accesses while crawling.&lt;/li&gt;
+&lt;li&gt;Use adaptive wait by default for page load and action waits while crawling.&lt;/li&gt;
+&lt;li&gt;Default threads to 1/2 number of cores, max 8.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox extensions to v0.2.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Change the Client Spider to track all redirects while crawling.&lt;/li&gt;
+&lt;li&gt;Prevent temporary GUI hang when stopping the Client Spider.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.27.0/client-alpha-0.27.0.zap</url>
-        <hash>SHA-256:387bcd30a01bad30ac7db74e838d681f892a1dd185197cb570856606d22128cf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.28.0/client-alpha-0.28.0.zap</url>
+        <hash>SHA-256:2f28651d6acbcf560239d2a1768fd0a1f4f499de504610315b8eb92d11eb202f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-12</date>
-        <size>5834948</size>
+        <date>2026-06-26</date>
+        <size>5909783</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2384,22 +2373,22 @@ but if you encounter problems, please refer to the following.
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>73</version>
-        <file>pscanrules-release-73.zap</file>
+        <version>74</version>
+        <file>pscanrules-release-74.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The scan rules now have new tags for the OWASP Top 10 2025.&lt;/li&gt;
-&lt;li&gt;The Charset Mismatch scan rule also now has tags for the Top 10 2021 and 2017.&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
-&lt;li&gt;Add alert references to Hash Disclosure scan rule alerts (Issue 9144).&lt;/li&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Updated a reference link for the Sub Resource Integrity Attribute Missing scan rule.&lt;/li&gt;
+&lt;li&gt;Remove reference link which is no longer available for the Script Served From Malicious Domain (polyfill) scan rule.&lt;/li&gt;
+&lt;li&gt;Remove OWASP Top 10 Security Misconfiguration tags from the Modern Web Application scan rule, it only informs about the likely type of the website.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v73/pscanrules-release-73.zap</url>
-        <hash>SHA-256:f20515978794f49558d83fde0b910270c86c4cfa7351914bda05e9eebbb83ef5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v74/pscanrules-release-74.zap</url>
+        <hash>SHA-256:26fe0efd8c12f6e79d0630ad04177331455443935a8f52d137583ba63c285b48</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>2409453</size>
+        <date>2026-06-26</date>
+        <size>2413639</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2511,19 +2500,19 @@ but if you encounter problems, please refer to the following.
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>56</version>
-        <file>quickstart-release-56.zap</file>
+        <version>57</version>
+        <file>quickstart-release-57.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add Scan Policy option to the Automated Scan panel.&lt;/li&gt;
+&lt;li&gt;Option to select modern spider.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v56/quickstart-release-56.zap</url>
-        <hash>SHA-256:b8b77e38e69792a28466f28f9e0d13baf784316ccfe495ce1f7ddb918bfba859</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v57/quickstart-release-57.zap</url>
+        <hash>SHA-256:c6c3bb9383d569050d4bfbb372bfe758058de9a0092c4534cbe7e6e5406f2ea9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>786009</size>
+        <date>2026-06-26</date>
+        <size>799993</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2542,6 +2531,10 @@ but if you encounter problems, please refer to the following.
                 <addon>
                     <id>reports</id>
                     <version>&gt;= 0.4.0</version>
+                </addon>
+                <addon>
+                    <id>selenium</id>
+                    <version>&gt;= 15.6.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2887,19 +2880,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.50.0</version>
-        <file>selenium-release-15.50.0.zap</file>
+        <version>15.51.0</version>
+        <file>selenium-release-15.51.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Only collect browser's &lt;code&gt;console.log&lt;/code&gt; when DEBUG level is set for &lt;code&gt;org.zaproxy.webdriver&lt;/code&gt;, to avoid unnecessary work for common browser usage.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.45.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.50.0/selenium-release-15.50.0.zap</url>
-        <hash>SHA-256:86e3d90b9327e2036d45924c7a20ae01594d37f4469e872bf0eb197f2b00aab3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.51.0/selenium-release-15.51.0.zap</url>
+        <hash>SHA-256:54c747a20c5feddc3c9c118486947ccca3bd4393f2e51332d5bb8fc17820dd9a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-12</date>
-        <size>35344941</size>
+        <date>2026-06-26</date>
+        <size>32868058</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
