@@ -518,30 +518,24 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.28.0</version>
-        <file>client-alpha-0.28.0.zap</file>
+        <version>0.29.0</version>
+        <file>client-alpha-0.29.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Client Spider existingOnly option, e.g. for scan rules.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Reduce duplicated accesses while crawling.&lt;/li&gt;
-&lt;li&gt;Use adaptive wait by default for page load and action waits while crawling.&lt;/li&gt;
-&lt;li&gt;Default threads to 1/2 number of cores, max 8.&lt;/li&gt;
-&lt;li&gt;Updated Chrome and Firefox extensions to v0.2.0.&lt;/li&gt;
+&lt;li&gt;Use new functionality from the browser extension for crawling.&lt;/li&gt;
+&lt;li&gt;Fill text areas while crawling.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prevent temporary GUI hang when stopping the Client Spider.&lt;/li&gt;
+&lt;li&gt;Spider should finish when existingOnly option used with an empty Client Map.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.28.0/client-alpha-0.28.0.zap</url>
-        <hash>SHA-256:2f28651d6acbcf560239d2a1768fd0a1f4f499de504610315b8eb92d11eb202f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.29.0/client-alpha-0.29.0.zap</url>
+        <hash>SHA-256:57ec0b72ddb030b1bfca8af1e7145f2c70efb5327caf97d54a7a7517507b4ce3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-26</date>
-        <size>5909783</size>
+        <date>2026-06-30</date>
+        <size>5919315</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
