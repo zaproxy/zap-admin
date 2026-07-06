@@ -24,6 +24,9 @@ var codeMap = {
 	40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java',
 	40041: 'https://github.com/SasanLabs/owasp-zap-fileupload-addon/blob/main/src/main/java/org/sasanlabs/fileupload/FileUploadScanRule.java',
 	}
+var addOnDirMap = {
+	"httpsinfo": "httpsInfo",
+	};
 
 var allAlertTags = {}
 var emptyTech = new TechSet;
@@ -145,6 +148,9 @@ function printAlerts(alerts, name, type, status, clazz, scripturl, tech, help) {
 	if (clazz.indexOf('.extension.') > 0) {
 		// Package hierarchy is actually org.zaproxy.zap.extension.<package>
 		pkg = pkgs[4];
+	}
+	if (addOnDirMap[pkg.toLowerCase()]) {
+		pkg = addOnDirMap[pkg.toLowerCase()];
 	}
 	var codeurl;
 	try {
