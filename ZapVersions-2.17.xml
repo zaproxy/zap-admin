@@ -518,24 +518,26 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.29.0</version>
-        <file>client-alpha-0.29.0.zap</file>
+        <version>0.30.0</version>
+        <file>client-alpha-0.30.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use new functionality from the browser extension for crawling.&lt;/li&gt;
-&lt;li&gt;Fill text areas while crawling.&lt;/li&gt;
+&lt;li&gt;Wait always after component navigation while crawling.&lt;/li&gt;
+&lt;li&gt;Follow any navigation component while crawling.&lt;/li&gt;
+&lt;li&gt;Crawl component state changes.&lt;/li&gt;
+&lt;li&gt;Help to show that the Client Spider is now the recommended option for modern apps.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Spider should finish when existingOnly option used with an empty Client Map.&lt;/li&gt;
+&lt;li&gt;Normalise behaviour of Delete context menu item.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.29.0/client-alpha-0.29.0.zap</url>
-        <hash>SHA-256:57ec0b72ddb030b1bfca8af1e7145f2c70efb5327caf97d54a7a7517507b4ce3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.30.0/client-alpha-0.30.0.zap</url>
+        <hash>SHA-256:68a0602b64f736116cdffddbbb670ea10f74f434f68662e9451cba8ea52557ff</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-30</date>
-        <size>5919315</size>
+        <date>2026-07-06</date>
+        <size>5923546</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -967,19 +969,19 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.20.0</version>
-        <file>exim-beta-0.20.0.zap</file>
+        <version>0.21.0</version>
+        <file>exim-beta-0.21.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Source exporters to report the number of items exported.&lt;/li&gt;
+&lt;li&gt;Allow to import HAR data directly through the API.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.20.0/exim-beta-0.20.0.zap</url>
-        <hash>SHA-256:05f8235fc8e335062306de22dc933d952d4014dfd5c5f4459c31ebd9dcd1a796</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.21.0/exim-beta-0.21.0.zap</url>
+        <hash>SHA-256:e98e64f1a2259c3e018d59c1bcdce8ea96bbb3433463b0182bcad3947eea7beb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-07</date>
-        <size>1156501</size>
+        <date>2026-07-06</date>
+        <size>1159059</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2106,22 +2108,24 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>56</version>
-        <file>openapi-beta-56.zap</file>
+        <version>57</version>
+        <file>openapi-beta-57.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;li&gt;Dependency update.&lt;/li&gt;
-&lt;li&gt;Exceptions caught by the Automation Framework job now include the exception message.&lt;/li&gt;
-&lt;li&gt;Improved Swagger Secret Detector Script with false positive scenarios and ensuring correct Swagger version flagging.&lt;/li&gt;
-&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bug where values were used for objects, instead of just for primitives.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v56/openapi-beta-56.zap</url>
-        <hash>SHA-256:12bdc14392a270ff003b9875701232802fa788ef78b5eceacf1462e498d140ff</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v57/openapi-beta-57.zap</url>
+        <hash>SHA-256:fe87dd63cb310131c4e7d8c14b675c97f4b7707eda8ccc5fd6042628b6f19ccf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>11967423</size>
+        <date>2026-07-06</date>
+        <size>12014679</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2367,22 +2371,20 @@ but if you encounter problems, please refer to the following.
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>74</version>
-        <file>pscanrules-release-74.zap</file>
+        <version>75</version>
+        <file>pscanrules-release-75.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Updated a reference link for the Sub Resource Integrity Attribute Missing scan rule.&lt;/li&gt;
-&lt;li&gt;Remove reference link which is no longer available for the Script Served From Malicious Domain (polyfill) scan rule.&lt;/li&gt;
-&lt;li&gt;Remove OWASP Top 10 Security Misconfiguration tags from the Modern Web Application scan rule, it only informs about the likely type of the website.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Modern scan rule to refer to the Client Spider.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v74/pscanrules-release-74.zap</url>
-        <hash>SHA-256:26fe0efd8c12f6e79d0630ad04177331455443935a8f52d137583ba63c285b48</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v75/pscanrules-release-75.zap</url>
+        <hash>SHA-256:97814c5f1319a31b5041f1bbd1edfc312b3a539c7cd56f7903e9996858361fcb</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-26</date>
-        <size>2413639</size>
+        <date>2026-07-06</date>
+        <size>2412423</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2497,19 +2499,20 @@ but if you encounter problems, please refer to the following.
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>57</version>
-        <file>quickstart-release-57.zap</file>
+        <version>58</version>
+        <file>quickstart-release-58.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Option to select modern spider.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Default to Client Spider for modern apps.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v57/quickstart-release-57.zap</url>
-        <hash>SHA-256:c6c3bb9383d569050d4bfbb372bfe758058de9a0092c4534cbe7e6e5406f2ea9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v58/quickstart-release-58.zap</url>
+        <hash>SHA-256:9957563929e243442811940bec35b0986d879ff51b9d85478f7e45cea1fb9ba0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-26</date>
-        <size>799993</size>
+        <date>2026-07-06</date>
+        <size>809205</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2613,24 +2616,28 @@ but if you encounter problems, please refer to the following.
         <name>Report Generation</name>
         <description>Official ZAP Reports.</description>
         <author>ZAP Dev Team</author>
-        <version>0.45.0</version>
-        <file>reports-release-0.45.0.zap</file>
+        <version>0.46.0</version>
+        <file>reports-release-0.46.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The alert's systemic flag in JSON and XML reports now correctly reflects its state (Issue 9254).&lt;/li&gt;
+&lt;li&gt;Added script diagnostics section to Traditional Reports.&lt;/li&gt;
+&lt;li&gt;Templates that include Insights now also identify the Insight that stopped the scan, if applicable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Invalid alerts, ones without a corresponding message, are now excluded from generated reports. Previously these could break templates that reference message fields (e.g. SARIF, modern, &lt;code&gt;*-plus&lt;/code&gt;) (Issue 6880).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;li&gt;Help content related to the params add-on was updated (Issue 9210).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.45.0/reports-release-0.45.0.zap</url>
-        <hash>SHA-256:04d3a774a3a719ada6e338d9d2faba9ea1162900957ff0ddc01e7c855a2bc7b5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/reports-v0.46.0/reports-release-0.46.0.zap</url>
+        <hash>SHA-256:2e8d42a48e23aefa8a6174b52aa0a8a6b90aca2da0a8bf94ac61f4aaa070bc2c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/report-generation/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>16802413</size>
+        <date>2026-07-06</date>
+        <size>16813020</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2836,34 +2843,38 @@ but if you encounter problems, please refer to the following.
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.18.0</version>
-        <file>scripts-release-45.18.0.zap</file>
+        <version>45.19.0</version>
+        <file>scripts-release-45.19.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Functionality to store script diagnostics and provides them to Reports. Depends on the database add-on.&lt;/li&gt;
+&lt;li&gt;The Script Job Run action now supports a &lt;code&gt;failureLevel&lt;/code&gt; parameter (&lt;code&gt;info&lt;/code&gt;, &lt;code&gt;warning&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;) to control the Automation Framework progress level used when a script or chain execution fails (defaults to &lt;code&gt;error&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Added&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The Script Job Run action now supports:
-&lt;ul&gt;
-&lt;li&gt;Passing authentication details (context and user) for standalone Zest client script execution.&lt;/li&gt;
-&lt;li&gt;Executing a chain of one or more Zest standalone scripts using the chain parameter.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Revised error handling for chained scripts, output is now more detailed/specific.&lt;/li&gt;
+&lt;li&gt;The Run Script action display for chains in the Automation panel has been updated to display the names of scripts in the chain instead of being blank.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.18.0/scripts-release-45.18.0.zap</url>
-        <hash>SHA-256:b04619536227590182cf6e290d9a2368ea91a3f48ccccf3c10d3ace64802419d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.19.0/scripts-release-45.19.0.zap</url>
+        <hash>SHA-256:924868cf71f4e2938d0255ec8e0b39b24d1e46fe9c11d0240d5c666332f51dce</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-31</date>
-        <size>5657130</size>
+        <date>2026-07-06</date>
+        <size>5805972</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
                     <version>&gt;=1.37.0</version>
+                </addon>
+                <addon>
+                    <id>database</id>
+                    <version>&gt;=0.8.0 &amp; &lt; 1.0.0</version>
                 </addon>
                 <addon>
                     <id>pscan</id>
@@ -3011,23 +3022,19 @@ but if you encounter problems, please refer to the following.
         <name>Ajax Spider</name>
         <description>Allows you to spider sites that make heavy use of JavaScript using Crawljax</description>
         <author>ZAP Dev Team</author>
-        <version>23.31.0</version>
-        <file>spiderAjax-release-23.31.0.zap</file>
+        <version>23.32.0</version>
+        <file>spiderAjax-release-23.32.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Missing parameters from the spiderAjax help page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Help to show that the Client Spider is now the recommended option for modern apps.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.31.0/spiderAjax-release-23.31.0.zap</url>
-        <hash>SHA-256:7170995637de5ddb8cd7a9d85baf6dc156d470055fd359f601b52cbf4ae3578d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/spiderAjax-v23.32.0/spiderAjax-release-23.32.0.zap</url>
+        <hash>SHA-256:9850bb21d7d1ecf8593740069d1eae75b02fb7eefa19af54244c277677031500</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/ajax-spider/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-21</date>
-        <size>7790073</size>
+        <date>2026-07-06</date>
+        <size>7792464</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3224,20 +3231,20 @@ but if you encounter problems, please refer to the following.
         <name>Technology Detection</name>
         <description>Technology detection using various fingerprints and identifiers.</description>
         <author>ZAP Dev Team</author>
-        <version>21.55.0</version>
-        <file>wappalyzer-release-21.55.0.zap</file>
+        <version>21.56.0</version>
+        <file>wappalyzer-release-21.56.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with enthec upstream icon and pattern changes.&lt;/li&gt;
 &lt;li&gt;Dependency update.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.55.0/wappalyzer-release-21.55.0.zap</url>
-        <hash>SHA-256:2fd2edd92359218e5e7aff6c5e51567ed7c7b13d2caa68ec96b07b8c704481fc</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/wappalyzer-v21.56.0/wappalyzer-release-21.56.0.zap</url>
+        <hash>SHA-256:79e83ae593b23e872171c536946be7a5089a07ae85eab73fe2088d5ceaf8dbd4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/technology-detection/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>31242376</size>
+        <date>2026-07-06</date>
+        <size>31758633</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3346,20 +3353,37 @@ but if you encounter problems, please refer to the following.
         <name>Zest - Graphical Security Scripting Language</name>
         <description>A graphical security scripting language, ZAPs macro language on steroids</description>
         <author>ZAP Dev Team</author>
-        <version>48.13.0</version>
-        <file>zest-beta-48.13.0.zap</file>
+        <version>48.14.0</version>
+        <file>zest-beta-48.14.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Internal support for creating a single runnable chain script from multiple Zest scripts.&lt;/li&gt;
-&lt;li&gt;Support for import and export.&lt;/li&gt;
+&lt;li&gt;Browser screenshots are now automatically captured on Zest client step failures, and script print output is included in the diagnostics report. For chain runs, each output is clearly attributed to the specific script that produced it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum &lt;code&gt;scripts&lt;/code&gt; add-on version to 45.19.0.&lt;/li&gt;
+&lt;li&gt;Chained scripts now have provenance information preserved for troubleshooting purposes.&lt;/li&gt;
+&lt;li&gt;Update Zest library to 0.36.0:
+&lt;ul&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;li&gt;Restore JSON deserialization behaviour.&lt;/li&gt;
+&lt;li&gt;Handle text (and similar) input elements which only become visible when interacted with.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix exception when adding/editing Zest non-standalone type scripts through the GUI.&lt;/li&gt;
+&lt;li&gt;Prevent exception with scripts when their engine isn't installed or present, which may be encountered when the zest add-on is uninstalled/updated.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.13.0/zest-beta-48.13.0.zap</url>
-        <hash>SHA-256:54ea8b26a42a2eca5b526e63c81270243e6ac3db0235dcea9cac1bd1c00257ec</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/zest-v48.14.0/zest-beta-48.14.0.zap</url>
+        <hash>SHA-256:27a8833d3d692c8e18337d2133e983956fe25ba920be0639d3067069cea50051</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/zest/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-03-31</date>
-        <size>3420636</size>
+        <date>2026-07-06</date>
+        <size>3486811</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3377,7 +3401,7 @@ but if you encounter problems, please refer to the following.
                 </addon>
                 <addon>
                     <id>scripts</id>
-                    <version>&gt;=45.2.0</version>
+                    <version>&gt;=45.19.0</version>
                 </addon>
                 <addon>
                     <id>selenium</id>
