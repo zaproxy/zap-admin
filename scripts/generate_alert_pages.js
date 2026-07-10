@@ -21,6 +21,7 @@ var TechSet = Java.type('org.zaproxy.zap.model.TechSet');
 var TreeSet = Java.type('java.util.TreeSet');
 var ignoreList = [50000, 50001, 50003, 60000, 60001, 60100, 60101];
 var codeMap = {
+	10205: 'https://github.com/zaproxy/zap-extensions/blob/main/addOns/httpsInfo/src/main/java/org/zaproxy/zap/extension/httpsinfo/HttpsConfigScanRule.java',
 	40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java',
 	40041: 'https://github.com/SasanLabs/owasp-zap-fileupload-addon/blob/main/src/main/java/org/sasanlabs/fileupload/FileUploadScanRule.java',
 	}
