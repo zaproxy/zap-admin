@@ -164,20 +164,19 @@
         <name>Active scanner rules (alpha)</name>
         <description>The alpha status Active Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>57</version>
-        <file>ascanrulesAlpha-alpha-57.zap</file>
+        <version>58</version>
+        <file>ascanrulesAlpha-alpha-58.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The LDAP Injection scan rule now includes example alert functionality for documentation generation purposes (Issue 6119) and alert references (Issue 7100).&lt;/li&gt;
-&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v57/ascanrulesAlpha-alpha-57.zap</url>
-        <hash>SHA-256:8c6180689ef4edd50a169efca55a1c1bf4a66224fbcc71bd2bf6d61c21938489</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/ascanrulesAlpha-v58/ascanrulesAlpha-alpha-58.zap</url>
+        <hash>SHA-256:9cdc660e9ce7f1e5bc2ceb5b64955c0e5b05d61b9014029a3d93cc295ad23be1</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/active-scan-rules-alpha/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-06</date>
-        <size>400319</size>
+        <date>2026-07-13</date>
+        <size>400230</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -421,25 +420,29 @@
         <name>Forced Browse</name>
         <description>Forced browsing of files and directories using code from the OWASP DirBuster tool</description>
         <author>ZAP Dev Team</author>
-        <version>20</version>
-        <file>bruteforce-beta-20.zap</file>
+        <version>21</version>
+        <file>bruteforce-beta-21.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bug: tested the wrong condition when detecting &amp;quot;file not found&amp;quot; responses.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v20/bruteforce-beta-20.zap</url>
-        <hash>SHA-256:c18de61b2d4082aca0e8dc4d916398ddb556179cf2e14caf065fe837713f985c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/bruteforce-v21/bruteforce-beta-21.zap</url>
+        <hash>SHA-256:54dfb10a64d35fbb829968f7fe53bff1cf8a30753d3e22b3172e478304facb86</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/forced-browse/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>554460</size>
+        <date>2026-07-13</date>
+        <size>555053</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.23.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.43.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -498,19 +501,19 @@
         <name>Call Home</name>
         <description>Handles all of the calls to ZAP services.</description>
         <author>ZAP Dev Team</author>
-        <version>0.22.0</version>
-        <file>callhome-release-0.22.0.zap</file>
+        <version>0.23.0</version>
+        <file>callhome-release-0.23.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Removed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Stop collecting &amp;quot;stats.auth.detect.session.*&amp;quot;.&lt;/li&gt;
+&lt;li&gt;SSE stats to telemetry.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.22.0/callhome-release-0.22.0.zap</url>
-        <hash>SHA-256:85738072438f76b51cd9f45222eb74fb8613adb54e9ca22b5e3b9633b48ee735</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/callhome-v0.23.0/callhome-release-0.23.0.zap</url>
+        <hash>SHA-256:eadebd4ae60c1865f6811a276a643ebe954328e2e903447bf460d8b3ef691d7f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/call-home/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-26</date>
-        <size>326777</size>
+        <date>2026-07-13</date>
+        <size>326771</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_callhome>
     <addon>client</addon>
@@ -2499,20 +2502,23 @@ but if you encounter problems, please refer to the following.
         <name>Quick Start</name>
         <description>Provides a tab which allows you to quickly test a target application</description>
         <author>ZAP Dev Team</author>
-        <version>58</version>
-        <file>quickstart-release-58.zap</file>
+        <version>59</version>
+        <file>quickstart-release-59.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Default to Client Spider for modern apps.&lt;/li&gt;
+&lt;li&gt;Allow to choose and open the browser directly from the tool bar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v58/quickstart-release-58.zap</url>
-        <hash>SHA-256:9957563929e243442811940bec35b0986d879ff51b9d85478f7e45cea1fb9ba0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/quickstart-v59/quickstart-release-59.zap</url>
+        <hash>SHA-256:2388858c47aa504b5b4f397405ab46a51d69e3df5e9e3ae0ae2a2b4bb23e690b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/quick-start/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-06</date>
-        <size>809205</size>
+        <date>2026-07-13</date>
+        <size>805897</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2843,28 +2849,23 @@ but if you encounter problems, please refer to the following.
         <name>Script Console</name>
         <description>Supports all JSR 223 scripting languages</description>
         <author>ZAP Dev Team</author>
-        <version>45.19.0</version>
-        <file>scripts-release-45.19.0.zap</file>
+        <version>45.20.0</version>
+        <file>scripts-release-45.20.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Functionality to store script diagnostics and provides them to Reports. Depends on the database add-on.&lt;/li&gt;
-&lt;li&gt;The Script Job Run action now supports a &lt;code&gt;failureLevel&lt;/code&gt; parameter (&lt;code&gt;info&lt;/code&gt;, &lt;code&gt;warning&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;) to control the Automation Framework progress level used when a script or chain execution fails (defaults to &lt;code&gt;error&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;GUI support for Zest script chains and failure level in the Automation Framework Script job dialog (via the Use Script Chain checkbox, and Chains tab).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Revised error handling for chained scripts, output is now more detailed/specific.&lt;/li&gt;
-&lt;li&gt;The Run Script action display for chains in the Automation panel has been updated to display the names of scripts in the chain instead of being blank.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.19.0/scripts-release-45.19.0.zap</url>
-        <hash>SHA-256:924868cf71f4e2938d0255ec8e0b39b24d1e46fe9c11d0240d5c666332f51dce</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/scripts-v45.20.0/scripts-release-45.20.0.zap</url>
+        <hash>SHA-256:7f80df5e1bd692af6827c7d9b950ccda5ef9fd67e641969100d11011f057fe6d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/script-console/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-06</date>
-        <size>5805972</size>
+        <date>2026-07-13</date>
+        <size>5830265</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2888,19 +2889,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.51.0</version>
-        <file>selenium-release-15.51.0.zap</file>
+        <version>15.52.0</version>
+        <file>selenium-release-15.52.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.45.0.&lt;/li&gt;
+&lt;li&gt;Provide icons for the browsers.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.51.0/selenium-release-15.51.0.zap</url>
-        <hash>SHA-256:54c747a20c5feddc3c9c118486947ccca3bd4393f2e51332d5bb8fc17820dd9a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.52.0/selenium-release-15.52.0.zap</url>
+        <hash>SHA-256:08365af8a52dc996f16e30febe89a24aead043ad0cd9ea2b9d8493fb444ce670</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-26</date>
-        <size>32868058</size>
+        <date>2026-07-13</date>
+        <size>32875640</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3116,25 +3117,28 @@ but if you encounter problems, please refer to the following.
         <name>Server-Sent Events</name>
         <description>Allows you to view Server-Sent Events (SSE) communication.</description>
         <author>ZAP Dev Team</author>
-        <version>13</version>
-        <file>sse-alpha-13.zap</file>
+        <version>14</version>
+        <file>sse-alpha-14.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.15.0.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Stats for event and event streams.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;More gracefully handle missing value for &amp;quot;id&amp;quot; field (Issue 8320)&lt;/li&gt;
+&lt;li&gt;No longer fire a spurious empty event for a leading blank line (e.g. keep-alive) in an event stream.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v13/sse-alpha-13.zap</url>
-        <hash>SHA-256:38cf84e00664287e691606f473343ba0c0db0711c4f895312d0d482c3354731b</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v14/sse-alpha-14.zap</url>
+        <hash>SHA-256:7de39df7fc85810b977dd2800f58400fa474dd03c693ed62da5058bbfefc3a3f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/server-sent-events/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2024-05-21</date>
-        <size>330079</size>
-        <not-before-version>2.15.0</not-before-version>
+        <date>2026-07-13</date>
+        <size>331883</size>
+        <not-before-version>2.17.0</not-before-version>
     </addon_sse>
     <addon>svndigger</addon>
     <addon_svndigger>
