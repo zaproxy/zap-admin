@@ -572,33 +572,25 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.42.0</version>
-        <file>commonlib-release-1.42.0.zap</file>
+        <version>1.43.0</version>
+        <file>commonlib-release-1.43.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add Sites tree context menus:
-&lt;ul&gt;
-&lt;li&gt;A &amp;quot;Get Info&amp;quot; that summarizes the selected node's subtree (total node count, most-recent addition, breakdown by source type) (Issue 3738).&lt;/li&gt;
-&lt;li&gt;An expand/collapse a node and all its children (previously provided by the TreeTools add-on).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;UriUtils class for standardising URI checking.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependencies.&lt;/li&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Prevent performance issues in the output tabs when showing lengthier messages.&lt;/li&gt;
+&lt;li&gt;Updated Bank Identification Number data from a new source (https://github.com/venelinkochev/bin-list-data/).&lt;/li&gt;
+&lt;li&gt;Added help page documenting the BIN list data and how it is used by scan rules.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.42.0/commonlib-release-1.42.0.zap</url>
-        <hash>SHA-256:cb5d64260eeaa8a68dc06c7eeab1208a95be1f7376fd8f6eeada4411fd2decc0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.43.0/commonlib-release-1.43.0.zap</url>
+        <hash>SHA-256:f1c46d6c65434a2a54307065b558a87121eaa5b9b6bc6cfb10bf230b6335d1f5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-12</date>
-        <size>11128388</size>
+        <date>2026-07-14</date>
+        <size>11694160</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -2889,19 +2881,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.52.0</version>
-        <file>selenium-release-15.52.0.zap</file>
+        <version>15.53.0</version>
+        <file>selenium-release-15.53.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Provide icons for the browsers.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.46.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.52.0/selenium-release-15.52.0.zap</url>
-        <hash>SHA-256:08365af8a52dc996f16e30febe89a24aead043ad0cd9ea2b9d8493fb444ce670</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.53.0/selenium-release-15.53.0.zap</url>
+        <hash>SHA-256:5a3ecc2741e1697590c31e67b36cd81aa9a7cd0e0c47e2cc34fb0cce255f4823</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-13</date>
-        <size>32875640</size>
+        <date>2026-07-14</date>
+        <size>32749665</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
