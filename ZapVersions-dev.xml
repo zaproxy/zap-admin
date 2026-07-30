@@ -2460,28 +2460,34 @@ but if you encounter problems, please refer to the following.
         <name>OWASP PTK</name>
         <description>Adds the OWASP PTK extension to browsers launched from ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.7.0</version>
-        <file>ptk-beta-0.7.0.zap</file>
+        <version>0.8.0</version>
+        <file>ptk-beta-0.8.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use client spider option to not crawl new content.&lt;/li&gt;
-&lt;li&gt;Enable the active scan rule by default.&lt;/li&gt;
-&lt;li&gt;Promote to beta.&lt;/li&gt;
-&lt;li&gt;Added recommended rules option.&lt;/li&gt;
+&lt;li&gt;Bug which breaks sites using Akamai Bot Manager&lt;/li&gt;
+&lt;li&gt;Ensure Top 10 alert tags have expected URLs.&lt;/li&gt;
+&lt;li&gt;Avoid false Selenium configuration warnings on a clean ZAP profile for Chromium headless browsers and the Firefox headless XPI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Depends on the Common Library add-on.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.7.0/ptk-beta-0.7.0.zap</url>
-        <hash>SHA-256:4fc2877d67ac91756aace73f6325fa55a7bd24b55deef92e4121872f265ff677</hash>
+        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.8.0/ptk-beta-0.8.0.zap</url>
+        <hash>SHA-256:19034299f6dc9d9fe280e6a30fed21e7a33fa3c71c56affae45b74bad30445fa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/owasp-ptk/</info>
         <repo>https://github.com/DenisPodgurskii/ZAP_PTK</repo>
-        <date>2026-06-29</date>
-        <size>19804441</size>
+        <date>2026-07-30</date>
+        <size>20106749</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>client</id>
                     <version>&gt;=0.28.0</version>
+                </addon>
+                <addon>
+                    <id>commonlib</id>
                 </addon>
                 <addon>
                     <id>selenium</id>
