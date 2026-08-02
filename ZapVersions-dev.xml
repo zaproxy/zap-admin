@@ -2723,19 +2723,20 @@ but if you encounter problems, please refer to the following.
         <name>Retire.js</name>
         <description>Use Retire.js to identify vulnerable or out-dated JavaScript packages.</description>
         <author>Nikita Mundhada and the ZAP Dev Team</author>
-        <version>0.62.0</version>
-        <file>retire-release-0.62.0.zap</file>
+        <version>0.63.0</version>
+        <file>retire-release-0.63.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated with upstream retire.js pattern changes.&lt;/li&gt;
+&lt;li&gt;Update reference to avoid redirects.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.62.0/retire-release-0.62.0.zap</url>
-        <hash>SHA-256:23307418b1db2fd910f483d4372032137825308ed3e2aefa171b078c0fda8bb9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/retire-v0.63.0/retire-release-0.63.0.zap</url>
+        <hash>SHA-256:179c71981cba03bc38dd11c1a004ea4d299cffb79fb9722dbe4ddb1ec64538c7</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/retire.js/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-16</date>
-        <size>1039075</size>
+        <date>2026-08-02</date>
+        <size>1044083</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
