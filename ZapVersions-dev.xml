@@ -73,20 +73,23 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>26</version>
-        <file>alertFilters-release-26.zap</file>
+        <version>27</version>
+        <file>alertFilters-release-27.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update the automation framework template and help to include missing fields (&lt;code&gt;ruleName&lt;/code&gt; and &lt;code&gt;methods&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Added an optional LLM extension for reviewing alerts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v26/alertFilters-release-26.zap</url>
-        <hash>SHA-256:d6c9113aac962c31955627cda2683afe447cf9d84c0f803c6029180897c16648</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v27/alertFilters-release-27.zap</url>
+        <hash>SHA-256:cc10e75e378df0f0bd88b2bd3ee005dd40e744444ed109381ad29c9f7d052c72</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>594584</size>
+        <date>2026-08-07</date>
+        <size>611514</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -257,23 +260,29 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.40.0</version>
-        <file>authhelper-beta-0.40.0.zap</file>
+        <version>0.41.0</version>
+        <file>authhelper-beta-0.41.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for handling the Microsoft login &amp;quot;Permissions requested&amp;quot; user consent screen.&lt;/li&gt;
+&lt;li&gt;Automation Framework &lt;code&gt;diagnostics&lt;/code&gt; job to start and stop plan-level recording of authentication related diagnostics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Include the Zest statement index in the authentication diagnostics' steps.&lt;/li&gt;
+&lt;li&gt;Include Origin header when doing authentication verification.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handling of Ionic input elements, which can appear to not be displayed until they are clicked on.&lt;/li&gt;
+&lt;li&gt;Handle exception while extracting session tokens.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.40.0/authhelper-beta-0.40.0.zap</url>
-        <hash>SHA-256:8618464c4959dcb90b81e1770304a2a3a0dc4ba31c8a72e518fa95ff0ecf9c01</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.41.0/authhelper-beta-0.41.0.zap</url>
+        <hash>SHA-256:a035ffc7dcf3f36147e267c77292b51920253bd30282c472bd078250b031acc4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-12</date>
-        <size>1560159</size>
+        <date>2026-08-07</date>
+        <size>1569387</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -1076,21 +1085,28 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Fuzzer</name>
         <description>Advanced fuzzer for manual testing</description>
         <author>ZAP Dev Team</author>
-        <version>13.16.0</version>
-        <file>fuzz-beta-13.16.0.zap</file>
+        <version>13.17.0</version>
+        <file>fuzz-beta-13.17.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Use a scrollbar in the Default Category combo box instead of making the options panel larger (Issue 8923).&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;li&gt;Rename payload replacement strategies to Cluster Bomb and Pitchfork in the UI and help (previously Depth First and Breadth First).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct (breadth-first) Pitchfork payload replacement when fuzzing multiple locations.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.16.0/fuzz-beta-13.16.0.zap</url>
-        <hash>SHA-256:c39125db01a774b19b5f224d504a301a0f25a213e87a3ce58d90306a79a70701</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/fuzz-v13.17.0/fuzz-beta-13.17.0.zap</url>
+        <hash>SHA-256:f9b84c1aa5e84e6228608af4979dd45e9701d5a8aa312db87966d6763db7534b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/fuzzer/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-06-20</date>
-        <size>2014901</size>
-        <not-before-version>2.16.0</not-before-version>
+        <date>2026-08-07</date>
+        <size>2020437</size>
+        <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
@@ -1925,6 +1941,38 @@ but if you encounter problems, please refer to the following.
         <size>2465951</size>
         <not-before-version>2.12.0</not-before-version>
     </addon_levoai>
+    <addon>llm</addon>
+    <addon_llm>
+        <name>LLM Support</name>
+        <description>An add-on to leverage LLM within ZAP.</description>
+        <author>Abdessamad TEMMAR and the ZAP Core Team</author>
+        <version>0.0.1</version>
+        <file>llm-alpha-0.0.1.zap</file>
+        <status>alpha</status>
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic stats&lt;/li&gt;
+&lt;li&gt;Support for Ollama, Azure OpenAI, Google Gemini, Claude (Anthropic), and OpenAI Compatible endpoints.&lt;/li&gt;
+&lt;li&gt;Integration points for other add-ons.&lt;/li&gt;
+&lt;li&gt;A tabbed LLM Chat panel.&lt;/li&gt;
+&lt;li&gt;Integration with the MCP add-on.&lt;/li&gt;
+&lt;/ul&gt;</changes>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.0.1/llm-alpha-0.0.1.zap</url>
+        <hash>SHA-256:888d322ea1cecb3482b3dedec5c31e2ca544a84e06cfc57f77a90055d3266828</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/llm-support/</info>
+        <repo>https://github.com/zaproxy/zap-extensions/</repo>
+        <date>2026-08-07</date>
+        <size>18353850</size>
+        <not-before-version>2.17.0</not-before-version>
+        <dependencies>
+            <addons>
+                <addon>
+                    <id>commonlib</id>
+                    <version>&gt;=1.39.0</version>
+                </addon>
+            </addons>
+        </dependencies>
+    </addon_llm>
     <addon>maplocal</addon>
     <addon_maplocal>
         <name>Map Local</name>
@@ -1956,22 +2004,24 @@ but if you encounter problems, please refer to the following.
         <name>MCP Integration</name>
         <description>An add-on that integrates MCP in ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.2.0</version>
-        <file>mcp-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>mcp-alpha-0.3.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Content type to not include charset (some servers complain).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zap_list_resources&lt;/code&gt; and &lt;code&gt;zap_read_resource&lt;/code&gt; tools for clients that only support tools (e.g. the LLM bridge).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zap_get_history&lt;/code&gt; tool to fetch selected history fields with body paging via &lt;code&gt;body_offset&lt;/code&gt; / &lt;code&gt;max_body_chars&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handling of multiple SSE events on import.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.2.0/mcp-alpha-0.2.0.zap</url>
-        <hash>SHA-256:adc8692a30bf6f23e5b597b95726f1588f4bd7d34ab57280481a91cbe35aca88</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.3.0/mcp-alpha-0.3.0.zap</url>
+        <hash>SHA-256:b4b5f20faf6b7974cf58c03b8ad10a0fa13a8da2a8ac2a80a49cd80cf857600f</hash>
+        <info>https://www.zaproxy.org/docs/desktop/addons/mcp-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-12</date>
-        <size>814370</size>
+        <date>2026-08-07</date>
+        <size>826131</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2031,19 +2081,29 @@ but if you encounter problems, please refer to the following.
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.28.0</version>
-        <file>network-beta-0.28.0.zap</file>
+        <version>0.29.0</version>
+        <file>network-beta-0.29.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update dependencies (Issue 9337).&lt;/li&gt;
+&lt;li&gt;Option to support client certificates programmatically.&lt;/li&gt;
+&lt;li&gt;Add option to control how browser background requests should be handled, default to hide.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve server exception handling.&lt;/li&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct the generation of server certificates for domain names with more than 64 characters.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.28.0/network-beta-0.28.0.zap</url>
-        <hash>SHA-256:bce232c3f369237638bc545f0ac38203c71e2313cffd683bac0012490901f8c4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.29.0/network-beta-0.29.0.zap</url>
+        <hash>SHA-256:082367cca24029ed0dce69ad6c4464897c63c9a2f0d5ec7ae42860e728414853</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-21</date>
-        <size>28793774</size>
+        <date>2026-08-07</date>
+        <size>30051002</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -3116,27 +3176,19 @@ but if you encounter problems, please refer to the following.
         <name>Server-Sent Events</name>
         <description>Allows you to view Server-Sent Events (SSE) communication.</description>
         <author>ZAP Dev Team</author>
-        <version>14</version>
-        <file>sse-alpha-14.zap</file>
+        <version>15</version>
+        <file>sse-alpha-15.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Stats for event and event streams.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;No longer fire a spurious empty event for a leading blank line (e.g. keep-alive) in an event stream.&lt;/li&gt;
+&lt;li&gt;Handle read timeouts.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v14/sse-alpha-14.zap</url>
-        <hash>SHA-256:7de39df7fc85810b977dd2800f58400fa474dd03c693ed62da5058bbfefc3a3f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/sse-v15/sse-alpha-15.zap</url>
+        <hash>SHA-256:b404360c6b83fca35830b0baed8344fdd14fa36425c2bbcf366da27f4c3f4dea</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/server-sent-events/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-13</date>
-        <size>331883</size>
+        <date>2026-08-07</date>
+        <size>332017</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_sse>
     <addon>svndigger</addon>
@@ -3327,20 +3379,19 @@ but if you encounter problems, please refer to the following.
         <name>WebSockets</name>
         <description>Allows you to inspect WebSocket communication.</description>
         <author>ZAP Dev Team</author>
-        <version>37</version>
-        <file>websocket-release-37.zap</file>
+        <version>38</version>
+        <file>websocket-release-38.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v37/websocket-release-37.zap</url>
-        <hash>SHA-256:f2c3035976531130494b5b9dfc02ca0ebd7e0388f740f68b6d4e775098be9fc6</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/websocket-v38/websocket-release-38.zap</url>
+        <hash>SHA-256:eec15ac0fc5c211d529c3cd853ec4a1310865ce94dd7a0abca27aa4b240c9623</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/websockets/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-05-07</date>
-        <size>1417073</size>
+        <date>2026-08-07</date>
+        <size>1417669</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
