@@ -48,7 +48,7 @@ import org.zaproxy.zap.control.AddOn;
 public abstract class GenerateWebsitePages extends DefaultTask {
 
     @InputFile
-    public abstract RegularFileProperty getAllowedAddOns();
+    public abstract RegularFileProperty getDeniedAddOns();
 
     @InputFiles
     public abstract ConfigurableFileCollection getAddOns();
@@ -88,7 +88,7 @@ public abstract class GenerateWebsitePages extends DefaultTask {
 
     @TaskAction
     public void generate() throws IOException {
-        Set<String> allowedAddOns = TaskUtils.readAllowedAddOns(getAllowedAddOns());
+        Set<String> deniedAddOns = TaskUtils.readDeniedAddOns(getDeniedAddOns());
 
         Path outputDir = getOutputDir().get().getAsFile().toPath();
 
@@ -107,7 +107,7 @@ public abstract class GenerateWebsitePages extends DefaultTask {
 
         for (File addOnFile : getAddOns()) {
             AddOn addOn = createAddOn(addOnFile.toPath());
-            if (addOn == null || !allowedAddOns.contains(addOn.getId())) {
+            if (addOn == null || deniedAddOns.contains(addOn.getId())) {
                 continue;
             }
 

@@ -44,7 +44,7 @@ public abstract class DownloadReleasedAddOns extends DefaultTask {
     public abstract RegularFileProperty getZapVersions();
 
     @InputFile
-    public abstract RegularFileProperty getAllowedAddOns();
+    public abstract RegularFileProperty getDeniedAddOns();
 
     @OutputDirectory
     public abstract DirectoryProperty getOutputDir();
@@ -57,13 +57,13 @@ public abstract class DownloadReleasedAddOns extends DefaultTask {
             return;
         }
 
-        Set<String> allowedAddOns = TaskUtils.readAllowedAddOns(getAllowedAddOns());
+        Set<String> deniedAddOns = TaskUtils.readDeniedAddOns(getDeniedAddOns());
         Path outputDir = getOutputDir().getAsFile().get().toPath();
         ZapXmlConfiguration zapVersions =
                 new ZapXmlConfiguration(getZapVersions().getAsFile().get());
         for (ReleaseState.AddOnChange addOn : addOns) {
             String addOnId = addOn.getId();
-            if (!addOn.isNewVersion() || !allowedAddOns.contains(addOnId)) {
+            if (!addOn.isNewVersion() || deniedAddOns.contains(addOnId)) {
                 continue;
             }
 

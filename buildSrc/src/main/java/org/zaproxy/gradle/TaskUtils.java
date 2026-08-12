@@ -19,22 +19,24 @@
  */
 package org.zaproxy.gradle;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.gradle.api.Task;
 import org.gradle.api.file.RegularFileProperty;
 
 final class TaskUtils {
-
-    private static final String COMMENT_LINE = "#";
 
     private TaskUtils() {}
 
@@ -99,11 +101,12 @@ final class TaskUtils {
                         file, expectedChecksum, checksum));
     }
 
-    static Set<String> readAllowedAddOns(RegularFileProperty fileProperty) throws IOException {
+    static Set<String> readDeniedAddOns(RegularFileProperty fileProperty) throws IOException {
         Path file = fileProperty.getAsFile().get().toPath();
-        return Files.readAllLines(file, StandardCharsets.UTF_8).stream()
-                .filter(s -> !s.startsWith(COMMENT_LINE) || !s.isEmpty())
-                .collect(Collectors.toSet());
+        Map<String, List<String>> data =
+                new ObjectMapper(new YAMLFactory())
+                        .readValue(file.toFile(), new TypeReference<>() {});
+        return new HashSet<>(data.get("denied"));
     }
 
     static boolean hasSecureScheme(URL url) {
