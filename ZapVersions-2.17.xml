@@ -973,19 +973,20 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>Import/Export</name>
         <description>Import and Export functionality</description>
         <author>ZAP Dev Team &amp; thatsn0tmysite</author>
-        <version>0.21.0</version>
-        <file>exim-beta-0.21.0.zap</file>
+        <version>0.22.0</version>
+        <file>exim-beta-0.22.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to import HAR data directly through the API.&lt;/li&gt;
+&lt;li&gt;Option to send requests when importing a HAR file, including via the Automation Framework and API.&lt;/li&gt;
+&lt;li&gt;Allow users to limit the number of HAR messages to import (&lt;code&gt;maxMessages&lt;/code&gt;). Ex: If testing authentication, access, etc.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.21.0/exim-beta-0.21.0.zap</url>
-        <hash>SHA-256:e98e64f1a2259c3e018d59c1bcdce8ea96bbb3433463b0182bcad3947eea7beb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/exim-v0.22.0/exim-beta-0.22.0.zap</url>
+        <hash>SHA-256:80ce526c6366f053c5428f663cfc6abdab313616475cdcf0b296e33fdb146f57</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/import-export/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-06</date>
-        <size>1159059</size>
+        <date>2026-08-12</date>
+        <size>1167483</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -1232,30 +1233,30 @@ to find and add subdomains to the Sites Tree.&lt;/li&gt;
         <name>GraphQL Support</name>
         <description>Inspect and attack GraphQL endpoints.</description>
         <author>ZAP Dev Team</author>
-        <version>0.33.0</version>
-        <file>graphql-alpha-0.33.0.zap</file>
+        <version>0.34.0</version>
+        <file>graphql-alpha-0.34.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The alerts now have new tags for the OWASP Top 10 2025, and API Top 10 2023.
-&lt;ul&gt;
-&lt;li&gt;The &amp;quot;OWASP_2023_API4&amp;quot; tag was dropped in favor of the new unified mapping entry &amp;quot;API_2023_API4_UNRESTRICTED_RESOURCE_CONSUMPTION&amp;quot;. This may be a breaking change for users that depended on the tag to define scan policies.&lt;/li&gt;
+&lt;li&gt;Allow users to limit the number of GraphQL messages to import (&lt;code&gt;maxMessages&lt;/code&gt;). Ex: If testing authentication, access, etc.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Depends on an updated version of the Common Library add-on.&lt;/li&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.33.0/graphql-alpha-0.33.0.zap</url>
-        <hash>SHA-256:22f1246a302ef42b7eec9af340cc732494025a5fd6a0322d717dfccb44c5b8b3</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/graphql-v0.34.0/graphql-alpha-0.34.0.zap</url>
+        <hash>SHA-256:9d868d390d288ce277981660d6ed2547b87ac835725a5fef3d4d703027fc7c2c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/graphql-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-04-14</date>
-        <size>5698463</size>
+        <date>2026-08-12</date>
+        <size>5716321</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.40.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.43.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2163,30 +2164,30 @@ but if you encounter problems, please refer to the following.
         <name>OpenAPI Support</name>
         <description>Imports and spiders OpenAPI definitions.</description>
         <author>ZAP Dev Team plus Joanna Bona, Nathalie Bouchahine, Artur Grzesica, Mohammad Kamar, Markus Kiss, Michal Materniak, Marcin Spiewak, and SDA SE Open Industry Solutions</author>
-        <version>57</version>
-        <file>openapi-beta-57.zap</file>
+        <version>58</version>
+        <file>openapi-beta-58.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Allow users to limit the number of OpenAPI messages to import (&lt;code&gt;maxMessages&lt;/code&gt;). Ex: If testing authentication, access, etc.&lt;/li&gt;
 &lt;li&gt;Dependency update.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Bug where values were used for objects, instead of just for primitives.&lt;/li&gt;
+&lt;li&gt;Import dialogue file functionality now uses the selected User (previously only URL import did).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v57/openapi-beta-57.zap</url>
-        <hash>SHA-256:fe87dd63cb310131c4e7d8c14b675c97f4b7707eda8ccc5fd6042628b6f19ccf</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/openapi-v58/openapi-beta-58.zap</url>
+        <hash>SHA-256:42356d818f994d3e19a2b892cebf9c058bd59ef372137411a1bacd8b4d19424b</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/openapi-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-06</date>
-        <size>12014679</size>
+        <date>2026-08-12</date>
+        <size>12016265</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.40.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.43.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2365,25 +2366,29 @@ but if you encounter problems, please refer to the following.
         <name>Postman Support</name>
         <description>Imports and spiders Postman collections.</description>
         <author>ZAP Dev Team</author>
-        <version>0.9.0</version>
-        <file>postman-alpha-0.9.0.zap</file>
+        <version>0.10.0</version>
+        <file>postman-alpha-0.10.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Allow users to limit the number of Postman messages to import (&lt;code&gt;maxMessages&lt;/code&gt;). Ex: If testing authentication, access, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.9.0/postman-alpha-0.9.0.zap</url>
-        <hash>SHA-256:2b3245707cd1f3e0525f81ca8628166ca8bf9543572ddc7fe44002f4c517dd80</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/postman-v0.10.0/postman-alpha-0.10.0.zap</url>
+        <hash>SHA-256:59174af853be32fb8fdfc48dcd4e18fdcbb5a0e7ee24279d2c6621981214a81a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/postman-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>289315</size>
+        <date>2026-08-12</date>
+        <size>291197</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.16.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.43.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2948,19 +2953,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.53.0</version>
-        <file>selenium-release-15.53.0.zap</file>
+        <version>15.54.0</version>
+        <file>selenium-release-15.54.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.46.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.47.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.53.0/selenium-release-15.53.0.zap</url>
-        <hash>SHA-256:5a3ecc2741e1697590c31e67b36cd81aa9a7cd0e0c47e2cc34fb0cce255f4823</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.54.0/selenium-release-15.54.0.zap</url>
+        <hash>SHA-256:64b858881d9842829c35a363c01f9e8ed6253c4dac7d548561eb8f60f18a5a14</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-14</date>
-        <size>32749665</size>
+        <date>2026-08-12</date>
+        <size>32867593</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -3015,29 +3020,29 @@ but if you encounter problems, please refer to the following.
         <name>SOAP Support</name>
         <description>Imports and scans WSDL files containing SOAP endpoints.</description>
         <author>Alberto (albertov91) + ZAP Dev Team</author>
-        <version>31</version>
-        <file>soap-beta-31.zap</file>
+        <version>32</version>
+        <file>soap-beta-32.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Allow users to limit the number of SOAP messages to import (&lt;code&gt;maxMessages&lt;/code&gt;). Ex: If testing authentication, access, etc.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix SOAP requests generated from some WSDLs being incomplete. Requests now correctly include all fields defined in the schema, and requests are no longer broken by certain characters in element or attribute names and values.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v31/soap-beta-31.zap</url>
-        <hash>SHA-256:0617b8e37fed00fcb434afd4995b8c1483480d7b7a6063b6736169f3706767d1</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/soap-v32/soap-beta-32.zap</url>
+        <hash>SHA-256:e7767272723a9ffee7e4cddb65d1b4941da756a380cc4c8db5ccb6012badf9fd</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/soap-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-06-12</date>
-        <size>13147768</size>
+        <date>2026-08-12</date>
+        <size>13149279</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.40.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.43.0 &amp; &lt; 2.0.0</version>
                 </addon>
             </addons>
         </dependencies>
