@@ -1,0 +1,24 @@
+# Add-ons excluded from help website generation.
+denied:
+  # ZAP locale/language add-ons
+  - coreLang
+  - help_ar_SA
+  - help_bs_BA
+  - help_es_ES
+  - help_fil_PH
+  - help_fr_FR
+  - help_id_ID
+  - help_ja_JP
+  - help_ms_MY
+  - help_pt_BR
+  - help_ru_RU
+  - help_tr_TR
+  - help_zh_CN
+
+  # 3rd-party add-ons with not known help
+  - attacksurfacedetector
+  - fileupload
+  - jwt
+  - levoai
+  - maplocal
+  - reflect

@@ -259,17 +259,17 @@ val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLast
 }
 
 val releaseStateData = generateReleaseStateLastCommit.map { it.releaseState.get() }
-val addOnsHelpWebsite = file("src/main/addons-help-website.txt")
+val addOnsHelpWebsite = file("src/main/addons-help-website.yaml")
 
 val downloadReleasedAddOns by tasks.registering(DownloadReleasedAddOns::class) {
     releaseState.set(releaseStateData)
     zapVersions.set(latestZapVersions)
-    allowedAddOns.set(addOnsHelpWebsite)
+    deniedAddOns.set(addOnsHelpWebsite)
     outputDir.set(layout.buildDirectory.dir("releasedAddOns"))
 }
 
 val generateWebsitePages by tasks.registering(GenerateWebsitePages::class) {
-    allowedAddOns.set(addOnsHelpWebsite)
+    deniedAddOns.set(addOnsHelpWebsite)
     addOns.from(downloadReleasedAddOns.map { fileTree(it.outputDir).matching { include("*.zap") } })
 
     helpAddOnRegex.set("^help(?:_[a-zA-Z_]+)?")
