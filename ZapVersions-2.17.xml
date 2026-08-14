@@ -530,32 +530,29 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.30.0</version>
-        <file>client-alpha-0.30.0.zap</file>
+        <version>0.31.0</version>
+        <file>client-alpha-0.31.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Wait always after component navigation while crawling.&lt;/li&gt;
-&lt;li&gt;Follow any navigation component while crawling.&lt;/li&gt;
-&lt;li&gt;Crawl component state changes.&lt;/li&gt;
-&lt;li&gt;Help to show that the Client Spider is now the recommended option for modern apps.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Normalise behaviour of Delete context menu item.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Include cause of invalid URL in error message of Client Spider job.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox recorders to v0.2.1.&lt;/li&gt;
+&lt;li&gt;Check launched browsers can access the callback URL, and retry more often.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox full extensions to v0.2.2.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.30.0/client-alpha-0.30.0.zap</url>
-        <hash>SHA-256:68a0602b64f736116cdffddbbb670ea10f74f434f68662e9451cba8ea52557ff</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.31.0/client-alpha-0.31.0.zap</url>
+        <hash>SHA-256:a0f7f6a4aa130db964ec4e94bce982cc99f1567745dc5d0b1f71a613b66d0a23</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-06</date>
-        <size>5923546</size>
+        <date>2026-08-14</date>
+        <size>5922841</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;=1.33.0</version>
+                    <version>&gt;=1.43.0</version>
                 </addon>
                 <addon>
                     <id>database</id>
