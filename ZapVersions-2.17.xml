@@ -2109,19 +2109,24 @@ but if you encounter problems, please refer to the following.
         <name>OAST Support</name>
         <description>Allows you to exploit out-of-band vulnerabilities</description>
         <author>ZAP Dev Team</author>
-        <version>0.24.0</version>
-        <file>oast-beta-0.24.0.zap</file>
+        <version>0.25.0</version>
+        <file>oast-beta-0.25.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update minimum ZAP version to 2.17.0.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Formatted JavaScript files for consistency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Decrypt Interactsh interactions using AES-CTR, to support Interactsh server 1.3.0 and later (which changed the cipher from AES-CFB). Older servers are no longer supported.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.24.0/oast-beta-0.24.0.zap</url>
-        <hash>SHA-256:f06ecea02e2c1df4a164e737dd632afba4430225b2fdc2feb6042bdb1e976b3d</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/oast-v0.25.0/oast-beta-0.25.0.zap</url>
+        <hash>SHA-256:40886e96815170e69ca219e23defbdfee50454de5efa03f6e4e38063e2181b04</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/oast-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2025-12-15</date>
-        <size>914676</size>
+        <date>2026-08-19</date>
+        <size>916213</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
