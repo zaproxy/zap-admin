@@ -260,35 +260,40 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.41.0</version>
-        <file>authhelper-beta-0.41.0.zap</file>
+        <version>0.42.0</version>
+        <file>authhelper-beta-0.42.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework &lt;code&gt;diagnostics&lt;/code&gt; job to start and stop plan-level recording of authentication related diagnostics.&lt;/li&gt;
+&lt;li&gt;A toolbar button to the Authentication Diagnostics screenshots tab, to toggle screenshots between full size and scaled to fit the window.&lt;/li&gt;
+&lt;li&gt;Use the HTTP method for the verification configuration (on newer ZAP versions).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Include the Zest statement index in the authentication diagnostics' steps.&lt;/li&gt;
-&lt;li&gt;Include Origin header when doing authentication verification.&lt;/li&gt;
+&lt;li&gt;Depend on newer Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Tag diagnostic HTTP messages with an internal ID, to make it easier to cross reference them.&lt;/li&gt;
+&lt;li&gt;Obtain the minimal authentication diagnostics when aborting the authentication.&lt;/li&gt;
+&lt;li&gt;Authentication report: include summary with connection success and failure counts.&lt;/li&gt;
+&lt;li&gt;Include Accept, Accept-Language, Connection, and User-Agent headers when doing authentication verification.&lt;/li&gt;
+&lt;li&gt;Ignore commented Zest statements when collecting authentication diagnostics.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handle exception while extracting session tokens.&lt;/li&gt;
+&lt;li&gt;Do not wait when getting the element for a screenshot diagnostic step to not add unnecessary delays.&lt;/li&gt;
+&lt;li&gt;Performance issue checking for where cookie values were set during authentication.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.41.0/authhelper-beta-0.41.0.zap</url>
-        <hash>SHA-256:a035ffc7dcf3f36147e267c77292b51920253bd30282c472bd078250b031acc4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.42.0/authhelper-beta-0.42.0.zap</url>
+        <hash>SHA-256:356e0df57e2231fcd835448e01dc7c65b44d0be6913ac73ef654edde8688e655</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-07</date>
-        <size>1569387</size>
+        <date>2026-08-26</date>
+        <size>1624615</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
                 <addon>
                     <id>commonlib</id>
-                    <version>&gt;= 1.35.0 &amp; &lt; 2.0.0</version>
+                    <version>&gt;= 1.44.0 &amp; &lt; 2.0.0</version>
                 </addon>
                 <addon>
                     <id>database</id>
@@ -578,25 +583,24 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.43.0</version>
-        <file>commonlib-release-1.43.0.zap</file>
+        <version>1.44.0</version>
+        <file>commonlib-release-1.44.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;UriUtils class for standardising URI checking.&lt;/li&gt;
+&lt;li&gt;Add standard header for other add-ons to use.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependencies.&lt;/li&gt;
-&lt;li&gt;Updated Bank Identification Number data from a new source (https://github.com/venelinkochev/bin-list-data/).&lt;/li&gt;
-&lt;li&gt;Added help page documenting the BIN list data and how it is used by scan rules.&lt;/li&gt;
+&lt;li&gt;Update alert tag URLs to avoid redirects.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.43.0/commonlib-release-1.43.0.zap</url>
-        <hash>SHA-256:f1c46d6c65434a2a54307065b558a87121eaa5b9b6bc6cfb10bf230b6335d1f5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.44.0/commonlib-release-1.44.0.zap</url>
+        <hash>SHA-256:6450205e07248c20e9c8de185268cf1cd571f3cec7f7c0e5d10178b2126834f9</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-14</date>
-        <size>11694160</size>
+        <date>2026-08-26</date>
+        <size>11720477</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
@@ -2002,24 +2006,19 @@ but if you encounter problems, please refer to the following.
         <name>MCP Integration</name>
         <description>An add-on that integrates MCP in ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.3.0</version>
-        <file>mcp-alpha-0.3.0.zap</file>
+        <version>0.4.0</version>
+        <file>mcp-alpha-0.4.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;zap_list_resources&lt;/code&gt; and &lt;code&gt;zap_read_resource&lt;/code&gt; tools for clients that only support tools (e.g. the LLM bridge).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;zap_get_history&lt;/code&gt; tool to fetch selected history fields with body paging via &lt;code&gt;body_offset&lt;/code&gt; / &lt;code&gt;max_body_chars&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Allow MCP security key to be copied (Issue #9432)&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.3.0/mcp-alpha-0.3.0.zap</url>
-        <hash>SHA-256:b4b5f20faf6b7974cf58c03b8ad10a0fa13a8da2a8ac2a80a49cd80cf857600f</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/mcp-v0.4.0/mcp-alpha-0.4.0.zap</url>
+        <hash>SHA-256:4aef855074cdc1e19bc40d281fa52d72d8f73a249d4cada73c0aab808f4d12c0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/mcp-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-07</date>
-        <size>826131</size>
+        <date>2026-08-26</date>
+        <size>877974</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
