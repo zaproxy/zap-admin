@@ -24,6 +24,7 @@ var codeMap = {
 	10205: 'https://github.com/zaproxy/zap-extensions/blob/main/addOns/httpsInfo/src/main/java/org/zaproxy/zap/extension/httpsinfo/HttpsConfigScanRule.java',
 	40036: 'https://github.com/SasanLabs/owasp-zap-jwt-addon/blob/master/src/main/java/org/zaproxy/zap/extension/jwt/JWTActiveScanRule.java',
 	40041: 'https://github.com/SasanLabs/owasp-zap-fileupload-addon/blob/main/src/main/java/org/sasanlabs/fileupload/FileUploadScanRule.java',
+	230000: 'https://github.com/DenisPodgurskii/ZAP_PTK/blob/main/src/main/java/org/zaproxy/addon/ptk/ascan/PtkActiveScanRule.java',
 	}
 
 var allAlertTags = {}
