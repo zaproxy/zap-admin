@@ -2953,19 +2953,20 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.54.0</version>
-        <file>selenium-release-15.54.0.zap</file>
+        <version>15.55.0</version>
+        <file>selenium-release-15.55.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.47.0.&lt;/li&gt;
+&lt;li&gt;Update HtmlUnit driver (Issue 9313).&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.48.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.54.0/selenium-release-15.54.0.zap</url>
-        <hash>SHA-256:64b858881d9842829c35a363c01f9e8ed6253c4dac7d548561eb8f60f18a5a14</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.55.0/selenium-release-15.55.0.zap</url>
+        <hash>SHA-256:5d906b511975b1db16e39a208dbf200c4dfec9d3be770754883ffcf9a606f47d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-12</date>
-        <size>32867593</size>
+        <date>2026-09-01</date>
+        <size>33989487</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
