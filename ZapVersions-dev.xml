@@ -2526,25 +2526,20 @@ but if you encounter problems, please refer to the following.
         <name>OWASP PTK</name>
         <description>Adds the OWASP PTK extension to browsers launched from ZAP.</description>
         <author>ZAP Dev Team</author>
-        <version>0.8.0</version>
-        <file>ptk-beta-0.8.0.zap</file>
+        <version>0.9.0</version>
+        <file>ptk-beta-0.9.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Bug which breaks sites using Akamai Bot Manager&lt;/li&gt;
-&lt;li&gt;Ensure Top 10 alert tags have expected URLs.&lt;/li&gt;
-&lt;li&gt;Avoid false Selenium configuration warnings on a clean ZAP profile for Chromium headless browsers and the Firefox headless XPI.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Depends on the Common Library add-on.&lt;/li&gt;
+&lt;li&gt;Update the bundled OWASP Penetration Testing Kit browser extensions to the signed 9.9.9 store artifacts.&lt;/li&gt;
+&lt;li&gt;Synchronize the ZAP DAST catalog and alert mappings with the DAST rulepack bundled in PTK 9.9.9.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.8.0/ptk-beta-0.8.0.zap</url>
-        <hash>SHA-256:19034299f6dc9d9fe280e6a30fed21e7a33fa3c71c56affae45b74bad30445fa</hash>
+        <url>https://github.com/zaproxy-addons/ptk/releases/download/v0.9.0/ptk-beta-0.9.0.zap</url>
+        <hash>SHA-256:02c2be7b332e866679b04f02df9563df9cada5607bd818c243c3bcadc40acf71</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/owasp-ptk/</info>
         <repo>https://github.com/DenisPodgurskii/ZAP_PTK</repo>
-        <date>2026-07-30</date>
-        <size>20106749</size>
+        <date>2026-09-01</date>
+        <size>22633768</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
