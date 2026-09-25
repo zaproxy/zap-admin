@@ -2427,20 +2427,35 @@ but if you encounter problems, please refer to the following.
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>75</version>
-        <file>pscanrules-release-75.zap</file>
+        <version>76</version>
+        <file>pscanrules-release-76.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Modern scan rule to refer to the Client Spider.&lt;/li&gt;
+&lt;li&gt;Content Security Policy scan rule analyzes all active CSP headers and META policies together using browser-style intersection (Issue 9403).&lt;/li&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Update reference to avoid redirect.&lt;/li&gt;
+&lt;li&gt;Updated help entries for the following scan rules, clarifying the data used to supplement their alerts for credit card related findings:
+&lt;ul&gt;
+&lt;li&gt;Information Disclosure: Referrer&lt;/li&gt;
+&lt;li&gt;PII Disclosure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;User Controllable HTML Element Attribute scan rule: reduce false positives for short parameter values in meta content checks (Issue 9461).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CSP &amp;quot;Header &amp;amp; Meta&amp;quot; alert (10055-12) is no longer raised.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v75/pscanrules-release-75.zap</url>
-        <hash>SHA-256:97814c5f1319a31b5041f1bbd1edfc312b3a539c7cd56f7903e9996858361fcb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v76/pscanrules-release-76.zap</url>
+        <hash>SHA-256:6201955247e538ddf8d11fd4332450e5821dbf419dbd29ed616b2909e9aabcaa</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-07-06</date>
-        <size>2412423</size>
+        <date>2026-09-25</date>
+        <size>2418108</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
