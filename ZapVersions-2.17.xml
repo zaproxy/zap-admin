@@ -73,23 +73,20 @@
         <name>Alert Filters</name>
         <description>Allows you to automate the changing of alert risk levels.</description>
         <author>ZAP Dev Team</author>
-        <version>27</version>
-        <file>alertFilters-release-27.zap</file>
+        <version>28</version>
+        <file>alertFilters-release-28.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Added an optional LLM extension for reviewing alerts.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;alertFilter&lt;/code&gt; automation framework job now correctly reads the &lt;code&gt;deleteGlobalAlerts&lt;/code&gt; parameter.&lt;/li&gt;
+&lt;li&gt;Defaulting a new automation framework job rule to Directory Browsing (0) correctly recorded.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v27/alertFilters-release-27.zap</url>
-        <hash>SHA-256:cc10e75e378df0f0bd88b2bd3ee005dd40e744444ed109381ad29c9f7d052c72</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/alertFilters-v28/alertFilters-release-28.zap</url>
+        <hash>SHA-256:9dbd06aeb0f76f5818d01e3b4213402529ed1a0058a706da772e0b961f5c0038</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/alert-filters/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-07</date>
-        <size>611514</size>
+        <date>2026-09-25</date>
+        <size>662402</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
