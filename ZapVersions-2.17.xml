@@ -532,23 +532,34 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.31.0</version>
-        <file>client-alpha-0.31.0.zap</file>
+        <version>0.32.0</version>
+        <file>client-alpha-0.32.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Include cause of invalid URL in error message of Client Spider job.&lt;/li&gt;
-&lt;li&gt;Updated Chrome and Firefox recorders to v0.2.1.&lt;/li&gt;
-&lt;li&gt;Check launched browsers can access the callback URL, and retry more often.&lt;/li&gt;
-&lt;li&gt;Updated Chrome and Firefox full extensions to v0.2.2.&lt;/li&gt;
+&lt;li&gt;Stand in for the AJAX Spider's &lt;code&gt;spiderAjax&lt;/code&gt; automation job and &lt;code&gt;ajaxSpider&lt;/code&gt; API, using the Client Spider, when the AJAX Spider add-on is not installed.&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;runOnlyIfModern&lt;/code&gt; option to the &lt;code&gt;spiderClient&lt;/code&gt; automation job, to only run the Client Spider if a &amp;quot;Modern Web Application&amp;quot; alert has been raised.&lt;/li&gt;
+&lt;li&gt;Details of diagnostics we need in order to fix client recording/replaying problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated Chrome and Firefox full extensions to v0.2.3.&lt;/li&gt;
+&lt;li&gt;Update the Client Spider clear action title capitalization (Issue 2000).&lt;/li&gt;
+&lt;li&gt;Depend on newer version of Selenium add-on.&lt;/li&gt;
+&lt;li&gt;Adjust log level to reduce log pollution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect spider and global exclusions (Issue 9439).&lt;/li&gt;
+&lt;li&gt;Execute Selenium scripts synchronously when the browser is launched (Issue 9472).&lt;/li&gt;
+&lt;li&gt;Address exceptions while handling browser extension events and when running the spider.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.31.0/client-alpha-0.31.0.zap</url>
-        <hash>SHA-256:a0f7f6a4aa130db964ec4e94bce982cc99f1567745dc5d0b1f71a613b66d0a23</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.32.0/client-alpha-0.32.0.zap</url>
+        <hash>SHA-256:c3e68bf3061d5ea93a02b9022c32817b58bd1d2f6798a5361b0a551f37651037</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-14</date>
-        <size>5922841</size>
+        <date>2026-10-02</date>
+        <size>5948786</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -570,7 +581,7 @@
                 </addon>
                 <addon>
                     <id>selenium</id>
-                    <version>&gt;=15.49.0</version>
+                    <version>&gt;=15.57.0</version>
                 </addon>
             </addons>
         </dependencies>
@@ -2955,19 +2966,19 @@ but if you encounter problems, please refer to the following.
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.56.0</version>
-        <file>selenium-release-15.56.0.zap</file>
+        <version>15.57.0</version>
+        <file>selenium-release-15.57.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.49.0.&lt;/li&gt;
+&lt;li&gt;Allow callers to configure whether Selenium scripts are executed synchronously when the browser is launched.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.56.0/selenium-release-15.56.0.zap</url>
-        <hash>SHA-256:4ada5834f71d68b1083fd1f236d7af69fd09bd104165390b914f1148d9d957c0</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.57.0/selenium-release-15.57.0.zap</url>
+        <hash>SHA-256:b3af2f698638338c7449df0008ee6a14589c58550a3291d17a807792348648b2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-09-16</date>
-        <size>36247575</size>
+        <date>2026-10-02</date>
+        <size>36248028</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
