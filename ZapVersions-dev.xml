@@ -3338,19 +3338,19 @@ but if you encounter problems, please refer to the following.
         <name>Linux WebDrivers</name>
         <description>Linux WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>226</version>
-        <file>webdriverlinux-release-226.zap</file>
+        <version>227</version>
+        <file>webdriverlinux-release-227.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 154.0.8037.92.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 155.0.8059.39.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v226/webdriverlinux-release-226.zap</url>
-        <hash>SHA-256:6b1df83a08a84cf3b9a6a4febf7fcc6ce575afbd307e07611e27b70bdfc20cfb</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverlinux-v227/webdriverlinux-release-227.zap</url>
+        <hash>SHA-256:307870b582ae28e95634bf9a4bf9113665f209ad7a768056c404eeda463d78e3</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-09-30</date>
-        <size>15419964</size>
+        <date>2026-10-07</date>
+        <size>15441451</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_webdriverlinux>
     <addon>webdrivermacos</addon>
@@ -3358,19 +3358,19 @@ but if you encounter problems, please refer to the following.
         <name>macOS WebDrivers</name>
         <description>macOS WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>226</version>
-        <file>webdrivermacos-release-226.zap</file>
+        <version>227</version>
+        <file>webdrivermacos-release-227.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 154.0.8037.92.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 155.0.8059.39.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v226/webdrivermacos-release-226.zap</url>
-        <hash>SHA-256:6b300ca3bf4e26c748beba75bfb9ebf195ff62496c2b76b882856517d56ee22e</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdrivermacos-v227/webdrivermacos-release-227.zap</url>
+        <hash>SHA-256:c04d5a72c4c6ced1c3a3cb956f6fc001fb850afc9fc0eee32ca8415d6301b3e2</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-09-30</date>
-        <size>26573485</size>
+        <date>2026-10-07</date>
+        <size>26610665</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_webdrivermacos>
     <addon>webdriverwindows</addon>
@@ -3378,19 +3378,19 @@ but if you encounter problems, please refer to the following.
         <name>Windows WebDrivers</name>
         <description>Windows WebDrivers for Firefox and Chrome.</description>
         <author>ZAP Dev Team</author>
-        <version>227</version>
-        <file>webdriverwindows-release-227.zap</file>
+        <version>228</version>
+        <file>webdriverwindows-release-228.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update ChromeDriver to 154.0.8037.92.&lt;/li&gt;
+&lt;li&gt;Update ChromeDriver to 155.0.8059.39.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v227/webdriverwindows-release-227.zap</url>
-        <hash>SHA-256:7ab2ca13c27e61b488f3cf7524849cf82417b97f2a4667401158592b94613128</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/webdriverwindows-v228/webdriverwindows-release-228.zap</url>
+        <hash>SHA-256:478ec88837936b564a4287f5ea74a4790f354c9880cb1c21d7257ea400dc34cf</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-09-30</date>
-        <size>25062936</size>
+        <date>2026-10-07</date>
+        <size>25114126</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_webdriverwindows>
     <addon>websocket</addon>
