@@ -1727,19 +1727,22 @@ but if you encounter problems, please refer to the following:
         <name>Insights</name>
         <description>An add-on providing additional insights into what ZAP finds.</description>
         <author>ZAP Dev Team</author>
-        <version>0.6.0</version>
-        <file>insights-alpha-0.6.0.zap</file>
+        <version>0.7.0</version>
+        <file>insights-alpha-0.7.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct Automation Framework &lt;code&gt;insights&lt;/code&gt; job template loading.&lt;/li&gt;
-&lt;li&gt;MissingResourceException should no longer happen when loading the Insights add-on, and Alert Filters is not installed.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;insights&lt;/code&gt; job now supports an &lt;code&gt;exitAutoLevel&lt;/code&gt; option (&lt;code&gt;medium&lt;/code&gt; or &lt;code&gt;high&lt;/code&gt;) which is preferred to &lt;code&gt;exitAutoOnHigh&lt;/code&gt;, and is now the field shown in the job dialog. Plans saved by ZAP will use &lt;code&gt;exitAutoLevel&lt;/code&gt; instead of &lt;code&gt;exitAutoOnHigh&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Responses with 4xx status codes are now reported at Medium level when the high threshold is exceeded.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/insights-v0.6.0/insights-alpha-0.6.0.zap</url>
-        <hash>SHA-256:720620d11bbe00df6a653ea249aa615b416ea38103b7edb54033524d7c9d0351</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/insights-v0.7.0/insights-alpha-0.7.0.zap</url>
+        <hash>SHA-256:d344efc4c4a32391e6ecc472990f0a4fa70a759f3e165ef281cd7910c22054de</hash>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-08</date>
-        <size>401096</size>
+        <date>2026-10-15</date>
+        <size>406263</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_insights>
     <addon>invoke</addon>
@@ -1944,23 +1947,23 @@ but if you encounter problems, please refer to the following:
         <name>LLM Support</name>
         <description>An add-on to leverage LLM within ZAP.</description>
         <author>Abdessamad TEMMAR and the ZAP Core Team</author>
-        <version>0.0.1</version>
-        <file>llm-alpha-0.0.1.zap</file>
+        <version>0.1.0</version>
+        <file>llm-alpha-0.1.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Basic stats&lt;/li&gt;
-&lt;li&gt;Support for Ollama, Azure OpenAI, Google Gemini, Claude (Anthropic), and OpenAI Compatible endpoints.&lt;/li&gt;
-&lt;li&gt;Integration points for other add-ons.&lt;/li&gt;
-&lt;li&gt;A tabbed LLM Chat panel.&lt;/li&gt;
-&lt;li&gt;Integration with the MCP add-on.&lt;/li&gt;
+&lt;li&gt;Automation Framework support, the &lt;code&gt;llm-config&lt;/code&gt; job configures the LLM providers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update dependencies.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.0.1/llm-alpha-0.0.1.zap</url>
-        <hash>SHA-256:888d322ea1cecb3482b3dedec5c31e2ca544a84e06cfc57f77a90055d3266828</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.1.0/llm-alpha-0.1.0.zap</url>
+        <hash>SHA-256:38c50542a7a56751be3f2d7c813e6648f77121849a8f1db0a629f48ddbf4aa2c</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/llm-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-07</date>
-        <size>18353850</size>
+        <date>2026-10-15</date>
+        <size>19467224</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2989,19 +2992,19 @@ but if you encounter problems, please refer to the following:
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.58.0</version>
-        <file>selenium-release-15.58.0.zap</file>
+        <version>15.59.0</version>
+        <file>selenium-release-15.59.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.50.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.51.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.58.0/selenium-release-15.58.0.zap</url>
-        <hash>SHA-256:b7b217047f64979500d4335ab1b40718fac9af9128098be5a59b0ac9b758dd19</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.59.0/selenium-release-15.59.0.zap</url>
+        <hash>SHA-256:213bb9b008c134aa748ef3f1f7e38c2aa17a603701c4e54b05970d78e633e854</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-08</date>
-        <size>36523321</size>
+        <date>2026-10-15</date>
+        <size>36842751</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
