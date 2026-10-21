@@ -536,25 +536,19 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.33.0</version>
-        <file>client-alpha-0.33.0.zap</file>
+        <version>0.34.0</version>
+        <file>client-alpha-0.34.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Updated Chrome and Firefox full extensions to v0.2.4.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ensure the Client Spider stops when the maximum duration is exceeded when no new nodes/components are found (Related to Issue 9471).&lt;/li&gt;
-&lt;li&gt;Fix concurrency issue on browser shutdown.&lt;/li&gt;
+&lt;li&gt;Updated Chrome and Firefox full extensions to v0.3.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.33.0/client-alpha-0.33.0.zap</url>
-        <hash>SHA-256:08588c9ee924d126c2f7bf12fd5b3f57952d5b31fa0279595291618e6dd7c752</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.34.0/client-alpha-0.34.0.zap</url>
+        <hash>SHA-256:2d3f170cca476c2c8e57774d4db89d213dde70bba3cf4f42d72b515f1c510979</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-08</date>
-        <size>6053205</size>
+        <date>2026-10-21</date>
+        <size>6464191</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
