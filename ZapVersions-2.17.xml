@@ -2442,35 +2442,23 @@ but if you encounter problems, please refer to the following:
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>76</version>
-        <file>pscanrules-release-76.zap</file>
+        <version>77</version>
+        <file>pscanrules-release-77.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Content Security Policy scan rule analyzes all active CSP headers and META policies together using browser-style intersection (Issue 9403).&lt;/li&gt;
+&lt;li&gt;Server Side Technology Version with Known Vulnerabilities scan rule, which checks technology versions disclosed in response headers against known vulnerabilities, initially PHP versions against the php-src security advisories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Update reference to avoid redirect.&lt;/li&gt;
-&lt;li&gt;Updated help entries for the following scan rules, clarifying the data used to supplement their alerts for credit card related findings:
-&lt;ul&gt;
-&lt;li&gt;Information Disclosure: Referrer&lt;/li&gt;
-&lt;li&gt;PII Disclosure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;User Controllable HTML Element Attribute scan rule: reduce false positives for short parameter values in meta content checks (Issue 9461).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;CSP &amp;quot;Header &amp;amp; Meta&amp;quot; alert (10055-12) is no longer raised.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v76/pscanrules-release-76.zap</url>
-        <hash>SHA-256:6201955247e538ddf8d11fd4332450e5821dbf419dbd29ed616b2909e9aabcaa</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v77/pscanrules-release-77.zap</url>
+        <hash>SHA-256:d10b7efa8dd11c94d695cf61fc8658ba71c15d2c660d27e12063d53bd5f81352</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-09-25</date>
-        <size>2418108</size>
+        <date>2026-10-22</date>
+        <size>2499313</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
