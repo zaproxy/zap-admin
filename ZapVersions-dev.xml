@@ -2071,19 +2071,27 @@ but if you encounter problems, please refer to the following:
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.31.0</version>
-        <file>network-beta-0.31.0.zap</file>
+        <version>0.32.0</version>
+        <file>network-beta-0.32.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Reinstate NTLM authentication (Issue 9498).&lt;/li&gt;
+&lt;li&gt;Add-ons can now be notified of requests that fail to send, such as those failing with a DNS error, connection refused or a timeout, so they can record them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Restore unbounded HTTP/1 response header size/count, regressed since the HTTP client update in version 0.30.0 (Issue 9509).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.31.0/network-beta-0.31.0.zap</url>
-        <hash>SHA-256:d717c9599c2794b30337fd840a726730e185642b96412bd9c898a0167e5f9219</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.32.0/network-beta-0.32.0.zap</url>
+        <hash>SHA-256:443e84a0f74023356e179d75e1c8073809758ed4e14c8625911cc52f779538ef</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-16</date>
-        <size>26132957</size>
+        <date>2026-10-26</date>
+        <size>26136709</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
