@@ -253,26 +253,30 @@
         <name>Authentication Helper</name>
         <description>Helps identify and set up authentication handling</description>
         <author>ZAP Dev Team</author>
-        <version>0.43.0</version>
-        <file>authhelper-beta-0.43.0.zap</file>
+        <version>0.44.0</version>
+        <file>authhelper-beta-0.44.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;OAuth2 Authentication method, supporting the &lt;code&gt;client_credentials&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt; grant types.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;type&lt;/code&gt; and &lt;code&gt;count&lt;/code&gt; parameters to the &lt;code&gt;diagnostics&lt;/code&gt; automation job, to retain only the last failed authentication attempt (&lt;code&gt;auth_on_failure&lt;/code&gt;) or a rolling window of failures (&lt;code&gt;auth_failure_rolling&lt;/code&gt;). With &lt;code&gt;auth_on_failure&lt;/code&gt; only the error step is recorded, with just its screenshot.&lt;/li&gt;
+&lt;li&gt;AI Assisted Authentication&lt;/li&gt;
+&lt;li&gt;Record requests whose sending failed (for example DNS failure) in the diagnostics, with a synthetic response describing the failure reason, when the network add-on supports it.&lt;/li&gt;
+&lt;li&gt;Support for the Authentication Report with OAuth2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Authentication Tester dialog now remembers the last authentication method used and selects it by default next time it's opened.&lt;/li&gt;
+&lt;li&gt;With the &lt;code&gt;auth_on_failure&lt;/code&gt; diagnostics type, the last step is also retained (with its screenshot), not just the error step.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Notify authentication successes/failures for browser login and error paths in Browser and Client Script Based Authentication.&lt;/li&gt;
-&lt;li&gt;Do not fail the authentication attempt when not able to take a screenshot for diagnostics.&lt;/li&gt;
-&lt;li&gt;Collect authentication diagnostics also when authenticating in an existing browser (e.g. modern spiders) with Client Script Based Authentication.&lt;/li&gt;
+&lt;li&gt;Handle cookies without a value in Header Based Session Management.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.43.0/authhelper-beta-0.43.0.zap</url>
-        <hash>SHA-256:a0d25032f7590336515d01ed43a2b47de006f7bb4d4de998989a56be23a894b9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/authhelper-v0.44.0/authhelper-beta-0.44.0.zap</url>
+        <hash>SHA-256:40a52308a5d40074222f1d669712c7f59e0d9a35a948b5bb7f8e00057c01f5a0</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-08</date>
-        <size>1704903</size>
+        <date>2026-11-03</date>
+        <size>1892916</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -334,35 +338,23 @@
         <name>Automation Framework</name>
         <description>Automation Framework.</description>
         <author>ZAP Dev Team</author>
-        <version>0.61.0</version>
-        <file>automation-beta-0.61.0.zap</file>
+        <version>0.62.0</version>
+        <file>automation-beta-0.62.0.zap</file>
         <status>beta</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Allow to define for how long a plan can run.&lt;/li&gt;
-&lt;li&gt;Add support for the HTTP method in the authentication verification (on newer ZAP versions).&lt;/li&gt;
-&lt;li&gt;Support the Authentication Helper add-on's &lt;code&gt;oauth2&lt;/code&gt; authentication method.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Adjust columns in plan display after loading a plan.&lt;/li&gt;
-&lt;li&gt;Include cause of invalid URL in error message.&lt;/li&gt;
-&lt;li&gt;Plan profiles to use clientSpider instead of ajaxSpider.&lt;/li&gt;
+&lt;li&gt;Support for AI assisted authentication.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Correct technology related warning message.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Removed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The Params automation support was moved into the Params add-on (Issue 9210).&lt;/li&gt;
+&lt;li&gt;Typos in help content.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.61.0/automation-beta-0.61.0.zap</url>
-        <hash>SHA-256:3a51587d164813883823d1091a4b19e248a15bd0dc19f37c3ef86a7b7c6aa223</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/automation-v0.62.0/automation-beta-0.62.0.zap</url>
+        <hash>SHA-256:ea47570f309db7a816c9d68c0c60060f7159bb3e89770df3d4dbb9f4574d45a6</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/automation-framework/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-08</date>
-        <size>2171491</size>
+        <date>2026-11-03</date>
+        <size>2178951</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -1941,23 +1933,19 @@ but if you encounter problems, please refer to the following:
         <name>LLM Support</name>
         <description>An add-on to leverage LLM within ZAP.</description>
         <author>Abdessamad TEMMAR and the ZAP Core Team</author>
-        <version>0.1.0</version>
-        <file>llm-alpha-0.1.0.zap</file>
+        <version>0.2.0</version>
+        <file>llm-alpha-0.2.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Automation Framework support, the &lt;code&gt;llm-config&lt;/code&gt; job configures the LLM providers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update dependencies.&lt;/li&gt;
+&lt;li&gt;Use ZAP's networking instead of Java's when importing OpenAPI definitions from URLs (Issue 8987).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.1.0/llm-alpha-0.1.0.zap</url>
-        <hash>SHA-256:38c50542a7a56751be3f2d7c813e6648f77121849a8f1db0a629f48ddbf4aa2c</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.2.0/llm-alpha-0.2.0.zap</url>
+        <hash>SHA-256:b1c6deeb1f78d4c6243bbb718a5ebbcdd0c209be93606ab5f0a39647e99eb70a</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/llm-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-15</date>
-        <size>19467224</size>
+        <date>2026-11-03</date>
+        <size>19547820</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2071,27 +2059,20 @@ but if you encounter problems, please refer to the following:
         <name>Network</name>
         <description>Provides core networking capabilities.</description>
         <author>ZAP Dev Team</author>
-        <version>0.32.0</version>
-        <file>network-beta-0.32.0.zap</file>
+        <version>0.33.0</version>
+        <file>network-beta-0.33.0.zap</file>
         <status>beta</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add-ons can now be notified of requests that fail to send, such as those failing with a DNS error, connection refused or a timeout, so they can record them.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Restore unbounded HTTP/1 response header size/count, regressed since the HTTP client update in version 0.30.0 (Issue 9509).&lt;/li&gt;
+&lt;li&gt;Do not resolve host names locally when using a SOCKSv5 proxy with remote DNS resolution, regressed since the HTTP client update in version 0.30.0.&lt;/li&gt;
+&lt;li&gt;Typos in help content.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.32.0/network-beta-0.32.0.zap</url>
-        <hash>SHA-256:443e84a0f74023356e179d75e1c8073809758ed4e14c8625911cc52f779538ef</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/network-v0.33.0/network-beta-0.33.0.zap</url>
+        <hash>SHA-256:383f816fd5663d359f7bbde662f9a4aaf3fc9de8c59053a4abf7551e3a87d56f</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/network/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-26</date>
-        <size>26136709</size>
+        <date>2026-11-03</date>
+        <size>26139681</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_network>
     <addon>oast</addon>
@@ -2969,19 +2950,23 @@ but if you encounter problems, please refer to the following:
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.59.0</version>
-        <file>selenium-release-15.59.0.zap</file>
+        <version>15.60.0</version>
+        <file>selenium-release-15.60.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.51.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.52.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent an error on start up when the Firefox profiles directory cannot be read (e.g. due to a permissions issue), which could prevent other add-ons from loading.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.59.0/selenium-release-15.59.0.zap</url>
-        <hash>SHA-256:213bb9b008c134aa748ef3f1f7e38c2aa17a603701c4e54b05970d78e633e854</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.60.0/selenium-release-15.60.0.zap</url>
+        <hash>SHA-256:7d793ad29cbd45441d9044a23fab612f838d9b3ca5e3deea22bf6e4f18ed32c5</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-15</date>
-        <size>36842751</size>
+        <date>2026-11-03</date>
+        <size>37270483</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
