@@ -1933,19 +1933,19 @@ but if you encounter problems, please refer to the following:
         <name>LLM Support</name>
         <description>An add-on to leverage LLM within ZAP.</description>
         <author>Abdessamad TEMMAR and the ZAP Core Team</author>
-        <version>0.2.0</version>
-        <file>llm-alpha-0.2.0.zap</file>
+        <version>0.3.0</version>
+        <file>llm-alpha-0.3.0.zap</file>
         <status>alpha</status>
         <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Use ZAP's networking instead of Java's when importing OpenAPI definitions from URLs (Issue 8987).&lt;/li&gt;
+&lt;li&gt;Support Google Gemini thought_signature in function call history (Issue 9530).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.2.0/llm-alpha-0.2.0.zap</url>
-        <hash>SHA-256:b1c6deeb1f78d4c6243bbb718a5ebbcdd0c209be93606ab5f0a39647e99eb70a</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/llm-v0.3.0/llm-alpha-0.3.0.zap</url>
+        <hash>SHA-256:1f669837e9e2c8df0a5667858b6daa0ffc6a79f3897387b079ad9325080cf11d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/llm-support/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-11-03</date>
-        <size>19547820</size>
+        <date>2026-11-13</date>
+        <size>19679991</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2431,23 +2431,21 @@ but if you encounter problems, please refer to the following:
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>77</version>
-        <file>pscanrules-release-77.zap</file>
+        <version>78</version>
+        <file>pscanrules-release-78.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Server Side Technology Version with Known Vulnerabilities scan rule, which checks technology versions disclosed in response headers against known vulnerabilities, initially PHP versions against the php-src security advisories.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
 &lt;li&gt;Update dependency.&lt;/li&gt;
+&lt;li&gt;Server Side Technology Version with Known Vulnerabilities scan rule to also check for Apache HTTP Server versions against the httpd project's CVE records.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v77/pscanrules-release-77.zap</url>
-        <hash>SHA-256:d10b7efa8dd11c94d695cf61fc8658ba71c15d2c660d27e12063d53bd5f81352</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v78/pscanrules-release-78.zap</url>
+        <hash>SHA-256:c2472baf01d667d3eb02a423a9c3e02bb578aa9b5cf8f191fb2c295c15a29506</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-22</date>
-        <size>2499313</size>
+        <date>2026-11-13</date>
+        <size>3463211</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
