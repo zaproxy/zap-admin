@@ -2436,21 +2436,28 @@ but if you encounter problems, please refer to the following:
         <name>Passive scanner rules</name>
         <description>The release status Passive Scanner rules</description>
         <author>ZAP Dev Team</author>
-        <version>78</version>
-        <file>pscanrules-release-78.zap</file>
+        <version>79</version>
+        <file>pscanrules-release-79.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Maintenance changes.&lt;/li&gt;
-&lt;li&gt;Update dependency.&lt;/li&gt;
-&lt;li&gt;Server Side Technology Version with Known Vulnerabilities scan rule to also check for Apache HTTP Server versions against the httpd project's CVE records.&lt;/li&gt;
+&lt;li&gt;The Server Side Technology Version with Known Vulnerabilities scan rule now also detects nginx versions with known vulnerabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Content Security Policy scan rule now also reports a missing or wildcard &lt;code&gt;base-uri&lt;/code&gt; directive.&lt;/li&gt;
+&lt;li&gt;Updated the Apache HTTP Server known vulnerabilities, and replaced non-breaking spaces in their descriptions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Viewstate scan rule: reduce false positives for IP addresses, no longer matching assembly version numbers (e.g. &lt;code&gt;Version=12.0.0.0&lt;/code&gt;), invalid addresses (e.g. &lt;code&gt;999.999.999.999&lt;/code&gt;) or parts of longer dotted number sequences.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v78/pscanrules-release-78.zap</url>
-        <hash>SHA-256:c2472baf01d667d3eb02a423a9c3e02bb578aa9b5cf8f191fb2c295c15a29506</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/pscanrules-v79/pscanrules-release-79.zap</url>
+        <hash>SHA-256:824545a0c66bb0525f614153e6aee80ed10ae6a133d1624deddf85c219f6ba2d</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-11-13</date>
-        <size>3463211</size>
+        <date>2026-11-18</date>
+        <size>5659119</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
