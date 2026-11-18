@@ -528,19 +528,24 @@
         <name>Client Side Integration</name>
         <description>Exposes client (browser) side information in ZAP using Firefox and Chrome extensions.</description>
         <author>ZAP Dev Team</author>
-        <version>0.34.0</version>
-        <file>client-alpha-0.34.0.zap</file>
+        <version>0.35.0</version>
+        <file>client-alpha-0.35.0.zap</file>
         <status>alpha</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Updated Chrome and Firefox full extensions to v0.3.0.&lt;/li&gt;
+&lt;li&gt;Notify when browser is ready, once everything that runs on browser launch (e.g. authentication) has completed.&lt;/li&gt;
+&lt;li&gt;Added method to get the user the scan is run as.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Typos in help content.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.34.0/client-alpha-0.34.0.zap</url>
-        <hash>SHA-256:2d3f170cca476c2c8e57774d4db89d213dde70bba3cf4f42d72b515f1c510979</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/client-v0.35.0/client-alpha-0.35.0.zap</url>
+        <hash>SHA-256:8d9128871abc99096f4a7865eee146bcd9191e48918965cf4aed981b09fe16c4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/client-side-integration/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-10-21</date>
-        <size>6464191</size>
+        <date>2026-11-18</date>
+        <size>6464215</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
@@ -2952,23 +2957,23 @@ but if you encounter problems, please refer to the following:
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.60.0</version>
-        <file>selenium-release-15.60.0.zap</file>
+        <version>15.61.0</version>
+        <file>selenium-release-15.61.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.52.0.&lt;/li&gt;
+&lt;li&gt;Notify when browser is ready, once all of the launch hooks and synchronous scripts have completed.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Prevent an error on start up when the Firefox profiles directory cannot be read (e.g. due to a permissions issue), which could prevent other add-ons from loading.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.53.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.60.0/selenium-release-15.60.0.zap</url>
-        <hash>SHA-256:7d793ad29cbd45441d9044a23fab612f838d9b3ca5e3deea22bf6e4f18ed32c5</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.61.0/selenium-release-15.61.0.zap</url>
+        <hash>SHA-256:9f835c8cfc50ee550e406d856de4ca912d5c91ebecfe2b2195ee95221b014ed4</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-11-03</date>
-        <size>37270483</size>
+        <date>2026-11-18</date>
+        <size>37632026</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
