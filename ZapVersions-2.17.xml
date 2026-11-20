@@ -1323,23 +1323,19 @@ but if you encounter problems, please refer to the following:
         <name>Help - English</name>
         <description>English version of the ZAP help file.</description>
         <author>ZAP Crowdin Team</author>
-        <version>22</version>
-        <file>help-release-22.zap</file>
+        <version>23</version>
+        <file>help-release-23.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Fixed&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Fix a typo in Breakpoints features page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Updated for 2.17.0.&lt;/li&gt;
+&lt;li&gt;Updated for 2.17.1.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v22/help-release-22.zap</url>
-        <hash>SHA-256:a99fcf18187ae3e232fafbe8150d3d65cbdd328c2284bd04016d82f2d2a5c945</hash>
+        <url>https://github.com/zaproxy/zap-core-help/releases/download/help-v23/help-release-23.zap</url>
+        <hash>SHA-256:e004513e6ffbeb66a361a7130355cd13425d1b39bded1b2c20d1007dca592dba</hash>
         <info>https://www.zaproxy.org/docs/desktop/</info>
         <repo>https://github.com/zaproxy/zap-core-help/</repo>
-        <date>2025-12-15</date>
-        <size>647250</size>
+        <date>2026-11-20</date>
+        <size>646989</size>
         <not-before-version>2.16.0</not-before-version>
     </addon_help>
     <addon>help_ar_SA</addon>
