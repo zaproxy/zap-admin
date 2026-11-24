@@ -2960,23 +2960,19 @@ but if you encounter problems, please refer to the following:
         <name>Selenium</name>
         <description>WebDriver provider and includes HtmlUnit browser</description>
         <author>ZAP Dev Team</author>
-        <version>15.61.0</version>
-        <file>selenium-release-15.61.0.zap</file>
+        <version>15.62.0</version>
+        <file>selenium-release-15.62.0.zap</file>
         <status>release</status>
-        <changes>&lt;h3&gt;Added&lt;/h3&gt;
+        <changes>&lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Notify when browser is ready, once all of the launch hooks and synchronous scripts have completed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Changed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update Selenium to version 4.53.0.&lt;/li&gt;
+&lt;li&gt;Update Selenium to version 4.54.0.&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.61.0/selenium-release-15.61.0.zap</url>
-        <hash>SHA-256:9f835c8cfc50ee550e406d856de4ca912d5c91ebecfe2b2195ee95221b014ed4</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/selenium-v15.62.0/selenium-release-15.62.0.zap</url>
+        <hash>SHA-256:24d06ad871bbdeced48dfbd561cb8179fbad3dccc86e33d149748bec0da4b7ab</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/selenium/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-11-18</date>
-        <size>37632026</size>
+        <date>2026-11-24</date>
+        <size>37651916</size>
         <not-before-version>2.17.0</not-before-version>
         <dependencies>
             <addons>
