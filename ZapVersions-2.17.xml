@@ -577,24 +577,30 @@
         <name>Common Library</name>
         <description>A common library, for use by other add-ons.</description>
         <author>ZAP Dev Team</author>
-        <version>1.44.0</version>
-        <file>commonlib-release-1.44.0.zap</file>
+        <version>1.45.0</version>
+        <file>commonlib-release-1.45.0.zap</file>
         <status>release</status>
         <changes>&lt;h3&gt;Added&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Add standard header for other add-ons to use.&lt;/li&gt;
+&lt;li&gt;Initial Global Scan Policy Manager API.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Changed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update dependencies.&lt;/li&gt;
-&lt;li&gt;Update alert tag URLs to avoid redirects.&lt;/li&gt;
+&lt;li&gt;Maintenance changes.&lt;/li&gt;
+&lt;li&gt;Updated Alert Tag and generic vulnerability links aligning with recent OWASP website changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Honour the Max-Age attribute, which takes precedence over Expires, when checking if a cookie is expired (Issue 9560).&lt;/li&gt;
+&lt;li&gt;Fix Dice's coefficient implementation, previously strings differing only in their last character could be reported as fully similar (Issue 9568).&lt;/li&gt;
 &lt;/ul&gt;</changes>
-        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.44.0/commonlib-release-1.44.0.zap</url>
-        <hash>SHA-256:6450205e07248c20e9c8de185268cf1cd571f3cec7f7c0e5d10178b2126834f9</hash>
+        <url>https://github.com/zaproxy/zap-extensions/releases/download/commonlib-v1.45.0/commonlib-release-1.45.0.zap</url>
+        <hash>SHA-256:f09eb7f64708be0781f7b443462d0fad33c272ccb115f0760522e00472750dfc</hash>
         <info>https://www.zaproxy.org/docs/desktop/addons/common-library/</info>
         <repo>https://github.com/zaproxy/zap-extensions/</repo>
-        <date>2026-08-26</date>
-        <size>11720477</size>
+        <date>2026-11-26</date>
+        <size>11889485</size>
         <not-before-version>2.17.0</not-before-version>
     </addon_commonlib>
     <addon>communityScripts</addon>
